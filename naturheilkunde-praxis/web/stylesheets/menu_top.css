@@ -1,0 +1,44 @@
+@import url(mainfont.css);
+
+body {
+	background: #fff;
+}
+
+.menutop {
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.menutop a {
+	margin-right: 30px;
+	text-decoration: none;
+	font-size: 15px;
+	position: relative;
+	height: 22px;
+	color: #000;
+}
+
+.menutop a.chosen {
+	font-weight: bolder;
+}
+
+.menutop a span {
+	//transition:  all .3s ease;
+}
+
+.menutop a span.highlight {
+	color: #E30FB5;
+}
+
+.menutop a.chosen span.highlight {
+	color: #000;
+}
+
+.menutop a span.blur {
+	opacity: .9;
+}
+
+.menutop div.part {
+	white-space: nowrap;
+	display: inline;
+}
