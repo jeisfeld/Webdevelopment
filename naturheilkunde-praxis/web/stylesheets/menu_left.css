@@ -7,7 +7,7 @@ body {
 .menuleft {
 	position: absolute;
 	top: 15px;
-	left: 10%;
+	left: 5px;
 }
 
 .menuleft hr {
@@ -24,8 +24,8 @@ body {
 	text-decoration: none;
 	font-size: 18px;
 	position: relative;
-	height: 29px;
-	width: 300px;
+	height: 25px;
+	width: 50px;
 	color: #66695C;
 	border-radius: 8px;
 }
@@ -37,8 +37,8 @@ body {
 .menuleft a span {
 	position: absolute;
 	top: 2px;
-	left: 12px;
-	//transition: all .3s ease;
+	left: 5px; //
+	transition: all .3s ease;
 }
 
 .menuleft a span.highlight {
