@@ -1,0 +1,128 @@
+@import url(mainfont.css);
+
+table,table tr,table td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+table#main {
+	padding-left: 2%;
+	width: 100%;
+}
+
+td#pict {
+	padding: 0;
+	vertical-align: top;
+}
+
+td#text {
+	padding: 0;
+	padding-right: 5%;
+	padding-left: 2%;
+	width: 62%;
+	vertical-align: top;
+	width: 62%;
+	width: 62%;
+}
+
+html,body,textarea {
+	background-color: #FFC046;
+	color: #333333;
+}
+
+h1 {
+	margin-left: 1em;
+	margin-bottom: 30px;
+}
+
+h1 div.main {
+	font-size: x-large;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+h1 div.sub {
+	font-size: medium;
+	font-weight: bold;
+}
+
+h2 {
+	margin-top: 28px;
+	font-size: medium;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: medium;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+div.image {
+	margin-bottom: 5px;
+}
+
+div.name {
+	font-size: medium;
+	font-weight: bold;
+}
+
+div.image-text {
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 14px;
+	margin-top: 2px;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+ul.dashed {
+	list-style: none;
+	padding-left: 12px;
+}
+
+ul.dashed li:before {
+	content: "-";
+	position: relative;
+	left: -5px;
+}
+
+ul.dashed li {
+	text-indent: -5px;
+	list-style-type: none;
+}
+
+ul.arrow {
+	list-style: none;
+	padding-left: 12px;
+}
+
+ul.arrow li:before {
+	content: "\2192";
+	position: relative;
+	left: -5px;
+}
+
+ul.arrow li {
+	text-indent: -5px;
+	list-style-type: none;
+}
+
+sup {
+	font-size: smaller;
+}
+
+a {
+	color: #336600;
+	font-weight: bold;
+}
