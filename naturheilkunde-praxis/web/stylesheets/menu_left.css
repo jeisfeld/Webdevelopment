@@ -37,8 +37,8 @@ body {
 .menuleft a span {
 	position: absolute;
 	top: 2px;
-	left: 5px; //
-	transition: all .3s ease;
+	left: 5px;
+	// transition: all .3s ease;
 }
 
 .menuleft a span.highlight {

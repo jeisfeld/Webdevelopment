@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
 /* General settings */
 body {
 	font-family: 'Century Gothic', 'Muli', sans-serif;
@@ -130,4 +132,36 @@ div.name {
 
 div.image-text {
 	margin-bottom: 20px;
+}
+
+/* Settings for menu */
+body#menuleft hr {
+	height: 36px;
+	margin: 0px;
+	visibility: hidden;
+}
+
+body#menuleft a {
+	float: right;
+	background: #FD8100;
+	margin-bottom: 12px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'Muli', sans-serif;
+	font-stretch: ultra-expanded;
+	font-weight: bold;
+	position: relative;
+	width: 140px;
+	border-radius: 4px;
+}
+
+body#menuleft a.highlight {
+	box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+body#menuleft a.chosen {
+	box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.6);
 }
