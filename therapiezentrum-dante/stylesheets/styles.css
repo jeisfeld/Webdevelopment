@@ -9,10 +9,15 @@ body {
 }
 
 body#index {
- 	background: -moz-linear-gradient(bottom right, #FFFFFF 20%, #F0FED1 100%);
-	background: -webkit-linear-gradient(left top, #FFFFFF 20%, #F0FED1 100%);
-	background: -o-linear-gradient(bottom right, #FFFFFF 20%, #F0FED1 100%);
-	background: linear-gradient(to bottom right, #FFFFFF 20%, #F0FED1 100%);
+ 	background: -moz-linear-gradient(bottom right, #FFFFFF 20%, #EDFECE 100%);
+	background: -webkit-linear-gradient(left top, #FFFFFF 20%, #EDFECE 100%);
+	background: -o-linear-gradient(bottom right, #FFFFFF 20%, #EDFECE 100%);
+	background: linear-gradient(to bottom right, #FFFFFF 20%, #EDFECE 100%);
+	background-size: cover;
+}
+
+body#index.schraml {
+ 	background-image: url('../jpg_thz/zebra.png');
 }
 
 table,table tr,table td {

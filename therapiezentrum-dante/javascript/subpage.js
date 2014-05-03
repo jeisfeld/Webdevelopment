@@ -1,4 +1,4 @@
-function markChosen(frame, id) {
+function markMenuItem(frame, id) {
 	if(frame) {
 		var t = $(frame.getElementById(id));
 		var s = $(frame).find('a');
@@ -8,18 +8,26 @@ function markChosen(frame, id) {
 			t.addClass('chosen');
 		}
 	}
-	return (t != null && t.html().toLowerCase().match('span'));
+}
+
+function setBackground(frame, id) {
+	var b = $(frame).find('body');
+	if(frame) {
+		b.removeClass();
+		b.addClass(id);
+	}
 }
 
 
 $(document).ready(function() {
+	// Mark menu item
 	var myId=$('body').attr('id');
-	var frame, result;
 
-	// otherwise, try in left frame
-	if(!result) {
-		frame = top.menu.document;
-		markChosen(frame, myId);
-	}
+	var menuframe = top.menu.document;
+	markMenuItem(menuframe, myId);
+	
+	// Set background
+	var maindocument = top.document;
+	setBackground(maindocument, myId);
 	
 });
