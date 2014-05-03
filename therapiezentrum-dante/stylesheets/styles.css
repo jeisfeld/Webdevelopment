@@ -155,17 +155,17 @@ body#menuleft hr {
 
 body#menuleft a {
 	float: right;
-	background: #005E00;
+	background: #6B9C00;
 	color: #F0FED1;
 	margin-bottom: 12px;
 	padding-left: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: 'Muli', sans-serif;
 	font-stretch: ultra-expanded;
-	font-weight: bold;
+	font-weight: normal;
 	position: relative;
 	width: 140px;
 	border-radius: 4px;
