@@ -171,6 +171,13 @@ body#menuleft a {
 	border-radius: 4px;
 }
 
+body#menuleft a#impressum {
+	background: transparent;
+	color: #63A531;
+	text-align: right;
+	padding-right: 10px;
+}
+
 body#menuleft a.highlight {
 	box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
 	-moz-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
