@@ -184,8 +184,16 @@ body#menuleft a.highlight {
 	-webkit-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
 }
 
+body#menuleft a#impressum.highlight {
+	background: rgba(255, 255, 255, 0.5);
+}
+
 body#menuleft a.chosen {
 	box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
 	-moz-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
 	-webkit-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
+}
+
+body#menuleft a#impressum.chosen {
+	background: white;
 }
