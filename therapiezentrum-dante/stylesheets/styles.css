@@ -17,7 +17,7 @@ body#index {
 }
 
 body#index.schraml {
- 	background-image: url('../jpg_thz/zebra.png');
+ 	background-image: url('../graphics/zebra.png');
 }
 
 table,table tr,table td {
