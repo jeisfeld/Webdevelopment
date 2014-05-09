@@ -4,33 +4,33 @@ function adjustStyle(width, height) {
 
 	// for left menu
 	if (height < 330) {
-		$('.menuleft').addClass('smallheight');
+		$('#menuleft').addClass('smallheight');
 	} else {
-		$('.menuleft').removeClass('smallheight');
+		$('#menuleft').removeClass('smallheight');
 	}
 	if (width < 130) {
-		$('.menuleft').addClass('smallwidth');
+		$('#menuleft').addClass('smallwidth');
 	} else {
-		$('.menuleft').removeClass('smallwidth');
+		$('#menuleft').removeClass('smallwidth');
 	}
 	if (height < 230 || width < 110) {
-		$('.menuleft a').addClass('smalltext');
+		$('#menuleft a').addClass('smalltext');
 	} else {
-		$('.menuleft a').removeClass('smalltext');
+		$('#menuleft a').removeClass('smalltext');
 	}
 	
-	$('.menuleft a').css('width', '' + width + 'px');
+	$('#menuleft a').css('width', '' + width + 'px');
 
 	// for top menu
 	if (width < 650) {
-		$('.menutop').addClass('tworow');
+		$('#menutop').addClass('tworow');
 	} else {
-		$('.menutop').removeClass('tworow');
+		$('#menutop').removeClass('tworow');
 	}
 	if (width < 350) {
-		$('.menutop').addClass('smalltext');
+		$('#menutop').addClass('smalltext');
 	} else {
-		$('.menutop').removeClass('smalltext');
+		$('#menutop').removeClass('smalltext');
 	}
 }
 
