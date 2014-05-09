@@ -11,22 +11,19 @@ function adjustStyle(width, height) {
 	if (width < 1100 || height < 700) {
 		var logoheight = Math.min(width / 11, Math.min(width / 20, 60) + height
 				/ 20);
-		var logomargin = Math.min(width / 50, height / 50);
 		outervframe.attr('rows', logoheight + ',*,55');
-		toplogoframe.find('body').css('margin-left', '5px');
-		toplogoframe.find('body').css('margin-top', '' + logomargin);
-		bottomonlineframe.find('*').addClass('small');
+		toplogoframe.find('body').addClass('small');
+		bottomonlineframe.find('body').addClass('small');
 	} else {
 		outervframe.attr('rows', '120,*,95');
-		toplogoframe.find('body').css('margin-left', '30px');
-		toplogoframe.find('body').css('margin-top', '30px');
-		bottomonlineframe.find('*').removeClass('small');
+		toplogoframe.find('body').removeClass('small');
+		bottomonlineframe.find('body').removeClass('small');
 	}
 
 	if (width < 1100) {
-		toplogoframe.find('img').css('width', '100%');
+		toplogoframe.find('img').addClass('fullwidth');
 	} else {
-		toplogoframe.find('img').css('width', '844');
+		toplogoframe.find('img').removeClass('fullwidth');
 	}
 
 	// horizontal sizing

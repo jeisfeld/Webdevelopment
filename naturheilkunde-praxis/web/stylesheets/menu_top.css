@@ -9,6 +9,10 @@ body {
 	vertical-align: middle;
 }
 
+.menutop.smalltext {
+	margin-left: 5px;
+}
+
 .menutop a {
 	margin-right: 30px;
 	text-decoration: none;
@@ -18,12 +22,17 @@ body {
 	color: #000;
 }
 
+.menutop.smalltext a {
+	margin-right: 15px;
+	font-size: 12px;
+}
+
 .menutop a.chosen {
 	font-weight: bolder;
 }
 
-.menutop a span {
-	//transition:  all .3s ease;
+.menutop a span { //
+	transition: all .3s ease;
 }
 
 .menutop a span.highlight {
@@ -41,4 +50,8 @@ body {
 .menutop div.part {
 	white-space: nowrap;
 	display: inline;
+}
+
+.menutop.tworow div.part {
+	display: block;
 }

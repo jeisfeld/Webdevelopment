@@ -4,3 +4,16 @@ body {
 	margin-top: 30px;
 }
 
+body.small {
+	margin-left: 5px;
+	margin-top: 2%;
+}
+
+img {
+	width: 844;
+}
+
+img.fullwidth {
+	width: 100%;
+}
+
