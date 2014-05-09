@@ -49,8 +49,6 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
-	adjustStyle($(window).width(), $(window).height());
-
 	var menu = $('.menu'), a = menu.find('a');
 
 	// include the text in <span /> element.
@@ -61,5 +59,7 @@ $(document).ready(function() {
 		t.find('span').toggleClass('highlight');
 		s.find('span').toggleClass('blur');
 	});
+
+	adjustStyle($(window).width(), $(window).height());
 
 });
