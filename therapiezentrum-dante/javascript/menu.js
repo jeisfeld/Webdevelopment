@@ -7,10 +7,4 @@ $(document).ready(function() {
 	menu.wrapInner($('<table width="100%" />'));
 	a.wrap($('<tr />')).wrap($('<td />'));
 
-	a.hover(function() {
-		var t = $(this), s = t.siblings('a');
-		t.toggleClass('highlight');
-		s.toggleClass('blur');
-	});
-
 });
