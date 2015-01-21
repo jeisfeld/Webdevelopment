@@ -1,0 +1,225 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+/* General settings */
+body {
+	font-family: 'Century Gothic', 'Muli', sans-serif;
+	font-size: medium;
+	color: #33537C;
+	background-color: transparent;
+}
+
+body#index {
+	background-image: url("../img/amor_psyche_a.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+table, table tr, table td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+p {
+	margin-bottom: 6px;
+	margin-top: 2px;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+a {
+	color: #33537C;
+	font-weight: bold;
+}
+
+/* Settings for left side */
+#text {
+	padding-top: 18px;
+	padding-left: 18px;
+}
+
+.invite {
+	font-family: cursive;
+	text-align: center;
+}
+
+.startentry {
+	text-align: center;
+}
+
+.centerbox {
+	width: 1000px;
+	height: 500px;
+	position: fixed;
+	margin-left: -500px; /* half of width */
+	margin-top: -250px; /* half of height */
+	top: 50%;
+	left: 50%;
+}
+
+/* Settings for right side */
+
+/* Settings for menu */
+#menuleftbody {
+	overflow: hidden;
+}
+
+#menuleft {
+	position: absolute;
+	top: 15px;
+	left: 10%;
+	overflow: hidden;
+}
+
+#menuleft.smallwidth {
+	left: 5px;
+}
+
+#menuleft hr {
+	height: 20px;
+	margin: 0px;
+	visibility: hidden;
+}
+
+#menuleft.smallheight hr {
+	height: 4px;
+}
+
+#menuleft a {
+	display: block;
+	background-color: rgba(255, 255, 255, 0);
+	margin-bottom: 5px;
+	padding-left: 30px;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	height: 29px;
+	width: 50px;
+	color: #33537C;
+	border-radius: 8px;
+	margin-bottom: 5px;
+}
+
+#menuleft a.twoline {
+	height: 50px;
+}
+
+#menuleft.smallheight a {
+	margin-bottom: 0px;
+}
+
+#menuleft a.smalltext {
+	font-size: 14px;
+	height: 25px;
+}
+
+#menuleft a.twoline.smalltext {
+	height: 40px;
+}
+
+#menuleft a.chosen {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#menuleft a span {
+	position: absolute;
+	top: 2px;
+	left: 12px;
+}
+
+#menuleft.smallwidth a span {
+	left: 5px;
+}
+
+#menuleft a.highlight {
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+#menuleft a.chosen.highlight {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Settings for bottom */
+
+#bottom {
+	background-image: url("../img/bottom.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+#bottom hr {
+	color: #223653;
+	background-color: #223653;
+	border: 0;
+	height: 3;
+	margin-top: 8;
+	margin-bottom: 8;
+}
+
+#bottom table {
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#bottom tr.address {
+	font-family: 'Quicksand', sans-serif;
+	color: #FFFFFF;
+}
+
+#bottom div#address {
+	text-align: justify;
+}
+
+#bottom div#address div {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 5px 10px 5px 10px;
+	white-space: nowrap;
+}
+
+#bottom div#address:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+#bottom a {
+	color: #FFFFFF;
+}
+
+/* Settings for Impressum */
+
+#impressum {
+	background-color: #FFFFFF;
+	font-family: sans-serif;
+	font-size: 80%;
+}
+
+#impressum #table {
+	font-size: 80%;
+	}
+
+#impressum #impressumtable {
+	text-align: left;
+	border: 1px solid black;
+	font-size: 80%;
+}
+
+#impressum #impressumtable td {
+	padding-right: 5px;
+	padding-bottom: 5px;
+	vertical-align: top;
+	border: 1px solid black;
+}
