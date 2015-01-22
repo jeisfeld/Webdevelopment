@@ -11,8 +11,7 @@ body {
 body#index {
 	background-image: url("../img/amor_psyche_a.jpg");
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-position: 0px 0px;
 }
 
 table, table tr, table td {

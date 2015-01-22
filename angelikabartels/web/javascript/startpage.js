@@ -8,10 +8,12 @@ function adjustStyle(width, height) {
 	$('.centerbox').css('margin-top', -height / 2);
 }
 
-$(window).resize(function() {
-	adjustStyle($(this).width(), $(this).height());
-});
+$(window).resize(
+		function() {
+			adjustStyle($("#mainframe", window.parent.document).width(), $(
+					"#mainframe", window.parent.document).height());
+		});
 
 $(document).ready(function() {
-	adjustStyle($(window).width(), $(window).height());
+	adjustStyle($(document).width(), $(document).height());
 });
