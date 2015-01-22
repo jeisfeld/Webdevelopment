@@ -33,14 +33,18 @@ function adjustStyle(width, height) {
 	bottomframe.css('top', height - 50);
 
 	// background positioning - image is square!
-	if (width < height) {
-		var offset = (width - height) / 2
+
+	// Correction, as width has too small values while shrinking window
+	// vertically.
+	var modWidth = width + 17;
+	if (modWidth < height) {
+		var offset = (modWidth - height) / 2
 		var positionString = '' + offset + 'px 0px';
 		var sizeString = '' + height + 'px ' + height + 'px';
 	} else {
-		var offset = (height - width) / 2
+		var offset = (height - modWidth) / 2
 		var positionString = '0px ' + offset + 'px';
-		var sizeString = '' + width + 'px ' + width + 'px';
+		var sizeString = '' + modWidth + 'px ' + modWidth + 'px';
 	}
 
 	indexbody.css('background-position', positionString);
