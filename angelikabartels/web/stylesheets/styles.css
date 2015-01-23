@@ -21,9 +21,8 @@ table, table tr, table td {
 	border-collapse: collapse;
 }
 
-p {
-	margin-bottom: 6px;
-	margin-top: 2px;
+p, pre {
+
 }
 
 ul {
@@ -38,7 +37,7 @@ a {
 	color: #33537C;
 }
 
-/* Settings for left side */
+/* Settings for main page */
 .invite {
 	font-family: cursive;
 	text-align: center;
@@ -58,6 +57,15 @@ a {
 	left: 50%;
 }
 
+#startseite p {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#startseite h2 {
+	margin-bottom: 8px;
+}
+
 #text {
 	padding-top: 18px;
 	padding-left: 18px;
@@ -74,6 +82,8 @@ a {
 	text-align: justify;
 	padding-bottom: 12px;
 	padding-top: 0px;
+	margin-bottom: 6px;
+	margin-top: 2px;
 }
 
 #text p.subtitle {
@@ -118,8 +128,13 @@ a {
 	margin-right: 30px;
 }
 
+#text hr.footer {
+	clear: both;
+}
+
 #text pre.footer {
-	margin-bottom: 6px;
+	margin-top: 2px;
+	margin-bottom: 4px;
 }
 
 #text p.footer.secondary {
@@ -186,8 +201,26 @@ a {
 	height: 40px;
 }
 
-#menuleft a.chosen {
-	background-color: rgba(255, 255, 255, 0.5);
+#menuleft a.chosen, #menuleft a.chosen.highlight {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.ielte8 #menuleft a.chosen, .ielte8 #menuleft a.chosen.highlight {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,
+		endColorstr=#7FFFFFFF);
+	zoom: 1;
+}
+
+#menuleft a.highlight {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+.ielte8 #menuleft a.highlight {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3FFFFFFF,
+		endColorstr=#7FFFFFFF);
+	zoom: 1;
 }
 
 #menuleft a span {
@@ -198,14 +231,6 @@ a {
 
 #menuleft.smallwidth a span {
 	left: 5px;
-}
-
-#menuleft a.highlight {
-	background-color: rgba(255, 255, 255, 0.25);
-}
-
-#menuleft a.chosen.highlight {
-	background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Settings for bottom */
@@ -266,14 +291,17 @@ a {
 	font-size: 80%;
 }
 
-#impressum #table {
+#impressum table {
 	font-size: 80%;
+}
+
+#impressum h2 {
+	margin-top: 0px;
 }
 
 #impressum #impressumtable {
 	text-align: left;
 	border: 1px solid black;
-	font-size: 80%;
 }
 
 #impressum #impressumtable td {
