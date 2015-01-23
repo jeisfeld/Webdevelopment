@@ -8,6 +8,8 @@ function adjustStyle(width, height) {
 	var popupframe = $('#popupframe');
 	var indexbody = $('#index');
 	var toplogocontent = toplogoframe.contents().find('#logoimage');
+	var mainimages = mainframe.contents().find('#text img');
+	var bottombody = bottomframe.contents().find('body');
 
 	// sizing of top and bottom
 	var bottomheight = 50;
@@ -50,6 +52,20 @@ function adjustStyle(width, height) {
 	indexbody.css('background-position', positionString);
 	indexbody.css('background-size', sizeString);
 
+	// footer text sizing
+	if (width < 620) {
+		bottombody.addClass('smaller');
+		bottombody.removeClass('small');
+	} else if (width < 800) {
+		bottombody.addClass('small');
+		bottombody.removeClass('smaller');
+	} else {
+		bottombody.removeClass('small');
+		bottombody.removeClass('smaller');
+	}
+
+	// image width limitation
+	mainimages.css('max-width', width * 0.4);
 }
 
 function adjustMainStyle() {
@@ -62,6 +78,14 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 	$('#toplogoframe').on("load", function() {
+		adjustMainStyle();
+	});
+
+	$('#mainframe').on("load", function() {
+		adjustMainStyle();
+	});
+
+	$('#bottomframe').on("load", function() {
 		adjustMainStyle();
 	});
 

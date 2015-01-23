@@ -1,3 +1,10 @@
+function openPopup(url, name) {
+	newwindow = window.open(url, name, 'height=600,width=800,scrollbars=yes');
+	if (window.focus) {
+		newwindow.focus()
+	}
+}
+
 function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
@@ -26,19 +33,27 @@ $(window).resize(function() {
 	adjustStyle($(this).width(), $(this).height());
 });
 
-$(document).ready(function() {
+$(document)
+		.ready(
+				function() {
 
-	var menu = $('#menuleft'), a = menu.find('a');
+					var menu = $('#menuleft'), a = menu.find('a');
 
-	// include the text in <span /> element.
-	a.wrapInner($('<span />'));
+					// include the text in <span /> element.
+					a.wrapInner($('<span />'));
 
-	a.hover(function() {
-		var t = $(this), s = t.siblings('a');
-		t.toggleClass('highlight');
-		s.toggleClass('blur');
-	});
+					a.hover(function() {
+						var t = $(this), s = t.siblings('a');
+						t.toggleClass('highlight');
+						s.toggleClass('blur');
+					});
 
-	adjustStyle($(window).width(), $(window).height());
+					adjustStyle($(window).width(), $(window).height());
 
-});
+					// Suppress print button on mobile browsers
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+							.test(navigator.userAgent)) {
+						$("#linkprint").remove();
+					}
+
+				});

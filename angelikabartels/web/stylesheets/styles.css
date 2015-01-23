@@ -247,9 +247,9 @@ a {
 	color: #223653;
 	background-color: #223653;
 	border: 0;
-	height: 3;
-	margin-top: 8;
-	margin-bottom: 8;
+	height: 3px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 #bottom table {
@@ -276,6 +276,14 @@ a {
 	white-space: nowrap;
 }
 
+#bottom.small div#address div {
+	padding: 5px 5px 5px 5px;
+}
+
+#bottom.smaller div#address div {
+	padding: 5px 0px 5px 0px;
+}
+
 #bottom div#address:after {
 	content: '';
 	width: 100%;
@@ -284,6 +292,14 @@ a {
 
 #bottom a {
 	color: #FFFFFF;
+}
+
+#bottom.small {
+	font-size: 80%;
+}
+
+#bottom.smaller {
+	font-size: 60%;
 }
 
 /* Settings for Impressum */
@@ -314,9 +330,6 @@ a {
 }
 
 /* Settings for allcontent page */
-#allcontent h1.centered, #allcontentbottom h1.centered {
-	text-align: center;
-}
 
 @page {
 	margin: 15mm 10mm 20mm 10mm;
