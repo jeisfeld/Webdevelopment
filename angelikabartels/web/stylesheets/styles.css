@@ -314,7 +314,7 @@ a {
 }
 
 /* Settings for allcontent page */
-#allcontent h1.centered {
+#allcontent h1.centered, #allcontentbottom h1.centered {
 	text-align: center;
 }
 
