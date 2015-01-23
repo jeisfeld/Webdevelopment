@@ -130,11 +130,13 @@ a {
 
 #text hr.footer {
 	clear: both;
+	page-break-after: avoid;
 }
 
 #text pre.footer {
 	margin-top: 2px;
 	margin-bottom: 4px;
+	page-break-inside: avoid;
 }
 
 #text p.footer.secondary {
@@ -309,4 +311,13 @@ a {
 	padding-bottom: 5px;
 	vertical-align: top;
 	border: 1px solid black;
+}
+
+/* Settings for allcontent page */
+#allcontent h1.centered {
+	text-align: center;
+}
+
+@page {
+	margin: 15mm 10mm 20mm 10mm;
 }
