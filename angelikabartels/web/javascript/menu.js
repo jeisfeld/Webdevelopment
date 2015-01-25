@@ -15,12 +15,12 @@ function adjustStyle(width, height) {
 	} else {
 		$('#menuleft').removeClass('smallheight');
 	}
-	if (width < 230) {
+	if (width < 240) {
 		$('#menuleft').addClass('smallwidth');
 	} else {
 		$('#menuleft').removeClass('smallwidth');
 	}
-	if (height < 230 || width < 200) {
+	if (height < 230 || width < 210) {
 		$('#menuleft a').addClass('smalltext');
 	} else {
 		$('#menuleft a').removeClass('smalltext');

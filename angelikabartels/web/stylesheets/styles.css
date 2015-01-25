@@ -1,8 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@CHARSET "ISO-8859-1";
 
 /* General settings */
+
 body, p, pre {
-	font-family: 'Century Gothic', 'Muli', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: medium;
 	color: #33537C;
 	background-color: transparent;
@@ -38,11 +40,6 @@ a {
 }
 
 /* Settings for main page */
-.invite {
-	font-family: cursive;
-	text-align: center;
-}
-
 .startentry {
 	text-align: center;
 }
@@ -62,8 +59,9 @@ a {
 	padding-top: 0px;
 }
 
-#startseite h2 {
-	margin-bottom: 8px;
+#startseite h1 {
+	margin-bottom: 6px;
+	padding-bottom: 0px;
 }
 
 #text {
@@ -143,6 +141,11 @@ a {
 	margin-top: 0px;
 }
 
+#uebermich li {
+	margin-bottom: 18px;
+	text-align: left;
+}
+
 /* Settings for right side */
 
 /* Settings for menu */
@@ -187,7 +190,7 @@ a {
 }
 
 #menuleft a.twoline {
-	height: 50px;
+	height: 54px;
 }
 
 #menuleft.smallheight a {
@@ -260,7 +263,6 @@ a {
 }
 
 #bottom tr.address {
-	font-family: 'Quicksand', sans-serif;
 	color: #FFFFFF;
 }
 
@@ -329,8 +331,19 @@ a {
 	border: 1px solid black;
 }
 
-/* Settings for allcontent page */
+#impressum #impressumtable p, #impressum #impressumtable pre {
+	font-size: 100%;
+	margin-top: 0pt;
+}
 
+#impressum .closeImpressum {
+	font-weight: bold;
+	border: 1px solid black;
+	background-color: #C0C0C0;
+	padding: 2px;
+}
+
+/* Settings for allcontent page */
 @page {
 	margin: 15mm 10mm 20mm 10mm;
 }
