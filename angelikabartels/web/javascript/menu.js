@@ -15,12 +15,12 @@ function adjustStyle(width, height) {
 	} else {
 		$('#menuleft').removeClass('smallheight');
 	}
-	if (width < 230) {
+	if (width < 240) {
 		$('#menuleft').addClass('smallwidth');
 	} else {
 		$('#menuleft').removeClass('smallwidth');
 	}
-	if (height < 230 || width < 200) {
+	if (height < 230 || width < 210) {
 		$('#menuleft a').addClass('smalltext');
 	} else {
 		$('#menuleft a').removeClass('smalltext');
@@ -33,27 +33,24 @@ $(window).resize(function() {
 	adjustStyle($(this).width(), $(this).height());
 });
 
-$(document)
-		.ready(
-				function() {
+$(document).ready(function() {
 
-					var menu = $('#menuleft'), a = menu.find('a');
+	var menu = $('#menuleft'), a = menu.find('a');
 
-					// include the text in <span /> element.
-					a.wrapInner($('<span />'));
+	// include the text in <span /> element.
+	a.wrapInner($('<span />'));
 
-					a.hover(function() {
-						var t = $(this), s = t.siblings('a');
-						t.toggleClass('highlight');
-						s.toggleClass('blur');
-					});
+	a.hover(function() {
+		var t = $(this), s = t.siblings('a');
+		t.toggleClass('highlight');
+		s.toggleClass('blur');
+	});
 
-					adjustStyle($(window).width(), $(window).height());
+	adjustStyle($(window).width(), $(window).height());
 
-					// Suppress print button on mobile browsers
-					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
-							.test(navigator.userAgent)) {
-						$("#linkprint").remove();
-					}
+	// Suppress print button on mobile browsers
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		$("#linkprint").remove();
+	}
 
-				});
+});

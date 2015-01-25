@@ -1,11 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@CHARSET "ISO-8859-1";
 
 /* General settings */
 body, p, pre {
-	font-family: 'Century Gothic', 'Muli', sans-serif;
-	font-size: medium;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
 	color: #33537C;
 	background-color: transparent;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
 }
 
 body#index {
@@ -21,10 +28,6 @@ table, table tr, table td {
 	border-collapse: collapse;
 }
 
-p, pre {
-
-}
-
 ul {
 	padding-left: 2em;
 }
@@ -38,11 +41,6 @@ a {
 }
 
 /* Settings for main page */
-.invite {
-	font-family: cursive;
-	text-align: center;
-}
-
 .startentry {
 	text-align: center;
 }
@@ -62,8 +60,9 @@ a {
 	padding-top: 0px;
 }
 
-#startseite h2 {
-	margin-bottom: 8px;
+#startseite h1 {
+	margin-bottom: 6px;
+	padding-bottom: 0px;
 }
 
 #text {
@@ -82,7 +81,7 @@ a {
 	text-align: justify;
 	padding-bottom: 12px;
 	padding-top: 0px;
-	margin-bottom: 6px;
+	margin-bottom: 8px;
 	margin-top: 2px;
 }
 
@@ -122,7 +121,7 @@ a {
 #text p.footer, #text pre.footer {
 	text-align: center;
 	font-weight: bold;
-	font-size: 80%;
+	font-size: 13px;
 	margin-top: 30px;
 	margin-left: 30px;
 	margin-right: 30px;
@@ -141,6 +140,11 @@ a {
 
 #text p.footer.secondary {
 	margin-top: 0px;
+}
+
+#uebermich li {
+	margin-bottom: 18px;
+	text-align: left;
 }
 
 /* Settings for right side */
@@ -183,11 +187,11 @@ a {
 	width: 50px;
 	color: #33537C;
 	border-radius: 8px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 #menuleft a.twoline {
-	height: 50px;
+	height: 54px;
 }
 
 #menuleft.smallheight a {
@@ -195,12 +199,12 @@ a {
 }
 
 #menuleft a.smalltext {
-	font-size: 14px;
+	font-size: 15px;
 	height: 25px;
 }
 
 #menuleft a.twoline.smalltext {
-	height: 40px;
+	height: 44px;
 }
 
 #menuleft a.chosen, #menuleft a.chosen.highlight {
@@ -235,6 +239,38 @@ a {
 	left: 5px;
 }
 
+/* Settings for dropdown menu */
+#menudropdown ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menudropdown li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+#menudropdown li a {
+	width: 300px;
+	display: block;
+	text-align: center;
+	color: #000000;
+	background-color: #8FB0DE;
+	height: 35px;
+	line-height: 35px;
+	text-decoration: none;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	color: #000000;
+}
+
+#menudropdown img.icon {
+	width: 24px;
+	height: 24px;
+}
+
 /* Settings for bottom */
 #bottom {
 	background-image: url("../img/bottom.jpg");
@@ -260,7 +296,6 @@ a {
 }
 
 #bottom tr.address {
-	font-family: 'Quicksand', sans-serif;
 	color: #FFFFFF;
 }
 
@@ -295,22 +330,22 @@ a {
 }
 
 #bottom.small {
-	font-size: 80%;
+	font-size: 13px;
 }
 
 #bottom.smaller {
-	font-size: 60%;
+	font-size: 10px;
 }
 
 /* Settings for Impressum */
 #impressum {
 	background-color: #FFFFFF;
 	font-family: sans-serif;
-	font-size: 80%;
+	font-size: 10px;
 }
 
 #impressum table {
-	font-size: 80%;
+	font-size: 10px;
 }
 
 #impressum h2 {
@@ -329,8 +364,19 @@ a {
 	border: 1px solid black;
 }
 
-/* Settings for allcontent page */
+#impressum #impressumtable p, #impressum #impressumtable pre {
+	font-size: 10px;
+	margin-top: 0pt;
+}
 
+#impressum .closeImpressum {
+	font-weight: bold;
+	border: 1px solid black;
+	background-color: #C0C0C0;
+	padding: 2px;
+}
+
+/* Settings for allcontent page */
 @page {
 	margin: 15mm 10mm 20mm 10mm;
 }

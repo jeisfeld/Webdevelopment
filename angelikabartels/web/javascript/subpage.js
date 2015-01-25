@@ -1,9 +1,16 @@
+/**
+ * Utility method to mark the menu entry of the current page as "chosen".
+ *
+ * @param frame
+ * @param id
+ * @returns {Boolean}
+ */
 function markChosen(frame, id) {
-	if(frame) {
+	if (frame) {
 		var t = $(frame.getElementById(id));
 		var s = $(frame).find('a');
-		//alert(t.html());
-		if(t) {
+		// alert(t.html());
+		if (t) {
 			s.removeClass('chosen');
 			t.addClass('chosen');
 		}
@@ -11,23 +18,49 @@ function markChosen(frame, id) {
 	return (t != null && t.html().toLowerCase().match('span'));
 }
 
+/**
+ * Utility method that multiplies CSS px values by the device resolution factor (for smartphones).
+ */
+function multiplyCss(pattern, parameter, factor) {
+	var oldValue = $(pattern).css(parameter);
+	if (oldValue.indexOf('px') > 0) {
+		oldValue = oldValue.substr(0, oldValue.indexOf('px'));
+	}
+	var newValue = '' + parseInt(oldValue) * factor + 'px';
+	$(pattern).css(parameter, newValue);
+}
+
+/**
+ * Increaze some sizes in order to fit better on mobile devices.
+ */
+function adaptToHighResolution() {
+	if (window.devicePixelRatio > 1
+			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		zoomFactor = window.devicePixelRatio;
+		multiplyCss('body, p, pre', 'font-size', zoomFactor);
+		multiplyCss('h1', 'font-size', zoomFactor * 0.8);
+		// This takes as baseline the previously changed size, not the original footer size.
+		multiplyCss('#text p.footer, #text pre.footer', 'font-size', 0.81);
+	}
+}
 
 $(document).ready(function() {
-	var myId=$('body').attr('id');
+	adaptToHighResolution();
+
+	var myId = $('body').attr('id');
 	var frame, result;
-	
+
 	// first try in top frame
 	try {
 		frame = top.main.menutop.document;
 		result = markChosen(frame, myId);
-	}
-	catch (e) {
+	} catch (e) {
 	}
 
 	// otherwise, try in left frame
-	if(!result) {
+	if (!result) {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
-	
+
 });

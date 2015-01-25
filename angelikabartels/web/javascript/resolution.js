@@ -1,8 +1,14 @@
+function needsMobileAdaptation() {
+	return window.devicePixelRatio > 1
+			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
 function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
 	var mainframe = $('#mainframe');
 	var menuleftframe = $('#menuleftframe');
+	var menudropdownframe = $('#menudropdownframe');
 	var toplogoframe = $('#toplogoframe');
 	var bottomframe = $('#bottomframe');
 	var popupframe = $('#popupframe');
@@ -22,10 +28,17 @@ function adjustStyle(width, height) {
 	}
 	var middleheight = height - logoheight - bottomheight;
 	toplogoframe.css('height', logoheight);
+
 	mainframe.css('top', logoheight);
 	mainframe.css('height', middleheight);
 	menuleftframe.css('top', logoheight);
 	menuleftframe.css('height', middleheight);
+
+	if (needsMobileAdaptation()) {
+		menudropdownframe.css('top', logoheight - 24 * window.devicePixelRatio);
+	} else {
+		menudropdownframe.css('top', logoheight);
+	}
 
 	popupframe.css('top', height / 4);
 	popupframe.css('height', height / 2);
@@ -36,8 +49,8 @@ function adjustStyle(width, height) {
 
 	// background positioning - image is square!
 
-	// Correction, as width has too small values while shrinking window
-	// vertically.
+	// Correction, as width has too small values while shrinking windows vertically.
+
 	var modWidth = width + 17;
 	if (modWidth < height) {
 		var offset = (modWidth - height) / 2
@@ -66,6 +79,19 @@ function adjustStyle(width, height) {
 
 	// image width limitation
 	mainimages.css('max-width', width * 0.4);
+
+	// hide menu on narrow screens.
+	if (width < 850 || needsMobileAdaptation()) {
+		menuleftframe.hide();
+		menudropdownframe.show();
+		mainframe.css('left', 0);
+		mainframe.css('width', '100%');
+	} else {
+		menuleftframe.show();
+		menudropdownframe.hide();
+		mainframe.css('left', '21%');
+		mainframe.css('width', '79%');
+	}
 }
 
 function adjustMainStyle() {
