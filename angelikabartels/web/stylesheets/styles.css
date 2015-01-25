@@ -133,7 +133,7 @@ a {
 }
 
 #text p.footer.verse {
-	white-space: pre;
+	white-space: pre-wrap;
 }
 
 #text p.footer.secondary {
