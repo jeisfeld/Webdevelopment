@@ -3,6 +3,7 @@ function adjustStyle(width, height) {
 	height = parseInt(height);
 	var mainframe = $('#mainframe');
 	var menuleftframe = $('#menuleftframe');
+	var menudropdownframe = $('#menudropdownframe');
 	var toplogoframe = $('#toplogoframe');
 	var bottomframe = $('#bottomframe');
 	var popupframe = $('#popupframe');
@@ -26,6 +27,7 @@ function adjustStyle(width, height) {
 	mainframe.css('height', middleheight);
 	menuleftframe.css('top', logoheight);
 	menuleftframe.css('height', middleheight);
+	menudropdownframe.css('top', logoheight);
 
 	popupframe.css('top', height / 4);
 	popupframe.css('height', height / 2);
@@ -36,8 +38,8 @@ function adjustStyle(width, height) {
 
 	// background positioning - image is square!
 
-	// Correction, as width has too small values while shrinking window
-	// vertically.
+	// Correction, as width has too small values while shrinking windows vertically.
+
 	var modWidth = width + 17;
 	if (modWidth < height) {
 		var offset = (modWidth - height) / 2
@@ -66,6 +68,19 @@ function adjustStyle(width, height) {
 
 	// image width limitation
 	mainimages.css('max-width', width * 0.4);
+
+	// hide menu on narrow screens.
+	if (width < 800) {
+		menuleftframe.hide();
+		menudropdownframe.show();
+		mainframe.css('left', 0);
+		mainframe.css('width', '100%');
+	} else {
+		menuleftframe.show();
+		menudropdownframe.hide();
+		mainframe.css('left', '21%');
+		mainframe.css('width', '79%');
+	}
 }
 
 function adjustMainStyle() {
