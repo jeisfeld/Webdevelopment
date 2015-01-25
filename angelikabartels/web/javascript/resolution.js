@@ -1,3 +1,8 @@
+function needsMobileAdaptation() {
+	return window.devicePixelRatio > 1
+			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
 function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
@@ -23,11 +28,17 @@ function adjustStyle(width, height) {
 	}
 	var middleheight = height - logoheight - bottomheight;
 	toplogoframe.css('height', logoheight);
+
 	mainframe.css('top', logoheight);
 	mainframe.css('height', middleheight);
 	menuleftframe.css('top', logoheight);
 	menuleftframe.css('height', middleheight);
-	menudropdownframe.css('top', logoheight);
+
+	if (needsMobileAdaptation()) {
+		menudropdownframe.css('top', logoheight - 24 * window.devicePixelRatio);
+	} else {
+		menudropdownframe.css('top', logoheight);
+	}
 
 	popupframe.css('top', height / 4);
 	popupframe.css('height', height / 2);
@@ -70,7 +81,7 @@ function adjustStyle(width, height) {
 	mainimages.css('max-width', width * 0.4);
 
 	// hide menu on narrow screens.
-	if (width < 800) {
+	if (width < 850 || needsMobileAdaptation()) {
 		menuleftframe.hide();
 		menudropdownframe.show();
 		mainframe.css('left', 0);
