@@ -4,8 +4,6 @@ function adjustStyle(width, height) {
 
 	$('.centerbox').css('width', width);
 	$('.centerbox').css('height', height);
-	$('.centerbox').css('margin-left', -width / 2);
-	$('.centerbox').css('margin-top', -height / 2);
 }
 
 $(window).resize(

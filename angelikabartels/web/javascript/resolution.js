@@ -34,17 +34,6 @@ function adjustStyle(width, height) {
 	menuleftframe.css('top', logoheight);
 	menuleftframe.css('height', middleheight);
 
-	if (needsMobileAdaptation()) {
-		menudropdownframe.css('top', logoheight - 24 * window.devicePixelRatio);
-	} else {
-		menudropdownframe.css('top', logoheight);
-	}
-
-	popupframe.css('top', height / 4);
-	popupframe.css('height', height / 2);
-	popupframe.css('left', width / 4);
-	popupframe.css('width', width / 2);
-
 	bottomframe.css('top', height - 50);
 
 	// background positioning - image is square!
@@ -77,20 +66,44 @@ function adjustStyle(width, height) {
 		bottombody.removeClass('smaller');
 	}
 
-	// image width limitation
-	mainimages.css('max-width', width * 0.4);
-
 	// hide menu on narrow screens.
 	if (width < 850 || needsMobileAdaptation()) {
 		menuleftframe.hide();
+		bottomframe.hide();
+		mainframe.css('height', height - logoheight);
+
 		menudropdownframe.show();
+		menudropdownframe.css('top', logoheight - 24 * window.devicePixelRatio);
 		mainframe.css('left', 0);
 		mainframe.css('width', '100%');
+
+		// limit image size
+		mainimages.css('max-width', width * 0.5);
+
+		// impressum appears on main window
+		popupframe.css('top', logoheight);
+		popupframe.css('height', height - logoheight);
+		popupframe.css('left', 0);
+		popupframe.css('width', '100%');
+		popupframe.css('border', 'none');
 	} else {
 		menuleftframe.show();
+		bottomframe.show();
+		mainframe.css('height', middleheight);
+
 		menudropdownframe.hide();
 		mainframe.css('left', '21%');
 		mainframe.css('width', '79%');
+
+		// limit image size
+		mainimages.css('max-width', width * 0.4);
+
+		// impressum appears in popupframe
+		popupframe.css('top', height / 4);
+		popupframe.css('height', height / 2);
+		popupframe.css('left', width / 4);
+		popupframe.css('width', width / 2);
+		popupframe.css('border', '2px solid black');
 	}
 }
 

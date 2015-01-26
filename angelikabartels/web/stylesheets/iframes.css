@@ -64,7 +64,7 @@
 	position: absolute;
 	visibility: hidden;
 	background-color: #FFFFFF;
-	z-index: 20;
+	z-index: 0;
 	background-color: #FFFFFF;
-	border: 2px solid black;
+	border: none;
 }

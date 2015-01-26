@@ -37,13 +37,13 @@ function adaptToHighResolution() {
 	if (window.devicePixelRatio > 1
 			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 		zoomFactor = window.devicePixelRatio;
-		multiplyCss('body, p, pre', 'font-size', zoomFactor * 0.9);
+		multiplyCss('body, p', 'font-size', zoomFactor * 0.9);
 		multiplyCss('h1', 'font-size', zoomFactor * 0.7);
 		multiplyCss('#text h1', 'margin-bottom', zoomFactor);
 		multiplyCss('#text p:not(.supertitle), #text ul', 'margin-bottom', zoomFactor);
 		multiplyCss('#text p:not(.supertitle), #text ul', 'padding-bottom', zoomFactor);
 		multiplyCss('#text hr', 'margin-bottom', zoomFactor);
-		// This takes as baseline the previously changed size, not the original footer size.
+		// Take explicit value, as p font size was already changed
 		$('#text p.footer').css('font-size', '' + (7.5 * zoomFactor) + 'px');
 	}
 }
