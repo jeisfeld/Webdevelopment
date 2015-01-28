@@ -38,17 +38,14 @@ function adjustStyle(width, height) {
 
 	// background positioning - image is square!
 
-	// Correction, as width has too small values while shrinking windows vertically.
-
-	var modWidth = width + 17;
-	if (modWidth < height) {
-		var offset = (modWidth - height) / 2
+	if (width < height) {
+		var offset = (width - height) / 2
 		var positionString = '' + offset + 'px 0px';
 		var sizeString = '' + height + 'px ' + height + 'px';
 	} else {
-		var offset = (height - modWidth) / 2
+		var offset = (height - width) / 2
 		var positionString = '0px ' + offset + 'px';
-		var sizeString = '' + modWidth + 'px ' + modWidth + 'px';
+		var sizeString = '' + width + 'px ' + width + 'px';
 	}
 
 	indexbody.css('background-position', positionString);
@@ -108,6 +105,7 @@ function adjustStyle(width, height) {
 }
 
 function adjustMainStyle() {
+	adjustStyle($(window).width(), $(window).height());
 	adjustStyle($(window).width(), $(window).height());
 }
 
