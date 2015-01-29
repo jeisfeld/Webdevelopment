@@ -28,7 +28,8 @@ function toggleMenu() {
 function showImpressum() {
 	$("#popupframe", window.parent.document).css('visibility', 'visible');
 	$("#popupframe", window.parent.document).css('z-index', '20');
-	$("#popupframe", window.parent.document).attr("src","impressum.html");
+	var url = $("#popupframe", window.parent.document).attr('data-link');
+	$("#popupframe", window.parent.document).attr('src',url);
 }
 
 function hideImpressum() {
