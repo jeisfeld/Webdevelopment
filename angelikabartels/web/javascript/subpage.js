@@ -9,7 +9,6 @@ function markChosen(frame, id) {
 	if (frame) {
 		var t = $(frame.getElementById(id));
 		var s = $(frame).find('a');
-		// alert(t.html());
 		if (t) {
 			s.removeClass('chosen');
 			t.addClass('chosen');
@@ -54,15 +53,8 @@ $(document).ready(function() {
 	var myId = $('body').attr('id');
 	var frame, result;
 
-	// first try in top frame
-	try {
-		frame = top.main.menutop.document;
-		result = markChosen(frame, myId);
-	} catch (e) {
-	}
 
-	// otherwise, try in left frame
-	if (!result) {
+	if(top.menu != null && top.menu.document != null) {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
