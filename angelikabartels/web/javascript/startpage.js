@@ -2,8 +2,8 @@ function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
 
-	$('.centerbox').css('width', width);
-	$('.centerbox').css('height', height);
+	$('.centerbox').css('width', width-10);
+	$('.centerbox').css('height', height-10);
 }
 
 $(window).resize(
