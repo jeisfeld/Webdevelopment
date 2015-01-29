@@ -10,6 +10,14 @@ body, p {
 	background-color: transparent;
 }
 
+body.ie8 {
+	background-color: #F4D1D1;
+}
+
+body.mainpage.ie8 {
+	background-color: #FBEDED;
+}
+
 h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 32px;
@@ -206,22 +214,16 @@ a {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.ielte8 #menuleft a.chosen, .ielte8 #menuleft a.chosen.highlight {
-	background: transparent;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,
-		endColorstr=#7FFFFFFF);
-	zoom: 1;
+#menuleft.ie8 a.chosen, #menuleft.ie8 a.chosen.highlight {
+	background-color: #FBEDED;
 }
 
 #menuleft a.highlight {
 	background: rgba(255, 255, 255, 0.25);
 }
 
-.ielte8 #menuleft a.highlight {
-	background: transparent;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3FFFFFFF,
-		endColorstr=#7FFFFFFF);
-	zoom: 1;
+#menuleft.ie8 a.highlight {
+	background-color: #F8E0E1;
 }
 
 #menuleft a span {
@@ -272,6 +274,10 @@ a {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+#bottom.ie8 {
+	background-repeat: repeat;
 }
 
 #bottom hr {

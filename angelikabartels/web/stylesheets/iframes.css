@@ -53,13 +53,6 @@
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.ielte8 #mainframe {
-	background: transparent;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,
-		endColorstr=#7FFFFFFF);
-	zoom: 1;
-}
-
 #popupframe {
 	position: absolute;
 	visibility: hidden;

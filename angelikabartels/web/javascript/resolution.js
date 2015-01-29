@@ -105,8 +105,20 @@ function adjustStyle(width, height) {
 }
 
 function adjustMainStyle() {
+	if (!$.support.leadingWhitespace) {
+		adjustForIE8();
+	}
 	adjustStyle($(window).width(), $(window).height());
 	adjustStyle($(window).width(), $(window).height());
+}
+
+function adjustForIE8() {
+	$('#index').addClass('ie8');
+	$('#bottomframe').contents().find('body').addClass('ie8');
+	$('#mainframe').contents().find('body').addClass('ie8');
+	$('#menuleftframe').contents().find('body').addClass('ie8');
+	$('#toplogoframe').contents().find('body').addClass('ie8');
+	$('#popupframe').contents().find('body').addClass('ie8');
 }
 
 $(window).resize(function() {
