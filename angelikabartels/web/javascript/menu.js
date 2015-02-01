@@ -1,5 +1,5 @@
 function openPopup(url) {
-	var newwindow = window.open(url, '_blank', 'height=600,width=800,scrollbars=yes');
+	var newwindow = window.open(url, '_blank', 'height=600,width=800,scrollbars=yes,menubar=yes');
 	if (window.focus) {
 		newwindow.focus()
 	}

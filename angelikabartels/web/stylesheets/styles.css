@@ -384,6 +384,10 @@ a.closeImpressum {
 	visibility: hidden;
 }
 
+#allcontent hr.newpage {
+	page-break-before: always;
+}
+
 /* Settings for allcontent page */
 @page {
 	margin: 15mm 10mm 20mm 10mm;
