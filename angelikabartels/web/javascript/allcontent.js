@@ -44,6 +44,4 @@ $(document).ready(function() {
 	totalPages = pagesToBeLoaded.size();
 
 	pagesToBeLoaded.each(loadPage);
-
-	$('#pageloading').remove();
 });
