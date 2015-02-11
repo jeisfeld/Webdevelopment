@@ -70,7 +70,7 @@ function adjustStyle(width, height) {
 		mainframe.css('height', height - logoheight);
 
 		menudropdownframe.show();
-		menudropdownframe.css('top', logoheight - 24 * window.devicePixelRatio);
+		menudropdownframe.css('top', logoheight - 24);
 		mainframe.css('left', 0);
 		mainframe.css('width', '100%');
 

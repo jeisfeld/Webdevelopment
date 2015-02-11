@@ -18,37 +18,19 @@ function markChosen(frame, id) {
 }
 
 /**
- * Utility method that multiplies CSS px values by the device resolution factor (for smartphones).
+ * Change some sizes in order to fit better on mobile devices.
  */
-function multiplyCss(pattern, parameter, factor) {
-	var oldValue = $(pattern).css(parameter);
-	if (oldValue.indexOf('px') > 0) {
-		oldValue = oldValue.substr(0, oldValue.indexOf('px'));
-	}
-	var newValue = '' + parseInt(oldValue) * factor + 'px';
-	$(pattern).css(parameter, newValue);
-}
+function adaptToHighResolution(width) {
+	width = parseInt(width);
 
-/**
- * Increaze some sizes in order to fit better on mobile devices.
- */
-function adaptToHighResolution() {
-	if (window.devicePixelRatio > 1
-			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		zoomFactor = window.devicePixelRatio;
-		multiplyCss('body, p', 'font-size', zoomFactor * 0.9);
-		multiplyCss('h1', 'font-size', zoomFactor * 0.7);
-		multiplyCss('#text h1', 'margin-bottom', zoomFactor);
-		multiplyCss('#text p:not(.supertitle), #text ul', 'margin-bottom', zoomFactor);
-		multiplyCss('#text p:not(.supertitle), #text ul', 'padding-bottom', zoomFactor);
-		multiplyCss('#text hr', 'margin-bottom', zoomFactor);
-		// Take explicit value, as p font size was already changed
-		$('#text p.footer').css('font-size', '' + (7.5 * zoomFactor) + 'px');
+	if (window.devicePixelRatio > 1 && width < 800) {
+		$('h1').css('font-size', '24px');
+		$('body, p').css('font-size', '14px');
 	}
 }
 
 $(document).ready(function() {
-	adaptToHighResolution();
+	adaptToHighResolution($(document).width());
 
 	var myId = $('body').attr('id');
 	var frame, result;
@@ -58,5 +40,4 @@ $(document).ready(function() {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
-
 });

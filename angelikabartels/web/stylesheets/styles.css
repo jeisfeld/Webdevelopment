@@ -88,6 +88,10 @@ a {
 	padding-top: 0px;
 	margin-bottom: 8px;
 	margin-top: 2px;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 #text p.subtitle {
