@@ -26,6 +26,7 @@ function adaptToHighResolution(width) {
 	if (window.devicePixelRatio > 1 && width < 800) {
 		$('h1').css('font-size', '24px');
 		$('body, p').css('font-size', '14px');
+		$('#text p.footer').css('font-size', '11px');
 	}
 }
 
