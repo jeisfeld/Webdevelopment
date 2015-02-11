@@ -17,22 +17,7 @@ function markChosen(frame, id) {
 	return (t != null && t.html().toLowerCase().match('span'));
 }
 
-/**
- * Change some sizes in order to fit better on mobile devices.
- */
-function adaptToHighResolution(width) {
-	width = parseInt(width);
-
-	if (window.devicePixelRatio > 1 && width < 800) {
-		$('h1').css('font-size', '24px');
-		$('body, p').css('font-size', '14px');
-		$('#text p.footer').css('font-size', '11px');
-	}
-}
-
 $(document).ready(function() {
-	adaptToHighResolution($(document).width());
-
 	var myId = $('body').attr('id');
 	var frame, result;
 

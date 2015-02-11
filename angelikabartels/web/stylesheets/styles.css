@@ -396,3 +396,16 @@ a.closeImpressum {
 @page {
 	margin: 15mm 10mm 20mm 10mm;
 }
+
+/* Settings for small media */
+@media ( max-width : 800px) {
+	h1 {
+		font-size: 24px;
+	}
+	body, p {
+		font-size: 14px;
+	}
+	#text p.footer {
+		font-size: 12px;
+	}
+}
