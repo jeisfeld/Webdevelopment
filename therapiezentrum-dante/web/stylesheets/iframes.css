@@ -1,0 +1,38 @@
+@CHARSET "ISO-8859-1";
+
+#toplogoframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 19%;
+	width: 100%;
+	border: 0px;
+}
+
+#bottomframe {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 13%;
+	width: 100%;
+	border: 0px;
+	overflow: hidden;
+}
+
+#menuleftframe {
+	position: absolute;
+	top: 19%;
+	left: 0;
+	width: 21%;
+	height: 68%;
+	border: 0px;
+}
+
+#mainframe {
+	position: absolute;
+	top: 19%;
+	left: 21%;
+	width: 79%;
+	height: 68%;
+	border: 0px;
+}

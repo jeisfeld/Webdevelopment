@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+/* General settings */
+body {
+	font-family: 'Century Gothic', 'Muli', sans-serif;
+	font-size: medium;
+	color: #333333;
+	background-color: transparent;
+}
+
+body#index {
+	background: #F6FCEA; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ffffff 20%, #edfece 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(20%, #ffffff),
+		color-stop(100%, #edfece)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #ffffff 20%, #edfece 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #ffffff 20%, #edfece 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #ffffff 20%, #edfece 100%); /* IE10+ */
+	background: linear-gradient(135deg, #ffffff 20%, #edfece 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',
+		endColorstr='#edfece', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+	background-size: cover;
+}
+
+body#index.schraml {
+	background-image: url('../graphics/zebra.png');
+}
+
+table,table tr,table td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+p {
+	margin-bottom: 14px;
+	margin-top: 2px;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+sup {
+	font-size: smaller;
+}
+
+a {
+	color: #336600;
+	font-weight: bold;
+}
+
+/* Special list types */
+ul.dashed {
+	list-style: none;
+	padding-left: 12px;
+}
+
+ul.dashed li:before {
+	content: "-";
+	position: relative;
+	left: -5px;
+}
+
+ul.dashed li {
+	text-indent: -5px;
+	list-style-type: none;
+}
+
+ul.arrow {
+	list-style: none;
+	padding-left: 12px;
+}
+
+ul.arrow li:before {
+	content: "\2192";
+	position: relative;
+	left: -5px;
+}
+
+ul.arrow li {
+	text-indent: -5px;
+	list-style-type: none;
+}
+
+/* Settings for person pages */
+table#main {
+	padding-left: 2%;
+	width: 100%;
+}
+
+td#pict {
+	padding: 0;
+	vertical-align: top;
+}
+
+td#text {
+	padding: 0;
+	padding-right: 5%;
+	padding-left: 2%;
+	width: 62%;
+	vertical-align: top;
+	width: 62%;
+	width: 62%;
+}
+
+/* Settings for left side */
+h1 {
+	margin-left: 1em;
+	margin-bottom: 30px;
+}
+
+h1 div.main {
+	font-size: x-large;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+h1 div.sub {
+	font-size: medium;
+	font-weight: bold;
+}
+
+h2 {
+	margin-top: 28px;
+	font-size: medium;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: medium;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+/* Settings for right side */
+div.image {
+	margin-bottom: 5px;
+}
+
+div.name {
+	font-size: medium;
+	font-weight: bold;
+}
+
+div.image-text {
+	margin-bottom: 20px;
+}
+
+/* Settings for menu */
+body#menuleft hr {
+	height: 36px;
+	margin: 0px;
+	visibility: hidden;
+}
+
+body#menuleft a {
+	float: right;
+	background: #63A531;
+	color: #F0FED1;
+	margin-bottom: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: 'Muli', sans-serif;
+	font-stretch: ultra-expanded;
+	font-weight: normal;
+	position: relative;
+	width: 130px;
+	border-radius: 4px;
+}
+
+body#menuleft a#impressum {
+	background: transparent;
+	color: #63A531;
+	text-align: right;
+}
+
+body#menuleft a:hover {
+	box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
+	-moz-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
+	-webkit-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.4);
+}
+
+body#menuleft a#impressum:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+body#menuleft a.chosen {
+	box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
+	-moz-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
+	-webkit-box-shadow: 2px 3px 1px rgba(71, 96, 25, 0.6);
+}
+
+body#menuleft a#impressum.chosen {
+	background: white;
+}
