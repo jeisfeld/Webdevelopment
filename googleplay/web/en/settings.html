@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Eye Diagnosis - Settings</title>
+</head>
+<body>
+	<h2>Settings</h2>
+
+	The application allows the following settings:
+
+	<h3>Input folder for new eye photos</h3>
+
+	<p>This is the folder, from which the app imports new eye photos. By default, this is either the target folder of
+		the Eye-Fi app or the standard folder of the Camera app. However, you can configure here any other folder.</p>
+
+	<p>Background regarding the Eye-Fi app: typically, the camera of the mobile device is not sufficient to capture eye
+		photos in high quality. A more practical approach is to use an external camera with Eye-Fi SD card, which transfers
+		the photos via WLAN to the mobile device.</p>
+
+	<h3>Eye Photo Folder</h3>
+
+	<p>This is the folder in which the app manages the eye photos. Normally, you need not change this. From here, you
+		can copy the photos to other devices.</p>
+
+	<p>The predefined folder is &ldquo;EyePhotos&rdquo;.</p>
+
+	<p>You can select here a folder either on your device memory or on an SD card. In Android 4.4 (Kitkat), storage on
+		SD card has some limitations, therefore some operations will take longer.</p>
+
+	<h3>Max Bitmap size</h3>
+
+	This is the size to which photos are scaled down before displaying. This downscaling is required to save device memory.
+	The default value is 2048. In devices with little memory, it may be required to configure a smaller value (such as
+	1024). Too big values may crash the application.
+
+	<h3>Last photo is right eye</h3>
+
+	Here you can define if the last photo is the right or the left eye. By default this is the left eye (which means that
+	you made first a photo of the right eye and then of the left eye).
+
+	<h3>Sort by last name</h3>
+
+	Here you may decide that names are not ordered strictly alphabetically as given, but by the last name.
+
+	<h3>Save additional data in jpeg</h3>
+
+	Here you can limit the storage of data in the JPG files by the app.
+
+	<ul>
+		<li>Store in EXIF (recommended): The app stores relevant information in the JPG file, even in standard fields
+			which are visible in Windows.</li>
+
+		<li>Store in custom fields: The app stores information in the JPG file, but only in separate fields. Standard
+			fields remain unchanged; the data exchange with Windows is not possible.</li>
+
+		<li>Don&amp;apos;t store data in images: The app does not store information in JPG files. (This limits the
+			functionality of the app.)</li>
+	</ul>
+
+	<h3>Default overlay color</h3>
+
+	Here you can define the default color for iris topography overlays. (Standard: red)
+
+	<h3>Language</h3>
+
+	Here you can change the language in which the app is displayed. A value change forces a restart of the app.
+
+	<h3>User key</h3>
+
+	A user key that allows unlocking of additional functionality.
+</body>
+</html>
