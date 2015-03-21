@@ -30,12 +30,6 @@
 	<p>Sie können hier ein Verzeichnis wahlweise im Gerätespeicher oder auf der SD-Karte wählen. Unter Android 4.4
 		(Kitkat) gibt es Einschränkungen beim schreiben auf SD-Karten, daher dauern manche Operationen etwas länger.</p>
 
-	<h3>Maximale Bitmap-Größe</h3>
-
-	Dies ist die Größe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist nötig, um Speicherplatz zu sparen. Als
-	Standard ist hier 2048 eingestellt. Auf speicherarmen Geräten muss evtl. ein kleinerer Wert (z.B. 1024) konfiguriert
-	werden. Zu große Werte können zu Abstürzen führen.
-
 	<h3>Letztes Foto ist rechtes Auge</h3>
 
 	Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist. Standardmäßig ist hier das linke
@@ -44,6 +38,31 @@
 	<h3>Sortieren nach Nachname</h3>
 
 	Hier kann eingestellt werden, ob die Liste der Namen nach dem Nachnamen sortiert werden soll.
+
+	<h3>Maximale Bitmap-Größe</h3>
+
+	Dies ist die Größe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist nötig, um Speicherplatz zu sparen. Als
+	Standard ist hier 2048 eingestellt. Auf speicherarmen Geräten muss evtl. ein kleinerer Wert (z.B. 1024) konfiguriert
+	werden. Zu große Werte können zu Abstürzen führen.
+
+	<h3>Anzeige in voller Auflösung</h3>
+
+	Hier können Sie festlegen, unter welchen Umständen das Foto in voller Auflösung angezeigt wird. Dies erlaubt es, mehr
+	Details auf dem Foto zu sehen, aber es verbraucht Speicher und Rechenzeit.
+
+	<ul>
+		<li>Ganzes Bild im Speicher lassen: Das Foto wird immer in voller Auflösung im Speicher gehalten. Dies führt
+			dazu, dass man auf High-End-Geräten immer alle Details sehen kann. Es könnte aber zu Abstürzen führen, falls nicht
+			genug Speicher zur Verfügung steht.</li>
+
+		<li>Ausschnitt laden, wenn das Bild nicht bewegt wird: Immer wenn Sie das Foto nicht zoomen oder beweten, lädt
+			die App die aktuelle Ansicht in hoher Auflösung nach. Dies verbraucht weniger Speicher, kann aber zu Wartezeiten
+			führen.</li>
+
+		<li>Nur auf Anfrage: Die App lädt die Fotos nicht in voller Auflösung. Dies verbraucht am wenigsten Speicher und
+			Rechenzeit, aber Details in den Fotos könnten nicht sichtbar sein. Mit Hilfe des &bdquo;Lupen&ldquo;-Buttons kann der
+			aktuelle Ausschnitt in voller Bildauflösung angezeigt werden.</li>
+	</ul>
 
 	<h3>Speichern von Daten in JPG-Dateien</h3>
 

@@ -28,12 +28,6 @@
 	<p>You can select here a folder either on your device memory or on an SD card. In Android 4.4 (Kitkat), storage on
 		SD card has some limitations, therefore some operations will take longer.</p>
 
-	<h3>Max Bitmap size</h3>
-
-	This is the size to which photos are scaled down before displaying. This downscaling is required to save device memory.
-	The default value is 2048. In devices with little memory, it may be required to configure a smaller value (such as
-	1024). Too big values may crash the application.
-
 	<h3>Last photo is right eye</h3>
 
 	Here you can define if the last photo is the right or the left eye. By default this is the left eye (which means that
@@ -42,6 +36,29 @@
 	<h3>Sort by last name</h3>
 
 	Here you may decide that names are not ordered strictly alphabetically as given, but by the last name.
+
+	<h3>Max Bitmap size</h3>
+
+	This is the size to which photos are scaled down before displaying. This downscaling is required to save device memory.
+	The default value is 2048. In devices with little memory, it may be required to configure a smaller value (such as
+	1024). Too big values may crash the application.
+
+	<h3>Show image in full resolution</h3>
+
+	Here you can decide under which circumstances the photo is displayed in full resolution, which allows to see more
+	details on the photo, but consumes memory and computing time.
+
+	<ul>
+		<li>Keep full image in memory: The app always stores the photos in full resolution in memory. This gives the best
+			user experience on high end devices, but may lead to crashes if there is not enough memory available.</li>
+
+		<li>Load picture detail whenever image is not moved: The app loads a high resolution view whenever you do not
+			resize or move the photo. This requires less memory, but may lead to waiting times.</li>
+
+		<li>Load only on demand: The app does not show the image in full resolution. This requires least memory and CPU,
+			but details in the photo may be lost. The &ldquo;magnifier&rdquo; button allows to display the current picture detail
+			in full resolution.</li>
+	</ul>
 
 	<h3>Save additional data in jpeg</h3>
 
