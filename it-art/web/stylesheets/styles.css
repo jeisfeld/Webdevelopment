@@ -1,0 +1,109 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@CHARSET "ISO-8859-1";
+
+/* General settings */
+body, p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #33537C;
+	background-color: transparent;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 32px;
+}
+
+body#index {
+	background-color: #5F3700;
+}
+
+table, table tr, table td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+a {
+	color: #33537C;
+}
+
+img#logoimage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img#logoimage.fullwidth {
+	width: 100%;
+}
+
+/* Settings for botton */
+
+#bottom hr {
+	color: #FDF2D7;
+	background-color: #FDF2D7;
+	border: 0;
+	height: 1px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#bottom table {
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#bottom tr.address {
+	color: #FDF2D7;
+}
+
+#bottom div#address {
+	text-align: justify;
+}
+
+#bottom div#address div {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 5px 10px 5px 10px;
+	white-space: nowrap;
+}
+
+#bottom.small div#address div {
+	padding: 5px 5px 5px 5px;
+}
+
+#bottom.smaller div#address div {
+	padding: 5px 0px 5px 0px;
+}
+
+#bottom div#address:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+#bottom a {
+	color: #FDF2D7;
+}
+
+#bottom.small {
+	font-size: 13px;
+}
+
+#bottom.smaller {
+	font-size: 10px;
+}
