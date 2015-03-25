@@ -19,18 +19,11 @@ function adjustStyle(width, height) {
 
 	// sizing of top and bottom
 	var bottomheight = 50;
-	if (width < 1000) {
-		var limitedwidth = width;
-		toplogocontent.addClass('fullwidth');
-	} else {
-		var limitedwidth = 1240;
-		toplogocontent.removeClass('fullwidth');
-	}
 
 	if (width < height || width < 1000) {
 		toplogocontent.attr('src', 'img/logo-it-art_narrow.png');
-		var logoheight = limitedwidth * 200 / 1000;
 		toplogocontent.addClass('fullwidth');
+		var logoheight = width * 200 / 1000;
 	} else if (width < 1400) {
 		toplogocontent.attr('src', 'img/logo-it-art_narrow.png');
 		toplogocontent.removeClass('fullwidth');
