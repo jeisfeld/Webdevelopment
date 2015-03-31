@@ -31,7 +31,6 @@
 
 #menudropdownframe {
 	position: absolute;
-	visibility: hidden;
 	left: 0;
 	width: 350px;
 	height: 79%;

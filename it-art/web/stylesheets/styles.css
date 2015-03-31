@@ -155,6 +155,25 @@ img#logoimage.fullwidth {
 	left: 5px;
 }
 
+/* Settings for dropdown menu */
+#menudropdown div#menuitems a {
+	width: 150px;
+	display: block;
+	text-align: center;
+	background-color: #D50B00;
+	height: 35px;
+	line-height: 35px;
+	text-decoration: none;
+	font-size: 16px;
+	border: 1px solid #FDF2D7;
+	color: #FDF2D7;
+}
+
+#menudropdown img.icon {
+	width: 24px;
+	height: 24px;
+}
+
 /* Settings for botton */
 #bottom hr {
 	color: #FDF2D7;
