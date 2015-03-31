@@ -6,7 +6,7 @@
 body, p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	color: #33537C;
+	color: #FDF2D7;
 	background-color: transparent;
 }
 
@@ -35,7 +35,7 @@ li {
 }
 
 a {
-	color: #33537C;
+	color: #FDF2D7;
 }
 
 img#logoimage {
@@ -48,8 +48,114 @@ img#logoimage.fullwidth {
 	width: 100%;
 }
 
-/* Settings for botton */
+/* Settings for main page */
+#text {
+	padding-top: 18px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
 
+#text p, #text ul {
+	text-align: justify;
+	padding-bottom: 12px;
+	padding-top: 0px;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+#text h1 {
+	margin-bottom: 26px;
+	padding-top: 0px;
+	margin-top: 18px;
+}
+
+#text hr {
+	margin-top: 18px;
+	margin-left: 36px;
+	margin-right: 36px;
+	margin-bottom: 24px;
+}
+
+/* Settings for menu */
+#menuleftbody {
+	overflow: hidden;
+}
+
+#menuleft {
+	position: absolute;
+	top: 15px;
+	left: 10%;
+	overflow: hidden;
+}
+
+#menuleft.smallwidth {
+	left: 5px;
+}
+
+#menuleft hr {
+	height: 20px;
+	margin: 0px;
+	visibility: hidden;
+}
+
+#menuleft.smallheight hr {
+	height: 4px;
+}
+
+#menuleft a {
+	display: block;
+	background-color: rgba(255, 255, 255, 0);
+	margin-bottom: 5px;
+	padding-left: 30px;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	height: 29px;
+	width: 50px;
+	border-radius: 8px;
+	margin-bottom: 8px;
+}
+
+#menuleft.smallheight a {
+	margin-bottom: 0px;
+}
+
+#menuleft a.smalltext {
+	font-size: 15px;
+	height: 25px;
+}
+
+#menuleft a.chosen, #menuleft a.chosen.highlight {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#menuleft.ie8 a.chosen, #menuleft.ie8 a.chosen.highlight {
+	background-color: #FBEDED;
+}
+
+#menuleft a.highlight {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+#menuleft.ie8 a.highlight {
+	background-color: #F8E0E1;
+}
+
+#menuleft a span {
+	position: absolute;
+	top: 2px;
+	left: 12px;
+}
+
+#menuleft.smallwidth a span {
+	left: 5px;
+}
+
+/* Settings for botton */
 #bottom hr {
 	color: #FDF2D7;
 	background-color: #FDF2D7;
@@ -106,4 +212,44 @@ img#logoimage.fullwidth {
 
 #bottom.smaller {
 	font-size: 10px;
+}
+
+/* Settings for Impressum */
+#impressum {
+	background-color: #FFFFFF;
+	color: #000000;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#impressum p, #impressum a {
+	color: #000000;
+	font-size: 12px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#impressum h3 {
+	font-size: 16px;
+	margin-bottom: 4px;
+	margin-top: 12px;
+}
+
+#impressum h4 {
+	font-size: 14px;
+	margin-bottom: 2px;
+	margin-top: 6px;
+}
+
+#impressumheader h2 {
+	font-size: 24px;
+	margin-top: 0px;
+}
+
+a.closeImpressum {
+	font-size: 16px;
+	font-weight: bold;
+	border: 1px solid black;
+	background-color: #C0C0C0;
+	padding: 2px;
 }

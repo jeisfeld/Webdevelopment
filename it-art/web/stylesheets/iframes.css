@@ -21,7 +21,6 @@
 
 #menuleftframe {
 	position: absolute;
-	visibility: hidden;
 	left: 0;
 	width: 21%;
 	height: 68%;
@@ -43,13 +42,11 @@
 
 #mainframe {
 	position: absolute;
-	visibility: hidden;
 	left: 21%;
 	width: 79%;
 	height: 68%;
 	border: 0px;
 	z-index: 5;
-	background: rgba(255, 255, 255, 0.5);
 }
 
 #popupframe {
