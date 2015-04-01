@@ -15,6 +15,7 @@ function adjustStyle(width, height) {
 	var indexbody = $('#index');
 	var toplogocontent = toplogoframe.contents().find('#logoimage');
 	var mainimages = mainframe.contents().find('#text img');
+	var maintext = mainframe.contents().find('#text');
 	var bottombody = bottomframe.contents().find('body');
 
 	// sizing of top and bottom
@@ -33,6 +34,11 @@ function adjustStyle(width, height) {
 		toplogocontent.removeClass('fullwidth');
 		var logoheight = 200;
 	}
+
+	// add separator
+	logoheight += 1;
+
+
 	var middleheight = height - logoheight - bottomheight;
 	toplogoframe.css('height', logoheight);
 
@@ -62,12 +68,18 @@ function adjustStyle(width, height) {
 	if (width < 620) {
 		bottombody.addClass('smaller');
 		bottombody.removeClass('small');
-	} else if (width < 800) {
+		maintext.addClass('smaller');
+		maintext.removeClass('small');
+	} else if (width < 850) {
 		bottombody.addClass('small');
 		bottombody.removeClass('smaller');
+		maintext.addClass('small');
+		maintext.removeClass('smaller');
 	} else {
 		bottombody.removeClass('small');
 		bottombody.removeClass('smaller');
+		maintext.removeClass('small');
+		maintext.removeClass('smaller');
 	}
 
 	// hide menu on narrow screens.

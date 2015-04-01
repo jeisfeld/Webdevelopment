@@ -5,7 +5,6 @@
 /* General settings */
 body, p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
 	color: #FDF2D7;
 	background-color: transparent;
 }
@@ -80,6 +79,7 @@ img#logoimage.fullwidth {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+	font-size: 16px;
 }
 
 #text h1 {
@@ -98,7 +98,39 @@ img#logoimage.fullwidth {
 #text img {
 	vertical-align: middle;
 	padding-right: 20px;
+	padding-bottom: 20px;
 }
+
+#text.small p {
+	font-size: 14px;
+}
+
+#text.smaller p {
+	font-size: 12px;
+}
+
+#text.small {
+	padding-top: 14px;
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+#text.smaller {
+	padding-top: 10px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+#text.small h1 {
+	font-size: 26px;
+	margin-top: 12px;
+}
+
+#text.smaller h1 {
+	font-size: 22px;
+	margin-top: 6px;
+}
+
 
 /* Settings for contact page */
 #kontakt form {
@@ -112,7 +144,7 @@ img#logoimage.fullwidth {
 	cursor: pointer; /* Mauszeiger wird zur Hand */
 }
 
-#kontakt input#absender, textarea {
+#kontakt input#absender, #kontakt textarea {
 	width: 350px;
 	border: 1px solid #FDF2D7;
 	margin-bottom: 1em;
@@ -124,9 +156,18 @@ img#logoimage.fullwidth {
 	resize: vertical;
 }
 
-#kontakt input#absender:focus, textarea:focus {
+#kontakt input#absender:focus, #kontakt textarea:focus {
 	background-color: white;
 }
+
+#kontakt #text.smaller form {
+	width: 280px;
+}
+
+#kontakt #text.smaller input#absender, #kontakt #text.smaller textarea {
+	width: 260px;
+}
+
 
 /* Settings for menu */
 #menuleftbody {
@@ -220,6 +261,16 @@ img#logoimage.fullwidth {
 #menudropdown img.icon {
 	width: 24px;
 	height: 24px;
+}
+
+/* Settings for toplogo */
+#toplogo hr {
+	color: #FDF2D7;
+	background-color: #FDF2D7;
+	border: 0;
+	height: 1px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 /* Settings for botton */
