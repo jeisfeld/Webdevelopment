@@ -16,7 +16,7 @@ h1 {
 }
 
 body#index {
-	background-color: #5F3700;
+	background-color: #5F0000;
 }
 
 table, table tr, table td {
@@ -24,6 +24,17 @@ table, table tr, table td {
 	margin: 0px;
 	padding: 0px;
 	border-collapse: collapse;
+}
+
+table.bordered {
+
+}
+
+table.bordered td {
+	border-bottom: 1px solid #FDF2D7;
+	border-top: 1px solid #FDF2D7;
+	padding: 5px;
+	vertical-align: middle;
 }
 
 ul {
@@ -36,6 +47,10 @@ li {
 
 a {
 	color: #FDF2D7;
+}
+
+a.image {
+	text-decoration: none;
 }
 
 img#logoimage {
@@ -78,6 +93,39 @@ img#logoimage.fullwidth {
 	margin-left: 36px;
 	margin-right: 36px;
 	margin-bottom: 24px;
+}
+
+#text img {
+	vertical-align: middle;
+	padding-right: 20px;
+}
+
+/* Settings for contact page */
+#kontakt form {
+	width: 370px; /* Breite des Formulars */
+	padding: 20px;
+	border: 1px solid #FDF2D7;
+}
+
+#kontakt label { /* Beschriftung auf eigener Zeile */
+	display: block;
+	cursor: pointer; /* Mauszeiger wird zur Hand */
+}
+
+#kontakt input#absender, textarea {
+	width: 350px;
+	border: 1px solid #FDF2D7;
+	margin-bottom: 1em;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+
+#kontakt textarea {
+	height: 7em;
+	resize: vertical;
+}
+
+#kontakt input#absender:focus, textarea:focus {
+	background-color: white;
 }
 
 /* Settings for menu */
