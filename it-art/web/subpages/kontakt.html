@@ -8,7 +8,7 @@
 <script type="text/javascript" src="../javascript/subpage.js"></script>
 </head>
 
-<body id="kontakt" class="mainpage" onload="document.kontaktformular.Absender.focus();">
+<body id="kontakt" class="mainpage" onload="document.kontaktformular.absendername.focus();">
 	<div id="text">
 		<h1>Kontakt</h1>
 
@@ -18,11 +18,14 @@
 		</p>
 		<form id="kontaktformular" name="kontaktformular" method="post" action="mail.php">
 			<div>
-				<label for="Absender">Ihre E-Mail-Adresse:</label> <input type="text" id="absender" name="Absender" />
+				<label for="absendername">Ihr Name:</label> <input type="text" name="absendername" class="inputtext" />
 			</div>
 			<div>
-				<label for="Nachricht">Ihre Nachricht:</label>
-				<textarea id="nachricht" name="Nachricht" cols="20" rows="5"></textarea>
+				<label for="absender">Ihre E-Mail-Adresse:</label> <input type="text" name="absender" class="inputtext" />
+			</div>
+			<div>
+				<label for="nachricht">Ihre Nachricht:</label>
+				<textarea id="nachricht" name="nachricht" cols="20" rows="5"></textarea>
 			</div>
 			<div>
 				<input type="submit" value="Abschicken" />
