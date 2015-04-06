@@ -52,7 +52,7 @@ function test_input($data) {
 }
 ?>
 
-<body id="kontakt" class="mainpage" onload="document.kontaktformular.absendername.focus();">
+<body id="kontakt" class="mainpage" onload="document.kontaktformular.name.focus();">
 	<div id="text">
 		<h1>Kontakt</h1>
 
