@@ -131,6 +131,10 @@ img#logoimage.fullwidth {
 	margin-top: 6px;
 }
 
+span.error {
+	color: #FF0000;
+}
+
 /* Settings for contact page */
 #kontakt form {
 	width: 370px; /* Breite des Formulars */
