@@ -30,7 +30,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		$email = test_input ( $_POST ["email"] );
 		// check if e-mail address is well-formed
 		if (! filter_var ( $email, FILTER_VALIDATE_EMAIL )) {
-			$emailErr = "Ungültige Email-Adresse!";
+			$emailErr = "Bitte geben Sie eine gültige Email-Adresse an!";
 		}
 	}
 
@@ -89,20 +89,33 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 <?php
 } else {
 
-	$mailTo = 'webdevelopment@it-art.de';
+	$mailTo = '"IT-art" <webdevelopment@it-art.de>';
 	$mailFrom = '"' . $name . '" <' . $email . '>';
-	$mailSubject = 'Mail von it-art.de';
+	$mailSubject = 'Mail von IT-art.de';
 	$mailText = $content;
 
 	$mailSent = @mail ( $mailTo, $mailSubject, $mailText, "From: " . $mailFrom );
 
-	// Wenn der Mailversand erfolgreich war:
+	// Confirmation message
 	if ($mailSent) {
 		echo "<h3>Danke für Ihre Nachricht!</h3>";
-		echo "<p>Ich habe Ihre Nachricht erhalten und werde mich an die von Ihnen angegebene Mailadresse wenden.</p>";
+		echo "<p>Sie erhalten eine automatische Bestätigungsmail an die von Ihnen angegebene E-Mail-Adresse. Ich werde dann bei nächster Gelegenheit auf Ihre Nachricht antworten.</p>";
+
+		// Confirmation mail
+		$mailTo = '"' . $name . '" <' . $email . '>';
+		$mailFrom = '"IT-art" <webdevelopment@it-art.de>';
+		$mailSubject = 'Ihre Nachricht an it-art.de';
+		$mailText = "Vielen Dank für Ihre Nachricht an IT-art.\n";
+		$mailText .= "Ich werde bei nächster Gelegenheit auf Ihre Nachricht antworten. \n\n";
+		$mailText .= "---------------------------------------------------------------- \n\n";
+		$mailText .= "Ihre Nachricht:\n\n";
+		$mailText .= $content;
+
+		@mail ( $mailTo, $mailSubject, $mailText, "From: " . $mailFrom );
 	} else {
 		echo "<h3>Fehler!</h3>";
-		echo "<p>Leider ist ein Fehler aufgetreten, und Ihre Formulardaten konnten nicht an uns gesendet werden.</p>";
+		echo "<p>Leider ist ein Fehler aufgetreten, und Ihre Formulardaten konnten nicht an mich gesendet werden. ";
+		echo "Bitte senden Sie eie normale E-Mail an <a href=\"mailto:webdevelopment@it-art.de\">webdevelopment@it-art.de</a>.</p>";
 	}
 }
 ?>
