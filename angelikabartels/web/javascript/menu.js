@@ -35,7 +35,7 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
-	var menu = $('#menuleft'), a = menu.find('a');
+	var a = $('#menuleft').find('a');
 
 	// include the text in <span /> element.
 	a.wrapInner($('<span />'));
