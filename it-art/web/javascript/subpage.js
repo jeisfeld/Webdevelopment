@@ -17,13 +17,18 @@ function markChosen(frame, id) {
 	return (t != null && t.html().toLowerCase().match('span'));
 }
 
+function applySpecialSettings() {
+	$('#dreamalittledream').prop('volume', 0.3);
+}
+
 $(document).ready(function() {
 	var myId = $('body').attr('id');
 	var frame, result;
 
-
-	if(top.menu != null && top.menu.document != null) {
+	if (top.menu != null && top.menu.document != null) {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
+
+	applySpecialSettings();
 });
