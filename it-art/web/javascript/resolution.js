@@ -38,7 +38,6 @@ function adjustStyle(width, height) {
 	// add separator
 	logoheight += 1;
 
-
 	var middleheight = height - logoheight - bottomheight;
 	toplogoframe.css('height', logoheight);
 
@@ -103,13 +102,21 @@ function adjustStyle(width, height) {
 		popupframe.css('width', '100%');
 		popupframe.css('border', 'none');
 	} else {
-		menuleftframe.show();
+		if (menuleftframe.hasClass("hidden")) {
+			menuleftframe.hide();
+			mainframe.css('left', 0);
+			mainframe.css('width', '100%');
+		}
+		if (!menuleftframe.hasClass("hidden")) {
+			menuleftframe.show();
+			mainframe.css('left', '21%');
+			mainframe.css('width', '79%');
+		}
+
 		bottomframe.show();
 		mainframe.css('height', middleheight);
 
 		menudropdownframe.hide();
-		mainframe.css('left', '21%');
-		mainframe.css('width', '79%');
 
 		// limit image size
 		mainimages.css('max-width', width * 0.4);

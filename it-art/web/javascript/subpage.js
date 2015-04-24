@@ -2,8 +2,9 @@
  * Utility method to mark the menu entry of the current page as "chosen".
  *
  * @param frame
+ *            The menu frame
  * @param id
- * @returns {Boolean}
+ *            The main page id
  */
 function markChosen(frame, id) {
 	if (frame) {
@@ -13,15 +14,43 @@ function markChosen(frame, id) {
 			s.removeClass('chosen');
 			t.addClass('chosen');
 		}
+
+		if (id == 'startseite') {
+		} else {
+		}
 	}
-	return (t != null && t.html().toLowerCase().match('span'));
 }
 
-function applySpecialSettings() {
-	$('#dreamalittledream').prop('volume', 0.3);
+/**
+ * Apply special settings to the main page.
+ *
+ * @param id
+ *            The main page id
+ */
+function applySpecialSettings(id) {
+	// hide menu for main page
+	if (id == 'startseite') {
+		$("#menuleftframe", window.parent.document).addClass('hidden');
+	} else {
+		$("#menuleftframe", window.parent.document).removeClass('hidden');
+	}
+
+	// Set volume on music page
+	if (id == 'musik') {
+		$('#dreamalittledream').prop('volume', 0.3);
+		$('#zarathustra').trigger('play');
+
+		width = parseInt($(this).width());
+		$('audio').css('width', width/2);
+	}
 }
 
+/*
+ * Actions triggered on load of page.
+ */
 $(document).ready(function() {
+	$('body').wrapInner('<div id="text" />')
+
 	var myId = $('body').attr('id');
 	var frame, result;
 
@@ -30,5 +59,5 @@ $(document).ready(function() {
 		markChosen(frame, myId);
 	}
 
-	applySpecialSettings();
+	applySpecialSettings(myId);
 });

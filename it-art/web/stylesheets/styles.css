@@ -63,6 +63,38 @@ img#logoimage.fullwidth {
 }
 
 /* Settings for main page */
+#startseite a {
+	text-decoration: none;
+}
+
+#startseite h1.startitem {
+	display: block;
+	height: 80px;
+	width: 300px;
+	line-height: 80px;
+	vertical-align: middle;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #00A000;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+#startseite #text.small h1 {
+	font-size: 28px;
+	height: 70px;
+	width: 270px;
+	line-height: 70px;
+}
+
+#startseite #text.smaller h1 {
+	font-size: 26px;
+	height: 60px;
+	width: 240px;
+	line-height: 60px;
+}
+
 #text {
 	padding-top: 18px;
 	padding-left: 18px;
@@ -101,11 +133,11 @@ img#logoimage.fullwidth {
 	padding-bottom: 20px;
 }
 
-#text.small p {
+#text.small p, #text.small td {
 	font-size: 14px;
 }
 
-#text.smaller p {
+#text.smaller p, #text.smaller td {
 	font-size: 12px;
 }
 

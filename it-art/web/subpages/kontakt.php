@@ -53,38 +53,37 @@ function test_input($data) {
 ?>
 
 <body id="kontakt" class="mainpage" onload="document.kontaktformular.name.focus();">
-	<div id="text">
-		<h1>Kontakt</h1>
+	<h1>Kontakt</h1>
 
-		<p>
-			Bitte kontaktieren Sie mich per E-Mail:<br>
-			<a href="mailto:webdevelopment@it-art.de">webdevelopment@it-art.de</a>
-		</p>
-		<form id="kontaktformular" name="kontaktformular" method="post"
-			action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	<p>
+		Bitte kontaktieren Sie mich per E-Mail:<br>
+		<a href="mailto:webdevelopment@it-art.de">webdevelopment@it-art.de</a>
+	</p>
+	<form id="kontaktformular" name="kontaktformular" method="post"
+		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 <?php
 if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty ( $contentErr )) {
 	?>
 
 			<div>
-				<label for="name">Ihr Name:<span class="error"> <?php echo $nameErr;?></span></label> <input type="text" name="name"
-					class="inputtext" value="<?php echo $name;?>" />
-			</div>
+			<label for="name">Ihr Name:<span class="error"> <?php echo $nameErr;?></span></label> <input type="text" name="name"
+				class="inputtext" value="<?php echo $name;?>" />
+		</div>
 
-			<div>
-				<label for="email">Ihre E-Mail-Adresse:<span class="error"> <?php echo $emailErr;?></span></label> <input
-					type="text" name="email" class="inputtext" value="<?php echo $email;?>" />
-			</div>
+		<div>
+			<label for="email">Ihre E-Mail-Adresse:<span class="error"> <?php echo $emailErr;?></span></label> <input type="text"
+				name="email" class="inputtext" value="<?php echo $email;?>" />
+		</div>
 
-			<div>
-				<label for="content">Ihre Nachricht:<span class="error"> <?php echo $contentErr;?></span></label>
-				<textarea id="nachricht" name="content" cols="20" rows="5"><?php echo $content;?></textarea>
-			</div>
+		<div>
+			<label for="content">Ihre Nachricht:<span class="error"> <?php echo $contentErr;?></span></label>
+			<textarea id="nachricht" name="content" cols="20" rows="5"><?php echo $content;?></textarea>
+		</div>
 
-			<div>
-				<input type="submit" value="Abschicken" />
-			</div>
+		<div>
+			<input type="submit" value="Abschicken" />
+		</div>
 
 <?php
 } else {
@@ -120,7 +119,6 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 }
 ?>
 
-		</form>
-	</div>
+	</form>
 </body>
 </html>
