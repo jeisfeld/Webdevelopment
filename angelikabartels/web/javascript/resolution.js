@@ -64,7 +64,7 @@ function adjustStyle(width, height) {
 	}
 
 	// hide menu on narrow screens.
-	if (width < 850 || needsMobileAdaptation()) {
+	if (width < 850) {
 		menuleftframe.hide();
 		bottomframe.hide();
 		mainframe.css('height', height - logoheight);
