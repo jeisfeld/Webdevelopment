@@ -95,6 +95,15 @@ img#logoimage.fullwidth {
 	line-height: 60px;
 }
 
+#musik audio {
+	display: block;
+}
+
+#musik div.audiolabel {
+	display: block;
+}
+
+
 #text {
 	padding-top: 18px;
 	padding-left: 18px;

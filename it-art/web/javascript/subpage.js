@@ -38,10 +38,17 @@ function applySpecialSettings(id) {
 	// Set volume on music page
 	if (id == 'musik') {
 		$('#dreamalittledream').prop('volume', 0.3);
-		$('#zarathustra').trigger('play');
 
 		width = parseInt($(this).width());
-		$('audio').css('width', width/2);
+
+		if (width > 650) {
+			$('td.audiowithlabel').contents().unwrap();
+			$('div.audiolabel').wrap('<td />');
+			$('div.audio').wrap('<td />');
+			$('audio').css('width', width / 2);
+		}
+
+		$('#zarathustra').trigger('play');
 	}
 }
 
