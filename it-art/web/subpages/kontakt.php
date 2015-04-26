@@ -57,7 +57,7 @@ function test_input($data) {
 
 	<p>
 		Bitte kontaktieren Sie mich per E-Mail:<br>
-		<a href="mailto:webdevelopment@it-art.de">webdevelopment@it-art.de</a>
+		<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
 	</p>
 	<form id="kontaktformular" name="kontaktformular" method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
