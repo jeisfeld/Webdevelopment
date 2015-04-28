@@ -124,8 +124,8 @@ function adjustStyle(width, height) {
 		// impressum appears in popupframe
 		popupframe.css('top', height / 4);
 		popupframe.css('height', height / 2);
-		popupframe.css('left', width / 4);
-		popupframe.css('width', width / 2);
+		popupframe.css('left', '25%');
+		popupframe.css('width', '50%');
 		popupframe.css('border', '2px solid black');
 	}
 }

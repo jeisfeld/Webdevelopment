@@ -69,9 +69,9 @@ img#logoimage.fullwidth {
 
 #startseite h1.startitem {
 	display: block;
-	height: 80px;
-	width: 300px;
-	line-height: 80px;
+	height: 0px;
+	width: 0px;
+	line-height: 0px;
 	vertical-align: middle;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -79,20 +79,16 @@ img#logoimage.fullwidth {
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
+	position: absolute;
+	font-size: 0px;
 }
 
 #startseite #text.small h1 {
-	font-size: 28px;
-	height: 70px;
-	width: 270px;
-	line-height: 70px;
+	font-size: 0px;
 }
 
 #startseite #text.smaller h1 {
-	font-size: 26px;
-	height: 60px;
-	width: 240px;
-	line-height: 60px;
+	font-size: 0px;
 }
 
 #musik audio {
