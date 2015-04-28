@@ -78,5 +78,5 @@ $(document).ready(function() {
 		$(this).addClass('startitem');
 	});
 
-	adjustStyle($(window).width(), Math.min($(window).height(), screen.height));
+	adjustStyle($(window).width(), $(window).height());
 });

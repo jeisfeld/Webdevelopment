@@ -35,8 +35,8 @@ function applySpecialSettings(id) {
 		$("#menuleftframe", window.parent.document).removeClass('hidden');
 	}
 
-	// Set volume on music page
 	if (id == 'musik') {
+		// Set volume on music page
 		$('#dreamalittledream').prop('volume', 0.3);
 
 		width = parseInt($(this).width());
@@ -50,7 +50,29 @@ function applySpecialSettings(id) {
 
 		$('#zarathustra').trigger('play');
 	}
+
 }
+
+function adjustSize(id, width, height) {
+	width = parseInt(width);
+	height = parseInt(height);
+
+	// Set size of contact form
+	if (id == 'kontakt') {
+		width = parseInt($(this).width());
+		$('form').css('width', width - 80);
+		$('input.inputtext').css('width', width - 100);
+		$('textarea').css('width', width - 100);
+	}
+}
+
+/*
+ * Actions triggered on resize
+ */
+$(window).resize(function() {
+	var myId = $('body').attr('id');
+	adjustSize(myId, $(this).width(), $(this).height());
+});
 
 /*
  * Actions triggered on load of page.
@@ -67,4 +89,5 @@ $(document).ready(function() {
 	}
 
 	applySpecialSettings(myId);
+	adjustSize(myId, $(this).width(), $(this).height());
 });

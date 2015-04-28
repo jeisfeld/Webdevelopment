@@ -200,14 +200,6 @@ span.error {
 	background-color: white;
 }
 
-#kontakt #text.smaller form {
-	width: 280px;
-}
-
-#kontakt #text.smaller input.inputtext, #kontakt #text.smaller textarea {
-	width: 260px;
-}
-
 /* Settings for menu */
 #menuleftbody {
 	overflow: hidden;
