@@ -1,3 +1,51 @@
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+
+	return array;
+}
+
+function setRandomizedRgb(id, red, green, blue) {
+
+	var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
+	$(id).css('background-color', rgb);
+	console.log(id + ":" + rgb);
+}
+
+function getRandom(max) {
+	return Math.floor(Math.random() * max);
+}
+
+function setColors() {
+	var idArray = shuffle([ '#webseiten', '#grafik', '#musik', '#apps' ]);
+
+	setRandomizedRgb(idArray[0], 96 + getRandom(32), 112 + getRandom(32), 0);
+	setRandomizedRgb(idArray[1], 0, 112 + getRandom(32), 88 + getRandom(32));
+	setRandomizedRgb(idArray[2], 72 + getRandom(16), 112 + getRandom(32), 32 + getRandom(16));
+	setRandomizedRgb(idArray[3], 40 + getRandom(16), 112 + getRandom(32), 64 + getRandom(16));
+
+	var rand1 = Math.random() + 0.01;
+	var rand2 = Math.random() + 0.01;
+	var rand3 = Math.random() + 0.01;
+	var sum = rand1 + rand2 + rand3;
+	var red = Math.floor(160 * rand1 / sum);
+	var green = Math.floor(127 + 112 * rand2 / sum);
+	var blue = Math.floor(160 * rand3 / sum);
+
+}
+
 function position(totalwidth, totalheight, object, horizontal, vertical, delay) {
 
 	var targetWidth = 300;
@@ -17,6 +65,7 @@ function position(totalwidth, totalheight, object, horizontal, vertical, delay) 
 		top : totalheight * (vertical + 0.5 * (Math.random() - 0.5)),
 		left : totalwidth * (horizontal + 0.5 * (Math.random() - 0.5))
 	});
+
 	var targetTop = (totalheight - targetHeight) * vertical;
 	var targetLeft = (totalwidth - targetWidth) * horizontal;
 
@@ -45,6 +94,8 @@ function adjustStyle(width, height) {
 		maintext.removeClass('small');
 		maintext.removeClass('smaller');
 	}
+
+	setColors();
 
 	if (height > 500) {
 		position(width, height, $('#webseiten'), 0.35, 0.2);
