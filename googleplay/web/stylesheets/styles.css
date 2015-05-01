@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@CHARSET "ISO-8859-1";
+
+/* General settings */
+body, p {
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+	background-color: #303030;
+}
+
+a {
+	color: #FEC0B0;
+}
+
+h1 {
+	margin: 0px;
+}
+
+hr {
+	color: #FFFFFF;
+}
+
+img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
