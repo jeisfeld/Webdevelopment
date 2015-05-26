@@ -1,3 +1,14 @@
+<?PHP
+include '../Mobile_Detect.php';
+$detect = new Mobile_Detect ();
+$isMobile = $detect->isMobile ();
+$page = $_GET ["page"];
+$page2 = $page . ".html";
+
+if ($isMobile && ! empty ( $page )) {
+	header ( "Location: " . $page2 );
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,16 +23,18 @@
 </head>
 
 <?PHP
-include '../Mobile_Detect.php';
-$detect = new Mobile_Detect ();
-if (! $detect->isMobile ()) {
+if (empty ( $page )) {
+	$page2 = "overview.html";
+}
+
+if (! $isMobile) {
 	?>
 
 <frameset rows="110,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
 	<frame src="header.html" name="header" />
 	<frameset cols="20%,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
 		<frame src="navigation.html" name="navigation" />
-		<frame src="overview.html" name="main" />
+		<frame src="<?=$page2?>" name="main" />
 	</frameset>
 	<noframes>
 
