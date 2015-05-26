@@ -2,8 +2,20 @@
 <html>
 <head>
 <title>Eye Diagnosis (Android App)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="en">
+<meta name="description" content="Eye Diagnosis, Jörg Eisfeld">
+<meta name="keywords" content="Jörg Eisfeld, Eye Diagnosis, Iridology, Android">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
+
+<?PHP
+include '../Mobile_Detect.php';
+$detect = new Mobile_Detect ();
+if (! $detect->isMobile ()) {
+	?>
+
 <frameset rows="110,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
 	<frame src="header.html" name="header" />
 	<frameset cols="20%,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
@@ -11,8 +23,13 @@
 		<frame src="overview.html" name="main" />
 	</frameset>
 	<noframes>
+
+<?PHP
+}
+?>
+
 		<body>
-			<h1>Eye Diagnosis - Android App</h1>
+			<h2>Eye Diagnosis - Android App</h2>
 
 			<p>
 				<a href="overview.html">Overview</a>
@@ -38,6 +55,16 @@
 				<a href="downloads.html">Downloads</a>
 			</p>
 		</body>
+
+<?PHP
+if (! $detect->isMobile ()) {
+	?>
+
 	</noframes>
 </frameset>
+
+<?PHP
+}
+?>
+
 </html>
