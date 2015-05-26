@@ -7,6 +7,7 @@
 <meta name="description" content="Eye Diagnosis, Jörg Eisfeld">
 <meta name="keywords" content="Jörg Eisfeld, Eye Diagnosis, Iridology, Android">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../drawable/icon_augendiagnose.ico">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 
