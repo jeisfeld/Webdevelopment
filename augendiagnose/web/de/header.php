@@ -1,3 +1,9 @@
+<?PHP
+$queryString = $_SERVER ['QUERY_STRING'];
+if (! empty ( $queryString )) {
+	$queryString = "?" . $queryString;
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -6,7 +12,7 @@
 </head>
 <body>
 	<p>
-		<a href="../en/" target="_parent">English</a> Deutsch <a href="../es/" target="_parent">Español</a>
+		<a href="../en/<?=$queryString?>" target="_parent">English</a> Deutsch <a href="../es/<?=$queryString?>" target="_parent">Español</a>
 	</p>
 
 	<h1>Augendiagnose - Android App</h1>

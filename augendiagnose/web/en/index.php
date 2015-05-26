@@ -8,6 +8,11 @@ $page2 = $page . ".html";
 if ($isMobile && ! empty ( $page )) {
 	header ( "Location: " . $page2 );
 }
+
+$queryString = $_SERVER ['QUERY_STRING'];
+if (! empty ( $queryString )) {
+	$queryString = "?" . $queryString;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -31,7 +36,7 @@ if (! $isMobile) {
 	?>
 
 <frameset rows="110,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
-	<frame src="header.html" name="header" />
+	<frame src="header.php<?=$queryString?>" name="header" />
 	<frameset cols="20%,*" frameborder="1" framespacing="5" border="1" bordercolor="white">
 		<frame src="navigation.html" name="navigation" />
 		<frame src="<?=$page2?>" name="main" />
