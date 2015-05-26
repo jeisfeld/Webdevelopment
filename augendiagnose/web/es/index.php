@@ -1,4 +1,5 @@
 <?PHP
+header('Content-Type: text/html; charset=iso-8859-1');
 include '../Mobile_Detect.php';
 $detect = new Mobile_Detect ();
 $isMobile = $detect->isMobile ();

@@ -1,4 +1,5 @@
 <?PHP
+header('Content-Type: text/html; charset=iso-8859-1');
 $queryString = $_SERVER ['QUERY_STRING'];
 if (! empty ( $queryString )) {
 	$queryString = "?" . $queryString;
@@ -8,6 +9,7 @@ if (! empty ( $queryString )) {
 <html>
 <head>
 <title>Eye Diagnosis (Android App)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body>
