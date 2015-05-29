@@ -1,10 +1,12 @@
 <?PHP
-header('Content-Type: text/html; charset=iso-8859-1');
+header ( 'Content-Type: text/html; charset=iso-8859-1' );
 include '../Mobile_Detect.php';
 $detect = new Mobile_Detect ();
 $isMobile = $detect->isMobile ();
-$page = $_GET ["page"];
-$page2 = $page . ".html";
+if (! empty ( $_GET ["page"] )) {
+	$page = $_GET ["page"];
+	$page2 = $page . ".html";
+}
 
 if ($isMobile && ! empty ( $page )) {
 	header ( "Location: " . $page2 );
