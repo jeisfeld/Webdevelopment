@@ -1,3 +1,15 @@
+<?PHP
+header ( 'Content-Type: text/html; charset=iso-8859-1' );
+
+// Determine menu style
+if (empty ( $_GET ["style"] )) {
+	$heading = "<h2>Diagnóstico ocular - Aplicación para Android</h2>";
+}
+else {
+	$heading = "";
+}
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +20,7 @@
 </head>
 
 <body>
-	<h2>Diagnóstico ocular - Aplicación para Android</h2>
+	<?=$heading?>
 
 	<p>
 		<a href="../?lang=es&page=overview" target="_parent">Información general</a>

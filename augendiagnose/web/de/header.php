@@ -38,7 +38,7 @@ else {
 if ($isMobile) {
 	?>
 	<div id="homebutton">
-		<a href="../?lang=de&page=toc" target="_parent"><img alt="Home" src="../drawable/ic_home.png"></a>
+		<a href="../?lang=de&page=navigation" target="_parent"><img alt="Home" src="../drawable/ic_home.png"></a>
 	</div>
 <?php
 }

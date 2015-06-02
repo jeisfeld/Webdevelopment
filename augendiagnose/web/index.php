@@ -5,7 +5,7 @@ header ( 'Content-Type: text/html; charset=iso-8859-1' );
 include 'Mobile_Detect.php';
 $detect = new Mobile_Detect ();
 $isMobile = $detect->isMobile () && ! $detect->isTablet ();
-$isMobile = true;
+
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -25,7 +25,7 @@ else {
 // Determine page
 if (empty ( $_GET ["page"] )) {
 	if ($isMobile) {
-		$page = "toc";
+		$page = "navigation";
 	}
 	else {
 		$page = "overview";
@@ -33,6 +33,12 @@ if (empty ( $_GET ["page"] )) {
 }
 else {
 	$page = $_GET ["page"];
+}
+if ($page == "navigation") {
+	$pagefull = $page . ".php";
+}
+else {
+	$pagefull = $page . ".html";
 }
 
 // Define some basic strings based on language
@@ -75,7 +81,7 @@ if ($isMobile) {
 	?>
 	<iframe id="mobileheaderframe" name="mobileheaderframe" src="<?=$language."/header.php?style=mobile&page=".$page?>"
 		scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mobileframe" src="<?=$language."/".$page.".html"?>" name="main" marginheight="0" marginwidth="0"
+	<iframe id="mobileframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
 <?php
 }
@@ -83,10 +89,9 @@ else {
 	?>
 	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?page=".$page?>" scrolling="no"
 		marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="<?=$language."/navigation.html"?>" name="menu" marginheight="0" marginwidth="0"
+	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
-	<iframe id="mainframe" src="<?=$language."/".$page.".html"?>" name="main" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
+	<iframe id="mainframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 <?php
 }
 ?>

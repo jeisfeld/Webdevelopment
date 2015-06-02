@@ -36,5 +36,9 @@ $(document).ready(function() {
 		adjustMainStyle();
 	});
 
+	$('#menuleftframe').on("load", function() {
+		adjustMainStyle();
+	});
+
 	adjustMainStyle();
 });
