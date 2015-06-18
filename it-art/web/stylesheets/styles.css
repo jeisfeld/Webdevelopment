@@ -99,6 +99,11 @@ img#logoimage.fullwidth {
 	display: block;
 }
 
+#musik div.centered {
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+}
 
 #text {
 	padding-top: 18px;

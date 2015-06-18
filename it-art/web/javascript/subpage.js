@@ -64,6 +64,16 @@ function adjustSize(id, width, height) {
 		$('input.inputtext').css('width', width - 100);
 		$('textarea').css('width', width - 100);
 	}
+
+	if (id == 'musik') {
+		var clefheight = Math.min(height, $(window).height()) - 20;
+		var clefwidth = clefheight * 599 / 854;
+		$('div.centered img').height(clefheight);
+		$('div.centered img').width(clefwidth);
+		$('div.centered img').css('max-width', clefwidth);
+		$('div.centered img').css('min-width', clefwidth);
+		$('div.centered').css('left', (width - clefwidth) / 2);
+	}
 }
 
 /*
