@@ -45,6 +45,14 @@ else {
 	<p>
 		<a href="../?lang=es&page=downloads" target="_parent">Descargas</a>
 	</p>
+
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="RUB5VFVSETVMN">
+		<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit"
+			alt="PayPal, la forma más segura y rápida de pagar en línea."> <img alt="" border="0"
+			src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+	</form>
+
 </body>
 
 </html>
