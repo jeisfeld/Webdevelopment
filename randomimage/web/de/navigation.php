@@ -3,7 +3,7 @@ header ( 'Content-Type: text/html; charset=iso-8859-1' );
 
 // Determine menu style
 if (empty ( $_GET ["style"] )) {
-	$heading = "<h2>Zufallsbild - Android App</h2>";
+	$heading = "<h2>Überraschungsbild - Android App</h2>";
 }
 else {
 	$heading = "";
@@ -13,7 +13,7 @@ else {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Augendiagnose (Android App)</title>
+<title>Überraschungsbild (Android App)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">

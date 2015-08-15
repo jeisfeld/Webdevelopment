@@ -41,14 +41,14 @@ else {
 // Define some basic strings based on language
 switch ($language) {
 	case "de" :
-		$title = "Zufallsbild (Android App)";
-		$description = "Zufallsbild, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Zufallsbild, Zufallsfoto, Fotoüberraschung, Überraschung, Android";
+		$title = "Überraschungsbild (Android App)";
+		$description = "Überraschungsbild, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Überraschungsbild, Zufallsbild, Zufallsfoto, Fotoüberraschung, Überraschung, Android";
 		break;
 	case "en" :
-		$title = "Random Image (Android App)";
-		$description = "Random Image, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Random Image, Random Photo, Photo Surprise, Surprise, Android";
+		$title = "Surprise Image (Android App)";
+		$description = "Surprise Image, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Surprise Image, Random Image, Random Photo, Photo Surprise, Surprise, Android";
 		break;
 }
 

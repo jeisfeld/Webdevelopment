@@ -43,7 +43,7 @@ if ($isMobile) {
 }
 else {
 	?>
-	<h1>Random Image - Android App</h1>
+	<h1>Surprise Image - Android App</h1>
 <?php
 }
 ?>
