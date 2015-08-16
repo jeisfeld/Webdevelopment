@@ -99,3 +99,15 @@ html#index, body#index {
 	left: 0px;
 	width: 100%;
 }
+
+/* Special page settings */
+
+#releasenotes li {
+	padding-top: 10px;
+}
+
+#releasenotes li li {
+	padding-top: 0px;
+}
+
+

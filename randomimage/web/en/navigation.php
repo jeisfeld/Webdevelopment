@@ -30,6 +30,10 @@ else {
 		<a href="../?lang=en&page=howto" target="_parent">How to use</a>
 	</p>
 
+	<p>
+		<a href="../?lang=en&page=releasenotes" target="_parent">Release Notes</a>
+	</p>
+
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 		<input type="hidden" name="cmd" value="_s-xclick"> <input type="hidden" name="hosted_button_id" value="PAGGKCYNR5FHC">
 		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit"
