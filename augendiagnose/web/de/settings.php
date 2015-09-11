@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,14 +30,14 @@ include "pageheader.php";
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Letztes Foto ist rechtes Auge</td>
-			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge
-				ist. Standardmäßig ist hier das linke Auge gewählt (unter der Annahme, dass Sie zuerst das rechte, und dann das
-				linke Auge fotografiert haben).</td>
+			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist.
+				Standardmäßig ist hier das linke Auge gewählt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
+				Auge fotografiert haben).</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Sortieren nach Nachname</td>
-			<td width="70%" valign="top">Hier kann eingestellt werden, ob die Liste der Namen nach dem Nachnamen sortiert
-				werden soll.</td>
+			<td width="70%" valign="top">Hier kann eingestellt werden, ob die Liste der Namen nach dem Nachnamen sortiert werden
+				soll.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Standardfarbe für Overlays</td>
@@ -61,8 +61,8 @@ include "pageheader.php";
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Verzeichnis der Augenfotos</td>
-			<td width="70%" valign="top"><p>Dies ist das Verzeichnis, in dem die App die Augenfotos verwaltet. Dieses
-					muss normalerweise nicht geändert werden. Von hier können Sie die Fotos auf andere Geräte kopieren.</p>
+			<td width="70%" valign="top"><p>Dies ist das Verzeichnis, in dem die App die Augenfotos verwaltet. Dieses muss
+					normalerweise nicht geändert werden. Von hier können Sie die Fotos auf andere Geräte kopieren.</p>
 
 				<p>Das vorgegebene Verzeichnis ist &bdquo;Augenfotos&ldquo;.</p>
 
@@ -73,8 +73,8 @@ include "pageheader.php";
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Maximale Bitmap-Größe</td>
-			<td width="70%" valign="top">Dies ist die Größe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist
-				nötig, um Speicherplatz zu sparen. Als Standard ist hier 2048 eingestellt. Auf speicherarmen Geräten muss evtl. ein
+			<td width="70%" valign="top">Dies ist die Größe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist nötig,
+				um Speicherplatz zu sparen. Als Standard ist hier 2048 eingestellt. Auf speicherarmen Geräten muss evtl. ein
 				kleinerer Wert (z.B. 1024) konfiguriert werden. Zu große Werte können zu Abstürzen führen.</td>
 		</tr>
 		<tr>
@@ -83,17 +83,16 @@ include "pageheader.php";
 				angezeigt wird. Dies erlaubt es, mehr Details auf dem Foto zu sehen, aber es verbraucht Speicher und Rechenzeit.
 
 				<ul>
-					<li><b>Immer automatisch laden:</b> Das Foto wird immer in voller Auflösung im Speicher gehalten. Dies führt
-						dazu, dass man auf High-End-Geräten immer alle Details sehen kann. Es könnte aber zu Abstürzen führen, falls nicht
-						genug Speicher zur Verfügung steht.</li>
+					<li><b>Immer automatisch laden:</b> Das Foto wird immer in voller Auflösung im Speicher gehalten. Dies führt dazu,
+						dass man auf High-End-Geräten immer alle Details sehen kann. Es könnte aber zu Abstürzen führen, falls nicht genug
+						Speicher zur Verfügung steht.</li>
 
-					<li><b>Automatisch laden, wenn nur ein Foto angezeigt wird:</b> Das Foto wird nur bei Anzeige eines einzigen
-						Fotos in voller Auflösung angezeigt. Dies benötigt nur halb so viel Speicher.</li>
+					<li><b>Automatisch laden, wenn nur ein Foto angezeigt wird:</b> Das Foto wird nur bei Anzeige eines einzigen Fotos
+						in voller Auflösung angezeigt. Dies benötigt nur halb so viel Speicher.</li>
 
-					<li><b>Nur auf Anfrage:</b> Die App lädt die Fotos nicht in voller Auflösung. Dies verbraucht am wenigsten
-						Speicher und Rechenzeit, aber Details in den Fotos könnten nicht sichtbar sein. Mit Hilfe des
-						&bdquo;Lupen&ldquo;-Buttons <img src="../drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller
-						Bildauflösung angezeigt werden.</li>
+					<li><b>Nur auf Anfrage:</b> Die App lädt die Fotos nicht in voller Auflösung. Dies verbraucht am wenigsten Speicher
+						und Rechenzeit, aber Details in den Fotos könnten nicht sichtbar sein. Mit Hilfe des &bdquo;Lupen&ldquo;-Buttons <img
+						src="../drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller Bildauflösung angezeigt werden.</li>
 				</ul>
 			</td>
 		</tr>
@@ -102,14 +101,14 @@ include "pageheader.php";
 			<td width="70%" valign="top">Hier können Sie einschränken, inwieweit die App Daten in den JPG-Dateien speichert.
 
 				<ul>
-					<li><b>Speichern in EXIF (empfohlen):</b> Die Applikation speichert verfügbare Informationen in der JPG-Datei,
-						auch in Standardfeldern, die z.B. in Windows sichtbar sind.</li>
+					<li><b>Speichern in EXIF (empfohlen):</b> Die Applikation speichert verfügbare Informationen in der JPG-Datei, auch
+						in Standardfeldern, die z.B. in Windows sichtbar sind.</li>
 
-					<li><b>Speichern in Extra-Feldern:</b> Die Applikation speichert Informationen in der JPG-Datei, aber nur in
-						neuen Feldern. Standardfelder bleiben unverändert; der Datenaustausch mit Windows ist nicht möglich.</li>
+					<li><b>Speichern in Extra-Feldern:</b> Die Applikation speichert Informationen in der JPG-Datei, aber nur in neuen
+						Feldern. Standardfelder bleiben unverändert; der Datenaustausch mit Windows ist nicht möglich.</li>
 
-					<li><b>Nicht in Fotos speichern:</b> Die Applikation speichert keine Informationen in Fotos. (Dann stehen nur
-						Teile der Funktionalität der App zur Verfügng.)</li>
+					<li><b>Nicht in Fotos speichern:</b> Die Applikation speichert keine Informationen in Fotos. (Dann stehen nur Teile
+						der Funktionalität der App zur Verfügng.)</li>
 				</ul>
 			</td>
 		</tr>
@@ -117,21 +116,21 @@ include "pageheader.php";
 
 	<h3>Werbung entfernen / Spenden</h3>
 
-	<p>Diese Seite bietet einige Optionen, um eine Spende an den Entwickler zu machen - die Entwicklung dieser App
-		kostet viel Zeit; daher wäre es schön, von den Anwendern der App etwas zurückzubekommen.</p>
+	<p>Diese Seite bietet einige Optionen, um eine Spende an den Entwickler zu machen - die Entwicklung dieser App kostet
+		viel Zeit; daher wäre es schön, von den Anwendern der App etwas zurückzubekommen.</p>
 
 	<p>Darüberhinaus gibt es folgende Optionen:</p>
 
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Werbung entfernen</td>
-			<td width="70%" valign="top">Hier können Sie die Werbung entfernen (vorerst nur in den USA). Diese Möglichkeit
-				kann per Spende oder Nutzerschlüssel freigeschaltet werden.</td>
+			<td width="70%" valign="top">Hier können Sie die Werbung entfernen (vorerst nur in den USA). Diese Möglichkeit kann
+				per Spende oder Nutzerschlüssel freigeschaltet werden.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Kontakt mit dem Entwickler</td>
-			<td width="70%" valign="top">Hier können Sie eine E-Mail an den Entwickler schreiben, falls Sie Wünsche oder
-				Probleme haben.</td>
+			<td width="70%" valign="top">Hier können Sie eine E-Mail an den Entwickler schreiben, falls Sie Wünsche oder Probleme
+				haben.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Nutzerschlüssel</td>

@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -31,8 +31,7 @@ include "pageheader.php";
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX.jar" target="_blank">Ausführbare JAR-Datei
-			herunterladen</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX.jar" target="_blank">Ausführbare JAR-Datei herunterladen</a>
 	</p>
 </body>
 </html>

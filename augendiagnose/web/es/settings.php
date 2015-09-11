@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,8 +16,8 @@ include "pageheader.php";
 
 	<h3>Carpeta de entrada para nuevas fotos</h3>
 
-	<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuración predeterminada, este es o bien
-		la carpeta de destino de la aplicación Eye-Fi o la carpeta norma de la aplicación de la cámara. Sin embargo, puede
+	<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuración predeterminada, este es o bien la
+		carpeta de destino de la aplicación Eye-Fi o la carpeta norma de la aplicación de la cámara. Sin embargo, puede
 		configurar aquí cualquiera otra carpeta.</p>
 
 	<p>Bagaje con respecto a la aplicación Eye-Fi: normalmente, la cámara del dispositivo celular no es suficiente para
@@ -39,18 +39,18 @@ include "pageheader.php";
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Color predeterminado de superposiciones</td>
-			<td width="70%" valign="top">Aquí puede definir el color predeterminado para los superposiciones de topografías
-				del iris. (Estándar: rojo)</td>
+			<td width="70%" valign="top">Aquí puede definir el color predeterminado para los superposiciones de topografías del
+				iris. (Estándar: rojo)</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Idioma</td>
-			<td width="70%" valign="top">Aquí puede cambiar el idioma en el que se mostrará la aplicación. Un cambio de
-				valor fuerza un reinicio de la aplicación.</td>
+			<td width="70%" valign="top">Aquí puede cambiar el idioma en el que se mostrará la aplicación. Un cambio de valor
+				fuerza un reinicio de la aplicación.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Consejos</td>
-			<td width="70%" valign="top">Aquí se puede volver a habilitar todos los consejos, o puede desactivar todas
-				consejos existentes (que es útile después de la nueva instalación si ya conoce la aplicación).</td>
+			<td width="70%" valign="top">Aquí se puede volver a habilitar todos los consejos, o puede desactivar todas consejos
+				existentes (que es útile después de la nueva instalación si ya conoce la aplicación).</td>
 		</tr>
 	</table>
 
@@ -59,8 +59,8 @@ include "pageheader.php";
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Carpeta de fotos oculares</td>
-			<td width="70%" valign="top"><p>Esta es la carpeta en la que la aplicación administra las fotos de ojos.
-					Normalmente, usted no tiene que cambiar esto. Desde aquí, puede copiar las fotos a otros dispositivos.</p>
+			<td width="70%" valign="top"><p>Esta es la carpeta en la que la aplicación administra las fotos de ojos. Normalmente,
+					usted no tiene que cambiar esto. Desde aquí, puede copiar las fotos a otros dispositivos.</p>
 
 				<p>La carpeta predeterminada es &laquo;FotosOcular&raquo;.</p>
 
@@ -71,26 +71,26 @@ include "pageheader.php";
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Tamaño máximo de mapas de bits</td>
-			<td width="70%" valign="top">Este es el tamaño en el que las fotos se reducen antes de mostrar. Este se requiere
-				para ahorrar memoria del dispositivo. El valor predeterminado es 2048. En dispositivos con poca memoria, puede ser
+			<td width="70%" valign="top">Este es el tamaño en el que las fotos se reducen antes de mostrar. Este se requiere para
+				ahorrar memoria del dispositivo. El valor predeterminado es 2048. En dispositivos con poca memoria, puede ser
 				necesario para configurar un valor menor (por ejemplo, 1024). valores demasiado grandes pueden bloquear la
 				aplicación.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Mostrar imagen en alta resolución</td>
-			<td width="70%" valign="top">Aquí usted puede decidir en qué circunstancias se muestra la foto en alta
-				resolución, que permite ver más detalles en la foto, pero consume memoria y tiempo de cálculo.
+			<td width="70%" valign="top">Aquí usted puede decidir en qué circunstancias se muestra la foto en alta resolución,
+				que permite ver más detalles en la foto, pero consume memoria y tiempo de cálculo.
 
 				<ul>
-					<li><b>Siempre cargar automáticamente:</b> La aplicación siempre almacena las fotos en resolución completa en
-						la memoria. Esto da la mejor experiencia del usuario en los dispositivos de gama alta, pero puede conducir a
-						fallos si no hay suficiente memoria disponible.</li>
+					<li><b>Siempre cargar automáticamente:</b> La aplicación siempre almacena las fotos en resolución completa en la
+						memoria. Esto da la mejor experiencia del usuario en los dispositivos de gama alta, pero puede conducir a fallos
+						si no hay suficiente memoria disponible.</li>
 
-					<li><b>Cargar automáticamente cuando se muestra sola foto:</b> La aplicación muestra la resolución completa
-						sólo cuando se muestre un único imagen. Esto requiere un medio de la memoria.</li>
+					<li><b>Cargar automáticamente cuando se muestra sola foto:</b> La aplicación muestra la resolución completa sólo
+						cuando se muestre un único imagen. Esto requiere un medio de la memoria.</li>
 
-					<li><b>Cargar sólo si se solicita:</b> La aplicación no muestra la imagen en alta resolución. Esto requiere
-						menos memoria y tiempo de cálculo, pero los detalles en la foto se pueden perder. La botón &laquo;lupa&raquo; <img
+					<li><b>Cargar sólo si se solicita:</b> La aplicación no muestra la imagen en alta resolución. Esto requiere menos
+						memoria y tiempo de cálculo, pero los detalles en la foto se pueden perder. La botón &laquo;lupa&raquo; <img
 						src="../drawable/ic_clarity.png" /> permite visualizar el detalle actual de la imagen en la plena resolución.</li>
 				</ul>
 			</td>
@@ -100,11 +100,11 @@ include "pageheader.php";
 			<td width="70%" valign="top">Aquí puede limitar el almacenamiento de datos en los archivos JPG de la aplicación.
 
 				<ul>
-					<li><b>Guardar en EXIF (recomendado):</b> La aplicación guarda la información relevante en el archivo JPG,
-						incluso en campos estándar que son visibles en Windows.</li>
+					<li><b>Guardar en EXIF (recomendado):</b> La aplicación guarda la información relevante en el archivo JPG, incluso
+						en campos estándar que son visibles en Windows.</li>
 
-					<li><b>Guardar en campos personalizados:</b> La aplicación guarda la información en el archivo JPG, pero sólo
-						en campos separados. Campos estándar se mantienen sin cambios; los datos intercambio con Windows no es posible.</li>
+					<li><b>Guardar en campos personalizados:</b> La aplicación guarda la información en el archivo JPG, pero sólo en
+						campos separados. Campos estándar se mantienen sin cambios; los datos intercambio con Windows no es posible.</li>
 
 					<li><b>No guarde datos en imágenes:</b> La aplicación no almacena información en archivos JPG. (Esto limita la
 						funcionalidad de la aplicación.)</li>
@@ -115,21 +115,21 @@ include "pageheader.php";
 
 	<h3>Eliminar anuncios / Donar</h3>
 
-	<p>Esta página ofrece varios botones por los quales usted puede hacer una donación al desarrollador - el desarrollo
-		de esta aplicación toma mucho tiempo, y por eso, sería bueno recuperar algo de las personas que usan esta aplicación.</p>
+	<p>Esta página ofrece varios botones por los quales usted puede hacer una donación al desarrollador - el desarrollo de
+		esta aplicación toma mucho tiempo, y por eso, sería bueno recuperar algo de las personas que usan esta aplicación.</p>
 
 	<p>Además, hay las siguientes funciones:</p>
 
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Quitar anuncios</td>
-			<td width="70%" valign="top">Aquí usted puede desactivar todos los anuncios (actualmente sólo en los Estados
-				Unidos). Esta función se puede activar a través de una donación o mediante clave de usuario.</td>
+			<td width="70%" valign="top">Aquí usted puede desactivar todos los anuncios (actualmente sólo en los Estados Unidos).
+				Esta función se puede activar a través de una donación o mediante clave de usuario.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Póngase en contacto co el desarrollador</td>
-			<td width="70%" valign="top">Aquí usted puede enviar un correo electrónico al desarrollador en caso de tener
-				deseos o problemas.</td>
+			<td width="70%" valign="top">Aquí usted puede enviar un correo electrónico al desarrollador en caso de tener deseos o
+				problemas.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Clave de usuario</td>

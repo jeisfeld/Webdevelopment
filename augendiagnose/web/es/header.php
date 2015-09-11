@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 
 // Determine page
 if (empty ( $_GET ["page"] )) {
@@ -38,7 +38,9 @@ else {
 if ($isMobile) {
 	?>
 	<div id="homebutton">
-		<a href="../?lang=es&page=navigation" target="_parent"><img alt="Home" src="../drawable/ic_home.png"></a>
+		<a href="../?lang=es&page=navigation" target="_parent">
+			<img alt="Home" src="../drawable/ic_home.png">
+		</a>
 	</div>
 <?php
 }

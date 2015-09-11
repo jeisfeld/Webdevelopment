@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -20,9 +20,9 @@ include "pageheader.php";
 	<ul>
 		<li>Organization of eye photos by name, date and side (right/left)</li>
 
-		<li>Display of two eye photos in parallel (with full support of individual resizing), so that comparisons are
-			possible (such as right-left comparison, earlier-later comparison, different person comparison, or comparison to an
-			iris topography).</li>
+		<li>Display of two eye photos in parallel (with full support of individual resizing), so that comparisons are possible
+			(such as right-left comparison, earlier-later comparison, different person comparison, or comparison to an iris
+			topography).</li>
 
 		<li>Change of brightness and contrast of the photo during display, and overlay with an iris topography.</li>
 
@@ -39,15 +39,15 @@ include "pageheader.php";
 
 	<p>In this step, you can organize eye photos.</p>
 
-	<p>The App expects new eye photos in an input folder. This folder is preconfigured as the target folder of the
-		Eye-Fi app or as the default folder of the camera, but can be changed via the settings.</p>
+	<p>The App expects new eye photos in an input folder. This folder is preconfigured as the target folder of the Eye-Fi
+		app or as the default folder of the camera, but can be changed via the settings.</p>
 
-	<p>In the &ldquo;Organize new photos&rdquo; activity, you can assign new eye photos from the input folder to a
-		person and a date and prepare them in this way for the app. Then the photos will be renamed and moved to the eye photo
+	<p>In the &ldquo;Organize new photos&rdquo; activity, you can assign new eye photos from the input folder to a person
+		and a date and prepare them in this way for the app. Then the photos will be renamed and moved to the eye photo
 		folder.</p>
 
-	<p>As further alternative, you may take pictures directly from the app with the device camera. This will normally
-		not give photos in adequate quality, but it serves as an alternative to a professional camera.</p>
+	<p>As further alternative, you may take pictures directly from the app with the device camera. This will normally not
+		give photos in adequate quality, but it serves as an alternative to a professional camera.</p>
 
 	<p>As third alternative,</p>
 
@@ -75,13 +75,13 @@ include "pageheader.php";
 
 	<h3>Data storage</h3>
 
-	<p>The app stores information (like iris position or comments) directly in the JPG image files. This has the
-		advantage that all such information is still available if you copy the pictures from one device to another one. To
-		some extent, information like comments will be even available when viewing the files in MS Windows.</p>
+	<p>The app stores information (like iris position or comments) directly in the JPG image files. This has the advantage
+		that all such information is still available if you copy the pictures from one device to another one. To some extent,
+		information like comments will be even available when viewing the files in MS Windows.</p>
 
-	<p>However, this kind of storage imposes a small risk. It may happen that on some devices, or for pictures from
-		some cameras, storage of information in the JPG fails, or possibly even destroys the JPG file. Therefore, it is
-		recommended that you keep backups of your JPG files at least when using the app for the first time with a new device
-		or with a new camera.</p>
+	<p>However, this kind of storage imposes a small risk. It may happen that on some devices, or for pictures from some
+		cameras, storage of information in the JPG fails, or possibly even destroys the JPG file. Therefore, it is recommended
+		that you keep backups of your JPG files at least when using the app for the first time with a new device or with a new
+		camera.</p>
 </body>
 </html>

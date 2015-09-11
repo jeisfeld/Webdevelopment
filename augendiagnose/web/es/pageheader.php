@@ -1,4 +1,4 @@
 <?PHP
-$language="es";
+$language = "es";
 include "../php/pageheader.php";
 ?>

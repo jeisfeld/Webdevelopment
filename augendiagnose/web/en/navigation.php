@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 
 // Determine menu style
 if (empty ( $_GET ["style"] )) {

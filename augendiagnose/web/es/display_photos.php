@@ -1,5 +1,5 @@
 <?PHP
-include "pageheader.php"; 
+include "pageheader.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,8 +24,8 @@ include "pageheader.php";
 
 		<li>Mostrar dos fotos de diferentes fechas (haciendo largo clic en una foto y después clic en una segunda foto)</li>
 
-		<li>Mostrar dos fotos de diferentes personas: seleccione una foto de esta persona (mediante pulsación larga) y
-			luego seleccione una foto de una persona diferente.</li>
+		<li>Mostrar dos fotos de diferentes personas: seleccione una foto de esta persona (mediante pulsación larga) y luego
+			seleccione una foto de una persona diferente.</li>
 	</ul>
 
 	<p>Tenga en cuenta que los gráficos de la topografía del iris pueden organizarse como fotos oculares - Esto permite
@@ -37,8 +37,8 @@ include "pageheader.php";
 	<ul>
 		<li>Al hacer una pulsación larga en un nombre en la lista de nombres, es posible que cambiar o eliminar el nombre</li>
 
-		<li>Al hacer una pulsación larga en una fecha en la lista de fotos para una nombre, usted puede cambiar la fecha
-			o eliminar las imágenes de esa fecha, o puede mover estas fotos a la carpeta de entrada (por ejemplo, con el fin de
+		<li>Al hacer una pulsación larga en una fecha en la lista de fotos para una nombre, usted puede cambiar la fecha o
+			eliminar las imágenes de esa fecha, o puede mover estas fotos a la carpeta de entrada (por ejemplo, con el fin de
 			trasladarlos a un diferente nombre).</li>
 	</ul>
 
@@ -50,17 +50,16 @@ include "pageheader.php";
 		<li>Cambio de brillo y contraste mediante correderas <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Visualización de una topografía de iris como superposición (botones numerados), adaptación de la
-			superposición al iris y almacenamiento de la posición de superposición (botón de cerradura <img
-			src="../drawable/ic_lock_open.png" />)
+		<li>Visualización de una topografía de iris como superposición (botones numerados), adaptación de la superposición al
+			iris y almacenamiento de la posición de superposición (botón de cerradura <img src="../drawable/ic_lock_open.png" />)
 		</li>
 
 		<li>Guardar los ajustes seleccionados de brillo y contraste (por medio del botón &laquo;guardar&raquo; <img
 			src="../drawable/ic_action_save.png" /> en la barra de acciones)
 		</li>
 
-		<li>Guardar la posición y zoom (por medio del botón &laquo;guardar&raquo; <img
-			src="../drawable/ic_action_save.png" /> en la barra de acciones)
+		<li>Guardar la posición y zoom (por medio del botón &laquo;guardar&raquo; <img src="../drawable/ic_action_save.png" />
+			en la barra de acciones)
 		</li>
 
 		<li>Cambiar el comentario de la foto (por medio del botón &laquo;documento&raquo; <img
