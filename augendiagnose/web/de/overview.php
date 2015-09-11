@@ -72,6 +72,11 @@ if (isAugendiagnose ()) {
 		<li>Zwei Fotos vergleichen (und dabei unabhängig voneinander zoomen).</li>
 	</ul>
 
+	<h3>Testzeitraum / In-App-Käufe</h3>
+
+	<p>Die App erlaubt freie Nutzung nur für einen Testzeitraum von zwei Wochen. Für die weitere Nutzung ist der einmalige
+		Erwerb eines Paketes innerhalb der App erforderlich.</p>
+
 	<h3>Windows-Anwendung</h3>
 
 	<p>

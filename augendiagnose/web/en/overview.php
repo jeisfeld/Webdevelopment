@@ -69,6 +69,11 @@ if (isAugendiagnose ()) {
 		<li>Display two photos for comparison (and pinch them independently).</li>
 	</ul>
 
+	<h3>Trial period / In-App purchases</h3>
+
+	<p>The app allows free use only for a trial period of two weeks. Further use requires the one-time purchase of an
+		in-app package.</p>
+
 	<h3>Windows application</h3>
 
 	<p>
