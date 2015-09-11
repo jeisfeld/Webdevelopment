@@ -5,6 +5,7 @@ header ( 'Content-Type: text/html; charset=iso-8859-1' );
 switch ($_SERVER ['HTTP_HOST']) {
 	case "miniris.jeisfeld.de" :
 	case "miniris.localhost" :
+	case "localhost:8007" :
 		$app = "miniris";
 		$appname = "Miniris";
 		break;
