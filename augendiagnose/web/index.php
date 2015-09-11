@@ -34,28 +34,26 @@ if (empty ( $_GET ["page"] )) {
 else {
 	$page = $_GET ["page"];
 }
-if ($page == "navigation") {
-	$pagefull = $page . ".php";
-}
-else {
-	$pagefull = $page . ".html";
-}
+$pagefull = $page . ".php";
+
+// Define some basic strings based on host
+include "php/pageheader.php";
 
 // Define some basic strings based on language
 switch ($language) {
 	case "de" :
-		$title = "Augendiagnose (Android App)";
-		$description = "Augendiagnose, Jörg Eisfeld";
+		$title = "${appname} (Android App)";
+		$description = "${appname}, Jörg Eisfeld";
 		$keywords = "Jörg Eisfeld, Augendiagnose, Irisdiagnose, Iridologie, Android";
 		break;
 	case "en" :
-		$title = "Eye Diagnosis (Android App)";
-		$description = "Eye Diagnosis, Jörg Eisfeld";
+		$title = "${appname} (Android App)";
+		$description = "${appname}, Jörg Eisfeld";
 		$keywords = "Jörg Eisfeld, Eye Diagnosis, Iris Diagnosis, Iridology, Android";
 		break;
 	case "es" :
-		$title = "Diagnóstico ocular (Aplicación para Android)";
-		$description = "Diagnóstico ocular, Jörg Eisfeld";
+		$title = "${appname} (Aplicación para Android)";
+		$description = "${appname}, Jörg Eisfeld";
 		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridología, Android";
 		break;
 }
@@ -71,7 +69,7 @@ switch ($language) {
 <meta name="keywords" content="<?=$keywords?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="drawable/icon_augendiagnose.ico">
+<link rel="shortcut icon" href="drawable/icon_<?=$app?>.ico">
 <script type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="javascript/resolution.js"></script>
 </head>
@@ -89,8 +87,8 @@ else {
 	?>
 	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?page=".$page?>" scrolling="no"
 		marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
+	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0"
+		marginwidth="0" frameborder="0"></iframe>
 	<iframe id="mainframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 <?php
 }
