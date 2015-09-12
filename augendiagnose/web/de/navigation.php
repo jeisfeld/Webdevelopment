@@ -3,7 +3,7 @@ include "pageheader.php";
 
 // Determine menu style
 if (empty ( $_GET ["style"] )) {
-	$heading = "<h2><?=$appname?> - Android App</h2>";
+	$heading = "<h2>${appname} - Android App</h2>";
 }
 else {
 	$heading = "";
