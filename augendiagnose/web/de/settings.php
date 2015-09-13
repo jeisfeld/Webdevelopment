@@ -13,7 +13,9 @@ include "pageheader.php";
 	<h2>Einstellungen</h2>
 
 	Die Applikation ermöglicht folgende Einstellungen:
-
+<?PHP
+if (isAugendiagnose ()) {
+	?>
 	<h3>Eingangsverzeichnis für neue Augenfotos</h3>
 
 	<p>Dies ist das Verzeichnis, aus dem die App neue Augenfotos importiert. Als Standard ist hier entweder das
@@ -24,6 +26,9 @@ include "pageheader.php";
 		Augenfotografien zu machen. Daher wird eine externe Kamera benötigt. Der einfachste Weg, die Fotos von einer externen
 		Kamera auf das Smartphone zu bekommen, ist die Nutzung einer Eye-Fi SD-Karte, die die Fotos per WiFi auf das
 		Smartphone schickt.</p>
+<?PHP
+}
+?>
 
 	<h3>Anzeigeeinstellungen</h3>
 

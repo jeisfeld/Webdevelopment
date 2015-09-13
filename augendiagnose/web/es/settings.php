@@ -13,7 +13,9 @@ include "pageheader.php";
 	<h2>Ajustes</h2>
 
 	La aplicación permite a los siguientes ajustes:
-
+<?PHP
+if (isAugendiagnose ()) {
+	?>
 	<h3>Carpeta de entrada para nuevas fotos</h3>
 
 	<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuración predeterminada, este es o bien la
@@ -23,6 +25,9 @@ include "pageheader.php";
 	<p>Bagaje con respecto a la aplicación Eye-Fi: normalmente, la cámara del dispositivo celular no es suficiente para
 		tomar fotos oculares en alta calidad. Un enfoque más práctico es utilizar una cámara externa con SD Eye-Fi, que
 		transfiere las fotos a través de WLAN en el dispositivo celular.</p>
+<?PHP
+}
+?>
 
 	<h3>Ajustes de la visualización</h3>
 

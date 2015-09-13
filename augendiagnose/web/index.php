@@ -22,20 +22,6 @@ else {
 	}
 }
 
-// Determine page
-if (empty ( $_GET ["page"] )) {
-	if ($isMobile) {
-		$page = "navigation";
-	}
-	else {
-		$page = "overview";
-	}
-}
-else {
-	$page = $_GET ["page"];
-}
-$pagefull = $page . ".php";
-
 // Define some basic strings based on host
 include "php/pageheader.php";
 
@@ -57,6 +43,20 @@ switch ($language) {
 		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridología, Android";
 		break;
 }
+
+// Determine page
+if (empty ( $_GET ["page"] )) {
+	if ($isMobile) {
+		$page = "navigation";
+	}
+	else {
+		$page = "overview";
+	}
+}
+else {
+	$page = $_GET ["page"];
+}
+$pagefull = $page . ".php";
 
 ?>
 <!DOCTYPE html>

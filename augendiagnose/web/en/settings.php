@@ -13,7 +13,9 @@ include "pageheader.php";
 	<h2>Settings</h2>
 
 	The application allows the following settings:
-
+<?PHP
+if (isAugendiagnose ()) {
+	?>
 	<h3>Input folder for new eye photos</h3>
 
 	<p>This is the folder, from which the app imports new eye photos. By default, this is either the target folder of the
@@ -22,6 +24,9 @@ include "pageheader.php";
 	<p>Background regarding the Eye-Fi app: typically, the camera of the mobile device is not sufficient to capture eye
 		photos in high quality. A more practical approach is to use an external camera with Eye-Fi SD card, which transfers
 		the photos via WLAN to the mobile device.</p>
+<?PHP
+}
+?>
 
 	<h3>Display Settings</h3>
 

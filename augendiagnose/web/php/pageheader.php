@@ -24,4 +24,14 @@ switch ($_SERVER ['HTTP_HOST']) {
 		}
 		break;
 }
+
+function isAugendiagnose() {
+	global $app;
+	return $app == "augendiagnose";
+}
+
+function isMiniris() {
+	global $app;
+	return $app == "miniris";
+}
 ?>

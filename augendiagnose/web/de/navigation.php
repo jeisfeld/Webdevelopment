@@ -22,17 +22,29 @@ else {
 <body>
 	<?=$heading?>
 
+<?PHP
+if (isAugendiagnose ()) {
+	?>
 	<p>
 		<a href="../?lang=de&page=overview" target="_parent">Übersicht</a>
 	</p>
+<?PHP
+}
+?>
 
 	<p>
 		<a href="../?lang=de&page=settings" target="_parent">Einstellungen</a>
 	</p>
 
+<?PHP
+if (isAugendiagnose ()) {
+	?>
 	<p>
 		<a href="../?lang=de&page=organize_photos" target="_parent">Organisation der Fotos</a>
 	</p>
+<?PHP
+}
+?>
 
 	<p>
 		<a href="../?lang=de&page=display_photos" target="_parent">Betrachten der Fotos</a>
