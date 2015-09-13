@@ -6,6 +6,7 @@ switch ($_SERVER ['HTTP_HOST']) {
 	case "miniris.jeisfeld.de" :
 	case "miniris.localhost" :
 	case "localhost:8007" :
+	case "192.168.1.5:8007" :
 		$app = "miniris";
 		$appname = "Miniris";
 		break;
@@ -24,12 +25,10 @@ switch ($_SERVER ['HTTP_HOST']) {
 		}
 		break;
 }
-
 function isAugendiagnose() {
 	global $app;
 	return $app == "augendiagnose";
 }
-
 function isMiniris() {
 	global $app;
 	return $app == "miniris";
