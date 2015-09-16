@@ -12,8 +12,8 @@ include "pageheader.php";
 <body>
 	<h2>Betrachten der Fotos</h2>
 
-	<p>In dieser Aktivität können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen.
-		Daraufhin sehen Sie eine Liste aller Augenaufnahmen dieser Person, sortiert nach Datum.</p>
+	<p>Hier können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen. Daraufhin sehen
+		Sie eine Liste aller Augenaufnahmen dieser Person, sortiert nach Datum.</p>
 
 	<p>Anschließend haben Sie folgende Möglichkeiten:</p>
 
@@ -39,8 +39,13 @@ include "pageheader.php";
 		<li>In der Liste der Namen können Sie lange auf einen Namen klicken, und dann den Namen ändern oder löschen.</li>
 
 		<li>In der Liste der Fotos zu einem Namen können Sie lange auf ein Datum klicken, und dann das Datum ändern oder die
-			Fotos dieses Datums löschen, oder die Fotos dieses Datums ins Eingangsverzeichnis zurückschieben (z.B. um sie einem
-			anderen Namen zuzuordnen).</li>
+			Fotos dieses Datums löschen, oder die Fotos dieses Datums 
+			<?PHP if(isMiniris()) { ?>
+			einem anderen Namen zuordnen.
+			<?PHP } else { ?>
+			ins Eingangsverzeichnis zurückschieben (z.B. um sie einem anderen Namen zuzuordnen).
+			<?PHP } ?>
+			</li>
 	</ul>
 
 	<h3>Weitere Optionen in der Detailansicht</h3>

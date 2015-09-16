@@ -12,8 +12,8 @@ include "pageheader.php";
 <body>
 	<h2>Visualize the photos</h2>
 
-	<p>In this activity, you can select the name of a person whose eye photos you want to see. Then you get shown all eye
-		photos of this person in a list sorted by date.</p>
+	<p>Here you can select the name of a person whose eye photos you want to see. Then you get shown all eye photos of this
+		person in a list sorted by date.</p>
 
 	<p>Then you have the following possibilities:</p>
 
@@ -37,8 +37,13 @@ include "pageheader.php";
 		<li>When making a long click on a name in the list of names, you may change or delete the name</li>
 
 		<li>When making a long click on a date in the list of pictures for a name, you may change the date or delete the
-			pictures of that date, or you may move these pictures back to the input folder (e.g. in order to move them to a
-			different name).</li>
+			pictures of that date, or you may
+			<?PHP if(isMiniris()) { ?>
+			move them to a different name.
+			<?PHP } else { ?>
+			move these pictures back to the input folder (e.g. in order to move them to a different name).
+			<?PHP } ?>
+		</li>
 	</ul>
 
 	<h3>Further options in the detail view</h3>
