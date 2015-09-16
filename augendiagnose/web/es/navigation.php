@@ -22,15 +22,9 @@ else {
 <body>
 	<?=$heading?>
 
-<?PHP
-if (isAugendiagnose ()) {
-	?>
 	<p>
 		<a href="../?lang=es&page=overview" target="_parent">Información general</a>
 	</p>
-<?PHP
-}
-?>
 
 	<p>
 		<a href="../?lang=es&page=settings" target="_parent">Ajustes</a>

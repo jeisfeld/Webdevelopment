@@ -1,8 +1,6 @@
 <?PHP
 include "pageheader.php";
-
-if (isAugendiagnose ()) {
-	?>
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +12,10 @@ if (isAugendiagnose ()) {
 <body>
 	<h2><?=$appname?> - Información general</h2>
 
+<?PHP
+if (isAugendiagnose ()) {
+	?>
+	
 	Esta aplicación tiene el objetivo de ayudar a la visualización de fotografías de los ojos en un dispositivo Android,
 	con el fin de hacer el diagnóstico médico.
 
@@ -84,8 +86,62 @@ if (isAugendiagnose ()) {
 		los cuadros del algunas cámaras, el almacenamiento de información en el JPG falla, o posiblemente hasta destruye el
 		archivo JPG. Por lo tanto, es recomendado que mantenga copias de seguridad de sus archivos JPG, al menos cuando se
 		utiliza el aplicación por primera vez con un nuevo dispositivo o con una nueva cámara.</p>
-</body>
-</html>
+		
+<?PHP
+}
+else {
+	?>
+
+	<p>Esta aplicación tiene la finalidad de apoyar la captura y visualización de fotografías del iris en un dispositivo
+		Android, con el fin de hacer un diagnóstico del iris. Está optimizado para el uso con la herramienta Miniris.</p>
+
+	<p>Las características principales de la App son</p>
+
+	<ul>
+		<li>Captura de fotos del iris usando la cámara del teléfono (por ejemplo, con la ayuda de la herramienta Miniris).</li>
+		<li>La organización de fotos del iris por nombre, fecha y lateral (derecha / izquierda).</li>
+		<li>La visualización de dos fotos de iris en paralelo (con el soporte del cambio de tamaño individual).</li>
+		<li>Cambio de brillo y contraste de la foto durante la visualización, superposición con una topografía del iris, y
+			ahorro de comentarios.</li>
+	</ul>
+
+	<p>La aplicación graba información (como posición del iris o comentarios) directamente en los archivos de imagen JPG.
+		Esto tiene la ventaja de que toda la información es todavía disponible si copia las imágenes de un dispositivo a otro.</p>
+
+	<h3>Uso de la cámara</h3>
+
+	<p>Al abrir la cámara, verá las siguientes áreas:</p>
+
+	<ul>
+		<li>En el lado derecho en el medio está el botón para capturar la foto. Después de capturar una foto, puede decidir si
+			desea conservar la foto o si desea descartarlo y capturar la foto de nuevo.</li>
+		<li>En las esquinas en la parte superior se encuentra la pantalla del derecho y del izquierdo ojo. La marca roja
+			indica que ojo está previsto para la próxima foto. Pulsando sobre una de estas áreas se puede cambiar el lado.</li>
+		<li>En la pantalla de la cámara hay un gran círculo. Este círculo indica el lugar donde el iris debe aparecer en la
+			foto.</li>
+		<li>En el lado izquierdo, hay un botón de flash. Aquí puede seleccionar si desea utilizar el flash del dispositivo.</li>
+		<li>Arriba, hay un botón con un círculo. Aquí puede seleccionar qué tan grande el iris debe estar en la foto.</li>
+	</ul>
+
+	<p>Después de tomar fotos de ambos ojos, se abre una pagina donde usted puede revisar las dos fotos, y donde se puede
+		introducir el nombre de la persona a la que estas fotos se deben asignar. Aquí también se puede cambiar la fecha de la
+		fotos - para cada persona y cada fecha, sólo un par de fotos se pueden almacenar.</p>
+
+	<p>Si detiene la aplicación después de tomar una o dos fotos de los ojos, pero antes de asignar un nombre, luego el
+		siguiente inicio de la aplicación continuará donde se detuvo - las fotos que se han tomado se mantendrá hasta que
+		decida eliminar o sobrescribir ellos.</p>
+
+	<h3>Aplicación para Windows</h3>
+
+	<p>
+		Hay una aplicación de acompañamiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
+		esta aplicación. Para obtener más información, consulte
+		<a href="http://miniris.jeisfeld.de/?lang=es&page=windowsapp" target="_top">http://miniris.jeisfeld.de/?page=windowsapp</a>
+		.
+	</p>
+
 <?PHP
 }
 ?>
+</body>
+</html>
