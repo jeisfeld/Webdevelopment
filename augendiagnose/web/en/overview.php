@@ -12,7 +12,7 @@ include "pageheader.php";
 <body>
 	<h2><?=$appname?> - Overview</h2>
 
-<?php
+<?PHP
 if (isAugendiagnose ()) {
 	?>
 	
@@ -136,6 +136,13 @@ else {
 	<p>If you stop the app after taking one or two eye photos, but before assigning a name, then the next start of the app
 		will continue where you stopped - the photos which you have taken will be kept until you decide to delete or overwrite
 		them.</p>
+
+	<h3>Trial period / In-App purchases</h3>
+
+	<p>The app allows free use only for a trial period of two weeks. Further use requires the one-time purchase of an
+		in-app package.</p>
+
+	<h3>Windows application</h3>
 
 	<p>
 		There is an accompanying Windows application that can be used to view the photos that have been organized with this
