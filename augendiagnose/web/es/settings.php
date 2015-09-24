@@ -118,6 +118,22 @@ if (isAugendiagnose ()) {
 		</tr>
 	</table>
 
+	<h3>Ajustes de la cámara</h3>
+
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Compatibilidad de la cámara</td>
+			<td width="70%" valign="top">Si el dispositivo funciona con Android 5 o superior, entonces aquí se puede seleccionar
+				si la cámara debe utilizar los nuevos Android 5 funciones o no. Selección de &laquo;Android 4&raquo; tiene sentido
+				en el caso de problemas con Android 5 compatibilidad.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Activar el flash</td>
+			<td width="70%" valign="top">Aquí usted puede habilitar el flash. Por defecto, este está desactivado, ya que es
+				peligroso para usar el flash cerca del ojo.</td>
+		</tr>
+	</table>
+
 	<h3>Paquetes premium / Ayuda</h3>
 
 	<p>Esta página ofrece la posibilidad de comprar un paquete premium, que le da acceso anlimited a todas las funciones de

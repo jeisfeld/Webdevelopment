@@ -113,6 +113,22 @@ if (isAugendiagnose ()) {
 		</tr>
 	</table>
 
+	<h3>Camera Settings</h3>
+
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Camera compatibility</td>
+			<td width="70%" valign="top">If your device runs on Android 5 or higher, then here you can select if the camera
+				functionality should use the new Android 5 features or not. Selection of &ldquo;Android 4&rdquo; makes sense in case
+				of issues with Android 5 compatibility.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Enable flash</td>
+			<td width="70%" valign="top">Here you may enable the flashlight functionality. By default, this is disabled, as it is
+				dangereous to use the flashlight close to the eye.</td>
+		</tr>
+	</table>
+
 	<h3>Premium Packs / Support</h3>
 
 	<p>This page offers the possibility to purchase a premium pack which gives you anlimited access to all functions of the

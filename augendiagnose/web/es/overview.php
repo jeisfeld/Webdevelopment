@@ -122,7 +122,10 @@ else {
 			indica que ojo está previsto para la próxima foto. Pulsando sobre una de estas áreas se puede cambiar el lado.</li>
 		<li>En la pantalla de la cámara hay un gran círculo. Este círculo indica el lugar donde el iris debe aparecer en la
 			foto.</li>
-		<li>En el lado izquierdo, hay un botón de flash. Aquí puede seleccionar si desea utilizar el flash del dispositivo.</li>
+		<li>En la parte inferior izquierda, hay un botón con el texto &laquo;MACRO&raquo; o &laquo;AUTO&raquo;. Aquí usted puede seleccionar el
+			modo de enfoque de la cámara. Para primeros planos, el modo macro es normalmente una buena opción.</li>
+		<li>Arriba, hay un botón de flash. Aquí se puede encender la luz de su dispositivo. Como un flash frente a el ojo es
+			peligroso, esto está desactivado por defecto, pero puede activarlo en la configuración.</li>
 		<li>Arriba, hay un botón con un círculo. Aquí puede seleccionar qué tan grande el iris debe estar en la foto.</li>
 	</ul>
 

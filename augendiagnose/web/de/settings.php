@@ -119,6 +119,22 @@ if (isAugendiagnose ()) {
 		</tr>
 	</table>
 
+	<h3>Kameraeinstellungen</h3>
+
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Kamera-Kompatibilität</td>
+			<td width="70%" valign="top">Falls Ihr Smartphone Android 5 oder höher nutzt, dann kann hier eingestellt werden, ob
+				die neuen Kamera-Funktionen von Android 5 genutzt werden sollen. Die Wahl &bdquo;Android 4&ldquo; ist sinnvoll im
+				Fall von Problemen mit den Kamerafunktionen von Android 5.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Blitzlicht erlauben</td>
+			<td width="70%" valign="top">Hier können Sie die Verwendung des Blitzlichtes erlauben. In der Voreinstellung ist dies
+				nicht erlaubt, da das Blitzlicht direkt vor dem Auge gefährlich ist.</td>
+		</tr>
+	</table>
+
 	<h3>Premium-Pakete / Hilfe</h3>
 
 	<p>Diese Seite ermöglicht den Erwerb eines Premium-Paketes, über das die unbegrenzte Nutzung aller Funktionen der App
