@@ -133,6 +133,11 @@ if (isAugendiagnose ()) {
 			<td width="70%" valign="top">Hier können Sie die Verwendung des Blitzlichtes erlauben. In der Voreinstellung ist dies
 				nicht erlaubt, da das Blitzlicht direkt vor dem Auge gefährlich ist.</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Kamera-Bildschirmposition</td>
+			<td width="70%" valign="top">Wenn das Miniris-Band Knöpfe auf dem Kamera-Bildschirm verbirgt, dann können Sie diese
+				Einstellung verwenden, um den Kamera-Bildschirm nach rechts oder links zu verschieben.</td>
+		</tr>
 	</table>
 
 	<h3>Premium-Pakete / Hilfe</h3>

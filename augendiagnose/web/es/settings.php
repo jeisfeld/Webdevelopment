@@ -132,6 +132,11 @@ if (isAugendiagnose ()) {
 			<td width="70%" valign="top">Aquí usted puede habilitar el flash. Por defecto, este está desactivado, ya que es
 				peligroso para usar el flash cerca del ojo.</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Posición de la pantalla de la cámara</td>
+			<td width="70%" valign="top">Si la cinta Miniris oculta algunos botones de la pantalla de la cámara, entonces usted
+				puede utilizar este ajuste para desplazar la pantalla de la cámara hacia la derecha o izquierda.</td>
+		</tr>
 	</table>
 
 	<h3>Paquetes premium / Ayuda</h3>

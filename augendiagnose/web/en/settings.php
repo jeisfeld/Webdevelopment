@@ -127,6 +127,11 @@ if (isAugendiagnose ()) {
 			<td width="70%" valign="top">Here you may enable the flashlight functionality. By default, this is disabled, as it is
 				dangereous to use the flashlight close to the eye.</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Camera screen position</td>
+			<td width="70%" valign="top">If the Miniris ribbon hides some buttons on the camera screen, then you can use this
+				setting to shift the camera screen to the right or left.</td>
+		</tr>
 	</table>
 
 	<h3>Premium Packs / Support</h3>
