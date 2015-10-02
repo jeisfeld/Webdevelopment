@@ -56,8 +56,14 @@ include "pageheader.php";
 		<li>Verändern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Anzeige von Iristopographien als Overlay (nummerierte Buttons), Anpassen der Overlays an die Iris, Speichern der
-			Position der Overlays (Lock-Button <img src="../drawable/ic_lock_open.png" />)
+		<li>Anzeige von Iristopographien als Overlay (Kreis-Button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
+			und nummerierte Buttons), Anpassen der Overlays an die Iris, Speichern der Position der Overlays (Lock-Button <img
+			src="../drawable/ic_lock_open.png" />)
+		</li>
+
+		<li>Anpassen der Pupillengröße für die Overlays (Button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />).
+			Hier können Sie die Pupille entweder zentriert lassen (<img src="../drawable/ic_btn_pupil_1.png" class="frameless" />)
+			oder frei bewegen (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
 		</li>
 
 		<li>Speichern der Einstellung von Helligkeit und Kontrast (über den &bdquo;Speichern&ldquo;-Button <img
@@ -74,8 +80,10 @@ include "pageheader.php";
 	</ul>
 
 	<p>
-		Die zugehörigen Tools können über den Button &bdquo;Hilfsmittel anzeigen/verbergen&ldquo; <img
-			src="../drawable/ic_tools_up.png" /> aktiviert oder deaktiviert werden.
+		Die zugehörigen Tools können über den Button &bdquo;Hilfsmittel anzeigen/verbergen&ldquo; (<img
+			src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
+			src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />) aktiviert oder deaktiviert
+		werden.
 	</p>
 </body>
 </html>

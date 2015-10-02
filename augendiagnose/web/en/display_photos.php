@@ -54,8 +54,14 @@ include "pageheader.php";
 		<li>Change of brightness and contrast via sliders <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Display of iris topographies as overlay (numbered buttons), adaption of the overlay to the iris and storage of
-			overlay position (lock button <img src="../drawable/ic_lock_open.png" />)
+		<li>Display of iris topographies as overlay (circle button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
+			and numbered buttons), adaption of the overlay to the iris and storage of overlay position (lock button <img
+			src="../drawable/ic_lock_open.png" />)
+		</li>
+
+		<li>Set the pupil size for the overlays (button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />). Here
+			you can either keep the pupil centered (<img src="../drawable/ic_btn_pupil_1.png" class="frameless" />) or move it
+			freely (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
 		</li>
 
 		<li>Store the selected settings of brightness and contrast (via &ldquo;save&rdquo; <img
@@ -72,8 +78,9 @@ include "pageheader.php";
 	</ul>
 
 	<p>
-		These features may be enabled or disabled via the button &ldquo;Show/Hide utilities&rdquo; <img
-			src="../drawable/ic_tools_up.png" />.
+		These features may be enabled or disabled via the button &ldquo;Show/Hide utilities&rdquo; (<img
+			src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
+			src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />).
 	</p>
 </body>
 </html>

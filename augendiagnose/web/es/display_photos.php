@@ -55,8 +55,14 @@ include "pageheader.php";
 		<li>Cambio de brillo y contraste mediante correderas <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Visualización de una topografía de iris como superposición (botones numerados), adaptación de la superposición al
-			iris y almacenamiento de la posición de superposición (botón de cerradura <img src="../drawable/ic_lock_open.png" />)
+		<li>Visualización de una topografía de iris como superposición (botón círculo <img src="../drawable/ic_btn_wheel.png"
+			class="frameless" /> y botones numerados), adaptación de la superposición al iris y almacenamiento de la posición de
+			superposición (botón de cerradura <img src="../drawable/ic_lock_open.png" />)
+		</li>
+
+		<li>Adaptación del tamaño de la pupila de las superposiciones (botón <img src="../drawable/ic_btn_pupil_0.png"
+			class="frameless" />). Aquí usted puede mantener la pupila centrada (<img src="../drawable/ic_btn_pupil_1.png"
+			class="frameless" />) o moverla libremente (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
 		</li>
 
 		<li>Guardar los ajustes seleccionados de brillo y contraste (por medio del botón &laquo;guardar&raquo; <img
@@ -73,8 +79,9 @@ include "pageheader.php";
 	</ul>
 
 	<p>
-		Estas funciones pueden activarse o desactivarse mediante el botón &laquo;Mostrar/Ocultar herramientas&raquo; <img
-			src="../drawable/ic_tools_up.png" />.
+		Estas funciones pueden activarse o desactivarse mediante el botón &laquo;Mostrar/Ocultar herramientas&raquo; (<img
+			src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
+			src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />).
 	</p>
 </body>
 </html>

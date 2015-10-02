@@ -37,6 +37,11 @@ img {
 	vertical-align: middle;
 }
 
+img.frameless {
+	width: 18px;
+	height: 18px;
+}
+
 .mobile p {
 	margin-top: 0px;
 }
