@@ -76,9 +76,12 @@ include "pageheader.php";
 	<h3>Notas de la versión</h3>
 
 	<ul>
-		<li><b>Version 0.1.3:</b> Visualización de dos fotos al mismo tiempo. Visualización a pantalla completa rápida.</li>
+		<li><b>Versión 0.1.4:</b> Adaptación de superposiciones en el tamaño de la pupila. Correcta visualización de fotos
+			giradas.</li>
 
-		<li><b>Version 0.1.2:</b> Dar aviso al cerrar la ventana mientras se edita comentario.</li>
+		<li><b>Versión 0.1.3:</b> Visualización de dos fotos al mismo tiempo. Visualización a pantalla completa rápida.</li>
+
+		<li><b>Versión 0.1.2:</b> Dar aviso al cerrar la ventana mientras se edita comentario.</li>
 
 		<li><b>Versión 0.1.1:</b> Habilitado selección de idioma.</li>
 

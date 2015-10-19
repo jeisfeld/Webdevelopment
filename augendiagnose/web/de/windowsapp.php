@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.4:</b> Anpassung der Overlays an die Pupillengröße. Darstellung rotierter Fotos.</li>
+
 		<li><b>Version 0.1.3:</b> Gleichzeitige Anzeige zweier Augenfotos. Schnelle Anzeige in voller Fenstgergröße.</li>
 
 		<li><b>Version 0.1.2:</b> Warnung, wenn das Fenster geschlossen wird, während der Kommentar bearbeitet wird.</li>

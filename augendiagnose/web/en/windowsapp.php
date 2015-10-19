@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.4:</b> Adaption of overlays to the pupil size. Correct display of rotated photos.</li>
+
 		<li><b>Version 0.1.3:</b> Enable display of two photos simultaneously. Enable quick full-screen display.</li>
 
 		<li><b>Version 0.1.2:</b> Give warning when closing window while editing comment.</li>
