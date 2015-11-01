@@ -16,15 +16,28 @@ include "pageheader.php";
 <?PHP
 if (isAugendiagnose ()) {
 	?>
-	<h3>Carpeta de entrada para nuevas fotos</h3>
+	<h3>Ajustes de entrada</h3>
 
-	<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuración predeterminada, este es o bien la
-		carpeta de destino de la aplicación Eye-Fi o la carpeta norma de la aplicación de la cámara. Sin embargo, puede
-		configurar aquí cualquiera otra carpeta.</p>
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Carpeta de entrada para nuevas fotos</td>
+			<td width="70%" valign="top">
+				<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuraci�n predeterminada, este es o bien
+					la carpeta de destino de la aplicaci�n Eye-Fi o la carpeta norma de la aplicaci�n de la c�mara. Sin embargo, puede
+					configurar aqu� cualquiera otra carpeta.</p>
 
-	<p>Bagaje con respecto a la aplicación Eye-Fi: normalmente, la cámara del dispositivo celular no es suficiente para
-		tomar fotos oculares en alta calidad. Un enfoque más práctico es utilizar una cámara externa con SD Eye-Fi, que
-		transfiere las fotos a través de WLAN en el dispositivo celular.</p>
+				<p>Bagaje con respecto a la aplicaci�n Eye-Fi: normalmente, la c�mara del dispositivo celular no es suficiente para
+					tomar fotos oculares en alta calidad. Un enfoque m�s pr�ctico es utilizar una c�mara externa con SD Eye-Fi, que
+					transfiere las fotos a trav�s de WLAN en el dispositivo celular.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">�ltima foto es ojo derecho</td>
+			<td width="70%" valign="top">Aqu� puede definir si la �ltima foto es el ojo derecho o el ojo izquierdo. Como
+				configuraci�n predeterminada este es el ojo izquierdo (lo que significa que usted hizo primero una foto del ojo
+				derecho y luego del ojo izquierdo).</td>
+		</tr>
+	</table>
 <?PHP
 }
 ?>
@@ -33,10 +46,8 @@ if (isAugendiagnose ()) {
 
 	<table width="100%" border="1">
 		<tr>
-			<td width="30%" valign="top">Última foto es ojo derecho</td>
-			<td width="70%" valign="top">Aquí puede definir si la última foto es el ojo derecho o el ojo izquierdo. Como
-				configuración predeterminada este es el ojo izquierdo (lo que significa que usted hizo primero una foto del ojo
-				derecho y luego del ojo izquierdo).</td>
+			<td width="30%" valign="top">Ordenar por apellido</td>
+			<td width="70%" valign="top">Aqu� se puede establecer si la lista de nombres ser� ordenada por apellido.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Ordenar por apellido</td>
@@ -53,9 +64,13 @@ if (isAugendiagnose ()) {
 				fuerza un reinicio de la aplicación.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Consejos</td>
-			<td width="70%" valign="top">Aquí se puede volver a habilitar todos los consejos, o puede desactivar todas consejos
-				existentes (que es útile después de la nueva instalación si ya conoce la aplicación).</td>
+			<td width="30%" valign="top">Mostrar todos los consejos</td>
+			<td width="70%" valign="top">Aqu� se puede volver a habilitar todos los consejos.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">No mostrar consejos</td>
+			<td width="70%" valign="top">Aqu� se puede desactivar todas consejos existentes (que es �tile despu�s de la nueva
+				instalaci�n si ya conoce la aplicaci�n).</td>
 		</tr>
 	</table>
 

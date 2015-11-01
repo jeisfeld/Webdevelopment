@@ -16,16 +16,29 @@ include "pageheader.php";
 <?PHP
 if (isAugendiagnose ()) {
 	?>
-	<h3>Eingangsverzeichnis für neue Augenfotos</h3>
+	<h3>Eingangseinstellungen</h3>
 
-	<p>Dies ist das Verzeichnis, aus dem die App neue Augenfotos importiert. Als Standard ist hier entweder das
-		Zielverzeichnis der Eye-Fi-App gesetzt oder das Standardverzeichnis der Kamera-App. Es kann aber ein beliebiges
-		anderes Verzeichnis gewählt werden (z.B. das Kamera-Verzeichnis).</p>
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Eingangsverzeichnis f�r neue Augenfotos</td>
+			<td width="70%" valign="top">
+				<p>Dies ist das Verzeichnis, aus dem die App neue Augenfotos importiert. Als Standard ist hier entweder das
+					Zielverzeichnis der Eye-Fi-App gesetzt oder das Standardverzeichnis der Kamera-App. Es kann aber ein beliebiges
+					anderes Verzeichnis gew�hlt werden (z.B. das Kamera-Verzeichnis).</p>
 
-	<p>Hintergrund zur Eye-Fi-App: Eine Smartphone-Kamera ist typischerweise nicht ausreichend, um hochwertige
-		Augenfotografien zu machen. Daher wird eine externe Kamera benötigt. Der einfachste Weg, die Fotos von einer externen
-		Kamera auf das Smartphone zu bekommen, ist die Nutzung einer Eye-Fi SD-Karte, die die Fotos per WiFi auf das
-		Smartphone schickt.</p>
+				<p>Hintergrund zur Eye-Fi-App: Eine Smartphone-Kamera ist typischerweise nicht ausreichend, um hochwertige
+					Augenfotografien zu machen. Daher wird eine externe Kamera ben�tigt. Der einfachste Weg, die Fotos von einer
+					externen Kamera auf das Smartphone zu bekommen, ist die Nutzung einer Eye-Fi SD-Karte, die die Fotos per WiFi auf
+					das Smartphone schickt.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Letztes Foto ist rechtes Auge</td>
+			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist.
+				Standardm��ig ist hier das linke Auge gew�hlt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
+				Auge fotografiert haben).</td>
+		</tr>
+	</table>
 <?PHP
 }
 ?>
@@ -55,9 +68,13 @@ if (isAugendiagnose ()) {
 				erzwingt einen Neustart der App.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Tipps</td>
-			<td width="70%" valign="top">Hier können Sie alle Tipps reaktivieren, oder Sie können alle vorhandenen Tipps
-				deaktivieren (was nützlich ist, wenn Sie die App schon kennen, aber neu installieren).</td>
+			<td width="30%" valign="top">Alle Tipps zeigen</td>
+			<td width="70%" valign="top">Hier k�nnen Sie alle Tipps reaktivieren.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Tipps nicht mehr zeigen</td>
+			<td width="70%" valign="top">Hier k�nnen Sie alle vorhandenen Tipps deaktivieren (was n�tzlich ist, wenn Sie die App
+				schon kennen, aber neu installieren).</td>
 		</tr>
 	</table>
 

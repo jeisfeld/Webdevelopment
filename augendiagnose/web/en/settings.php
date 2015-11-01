@@ -16,14 +16,26 @@ include "pageheader.php";
 <?PHP
 if (isAugendiagnose ()) {
 	?>
-	<h3>Input folder for new eye photos</h3>
+	<h3>Input Settings</h3>
 
-	<p>This is the folder, from which the app imports new eye photos. By default, this is either the target folder of the
-		Eye-Fi app or the standard folder of the Camera app. However, you can configure here any other folder.</p>
+	<table width="100%" border="1">
+		<tr>
+			<td width="30%" valign="top">Input folder for new eye photos</td>
+			<td width="70%" valign="top">
+				<p>This is the folder, from which the app imports new eye photos. By default, this is either the target folder of
+					the Eye-Fi app or the standard folder of the Camera app. However, you can configure here any other folder.</p>
 
-	<p>Background regarding the Eye-Fi app: typically, the camera of the mobile device is not sufficient to capture eye
-		photos in high quality. A more practical approach is to use an external camera with Eye-Fi SD card, which transfers
-		the photos via WLAN to the mobile device.</p>
+				<p>Background regarding the Eye-Fi app: typically, the camera of the mobile device is not sufficient to capture eye
+					photos in high quality. A more practical approach is to use an external camera with Eye-Fi SD card, which transfers
+					the photos via WLAN to the mobile device.</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Last photo is right eye</td>
+			<td width="70%" valign="top">Here you can define if the last photo is the right or the left eye. By default this is
+				the left eye (which means that you made first a photo of the right eye and then of the left eye).</td>
+		</tr>
+	</table>
 <?PHP
 }
 ?>
@@ -31,11 +43,6 @@ if (isAugendiagnose ()) {
 	<h3>Display Settings</h3>
 
 	<table width="100%" border="1">
-		<tr>
-			<td width="30%" valign="top">Last photo is right eye</td>
-			<td width="70%" valign="top">Here you can define if the last photo is the right or the left eye. By default this is
-				the left eye (which means that you made first a photo of the right eye and then of the left eye).</td>
-		</tr>
 		<tr>
 			<td width="30%" valign="top">Sort by last name</td>
 			<td width="70%" valign="top">Here you may decide that names are not ordered strictly alphabetically as given, but by
@@ -51,9 +58,13 @@ if (isAugendiagnose ()) {
 				restart of the app.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Hints</td>
-			<td width="70%" valign="top">Here you can re-enable all hints, or you can disable all existing hints (which is
-				helpful after new installation if you know the app already).</td>
+			<td width="30%" valign="top">Display all hints</td>
+			<td width="70%" valign="top">Here you can re-enable all hints.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Do not display hints</td>
+			<td width="70%" valign="top">Here you can disable all existing hints (which is helpful after new installation if you
+				know the app already).</td>
 		</tr>
 	</table>
 
@@ -116,6 +127,17 @@ if (isAugendiagnose ()) {
 	<h3>Camera Settings</h3>
 
 	<table width="100%" border="1">
+<?PHP
+if (isMiniris ()) {
+	?>
+		<tr>
+			<td width="30%" valign="top">Start with left eye</td>
+			<td width="70%" valign="top">Here you can define which eye should be photographed first. By default this is
+				the right eye.</td>
+		</tr>
+<?PHP
+}
+?>
 		<tr>
 			<td width="30%" valign="top">Camera compatibility</td>
 			<td width="70%" valign="top">If your device runs on Android 5 or higher, then here you can select if the camera
