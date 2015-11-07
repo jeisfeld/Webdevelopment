@@ -56,9 +56,15 @@ include "pageheader.php";
 		<li>Verändern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Anzeige von Iristopographien als Overlay (Kreis-Button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
-			und nummerierte Buttons), Anpassen der Overlays an die Iris, Speichern der Position der Overlays (Lock-Button <img
-			src="../drawable/ic_lock_open.png" />)
+		<li>
+			<p>
+				Anzeige von Iristopographien als Overlay (Kreis-Button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
+				und nummerierte Buttons), Anpassen der Overlays an die Iris, Speichern der Position der Overlays (Lock-Button <img
+					src="../drawable/ic_lock_open.png" />)
+			</p>
+			<p>Wenn sie lange auf einen der nummerierten Buttons drücken, können Sie das Overlay ändern, das diesem Button
+				zugeordnet ist. Beim letzten nummerierten Button haben Sie hier außerdem die Möglichkeit, den Button zu entfernen
+				oder einen Button hinzuzufügen.</p>
 		</li>
 
 		<li>Anpassen der Pupillengröße für die Overlays (Button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />).

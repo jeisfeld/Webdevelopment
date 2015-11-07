@@ -22,19 +22,19 @@ if (isAugendiagnose ()) {
 		<tr>
 			<td width="30%" valign="top">Carpeta de entrada para nuevas fotos</td>
 			<td width="70%" valign="top">
-				<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuraci�n predeterminada, este es o bien
-					la carpeta de destino de la aplicaci�n Eye-Fi o la carpeta norma de la aplicaci�n de la c�mara. Sin embargo, puede
-					configurar aqu� cualquiera otra carpeta.</p>
+				<p>Esta es la carpeta, de donde las nuevas fotos son importadas. Como configuración predeterminada, este es o bien
+					la carpeta de destino de la aplicación Eye-Fi o la carpeta norma de la aplicación de la cámara. Sin embargo, puede
+					configurar aquí cualquiera otra carpeta.</p>
 
-				<p>Bagaje con respecto a la aplicaci�n Eye-Fi: normalmente, la c�mara del dispositivo celular no es suficiente para
-					tomar fotos oculares en alta calidad. Un enfoque m�s pr�ctico es utilizar una c�mara externa con SD Eye-Fi, que
-					transfiere las fotos a trav�s de WLAN en el dispositivo celular.</p>
+				<p>Bagaje con respecto a la aplicación Eye-Fi: normalmente, la cámara del dispositivo celular no es suficiente para
+					tomar fotos oculares en alta calidad. Un enfoque más práctico es utilizar una cámara externa con SD Eye-Fi, que
+					transfiere las fotos a través de WLAN en el dispositivo celular.</p>
 			</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">�ltima foto es ojo derecho</td>
-			<td width="70%" valign="top">Aqu� puede definir si la �ltima foto es el ojo derecho o el ojo izquierdo. Como
-				configuraci�n predeterminada este es el ojo izquierdo (lo que significa que usted hizo primero una foto del ojo
+			<td width="30%" valign="top">Última foto es ojo derecho</td>
+			<td width="70%" valign="top">Aquí puede definir si la última foto es el ojo derecho o el ojo izquierdo. Como
+				configuración predeterminada este es el ojo izquierdo (lo que significa que usted hizo primero una foto del ojo
 				derecho y luego del ojo izquierdo).</td>
 		</tr>
 	</table>
@@ -47,11 +47,12 @@ if (isAugendiagnose ()) {
 	<table width="100%" border="1">
 		<tr>
 			<td width="30%" valign="top">Ordenar por apellido</td>
-			<td width="70%" valign="top">Aqu� se puede establecer si la lista de nombres ser� ordenada por apellido.</td>
+			<td width="70%" valign="top">Aquí se puede establecer si la lista de nombres será ordenada por apellido.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Ordenar por apellido</td>
-			<td width="70%" valign="top">Aquí se puede establecer si la lista de nombres será ordenada por apellido.</td>
+			<td width="30%" valign="top">Configuración guiada de iris y pupila</td>
+			<td width="70%" valign="top">Aquí usted puede decidir si se le guiará a través de la determinación de la posición del
+				iris y de la pupila antes puede mostrar superposiciones.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Color predeterminado de superposiciones</td>
@@ -65,12 +66,12 @@ if (isAugendiagnose ()) {
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Mostrar todos los consejos</td>
-			<td width="70%" valign="top">Aqu� se puede volver a habilitar todos los consejos.</td>
+			<td width="70%" valign="top">Aquí se puede volver a habilitar todos los consejos.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">No mostrar consejos</td>
-			<td width="70%" valign="top">Aqu� se puede desactivar todas consejos existentes (que es �tile despu�s de la nueva
-				instalaci�n si ya conoce la aplicaci�n).</td>
+			<td width="70%" valign="top">Aquí se puede desactivar todas consejos existentes (que es útile después de la nueva
+				instalación si ya conoce la aplicación).</td>
 		</tr>
 	</table>
 
@@ -136,6 +137,17 @@ if (isAugendiagnose ()) {
 	<h3>Ajustes de la cámara</h3>
 
 	<table width="100%" border="1">
+<?PHP
+if (isMiniris ()) {
+	?>
+		<tr>
+			<td width="30%" valign="top">Comenzar con el ojo izquierdo</td>
+			<td width="70%" valign="top">Aquí puede definir el ojo que debería ser fotografiada primero. Como configuración
+				predeterminada este es el ojo derecho.</td>
+		</tr>
+<?PHP
+}
+?>
 		<tr>
 			<td width="30%" valign="top">Compatibilidad de la cámara</td>
 			<td width="70%" valign="top">Si el dispositivo funciona con Android 5 o superior, entonces aquí se puede seleccionar
@@ -153,6 +165,12 @@ if (isAugendiagnose ()) {
 				puede utilizar este ajuste para desplazar la pantalla de la cámara hacia la derecha o izquierda.</td>
 		</tr>
 	</table>
+
+	<h3>Botones de superposición</h3>
+
+	<p>Esta página le permite definir que superposiciones topografía del iris se puede visualizar pulsando los botones de
+		superposición. Esto también se puede hacer mientras ve las fotos, haciendo una pulsación larga en algún botón de
+		superposición.</p>
 
 	<h3>Paquetes premium / Ayuda</h3>
 

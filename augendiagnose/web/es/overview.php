@@ -129,7 +129,7 @@ else {
 		<li>Arriba, hay un botón con un círculo. Aquí puede seleccionar qué tan grande el iris debe estar en la foto.</li>
 	</ul>
 
-	<p>Después de tomar fotos de ambos ojos, se abre una pagina donde usted puede revisar las dos fotos, y donde se puede
+	<p>Después de tomar fotos de ambos ojos, se abre una página donde usted puede revisar las dos fotos, y donde se puede
 		introducir el nombre de la persona a la que estas fotos se deben asignar. Aquí también se puede cambiar la fecha de la
 		fotos - para cada persona y cada fecha, sólo un par de fotos se pueden almacenar.</p>
 

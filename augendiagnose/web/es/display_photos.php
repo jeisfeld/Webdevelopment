@@ -12,7 +12,7 @@ include "pageheader.php";
 <body>
 	<h2>Visualizar las fotos</h2>
 
-	<p>Aqui se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicación mostrará
+	<p>Aquí se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicación mostrará
 		todas las fotos de ojo de esta persona en una lista ordenada por fecha.</p>
 
 	<p>A continuación, usted tiene las siguientes posibilidades:</p>
@@ -55,9 +55,14 @@ include "pageheader.php";
 		<li>Cambio de brillo y contraste mediante correderas <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>Visualización de una topografía de iris como superposición (botón círculo <img src="../drawable/ic_btn_wheel.png"
-			class="frameless" /> y botones numerados), adaptación de la superposición al iris y almacenamiento de la posición de
-			superposición (botón de cerradura <img src="../drawable/ic_lock_open.png" />)
+		<li>
+			<p>
+				Visualización de una topografía de iris como superposición (botón círculo <img src="../drawable/ic_btn_wheel.png"
+					class="frameless" /> y botones numerados), adaptación de la superposición al iris y almacenamiento de la posición
+				de superposición (botón de cerradura <img src="../drawable/ic_lock_open.png" />)
+			</p>
+			<p>Al hacer una pulsación larga en uno de los botones numerados, puede cambiar la superposición para este botón. Por
+				el último botón numerado, esto le permite también eliminar el botón o añadir otro botón.</p>
 		</li>
 
 		<li>Adaptación del tamaño de la pupila de las superposiciones (botón <img src="../drawable/ic_btn_pupil_0.png"

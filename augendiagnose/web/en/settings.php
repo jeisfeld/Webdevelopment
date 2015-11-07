@@ -49,6 +49,11 @@ if (isAugendiagnose ()) {
 				the last name.</td>
 		</tr>
 		<tr>
+			<td width="30%" valign="top">Guided setup of iris and pupil position</td>
+			<td width="70%" valign="top">Here you may decide if you are guided through setting the iris and pupil position before
+				you can display overlays.</td>
+		</tr>
+		<tr>
 			<td width="30%" valign="top">Default overlay color</td>
 			<td width="70%" valign="top">Here you can define the default color for iris topography overlays. (Standard: red)</td>
 		</tr>
@@ -132,8 +137,8 @@ if (isMiniris ()) {
 	?>
 		<tr>
 			<td width="30%" valign="top">Start with left eye</td>
-			<td width="70%" valign="top">Here you can define which eye should be photographed first. By default this is
-				the right eye.</td>
+			<td width="70%" valign="top">Here you can define which eye should be photographed first. By default this is the right
+				eye.</td>
 		</tr>
 <?PHP
 }
@@ -147,7 +152,7 @@ if (isMiniris ()) {
 		<tr>
 			<td width="30%" valign="top">Enable flash</td>
 			<td width="70%" valign="top">Here you may enable the flashlight functionality. By default, this is disabled, as it is
-				dangereous to use the flashlight close to the eye.</td>
+				dangerous to use the flashlight close to the eye.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Camera screen position</td>
@@ -156,9 +161,14 @@ if (isMiniris ()) {
 		</tr>
 	</table>
 
+	<h3>Overlay Button Configuration</h3>
+
+	<p>This page allows you to define which iris topography overlays can be displayed by pressing the overlay buttons. The
+		same setting can also be done while displaying the photos, by making a long click on some overlay button.</p>
+
 	<h3>Premium Packs / Support</h3>
 
-	<p>This page offers the possibility to purchase a premium pack which gives you anlimited access to all functions of the
+	<p>This page offers the possibility to purchase a premium pack which gives you unlimited access to all functions of the
 		app.</p>
 
 	<p>In addition, there are the following features:</p>

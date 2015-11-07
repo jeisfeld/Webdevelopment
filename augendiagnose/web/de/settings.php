@@ -20,14 +20,14 @@ if (isAugendiagnose ()) {
 
 	<table width="100%" border="1">
 		<tr>
-			<td width="30%" valign="top">Eingangsverzeichnis f�r neue Augenfotos</td>
+			<td width="30%" valign="top">Eingangsverzeichnis für neue Augenfotos</td>
 			<td width="70%" valign="top">
 				<p>Dies ist das Verzeichnis, aus dem die App neue Augenfotos importiert. Als Standard ist hier entweder das
 					Zielverzeichnis der Eye-Fi-App gesetzt oder das Standardverzeichnis der Kamera-App. Es kann aber ein beliebiges
-					anderes Verzeichnis gew�hlt werden (z.B. das Kamera-Verzeichnis).</p>
+					anderes Verzeichnis gewählt werden (z.B. das Kamera-Verzeichnis).</p>
 
 				<p>Hintergrund zur Eye-Fi-App: Eine Smartphone-Kamera ist typischerweise nicht ausreichend, um hochwertige
-					Augenfotografien zu machen. Daher wird eine externe Kamera ben�tigt. Der einfachste Weg, die Fotos von einer
+					Augenfotografien zu machen. Daher wird eine externe Kamera benötigt. Der einfachste Weg, die Fotos von einer
 					externen Kamera auf das Smartphone zu bekommen, ist die Nutzung einer Eye-Fi SD-Karte, die die Fotos per WiFi auf
 					das Smartphone schickt.</p>
 			</td>
@@ -35,7 +35,7 @@ if (isAugendiagnose ()) {
 		<tr>
 			<td width="30%" valign="top">Letztes Foto ist rechtes Auge</td>
 			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist.
-				Standardm��ig ist hier das linke Auge gew�hlt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
+				Standardmäßig ist hier das linke Auge gewählt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
 				Auge fotografiert haben).</td>
 		</tr>
 	</table>
@@ -47,15 +47,14 @@ if (isAugendiagnose ()) {
 
 	<table width="100%" border="1">
 		<tr>
-			<td width="30%" valign="top">Letztes Foto ist rechtes Auge</td>
-			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist.
-				Standardmäßig ist hier das linke Auge gewählt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
-				Auge fotografiert haben).</td>
-		</tr>
-		<tr>
 			<td width="30%" valign="top">Sortieren nach Nachname</td>
 			<td width="70%" valign="top">Hier kann eingestellt werden, ob die Liste der Namen nach dem Nachnamen sortiert werden
 				soll.</td>
+		</tr>
+		<tr>
+			<td width="30%" valign="top">Angeleitete Einrichtung von Iris- und Pupillenposition</td>
+			<td width="70%" valign="top">Hier können Sie wählen, ob Sie durch die Positionierung von Iris und Pupille geleitet
+				werden, bevor Sie die Iristopographien anzeigen können.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Standardfarbe für Overlays</td>
@@ -69,16 +68,16 @@ if (isAugendiagnose ()) {
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Alle Tipps zeigen</td>
-			<td width="70%" valign="top">Hier k�nnen Sie alle Tipps reaktivieren.</td>
+			<td width="70%" valign="top">Hier können Sie alle Tipps reaktivieren.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Tipps nicht mehr zeigen</td>
-			<td width="70%" valign="top">Hier k�nnen Sie alle vorhandenen Tipps deaktivieren (was n�tzlich ist, wenn Sie die App
+			<td width="70%" valign="top">Hier können Sie alle vorhandenen Tipps deaktivieren (was nützlich ist, wenn Sie die App
 				schon kennen, aber neu installieren).</td>
 		</tr>
 	</table>
 
-	<h3>Speichereinstellungen</h3>
+	<h3>Speicher- und Leistungseinstellungen</h3>
 
 	<table width="100%" border="1">
 		<tr>
@@ -139,6 +138,17 @@ if (isAugendiagnose ()) {
 	<h3>Kameraeinstellungen</h3>
 
 	<table width="100%" border="1">
+<?PHP
+if (isMiniris ()) {
+	?>
+		<tr>
+			<td width="30%" valign="top">Mit linkem Auge starten</td>
+			<td width="70%" valign="top">Hier kann eingestellt werden, welches Auge zuerst fotografiert werden soll.
+				Standardmäßig ist hier das rechte Auge gewählt.</td>
+		</tr>
+<?PHP
+}
+?>
 		<tr>
 			<td width="30%" valign="top">Kamera-Kompatibilität</td>
 			<td width="70%" valign="top">Falls Ihr Smartphone Android 5 oder höher nutzt, dann kann hier eingestellt werden, ob
@@ -157,12 +167,18 @@ if (isAugendiagnose ()) {
 		</tr>
 	</table>
 
+	<h3>Overlay-Buttons</h3>
+
+	<p>Diese Seite ermöglicht es Ihnen festzulegen, welche Iristopographie-Overlays den jeweiligen Buttons zugeordnet sind.
+		Die gleiche Konfiguration können Sie auch beim Betrachten der Fotos machen, indem Sie lange auf einen der Buttons
+		drücken.</p>
+
 	<h3>Premium-Pakete / Hilfe</h3>
 
 	<p>Diese Seite ermöglicht den Erwerb eines Premium-Paketes, über das die unbegrenzte Nutzung aller Funktionen der App
 		freigeschaltet wird..</p>
 
-	<p>Darüberhinaus gibt es folgende Optionen:</p>
+	<p>Darüber hinaus gibt es folgende Optionen:</p>
 
 	<table width="100%" border="1">
 <?PHP
