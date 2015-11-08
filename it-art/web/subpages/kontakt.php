@@ -1,9 +1,9 @@
-<?php header('Content-Type: text/html; charset=iso-8859-1'); ?>
+<?php header('Content-Type: text/html; charset=utf-8'); ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <title>Kontakt</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <script type="text/javascript" src="../javascript/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="../javascript/subpage.js"></script>
@@ -31,7 +31,7 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 		$email = test_input ( $_POST ["email"] );
 		// check if e-mail address is well-formed
 		if (! filter_var ( $email, FILTER_VALIDATE_EMAIL )) {
-			$emailErr = "Bitte geben Sie eine gültige Email-Adresse an!";
+			$emailErr = "Bitte geben Sie eine gÃ¼ltige Email-Adresse an!";
 		}
 	}
 
@@ -58,7 +58,7 @@ function test_input($data) {
 
 	<p>
 		Bitte kontaktieren Sie mich per E-Mail:<br>
-		<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
+		<a href="mailto:JÃ¶rg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
 	</p>
 	<form id="kontaktformular" name="kontaktformular" method="post"
 		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -98,15 +98,15 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 
 	// Confirmation message
 	if ($mailSent) {
-		echo "<h3>Danke für Ihre Nachricht!</h3>";
-		echo "<p>Sie erhalten eine automatische Bestätigungsmail an die von Ihnen angegebene E-Mail-Adresse. Ich werde dann bei nächster Gelegenheit auf Ihre Nachricht antworten.</p>";
+		echo "<h3>Danke fÃ¼r Ihre Nachricht!</h3>";
+		echo "<p>Sie erhalten eine automatische BestÃ¤tigungsmail an die von Ihnen angegebene E-Mail-Adresse. Ich werde dann bei nÃ¤chster Gelegenheit auf Ihre Nachricht antworten.</p>";
 
 		// Confirmation mail
 		$mailTo = '"' . $name . '" <' . $email . '>';
 		$mailFrom = '"IT-art" <webdevelopment@it-art.de>';
 		$mailSubject = 'Ihre Nachricht an it-art.de';
-		$mailText = "Vielen Dank für Ihre Nachricht an IT-art.\n";
-		$mailText .= "Ich werde bei nächster Gelegenheit auf Ihre Nachricht antworten. \n\n";
+		$mailText = "Vielen Dank fÃ¼r Ihre Nachricht an IT-art.\n";
+		$mailText .= "Ich werde bei nÃ¤chster Gelegenheit auf Ihre Nachricht antworten. \n\n";
 		$mailText .= "---------------------------------------------------------------- \n\n";
 		$mailText .= "Ihre Nachricht:\n\n";
 		$mailText .= $content;
