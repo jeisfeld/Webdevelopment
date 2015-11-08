@@ -1,5 +1,5 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=iso-8859-1' );
+header ( 'Content-Type: text/html; charset=utf-8' );
 
 // Define some basic strings based on host
 switch ($_SERVER ['HTTP_HOST']) {
@@ -20,7 +20,7 @@ switch ($_SERVER ['HTTP_HOST']) {
 				$appname = "Eye Diagnosis";
 				break;
 			case "es" :
-				$appname = "Diagnóstico ocular";
+				$appname = "DiagnÃ³stico ocular";
 				break;
 		}
 		break;

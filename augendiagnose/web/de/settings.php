@@ -12,18 +12,18 @@ include "pageheader.php";
 <body>
 	<h2>Einstellungen</h2>
 
-	Die Applikation ermöglicht folgende Einstellungen:
+	Die Applikation ermÃ¶glicht folgende Einstellungen:
 <?PHP
 if (isAugendiagnose ()) {
 	?>
-	<h3>Eingangsverzeichnis für neue Augenfotos</h3>
+	<h3>Eingangsverzeichnis fÃ¼r neue Augenfotos</h3>
 
 	<p>Dies ist das Verzeichnis, aus dem die App neue Augenfotos importiert. Als Standard ist hier entweder das
 		Zielverzeichnis der Eye-Fi-App gesetzt oder das Standardverzeichnis der Kamera-App. Es kann aber ein beliebiges
-		anderes Verzeichnis gewählt werden (z.B. das Kamera-Verzeichnis).</p>
+		anderes Verzeichnis gewÃ¤hlt werden (z.B. das Kamera-Verzeichnis).</p>
 
 	<p>Hintergrund zur Eye-Fi-App: Eine Smartphone-Kamera ist typischerweise nicht ausreichend, um hochwertige
-		Augenfotografien zu machen. Daher wird eine externe Kamera benötigt. Der einfachste Weg, die Fotos von einer externen
+		Augenfotografien zu machen. Daher wird eine externe Kamera benÃ¶tigt. Der einfachste Weg, die Fotos von einer externen
 		Kamera auf das Smartphone zu bekommen, ist die Nutzung einer Eye-Fi SD-Karte, die die Fotos per WiFi auf das
 		Smartphone schickt.</p>
 <?PHP
@@ -36,7 +36,7 @@ if (isAugendiagnose ()) {
 		<tr>
 			<td width="30%" valign="top">Letztes Foto ist rechtes Auge</td>
 			<td width="70%" valign="top">Hier kann eingestellt werden, ob das letzte Foto das rechte oder das linke Auge ist.
-				Standardmäßig ist hier das linke Auge gewählt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
+				StandardmÃ¤ÃŸig ist hier das linke Auge gewÃ¤hlt (unter der Annahme, dass Sie zuerst das rechte, und dann das linke
 				Auge fotografiert haben).</td>
 		</tr>
 		<tr>
@@ -45,19 +45,19 @@ if (isAugendiagnose ()) {
 				soll.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Standardfarbe für Overlays</td>
-			<td width="70%" valign="top">Hier können Sie die Farbe festlegen, in der Iristopographie-Overlays normalerweise
+			<td width="30%" valign="top">Standardfarbe fÃ¼r Overlays</td>
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie die Farbe festlegen, in der Iristopographie-Overlays normalerweise
 				angezeigt werden. (Voreinstellung: rot)</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Sprache</td>
-			<td width="70%" valign="top">Hier können Sie die Anzeigesprache der Applikation ändern. Eine Änderung des Wertes
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie die Anzeigesprache der Applikation Ã¤ndern. Eine Ã„nderung des Wertes
 				erzwingt einen Neustart der App.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Tipps</td>
-			<td width="70%" valign="top">Hier können Sie alle Tipps reaktivieren, oder Sie können alle vorhandenen Tipps
-				deaktivieren (was nützlich ist, wenn Sie die App schon kennen, aber neu installieren).</td>
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie alle Tipps reaktivieren, oder Sie kÃ¶nnen alle vorhandenen Tipps
+				deaktivieren (was nÃ¼tzlich ist, wenn Sie die App schon kennen, aber neu installieren).</td>
 		</tr>
 	</table>
 
@@ -67,53 +67,53 @@ if (isAugendiagnose ()) {
 		<tr>
 			<td width="30%" valign="top">Verzeichnis der Augenfotos</td>
 			<td width="70%" valign="top"><p>Dies ist das Verzeichnis, in dem die App die Augenfotos verwaltet. Dieses muss
-					normalerweise nicht geändert werden. Von hier können Sie die Fotos auf andere Geräte kopieren.</p>
+					normalerweise nicht geÃ¤ndert werden. Von hier kÃ¶nnen Sie die Fotos auf andere GerÃ¤te kopieren.</p>
 
 				<p>Das vorgegebene Verzeichnis ist &bdquo;Augenfotos&ldquo;.</p>
 
-				<p>Sie können hier ein Verzeichnis wahlweise im Gerätespeicher oder auf der SD-Karte wählen. Unter Android 4.4
-					(Kitkat) gibt es Einschränkungen beim schreiben auf SD-Karten, daher dauern manche Operationen etwas länger. In
-					Android 5 müssen Sie bei der Auswahl eines Verzeichnisses der SD-Karte zunächst der App den Zugriff auf die
-					SD-Karte gewähren (mittels des Storage Access Frameworks von Android).</p></td>
+				<p>Sie kÃ¶nnen hier ein Verzeichnis wahlweise im GerÃ¤tespeicher oder auf der SD-Karte wÃ¤hlen. Unter Android 4.4
+					(Kitkat) gibt es EinschrÃ¤nkungen beim schreiben auf SD-Karten, daher dauern manche Operationen etwas lÃ¤nger. In
+					Android 5 mÃ¼ssen Sie bei der Auswahl eines Verzeichnisses der SD-Karte zunÃ¤chst der App den Zugriff auf die
+					SD-Karte gewÃ¤hren (mittels des Storage Access Frameworks von Android).</p></td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Maximale Bitmap-Größe</td>
-			<td width="70%" valign="top">Dies ist die Größe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist nötig,
-				um Speicherplatz zu sparen. Als Standard ist hier 2048 eingestellt. Auf speicherarmen Geräten muss evtl. ein
-				kleinerer Wert (z.B. 1024) konfiguriert werden. Zu große Werte können zu Abstürzen führen.</td>
+			<td width="30%" valign="top">Maximale Bitmap-GrÃ¶ÃŸe</td>
+			<td width="70%" valign="top">Dies ist die GrÃ¶ÃŸe, auf die Fotos zur Anzeige herunterskaliert werden. Dies ist nÃ¶tig,
+				um Speicherplatz zu sparen. Als Standard ist hier 2048 eingestellt. Auf speicherarmen GerÃ¤ten muss evtl. ein
+				kleinerer Wert (z.B. 1024) konfiguriert werden. Zu groÃŸe Werte kÃ¶nnen zu AbstÃ¼rzen fÃ¼hren.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Anzeige in voller Auflösung</td>
-			<td width="70%" valign="top">Hier können Sie festlegen, unter welchen Umständen das Foto in voller Auflösung
+			<td width="30%" valign="top">Anzeige in voller AuflÃ¶sung</td>
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie festlegen, unter welchen UmstÃ¤nden das Foto in voller AuflÃ¶sung
 				angezeigt wird. Dies erlaubt es, mehr Details auf dem Foto zu sehen, aber es verbraucht Speicher und Rechenzeit.
 
 				<ul>
-					<li><b>Immer automatisch laden:</b> Das Foto wird immer in voller Auflösung im Speicher gehalten. Dies führt dazu,
-						dass man auf High-End-Geräten immer alle Details sehen kann. Es könnte aber zu Abstürzen führen, falls nicht genug
-						Speicher zur Verfügung steht.</li>
+					<li><b>Immer automatisch laden:</b> Das Foto wird immer in voller AuflÃ¶sung im Speicher gehalten. Dies fÃ¼hrt dazu,
+						dass man auf High-End-GerÃ¤ten immer alle Details sehen kann. Es kÃ¶nnte aber zu AbstÃ¼rzen fÃ¼hren, falls nicht genug
+						Speicher zur VerfÃ¼gung steht.</li>
 
 					<li><b>Automatisch laden, wenn nur ein Foto angezeigt wird:</b> Das Foto wird nur bei Anzeige eines einzigen Fotos
-						in voller Auflösung angezeigt. Dies benötigt nur halb so viel Speicher.</li>
+						in voller AuflÃ¶sung angezeigt. Dies benÃ¶tigt nur halb so viel Speicher.</li>
 
-					<li><b>Nur auf Anfrage:</b> Die App lädt die Fotos nicht in voller Auflösung. Dies verbraucht am wenigsten Speicher
-						und Rechenzeit, aber Details in den Fotos könnten nicht sichtbar sein. Mit Hilfe des &bdquo;Lupen&ldquo;-Buttons <img
-						src="../drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller Bildauflösung angezeigt werden.</li>
+					<li><b>Nur auf Anfrage:</b> Die App lÃ¤dt die Fotos nicht in voller AuflÃ¶sung. Dies verbraucht am wenigsten Speicher
+						und Rechenzeit, aber Details in den Fotos kÃ¶nnten nicht sichtbar sein. Mit Hilfe des &bdquo;Lupen&ldquo;-Buttons <img
+						src="../drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller BildauflÃ¶sung angezeigt werden.</li>
 				</ul>
 			</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Speichern von Daten in JPG-Dateien</td>
-			<td width="70%" valign="top">Hier können Sie einschränken, inwieweit die App Daten in den JPG-Dateien speichert.
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie einschrÃ¤nken, inwieweit die App Daten in den JPG-Dateien speichert.
 
 				<ul>
-					<li><b>Speichern in EXIF (empfohlen):</b> Die Applikation speichert verfügbare Informationen in der JPG-Datei, auch
+					<li><b>Speichern in EXIF (empfohlen):</b> Die Applikation speichert verfÃ¼gbare Informationen in der JPG-Datei, auch
 						in Standardfeldern, die z.B. in Windows sichtbar sind.</li>
 
 					<li><b>Speichern in Extra-Feldern:</b> Die Applikation speichert Informationen in der JPG-Datei, aber nur in neuen
-						Feldern. Standardfelder bleiben unverändert; der Datenaustausch mit Windows ist nicht möglich.</li>
+						Feldern. Standardfelder bleiben unverÃ¤ndert; der Datenaustausch mit Windows ist nicht mÃ¶glich.</li>
 
 					<li><b>Nicht in Fotos speichern:</b> Die Applikation speichert keine Informationen in Fotos. (Dann stehen nur Teile
-						der Funktionalität der App zur Verfügng.)</li>
+						der FunktionalitÃ¤t der App zur VerfÃ¼gng.)</li>
 				</ul>
 			</td>
 		</tr>
@@ -123,50 +123,50 @@ if (isAugendiagnose ()) {
 
 	<table width="100%" border="1">
 		<tr>
-			<td width="30%" valign="top">Kamera-Kompatibilität</td>
-			<td width="70%" valign="top">Falls Ihr Smartphone Android 5 oder höher nutzt, dann kann hier eingestellt werden, ob
+			<td width="30%" valign="top">Kamera-KompatibilitÃ¤t</td>
+			<td width="70%" valign="top">Falls Ihr Smartphone Android 5 oder hÃ¶her nutzt, dann kann hier eingestellt werden, ob
 				die neuen Kamera-Funktionen von Android 5 genutzt werden sollen. Die Wahl &bdquo;Android 4&ldquo; ist sinnvoll im
 				Fall von Problemen mit den Kamerafunktionen von Android 5.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Blitzlicht erlauben</td>
-			<td width="70%" valign="top">Hier können Sie die Verwendung des Blitzlichtes erlauben. In der Voreinstellung ist dies
-				nicht erlaubt, da das Blitzlicht direkt vor dem Auge gefährlich ist.</td>
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie die Verwendung des Blitzlichtes erlauben. In der Voreinstellung ist dies
+				nicht erlaubt, da das Blitzlicht direkt vor dem Auge gefÃ¤hrlich ist.</td>
 		</tr>
 		<tr>
 			<td width="30%" valign="top">Kamera-Bildschirmposition</td>
-			<td width="70%" valign="top">Wenn das Miniris-Band Knöpfe auf dem Kamera-Bildschirm verbirgt, dann können Sie diese
+			<td width="70%" valign="top">Wenn das Miniris-Band KnÃ¶pfe auf dem Kamera-Bildschirm verbirgt, dann kÃ¶nnen Sie diese
 				Einstellung verwenden, um den Kamera-Bildschirm nach rechts oder links zu verschieben.</td>
 		</tr>
 	</table>
 
 	<h3>Premium-Pakete / Hilfe</h3>
 
-	<p>Diese Seite ermöglicht den Erwerb eines Premium-Paketes, über das die unbegrenzte Nutzung aller Funktionen der App
+	<p>Diese Seite ermÃ¶glicht den Erwerb eines Premium-Paketes, Ã¼ber das die unbegrenzte Nutzung aller Funktionen der App
 		freigeschaltet wird..</p>
 
-	<p>Darüberhinaus gibt es folgende Optionen:</p>
+	<p>DarÃ¼berhinaus gibt es folgende Optionen:</p>
 
 	<table width="100%" border="1">
 <?PHP
 if (isAugendiagnose ()) {
 	?>
 		<tr>
-			<td width="30%" valign="top">Werbung entfernen (nur für Nutzer älterer Versionen)</td>
-			<td width="70%" valign="top">Hier können Sie die Werbung entfernen (vorerst nur in den USA). Diese Möglichkeit kann
-				per Spende oder Nutzerschlüssel freigeschaltet werden.</td>
+			<td width="30%" valign="top">Werbung entfernen (nur fÃ¼r Nutzer Ã¤lterer Versionen)</td>
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie die Werbung entfernen (vorerst nur in den USA). Diese MÃ¶glichkeit kann
+				per Spende oder NutzerschlÃ¼ssel freigeschaltet werden.</td>
 		</tr>
 <?PHP
 }
 ?>
 		<tr>
 			<td width="30%" valign="top">Kontakt mit dem Entwickler</td>
-			<td width="70%" valign="top">Hier können Sie eine E-Mail an den Entwickler schreiben, falls Sie Wünsche oder Probleme
+			<td width="70%" valign="top">Hier kÃ¶nnen Sie eine E-Mail an den Entwickler schreiben, falls Sie WÃ¼nsche oder Probleme
 				haben.</td>
 		</tr>
 		<tr>
-			<td width="30%" valign="top">Nutzerschlüssel</td>
-			<td width="70%" valign="top">Ein Nutzerkennwort, das die Freigabe zusätzlicher Funktionalitäten ermöglicht.</td>
+			<td width="30%" valign="top">NutzerschlÃ¼ssel</td>
+			<td width="70%" valign="top">Ein Nutzerkennwort, das die Freigabe zusÃ¤tzlicher FunktionalitÃ¤ten ermÃ¶glicht.</td>
 		</tr>
 	</table>
 

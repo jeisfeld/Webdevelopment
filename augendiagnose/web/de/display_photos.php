@@ -12,48 +12,48 @@ include "pageheader.php";
 <body>
 	<h2>Betrachten der Fotos</h2>
 
-	<p>Hier können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen. Daraufhin sehen
+	<p>Hier kÃ¶nnen Sie aus einer Liste den Namen der Person auswÃ¤hlen, dessen Fotos Sie betrachten wollen. Daraufhin sehen
 		Sie eine Liste aller Augenaufnahmen dieser Person, sortiert nach Datum.</p>
 
-	<p>Anschließend haben Sie folgende Möglichkeiten:</p>
+	<p>AnschlieÃŸend haben Sie folgende MÃ¶glichkeiten:</p>
 
 	<ul>
 		<li>Detailansicht eines Fotos (durch Klick auf dieses Foto).</li>
 
 		<li>Detailansicht beider Fotos von einem Datum (durch Klick auf das Datum)</li>
 
-		<li>Detailansicht von zwei Fotos unterschiedlichen Datums (durch langen Klick auf ein Foto und anschließenden Klick
+		<li>Detailansicht von zwei Fotos unterschiedlichen Datums (durch langen Klick auf ein Foto und anschlieÃŸenden Klick
 			auf ein anderes Foto)</li>
 
 		<li>Detailansicht von zwei Fotos unterschiedlicher Personen - machen Sie erst einen langen Klick auf ein Foto, und
-			wählen Sie dann ein Foto einer zweiten Person aus.</li>
+			wÃ¤hlen Sie dann ein Foto einer zweiten Person aus.</li>
 	</ul>
 
-	<p>Mit Hilfe dieser Funktionalität können Sie auch ein Augenfoto mit einer Iristopographie vergleichen. Hierzu müssen
+	<p>Mit Hilfe dieser FunktionalitÃ¤t kÃ¶nnen Sie auch ein Augenfoto mit einer Iristopographie vergleichen. Hierzu mÃ¼ssen
 		Sie nur die Grafiken von Iristopographien genauso organisieren wie Augenfotos. Die App liefert keine Iristopographien
-		mit (außer als Overlays).</p>
+		mit (auÃŸer als Overlays).</p>
 
-	<h3>Weitere Optionen in der Übersicht</h3>
+	<h3>Weitere Optionen in der Ãœbersicht</h3>
 
 	<ul>
-		<li>In der Liste der Namen können Sie lange auf einen Namen klicken, und dann den Namen ändern oder löschen.</li>
+		<li>In der Liste der Namen kÃ¶nnen Sie lange auf einen Namen klicken, und dann den Namen Ã¤ndern oder lÃ¶schen.</li>
 
-		<li>In der Liste der Fotos zu einem Namen können Sie lange auf ein Datum klicken, und dann das Datum ändern oder die
-			Fotos dieses Datums löschen, oder die Fotos dieses Datums 
+		<li>In der Liste der Fotos zu einem Namen kÃ¶nnen Sie lange auf ein Datum klicken, und dann das Datum Ã¤ndern oder die
+			Fotos dieses Datums lÃ¶schen, oder die Fotos dieses Datums 
 			<?PHP if(isMiniris()) { ?>
 			einem anderen Namen zuordnen.
 			<?PHP } else { ?>
-			ins Eingangsverzeichnis zurückschieben (z.B. um sie einem anderen Namen zuzuordnen).
+			ins Eingangsverzeichnis zurÃ¼ckschieben (z.B. um sie einem anderen Namen zuzuordnen).
 			<?PHP } ?>
 			</li>
 	</ul>
 
 	<h3>Weitere Optionen in der Detailansicht</h3>
 
-	<p>In der Detailansicht (von einem oder zwei Fotos) bestehen noch folgende Möglichkeiten:</p>
+	<p>In der Detailansicht (von einem oder zwei Fotos) bestehen noch folgende MÃ¶glichkeiten:</p>
 
 	<ul>
-		<li>Verändern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="../drawable/ic_seek_brightness.png" /><img
+		<li>VerÃ¤ndern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
 		<li>Anzeige von Iristopographien als Overlay (Kreis-Button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
@@ -61,26 +61,26 @@ include "pageheader.php";
 			src="../drawable/ic_lock_open.png" />)
 		</li>
 
-		<li>Anpassen der Pupillengröße für die Overlays (Button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />).
-			Hier können Sie die Pupille entweder zentriert lassen (<img src="../drawable/ic_btn_pupil_1.png" class="frameless" />)
+		<li>Anpassen der PupillengrÃ¶ÃŸe fÃ¼r die Overlays (Button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />).
+			Hier kÃ¶nnen Sie die Pupille entweder zentriert lassen (<img src="../drawable/ic_btn_pupil_1.png" class="frameless" />)
 			oder frei bewegen (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
 		</li>
 
-		<li>Speichern der Einstellung von Helligkeit und Kontrast (über den &bdquo;Speichern&ldquo;-Button <img
-			src="../drawable/ic_action_save.png" /> im Action-Menü)
+		<li>Speichern der Einstellung von Helligkeit und Kontrast (Ã¼ber den &bdquo;Speichern&ldquo;-Button <img
+			src="../drawable/ic_action_save.png" /> im Action-MenÃ¼)
 		</li>
 
-		<li>Speichern von Position und Zoom (über den &bdquo;Speichern&ldquo;-Button <img src="../drawable/ic_action_save.png" />
-			im Action-Menü)
+		<li>Speichern von Position und Zoom (Ã¼ber den &bdquo;Speichern&ldquo;-Button <img src="../drawable/ic_action_save.png" />
+			im Action-MenÃ¼)
 		</li>
 
-		<li>Ändern der Beschreibung des Fotos (über den &bdquo;Dokument&ldquo;-Button <img src="../drawable/ic_comment.png" />
-			im Action-Menü)
+		<li>Ã„ndern der Beschreibung des Fotos (Ã¼ber den &bdquo;Dokument&ldquo;-Button <img src="../drawable/ic_comment.png" />
+			im Action-MenÃ¼)
 		</li>
 	</ul>
 
 	<p>
-		Die zugehörigen Tools können über den Button &bdquo;Hilfsmittel anzeigen/verbergen&ldquo; (<img
+		Die zugehÃ¶rigen Tools kÃ¶nnen Ã¼ber den Button &bdquo;Hilfsmittel anzeigen/verbergen&ldquo; (<img
 			src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
 			src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />) aktiviert oder deaktiviert
 		werden.

@@ -23,7 +23,7 @@ else {
 	<?=$heading?>
 
 	<p>
-		<a href="../?lang=de&page=overview" target="_parent">Übersicht</a>
+		<a href="../?lang=de&page=overview" target="_parent">Ãœbersicht</a>
 	</p>
 
 	<p>

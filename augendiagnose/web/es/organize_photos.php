@@ -14,26 +14,26 @@ if (isAugendiagnose ()) {
 <body>
 	<h2>Organizar nuevas fotos</h2>
 
-	<p>AquÌ usted puede organizar sus fotos de los ojos.</p>
+	<p>Aqu√≠ usted puede organizar sus fotos de los ojos.</p>
 
-	<p>Se muestran los dos ˙ltimos im·genes de la carpeta de entrada.</p>
+	<p>Se muestran los dos √∫ltimos im√°genes de la carpeta de entrada.</p>
 
-	<p>Con el botÛn &laquo;Cambiar&raquo; usted puede intercambiar las dos fotos.</p>
+	<p>Con el bot√≥n &laquo;Cambiar&raquo; usted puede intercambiar las dos fotos.</p>
 
-	<p>Con el botÛn &laquo;Otras Fotos&raquo; puede seleccionar dos diferentes fotos de la carpeta de entrada, haciendo
-		clic en dos de las fotos mostradas. AquÌ, usted tambiÈn puede eliminar las fotos de la carpeta de entrada, mediante el
-		uso de la men˙ contextual (pulsaciÛn larga en una foto).</p>
+	<p>Con el bot√≥n &laquo;Otras Fotos&raquo; puede seleccionar dos diferentes fotos de la carpeta de entrada, haciendo
+		clic en dos de las fotos mostradas. Aqu√≠, usted tambi√©n puede eliminar las fotos de la carpeta de entrada, mediante el
+		uso de la men√∫ contextual (pulsaci√≥n larga en una foto).</p>
 
 	<p>En &laquo;Seleccionar Nombre&raquo; se puede seleccionar el nombre de la persona de la cual se toman las fotos de
-		los ojos. AquÌ si puede seleccionar un nombre existente o introducir un nuevo nombre.</p>
+		los ojos. Aqu√≠ si puede seleccionar un nombre existente o introducir un nuevo nombre.</p>
 
-	<p>En &laquo;Seleccionar Fecha&raquo; puede seleccionar la fecha en que las fotos ser·n listadas. Normalmente se trata
+	<p>En &laquo;Seleccionar Fecha&raquo; puede seleccionar la fecha en que las fotos ser√°n listadas. Normalmente se trata
 		de la fecha de captura de las fotos, que es preseleccionada. Sin embargo, usted puede seleccionar una fecha diferente.
-		Esto es necesario particularmente, si desea mantener m·s de un par de ojos de una persona de un fecha - la aplicaciÛn
-		permite sÛlo un par de fotos por dÌa y persona</p>
+		Esto es necesario particularmente, si desea mantener m√°s de un par de ojos de una persona de un fecha - la aplicaci√≥n
+		permite s√≥lo un par de fotos por d√≠a y persona</p>
 
-	<p>Con el botÛn &laquo;Aceptar&raquo; puede mover el par de fotos de ojos seleccionado a la carpeta de fotos ojo. Las
-		fotos est·n asociadas con el nombre y fecha determinada y luego pueden ser utilizadas por la aplicaciÛn.</p>
+	<p>Con el bot√≥n &laquo;Aceptar&raquo; puede mover el par de fotos de ojos seleccionado a la carpeta de fotos ojo. Las
+		fotos est√°n asociadas con el nombre y fecha determinada y luego pueden ser utilizadas por la aplicaci√≥n.</p>
 </body>
 </html>
 <?PHP

@@ -23,7 +23,7 @@ else {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title><?=$appname?> (Aplicación para Android)</title>
+<title><?=$appname?> (AplicaciÃ³n para Android)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
@@ -31,7 +31,7 @@ else {
 	<p>
 		<a href="../?lang=en&page=<?=$page?>" target="_parent">English</a>
 		<a href="../?lang=de&page=<?=$page?>" target="_parent">Deutsch</a>
-		Español
+		EspaÃ±ol
 	</p>
 
 <?php
@@ -46,7 +46,7 @@ if ($isMobile) {
 }
 else {
 	?>
-	<h1><?=$appname?> - Aplicación para Android</h1>
+	<h1><?=$appname?> - AplicaciÃ³n para Android</h1>
 <?php
 }
 ?>

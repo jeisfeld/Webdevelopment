@@ -12,20 +12,20 @@ include "pageheader.php";
 <body>
 	<h2>Descargas</h2>
 
-	<h3>La aplicaci髇 para Android</h3>
+	<h3>La aplicaci贸n para Android</h3>
 
 	<p>
 		<a href="https://play.google.com/store/apps/details?id=de.eisfeldj.augendiagnose" target="_blank">Google Play</a>
 	</p>
 
-	<h3>La aplicaci髇 para Windows</h3>
+	<h3>La aplicaci贸n para Windows</h3>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x86-0.1.4.exe" target="_blank">Descargar versi髇 32bit</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x86-0.1.4.exe" target="_blank">Descargar versi贸n 32bit</a>
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x64-0.1.4.exe" target="_blank">Descargar versi髇 64bit</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x64-0.1.4.exe" target="_blank">Descargar versi贸n 64bit</a>
 	</p>
 
 	<p>

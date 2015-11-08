@@ -31,7 +31,7 @@ include "pageheader.php";
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX.jar" target="_blank">Ausführbare JAR-Datei herunterladen</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX.jar" target="_blank">AusfÃ¼hrbare JAR-Datei herunterladen</a>
 	</p>
 </body>
 </html>

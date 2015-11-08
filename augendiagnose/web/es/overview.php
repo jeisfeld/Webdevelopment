@@ -4,31 +4,31 @@ include "pageheader.php";
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title><?=$appname?> - Información general</title>
+<title><?=$appname?> - InformaciÃ³n general</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body>
-	<h2><?=$appname?> - Información general</h2>
+	<h2><?=$appname?> - InformaciÃ³n general</h2>
 
 <?PHP
 if (isAugendiagnose ()) {
 	?>
 	
-	Esta aplicación tiene el objetivo de ayudar a la visualización de fotografías de los ojos en un dispositivo Android,
-	con el fin de hacer el diagnóstico médico.
+	Esta aplicaciÃ³n tiene el objetivo de ayudar a la visualizaciÃ³n de fotografÃ­as de los ojos en un dispositivo Android,
+	con el fin de hacer el diagnÃ³stico mÃ©dico.
 
-	<h3>Características principales</h3>
+	<h3>CaracterÃ­sticas principales</h3>
 
 	<ul>
-		<li>Organización de los fotos oculares por nombre, fecha y lado (derecho/izquierdo)</li>
-		<li>Visualización de dos fotos oculares en paralelo (con la posibilidad de cambio de tamaño individual), con el fin de
-			compararlos (por ejemplo, derecha-izquierda comparación, la comparación antes-después, comparación de personas
-			diferentes, o comparación con una topografía del iris).</li>
-		<li>Cambio de brillo y contraste de la foto durante la visualización, y superposición con una topografía del iris.</li>
-		<li>También puede guardar la información en las fotos, por ejemplo el brillo y comentarios. Para ser capaz de
-			almacenar información y usar la plena funcionalidad de la aplicación, las fotos tienen que tener formato JPG.</li>
+		<li>OrganizaciÃ³n de los fotos oculares por nombre, fecha y lado (derecho/izquierdo)</li>
+		<li>VisualizaciÃ³n de dos fotos oculares en paralelo (con la posibilidad de cambio de tamaÃ±o individual), con el fin de
+			compararlos (por ejemplo, derecha-izquierda comparaciÃ³n, la comparaciÃ³n antes-despuÃ©s, comparaciÃ³n de personas
+			diferentes, o comparaciÃ³n con una topografÃ­a del iris).</li>
+		<li>Cambio de brillo y contraste de la foto durante la visualizaciÃ³n, y superposiciÃ³n con una topografÃ­a del iris.</li>
+		<li>TambiÃ©n puede guardar la informaciÃ³n en las fotos, por ejemplo el brillo y comentarios. Para ser capaz de
+			almacenar informaciÃ³n y usar la plena funcionalidad de la aplicaciÃ³n, las fotos tienen que tener formato JPG.</li>
 	</ul>
 
 	<h3>Principales actividades</h3>
@@ -37,116 +37,116 @@ if (isAugendiagnose ()) {
 
 	<p>En este paso, puede organizar las fotos de ojos.</p>
 
-	<p>La aplicación espera nuevas fotos de los ojos en una carpeta de entrada. Esta está preconfigurada como la carpeta de
-		destino de la aplicación Eye-Fi o como la carpeta predeterminada de la cámara, pero se puede cambiarlo por medio de la
-		configuración.</p>
+	<p>La aplicaciÃ³n espera nuevas fotos de los ojos en una carpeta de entrada. Esta estÃ¡ preconfigurada como la carpeta de
+		destino de la aplicaciÃ³n Eye-Fi o como la carpeta predeterminada de la cÃ¡mara, pero se puede cambiarlo por medio de la
+		configuraciÃ³n.</p>
 
 	<p>En el actividad &laquo;Organizar nuevas fotos&raquo;, puede asignar nuevas fotos de los ojos de la carpeta de
-		entrada a una persona y una fecha y prepararlos en esta manera para la aplicación. De este modo, las fotos serán
-		renombradas y trasladadas a la carpeta de la aplicación.</p>
+		entrada a una persona y una fecha y prepararlos en esta manera para la aplicaciÃ³n. De este modo, las fotos serÃ¡n
+		renombradas y trasladadas a la carpeta de la aplicaciÃ³n.</p>
 
-	<p>Como alternativa, puede seleccionar dos fotos en un explorador de archivos o en una aplicación de fotos, y enviar
-		estas fotos a la aplicación Diagnóstico del ojo. A continuación, puede organizar estas fotos en la aplicación. En este
-		caso, las fotos no se eliminarán de su ubicación anterior.</p>
+	<p>Como alternativa, puede seleccionar dos fotos en un explorador de archivos o en una aplicaciÃ³n de fotos, y enviar
+		estas fotos a la aplicaciÃ³n DiagnÃ³stico del ojo. A continuaciÃ³n, puede organizar estas fotos en la aplicaciÃ³n. En este
+		caso, las fotos no se eliminarÃ¡n de su ubicaciÃ³n anterior.</p>
 
-	<p>Como alternativa adicional, es posible tomar imágenes directamente desde la aplicación con la cámara del
-		dispositivo. Esto normalmente no le dé fotos en una calidad adecuada, pero sirve como una alternativa a una cámara
+	<p>Como alternativa adicional, es posible tomar imÃ¡genes directamente desde la aplicaciÃ³n con la cÃ¡mara del
+		dispositivo. Esto normalmente no le dÃ© fotos en una calidad adecuada, pero sirve como una alternativa a una cÃ¡mara
 		profesional.</p>
 
 	<h4>Paso 2:. Visualizar las fotos</h4>
 
-	<p>Este es el objetivo principal de la aplicación, pero requiere de las fotos para ser organizado por medio del paso 1.</p>
+	<p>Este es el objetivo principal de la aplicaciÃ³n, pero requiere de las fotos para ser organizado por medio del paso 1.</p>
 
 	<p>En esta actividad, usted puede</p>
 	<ul>
-		<li>Mostrar una de las fotos en detalle. Aquí también se puede cambiar el brillo y el contraste de la foto, muestra
-			iris topografías como superposición, o escribir comentario a una foto.</li>
+		<li>Mostrar una de las fotos en detalle. AquÃ­ tambiÃ©n se puede cambiar el brillo y el contraste de la foto, muestra
+			iris topografÃ­as como superposiciÃ³n, o escribir comentario a una foto.</li>
 
-		<li>Mostrar dos fotos para la comparación (y cambiar el tamaño independiente).</li>
+		<li>Mostrar dos fotos para la comparaciÃ³n (y cambiar el tamaÃ±o independiente).</li>
 	</ul>
 
 	<h3>Periodo de prueba / Paquetes premium</h3>
 
-	<p>La aplicación permite el uso gratuito sólo durante un periodo de prueba de dos semanas. Uso adicional requiere la
-		compra de un paquete dentro de la aplicación. (una sola vez).</p>
+	<p>La aplicaciÃ³n permite el uso gratuito sÃ³lo durante un periodo de prueba de dos semanas. Uso adicional requiere la
+		compra de un paquete dentro de la aplicaciÃ³n. (una sola vez).</p>
 
-	<h3>Aplicación para Windows</h3>
+	<h3>AplicaciÃ³n para Windows</h3>
 
 	<p>
-		Hay una aplicación de acompañamiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
-		esta aplicación. Para obtener más información, consulte
+		Hay una aplicaciÃ³n de acompaÃ±amiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
+		esta aplicaciÃ³n. Para obtener mÃ¡s informaciÃ³n, consulte
 		<a href="http://augendiagnose.jeisfeld.de/?lang=es&page=windowsapp" target="_top">http://augendiagnose.jeisfeld.de/?page=windowsapp</a>
 		.
 	</p>
 
 	<h3>Almacenamiento de datos</h3>
 
-	<p>La aplicación graba información (como posición del iris o comentarios) directamente en los archivos de imagen JPG.
-		Esto tiene la ventaja de que toda la información es todavía disponible si copia las imágenes de un dispositivo a otro.
-		En parte, la información como los comentarios será aún disponible en MS Windows.</p>
+	<p>La aplicaciÃ³n graba informaciÃ³n (como posiciÃ³n del iris o comentarios) directamente en los archivos de imagen JPG.
+		Esto tiene la ventaja de que toda la informaciÃ³n es todavÃ­a disponible si copia las imÃ¡genes de un dispositivo a otro.
+		En parte, la informaciÃ³n como los comentarios serÃ¡ aÃºn disponible en MS Windows.</p>
 
-	<p>Sin embargo, este tipo de almacenamiento impone un pequeño riesgo. Puede suceder que en algunos dispositivos, o para
-		los cuadros del algunas cámaras, el almacenamiento de información en el JPG falla, o posiblemente hasta destruye el
+	<p>Sin embargo, este tipo de almacenamiento impone un pequeÃ±o riesgo. Puede suceder que en algunos dispositivos, o para
+		los cuadros del algunas cÃ¡maras, el almacenamiento de informaciÃ³n en el JPG falla, o posiblemente hasta destruye el
 		archivo JPG. Por lo tanto, es recomendado que mantenga copias de seguridad de sus archivos JPG, al menos cuando se
-		utiliza el aplicación por primera vez con un nuevo dispositivo o con una nueva cámara.</p>
+		utiliza el aplicaciÃ³n por primera vez con un nuevo dispositivo o con una nueva cÃ¡mara.</p>
 		
 <?PHP
 }
 else {
 	?>
 
-	<p>Esta aplicación tiene la finalidad de apoyar la captura y visualización de fotografías del iris en un dispositivo
-		Android, con el fin de hacer un diagnóstico del iris. Está optimizado para el uso con la herramienta Miniris.</p>
+	<p>Esta aplicaciÃ³n tiene la finalidad de apoyar la captura y visualizaciÃ³n de fotografÃ­as del iris en un dispositivo
+		Android, con el fin de hacer un diagnÃ³stico del iris. EstÃ¡ optimizado para el uso con la herramienta Miniris.</p>
 
-	<p>Las características principales de la App son</p>
+	<p>Las caracterÃ­sticas principales de la App son</p>
 
 	<ul>
-		<li>Captura de fotos del iris usando la cámara del teléfono (por ejemplo, con la ayuda de la herramienta Miniris).</li>
-		<li>La organización de fotos del iris por nombre, fecha y lateral (derecha / izquierda).</li>
-		<li>La visualización de dos fotos de iris en paralelo (con el soporte del cambio de tamaño individual).</li>
-		<li>Cambio de brillo y contraste de la foto durante la visualización, superposición con una topografía del iris, y
+		<li>Captura de fotos del iris usando la cÃ¡mara del telÃ©fono (por ejemplo, con la ayuda de la herramienta Miniris).</li>
+		<li>La organizaciÃ³n de fotos del iris por nombre, fecha y lateral (derecha / izquierda).</li>
+		<li>La visualizaciÃ³n de dos fotos de iris en paralelo (con el soporte del cambio de tamaÃ±o individual).</li>
+		<li>Cambio de brillo y contraste de la foto durante la visualizaciÃ³n, superposiciÃ³n con una topografÃ­a del iris, y
 			ahorro de comentarios.</li>
 	</ul>
 
-	<p>La aplicación graba información (como posición del iris o comentarios) directamente en los archivos de imagen JPG.
-		Esto tiene la ventaja de que toda la información es todavía disponible si copia las imágenes de un dispositivo a otro.</p>
+	<p>La aplicaciÃ³n graba informaciÃ³n (como posiciÃ³n del iris o comentarios) directamente en los archivos de imagen JPG.
+		Esto tiene la ventaja de que toda la informaciÃ³n es todavÃ­a disponible si copia las imÃ¡genes de un dispositivo a otro.</p>
 
-	<h3>Uso de la cámara</h3>
+	<h3>Uso de la cÃ¡mara</h3>
 
-	<p>Al abrir la cámara, verá las siguientes áreas:</p>
+	<p>Al abrir la cÃ¡mara, verÃ¡ las siguientes Ã¡reas:</p>
 
 	<ul>
-		<li>En el lado derecho en el medio está el botón para capturar la foto. Después de capturar una foto, puede decidir si
+		<li>En el lado derecho en el medio estÃ¡ el botÃ³n para capturar la foto. DespuÃ©s de capturar una foto, puede decidir si
 			desea conservar la foto o si desea descartarlo y capturar la foto de nuevo.</li>
 		<li>En las esquinas en la parte superior se encuentra la pantalla del derecho y del izquierdo ojo. La marca roja
-			indica que ojo está previsto para la próxima foto. Pulsando sobre una de estas áreas se puede cambiar el lado.</li>
-		<li>En la pantalla de la cámara hay un gran círculo. Este círculo indica el lugar donde el iris debe aparecer en la
+			indica que ojo estÃ¡ previsto para la prÃ³xima foto. Pulsando sobre una de estas Ã¡reas se puede cambiar el lado.</li>
+		<li>En la pantalla de la cÃ¡mara hay un gran cÃ­rculo. Este cÃ­rculo indica el lugar donde el iris debe aparecer en la
 			foto.</li>
-		<li>En la parte inferior izquierda, hay un botón con el texto &laquo;MACRO&raquo; o &laquo;AUTO&raquo;. Aquí usted puede seleccionar el
-			modo de enfoque de la cámara. Para primeros planos, el modo macro es normalmente una buena opción.</li>
-		<li>Arriba, hay un botón de flash. Aquí se puede encender la luz de su dispositivo. Como un flash frente a el ojo es
-			peligroso, esto está desactivado por defecto, pero puede activarlo en la configuración.</li>
-		<li>Arriba, hay un botón con un círculo. Aquí puede seleccionar qué tan grande el iris debe estar en la foto.</li>
+		<li>En la parte inferior izquierda, hay un botÃ³n con el texto &laquo;MACRO&raquo; o &laquo;AUTO&raquo;. AquÃ­ usted puede seleccionar el
+			modo de enfoque de la cÃ¡mara. Para primeros planos, el modo macro es normalmente una buena opciÃ³n.</li>
+		<li>Arriba, hay un botÃ³n de flash. AquÃ­ se puede encender la luz de su dispositivo. Como un flash frente a el ojo es
+			peligroso, esto estÃ¡ desactivado por defecto, pero puede activarlo en la configuraciÃ³n.</li>
+		<li>Arriba, hay un botÃ³n con un cÃ­rculo. AquÃ­ puede seleccionar quÃ© tan grande el iris debe estar en la foto.</li>
 	</ul>
 
-	<p>Después de tomar fotos de ambos ojos, se abre una pagina donde usted puede revisar las dos fotos, y donde se puede
-		introducir el nombre de la persona a la que estas fotos se deben asignar. Aquí también se puede cambiar la fecha de la
-		fotos - para cada persona y cada fecha, sólo un par de fotos se pueden almacenar.</p>
+	<p>DespuÃ©s de tomar fotos de ambos ojos, se abre una pagina donde usted puede revisar las dos fotos, y donde se puede
+		introducir el nombre de la persona a la que estas fotos se deben asignar. AquÃ­ tambiÃ©n se puede cambiar la fecha de la
+		fotos - para cada persona y cada fecha, sÃ³lo un par de fotos se pueden almacenar.</p>
 
-	<p>Si detiene la aplicación después de tomar una o dos fotos de los ojos, pero antes de asignar un nombre, luego el
-		siguiente inicio de la aplicación continuará donde se detuvo - las fotos que se han tomado se mantendrá hasta que
+	<p>Si detiene la aplicaciÃ³n despuÃ©s de tomar una o dos fotos de los ojos, pero antes de asignar un nombre, luego el
+		siguiente inicio de la aplicaciÃ³n continuarÃ¡ donde se detuvo - las fotos que se han tomado se mantendrÃ¡ hasta que
 		decida eliminar o sobrescribir ellos.</p>
 
 	<h3>Periodo de prueba / Paquetes premium</h3>
 
-	<p>La aplicación permite el uso gratuito sólo durante un periodo de prueba de dos semanas. Uso adicional requiere la
-		compra de un paquete dentro de la aplicación. (una sola vez).</p>
+	<p>La aplicaciÃ³n permite el uso gratuito sÃ³lo durante un periodo de prueba de dos semanas. Uso adicional requiere la
+		compra de un paquete dentro de la aplicaciÃ³n. (una sola vez).</p>
 
-	<h3>Aplicación para Windows</h3>
+	<h3>AplicaciÃ³n para Windows</h3>
 
 	<p>
-		Hay una aplicación de acompañamiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
-		esta aplicación. Para obtener más información, consulte
+		Hay una aplicaciÃ³n de acompaÃ±amiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
+		esta aplicaciÃ³n. Para obtener mÃ¡s informaciÃ³n, consulte
 		<a href="http://miniris.jeisfeld.de/?lang=es&page=windowsapp" target="_top">http://miniris.jeisfeld.de/?page=windowsapp</a>
 		.
 	</p>

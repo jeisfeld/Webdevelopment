@@ -14,26 +14,26 @@ if (isAugendiagnose ()) {
 <body>
 	<h2>Organisation der Fotos</h2>
 
-	<p>Hier können Sie Ihre Augenfotos organisieren.</p>
+	<p>Hier kÃ¶nnen Sie Ihre Augenfotos organisieren.</p>
 
 	<p>Es werden die beiden letzten Fotos aus dem Eingangsverzeichnis angezeigt.</p>
 
-	<p>Mit dem Button &bdquo;Tauschen&ldquo; können Sie die beiden Fotos tauschen.</p>
+	<p>Mit dem Button &bdquo;Tauschen&ldquo; kÃ¶nnen Sie die beiden Fotos tauschen.</p>
 
-	<p>Mit dem Button &bdquo;Andere Fotos&ldquo; können Sie zwei andere Fotos aus dem Eingangsverzeichnis auswählen, indem
-		sie zwei der angezeigten Fotos anklicken. Hier können Sie auch Fotos im Eingangsverzeichnis löschen, indem Sie durch
-		einen langen Klick auf ein Foto das Kontextmenü öffnen.</p>
+	<p>Mit dem Button &bdquo;Andere Fotos&ldquo; kÃ¶nnen Sie zwei andere Fotos aus dem Eingangsverzeichnis auswÃ¤hlen, indem
+		sie zwei der angezeigten Fotos anklicken. Hier kÃ¶nnen Sie auch Fotos im Eingangsverzeichnis lÃ¶schen, indem Sie durch
+		einen langen Klick auf ein Foto das KontextmenÃ¼ Ã¶ffnen.</p>
 
-	<p>Unter &bdquo;Name wählen&ldquo; können Sie den Namen der Person festlegen, zu der die Augen gehören. Hier können Sie
-		entweder einen vorhandenen Namen auswählen oder einen neuen Namen eingeben.</p>
+	<p>Unter &bdquo;Name wÃ¤hlen&ldquo; kÃ¶nnen Sie den Namen der Person festlegen, zu der die Augen gehÃ¶ren. Hier kÃ¶nnen Sie
+		entweder einen vorhandenen Namen auswÃ¤hlen oder einen neuen Namen eingeben.</p>
 
-	<p>Unter &bdquo;Datum wählen&ldquo; können Sie das Datum wählen, dem die Fotos zugeordnet sind. Hier ist das
-		Aufnahmedatum vorausgewählt. Sie können aber auch ein anderes Datum wählen. Dies ist insbesondere dann nötig, wenn es
+	<p>Unter &bdquo;Datum wÃ¤hlen&ldquo; kÃ¶nnen Sie das Datum wÃ¤hlen, dem die Fotos zugeordnet sind. Hier ist das
+		Aufnahmedatum vorausgewÃ¤hlt. Sie kÃ¶nnen aber auch ein anderes Datum wÃ¤hlen. Dies ist insbesondere dann nÃ¶tig, wenn es
 		schon Fotos dieses Nutzers von diesem Datum gibt - die App erlaubt nur ein Augenpaar einer Person zu einem Datum.</p>
 
-	<p>Mit dem Button &bdquo;Anwenden&ldquo; können Sie das gewählte Paar Augenfotos in das Augenfoto-Verzeichnis
+	<p>Mit dem Button &bdquo;Anwenden&ldquo; kÃ¶nnen Sie das gewÃ¤hlte Paar Augenfotos in das Augenfoto-Verzeichnis
 		verschieben. Die Fotos werden zur angegebenen Person und dem angegebenen Datum zugeordnet und stehen dem Programm
-		anschließend zur Verfügung.</p>
+		anschlieÃŸend zur VerfÃ¼gung.</p>
 </body>
 </html>
 <?PHP

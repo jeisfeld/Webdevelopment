@@ -29,18 +29,18 @@ include "php/pageheader.php";
 switch ($language) {
 	case "de" :
 		$title = "${appname} (Android App)";
-		$description = "${appname}, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Augendiagnose, Irisdiagnose, Iridologie, Android";
+		$description = "${appname}, JÃ¶rg Eisfeld";
+		$keywords = "JÃ¶rg Eisfeld, Augendiagnose, Irisdiagnose, Iridologie, Android";
 		break;
 	case "en" :
 		$title = "${appname} (Android App)";
-		$description = "${appname}, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Eye Diagnosis, Iris Diagnosis, Iridology, Android";
+		$description = "${appname}, JÃ¶rg Eisfeld";
+		$keywords = "JÃ¶rg Eisfeld, Eye Diagnosis, Iris Diagnosis, Iridology, Android";
 		break;
 	case "es" :
-		$title = "${appname} (Aplicación para Android)";
-		$description = "${appname}, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridología, Android";
+		$title = "${appname} (AplicaciÃ³n para Android)";
+		$description = "${appname}, JÃ¶rg Eisfeld";
+		$keywords = "JÃ¶rg Eisfeld, DiagnÃ³stico ocular, IridologÃ­a, Android";
 		break;
 }
 

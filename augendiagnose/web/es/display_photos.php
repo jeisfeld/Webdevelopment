@@ -12,33 +12,33 @@ include "pageheader.php";
 <body>
 	<h2>Visualizar las fotos</h2>
 
-	<p>Aqui se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicaciÛn mostrar·
+	<p>Aqui se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicaci√≥n mostrar√°
 		todas las fotos de ojo de esta persona en una lista ordenada por fecha.</p>
 
-	<p>A continuaciÛn, usted tiene las siguientes posibilidades:</p>
+	<p>A continuaci√≥n, usted tiene las siguientes posibilidades:</p>
 
 	<ul>
 		<li>Mostrar una de las fotos en detalle (haciendo clic en una foto).</li>
 
 		<li>Mostrar los dos fotos de una fecha (haciendo clic en una fecha)</li>
 
-		<li>Mostrar dos fotos de diferentes fechas (haciendo largo clic en una foto y despuÈs clic en una segunda foto)</li>
+		<li>Mostrar dos fotos de diferentes fechas (haciendo largo clic en una foto y despu√©s clic en una segunda foto)</li>
 
-		<li>Mostrar dos fotos de diferentes personas: seleccione una foto de esta persona (mediante pulsaciÛn larga) y luego
+		<li>Mostrar dos fotos de diferentes personas: seleccione una foto de esta persona (mediante pulsaci√≥n larga) y luego
 			seleccione una foto de una persona diferente.</li>
 	</ul>
 
-	<p>Tenga en cuenta que los gr·ficos de la topografÌa del iris pueden organizarse como fotos oculares - Esto permite
-		comparar las fotos de los ojos con los gr·ficos de la topografÌa del iris. Tal gr·ficos no est·n incluidos en la
-		aplicaciÛn (excepto de superposiciÛnes).</p>
+	<p>Tenga en cuenta que los gr√°ficos de la topograf√≠a del iris pueden organizarse como fotos oculares - Esto permite
+		comparar las fotos de los ojos con los gr√°ficos de la topograf√≠a del iris. Tal gr√°ficos no est√°n incluidos en la
+		aplicaci√≥n (excepto de superposici√≥nes).</p>
 
 	<h3>Otras opciones en la vista general</h3>
 
 	<ul>
-		<li>Al hacer una pulsaciÛn larga en un nombre en la lista de nombres, es posible que cambiar o eliminar el nombre</li>
+		<li>Al hacer una pulsaci√≥n larga en un nombre en la lista de nombres, es posible que cambiar o eliminar el nombre</li>
 
-		<li>Al hacer una pulsaciÛn larga en una fecha en la lista de fotos para una nombre, usted puede cambiar la fecha o
-			eliminar las im·genes de esa fecha, o puede 
+		<li>Al hacer una pulsaci√≥n larga en una fecha en la lista de fotos para una nombre, usted puede cambiar la fecha o
+			eliminar las im√°genes de esa fecha, o puede 
 			<?PHP if(isMiniris()) { ?>
 			trasladar estas fotos a un diferente nombre.
 			<?PHP } else { ?>
@@ -49,37 +49,37 @@ include "pageheader.php";
 
 	<h3>Otras opciones en la vista de detalle</h3>
 
-	<p>En la vista de detalle (una o dos fotos), tiene las siguientes m·s posibilidades:</p>
+	<p>En la vista de detalle (una o dos fotos), tiene las siguientes m√°s posibilidades:</p>
 
 	<ul>
 		<li>Cambio de brillo y contraste mediante correderas <img src="../drawable/ic_seek_brightness.png" /><img
 			src="../drawable/ic_seek_contrast.png" /></li>
 
-		<li>VisualizaciÛn de una topografÌa de iris como superposiciÛn (botÛn cÌrculo <img src="../drawable/ic_btn_wheel.png"
-			class="frameless" /> y botones numerados), adaptaciÛn de la superposiciÛn al iris y almacenamiento de la posiciÛn de
-			superposiciÛn (botÛn de cerradura <img src="../drawable/ic_lock_open.png" />)
+		<li>Visualizaci√≥n de una topograf√≠a de iris como superposici√≥n (bot√≥n c√≠rculo <img src="../drawable/ic_btn_wheel.png"
+			class="frameless" /> y botones numerados), adaptaci√≥n de la superposici√≥n al iris y almacenamiento de la posici√≥n de
+			superposici√≥n (bot√≥n de cerradura <img src="../drawable/ic_lock_open.png" />)
 		</li>
 
-		<li>AdaptaciÛn del tamaÒo de la pupila de las superposiciones (botÛn <img src="../drawable/ic_btn_pupil_0.png"
-			class="frameless" />). AquÌ usted puede mantener la pupila centrada (<img src="../drawable/ic_btn_pupil_1.png"
+		<li>Adaptaci√≥n del tama√±o de la pupila de las superposiciones (bot√≥n <img src="../drawable/ic_btn_pupil_0.png"
+			class="frameless" />). Aqu√≠ usted puede mantener la pupila centrada (<img src="../drawable/ic_btn_pupil_1.png"
 			class="frameless" />) o moverla libremente (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
 		</li>
 
-		<li>Guardar los ajustes seleccionados de brillo y contraste (por medio del botÛn &laquo;guardar&raquo; <img
+		<li>Guardar los ajustes seleccionados de brillo y contraste (por medio del bot√≥n &laquo;guardar&raquo; <img
 			src="../drawable/ic_action_save.png" /> en la barra de acciones)
 		</li>
 
-		<li>Guardar la posiciÛn y zoom (por medio del botÛn &laquo;guardar&raquo; <img src="../drawable/ic_action_save.png" />
+		<li>Guardar la posici√≥n y zoom (por medio del bot√≥n &laquo;guardar&raquo; <img src="../drawable/ic_action_save.png" />
 			en la barra de acciones)
 		</li>
 
-		<li>Cambiar el comentario de la foto (por medio del botÛn &laquo;documento&raquo; <img
+		<li>Cambiar el comentario de la foto (por medio del bot√≥n &laquo;documento&raquo; <img
 			src="../drawable/ic_comment.png" /> en la barra de acciones)
 		</li>
 	</ul>
 
 	<p>
-		Estas funciones pueden activarse o desactivarse mediante el botÛn &laquo;Mostrar/Ocultar herramientas&raquo; (<img
+		Estas funciones pueden activarse o desactivarse mediante el bot√≥n &laquo;Mostrar/Ocultar herramientas&raquo; (<img
 			src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
 			src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />).
 	</p>
