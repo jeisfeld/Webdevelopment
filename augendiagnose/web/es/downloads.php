@@ -21,11 +21,11 @@ include "pageheader.php";
 	<h3>La aplicación para Windows</h3>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x86-0.1.4.exe" target="_blank">Descargar versión 32bit</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x86-0.1.5.exe" target="_blank">Descargar versión 32bit</a>
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x64-0.1.4.exe" target="_blank">Descargar versión 64bit</a>
+		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x64-0.1.5.exe" target="_blank">Descargar versión 64bit</a>
 	</p>
 
 	<p>
