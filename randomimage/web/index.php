@@ -1,5 +1,4 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=iso-8859-1' );
 
 // Determine if running on mobile device
 include 'Mobile_Detect.php';
@@ -41,14 +40,14 @@ else {
 // Define some basic strings based on language
 switch ($language) {
 	case "de" :
-		$title = "Überraschungsbild (Android App)";
-		$description = "Überraschungsbild, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Überraschungsbild, Zufallsbild, Zufallsfoto, Fotoüberraschung, Überraschung, Android";
+		$title = "Ãœberraschungsbild (Android App)";
+		$description = "Ãœberraschungsbild, JÃ¶rg Eisfeld";
+		$keywords = "JÃ¶rg Eisfeld, Ãœberraschungsbild, Zufallsbild, Zufallsfoto, Fotoï¿½berraschung, Ãœberraschung, Android";
 		break;
 	case "en" :
 		$title = "Surprise Image (Android App)";
-		$description = "Surprise Image, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Surprise Image, Random Image, Random Photo, Photo Surprise, Surprise, Android";
+		$description = "Surprise Image, JÃ¶rg Eisfeld";
+		$keywords = "JÃ¶rg Eisfeld, Surprise Image, Random Image, Random Photo, Photo Surprise, Surprise, Android";
 		break;
 }
 

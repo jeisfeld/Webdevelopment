@@ -24,7 +24,7 @@ else {
 <html>
 <head>
 <title><?=$appname?> (Aplicación para Android)</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body class="<?=$class?>">

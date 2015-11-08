@@ -1,5 +1,5 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=iso-8859-1' );
+header ( 'Content-Type: text/html; charset=utf-8' );
 
 // Determine if running on mobile device
 include 'Mobile_Detect.php';
