@@ -36,7 +36,7 @@ $(document).ready(function() {
 
 	$.ajaxSetup({
 		'beforeSend' : function(xhr) {
-			xhr.overrideMimeType('text/html; charset=ISO-8859-1');
+			xhr.overrideMimeType('text/html; charset=utf-8');
 		},
 	});
 
