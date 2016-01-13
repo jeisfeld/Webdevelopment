@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.6:</b> Fehlerkorrekturen.</li>
+
 		<li><b>Version 0.1.5:</b> Nutzer können nun festlegen, welche Overlays den Overlay-Buttons zugeordnet sind. Fehlerkorrekturen.</li>
 		
 		<li><b>Version 0.1.4:</b> Anpassung der Overlays an die Pupillengröße. Darstellung rotierter Fotos.</li>

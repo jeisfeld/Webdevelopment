@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.6:</b> Bugfixes.</li>
+		
 		<li><b>Version 0.1.5:</b> Users can now specify which overlays are associated with the overlay buttons. Bugfixes.</li>
 		
 		<li><b>Version 0.1.4:</b> Adaption of overlays to the pupil size. Correct display of rotated photos.</li>
