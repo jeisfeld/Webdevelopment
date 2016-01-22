@@ -31,6 +31,10 @@ else {
 	</p>
 
 	<p>
+		<a href="../?lang=en&page=settings" target="_parent">Settings</a>
+	</p>
+
+	<p>
 		<a href="../?lang=en&page=releasenotes" target="_parent">Release Notes</a>
 	</p>
 

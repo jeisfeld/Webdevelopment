@@ -18,17 +18,10 @@
 
 	<p>
 		When you open the app for the first time, an empty image list is created, and you see the setup page for this list. On
-		this page, you may press the icon <img src="../drawable/ic_action_plus.png" /> in order to add images to the list.
-		Select the folder from which you want to add images to the list. Then the list of images in this folder gets
-		displayed, and you have the following alternatives:
+		this page, you may press the icon <img src="../drawable/ic_action_plus.png" /> in order to add images to the list. At
+		first start you may have to wait a bit until the app has found all your image folders. Then you can add images and/or
+		image folders to your image list.
 	</p>
-
-	<ul>
-		<li><b>Add the whole folder:</b> This is the easiest way to get many images into your list. To do this, press the
-			icon <img src="../drawable/ic_action_add_folder.png" />.</li>
-		<li><b>Add individual images:</b> This is a bit more laborious, but more flexible. Just select all images that
-			you want to add, and then press the icon <img src="../drawable/ic_action_add_checked.png" /></li>
-	</ul>
 
 	<p>
 		After you have added folders and images to your list in this way, you can try all variants to
@@ -45,8 +38,8 @@
 	<ul>
 		<li>By double tapping on an image while viewing it.</li>
 		<li>By long pressing on an image while viewing it, and then pressing &ldquo;Display image list&rdquo;.</li>
-		<li>By adding the launcher for the surprise image configuration to your home screen. (This is a second launcher
-			provided by the app.)</li>
+		<li>From the <a href="#mainConfiguration">main configuration page</a> that displays all your image lists.
+		</li>
 	</ul>
 
 	<h4>Adding images to the surprise image list</h4>
@@ -54,33 +47,34 @@
 	<p>If you want to add images to your list, there are the following options:</p>
 
 	<ul>
-		<li>On the image list configuration page, press the icon <img src="../drawable/ic_action_plus.png" /> - then you
-			can add folders or images as in the beginning. This is the only way in which you can add whole folders.
+		<li>On the image list configuration page, press the icon <img src="../drawable/ic_action_plus.png" />. Then you
+			see a list of all image folders as well as your existing image lists. Now you can
+			<ul>
+				<li>select a folder. Then the images from this folder will be displayed. You may then either select images from
+					this folder for addition, or you may press the symbol <img src="../drawable/ic_action_add_folder.png" /> in order
+					to add the whole folder. You can add a filter in order to display only folders containing a certain character
+					string in their path.
+				</li>
+				<li>press the symbol <img src="../drawable/ic_action_checkbox.png" /> and then select multiple folders for
+					addition.
+				</li>
+				<li>Select an existing image list in order to add it to your list as nested list.</li>
+				<li>press the symbol <img src="../drawable/ic_action_folder.png" /> and then browse your file system in order
+					to select image folders or images for addition.
+				</li>
+			</ul>
 		</li>
-		<li>While browsing the folders, you may make a long press on a folder name - this allows to add this folder
-			quickly to the image list without looking into its contents. This is helpful if you want to add many folders.</li>
 		<li>Alternatively, you may display a photo in the gallery app and send the image from there to the Surprise Image
-			app.</li>
-		<li>Or, you may select multiple images in the gallery app and send them at once to the Surprise Image app. This
-			is the easiest way to add many individual images from the same folder.</li>
+			app, or you may select multiple photos in the gallery app and send them to the Surprise Image app.</li>
 	</ul>
 
-	<h4>Removing images from the surprise image list</h4>
+	<p>
+		Via the symbol <img src="../drawable/ic_action_minus.png" /> you may remove images and folders from your image list.
+	</p>
 
-	<p>If you want to remove images from your list, there are the following options:</p>
-
-	<ul>
-		<li>On the image list configuration page, press the icon <img src="../drawable/ic_action_minus.png" />. Then
-			select the folders and images that you want to remove from the list. Then press the icon <img
-			src="../drawable/ic_action_remove_checked.png" /> to remove them.
-		</li>
-		<li>Here, you may also press the icon <img src="../drawable/ic_action_checkbox.png" /> to select all folders and
-			images in the list. This is helpful if you want to remove the majority of images.
-		</li>
-		<li>Alternatively, while viewing an image, you may long press on the image, and then select &ldquo;Remove image
-			from list&rdquo; in order to remove the image that you are viewing. This is possible only for images that are added
-			individually to the image list - folders always stay as a whole in the list.</li>
-	</ul>
+	<p>Included lists are displayed as a blue folder. If you make a long click on such a list, you may adjust how
+		frequent images from this nested list are taken. In this way you may increase the display frequency of pictures from
+		small lists.</p>
 
 	<h3>
 		<a name="viewImages"></a>
@@ -90,13 +84,20 @@
 	<h4>Viewing surprise images via the launcher</h4>
 
 	<ul>
-		<li>If you press the launcher icon, the app will start displaying a random image from your surprise image list on
-			full screen.</li>
+		<li>If you press the launcher icon, the app will start displaying a random image from your last surprise image
+			list on full screen. In order to have access to a specific image list, you can add an appropriate widget to your home
+			screen.</li>
 		<li>If you want to see more details, just zoom as usual with two fingers.</li>
 		<li>If you want to see a different image from the list, just flip the image away.</li>
 		<li>You can go one image back by flipping in the other direction.</li>
 		<li>If you want to know the file location of this image, make a long press on the image. From here, you may also
-			send the image (e.g. via email).</li>
+			do other things:
+			<ul>
+				<li>Show the image in the gallery</li>
+				<li>Send the image (e.g. via email)</li>
+				<li>Remove the image from the image list</li>
+			</ul>
+		</li>
 	</ul>
 
 	<h4>Using widgets</h4>
@@ -107,118 +108,68 @@
 		<li><b>Surprise Image Widget:</b> This widget behaves like the launcher, as long as you have only one image list.
 			If you have multiple image lists configured, then the Surprise Image Widget allows to display a surprise image of a
 			specific image list.</li>
-		<li><b>Surprise Image Frame:</b> This widget places one of the images of your list on the home screen. When
-			placing the widget on your home screen, you can specify how frequently a new surprise image should be displayed.</li>
+		<li><b>Surprise Image Frame:</b> This widget places one of the images of your list on the home screen and changes
+			it in regular intervals. You have various configuration possibilities.</li>
 		<li><b>Surprise Image Deck:</b> This widget places the images of your list in random order as a card deck on the
-			home screen. You can move from one image to the next. When placing the widget on your home screen, you can specify
-			how frequently the pile should be re-shuffled.</li>
+			home screen. You can move from one image to the next.</li>
 	</ul>
 
 	<p>If you tap on the Surprise Image Frame or the Surprise Image Deck, then you can see the displayed photo in
 		detail. From here, you may flip the image away in order to see other images from the same list, or you may open the
 		configuration page for this list.</p>
 
-	<p>The Surprise Image Frame also allows you to switch to a new random image (via tap on the right border of the
-		frame), or to change the configuration of the frame (via tap on the left border of the frame).</p>
+	<p>
+		The Surprise Image Frame also allows you to switch to a new random image (via tap on the symbol <img
+			src="../drawable/ic_widget_next.png" /> on the right border of the frame), or to change the configuration of the
+		frame (via tap on the symbol <img src="../drawable/ic_widget_settings.png" /> on the left border of the frame).
+	</p>
 
-	<p>If you have multiple image lists (which requires premium add-on), then you can place widgets for multiple image
-		lists on your home screen, so for example you may have always a photo of your spouse and a photo of your last vacation
-		in parallel on your screen.</p>
+	<p>If you have multiple image lists, then you can place widgets for multiple image lists on your home screen, so
+		for example you may have always a photo of your spouse and a photo of your last vacation in parallel on your screen.</p>
 	<p>Please note that directly after a reboot of the phone or tablet, the external SD card is not yet accessible.
 		Therefore, after a reboot, the widgets can only display images from internal phone memory. If you want to see a nice
 		image directly after reboot, you should add one nice photo from internal phone memory to each of your image lists.</p>
-	<p>The widgets may update the image more frequently than specified (dependent on the Android system).</p>
 
-	<h3>Use of multiple image lists</h3>
+	<h4>Using notifications</h4>
 
 	<p>
-		Via the icon <img src="../drawable/ic_action_folder.png" /> you can access the menu for handling multiple image
-		lists. It contains the following entries:
+		As alternative to widgets, you may use notifications to see images from your image lists at varying time intervals.
+		The configuration of notifications can be done from the main configuration page. You find more details in the section
+		<a href="settings.html#notificationSettings">Notification settings</a>
+		.
 	</p>
 
+
+
+	<h3>
+		<a name="mainConfiguration"></a>
+		Main configuration
+	</h3>
+
+	<p>The main configuraton page may be accessed in the following ways:</p>
+
 	<ul>
-		<li><b>Switch image list:</b> As soon as you have more than one image list, you can use this menu item to select
-			another image list in the configuration. The selected list will also be used by the launcher.</li>
-		<li><b>Create new image list:</b> Here you can create a new empty image list.</li>
-		<li><b>Clone current image list:</b> Here you can create a new image list which is pre-filled from the current
-			list.</li>
-		<li><b>Rename current image list:</b> Here you can change the name of the current image list.</li>
-		<li><b>Backup image list:</b> Here you can backup any of your image lists. The backup is stored in the folder
-			&ldquo;RandomImage&rdquo; of your phone memory, from where you may copy it to any other place.</li>
-		<li><b>Restore image list:</b> Here you can restore any image list whose backup is located in the folder
-			&ldquo;RandomImage&rdquo; of your phone memory.</li>
-		<li><b>Delete image list:</b> Here you can delete any image list (except the current one). This is a permanent
-			deletion, but you may restore it if you have a backup.</li>
-		<li><b>Include other list in current list:</b> Here you can another image list to the current image list. This
-			gives the possibility to combine multiple image lists into one bigger image list.</li>
+		<li>By adding the launcher for the surprise image configuration to your home screen. (This is a second launcher
+			provided by the app.)</li>
+		<li>When you are on the configuration page of an image list, by tapping either on the top left corner or on the
+			icon <img src="../drawable/ic_action_home.png" />.
+		</li>
 	</ul>
 
-	<p>Included lists are displayed as a blue folder. If you make a long click on such a list, you may adjust how
-		frequent images from this nested list are taken. In this way you may increase the display frequency of pictures from
-		small lists.</p>
-
-	<p>
-		Without premium add-on, the icon <img src="../drawable/ic_action_folder.png" /> opens the setup menu.
-	</p>
-
-	<h3>Widget settings</h3>
+	<p>Here you have the following possibilities:</p>
 
 	<ul>
-		<li><b>List Name:</b> Here you can set the image list to be used by the widget.</li>
-		<li><b>Edit image list:</b> This link leads to the editing page of the image list assigned to the widget.</li>
-		<li><b>Change Frequency:</b> Here you can define how frequently the image should change.</li>
-		<li><b>Background:</b> Here you can set the background color of the widget. The choice &ldquo;Fill frame with
-			image&rdquo; means that the image is stretched to fill the whole widget.</li>
-		<li><b>Button Style:</b> Here you can define where the two widget buttons will appear. These are:
-			<ul>
-				<li>A button to change the widget settings.</li>
-				<li>A button to change the displayed image.</li>
-			</ul></li>
-		<li><b>Button Color:</b> Here you can select the color of these two buttons.</li>
-		<li><b>Scaling when showing details:</b> Here you cat define how the images should be scaled if you go to the
-			detail view by clicking on the widget.</li>
-	</ul>
-
-	<h3>Additional settings</h3>
-
-	<p>
-		While being on the image list configuration page, you can press the icon <img src="../drawable/ic_action_settings.png" />
-		to go to the settings page. Here you find the following categories of settings:
-	</p>
-
-	<h4>Premium add-ons</h4>
-
-	<p>You can purchase premium add-ons that enable the use of more than three image lists in the app.</p>
-
-	<p>Currently, both premium add-ons are equivalent. The &ldquo;Premium plus&rdquo; add-on just gives additional
-		appreciation to the developer of the app.</p>
-
-	<p>On the long run, the &ldquo;Premium plus&rdquo; add-on will always enable all features of the app. Presumably,
-		there will come new features which are not enabled by the &ldquo;Premium&rdquo; add-on. Therefore, the &ldquo;Premium
-		plus&rdquo; add-on is a kind of flatrate for future app extensions.</p>
-
-	<h4>Support</h4>
-
-	<p>Here you can open this help page, make a PayPal donation to the developer, or contact the developer via email.</p>
-
-	<h4>Other settings</h4>
-
-	<ul>
-		<li><b>Folder selection:</b> Here you can select between three different mechanisms to add images and folders:
-			<ul>
-				<li><b>List of image folders (default):</b> Here you get the list of all image folders displayed and can select
-					from this list. This is the easiest option if you have few image folders.</li>
-				<li><b>File browser:</b> Here you can select your image folders in a file browser. This is most practical if
-					you have many image folders organized in the file system.</li>
-				<li><b>Gallery:</b> Here you can select the image folder via the Gallery app. This may be helpful if you find
-					your images easiest in the gallery.</li>
-			</ul></li>
-		<li><b>Language:</b> Change the language of the app. (Currently supported: English and German)</li>
-		<li><b>Display all info messages:</b> There are various info messages in the app which you may disable by
-			pressing the button &ldquo;Do not show again&rdquo;. The button &ldquo;Display all info messages&rdquo; re-enables
-			all these messages.</li>
-		<li><b>Do not display info messages:</b> This disables all kinds of info messages which otherwise need to be
-			switched off individually. This is helpful for experienced users who install the app on a new device.</li>
+		<li>Go to the configuration of an individual image list (by pressing on an image list symbol)</li>
+		<li>Add a new image list (by pressing <img src="../drawable/ic_action_plus.png" />)
+		</li>
+		<li>Select multiple image lists for backup, restore or deletion (by pressing <img
+			src="../drawable/ic_action_checkbox.png" />)
+		</li>
+		<li>Go to the generall app settings (by pressing <img src="../drawable/ic_action_settings.png" />)
+		</li>
+		<li>Change the widget settings</li>
+		<li>Change the notification settings (and add or delete notifications)</li>
+		<li>Backup, restore, rename, delete or clone a single image list (via long pressing an image list symbol</li>
 	</ul>
 
 </body>
