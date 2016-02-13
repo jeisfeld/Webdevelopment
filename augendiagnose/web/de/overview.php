@@ -99,15 +99,19 @@ if (isAugendiagnose ()) {
 else {
 	?>
 
-	<p>Diese App dient dazu, Fotografien von Augen anzufertigen, sie im Detail anzuschauen und zu vergleichen, im Rahmen
-		der medizinischen Irisdiagnose. Sie ist für die Nutzung mit dem Miniris-Werkzeug optimiert.</p>
+	<p>
+		Diese App dient dazu, Fotografien von Augen anzufertigen, sie im Detail anzuschauen und zu vergleichen, im Rahmen der
+		medizinischen Irisdiagnose. Sie ist für die Nutzung mit dem
+		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2-Zubehör</a>
+		optimiert.
+	</p>
 
 	<h3>Funktionalitäten</h3>
 
 	<p>Die App unterstützt folgende Funktionalitäten:</p>
 
 	<ul>
-		<li>Aufnahme der Iris mit der Telefonkamera (z.B. mit Unterstützung des Miniris-Tools).</li>
+		<li>Aufnahme der Iris mit der Telefonkamera (z.B. mit Unterstützung des Miniris-2-Zubehörs).</li>
 		<li>Die Organisation von Iris-Fotografien nach Name, Datum und Körperseite (rechts/links).</li>
 		<li>Die gleichzeigige Anzeige zweier Fotos (mit voller Zoom-Funktionalität), so dass man zwei Fotos vergleichen kann.</li>
 		<li>Änderung von Helligkeit und Kontrast eines Augenfotos bei der Anzeige, und Anzeige des Fotos mit einer
@@ -127,8 +131,8 @@ else {
 		<li>In den oberen Ecken befindet sich die Anzeige des rechten und linken Augenfotos. Die rote Markierung zeigt an,
 			welches Auge als nächstes aufgenommen wird. Wenn Sie auf eine dieser Flächen drücken, können Sie die Seite wechseln.</li>
 		<li>Auf der Kameraanzeige befindet sich ein großer Kreis. Dieser Kreis zeigt an, wo Sie die Iris aufnehmen sollten.</li>
-		<li>Links unten befindet sich ein Knopf mit dem Text &bdquo;MACRO&ldquo; oder &bdquo;AUTO&ldquo;. Hier können Sie den Fokus-Modus der Kamera
-			einstellen. Für Nahaufnahmen ist der MACRO-Modus normalerweise eine gute Wahl.</li>
+		<li>Links unten befindet sich ein Knopf mit dem Text &bdquo;MACRO&ldquo; oder &bdquo;AUTO&ldquo;. Hier können Sie den
+			Fokus-Modus der Kamera einstellen. Für Nahaufnahmen ist der MACRO-Modus normalerweise eine gute Wahl.</li>
 		<li>Darüber befindet sich ein Blitz-Knopf. Hier können Sie das Licht Ihres Smartphones einschalten. Hier können Sie
 			auch den Kamera-Blitz einschalten. Da dieser für das Auge gefährlich ist, muss der Kamera-Blitz aber zunächst über
 			die Einstellungen freigeschaltet werden.</li>

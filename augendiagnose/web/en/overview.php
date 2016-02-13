@@ -96,15 +96,19 @@ if (isAugendiagnose ()) {
 else {
 	?>
 
-	<p>This App has the purpose to support the capturing and visualization of iris photographs on an Android device, in
-		order to do medical iris diagnosis. It is optimized for the use with the Miniris tool.</p>
+	<p>
+		This App has the purpose to support the capturing and visualization of iris photographs on an Android device, in order
+		to do medical iris diagnosis. It is optimized for the use with the
+		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2 attachment</a>
+		.
+	</p>
 
 	<h3>Key Features</h3>
 
 	<p>The key features of the App are</p>
 
 	<ul>
-		<li>Capturing of iris photos using the phone camera (e.g. with the help of the Miniris tool).</li>
+		<li>Capturing of iris photos using the phone camera (e.g. with the help of the Miniris-2 attachment).</li>
 		<li>Organization of iris photos by name, date and side (right/left).</li>
 		<li>Display of two iris photos in parallel (with full support of individual resizing).</li>
 		<li>Change of brightness and contrast of the photo during display, overlay with an iris topography, and saving of
@@ -125,8 +129,8 @@ else {
 			indicates which eye is planned for the next photo. By pressing on one of these areas you can change the side.</li>
 		<li>On the camera display there is a big circle. This circle indicates the place where the iris should appear on the
 			photo.</li>
-		<li>On the bottom left, there is a button with the text &ldquo;MACRO&rdquo; or &ldquo;AUTO&rdquo;. Here you may select the focus mode of the
-			camera. For closeups, the MACRO mode is normally a good choice.</li>
+		<li>On the bottom left, there is a button with the text &ldquo;MACRO&rdquo; or &ldquo;AUTO&rdquo;. Here you may select
+			the focus mode of the camera. For closeups, the MACRO mode is normally a good choice.</li>
 		<li>Above, there is a flashlight button. Here you can switch on the light of your device. As a flashlight in front of
 			your eye is dangerous, this is disabled by default, but you may enable it in the settings.</li>
 		<li>Above, there is a button with a circle. Here you can select how big the iris should be on the photo.</li>
