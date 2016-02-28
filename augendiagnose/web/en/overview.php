@@ -48,8 +48,13 @@ if (isAugendiagnose ()) {
 		and a date and prepare them in this way for the app. Then the photos will be renamed and moved to the eye photo
 		folder.</p>
 
-	<p>As further alternative, you may take pictures directly from the app with the device camera. This will normally not
-		give photos in adequate quality, but it serves as an alternative to a professional camera.</p>
+	<p>
+		As further alternative, you may take pictures directly from the app with the device camera. This will normally not
+		give photos in adequate quality, but it serves as an alternative to a professional camera, in particular if you use a
+		macro lens such as the
+		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2</a>
+		.
+	</p>
 
 	<p>As third alternative,</p>
 

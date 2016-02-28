@@ -52,9 +52,13 @@ if (isAugendiagnose ()) {
 		Foto-App auswählen und an die Augendiagnose-App senden. Dann können Sie diese Fotos in der App einordnen. In diesem
 		Fall werden die Fotos nicht aus ihrem alten Verzeichnis gelöscht.</p>
 
-	<p>Als weitere Alternative können Sie auch Fotos direkt aus der App heraus mit der Geräte-Kamera aufnehmen. Dies wird
+	<p>
+		Als weitere Alternative können Sie auch Fotos direkt aus der App heraus mit der Geräte-Kamera aufnehmen. Dies wird
 		normalerweise nicht zu Fotos in ausreichender Qualität führen, ist aber eine Ersatzlösung zu einer professionellen
-		Kamera.</p>
+		Kamera, insbesondere dann, wenn Sie eine Makro-Linse wie das
+		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2</a>
+		einsetzen.
+	</p>
 
 	<h4>Schritt 2: Betrachten der Fotos</h4>
 

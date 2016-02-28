@@ -133,6 +133,12 @@ if (isAugendiagnose ()) {
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Automatische Iris-Erkennung</td>
+			<td width="70%" valign="top">Hier können Sie wählen, ob die App automatisch versuchen soll, die Position von Iris und
+				Pupille in den Augenfotos zu bestimmen. Dies wird typischerweise die Positionierung der Overlays vereinfachen, aber
+				es erfordert viele Systemressourcen, und das Ergebnis kann inkorrekt sein.</td>
+		</tr>
 	</table>
 
 	<h3>Kameraeinstellungen</h3>

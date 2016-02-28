@@ -132,6 +132,12 @@ if (isAugendiagnose ()) {
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Detección automática del iris</td>
+			<td width="70%" valign="top">Aquí puede seleccionar si la aplicación debe tratar de encontrar automáticamente la
+				posición del iris y pupila en las fotos de ojos. Normalmente, esto va a simplificar la colocación de las
+				superposiciones, pero requiere muchos recursos de la teléfono, y el resultado puede ser incorrecto.</td>
+		</tr>
 	</table>
 
 	<h3>Ajustes de la cámara</h3>

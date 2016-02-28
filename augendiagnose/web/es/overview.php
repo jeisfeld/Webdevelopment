@@ -49,9 +49,13 @@ if (isAugendiagnose ()) {
 		estas fotos a la aplicación Diagnóstico del ojo. A continuación, puede organizar estas fotos en la aplicación. En este
 		caso, las fotos no se eliminarán de su ubicación anterior.</p>
 
-	<p>Como alternativa adicional, es posible tomar imágenes directamente desde la aplicación con la cámara del
-		dispositivo. Esto normalmente no le dé fotos en una calidad adecuada, pero sirve como una alternativa a una cámara
-		profesional.</p>
+	<p>
+		Como alternativa adicional, es posible tomar imágenes directamente desde la aplicación con la cámara del dispositivo.
+		Esto normalmente no le dé fotos en una calidad adecuada, pero sirve como una alternativa a una cámara profesional, en
+		particular, si se utiliza una lente macro, como el
+		<a href="http://irisocamera.com" target="_blank">Miniris-2</a>
+		.
+	</p>
 
 	<h4>Paso 2:. Visualizar las fotos</h4>
 

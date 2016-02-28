@@ -127,6 +127,12 @@ if (isAugendiagnose ()) {
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td width="30%" valign="top">Automatic detection of iris</td>
+			<td width="70%" valign="top">Here you can select if the app should automatically try to find the position of iris and
+				pupil in the eye photos. This typically will simplify the positioning of overlays, but it requires many resources of the
+				phone, and the result may be incorrect.</td>
+		</tr>
 	</table>
 
 	<h3>Camera Settings</h3>
