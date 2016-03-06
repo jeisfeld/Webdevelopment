@@ -53,7 +53,9 @@ include "pageheader.php";
 
 	<ul>
 		<li>Cambio de brillo y contraste mediante correderas <img src="../drawable/ic_seek_brightness.png" /><img
-			src="../drawable/ic_seek_contrast.png" /></li>
+			src="../drawable/ic_seek_contrast.png" />, así como el cambio de saturación <img
+			src="../drawable/ic_seek_saturation.png" /> y temperatura de color <img
+			src="../drawable/ic_seek_color_temperature.png" /></li>
 
 		<li>
 			<p>

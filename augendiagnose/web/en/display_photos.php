@@ -52,7 +52,9 @@ include "pageheader.php";
 
 	<ul>
 		<li>Change of brightness and contrast via sliders <img src="../drawable/ic_seek_brightness.png" /><img
-			src="../drawable/ic_seek_contrast.png" /></li>
+			src="../drawable/ic_seek_contrast.png" />, as well as change of saturation <img
+			src="../drawable/ic_seek_saturation.png" /> and color temperature <img
+			src="../drawable/ic_seek_color_temperature.png" /></li>
 
 		<li>
 			<p>
