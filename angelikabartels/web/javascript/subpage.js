@@ -25,6 +25,14 @@ $(document).ready(function() {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
+
+	$('img').bind('contextmenu', function() {
+		$title = $(this).attr('title');
+		if ($title) {
+			alert($title);
+		}
+		return false;
+	})
 });
 
 // Google Analytics tracking

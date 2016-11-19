@@ -2,8 +2,8 @@ var zoomFactor = 1;
 
 function showMenu() {
 	var frame = $('#menudropdownframe', parent.document);
-	frame.css('width', 305 * zoomFactor);
-	frame.css('height', 305 * zoomFactor);
+	frame.css('width', 335 * zoomFactor);
+	frame.css('height', 335 * zoomFactor);
 
 	$('#menuitems').slideDown();
 }
