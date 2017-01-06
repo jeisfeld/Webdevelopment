@@ -23,7 +23,7 @@ else {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Eye Diagnosis (Android App)</title>
+<title>Random Image (Android App)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
@@ -43,7 +43,7 @@ if ($isMobile) {
 }
 else {
 	?>
-	<h1>Surprise Image - Android App</h1>
+	<h1>Random Image - Android App</h1>
 <?php
 }
 ?>

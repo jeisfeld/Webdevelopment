@@ -41,13 +41,13 @@ else {
 // Define some basic strings based on language
 switch ($language) {
 	case "de" :
-		$title = "Überraschungsbild (Android App)";
-		$description = "Überraschungsbild, Jörg Eisfeld";
-		$keywords = "Jörg Eisfeld, Überraschungsbild, Zufallsbild, Zufallsfoto, Foto�berraschung, Überraschung, Android";
+		$title = "Zufallsbild (Android App)";
+		$description = "Zufallsbild, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Überraschungsbild, Zufallsbild, Zufallsfoto, Fotoüberraschung, Überraschung, Android";
 		break;
 	case "en" :
-		$title = "Surprise Image (Android App)";
-		$description = "Surprise Image, Jörg Eisfeld";
+		$title = "Random Image (Android App)";
+		$description = "Random Image, Jörg Eisfeld";
 		$keywords = "Jörg Eisfeld, Surprise Image, Random Image, Random Photo, Photo Surprise, Surprise, Android";
 		break;
 }
@@ -82,8 +82,8 @@ else {
 	?>
 	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?page=".$page?>" scrolling="no"
 		marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
+	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0"
+		marginwidth="0" frameborder="0"></iframe>
 	<iframe id="mainframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 <?php
 }
