@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.8:</b> Bild zoomen über Touchscreen.</li>
+		
 		<li><b>Version 0.1.7:</b> Änderung von Sättigung und Farbtemperatur.</li>
 		
 		<li><b>Version 0.1.6:</b> Fehlerkorrekturen.</li>

@@ -76,12 +76,15 @@ include "pageheader.php";
 	<h3>Notas de la versión</h3>
 
 	<ul>
+		<li><b>Versión 0.1.8:</b> Zoom de la imagen a través de la pantalla táctil.</li>
+
 		<li><b>Versión 0.1.7:</b> Cambio de la saturación y temperatura de color.</li>
-		
+
 		<li><b>Versión 0.1.6:</b> Corrección de errores.</li>
-		
-		<li><b>Versión 0.1.5:</b> Ahora los usuarios pueden especificar qué superposiciones estén asociados con los botones de superposicién. Corrección de errores.</li>
-		
+
+		<li><b>Versión 0.1.5:</b> Ahora los usuarios pueden especificar qué superposiciones estén asociados con los botones de
+			superposicién. Corrección de errores.</li>
+
 		<li><b>Versión 0.1.4:</b> Adaptación de superposiciones en el tamaño de la pupila. Correcta visualización de fotos
 			giradas.</li>
 
