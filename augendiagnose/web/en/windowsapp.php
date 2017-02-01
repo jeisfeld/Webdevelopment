@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.9:</b> Simple change between single image and double image view.</li>
+		
 		<li><b>Version 0.1.8:</b> Image zooming via touchscreen.</li>
 		
 		<li><b>Version 0.1.7:</b> Enabled change of saturation and color temperature.</li>
