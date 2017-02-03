@@ -179,7 +179,7 @@ else {
 	<p>
 		The app also uses Google Analytics to collect statistical information about app errors and app usage. This has the
 		purpose to get information for further improvements of the app. See the
-		<a href="https://support.google.com/analytics/answer/6004245" target="_blank">Google Analytics Privacy Policy</a>
+		<a href="https://support.google.com/analytics/answer/6004245?hl=en" target="_blank">Google Analytics Privacy Policy</a>
 		for more details.
 	</p>
 </body>

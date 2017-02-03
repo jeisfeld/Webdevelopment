@@ -176,7 +176,7 @@ else {
 	<p>
 		La aplicación también utiliza Google Analytics para recopilar información estadística sobre errores y uso de la
 		aplicación. Esto tiene el propósito de obtener información para mejoras de la aplicación. Vea el
-		<a href="https://support.google.com/analytics/answer/6004245" target="_blank">Política de privacidad de Google
+		<a href="https://support.google.com/analytics/answer/6004245?hl=es" target="_blank">Política de privacidad de Google
 			Analytics</a>
 		para más detalles.
 	</p>

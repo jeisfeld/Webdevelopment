@@ -183,7 +183,7 @@ else {
 	<p>
 		Die App verwendet auch Google Analytics, um statistische Informationen über App-Fehler und App-Nutzung zu sammeln.
 		Dies dient dazu, Informationen für weitere Verbesserungen der App zu erhalten. Siehe die
-		<a href="https://support.google.com/analytics/answer/6004245" target="_blank">Google Analytics-Datenschutzbestimmungen</a>
+		<a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank">Google Analytics-Datenschutzbestimmungen</a>
 		für mehr Details.
 	</p>
 </body>
