@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.10:</b> Simple showing and hiding of comment pane.</li>
+		
 		<li><b>Version 0.1.9:</b> Simple change between single image and double image view.</li>
 		
 		<li><b>Version 0.1.8:</b> Image zooming via touchscreen.</li>
