@@ -76,6 +76,8 @@ include "pageheader.php";
 	<h3>Notas de la versión</h3>
 
 	<ul>
+		<li><b>Versión 0.1.11:</b> Habilitado el manejo de un solo foto de ojo. Corrección de errores.</li>
+
 		<li><b>Versión 0.1.10:</b> Visualización y ocultación simple del comentarios.</li>
 '
 		<li><b>Versión 0.1.9:</b> Cambio simple entre sola y doble vista de imagen.</li>

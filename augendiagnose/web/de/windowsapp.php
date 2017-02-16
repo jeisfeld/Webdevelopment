@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.11:</b> Handhabung einzelner Augenfotos. Fehlerkorrekturen.</li>
+
 		<li><b>Version 0.1.10:</b> Einfaches Ein- und Ausblenden des Kommentarfeldes.</li>
 		
 		<li><b>Version 0.1.9:</b> Einfacher Wechsel zwischen Einzelbild- und Doppelbildansicht.</li>
