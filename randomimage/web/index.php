@@ -64,7 +64,7 @@ switch ($language) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="drawable/icon_randomimage.ico">
-<script type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="javascript/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="javascript/resolution.js"></script>
 <script type="text/javascript" src="javascript/analyticstracking.js"></script>
 </head>
