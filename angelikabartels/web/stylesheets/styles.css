@@ -149,6 +149,10 @@ a {
 	margin-top: 0px;
 }
 
+#text p.center {
+	text-align: center;
+}
+
 #uebermich li {
 	margin-bottom: 18px;
 	text-align: left;
@@ -197,6 +201,7 @@ a {
 
 #menuleft a.twoline {
 	height: 54px;
+	text-indent: -20px;
 }
 
 #menuleft.smallheight a {
@@ -234,8 +239,18 @@ a {
 	left: 12px;
 }
 
+#menuleft a.twoline span {
+	position: absolute;
+	top: 2px;
+	left: 32px;
+}
+
 #menuleft.smallwidth a span {
 	left: 5px;
+}
+
+#menuleft.smallwidth a.twoline span {
+	left: 25px;
 }
 
 /* Settings for dropdown menu */
