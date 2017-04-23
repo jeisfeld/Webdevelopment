@@ -70,19 +70,20 @@ a {
 	padding-bottom: 0px;
 }
 
-#text {
+.maintext {
 	padding-top: 18px;
 	padding-left: 18px;
 	padding-right: 18px;
 }
 
-#text img {
+.maintext img {
 	float: right;
 	padding-left: 18px;
 	padding-bottom: 18px;
+	max-width: 50%;
 }
 
-#text p, #text ul {
+.maintext p, #text ul {
 	text-align: justify;
 	padding-bottom: 12px;
 	padding-top: 0px;
@@ -94,40 +95,40 @@ a {
 	hyphens: auto;
 }
 
-#text p.subtitle {
+.maintext p.subtitle {
 	margin-top: -24px;
 	padding-bottom: 24px;
 }
 
-#text p.supertitle {
+.maintext p.supertitle {
 	padding-bottom: 0px;
 	margin-bottom: -18px;
 	margin-top: 24px;
 }
 
-#text h1 {
+.maintext h1 {
 	margin-bottom: 26px;
 	padding-top: 0px;
 	margin-top: 18px;
 }
 
-#text p.smallspace, #text ul.smallspace {
+.maintext p.smallspace, #text ul.smallspace {
 	padding-bottom: 3px;
 }
 
-#text ul {
+.maintext ul {
 	margin-top: 6px;
 	margin-bottom: 6px;
 }
 
-#text hr {
+.maintext hr {
 	margin-top: 18px;
 	margin-left: 36px;
 	margin-right: 36px;
 	margin-bottom: 24px;
 }
 
-#text p.footer {
+.maintext p.footer {
 	text-align: center;
 	font-weight: bold;
 	font-size: 13px;
@@ -136,20 +137,20 @@ a {
 	margin-right: 30px;
 }
 
-#text hr.footer {
+.maintext hr.footer {
 	clear: both;
 	page-break-after: avoid;
 }
 
-#text p.footer.verse {
+.maintext p.footer.verse {
 	white-space: pre-wrap;
 }
 
-#text p.footer.secondary {
+.maintext p.footer.secondary {
 	margin-top: 0px;
 }
 
-#text p.center {
+.maintext p.center {
 	text-align: center;
 }
 
