@@ -405,6 +405,19 @@ a.closeImpressum {
 	page-break-before: always;
 }
 
+#allcontent .maintext img {
+	max-width: 70%;
+}
+
+#allcontent .maintext img.astroimg {
+	max-width: 63%;
+}
+
+#allcontent .maintext img.spirimg {
+	max-width: 78%;
+}
+
+
 /* Settings for allcontent page */
 @page {
 	margin: 15mm 10mm 20mm 10mm;
