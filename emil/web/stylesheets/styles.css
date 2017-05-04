@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@CHARSET "ISO-8859-1";
+
+/* General settings */
+body, p {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	background-color: white;
+}
+
+table, table tr, table td {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table.bordered td {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	vertical-align: middle;
+}
+
+audio {
+	display: block;
+}
+
+div.audiolabel {
+	display: block;
+}
+
+img#todesanzeige {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	margin-top: 32pt;
+	margin-bottom: 32pt;
+	max-width: 100%;
+}
+
+div#musikwrapper {
+	text-align: center;
+}
+
+div#musikwrapper table#musik {
+	display: inline-block;
+}
