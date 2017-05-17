@@ -46,9 +46,15 @@ p {
 
 ul {
 	padding-left: 2em;
+	margin-top: 6px;
 }
 
 li {
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+.twocolumnlist li {
 	margin-bottom: 2px;
 }
 
@@ -62,22 +68,6 @@ a {
 }
 
 /* Special list types */
-ul.dashed {
-	list-style: none;
-	padding-left: 12px;
-}
-
-ul.dashed li:before {
-	content: "-";
-	position: relative;
-	left: -5px;
-}
-
-ul.dashed li {
-	text-indent: -5px;
-	list-style-type: none;
-}
-
 ul.arrow {
 	list-style: none;
 	padding-left: 12px;
@@ -115,6 +105,10 @@ td#text {
 	width: 62%;
 }
 
+td#pict img.logo {
+	margin: 2px;
+}
+
 /* Settings for left side */
 h1 {
 	margin-left: 1em;
@@ -138,10 +132,19 @@ h2 {
 	font-weight: bold;
 }
 
+.smallmargin {
+	margin-bottom: 6px;
+}
+
+ul.smallmargin {
+	margin-top: 6px;
+}
+
 h3 {
 	font-size: medium;
-	font-weight: bold;
-	margin-bottom: 0px;
+	font-weight: normal;
+	text-decoration: underline;
+	margin-bottom: 6px;
 }
 
 /* Settings for right side */
