@@ -12,4 +12,8 @@ $(document).ready(function() {
 		$('audio').css('width', width / 2);
 	}
 	
+	$('#niemalsgehtmansoganz').prop('volume', 0.4);
+	$('#lassnunruhiglosdasruder').prop('volume', 0.7);
+
+	
 });
