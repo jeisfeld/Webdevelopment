@@ -302,12 +302,14 @@ body#bottom .topimage {
 		"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../graphics/green4.png', sizingMethod='scale')";
 }
 
-#impressum p, #impressum td, #impressum h5 {
+#impressum p, #impressum td, #impressum h3 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: small;
 }
 
-#impressum h4 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: medium;
+#impressum h3 {
+	font-weight: bold;
+	margin-bottom: 6px;
+	text-decoration: none;
 }
+
