@@ -19,7 +19,7 @@ h4 {
 }
 
 table {
-	border: 0; 
+	border: 0;
 }
 
 tr {
@@ -28,4 +28,12 @@ tr {
 
 td {
 	padding-bottom: 15px;
+}
+
+ul {
+	margin-top: 0px;
+}
+
+p.nomargin {
+	margin-bottom: 0px;
 }
