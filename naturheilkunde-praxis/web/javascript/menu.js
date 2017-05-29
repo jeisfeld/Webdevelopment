@@ -13,10 +13,18 @@ function adjustStyle(width, height) {
 	} else {
 		$('#menuleft').removeClass('smallwidth');
 	}
-	if (height < 230 || width < 110) {
-		$('#menuleft a').addClass('smalltext');
-	} else {
+	
+	if(width < 100) {
+		$('#menuleft a').addClass('smallesttext');
 		$('#menuleft a').removeClass('smalltext');
+	}
+	else if (height < 230 || width < 110) {
+		$('#menuleft a').addClass('smalltext');
+		$('#menuleft a').removeClass('smallesttext');
+	} 
+	else {
+		$('#menuleft a').removeClass('smalltext');
+		$('#menuleft a').removeClass('smallesttext');
 	}
 	
 	$('#menuleft a').css('width', '' + width + 'px');

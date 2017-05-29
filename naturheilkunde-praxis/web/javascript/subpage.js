@@ -11,6 +11,20 @@ function markChosen(frame, id) {
 	return (t != null && t.html().toLowerCase().match('span'));
 }
 
+function adjustStyle(width, height) {
+	if (width < 500) {
+		$('#text, #pict, #pictsub').addClass('small');
+		$('#pict img, #pictsub img').css('max-width', Math.round(width / 3));
+	} else {
+		$('#text, #pict, #pictsub').removeClass('small');
+		$('#pict img, #pictsub img').css('max-width', '');
+	}
+}
+
+$(window).resize(function() {
+	adjustStyle($(this).width(), $(this).height());
+});
+
 $(document).ready(function() {
 	var myId = $('body').attr('id');
 	var frame, result;
@@ -28,9 +42,10 @@ $(document).ready(function() {
 		markChosen(frame, myId);
 	}
 
+	adjustStyle($(window).width(), $(window).height());
 });
 
-//Google Analytics tracking
+// Google Analytics tracking
 (function(i, s, o, g, r, a, m) {
 	i['GoogleAnalyticsObject'] = r;
 	i[r] = i[r] || function() {

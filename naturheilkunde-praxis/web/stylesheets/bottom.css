@@ -44,6 +44,10 @@ body.small tr.address {
 	font-size: 100%;
 }
 
+body.small tr.address.small {
+	font-size: 80%;
+}
+
 div#address {
 	text-align: justify;
 }

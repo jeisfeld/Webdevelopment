@@ -47,6 +47,11 @@ body {
 	height: 25px;
 }
 
+#menuleft a.smallesttext {
+	font-size: 12px;
+	height: 20px;
+}
+
 #menuleft a.chosen {
 	background: #fff;
 }

@@ -1,11 +1,15 @@
 @import url(mainfont.css);
 
+#text.small p, #text.small li, #text.small a, #text.small table {
+	font-size: 12px;
+}
+
 table {
 	border: 0;
 	width: 100%;
 }
 
-td#pict {
+#pict {
 	padding-top: 90px;
 	padding-left: 25px;
 	padding-right: 5px;
@@ -13,7 +17,7 @@ td#pict {
 	vertical-align: top;
 }
 
-td#pictsub {
+#pictsub {
 	padding-top: 30px;
 	padding-left: 25px;
 	padding-right: 5px;
@@ -21,13 +25,20 @@ td#pictsub {
 	vertical-align: top;
 }
 
-td#text {
-	padding: 0;
+#text {
+	padding: 0px;
 	width: 66%;
 	vertical-align: top;
 }
 
-html,body,textarea {
+td#text.small, td#pict.small, td#pictsub.small {
+	padding-right: 5px;
+}
+td#pict.small, td#pictsub.small {
+	padding-left: 0px;
+}
+
+html, body, textarea {
 	background-color: #FFFFFF;
 	scrollbar-base-color: #FFCcff;
 	scrollbar-face-color: #FFFFFF;
