@@ -14,10 +14,17 @@ function markChosen(frame, id) {
 function adjustStyle(width, height) {
 	if (width < 500) {
 		$('#text, #pict').addClass('small');
-		$('#pict img').css('max-width', Math.round(width / 3));
-	} else {
+		$('#text').addClass('fullwidth');
+		$('#pictimg2').css('max-width', Math.round(width / 3));
+		$('#pictimg').hide();
+		$('#pictimg2').show();
+	}
+	else {
 		$('#text, #pict').removeClass('small');
-		$('#pict img').css('max-width', '');
+		$('#text').removeClass('fullwidth');
+		$('#pictimg2').css('max-width', '');
+		$('#pictimg2').hide();
+		$('#pictimg').show();
 	}
 }
 
@@ -33,7 +40,8 @@ $(document).ready(function() {
 	try {
 		frame = top.main.menutop.document;
 		result = markChosen(frame, myId);
-	} catch (e) {
+	}
+	catch (e) {
 	}
 
 	// otherwise, try in left frame
@@ -41,6 +49,20 @@ $(document).ready(function() {
 		frame = top.menu.document;
 		markChosen(frame, myId);
 	}
+
+	var pictimg2 = $('#pictimg').clone();
+	pictimg2.attr('id', 'pictimg2');
+	pictimg2.css('float', 'right');
+	pictimg2.css('margin-left', '5px');
+	pictimg2.css('margin-bottom', '5px');
+
+	if ($('#text h2 + h3').size() > 0) {
+		$('#text h2 + h3').after(pictimg2);
+	}
+	else {
+		$('#text h2').after(pictimg2);
+	}
+	$('#pictimg2').hide();
 
 	adjustStyle($(window).width(), $(window).height());
 });

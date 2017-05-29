@@ -27,6 +27,10 @@ table {
 	vertical-align: top;
 }
 
+#text.fullwidth {
+	width: 100%;
+}
+
 td#text.small, td#pict.small {
 	padding-right: 5px;
 }
