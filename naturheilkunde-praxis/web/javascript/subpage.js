@@ -13,11 +13,11 @@ function markChosen(frame, id) {
 
 function adjustStyle(width, height) {
 	if (width < 500) {
-		$('#text, #pict, #pictsub').addClass('small');
-		$('#pict img, #pictsub img').css('max-width', Math.round(width / 3));
+		$('#text, #pict').addClass('small');
+		$('#pict img').css('max-width', Math.round(width / 3));
 	} else {
-		$('#text, #pict, #pictsub').removeClass('small');
-		$('#pict img, #pictsub img').css('max-width', '');
+		$('#text, #pict').removeClass('small');
+		$('#pict img').css('max-width', '');
 	}
 }
 

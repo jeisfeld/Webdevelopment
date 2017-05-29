@@ -17,12 +17,8 @@ table {
 	vertical-align: top;
 }
 
-#pictsub {
+#pict.pictsub {
 	padding-top: 30px;
-	padding-left: 25px;
-	padding-right: 5px;
-	padding-bottom: 0;
-	vertical-align: top;
 }
 
 #text {
@@ -31,10 +27,10 @@ table {
 	vertical-align: top;
 }
 
-td#text.small, td#pict.small, td#pictsub.small {
+td#text.small, td#pict.small {
 	padding-right: 5px;
 }
-td#pict.small, td#pictsub.small {
+td#pict.small {
 	padding-left: 0px;
 }
 
