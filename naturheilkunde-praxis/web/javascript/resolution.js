@@ -9,8 +9,8 @@ function adjustStyle(width, height) {
 
 	// sizing of top and bottom
 	if (width < 1100 || height < 700) {
-		var logoheight = Math.min(width / 11, Math.min(width / 20, 60) + height
-				/ 20);
+		var logoheight = Math.round(Math.min(width / 11, Math.min(width / 20, 60) + height
+				/ 20));
 		outervframe.attr('rows', logoheight + ',*,55');
 		toplogoframe.find('body').addClass('small');
 		bottomonlineframe.find('body').addClass('small');
