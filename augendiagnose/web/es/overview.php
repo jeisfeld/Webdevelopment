@@ -135,7 +135,8 @@ else {
 		<li>Arriba, hay un botón con el texto &laquo;MACRO&raquo; o &laquo;AUTO&raquo;. Aquí usted puede seleccionar el modo
 			de enfoque de la cámara. Para primeros planos, el modo macro es normalmente una buena opción.</li>
 		<li>Arriba, hay un botón de flash. Aquí se puede encender la luz de su dispositivo. Como un flash frente a el ojo es
-			peligroso, esto está desactivado por defecto, pero puede activarlo en la configuración.</li>
+			peligroso, esto está desactivado por defecto, pero puede activarlo en la configuración. También se puede utilizar de
+			&laquo;Flash & Fill-in Light&raquo; enchufado a la toma de auriculares.</li>
 	</ul>
 
 	<p>Después de tomar fotos de ambos ojos, se abre una página donde usted puede revisar las dos fotos, y donde se puede

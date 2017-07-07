@@ -139,7 +139,8 @@ else {
 		<li>Above, there is a button with the text &ldquo;MACRO&rdquo; or &ldquo;AUTO&rdquo;. Here you may select the focus
 			mode of the camera. For closeups, the MACRO mode is normally a good choice.</li>
 		<li>Above, there is a flashlight button. Here you can switch on the light of your device. As a flashlight in front of
-			your eye is dangerous, this is disabled by default, but you may enable it in the settings.</li>
+			your eye is dangerous, this is disabled by default, but you may enable it in the settings. You may also use an LED
+			&ldquo;Flash & Fill-in Light&rdquo; plugged in the headphone jack.</li>
 	</ul>
 
 	<p>After taking photos of both eyes, you are directed to a page where you can review the two photos, and where you have

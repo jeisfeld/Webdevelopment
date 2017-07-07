@@ -167,6 +167,11 @@ if (isMiniris ()) {
 				nicht erlaubt, da das Blitzlicht direkt vor dem Auge gefährlich ist.</td>
 		</tr>
 		<tr>
+			<td width="30%" valign="top">Externen LED-Blitz unterstützen</td>
+			<td width="70%" valign="top">Hier können Sie einstellen, ob die Verwendung eines &bdquo;Flash & Fill-in Light&ldquo;,
+				das in die Kopfhörerbuchse eingesteckt wird, unterstützt werden soll.</td>
+		</tr>
+		<tr>
 			<td width="30%" valign="top">Kamera-Bildschirmposition</td>
 			<td width="70%" valign="top">Wenn das Miniris-Band Knöpfe auf dem Kamera-Bildschirm verbirgt, dann können Sie diese
 				Einstellung verwenden, um den Kamera-Bildschirm nach rechts oder links zu verschieben.</td>

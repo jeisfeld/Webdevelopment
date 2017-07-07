@@ -141,7 +141,8 @@ else {
 			Fokus-Modus der Kamera einstellen. Für Nahaufnahmen ist der MACRO-Modus normalerweise eine gute Wahl.</li>
 		<li>Darüber befindet sich ein Blitz-Knopf. Hier können Sie das Licht Ihres Smartphones einschalten. Hier können Sie
 			auch den Kamera-Blitz einschalten. Da dieser für das Auge gefährlich ist, muss der Kamera-Blitz aber zunächst über
-			die Einstellungen freigeschaltet werden.</li>
+			die Einstellungen freigeschaltet werden. Sie können auch ein &bdquo;Flash & Fill-in Light&ldquo; verwenden, das in
+			die Kopfhörerbuchse eingesteckt wird.</li>
 	</ul>
 
 	<p>Nachdem Sie beide Augen aufgenommen haben, erscheint eine Seite, wo Sie beide Fotos noch einmal anschauen können und
@@ -183,7 +184,8 @@ else {
 	<p>
 		Die App verwendet auch Google Analytics, um statistische Informationen über App-Fehler und App-Nutzung zu sammeln.
 		Dies dient dazu, Informationen für weitere Verbesserungen der App zu erhalten. Siehe die
-		<a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank">Google Analytics-Datenschutzbestimmungen</a>
+		<a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank">Google
+			Analytics-Datenschutzbestimmungen</a>
 		für mehr Details.
 	</p>
 </body>
