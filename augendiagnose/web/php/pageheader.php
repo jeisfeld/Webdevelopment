@@ -6,6 +6,7 @@ switch ($_SERVER ['HTTP_HOST']) {
 	case "miniris.jeisfeld.de" :
 	case "miniris.localhost" :
 	case "localhost:8007" :
+	case "localhost:8308" :
 	case "192.168.1.5:8007" :
 		$app = "miniris";
 		$appname = "Miniris";
