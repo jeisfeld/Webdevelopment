@@ -115,7 +115,7 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 	} else {
 		echo "<h3>Fehler!</h3>";
 		echo "<p>Leider ist ein Fehler aufgetreten, und Ihre Formulardaten konnten nicht an mich gesendet werden. ";
-		echo "Bitte senden Sie eie normale E-Mail an <a href=\"mailto:webdevelopment@it-art.de\">webdevelopment@it-art.de</a>.</p>";
+		echo "Bitte senden Sie eine normale E-Mail an <a href=\"mailto:webdevelopment@it-art.de\">webdevelopment@it-art.de</a>.</p>";
 	}
 }
 ?>
