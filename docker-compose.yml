@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web-je:
+    build: .
+    image: web-je
+    ports:
+      - "127.0.0.1:8100:80"
+    volumes:
+      - ./index.html:/var/www/html/index.html
+      - ./emil/web:/var/www/html/emil
+      - ./it-art/web:/var/www/html/it-art
+      - ./augendiagnose/web:/var/www/html/augendiagnose
+      - ./augendiagnose/web:/var/www/html/miniris
+      - ./randomimage/web:/var/www/html/randomimage
+      - ./naturheilkunde-praxis/web:/var/www/html/naturheilkunde-praxis
+      - ./therapiezentrum-dante/web:/var/www/html/therapiezentrum-dante
+      - ./angelikabartels/web:/var/www/html/spirituelle-seelenreise
+    networks:
+      - mynet
+    container_name: web-je
+networks:
+  mynet:
+    external:
+      name: mynet

@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-emil:
+    build: .
+    image: web-emil
+    ports:
+      - "127.0.0.1:8301:80"
+    networks:
+      - mynet
+    container_name: web-emil
+networks:
+  mynet:
+    external:
+      name: mynet

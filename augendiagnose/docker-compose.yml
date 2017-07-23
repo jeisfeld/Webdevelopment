@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  web-augendiagnose:
+    build: .
+    image: web-augendiagnose
+    ports:
+      - "127.0.0.1:8307:80"
+    networks:
+      - mynet
+    container_name: web-augendiagnose
+  web-miniris:
+    build: .
+    image: web-augendiagnose
+    ports:
+      - "127.0.0.1:8308:80"
+    networks:
+      - mynet
+    container_name: web-miniris
+networks:
+  mynet:
+    external:
+      name: mynet

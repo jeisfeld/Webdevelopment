@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-naturheilkunde-praxis:
+    build: .
+    image: web-naturheilkunde-praxis 
+    ports:
+      - "127.0.0.1:8303:80"
+    networks:
+      - mynet
+    container_name: web-naturheilkunde-praxis 
+networks:
+  mynet:
+    external:
+      name: mynet

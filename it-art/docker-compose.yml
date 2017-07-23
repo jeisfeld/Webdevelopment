@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-it-art:
+    build: .
+    image: web-it-art
+    ports:
+      - "127.0.0.1:8305:80"
+    networks:
+      - mynet
+    container_name: web-it-art
+networks:
+  mynet:
+    external:
+      name: mynet

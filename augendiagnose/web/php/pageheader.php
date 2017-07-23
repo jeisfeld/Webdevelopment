@@ -10,8 +10,13 @@ else {
 	switch ($_SERVER ['HTTP_HOST']) {
 		case "miniris.jeisfeld.de" :
 		case "miniris.localhost" :
-		case "localhost:8007" :
 		case "localhost:8308" :
+		case "127.0.0.1:8308" :
+		case "pc-joerg:8308" :
+		case "192.168.1.5:8308" :
+		case "localhost:8007" :
+		case "127.0.0.1:8007" :
+		case "pc-joerg:8007" :
 		case "192.168.1.5:8007" :
 			$app = "miniris";
 			$appname = "Miniris";

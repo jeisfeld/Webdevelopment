@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-spirituelle-seelenreise:
+    build: .
+    image: web-spirituelle-seelenreise
+    ports:
+      - "127.0.0.1:8302:80"
+    networks:
+      - mynet
+    container_name: web-spirituelle-seelenreise
+networks:
+  mynet:
+    external:
+      name: mynet

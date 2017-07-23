@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-randomimage:
+    build: .
+    image: web-randomimage
+    ports:
+      - "127.0.0.1:8306:80"
+    networks:
+      - mynet
+    container_name: web-randomimage
+networks:
+  mynet:
+    external:
+      name: mynet

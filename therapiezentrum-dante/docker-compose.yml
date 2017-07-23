@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  web-therapiezentrum-dante:
+    build: .
+    image: web-therapiezentrum-dante
+    ports:
+      - "127.0.0.1:8304:80"
+    networks:
+      - mynet
+    container_name: web-therapiezentrum-dante
+networks:
+  mynet:
+    external:
+      name: mynet
