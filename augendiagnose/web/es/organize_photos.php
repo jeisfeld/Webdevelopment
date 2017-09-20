@@ -20,9 +20,9 @@ if (isAugendiagnose ()) {
 
 	<p>Con el botón &laquo;Cambiar&raquo; usted puede intercambiar las dos fotos.</p>
 
-	<p>Con el botón &laquo;Otras Fotos&raquo; puede seleccionar una o dos diferentes fotos de la carpeta de entrada, haciendo
-		clic en dos de las fotos mostradas. Aquí, usted también puede eliminar las fotos de la carpeta de entrada, mediante el
-		uso de la menú contextual (pulsación larga en una foto).</p>
+	<p>Con el botón &laquo;Otras Fotos&raquo; puede seleccionar una o dos diferentes fotos de la carpeta de entrada,
+		haciendo clic en dos de las fotos mostradas. Aquí, usted también puede eliminar las fotos de la carpeta de entrada,
+		mediante el uso de la menú contextual (pulsación larga en una foto).</p>
 
 	<p>En &laquo;Seleccionar Nombre&raquo; se puede seleccionar el nombre de la persona de la cual se toman las fotos de
 		los ojos. Aquí si puede seleccionar un nombre existente o introducir un nuevo nombre.</p>
@@ -34,6 +34,8 @@ if (isAugendiagnose ()) {
 
 	<p>Con el botón &laquo;Aceptar&raquo; puede mover el par de fotos de ojos seleccionado a la carpeta de fotos ojo. Las
 		fotos están asociadas con el nombre y fecha determinada y luego pueden ser utilizadas por la aplicación.</p>
+
+	<p>Al tocar en el par de fotos, puede ver las dos fotos en detalle. (Ver también &laquo;Visualizar las fotos&raquo;)</p>
 </body>
 </html>
 <?PHP

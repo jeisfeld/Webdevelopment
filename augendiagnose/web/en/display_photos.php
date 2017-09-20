@@ -56,6 +56,9 @@ include "pageheader.php";
 			src="../drawable/ic_seek_saturation.png" /> and color temperature <img
 			src="../drawable/ic_seek_color_temperature.png" /></li>
 
+		<li>Rotation of the photo (button <img src="../drawable/ic_btn_rotate.png" class="frameless" />)
+		</li>
+
 		<li>
 			<p>
 				Display of iris topographies as overlay (circle button <img src="../drawable/ic_btn_wheel.png" class="frameless" />

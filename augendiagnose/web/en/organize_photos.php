@@ -20,9 +20,9 @@ if (isAugendiagnose ()) {
 
 	<p>With the button &ldquo;Switch&rdquo; you can exchange the two photos.</p>
 
-	<p>With the button &ldquo;Other Photos&rdquo;, you can select one or two different photos from the input folder, by clicking
-		on two of the displayed photos. Here, you may also delete photos from the input folder, by using the context menu
-		(long click on a photo).</p>
+	<p>With the button &ldquo;Other Photos&rdquo;, you can select one or two different photos from the input folder, by
+		clicking on two of the displayed photos. Here, you may also delete photos from the input folder, by using the context
+		menu (long click on a photo).</p>
 
 	<p>At &ldquo;Select Name&rdquo; you can set the name of the person from which the eye photos are taken. Here you can
 		either select an existing name or enter a new name.</p>
@@ -34,6 +34,9 @@ if (isAugendiagnose ()) {
 
 	<p>With the button &ldquo;OK&rdquo; you can move the selected eye photo pair to the eye photo folder. The photos are
 		attached to the given name and date and can then be used by the app.</p>
+
+	<p>By tapping on the pair of photos, you can view the two photos in detail. (See also &ldquo;Visualize the
+		photos&rdquo;</p>
 </body>
 </html>
 <?PHP
