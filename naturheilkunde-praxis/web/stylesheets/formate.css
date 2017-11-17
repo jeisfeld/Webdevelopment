@@ -122,6 +122,10 @@ a {
 	max-width: 78%;
 }
 
+#allcontent h2 {
+	margin-bottom: 1em;
+}
+
 /* Settings for allcontent page */
 @page {
 	margin: 15mm 10mm 20mm 10mm;
