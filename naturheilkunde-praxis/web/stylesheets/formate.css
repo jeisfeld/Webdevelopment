@@ -34,6 +34,7 @@ table {
 td#text.small, td#pict.small {
 	padding-right: 5px;
 }
+
 td#pict.small {
 	padding-left: 0px;
 }
@@ -95,4 +96,46 @@ a {
 
 .indent {
 	padding-left: 1em
+}
+
+#allcontent a.closeImpressum {
+	visibility: hidden;
+}
+
+#allcontent hr.newpage {
+	page-break-before: always;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+#allcontent .maintext img {
+	max-width: 70%;
+}
+
+#allcontent .maintext img.astroimg {
+	max-width: 63%;
+}
+
+#allcontent .maintext img.spirimg {
+	max-width: 78%;
+}
+
+/* Settings for allcontent page */
+@page {
+	margin: 15mm 10mm 20mm 10mm;
+}
+
+/* Settings for small media */
+@media ( max-width : 800px) {
+	h1 {
+		font-size: 24px;
+	}
+	body, p {
+		font-size: 14px;
+	}
+	#text p.footer {
+		font-size: 12px;
+	}
 }
