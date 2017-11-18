@@ -34,7 +34,7 @@ function adjustStyle(width, height) {
 	menuleftframe.css('top', logoheight);
 	menuleftframe.css('height', middleheight);
 
-	bottomframe.css('top', height - 50);
+	bottomframe.css('top', height - bottomheight);
 
 	// background positioning - image is square!
 
