@@ -1,0 +1,457 @@
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
+p, li, a, table {
+	font-family: 'Century Gothic', 'Muli', sans-serif;
+	font-size: 14px;
+}
+
+body#index {
+	background-image: url("../img/blatt_a.jpg");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	margin: 0px;
+}
+
+body {
+	margin: 10px;
+	padding: 0px;
+}
+
+#text.small p, #text.small li, #text.small a, #text.small table {
+	font-size: 12px;
+}
+
+table {
+	border: 0;
+	width: 100%;
+}
+
+#pict {
+	padding-top: 90px;
+	padding-left: 25px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	vertical-align: top;
+}
+
+#pict.pictsub {
+	padding-top: 30px;
+}
+
+#text {
+	padding: 0px;
+	width: 66%;
+	vertical-align: top;
+}
+
+#text.fullwidth {
+	width: 100%;
+}
+
+td#text.small, td#pict.small {
+	padding-right: 5px;
+}
+
+td#pict.small {
+	padding-left: 0px;
+}
+
+html, body, textarea {
+	scrollbar-base-color: #FFCcff;
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-track-color: #ffffFF;
+	scrollbar-shadow-color: #ffccFF;
+	scrollbar-dark-shadow-color: #ffccff;
+	scrollbar-arrow-color: #FFFF99;
+	scrollbar-3d-light-color: #99cc66;
+	scrollbar-highlight-color: #ffffcc
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #BE0696;
+	margin-bottom: 2em;
+	margin-top: 18px;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 18px;
+	margin-bottom: 6px;
+}
+
+h4 {
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-top: 2px;
+}
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+p {
+	margin-bottom: 10px;
+	margin-top: 2px;
+}
+
+ul {
+	padding-left: 2em;
+}
+
+li {
+	margin-bottom: 2px;
+}
+
+a {
+	color: #BE0696;
+}
+
+.indent {
+	padding-left: 1em
+}
+
+/* Settings for left menu */
+
+body#menuleft {
+	overflow: hidden;
+}
+
+#menuleft {
+	position: absolute;
+	top: 15px;
+	left: 10%;
+}
+
+#menuleft.smallwidth {
+	left: 5px;
+}
+
+#menuleft hr {
+	height: 36px;
+	margin: 0px;
+	visibility: hidden;
+}
+
+#menuleft.smallheight hr {
+	height: 4px;
+}
+
+#menuleft a {
+	display: block;
+	background-color: rgba(255, 255, 255, 0);
+	margin-bottom: 5px;
+	padding-left: 30px;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	height: 29px;
+	width: 50px;
+	color: #66695C;
+	border-radius: 8px;
+}
+
+#menuleft.smallheight a {
+	margin-bottom: 0px;
+}
+
+#menuleft a.smalltext {
+	font-size: 14px;
+	height: 25px;
+}
+
+#menuleft a.smallesttext {
+	font-size: 12px;
+	height: 20px;
+}
+
+#menuleft a.chosen, #menuleft a.chosen.highlight {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+#menuleft a span {
+	position: absolute;
+	top: 2px;
+	left: 12px;
+}
+
+#menuleft.smallwidth a span {
+	left: 5px;
+}
+
+#menuleft a.highlight {
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+#menuleft a span.blur {
+	opacity: .9;
+}
+
+/* Settings for top menu */
+
+#menutop {
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+#menutop.smalltext {
+	margin-left: 5px;
+}
+
+#menutop a {
+	margin-right: 30px;
+	text-decoration: none;
+	font-size: 15px;
+	position: relative;
+	height: 22px;
+	color: #000;
+}
+
+#menutop.smalltext a {
+	margin-right: 15px;
+	font-size: 12px;
+}
+
+#menutop a.chosen {
+	font-weight: bolder;
+}
+
+#menutop a span { //
+	transition: all .3s ease;
+}
+
+#menutop a span.highlight {
+	color: #E30FB5;
+}
+
+#menutop a.chosen span.highlight {
+	color: #000;
+}
+
+#menutop a span.blur {
+	opacity: .9;
+}
+
+#menutop div.part {
+	white-space: nowrap;
+	display: inline;
+}
+
+#menutop.tworow div.part {
+	display: block;
+}
+
+/* Settings for dropdown menu */
+
+#menudropdown {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+#menudropdown ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menudropdown li {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+#menudropdown li a {
+	width: 300px;
+	display: block;
+	text-align: center;
+	background-color: #8DA931;
+	height: 35px;
+	line-height: 35px;
+	text-decoration: none;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	color: #000000;
+}
+
+#menudropdown img.icon {
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+}
+
+/* Settings for top logo */
+
+body#toplogo {
+	background-color: #F1F4D9;
+	margin: 0px;
+	padding: 0px;
+}
+
+#toplogo img {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+/* Settings for bottom of page */
+
+body#bottom {
+	margin: 0;
+}
+
+#bottom hr {
+	color: #697F22;
+	background-color: #697F22;
+	border: 0;
+	height: 3;
+	margin-top: 8;
+	margin-bottom: 8;
+}
+
+#bottom body.small hr {
+	height: 2;
+	margin-top: 3;
+	margin-bottom: 3;
+}
+
+#bottom table {
+	border-collapse: collapse;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#bottom tr {
+	margin: 0;
+	padding: 0;
+}
+
+#bottom tr.address {
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 140%;
+}
+
+body#bottom.small tr.address {
+	font-size: 100%;
+}
+
+body#bottom.small tr.address.small {
+	font-size: 80%;
+}
+
+#bottom div#address {
+	text-align: justify;
+}
+
+#bottom div#address div {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	padding: 5px 10px 5px 10px;
+	white-space: nowrap;
+}
+
+body#bottom.small div#address div {
+	padding: 3px 5px 3px 5px;
+}
+
+#bottom div#address:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+#bottom a {
+	color: #000000;
+}
+
+/* Setting for impressum */
+
+body#impressum {
+	background: #fff;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#impressum h2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #e20fb3;
+	margin-bottom: 2em;
+	margin-top: 18px;
+}
+
+#impressum h4 {
+	font-weight: normal;
+}
+
+#impressum table {
+	border: 0;
+}
+
+#impressum tr {
+	vertical-align: text-top;
+}
+
+#impressum td {
+	padding-bottom: 15px;
+}
+
+#impressum ul {
+	margin-top: 0px;
+}
+
+#impressum p.nomargin {
+	margin-bottom: 0px;
+}
+
+/* Settings for allcontent page */
+
+#allcontent a.closeImpressum {
+	visibility: hidden;
+}
+
+#allcontent hr.newpage {
+	page-break-before: always;
+	height: 0px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+#allcontent .maintext img {
+	max-width: 70%;
+}
+
+#allcontent .maintext img.astroimg {
+	max-width: 63%;
+}
+
+#allcontent .maintext img.spirimg {
+	max-width: 78%;
+}
+
+#allcontent h2 {
+	margin-bottom: 1em;
+}
+
+@page {
+	margin: 15mm 10mm 20mm 10mm;
+}
+
+/* Settings for small media */
+@media ( max-width : 800px) {
+	h1 {
+		font-size: 24px;
+	}
+	body, p {
+		font-size: 14px;
+	}
+	#text p.footer {
+		font-size: 12px;
+	}
+}

@@ -55,8 +55,8 @@ $(document).ready(function() {
 
 	a.hover(function() {
 		var t = $(this), s = t.siblings('a');
-		t.find('span').toggleClass('highlight');
-		s.find('span').toggleClass('blur');
+		t.toggleClass('highlight');
+		s.toggleClass('blur');
 	});
 
 	adjustStyle($(window).width(), $(window).height());

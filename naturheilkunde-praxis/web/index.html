@@ -12,25 +12,20 @@
 	content="Naturheilkunde, München, Bioresonanz, Chinesische Medizin, Chinesische Heilmethode, Chinesische Heilkunde, TCM,
 Farblichttherapie, Hakomi, Testung, Zungen- und Pulsdiagnose, Entgiftung, Yin-Yang,
 Schmerztherapie, Ernaehrungsberatung, Naturheilkundliche Stoffwechselregulation, Heilpraktiker">
-<link rel="shortcut icon" href="images/sybille.ico">
+<link rel="shortcut icon" href="img/sybille.ico">
+<link href="stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link href="stylesheets/iframes.css" rel="Stylesheet" type="text/css">
 <script type="text/javascript" src="javascript/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="javascript/resolution.js"></script>
 <script type="text/javascript" src="javascript/analyticstracking.js"></script>
 </head>
-<frameset cols="15%,73%,12%" rows="*" frameborder="NO" border="0" id="outerhframe" framespacing="0">
-	<frame src="left_zebra.html" name="zebra" frameborder="NO">
-	<frameset rows="120,*,95" cols="*" frameborder="NO" border="0" framespacing="0" id="outervframe">
-		<frame src="top_logo.html" name="toplogoframe" scrolling="NO" frameborder="NO" id="toplogoframe">
-		<frameset cols="18%,82%" rows="*" frameborder="NO" id="innerhframe">
-			<frame src="menu_left.html" name="menu" frameborder="NO" scrolling="NO">
-			<frame src="main_page.html" name="main" frameborder="NO">
-		</frameset>
-		<frame src="bottom_online.html" name="bottomonlineframe" frameborder="NO" scrolling="NO" id="bottomonlineframe">
-	</frameset>
-	<frame src="right_empty.html" name="" scrolling="NO" frameborder="NO">
-</frameset>
-<noframes>
-	<body bgcolor="#FFFFFF">
-	</body>
-</noframes>
+<body id="index">
+	<iframe id="toplogoframe" name="toplogoframe" src="top_logo.html" scrolling="no" marginheight="0" marginwidth="0"
+		frameborder="0"></iframe>
+	<iframe id="bottomframe" src="bottom.html" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menuleftframe" src="menu_left.html" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menudropdownframe" src="menu_dropdown.html" name="menudropdown" marginheight="0" marginwidth="0"
+		frameborder="0"></iframe>
+	<iframe id="mainframe" src="main_page.html" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+</body>
 </html>
