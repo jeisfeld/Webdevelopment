@@ -8,23 +8,28 @@ function markChosen(frame, id) {
 			t.addClass('chosen');
 		}
 	}
-	return (t != null && t.html().toLowerCase().match('span'));
+	return (t != null && t.html() != null && t.html().toLowerCase().match('span'));
 }
 
 function adjustStyleSubpage(width, height) {
-	if (width < 500) {
-		$('#text, #pict').addClass('small');
-		$('#text').addClass('fullwidth');
+	if (width < 1000) {
 		$('#pictimg2').css('max-width', Math.round(width / 3));
 		$('#pictimg').hide();
 		$('#pictimg2').show();
+		$('#text').addClass('fullwidth');
 	}
 	else {
-		$('#text, #pict').removeClass('small');
-		$('#text').removeClass('fullwidth');
 		$('#pictimg2').css('max-width', '');
 		$('#pictimg2').hide();
 		$('#pictimg').show();
+		$('#text').removeClass('fullwidth');
+	}
+	
+	if (width < 500) {
+		$('#text, #pict').addClass('small');
+	}
+	else {
+		$('#text, #pict').removeClass('small');
 	}
 }
 
@@ -55,10 +60,10 @@ $(document).ready(function() {
 		markChosen(frameleft, myId);
 
 		if (myId === 'startseite' || myId === 'behandlung') {
-			$(frametop).find("#menutop").show();
+			$(frametop).find("#menutop div.part").show();
 		}
 		else {
-			$(frametop).find("#menutop").hide();
+			$(frametop).find("#menutop div.part").hide();
 		}
 	}
 

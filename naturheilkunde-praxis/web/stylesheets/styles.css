@@ -111,6 +111,39 @@ a {
 	padding-left: 1em
 }
 
+/* Settings for main page */
+
+.startentry {
+	text-align: center;
+}
+
+#startseite {
+	margin: 0px;
+	padding: 0px;
+}
+
+#startseite .centerbox {
+	top: 5px;
+	left: 5px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#startseite p {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+#startseite h1 {
+	margin-bottom: 6px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+}
+
+#startseite h1 a {
+	font-size: 24px;
+}
+
 /* Settings for left menu */
 
 body#menuleft {
@@ -147,7 +180,7 @@ body#menuleft {
 	position: relative;
 	height: 29px;
 	width: 50px;
-	color: #66695C;
+	color: #085B51;
 	border-radius: 8px;
 }
 
@@ -205,7 +238,7 @@ body#menutop {
 	font-size: 17px;
 	position: relative;
 	height: 22px;
-	color: #000;
+	color: #085B51;
 }
 
 #menutop.midtext a {
@@ -230,7 +263,7 @@ body#menutop {
 }
 
 #menutop a.chosen.highlight {
-	color: #000;
+	color: #085B51;
 }
 
 #menutop a span.blur {
@@ -335,6 +368,7 @@ body#bottom {
 #bottom tr.address {
 	background: rgba(255, 255, 255, 0.5);
 	font-size: 140%;
+	color: #0B6F63;
 }
 
 body#bottom.small tr.address {
