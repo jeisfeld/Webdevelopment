@@ -8,6 +8,7 @@ function adjustStyle(width, height) {
 	height = parseInt(height);
 	var mainframe = $('#mainframe');
 	var menuleftframe = $('#menuleftframe');
+	var menutopframe = $('#menutopframe');
 	var menudropdownframe = $('#menudropdownframe');
 	var toplogoframe = $('#toplogoframe');
 	var toplogocontent = toplogoframe.contents().find('#logoimage');
@@ -15,9 +16,12 @@ function adjustStyle(width, height) {
 	var bottomframe = $('#bottomframe');
 	var indexbody = $('#index');
 	var bottombody = bottomframe.contents().find('body');
+	
+	var hidemenu = width < 850; 
 
 	// sizing of top and bottom
 	var bottomheight = 80;
+	var menutopheight = hidemenu ? 60 : 40;
 	
 	if (width > 1000) {
 		var logowidth = 1000;
@@ -27,16 +31,19 @@ function adjustStyle(width, height) {
 	}
 	var logoheight = logowidth * 0.1;
 	
-	var middleheight = height - logoheight - bottomheight;
+	var middleheight = height - logoheight - menutopheight - bottomheight;
+
 	toplogoframe.css('height', logoheight);
 	toplogoframe.css('width', logowidth);
 	toplogoframe.css('left', (width - logowidth)/2);
 
-	mainframe.css('top', logoheight);
+	menutopframe.css('top', logoheight);
+	menutopframe.css('height', menutopheight);
+
+	mainframe.css('top', logoheight + menutopheight);
 	mainframe.css('height', middleheight);
 
-
-	menuleftframe.css('top', logoheight);
+	menuleftframe.css('top', logoheight + menutopheight);
 	menuleftframe.css('height', middleheight);
 
 	bottomframe.css('top', height - bottomheight);
@@ -68,10 +75,10 @@ function adjustStyle(width, height) {
 	}
 
 	// hide menu on narrow screens.
-	if (width < 850) {
+	if (hidemenu) {
 		menuleftframe.hide();
 		bottomframe.hide();
-		mainframe.css('height', height - logoheight);
+		mainframe.css('height', middleheight + bottomheight);
 
 		menudropdownframe.show();
 		menudropdownframe.css('top', logoheight - 24);
@@ -79,6 +86,8 @@ function adjustStyle(width, height) {
 		mainframe.css('width', '100%');
 
 		toplogocontent.css('margin-left', '8%');
+		menutopframe.css('left', '0%');
+		menutopframe.css('width', '100%');
 		
 		// limit image size
 		mainimages.css('max-width', width * 0.5);
@@ -93,6 +102,8 @@ function adjustStyle(width, height) {
 		mainframe.css('width', '79%');
 
 		toplogocontent.css('margin-left', '5%');
+		menutopframe.css('left', '21%');
+		menutopframe.css('width', '79%');
 
 		// limit image size
 		mainimages.css('max-width', width * 0.4);
@@ -132,6 +143,5 @@ $(document).ready(function() {
 	$('#bottomframe').on("load", function() {
 		adjustMainStyle();
 	});
-
 	adjustMainStyle();
 });

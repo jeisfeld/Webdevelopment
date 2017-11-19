@@ -11,7 +11,7 @@ function markChosen(frame, id) {
 	return (t != null && t.html().toLowerCase().match('span'));
 }
 
-function adjustStyle(width, height) {
+function adjustStyleSubpage(width, height) {
 	if (width < 500) {
 		$('#text, #pict').addClass('small');
 		$('#text').addClass('fullwidth');
@@ -29,25 +29,37 @@ function adjustStyle(width, height) {
 }
 
 $(window).resize(function() {
-	adjustStyle($(this).width(), $(this).height());
+	adjustStyleSubpage($(this).width(), $(this).height());
 });
 
 $(document).ready(function() {
 	var myId = $('body').attr('id');
-	var frame, result;
+
+	var result;
+	var frametop = top.menutop.document;
+	var frameleft = top.menu.document;
 
 	// first try in top frame
 	try {
-		frame = top.main.menutop.document;
-		result = markChosen(frame, myId);
+		result = markChosen(frametop, myId);
 	}
 	catch (e) {
 	}
 
 	// otherwise, try in left frame
-	if (!result) {
+	if (result) {
+		markChosen(frameleft, 'therapie');
+	}
+	else {
 		frame = top.menu.document;
-		markChosen(frame, myId);
+		markChosen(frameleft, myId);
+
+		if (myId === 'startseite' || myId === 'therapie') {
+			$(frametop).find("#menutop").show();
+		}
+		else {
+			$(frametop).find("#menutop").hide();
+		}
 	}
 
 	var pictimg2 = $('#pictimg').clone();
@@ -64,7 +76,7 @@ $(document).ready(function() {
 	}
 	$('#pictimg2').hide();
 
-	adjustStyle($(window).width(), $(window).height());
+	adjustStyleSubpage($(window).width(), $(window).height());
 });
 
 // Google Analytics tracking

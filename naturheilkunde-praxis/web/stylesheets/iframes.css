@@ -31,6 +31,17 @@
 	z-index: 3;
 }
 
+#menutopframe {
+	position: absolute;
+	top: 19%;
+	left: 21%;
+	width: 79%;
+	height: 5%;
+	border: 0px;
+	overflow: hidden;
+	z-index: 4;
+}
+
 #menudropdownframe {
 	position: absolute;
 	top: 19%;
@@ -44,10 +55,10 @@
 
 #mainframe {
 	position: absolute;
-	top: 19%;
+	top: 24%;
 	left: 21%;
 	width: 79%;
-	height: 68%;
+	height: 63%;
 	border: 0px;
 	z-index: 5;
 	background: rgba(255, 255, 255, 0.5);

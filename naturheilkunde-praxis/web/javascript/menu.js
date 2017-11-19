@@ -37,8 +37,13 @@ function adjustStyle(width, height) {
 	}
 	if (width < 350) {
 		$('#menutop').addClass('smalltext');
+		$('#menutop').removeClass('midtext');
+	} else if (width < 800) {
+		$('#menutop').addClass('midtext');
+		$('#menutop').removeClass('smalltext');
 	} else {
 		$('#menutop').removeClass('smalltext');
+		$('#menutop').removeClass('midtext');
 	}
 }
 

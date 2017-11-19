@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
 p, li, a, table {
-	font-family: 'Century Gothic', 'Muli', sans-serif;
-	font-size: 14px;
+	font-family: 'Century Gothic', 'Lato', sans-serif;
+	font-size: 16px;
 }
 
 body#index {
@@ -68,9 +68,9 @@ html, body, textarea {
 }
 
 h2 {
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: bold;
-	color: #BE0696;
+	color: #0B6F63;
 	margin-bottom: 2em;
 	margin-top: 18px;
 }
@@ -107,7 +107,7 @@ li {
 }
 
 a {
-	color: #BE0696;
+	color: #0B6F63;
 }
 
 .indent {
@@ -142,7 +142,7 @@ body#menuleft {
 
 #menuleft a {
 	display: block;
-	background-color: rgba(255, 255, 255, 0);
+	background: rgba(255, 255, 255, 0);
 	margin-bottom: 5px;
 	padding-left: 30px;
 	text-decoration: none;
@@ -169,7 +169,7 @@ body#menuleft {
 }
 
 #menuleft a.chosen, #menuleft a.chosen.highlight {
-	background-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 }
 
 #menuleft a span {
@@ -183,7 +183,7 @@ body#menuleft {
 }
 
 #menuleft a.highlight {
-	background-color: rgba(255, 255, 255, 0.25);
+	background: rgba(255, 255, 255, 0.25);
 }
 
 #menuleft a span.blur {
@@ -192,9 +192,10 @@ body#menuleft {
 
 /* Settings for top menu */
 
-#menutop {
+body#menutop {
 	margin-left: 15px;
 	vertical-align: middle;
+	overflow: hidden;
 }
 
 #menutop.smalltext {
@@ -204,15 +205,19 @@ body#menuleft {
 #menutop a {
 	margin-right: 30px;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 17px;
 	position: relative;
 	height: 22px;
 	color: #000;
 }
 
+#menutop.midtext a {
+	margin-right: 12px;
+}
+
 #menutop.smalltext a {
-	margin-right: 15px;
-	font-size: 12px;
+	margin-right: 12px;
+	font-size: 13px;
 }
 
 #menutop a.chosen {
@@ -223,11 +228,11 @@ body#menuleft {
 	transition: all .3s ease;
 }
 
-#menutop a span.highlight {
-	color: #E30FB5;
+#menutop a.highlight {
+	color: #0B6F63;
 }
 
-#menutop a.chosen span.highlight {
+#menutop a.chosen.highlight {
 	color: #000;
 }
 
@@ -331,7 +336,7 @@ body#bottom {
 }
 
 #bottom tr.address {
-	background-color: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 	font-size: 140%;
 }
 
@@ -357,12 +362,6 @@ body#bottom.small tr.address.small {
 
 body#bottom.small div#address div {
 	padding: 3px 5px 3px 5px;
-}
-
-#bottom div#address:after {
-	content: '';
-	width: 100%;
-	display: inline-block;
 }
 
 #bottom a {
