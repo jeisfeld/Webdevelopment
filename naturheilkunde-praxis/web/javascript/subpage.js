@@ -48,13 +48,13 @@ $(document).ready(function() {
 
 	// otherwise, try in left frame
 	if (result) {
-		markChosen(frameleft, 'therapie');
+		markChosen(frameleft, 'behandlung');
 	}
 	else {
 		frame = top.menu.document;
 		markChosen(frameleft, myId);
 
-		if (myId === 'startseite' || myId === 'therapie') {
+		if (myId === 'startseite' || myId === 'behandlung') {
 			$(frametop).find("#menutop").show();
 		}
 		else {
