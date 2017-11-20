@@ -26,7 +26,7 @@ function adjustStyleSubpage(width, height) {
 	}
 
 	$('#pict iframe').css('max-width', Math.round(width / 2));
-	$('#pict iframe').css('max-height', Math.round(height - 150));
+	$('#pict iframe').css('max-height', Math.max(200, height - 150));
 
 	if (width < 500) {
 		$('#text, #pict').addClass('small');

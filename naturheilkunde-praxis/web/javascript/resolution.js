@@ -22,7 +22,7 @@ function adjustStyle(width, height) {
 
 	// sizing of top and bottom
 	var bottomheight = 80;
-	var menutopheight = hidemenu ? 60 : 40;
+	var menutopheight = hidemenu ? 0 : 40;
 
 	var logowidth = width > 1000 ? 1000 : width;
 

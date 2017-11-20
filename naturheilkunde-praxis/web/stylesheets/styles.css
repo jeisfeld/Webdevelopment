@@ -18,7 +18,7 @@ body {
 }
 
 #text.small p, #text.small li, #text.small a, #text.small table, #pict.small a {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 table {
@@ -321,7 +321,7 @@ body#menutop {
 }
 
 #menudropdown li a {
-	width: 300px;
+	width: 200px;
 	display: block;
 	text-align: center;
 	background-color: #8DA931;
@@ -331,6 +331,14 @@ body#menutop {
 	font-size: 16px;
 	border: 1px solid #ccc;
 	color: #000000;
+}
+
+#menudropdown li a.sublink {
+	background-color: #A9BB6F;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	width: 220px;
 }
 
 #menudropdown img.icon {
