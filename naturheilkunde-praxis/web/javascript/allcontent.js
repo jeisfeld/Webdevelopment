@@ -16,18 +16,20 @@ function loadPage() {
 		pagesLoaded += 1;
 
 		if (pagesLoaded == totalPages) {
-			var images = $(document).find('img');
+			// In contact page, replace iframe by fixed map, as iframe may load very late when hidden.
+			$(document).find('#pict.googlemaps').html('<img src="../img/screenshot_google_maps.jpg">');
+
+			images = $(document).find('img');
 			totalImages = images.size();
 
 			images.each(function() {
 				if (this.complete) {
 					imageLoaded.call(this);
-				} else {
+				}
+				else {
 					$(this).one('load', imageLoaded);
 				}
 			});
-
-			totalImages = $(document).find('img').size();
 		}
 	});
 }

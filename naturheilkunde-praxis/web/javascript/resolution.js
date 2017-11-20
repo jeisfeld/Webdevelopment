@@ -96,6 +96,15 @@ function adjustStyle(width, height) {
 		popupframe.css('left', 0);
 		popupframe.css('width', '100%');
 		popupframe.css('border', 'none');
+		
+		
+		var menudropdowncontent = menudropdownframe.contents().find('#menudropdown');
+		if(middleheight < 430) {
+			menudropdowncontent.addClass('smallheight');
+		}
+		else {
+			menudropdowncontent.removeClass('smallheight');
+		}
 	}
 	else {
 		menuleftframe.show();

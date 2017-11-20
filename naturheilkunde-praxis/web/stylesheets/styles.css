@@ -333,12 +333,22 @@ body#menutop {
 	color: #000000;
 }
 
+#menudropdown.smallheight li a {
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
 #menudropdown li a.sublink {
 	background-color: #A9BB6F;
 	height: 25px;
 	line-height: 25px;
-	font-size: 14px;
 	width: 220px;
+}
+
+#menudropdown.smallheight li a.sublink {
+	height: 18px;
+	line-height: 18px;
 }
 
 #menudropdown img.icon {
@@ -475,8 +485,8 @@ a.closeImpressum {
 	border: 0px;
 }
 
-#allcontent #pict {
-	max-width: 50%;
+#allcontent #pict img {
+	max-width: 100%;
 }
 
 #allcontent h2 {
