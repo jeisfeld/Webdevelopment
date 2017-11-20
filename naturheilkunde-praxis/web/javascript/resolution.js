@@ -14,6 +14,7 @@ function adjustStyle(width, height) {
 	var toplogocontent = toplogoframe.contents().find('#logoimage');
 	var mainimages = mainframe.contents().find('#text img');
 	var bottomframe = $('#bottomframe');
+	var popupframe = $('#popupframe');
 	var indexbody = $('#index');
 	var bottombody = bottomframe.contents().find('body');
 
@@ -89,6 +90,12 @@ function adjustStyle(width, height) {
 		// limit image size
 		mainimages.css('max-width', width * 0.5);
 
+		// impressum appears on main window
+		popupframe.css('top', logoheight);
+		popupframe.css('height', height - logoheight);
+		popupframe.css('left', 0);
+		popupframe.css('width', '100%');
+		popupframe.css('border', 'none');
 	}
 	else {
 		menuleftframe.show();
@@ -105,6 +112,13 @@ function adjustStyle(width, height) {
 
 		// limit image size
 		mainimages.css('max-width', width * 0.4);
+
+		// impressum appears in popupframe
+		popupframe.css('top', height / 4);
+		popupframe.css('height', height / 2);
+		popupframe.css('left', '25%');
+		popupframe.css('width', '50%');
+		popupframe.css('border', '2px solid black');
 	}
 }
 

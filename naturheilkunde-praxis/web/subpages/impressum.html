@@ -6,12 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="../img/sybille.ico">
+<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../javascript/impressum.js"></script>
 <script type="text/javascript" src="../javascript/analyticstracking.js"></script>
 </head>
 
 <body id="impressum">
-	<h2>Impressum</h2>
-	<table summary="Impressum">
+	<table width="100%" id="impressumheader">
+		<tr>
+			<td>
+				<h2>Impressum</h2>
+			</td>
+			<td align="right" valign="top"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
+		</tr>
+	</table>
+
+	<table summary="Impressum" id="impressumtable">
 		<tr>
 			<td>Angaben gemäß §5 TMG:<br>(verantwortlich für Inhalt des Angebotes)
 			</td>
@@ -39,6 +49,10 @@
 		<tr>
 			<td>Technische Umsetzung:</td>
 			<td>Jörg Eisfeld - webdevelopment@jeisfeld.de</td>
+		</tr>
+		<tr>
+			<td>Bildreferenz:</td>
+			<td>Die Bilder, soweit nicht selbst erstellt, sind erworben von fotalia.com.</td>
 		</tr>
 		<tr>
 			<td width="20%">Rechtshinweis:</td>
@@ -79,6 +93,12 @@
 					für mehr Details.
 				</p>
 			</td>
+
+		</tr>
+	</table>
+	<table width="100%">
+		<tr>
+			<td align="right" valign="top"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
 		</tr>
 	</table>
 </body>
