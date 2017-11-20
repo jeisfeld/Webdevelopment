@@ -16,26 +16,34 @@ function adjustStyle(width, height) {
 	var bottomframe = $('#bottomframe');
 	var indexbody = $('#index');
 	var bottombody = bottomframe.contents().find('body');
-	
-	var hidemenu = width < 850; 
+
+	var hidemenu = width < 850;
 
 	// sizing of top and bottom
 	var bottomheight = 80;
 	var menutopheight = hidemenu ? 60 : 40;
-	
-	if (width > 1000) {
-		var logowidth = 1000;
+
+	var logowidth = width > 1000 ? 1000 : width;
+
+	if (width > height) {
+		toplogocontent.attr('src', 'img/logo.png');
+		var logoheight = logowidth * 0.1;
 	}
 	else {
-		var logowidth = width;
+		toplogocontent.attr('src', 'img/logo_narrow.png');
+		var logoheight = logowidth * 0.13;
 	}
-	var logoheight = logowidth * 0.1;
-	
+
 	var middleheight = height - logoheight - menutopheight - bottomheight;
 
 	toplogoframe.css('height', logoheight);
 	toplogoframe.css('width', logowidth);
-	toplogoframe.css('left', (width - logowidth)/2);
+	if (width > 1300 && !hidemenu) {
+		toplogoframe.css('left', '21%');
+	}
+	else {
+		toplogoframe.css('left', (width - logowidth) / 2);
+	}
 
 	menutopframe.css('top', logoheight);
 	menutopframe.css('height', menutopheight);
@@ -53,7 +61,8 @@ function adjustStyle(width, height) {
 		var offset = (width - height) / 2
 		var positionString = '' + offset + 'px 0px';
 		var sizeString = '' + height + 'px ' + height + 'px';
-	} else {
+	}
+	else {
 		var offset = (height - width) / 2
 		var positionString = '0px ' + offset + 'px';
 		var sizeString = '' + width + 'px ' + width + 'px';
@@ -61,18 +70,6 @@ function adjustStyle(width, height) {
 
 	indexbody.css('background-position', positionString);
 	indexbody.css('background-size', sizeString);
-
-	// footer text sizing
-	if (width < 620) {
-		bottombody.addClass('smaller');
-		bottombody.removeClass('small');
-	} else if (width < 800) {
-		bottombody.addClass('small');
-		bottombody.removeClass('smaller');
-	} else {
-		bottombody.removeClass('small');
-		bottombody.removeClass('smaller');
-	}
 
 	// hide menu on narrow screens.
 	if (hidemenu) {
@@ -85,14 +82,15 @@ function adjustStyle(width, height) {
 		mainframe.css('left', 0);
 		mainframe.css('width', '100%');
 
-		toplogocontent.css('margin-left', '8%');
+		toplogocontent.css('margin-left', '9%');
 		menutopframe.css('left', '0%');
 		menutopframe.css('width', '100%');
-		
+
 		// limit image size
 		mainimages.css('max-width', width * 0.5);
 
-	} else {
+	}
+	else {
 		menuleftframe.show();
 		bottomframe.show();
 		mainframe.css('height', middleheight);

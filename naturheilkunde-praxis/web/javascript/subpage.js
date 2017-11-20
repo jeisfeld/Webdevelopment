@@ -40,32 +40,8 @@ $(window).resize(function() {
 $(document).ready(function() {
 	var myId = $('body').attr('id');
 
-	var result;
-	var frametop = top.menutop.document;
-	var frameleft = top.menu.document;
-
-	// first try in top frame
-	try {
-		result = markChosen(frametop, myId);
-	}
-	catch (e) {
-	}
-
-	// otherwise, try in left frame
-	if (result) {
-		markChosen(frameleft, 'behandlung');
-	}
-	else {
-		frame = top.menu.document;
-		markChosen(frameleft, myId);
-
-		if (myId === 'startseite' || myId === 'behandlung') {
-			$(frametop).find("#menutop div.part").show();
-		}
-		else {
-			$(frametop).find("#menutop div.part").hide();
-		}
-	}
+	markChosen(top.menutop.document, myId);
+	markChosen(top.menu.document, myId);
 
 	var pictimg2 = $('#pictimg').clone();
 	pictimg2.attr('id', 'pictimg2');
