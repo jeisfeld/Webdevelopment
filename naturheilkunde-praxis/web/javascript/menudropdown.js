@@ -1,15 +1,15 @@
 function showMenu() {
 	var frame = $('#menudropdownframe', parent.document);
 	frame.css('width', 220);
-	frame.css('height', $('#menudropdown').hasClass('smallheight') ? 285 : 430);
+	frame.css('height', $('#menudropdown').hasClass('smallheight') ? 295 : 440);
 	$('#menuitems').slideDown();
 }
 
 function hideMenu() {
 	var frame = $('#menudropdownframe', parent.document);
 
-	frame.css('width', 30);
-	frame.css('height', 30);
+	frame.css('width', 60);
+	frame.css('height', 40);
 
 	$('#menuitems').hide();
 }

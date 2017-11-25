@@ -79,7 +79,7 @@ function adjustStyle(width, height) {
 		mainframe.css('height', middleheight + bottomheight);
 
 		menudropdownframe.show();
-		menudropdownframe.css('top', logoheight - 24);
+		menudropdownframe.css('top', logoheight - 34);
 		mainframe.css('left', 0);
 		mainframe.css('width', '100%');
 
