@@ -32,8 +32,19 @@ table {
 	padding-top: 85px;
 	padding-left: 25px;
 	padding-right: 5px;
-	padding-bottom: 0;
+	padding-bottom: 5px;;
 	vertical-align: top;
+}
+
+#pict.fullheight {
+	padding-top: 5px;
+	vertical-align: middle;
+}
+
+.pictimgfloat {
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 5px;
 }
 
 #text {
@@ -149,6 +160,7 @@ a {
 #startseite h1 a {
 	font-size: 24px;
 }
+
 
 /* Settings for left menu */
 

@@ -87,9 +87,6 @@ function adjustStyle(width, height) {
 		menutopframe.css('left', '0%');
 		menutopframe.css('width', '100%');
 
-		// limit image size
-		mainimages.css('max-width', width * 0.5);
-
 		// impressum appears on main window
 		popupframe.css('top', logoheight);
 		popupframe.css('height', height - logoheight);
@@ -118,9 +115,6 @@ function adjustStyle(width, height) {
 		toplogocontent.css('margin-left', '5%');
 		menutopframe.css('left', '21%');
 		menutopframe.css('width', '79%');
-
-		// limit image size
-		mainimages.css('max-width', width * 0.4);
 
 		// impressum appears in popupframe
 		popupframe.css('top', height / 4);
