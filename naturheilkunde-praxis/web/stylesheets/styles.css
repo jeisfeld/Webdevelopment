@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
-p, li, a, table {
+p, li, a, table, h3 {
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 }
@@ -26,7 +26,8 @@ table {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	border-collapse: collapse;}
+	border-collapse: collapse;
+}
 
 #pict {
 	padding-top: 85px;
@@ -124,12 +125,11 @@ a {
 }
 
 /* Settings for main page */
-
 #startseite .centerbox .startentry {
 	text-align: center;
 }
 
-#startseite:not(.mobile) {
+#startseite:not (.mobile ) {
 	margin: 0px;
 	padding: 0px;
 }
@@ -168,7 +168,6 @@ a {
 }
 
 /* Settings for left menu */
-
 body#menuleft {
 	overflow: hidden;
 }
@@ -244,7 +243,6 @@ body#menuleft {
 }
 
 /* Settings for top menu */
-
 body#menutop {
 	margin-left: 15px;
 	vertical-align: middle;
@@ -318,7 +316,6 @@ body#menutop {
 }
 
 /* Settings for dropdown menu */
-
 #menudropdown {
 	overflow: hidden;
 	margin: 0;
@@ -356,14 +353,14 @@ body#menutop {
 	font-size: 14px;
 }
 
-#menudropdown li a.sublink {
+#menudropdown li.sublink a {
 	background-color: #A9BB6F;
 	height: 25px;
 	line-height: 25px;
 	width: 220px;
 }
 
-#menudropdown.smallheight li a.sublink {
+#menudropdown.smallheight li.sublink a {
 	height: 18px;
 	line-height: 18px;
 }
@@ -376,8 +373,15 @@ body#menutop {
 	overflow: hidden;
 }
 
-/* Settings for top logo */
+#endmenu a {
+	font-size: 14px;
+}
 
+#endmenu li.sublink {
+	margin-left: 20px;
+}
+
+/* Settings for top logo */
 body#toplogo {
 	background-color: #F1F4D9;
 	margin: 0px;
@@ -391,7 +395,6 @@ body#toplogo {
 }
 
 /* Settings for bottom of page */
-
 body#bottom {
 	margin: 0;
 }
@@ -449,7 +452,6 @@ body#bottom {
 }
 
 /* Setting for impressum */
-
 body#impressum {
 	background: #fffff;
 }
@@ -472,7 +474,8 @@ body#impressum {
 	border: 1px solid black;
 }
 
-#impressumtable p, #impressumtable p, #impressumtable li, #impressumtable a, #impressumtable h4 {
+#impressumtable p, #impressumtable p, #impressumtable li, #impressumtable a,
+	#impressumtable h4 {
 	font-size: 10px;
 	margin-top: 0pt;
 }
@@ -491,7 +494,6 @@ a.closeImpressum {
 }
 
 /* Settings for allcontent page */
-
 #allcontent a.closeImpressum {
 	visibility: hidden;
 }

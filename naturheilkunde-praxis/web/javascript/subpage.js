@@ -25,6 +25,7 @@ function adjustStyleSubpage(width, height) {
 		$('#startpagetable').hide();
 		$('#startpagetablemobile').show();
 		$('#startseite').addClass('mobile');
+		$('#endmenu').show();
 	}
 	else {
 		$('#pictimg').css('max-width', Math.round(width / 3));
@@ -39,6 +40,7 @@ function adjustStyleSubpage(width, height) {
 		$('#startpagetable').show();
 		$('#startpagetablemobile').hide();
 		$('#startseite').removeClass('mobile');
+		$('#endmenu').hide();
 	}
 
 	$('#pict iframe').css('max-width', Math.round(width / 2));
@@ -51,6 +53,13 @@ function adjustStyleSubpage(width, height) {
 		$('#text, #pict').removeClass('small');
 	}
 
+}
+
+function showImpressum() {
+	$("#popupframe", window.parent.document).css('visibility', 'visible');
+	$("#popupframe", window.parent.document).css('z-index', '20');
+	var url = $("#popupframe", window.parent.document).attr('data-link');
+	$("#popupframe", window.parent.document).attr('src', url);
 }
 
 $(window).resize(
@@ -81,6 +90,15 @@ $(document).ready(
 
 			$('#text h2').after(pict2);
 			$('#pictimg2').hide();
+
+			$('#subpage, #startpagetablemobile').after('<div id="endmenu"></div>');
+			$('#endmenu').load('../menu_dropdown.html #menuitems', function() {
+				$('#endmenu a').each(function() {
+					$(this).attr('href', $(this).attr('href').replace('subpages/', ''));
+					console.log($(this).attr('href'));
+				});
+				$('#endmenu').prepend('<hr><h3>Inhalt</h3>');
+			});
 
 			adjustStyleSubpage($("#mainframe", window.parent.document).width(), $("#mainframe", window.parent.document)
 					.height());
