@@ -22,9 +22,6 @@ function adjustStyleSubpage(width, height) {
 		$('#text').addClass('fullwidth');
 		$('.centerbox').css('width', '');
 		$('.centerbox').css('height', '');
-		$('#startpagetable').hide();
-		$('#startpagetablemobile').show();
-		$('#startseite').addClass('mobile');
 		$('#startseite').removeClass('desktop');
 		$('#endmenu').show();
 	}
@@ -38,9 +35,6 @@ function adjustStyleSubpage(width, height) {
 		$('#startpagetable').addClass('centerbox');
 		$('.centerbox').css('width', width);
 		$('.centerbox').css('height', height - 10);
-		$('#startpagetable').show();
-		$('#startpagetablemobile').hide();
-		$('#startseite').removeClass('mobile');
 		$('#startseite').addClass('desktop');
 		$('#endmenu').hide();
 	}
@@ -74,14 +68,6 @@ $(document).ready(
 		function() {
 			var myId = $('body').attr('id');
 
-			// Create special format for start page mobile
-			if (myId === 'startseite') {
-				$('#startpagetablemobile #text').append($('#startpagetable .startentry').contents().clone());
-				$('#startpagetablemobile #text').find('h1').replaceWith(function() {
-					return '<h3>' + $(this).html() + '</h3>';
-				});
-			}
-
 			markChosen(top.menutop.document, myId);
 			markChosen(top.menu.document, myId);
 
@@ -93,7 +79,7 @@ $(document).ready(
 			$('#text h2').after(pict2);
 			$('#pictimg2').hide();
 
-			$('#subpage, #startpagetablemobile').after('<div id="endmenu"></div>');
+			$('#subpage').after('<div id="endmenu"></div>');
 			$('#endmenu').load('../navigation/menu_dropdown.html #menuitems', function() {
 				$('#endmenu').prepend('<hr><h3>Inhalt</h3>');
 			});

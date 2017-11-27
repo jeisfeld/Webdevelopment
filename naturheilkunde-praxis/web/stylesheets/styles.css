@@ -1,7 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
-p, li, a, table, h3 {
+* {
 	font-family: 'Lato', sans-serif;
+}
+
+p, li, a, table {
 	font-size: 16px;
 }
 
@@ -49,6 +52,10 @@ table {
 	vertical-align: top;
 }
 
+#startseite.desktop #text h3 + p {
+	margin-left: 1em;
+}
+
 #text.fullwidth {
 	width: 100%;
 }
@@ -59,17 +66,6 @@ td#text.small, td#pict.small {
 
 td#pict.small {
 	padding-left: 0px;
-}
-
-html, body, textarea {
-	scrollbar-base-color: #FFCcff;
-	scrollbar-face-color: #FFFFFF;
-	scrollbar-track-color: #ffffFF;
-	scrollbar-shadow-color: #ffccFF;
-	scrollbar-dark-shadow-color: #ffccff;
-	scrollbar-arrow-color: #FFFF99;
-	scrollbar-3d-light-color: #99cc66;
-	scrollbar-highlight-color: #ffffcc
 }
 
 h2 {
@@ -122,49 +118,6 @@ a {
 
 .nomargin {
 	margin: 0px;
-}
-
-/* Settings for main page */
-#startseite .centerbox .startentry {
-	text-align: center;
-}
-
-#startseite.desktop {
-	margin: 0px;
-	padding: 0px;
-}
-
-#startseite .centerbox {
-	top: 5px;
-	left: 5px;
-	margin: 0px;
-	padding: 0px;
-}
-
-#startseite p {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-
-#startseite h1 {
-	margin-bottom: 6px;
-	margin-top: 0px;
-	padding-bottom: 0px;
-}
-
-#startseite .centerbox h1 a {
-	font-size: 24px;
-}
-
-#startpagetable .fullheight {
-	padding-top: 5px;
-	vertical-align: middle;
-}
-
-#startpagetablemobile {
-	display: none;
 }
 
 /* Settings for left menu */
