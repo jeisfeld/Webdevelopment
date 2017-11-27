@@ -27,11 +27,11 @@ function adjustStyle(width, height) {
 	var logowidth = width > 1000 ? 1000 : width;
 
 	if (width > height) {
-		toplogocontent.attr('src', 'img/logo.png');
+		toplogocontent.attr('src', '../img/logo.png');
 		var logoheight = logowidth * 0.1;
 	}
 	else {
-		toplogocontent.attr('src', 'img/logo_narrow.png');
+		toplogocontent.attr('src', '../img/logo_narrow.png');
 		var logoheight = logowidth * 0.13;
 	}
 

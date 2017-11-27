@@ -25,6 +25,7 @@ function adjustStyleSubpage(width, height) {
 		$('#startpagetable').hide();
 		$('#startpagetablemobile').show();
 		$('#startseite').addClass('mobile');
+		$('#startseite').removeClass('desktop');
 		$('#endmenu').show();
 	}
 	else {
@@ -40,6 +41,7 @@ function adjustStyleSubpage(width, height) {
 		$('#startpagetable').show();
 		$('#startpagetablemobile').hide();
 		$('#startseite').removeClass('mobile');
+		$('#startseite').addClass('desktop');
 		$('#endmenu').hide();
 	}
 
@@ -92,11 +94,7 @@ $(document).ready(
 			$('#pictimg2').hide();
 
 			$('#subpage, #startpagetablemobile').after('<div id="endmenu"></div>');
-			$('#endmenu').load('../menu_dropdown.html #menuitems', function() {
-				$('#endmenu a').each(function() {
-					$(this).attr('href', $(this).attr('href').replace('subpages/', ''));
-					console.log($(this).attr('href'));
-				});
+			$('#endmenu').load('../navigation/menu_dropdown.html #menuitems', function() {
 				$('#endmenu').prepend('<hr><h3>Inhalt</h3>');
 			});
 
