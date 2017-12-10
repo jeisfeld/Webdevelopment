@@ -80,8 +80,7 @@ function adjustStyle(width, height) {
 
 		menudropdownframe.show();
 		menudropdownframe.css('top', logoheight - 34);
-		mainframe.css('left', 0);
-		mainframe.css('width', '100%');
+		mainframe.addClass('mobile');
 
 		toplogocontent.css('margin-left', '9%');
 		menutopframe.css('left', '0%');
@@ -109,8 +108,7 @@ function adjustStyle(width, height) {
 		mainframe.css('height', middleheight);
 
 		menudropdownframe.hide();
-		mainframe.css('left', '21%');
-		mainframe.css('width', '79%');
+		mainframe.removeClass('mobile');
 
 		toplogocontent.css('margin-left', '5%');
 		menutopframe.css('left', '21%');

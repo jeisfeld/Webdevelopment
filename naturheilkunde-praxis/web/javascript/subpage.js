@@ -14,16 +14,12 @@ function markChosen(frame, id) {
 function adjustStyleSubpage(width, height) {
 	var isStartpage = $('body').attr('id') === 'startseite' ? true : false;
 
-	if (width < (isStartpage ? 670 : 1000)) {
+	if (width < 1000) {
 		$('#pictimg2').css('max-width', Math.round(width * 0.4));
 		$('#pictimg').css('max-width', '');
 		$('#pictimg').hide();
 		$('#pictimg2').show();
 		$('#text').addClass('fullwidth');
-		$('.centerbox').css('width', '');
-		$('.centerbox').css('height', '');
-		$('#startseite').removeClass('desktop');
-		$('#endmenu').show();
 	}
 	else {
 		$('#pictimg').css('max-width', Math.round(width / 3));
@@ -32,9 +28,13 @@ function adjustStyleSubpage(width, height) {
 		$('#pictimg2').hide();
 		$('#pictimg').show();
 		$('#text').removeClass('fullwidth');
-		$('#startpagetable').addClass('centerbox');
-		$('.centerbox').css('width', width);
-		$('.centerbox').css('height', height - 10);
+	}
+
+	if ($('#mainframe', window.parent.document).hasClass('mobile')) {
+		$('#startseite').removeClass('desktop');
+		$('#endmenu').show();
+	}
+	else {
 		$('#startseite').addClass('desktop');
 		$('#endmenu').hide();
 	}
@@ -48,7 +48,6 @@ function adjustStyleSubpage(width, height) {
 	else {
 		$('#text, #pict').removeClass('small');
 	}
-
 }
 
 function showImpressum() {
@@ -60,6 +59,10 @@ function showImpressum() {
 
 $(window).resize(
 		function() {
+			if($("#allcontent", window.parent.document)) {
+				return;
+			}
+
 			adjustStyleSubpage($("#mainframe", window.parent.document).width(), $("#mainframe", window.parent.document)
 					.height());
 		});
@@ -83,7 +86,7 @@ $(document).ready(
 			$('#endmenu').load('../navigation/menu_dropdown.html #menuitems', function() {
 				$('#endmenu').prepend('<hr><h3>Inhalt</h3>');
 			});
-
+			
 			adjustStyleSubpage($("#mainframe", window.parent.document).width(), $("#mainframe", window.parent.document)
 					.height());
 		});

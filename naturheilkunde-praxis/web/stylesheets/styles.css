@@ -4,8 +4,30 @@
 	font-family: 'Lato', sans-serif;
 }
 
-p, li, a, table {
+body, p, li, a, table {
 	font-size: 16px;
+}
+
+/* Text colors */
+body, p, li, a, table {
+	color: #055326;
+}
+
+h2, a, #bottom tr.address {
+	color: #0B6F63;
+}
+
+#menuleft a, #menutop a, #menudropdown li a, #bottom a {
+	color: #085B51;
+}
+
+#impressum p, #impressum a.closeImpressum, #allcontent p {
+	color: #000000;
+}
+
+a {
+	text-decoration: none;
+	box-shadow: inset 0 0px 0 black, inset 0 -1px 0 rgba(5, 83, 38, 0.3)
 }
 
 body#index {
@@ -52,7 +74,7 @@ table {
 	vertical-align: top;
 }
 
-#startseite.desktop #text h3 + p {
+#startseite.desktop #text h3+p {
 	margin-left: 1em;
 }
 
@@ -71,7 +93,6 @@ td#pict.small {
 h2 {
 	font-size: 20px;
 	font-weight: bold;
-	color: #0B6F63;
 	margin-bottom: 2em;
 	margin-top: 18px;
 }
@@ -106,10 +127,6 @@ ul {
 
 li {
 	margin-bottom: 2px;
-}
-
-a {
-	color: #0B6F63;
 }
 
 .indent {
@@ -151,11 +168,11 @@ body#menuleft {
 	margin-bottom: 5px;
 	padding-left: 30px;
 	text-decoration: none;
+	box-shadow: none;
 	font-size: 18px;
 	position: relative;
 	height: 29px;
 	width: 50px;
-	color: #085B51;
 	border-radius: 8px;
 }
 
@@ -214,10 +231,10 @@ body#menutop {
 	padding-top: 5px;
 	margin-right: 20px;
 	text-decoration: none;
+	box-shadow: none;
 	font-size: 17px;
 	position: relative;
 	height: 22px;
-	color: #085B51;
 	border-radius: 8px;
 }
 
@@ -295,9 +312,9 @@ body#menutop {
 	height: 35px;
 	line-height: 35px;
 	text-decoration: none;
+	box-shadow: none;
 	font-size: 16px;
 	border: 1px solid #ccc;
-	color: #000000;
 }
 
 #menudropdown.smallheight li a {
@@ -353,8 +370,6 @@ body#bottom {
 }
 
 #bottom hr {
-	color: #697F22;
-	background-color: #697F22;
 	border: 0;
 	height: 3;
 	margin-top: 8;
@@ -376,7 +391,6 @@ body#bottom {
 #bottom tr.address {
 	background: rgba(255, 255, 255, 0.5);
 	font-size: 140%;
-	color: #0B6F63;
 }
 
 #bottom div#address {
@@ -398,10 +412,6 @@ body#bottom {
 	content: '';
 	width: 100%;
 	display: inline-block;
-}
-
-#bottom a {
-	color: #000000;
 }
 
 /* Setting for impressum */
@@ -475,7 +485,7 @@ a.closeImpressum {
 	h1 {
 		font-size: 24px;
 	}
-	body, p {
+	body, p, a, li {
 		font-size: 14px;
 	}
 	#text p.footer {
