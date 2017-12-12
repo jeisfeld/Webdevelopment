@@ -59,7 +59,7 @@ function showImpressum() {
 
 $(window).resize(
 		function() {
-			if($("#allcontent", window.parent.document)) {
+			if ($("#allcontent", window.parent.document).size() > 0) {
 				return;
 			}
 
@@ -86,7 +86,7 @@ $(document).ready(
 			$('#endmenu').load('../navigation/menu_dropdown.html #menuitems', function() {
 				$('#endmenu').prepend('<hr><h3>Inhalt</h3>');
 			});
-			
+
 			adjustStyleSubpage($("#mainframe", window.parent.document).width(), $("#mainframe", window.parent.document)
 					.height());
 		});
