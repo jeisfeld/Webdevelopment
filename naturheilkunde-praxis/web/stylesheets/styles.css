@@ -33,7 +33,8 @@ a {
 body#index {
 	background-image: url("../img/blatt_a.jpg");
 	background-repeat: no-repeat;
-	background-position: 0px 0px;
+	background-position: center;
+	background-size: cover;
 	margin: 0px;
 }
 
