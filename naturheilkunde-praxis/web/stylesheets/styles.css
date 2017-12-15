@@ -31,6 +31,7 @@ a {
 }
 
 body#index {
+	background-color: #9EBE8D;
 	background-image: url("../img/blatt_a.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
