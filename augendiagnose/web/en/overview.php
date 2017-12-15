@@ -52,7 +52,9 @@ if (isAugendiagnose ()) {
 		As further alternative, you may take pictures directly from the app with the device camera. This will normally not
 		give photos in adequate quality, but it serves as an alternative to a professional camera, in particular if you use a
 		macro lens such as the
-		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2</a>
+		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/miniris-eng" target="_blank">Miniris-2</a>
+		or
+		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/iricel-eng" target="_blank">Iricel</a>
 		.
 	</p>
 
@@ -104,8 +106,10 @@ else {
 	<p>
 		This App has the purpose to support the capturing and visualization of iris photographs on an Android device, in order
 		to do medical iris diagnosis. It is optimized for the use with the
-		<a href="https://sites.google.com/site/irisocamera/iriso-english" target="_blank">Miniris-2 attachment</a>
-		.
+		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/miniris-eng" target="_blank">Miniris-2</a>
+		or
+		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/iricel-eng" target="_blank">Iricel</a>
+		attachment .
 	</p>
 
 	<h3>Key Features</h3>
