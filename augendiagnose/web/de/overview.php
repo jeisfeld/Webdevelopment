@@ -56,9 +56,9 @@ if (isAugendiagnose ()) {
 		Als weitere Alternative können Sie auch Fotos direkt aus der App heraus mit der Geräte-Kamera aufnehmen. Dies wird
 		normalerweise nicht zu Fotos in ausreichender Qualität führen, ist aber eine Ersatzlösung zu einer professionellen
 		Kamera, insbesondere dann, wenn Sie eine Makro-Linse wie das
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/miniris-eng" target="_blank">Miniris-2</a>
+		<a href="https://sites.google.com/view/irisocamera/home/english/miniris-eng" target="_blank">Miniris-2</a>
 		oder
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/iricel-eng" target="_blank">Iricel</a>
+		<a href="https://sites.google.com/view/irisocamera/home/english/iricell-eng" target="_blank">Iricell</a>
 		einsetzen.
 	</p>
 
@@ -108,9 +108,9 @@ else {
 	<p>
 		Diese App dient dazu, Fotografien von Augen anzufertigen, sie im Detail anzuschauen und zu vergleichen, im Rahmen der
 		medizinischen Irisdiagnose. Sie ist für die Nutzung mit dem Zubehör
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/miniris-eng" target="_blank">Miniris-2</a>
+		<a href="https://sites.google.com/view/irisocamera/home/english/miniris-eng" target="_blank">Miniris-2</a>
 		oder
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/english/iricel-eng" target="_blank">Iricel</a>
+		<a href="https://sites.google.com/view/irisocamera/home/english/iricell-eng" target="_blank">Iricell</a>
 		optimiert.
 	</p>
 

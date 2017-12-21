@@ -53,9 +53,9 @@ if (isAugendiagnose ()) {
 		Como alternativa adicional, es posible tomar imágenes directamente desde la aplicación con la cámara del dispositivo.
 		Esto normalmente no le dé fotos en una calidad adecuada, pero sirve como una alternativa a una cámara profesional, en
 		particular, si se utiliza una lente macro, como el
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/espa%C3%B1ol/miniris-esp" target="_blank">Miniris-2</a>
+		<a href="https://sites.google.com/view/irisocamera/home/espanol/miniris-esp" target="_blank">Miniris-2</a>
 		o el
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/espa%C3%B1ol/iricel-esp" target="_blank">Iricel</a>
+		<a href="https://sites.google.com/view/irisocamera/home/espanol/iricell-esp" target="_blank">Iricell</a>
 		.
 	</p>
 
@@ -104,9 +104,9 @@ else {
 	<p>
 		Esta aplicación tiene la finalidad de apoyar la captura y visualización de fotografías del iris en un dispositivo
 		Android, con el fin de hacer un diagnóstico del iris. Está optimizado para el uso con el
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/espa%C3%B1ol/miniris-esp" target="_blank">Miniris-2</a>
+		<a href="https://sites.google.com/view/irisocamera/home/espanol/miniris-esp" target="_blank">Miniris-2</a>
 		o el
-		<a href="https://sites.google.com/view/irisocamera/p%C3%A1gina-principal/espa%C3%B1ol/iricel-esp" target="_blank">Iricel</a>
+		<a href="https://sites.google.com/view/irisocamera/home/espanol/iricell-esp" target="_blank">Iricell</a>
 		aditamento .
 	</p>
 
