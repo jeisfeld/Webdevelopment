@@ -76,6 +76,21 @@ table {
 	vertical-align: top;
 }
 
+.listtable .headercolumn {
+	font-weight: bold;
+	padding-right: 10px;
+	vertical-align: top;
+	padding-bottom: 5px;
+}
+
+.listtable td {
+	padding-bottom: 5px;
+}
+
+.listtable {
+	margin-bottom: 10px;
+}
+
 #startseite.desktop #text h3+p {
 	margin-left: 1em;
 }
@@ -487,7 +502,7 @@ a.closeImpressum {
 	h1 {
 		font-size: 24px;
 	}
-	body, p, a, li {
+	body, p, a, li, table {
 		font-size: 14px;
 	}
 	#text p.footer {
