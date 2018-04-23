@@ -130,6 +130,8 @@ else {
 	<ul>
 		<li>En el lado derecho en el medio está el botón para capturar la foto. Después de capturar una foto, puede decidir si
 			desea conservar la foto o si desea descartarlo y capturar la foto de nuevo.</li>
+		<li>Debajo hay un botón que permite tomar la foto con la aplicación de cámara del sistema. Esto puede ser útil en el
+			caso de dispositivos con características especiales de la cámara, como lentes dobles.</li>
 		<li>En las esquinas en la parte superior se encuentra la pantalla del derecho y del izquierdo ojo. La marca roja
 			indica que ojo está previsto para la próxima foto. Pulsando sobre una de estas áreas se puede cambiar el lado.</li>
 		<li>En la pantalla de la cámara hay un gran círculo. Este círculo indica el lugar donde el iris debe aparecer en la

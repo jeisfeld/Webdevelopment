@@ -134,6 +134,8 @@ else {
 	<ul>
 		<li>On the right hand side in the middle there is the button for capturing the photo. After capturing a photo, you can
 			decide if you want to keep the photo or if you want to dismiss it and try again.</li>
+		<li>Below there is a button that allows taking the photo with the system camera app. This may be of use in case of
+			devices with special camera features, such as dual lens.</li>
 		<li>In the corners on top of the screen there is the display of the right and left eye photo. The red marking
 			indicates which eye is planned for the next photo. By pressing on one of these areas you can change the side.</li>
 		<li>On the camera display there is a big circle. This circle indicates the place where the iris should appear on the
