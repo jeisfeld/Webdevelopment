@@ -1,58 +1,28 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<title>Impressum</title>
+<title>Zufallsbild - Übersicht</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../stylesheets/styles.css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/impressum.js"></script>
-<script>
-var gaProperty = 'UA-85093918-1';
-var disableStr = 'ga-disable-' + gaProperty;
-if (document.cookie.indexOf(disableStr + '=true') > -1) {
-	window[disableStr] = true;
-}
-function gaOptout() {
-	document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-	window[disableStr] = true;
-	alert('Das Tracking ist jetzt deaktiviert');
-}
-(function(i, s, o, g, r, a, m) {
-	i['GoogleAnalyticsObject'] = r;
-	i[r] = i[r] || function() {
-		(i[r].q = i[r].q || []).push(arguments)
-	}, i[r].l = 1 * new Date();
-	a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-	a.async = 1;
-	a.src = g;
-	m.parentNode.insertBefore(a, m)
-})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-85093918-1', 'auto');
-ga('set', 'anonymizeIp', true);
-ga('send', 'pageview');
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="../javascript/analyticstracking.js"></script>
 </head>
+<body>
+	<h2>Impressum</h2>
 
-<body id="impressum">
-	<table width="100%" id="impressumheader">
-		<tr>
-			<td>
-				<h2>Impressum</h2>
-			</td>
-			<td align="right" valign="top"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
-		</tr>
-	</table>
 	<h3>Angaben gemäß §5 TMG</h3>
 	<p>
-		Jörg Eisfeld<br> IT-Dienstleistungen<br>Merseburger Str. 8<br>80993 München
+		Jörg Eisfeld<br>Merseburger Str. 8<br>80993 München
 	</p>
+
 	<h3>Kontakt:</h3>
 	<p>
 		Telefon: +49-176-20928331<br> E-Mail:
-		<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
+		<a href="mailto:Jörg Eisfeld<randomimage@jeisfeld.de>">randomimage@jeisfeld.de</a>
 	</p>
+
 	<h3>Disclaimer - rechtliche Hinweise</h3>
+
 	<h4>§1 Haftungsbeschränkung</h4>
 	<p>Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Der Anbieter übernimmt jedoch keine
 		Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der Inhalte der
@@ -64,6 +34,7 @@ ga('send', 'pageview');
 		Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
 		konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte
 		umgehend entfernen.</p>
+
 	<h4>§2 Externe Links</h4>
 	<p>Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"), auf deren Inhalte wir keinen Einfluss
 		haben. Diese Websites unterliegen der Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen
@@ -73,6 +44,7 @@ ga('send', 'pageview');
 		Anbieter die hinter dem Verweis oder Link liegenden Inhalte zu Eigen macht. Eine ständige Kontrolle der externen Links
 		ist für den Anbieter ohne konkrete Hinweise auf Rechtsverstöße nicht zumutbar. Bei Kenntnis von Rechtsverstößen werden
 		jedoch derartige externe Links unverzüglich gelöscht.</p>
+
 	<h4>§3 Urheber- und Leistungsschutzrechte</h4>
 	<p>Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. Die
 		Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
@@ -81,6 +53,7 @@ ga('send', 'pageview');
 		erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
 		gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
 		entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
 	<h4>§4 Datenschutzerklärung - Google Analytics</h4>
 	<p>
 		Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc, (1600 Amphitheatre Parkway Mountain
@@ -128,10 +101,5 @@ ga('send', 'pageview');
 			<strong>Google Analytics deaktivieren</strong>
 		</a>
 	</p>
-	<table width="100%">
-		<tr>
-			<td align="right" valign="top"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
-		</tr>
-	</table>
 </body>
 </html>

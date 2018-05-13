@@ -52,6 +52,10 @@ if (isAugendiagnose ()) {
 		<a href="../?lang=en&page=downloads" target="_parent">Downloads</a>
 	</p>
 
+	<p>
+		<a href="../?lang=de&page=impressum" target="_parent">Legal Notice</a>
+	</p>
+
 </body>
 
 </html>

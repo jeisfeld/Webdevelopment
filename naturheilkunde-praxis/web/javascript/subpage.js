@@ -92,6 +92,16 @@ $(document).ready(
 		});
 
 // Google Analytics tracking
+var gaProperty = 'UA-85063283-1';
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+	window[disableStr] = true;
+}
+function gaOptout() {
+	document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	window[disableStr] = true;
+	alert('Das Tracking ist jetzt deaktiviert');
+}
 (function(i, s, o, g, r, a, m) {
 	i['GoogleAnalyticsObject'] = r;
 	i[r] = i[r] || function() {
@@ -104,4 +114,5 @@ $(document).ready(
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', 'UA-85063283-1', 'auto');
+ga('set', 'anonymizeIp', true);
 ga('send', 'pageview');
