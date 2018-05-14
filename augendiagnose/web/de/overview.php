@@ -136,8 +136,8 @@ else {
 	<ul>
 		<li>Auf der rechten Seite befindet sich in der Mitte der Knopf zum Aufnehmen der Fotos. Nach Aufnahme eines Fotos
 			können Sie entscheiden, ob Sie das Foto behalten wollen, oder ob Sie es verwerfen und neu aufnehmen wollen.</li>
-		<li>Darunter gibt es ein Knopf, mit der Sie das Foto mit der Systemkamera-App aufnehmen können. Dies kann bei
-			Geräten mit speziellen Kamerafunktionen wie z.B. Dual-Objektiv nützlich sein.</li>
+		<li>Darunter gibt es ein Knopf, mit der Sie das Foto mit der Systemkamera-App aufnehmen können. Dies kann bei Geräten
+			mit speziellen Kamerafunktionen wie z.B. Dual-Objektiv nützlich sein.</li>
 		<li>In den oberen Ecken befindet sich die Anzeige des rechten und linken Augenfotos. Die rote Markierung zeigt an,
 			welches Auge als nächstes aufgenommen wird. Wenn Sie auf eine dieser Flächen drücken, können Sie die Seite wechseln.</li>
 		<li>Auf der Kameraanzeige befindet sich ein großer Kreis. Dieser Kreis zeigt an, wo Sie die Iris aufnehmen sollten.</li>
@@ -178,5 +178,21 @@ else {
 }
 ?>
 
+	<a name="privacy"></a>
+	<h3>Datenschutzerklärung</h3>
+
+	<p>
+		Die App &bdquo;<?=$appname?>&ldquo; nutzt die Kamera für die Aufnahme von Fotos. 
+		Die App speichert, sammelt oder sendet keine persönlichen Daten jeglicher Art. Alle von der App aufgenommenen Bilder
+		werden nur lokal auf Ihrem Gerät gespeichert.
+	</p>
+
+	<p>
+		Die App verwendet auch Google Analytics, um statistische Informationen über App-Fehler und App-Nutzung zu sammeln.
+		Dies dient dazu, Informationen für weitere Verbesserungen der App zu erhalten. Siehe die
+		<a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank">Google
+			Analytics-Datenschutzbestimmungen</a>
+		für mehr Details.
+	</p>
 </body>
 </html>
