@@ -16,9 +16,6 @@ function loadPage() {
 		pagesLoaded += 1;
 
 		if (pagesLoaded == totalPages) {
-			// In contact page, replace iframe by fixed map, as iframe may load very late when hidden.
-			$(document).find('#pict.googlemaps').html('<img src="../img/screenshot_google_maps.jpg">');
-
 			images = $(document).find('img');
 			totalImages = images.size();
 

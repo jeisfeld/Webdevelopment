@@ -154,6 +154,28 @@ li {
 	margin: 0px;
 }
 
+.googlemaps img {
+	object-fit: cover;
+	border: 1px solid black;
+	z-index: 0;
+}
+
+.googlemaps div {
+	position: relative;
+}
+
+.googlemaps a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	display: block;
+	background: #C1CDBD;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid black;
+}
+
 /* Settings for left menu */
 body#menuleft {
 	overflow: hidden;

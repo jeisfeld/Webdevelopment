@@ -12,7 +12,7 @@ function markChosen(frame, id) {
 }
 
 function adjustStyleSubpage(width, height) {
-	var isStartpage = $('body').attr('id') === 'startseite' ? true : false;
+	var isKontakt = $('body').attr('id') === 'kontakt' ? true : false;
 
 	if (width < 1000) {
 		$('#pictimg2').css('max-width', Math.round(width * 0.4));
@@ -39,8 +39,12 @@ function adjustStyleSubpage(width, height) {
 		$('#endmenu').hide();
 	}
 
-	$('#pict iframe').css('max-width', Math.round(width / 2));
-	$('#pict iframe').css('max-height', Math.max(200, height - 130));
+	if (isKontakt) {
+		var mwidth = Math.min(600, Math.round(width / 2));
+		var mheight = Math.min(600, Math.max(200, height - 130));
+		$('#pict.googlemaps div, #pict.googlemaps div img').css('width', mwidth);
+		$('#pict.googlemaps div, #pict.googlemaps div img').css('height', mheight);
+	}
 
 	if (width < 500) {
 		$('#text, #pict').addClass('small');
