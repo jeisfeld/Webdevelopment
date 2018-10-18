@@ -62,7 +62,7 @@ if (isAugendiagnose ()) {
 		einsetzen.
 	</p>
 
-	<h4>Schritt 2: Betrachten der Fotos</h4>
+	<h4>Schritt 2: Fotos anschauen</h4>
 
 	<p>Dies ist der Hauptzweck der App, aber er setzt die vorherige Organisation über Schritt 1 voraus.</p>
 

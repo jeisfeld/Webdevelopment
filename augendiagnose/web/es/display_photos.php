@@ -4,13 +4,13 @@ include "pageheader.php";
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title><?=$appname?> - Visualizar las fotos</title>
+<title><?=$appname?> - Ver fotos</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body>
-	<h2>Visualizar las fotos</h2>
+	<h2>Ver fotos</h2>
 
 	<p>Aquí se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicación mostrará
 		todas las fotos de ojo de esta persona en una lista ordenada por fecha.</p>
@@ -20,9 +20,9 @@ include "pageheader.php";
 	<ul>
 		<li>Mostrar una de las fotos en detalle (haciendo clic en una foto).</li>
 
-		<li>Mostrar los dos fotos de una fecha (haciendo clic en una fecha)</li>
+		<li>Mostrar los dos fotos de una fecha (haciendo clic en una fecha).</li>
 
-		<li>Mostrar dos fotos de diferentes fechas (haciendo largo clic en una foto y después clic en una segunda foto)</li>
+		<li>Mostrar dos fotos de diferentes fechas (haciendo largo clic en una foto y después clic en una segunda foto).</li>
 
 		<li>Mostrar dos fotos de diferentes personas: seleccione una foto de esta persona (mediante pulsación larga) y luego
 			seleccione una foto de una persona diferente.</li>

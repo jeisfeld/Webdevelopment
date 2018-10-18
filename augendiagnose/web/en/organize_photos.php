@@ -35,7 +35,7 @@ if (isAugendiagnose ()) {
 	<p>With the button &ldquo;OK&rdquo; you can move the selected eye photo pair to the eye photo folder. The photos are
 		attached to the given name and date and can then be used by the app.</p>
 
-	<p>By tapping on the pair of photos, you can view the two photos in detail. (See also &ldquo;Visualize the
+	<p>By tapping on the pair of photos, you can view the two photos in detail. (See also &ldquo;View
 		photos&rdquo;</p>
 </body>
 </html>

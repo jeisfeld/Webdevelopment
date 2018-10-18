@@ -23,23 +23,23 @@ else {
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title><?=$appname?> (Android App)</title>
+<title><?=$appname?> (Aplicativo para Android)</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body class="<?=$class?>">
 	<p>
-		English
+		<a href="../?lang=en&page=<?=$page?>" target="_parent">English</a>
 		<a href="../?lang=de&page=<?=$page?>" target="_parent">Deutsch</a>
 		<a href="../?lang=es&page=<?=$page?>" target="_parent">Español</a>
-		<a href="../?lang=pt&page=<?=$page?>" target="_parent">Português</a>
+		Português
 	</p>
 
 <?php
 if ($isMobile) {
 	?>
 	<div id="homebutton">
-		<a href="../?lang=en&page=navigation" target="_parent">
+		<a href="../?lang=es&page=navigation" target="_parent">
 			<img alt="Home" src="../drawable/ic_home.png">
 		</a>
 	</div>
@@ -47,7 +47,7 @@ if ($isMobile) {
 }
 else {
 	?>
-	<h1><?=$appname?> - Android App</h1>
+	<h1><?=$appname?> - Aplicativo para Android</h1>
 <?php
 }
 ?>

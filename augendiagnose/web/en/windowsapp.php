@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.12:</b> Added Portuguese localisation. Bugfixes.</li>
+
 		<li><b>Version 0.1.11:</b> Enabled handling of single eye photos. Bugfixes.</li>
 
 		<li><b>Version 0.1.10:</b> Simple showing and hiding of comment pane.</li>

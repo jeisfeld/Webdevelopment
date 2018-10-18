@@ -4,13 +4,13 @@ include "pageheader.php";
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title><?=$appname?> - Visualize Photos</title>
+<title><?=$appname?> - View Photos</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body>
-	<h2>Visualize the photos</h2>
+	<h2>View photos</h2>
 
 	<p>Here you can select the name of a person whose eye photos you want to see. Then you get shown all eye photos of this
 		person in a list sorted by date.</p>

@@ -32,6 +32,7 @@ else {
 		<a href="../?lang=en&page=<?=$page?>" target="_parent">English</a>
 		<a href="../?lang=de&page=<?=$page?>" target="_parent">Deutsch</a>
 		Español
+		<a href="../?lang=pt&page=<?=$page?>" target="_parent">Português</a>
 	</p>
 
 <?php

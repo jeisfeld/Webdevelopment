@@ -41,7 +41,7 @@ if (isAugendiagnose ()) {
 ?>
 
 	<p>
-		<a href="../?lang=de&page=display_photos" target="_parent">Betrachten der Fotos</a>
+		<a href="../?lang=de&page=display_photos" target="_parent">Fotos ansehen</a>
 	</p>
 
 	<p>

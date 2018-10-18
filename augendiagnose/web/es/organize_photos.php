@@ -32,7 +32,7 @@ if (isAugendiagnose ()) {
 		Esto es necesario particularmente, si desea mantener más de un par de ojos de una persona de un fecha - la aplicación
 		permite sólo un par de fotos por día y persona</p>
 
-	<p>Con el botón &laquo;Aceptar&raquo; puede mover el par de fotos de ojos seleccionado a la carpeta de fotos ojo. Las
+	<p>Con el botón &laquo;OK&raquo; puede mover el par de fotos de ojos seleccionado a la carpeta de fotos ojo. Las
 		fotos están asociadas con el nombre y fecha determinada y luego pueden ser utilizadas por la aplicación.</p>
 
 	<p>Al tocar en el par de fotos, puede ver las dos fotos en detalle. (Ver también &laquo;Visualizar las fotos&raquo;)</p>

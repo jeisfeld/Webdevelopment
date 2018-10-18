@@ -31,6 +31,7 @@ else {
 					$appname = "Eye Diagnosis";
 					break;
 				case "es" :
+				case "pt" :
 					$appname = "Diagnóstico ocular";
 					break;
 			}

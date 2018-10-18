@@ -31,12 +31,11 @@ if (isAugendiagnose ()) {
 		Aufnahmedatum vorausgewählt. Sie können aber auch ein anderes Datum wählen. Dies ist insbesondere dann nötig, wenn es
 		schon Fotos dieses Nutzers von diesem Datum gibt - die App erlaubt nur ein Augenpaar einer Person zu einem Datum.</p>
 
-	<p>Mit dem Button &bdquo;Anwenden&ldquo; können Sie das gewählte Paar Augenfotos in das Augenfoto-Verzeichnis
+	<p>Mit dem Button &bdquo;OK&ldquo; können Sie das gewählte Paar Augenfotos in das Augenfoto-Verzeichnis
 		verschieben. Die Fotos werden zur angegebenen Person und dem angegebenen Datum zugeordnet und stehen dem Programm
 		anschließend zur Verfügung.</p>
 
-	<p>Durch das Antippen des Fotopaares können Sie die beiden Fotos im Detail ansehen. (Siehe auch: &bdquo;Betrachten der
-		Fotos&ldquo;)</p>
+	<p>Durch das Antippen des Fotopaares können Sie die beiden Fotos im Detail ansehen. (Siehe auch: &bdquo;Fotos ansehen&ldquo;)</p>
 </body>
 </html>
 <?PHP

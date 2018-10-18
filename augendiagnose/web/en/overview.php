@@ -60,7 +60,7 @@ if (isAugendiagnose ()) {
 
 	<p>As third alternative,</p>
 
-	<h4>Step 2: Visualize the photos.</h4>
+	<h4>Step 2: View photos.</h4>
 
 	<p>This is the main purpose of the app, but it requires the photos to be organized via step 1.</p>
 

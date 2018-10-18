@@ -17,6 +17,9 @@ else {
 	else if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "es" )) {
 		$language = "es";
 	}
+	else if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "pt" )) {
+		$language = "pt";
+	}
 	else {
 		$language = "en";
 	}
@@ -41,6 +44,11 @@ switch ($language) {
 		$title = "${appname} (Aplicación para Android)";
 		$description = "${appname}, Jörg Eisfeld";
 		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridología, Android";
+		break;
+	case "pt" :
+		$title = "${appname} (Aplicação Android)";
+		$description = "${appname}, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridologia, Android";
 		break;
 }
 

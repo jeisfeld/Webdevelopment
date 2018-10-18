@@ -54,7 +54,7 @@ include "pageheader.php";
 
 	<ul>
 		<li><b>Carpeta de fotos oculares:</b> Aquí usted tiene que seleccionar la carpeta principal donde se almacenan las
-			fotos de los ojos. Esta carpeta debe tener la misma estructura que en la aplicación para Android..</li>
+			fotos de los ojos. Esta carpeta debe tener la misma estructura que en la aplicación para Android.</li>
 
 		<li><b>Tamaño máximo de mapas de bits:</b> Este es el tamaño en el que las fotos se reducen antes de mostrar.</li>
 
@@ -73,9 +73,11 @@ include "pageheader.php";
 			reinicio de la aplicación.</li>
 	</ul>
 
-	<h3>Notas de la versión</h3>
+	<h3>Notas de lanzamiento</h3>
 
 	<ul>
+		<li><b>Versión 0.1.12:</b> Añadido localización portuguesa. Corrección de errores.</li>
+
 		<li><b>Versión 0.1.11:</b> Habilitado el manejo de un solo foto de ojo. Corrección de errores.</li>
 
 		<li><b>Versión 0.1.10:</b> Visualización y ocultación simple del comentarios.</li>

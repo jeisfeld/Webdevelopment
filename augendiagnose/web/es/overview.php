@@ -33,7 +33,7 @@ if (isAugendiagnose ()) {
 
 	<h3>Principales actividades</h3>
 
-	<h4>Paso 1:. Organizar las fotos</h4>
+	<h4>Paso 1: Organizar las fotos</h4>
 
 	<p>En este paso, puede organizar las fotos de ojos.</p>
 
@@ -59,7 +59,7 @@ if (isAugendiagnose ()) {
 		.
 	</p>
 
-	<h4>Paso 2:. Visualizar las fotos</h4>
+	<h4>Paso 2: Ver fotos</h4>
 
 	<p>Este es el objetivo principal de la aplicación, pero requiere de las fotos para ser organizado por medio del paso 1.</p>
 
@@ -74,7 +74,7 @@ if (isAugendiagnose ()) {
 	<h3>Periodo de prueba / Paquetes premium</h3>
 
 	<p>La aplicación permite el uso gratuito sólo durante un periodo de prueba de dos semanas. Uso adicional requiere la
-		compra de un paquete dentro de la aplicación. (una sola vez).</p>
+		compra de un paquete dentro de la aplicación (una sola vez).</p>
 
 	<h3>Aplicación para Windows</h3>
 
@@ -156,7 +156,7 @@ else {
 	<h3>Periodo de prueba / Paquetes premium</h3>
 
 	<p>La aplicación permite el uso gratuito sólo durante un periodo de prueba de dos semanas. Uso adicional requiere la
-		compra de un paquete dentro de la aplicación. (una sola vez).</p>
+		compra de un paquete dentro de la aplicación (una sola vez).</p>
 
 	<h3>Aplicación para Windows</h3>
 
