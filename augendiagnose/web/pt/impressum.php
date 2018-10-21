@@ -94,7 +94,7 @@ include "pageheader.php";
 		que, se você fizer isso, poderá não conseguir usar todas as funcionalidades deste site. Você também pode impedir que o
 		Google colete os dados gerados pelo cookie e relacionados ao seu uso do site (incluindo seu endereço IP) e ao
 		processamento dessas informações pelo Google ao fazer o download e instalar o
-		<a href="https://tools.google.com/dlpage/gaoptout?hl=es" target="_blank">Complemento do navegador</a>
+		<a href="https://tools.google.com/dlpage/gaoptout?hl=pt" target="_blank">Complemento do navegador</a>
 		. Os cookies de exclusão impedem a coleta futura de seus dados quando você visita este site. Para evitar a Universal
 		Ao analisar a coleta de dados em vários dispositivos, você deve cancelar a inscrição em todos os sistemas usados. Se
 		você clicar aqui, o cookie de exclusão será definido:
