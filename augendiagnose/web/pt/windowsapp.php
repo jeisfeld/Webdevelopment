@@ -74,6 +74,8 @@ include "pageheader.php";
 	<h3>Notas de lançamento</h3>
 
 	<ul>
+		<li><b>Versão 0.1.13:</b> Adicionado mapa de Rayid numérico. Correção de erros.</li>
+
 		<li><b>Versão 0.1.12:</b> Adicionado localização portuguesa. Correção de erros.</li>
 
 		<li><b>Versão 0.1.11:</b> Ativando o manuseio de uma única foto do olho. Correção de erros.</li>

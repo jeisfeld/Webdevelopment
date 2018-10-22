@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.13:</b> Numerische Rayid-Topographie hinzugefügt. Fehlerkorrekturen.</li>
+
 		<li><b>Version 0.1.12:</b> Portugiesische Lokalisierung hinzugefügt. Fehlerkorrekturen.</li>
 
 		<li><b>Version 0.1.11:</b> Handhabung einzelner Augenfotos. Fehlerkorrekturen.</li>
