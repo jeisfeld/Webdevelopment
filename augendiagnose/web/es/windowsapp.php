@@ -76,6 +76,8 @@ include "pageheader.php";
 	<h3>Notas de lanzamiento</h3>
 
 	<ul>
+		<li><b>Versión 0.1.14:</b> Superposiciónes añadida en francés y polaco</li>
+
 		<li><b>Versión 0.1.13:</b> Añadido mapa di Rayid numérico. Corrección de errores.</li>
 
 		<li><b>Versión 0.1.12:</b> Añadido localización portuguesa. Corrección de errores.</li>
