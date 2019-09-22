@@ -1,5 +1,5 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=iso-8859-1' );
+header ( 'Content-Type: text/html; charset=utf-8' );
 
 // Determine page
 if (empty ( $_GET ["page"] )) {
@@ -24,13 +24,14 @@ else {
 <html>
 <head>
 <title>Random Image (Android App)</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
 </head>
 <body class="<?=$class?>">
 	<p>
 		English
 		<a href="../?lang=de&page=<?=$page?>" target="_parent">Deutsch</a>
+		<a href="../?lang=es&page=<?=$page?>" target="_parent">Español</a>
 	</p>
 
 <?php

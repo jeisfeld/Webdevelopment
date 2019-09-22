@@ -21,7 +21,7 @@ include "pageheader.php";
 	<h3>Contato:</h3>
 	<p>
 		Telefone: + 49-176-20928331 <br> E-Mail:
-		<a href="mailto:Jörg Eisfeld<augendiagnose@ jeisfeld.de> ">augendiagnose@jeisfeld.de</a>
+		<a href="mailto:Jörg Eisfeld<augendiagnose@jeisfeld.de> ">augendiagnose@jeisfeld.de</a>
 	</p>
 
 	<h3>Isenção de responsabilidade - Aviso legal</h3>
