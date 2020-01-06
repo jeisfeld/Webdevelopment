@@ -78,6 +78,8 @@ include "pageheader.php";
 	<h3>Versionshinweise</h3>
 
 	<ul>
+		<li><b>Version 0.1.15:</b> Jausas-Topographie (französisch) hinzugefügt. Fehlerkorrekturen</li>
+
 		<li><b>Version 0.1.14:</b> Overlays in Französisch und Polnisch hinzugefügt.</li>
 
 		<li><b>Version 0.1.13:</b> Numerische Rayid-Topographie hinzugefügt. Fehlerkorrekturen.</li>

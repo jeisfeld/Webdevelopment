@@ -74,6 +74,8 @@ include "pageheader.php";
 	<h3>Notas de lançamento</h3>
 
 	<ul>
+		<li><b>Versão 0.1.15:</b> Adicionado mapa de Jausas (francês). Correção de erros.</li>
+
 		<li><b>Versão 0.1.14:</b> Adicionado sobreposiçãos em francês e polonês</li>
 
 		<li><b>Versão 0.1.13:</b> Adicionado mapa de Rayid numérico. Correção de erros.</li>

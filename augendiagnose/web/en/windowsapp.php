@@ -73,6 +73,8 @@ include "pageheader.php";
 	<h3>Release Notes</h3>
 
 	<ul>
+		<li><b>Version 0.1.15:</b> Added Jausas topography (French). Bugfixes.</li>
+
 		<li><b>Version 0.1.14:</b> Added overlays in French and Polish.</li>
 
 		<li><b>Version 0.1.13:</b> Added numeric Rayid topography. Bugfixes.</li>
