@@ -1,6 +1,5 @@
+@charset "UTF-8";
 @import url(OpenSans.css);
-
-@CHARSET "ISO-8859-1";
 
 /* General settings */
 body, p {
@@ -23,10 +22,6 @@ table, table tr, table td {
 	margin: 0px;
 	padding: 0px;
 	border-collapse: collapse;
-}
-
-table.bordered {
-
 }
 
 table.bordered td {
@@ -72,7 +67,6 @@ img#logoimage.fullwidth {
 	height: 0px;
 	width: 0px;
 	line-height: 0px;
-	vertical-align: middle;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	background-color: #00A000;

@@ -1,6 +1,5 @@
+@charset "UTF-8";
 @import url(OpenSans.css);
-
-@CHARSET "UTF-8";
 
 /* General settings */
 body, p {
@@ -45,7 +44,7 @@ img {
 /* frame settings */
 html#index, body#index {
 	height: 100%;
-	width: 100$;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
