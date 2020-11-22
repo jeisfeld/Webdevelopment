@@ -81,7 +81,7 @@ if (isAugendiagnose ()) {
 	<p>
 		Hay una aplicación de acompañamiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
 		esta aplicación. Para obtener más información, consulte
-		<a href="http://augendiagnose.jeisfeld.de/?lang=es&page=windowsapp" target="_top">http://augendiagnose.jeisfeld.de/?page=windowsapp</a>
+		<a href="https://augendiagnose-app.de/?lang=es&page=windowsapp" target="_top">https://augendiagnose-app.de/?page=windowsapp</a>
 		.
 	</p>
 
@@ -163,7 +163,7 @@ else {
 	<p>
 		Hay una aplicación de acompañamiento de Windows que se puede utilizar para ver las fotos que han sido organizada con
 		esta aplicación. Para obtener más información, consulte
-		<a href="http://miniris.jeisfeld.de/?lang=es&page=windowsapp" target="_top">http://miniris.jeisfeld.de/?page=windowsapp</a>
+		<a href="https://augendiagnose-app.de/?app=miniris&lang=es&page=windowsapp" target="_top">https://augendiagnose-app.de/?app=miniris&page=windowsapp</a>
 		.
 	</p>
 

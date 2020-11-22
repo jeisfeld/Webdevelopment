@@ -21,17 +21,17 @@ include "pageheader.php";
 	<h3>Die Windows-Anwendung</h3>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x86-0.1.15.exe" target="_blank">32bit-Version
+		<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-x86-0.1.15.exe" target="_blank">32bit-Version
 			herunterladen</a>
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX-x64-0.1.15.exe" target="_blank">64bit-Version
+		<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-x64-0.1.15.exe" target="_blank">64bit-Version
 			herunterladen</a>
 	</p>
 
 	<p>
-		<a href="http://augendiagnose.jeisfeld.de/bin/AugendiagnoseFX.jar" target="_blank">Ausführbare JAR-Datei herunterladen</a>
+		<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX.jar" target="_blank">Ausführbare JAR-Datei herunterladen</a>
 	</p>
 </body>
 </html>

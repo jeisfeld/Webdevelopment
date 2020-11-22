@@ -85,7 +85,7 @@ if (isAugendiagnose ()) {
 	<p>
 		Es gibt auch eine Windows-Anwendung, die Sie nutzen können, um die Fotos, die Sie mit dieser App organisiert haben,
 		auf Ihrem Windows-Computer anzuschauen. Für mehr Informationen siehe
-		<a href="http://augendiagnose.jeisfeld.de/?lang=de&page=windowsapp" target="_top">http://augendiagnose.jeisfeld.de/?page=windowsapp</a>
+		<a href="https://augendiagnose-app.de/?lang=de&page=windowsapp" target="_top">https://augendiagnose-app.de/?page=windowsapp</a>
 		.
 	</p>
 
@@ -170,7 +170,7 @@ else {
 	<p>
 		Es gibt auch eine Windows-Anwendung, die Sie nutzen können, um die Fotos, die Sie mit dieser App organisiert haben,
 		auf Ihrem Windows-Computer anzuschauen. Für mehr Informationen siehe
-		<a href="http://miniris.jeisfeld.de/?lang=de&page=windowsapp" target="_top">http://miniris.jeisfeld.de/?page=windowsapp</a>
+		<a href="https://augendiagnose-app.de/?app=miniris&lang=de&page=windowsapp" target="_top">https://augendiagnose-app.de/?app=miniris&page=windowsapp</a>
 		.
 	</p>
 
