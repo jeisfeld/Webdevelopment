@@ -1,8 +1,11 @@
 <?PHP
 header ( 'Content-Type: text/html; charset=utf-8' );
 
-// Define some basic strings based on host
-if(strpos($_SERVER ['REQUEST_URI'], '/miniris') !== false) {
+if ($_GET ["app"] == "miniris") {
+	$app = "miniris";
+	$appname = "Miniris";
+}
+else if (strpos ( $_SERVER ['REQUEST_URI'], '/miniris' ) !== false) {
 	$app = "miniris";
 	$appname = "Miniris";
 }
@@ -39,7 +42,6 @@ else {
 	}
 }
 
-
 function isAugendiagnose() {
 	global $app;
 	return $app == "augendiagnose";
@@ -49,5 +51,4 @@ function isMiniris() {
 	return $app == "miniris";
 }
 
-include_once("analyticstracking.php")
-?>
+include_once ("analyticstracking.php")?>

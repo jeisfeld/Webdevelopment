@@ -15,13 +15,13 @@ include "pageheader.php";
 
 	<h3>Información según §5 TMG</h3>
 	<p>
-		Jörg Eisfeld<br>Merseburger Str. 8<br>80993 München<br> Alemania
+		Jörg Eisfeld<br>Feldmochinger Str. 68a<br>80993 München<br> Alemania
 	</p>
 
 	<h3>Contacto:</h3>
 	<p>
 		Teléfono: + 49-176-20928331 <br> E-Mail:
-		<a href="mailto:Jörg Eisfeld<augendiagnose@jeisfeld.de> ">augendiagnose@jeisfeld.de</a>
+		<a href="mailto:Jörg Eisfeld<<?=$app?>@jeisfeld.de> "><?=$app?>@jeisfeld.de</a>
 	</p>
 
 	<h3>Descargo de responsabilidad - Aviso legal</h3>

@@ -90,19 +90,20 @@ if (! empty ( $_GET ["anchor"] )) {
 <?php
 if ($isMobile) {
 	?>
-	<iframe id="mobileheaderframe" name="mobileheaderframe" src="<?=$language."/header.php?style=mobile&page=".$page?>"
-		scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mobileframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0"
+	<iframe id="mobileheaderframe" name="mobileheaderframe"
+		src="<?=$language."/header.php?style=mobile&app=".$app."&page=".$page?>" scrolling="no" marginheight="0"
+		marginwidth="0" frameborder="0"></iframe>
+	<iframe id="mobileframe" src="<?=$language."/".$pagefull."?app=".$app?>" name="main" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
 <?php
 }
 else {
 	?>
-	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?page=".$page?>" scrolling="no"
+	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?app=".$app."&page=".$page?>" scrolling="no"
 		marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0"
+	<iframe id="menuleftframe" src="<?=$language."/navigation.php?app=".$app."&style=menu"?>" name="menu" marginheight="0"
 		marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mainframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="mainframe" src="<?=$language."/".$pagefull."?app=".$app?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 <?php
 }
 ?>
