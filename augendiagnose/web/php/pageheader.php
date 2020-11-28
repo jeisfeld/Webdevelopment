@@ -50,5 +50,3 @@ function isMiniris() {
 	global $app;
 	return $app == "miniris";
 }
-
-include_once ("analyticstracking.php")?>
