@@ -5,19 +5,10 @@
 	Português
 </p>
 
-<?php
-if ($isMobile) {
-	?>
-<div id="homebutton">
+<div id="homebutton" class="mobile">
 	<a href="../?app=<?=$app ?>&lang=pt&page=navigation" target="_parent">
 		<img alt="Home" src="../drawable/ic_home.png">
 	</a>
 </div>
-<?php
-}
-else {
-	?>
-<h1><?=$appname?> - Aplicativo para Android</h1>
-<?php
-}
-?>
+
+<h1 class="desktop"><?=$appname?> - Aplicativo para Android</h1>

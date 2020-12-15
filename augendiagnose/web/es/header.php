@@ -5,19 +5,10 @@
 	<a href="../?app=<?=$app ?>&lang=pt&page=<?=$page?>" target="_parent">Português</a>
 </p>
 
-<?php
-if ($isMobile) {
-	?>
-<div id="homebutton">
+<div id="homebutton" class="mobile">
 	<a href="../?app=<?=$app ?>&lang=es&page=navigation" target="_parent">
 		<img alt="Home" src="../drawable/ic_home.png">
 	</a>
 </div>
-<?php
-}
-else {
-	?>
-<h1><?=$appname?> - Aplicación para Android</h1>
-<?php
-}
-?>
+
+<h1 class="desktop"><?=$appname?> - Aplicación para Android</h1>

@@ -176,3 +176,6 @@ else {
 	para más detalles.
 </p>
 
+<div class="mobile">
+	<?php include ("./".$language."/navigation.php"); ?>
+</div>

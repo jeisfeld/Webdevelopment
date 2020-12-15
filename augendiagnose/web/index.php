@@ -1,11 +1,6 @@
 <?PHP
 header ( 'Content-Type: text/html; charset=utf-8' );
 
-// Determine if running on mobile device
-include 'Mobile_Detect.php';
-$detect = new Mobile_Detect ();
-$isMobile = $detect->isMobile () && ! $detect->isTablet ();
-
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -54,12 +49,7 @@ switch ($language) {
 
 // Determine page
 if (empty ( $_GET ["page"] )) {
-	if ($isMobile) {
-		$page = "navigation";
-	}
-	else {
-		$page = "overview";
-	}
+	$page = "overview";
 }
 else {
 	$page = $_GET ["page"];
@@ -86,31 +76,15 @@ if (! empty ( $_GET ["anchor"] )) {
 <script type="text/javascript" src="javascript/jquery-1.12.4.min.js"></script>
 </head>
 <body id="index">
-<?php
-if ($isMobile) {
-	?>
-	<div id="mobileheaderframe" name="mobileheaderframe">
-		<?php include ("./".$language."/header.php"); ?>
-	</div>
-	<div id="mobileframe" name="main">
-		<?php include ("./".$language."/".$pagefull); ?>
-	</div>
-<?php
-}
-else {
-	?>
 	<div id="headerframe" name="headerframe">
 		<?php include ("./".$language."/header.php"); ?>
-	</div>
-	<div id="menuleftframe" name="menu">
-		<?php include ("./".$language."/navigation.php"); ?>
 	</div>
 	<div id="mainframe" name="main">
 		<?php include ("./".$language."/".$pagefull); ?>
 	</div>
-<?php
-}
-?>
+	<div id="menuleftframe" name="menu" class="desktop">
+		<?php include ("./".$language."/navigation.php"); ?>
+	</div>
 </body>
 
 </html>
