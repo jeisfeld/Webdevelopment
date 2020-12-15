@@ -1,4 +1,5 @@
 <?php
+$page="impressum";
 include "pageheader_pt.php";
 ?>
 <h2>Aviso Legal</h2>
@@ -44,3 +45,6 @@ include "pageheader_pt.php";
 	particular, conteúdo de terceiros como tal caracterizado. Se você ainda está ciente de uma violação de direitos
 	autorais, solicitamos uma nota correspondente. Após a notificação de violações, removeremos esse conteúdo
 	imediatamente.</p>
+<?php
+include "../php/pagefooter.php";
+?>

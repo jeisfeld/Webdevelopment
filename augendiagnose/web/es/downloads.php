@@ -1,4 +1,5 @@
 <?php
+$page="downloads";
 include "pageheader_es.php";
 ?>
 <h2>Descargas</h2>
@@ -22,3 +23,6 @@ include "pageheader_es.php";
 <p>
 	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX.jar" target="_blank">Descargar archivo jar ejecutable</a>
 </p>
+<?php
+include "../php/pagefooter.php";
+?>

@@ -1,35 +1,35 @@
 <h2 class="mobile">Inhalt</h2>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=overview" target="_parent">Übersicht</a>
+	<a href="<?=$path_prefix2?>overview.php?app=<?=$app ?>">Übersicht</a>
 </p>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=settings" target="_parent">Einstellungen</a>
+	<a href="<?=$path_prefix2?>settings.php?app=<?=$app ?>">Einstellungen</a>
 </p>
 
 <?PHP
 if (isAugendiagnose ()) {
 	?>
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=organize_photos" target="_parent">Organisation der Fotos</a>
+	<a href="<?=$path_prefix2?>organize_photos.php?app=<?=$app ?>">Organisation der Fotos</a>
 </p>
 <?PHP
 }
 ?>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=display_photos" target="_parent">Fotos ansehen</a>
+	<a href="<?=$path_prefix2?>display_photos.php?app=<?=$app ?>">Fotos ansehen</a>
 </p>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=windowsapp" target="_parent">Die Windows-Anwendung</a>
+	<a href="<?=$path_prefix2?>windowsapp.php?app=<?=$app ?>">Die Windows-Anwendung</a>
 </p>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=downloads" target="_parent">Downloads</a>
+	<a href="<?=$path_prefix2?>downloads.php?app=<?=$app ?>">Downloads</a>
 </p>
 
 <p>
-	<a href="../?app=<?=$app ?>&lang=de&page=impressum" target="_parent">Impressum</a>
+	<a href="<?=$path_prefix2?>impressum.php?app=<?=$app ?>">Impressum</a>
 </p>

@@ -1,4 +1,5 @@
 <?php
+$page="settings";
 include "pageheader_es.php";
 ?>
 <h2>Ajustes</h2>
@@ -213,3 +214,6 @@ if (isAugendiagnose ()) {
 		<td width="70%" valign="top">Una clave de usuario que permite el desbloqueo de la funcionalidad adicional.</td>
 	</tr>
 </table>
+<?php
+include "../php/pagefooter.php";
+?>

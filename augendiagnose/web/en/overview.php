@@ -1,4 +1,5 @@
 <?php
+$page="overview";
 include "pageheader_en.php";
 ?>
 <h2><?=$appname?> - Overview</h2>
@@ -183,3 +184,6 @@ else {
 <div class="mobile">
 	<?php include ("./".$language."/navigation.php"); ?>
 </div>
+<?php
+include "../php/pagefooter.php";
+?>

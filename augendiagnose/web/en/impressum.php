@@ -1,4 +1,5 @@
 <?php
+$page="impressum";
 include "pageheader_en.php";
 ?>
 <h2>Legal Notice</h2>
@@ -43,3 +44,6 @@ include "pageheader_en.php";
 	contents on this side are not from the operator were created, the copyrights of third parties are respected. In
 	particular, third party content as such characterized. Should you still be aware of a copyright infringement, we ask
 	for one corresponding note. Upon notification of violations, we will remove such content immediately.</p>
+<?php
+include "../php/pagefooter.php";
+?>

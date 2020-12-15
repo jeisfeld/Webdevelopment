@@ -1,4 +1,5 @@
 <?php
+$page="windowsapp";
 include "pageheader_de.php";
 ?>
 <h2>Die Windows-Anwendung</h2>
@@ -107,3 +108,6 @@ include "pageheader_de.php";
 <h3>
 	<a href="../?lang=de&page=downloads" target="_parent">Zur Download-Seite</a>
 </h3>
+<?php
+include "../php/pagefooter.php";
+?>

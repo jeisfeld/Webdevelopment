@@ -1,4 +1,5 @@
 <?php
+$page="organize_photos";
 include "pageheader_pt.php";
 if (isAugendiagnose ()) {
 	?>
@@ -28,4 +29,5 @@ if (isAugendiagnose ()) {
 <p>Ao tocar no par de fotos, você pode ver as duas fotos em detalhes. (Veja também &laquo;Visualizar fotos&raquo;)</p>
 <?PHP
 }
+include "../php/pagefooter.php";
 ?>

@@ -1,5 +1,17 @@
 <?php
+$language = "pt";
 if (! $index) {
-	$language = "pt";
 	include "../php/pageheader.php";
+	if (! $_GET ["createHtmlString"]) {
+		?>
+<div id="headerframe" name="headerframe">
+	<?php include ("header.php"); ?>
+</div>
+<div id="menuleftframe" name="menu" class="desktop">
+	<?php include ("navigation.php"); ?>
+</div>
+<div id="mainframe" name="main">
+<?php
+	}
 }
+?>

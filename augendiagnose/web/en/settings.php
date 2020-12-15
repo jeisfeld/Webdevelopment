@@ -1,4 +1,5 @@
 <?php
+$page="settings";
 include "pageheader_en.php";
 ?>
 <h2>Settings</h2>
@@ -206,3 +207,6 @@ if (isAugendiagnose ()) {
 		<td width="70%" valign="top">A user key that allows unlocking of additional functionality.</td>
 	</tr>
 </table>
+<?php
+include "../php/pagefooter.php";
+?>
