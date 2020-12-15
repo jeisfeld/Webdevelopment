@@ -1,3 +1,6 @@
+<?php
+include "pageheader_en.php";
+?>
 <h2><?=$appname?> - Overview</h2>
 
 <?PHP

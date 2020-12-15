@@ -1,3 +1,6 @@
+<?php
+include "pageheader_es.php";
+?>
 <h2>Descargas</h2>
 
 <h3>La aplicación para Android</h3>

@@ -1,3 +1,6 @@
+<?php
+include "pageheader_en.php";
+?>
 <h2>Settings</h2>
 
 The application allows the following settings:

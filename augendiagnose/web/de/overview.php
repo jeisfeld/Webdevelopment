@@ -1,3 +1,6 @@
+<?php
+include "pageheader_de.php";
+?>
 <h2><?=$appname?> - Übersicht</h2>
 
 <?PHP

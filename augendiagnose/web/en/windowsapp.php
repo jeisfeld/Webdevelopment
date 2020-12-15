@@ -1,3 +1,6 @@
+<?php
+include "pageheader_en.php";
+?>
 <h2>The Windows Application</h2>
 
 <p>There is an accompanying Windows application that allows to visualize the eye photos on a Windows desktop like in the

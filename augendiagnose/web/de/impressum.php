@@ -1,3 +1,6 @@
+<?php
+include "pageheader_de.php";
+?>
 <h2>Impressum</h2>
 
 <h3>Angaben gemäß §5 TMG</h3>

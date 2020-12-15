@@ -1,3 +1,6 @@
+<?php
+include "pageheader_en.php";
+?>
 <h2>View photos</h2>
 
 <p>Here you can select the name of a person whose eye photos you want to see. Then you get shown all eye photos of this

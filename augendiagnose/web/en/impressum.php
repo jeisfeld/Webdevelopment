@@ -1,3 +1,6 @@
+<?php
+include "pageheader_en.php";
+?>
 <h2>Legal Notice</h2>
 
 <h3>Information according to §5 TMG</h3>

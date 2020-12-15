@@ -1,3 +1,6 @@
+<?php
+include "pageheader_pt.php";
+?>
 <h2>O aplicativo para o Windows</h2>
 
 <p>Existe um aplicativo de acompanhamento do Windows que permite visualizar as fotos de seus olhos em um computador com

@@ -1,3 +1,6 @@
+<?php
+include "pageheader_es.php";
+?>
 <h2>Ver fotos</h2>
 
 <p>Aquí se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicación mostrará

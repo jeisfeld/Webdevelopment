@@ -1,3 +1,6 @@
+<?php
+include "pageheader_pt.php";
+?>
 <h2>Visualizar fotos</h2>
 
 <p>Aqui você pode selecionar o nome de uma pessoa cujas fotos de olhos você deseja ver. Em seguida, o aplicativo

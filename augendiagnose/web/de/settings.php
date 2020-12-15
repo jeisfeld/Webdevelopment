@@ -1,3 +1,6 @@
+<?php
+include "pageheader_de.php";
+?>
 <h2>Einstellungen</h2>
 
 Die Applikation ermöglicht folgende Einstellungen:

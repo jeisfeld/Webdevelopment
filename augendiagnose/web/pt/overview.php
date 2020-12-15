@@ -1,3 +1,6 @@
+<?php
+include "pageheader_pt.php";
+?>
 <h2><?=$appname?> - Informações Gerais</h2>
 
 <?PHP

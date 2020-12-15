@@ -1,4 +1,5 @@
-<?PHP
+<?php
+include "pageheader_pt.php";
 if (isAugendiagnose ()) {
 	?>
 <h2>Organize novas fotos</h2>

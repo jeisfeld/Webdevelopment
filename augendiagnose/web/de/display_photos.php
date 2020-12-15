@@ -1,3 +1,6 @@
+<?php
+include "pageheader_de.php";
+?>
 <h2>Fotos ansehen</h2>
 
 <p>Hier können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen. Daraufhin sehen

@@ -1,3 +1,6 @@
+<?php
+include "pageheader_de.php";
+?>
 <h2>Die Windows-Anwendung</h2>
 
 <p>Es gibt eine ergänzende Windows-Anwendung, die es erlaubt, die Augenfotos auch auf einem Windows-Desktop anzusehen,

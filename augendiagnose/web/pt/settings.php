@@ -1,3 +1,6 @@
+<?php
+include "pageheader_pt.php";
+?>
 <h2>Ajustes</h2>
 
 O aplicativo permite as seguintes configurações:

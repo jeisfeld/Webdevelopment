@@ -1,3 +1,6 @@
+<?php
+include "pageheader_pt.php";
+?>
 <h2>Aviso Legal</h2>
 
 <h3>Informação de acordo com §5 TMG</h3>

@@ -1,6 +1,9 @@
 <?PHP
 header ( 'Content-Type: text/html; charset=utf-8' );
 
+// Identify if subpage is called from index.
+$index = true;
+
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
