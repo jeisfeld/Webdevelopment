@@ -1,6 +1,4 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=utf-8' );
-
 if ($_GET ["app"] == "miniris") {
 	$app = "miniris";
 	$appname = "Miniris";

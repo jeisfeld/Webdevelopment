@@ -6,13 +6,19 @@ body, p {
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
 	background-color: #303030;
+	overflow: hidden;
 }
 
-table p, li p {
+table p, li p, #mobileheaderframe p {
 	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-top: 0px;
 	margin-bottom: 6px;
+}
+
+#headerframe, #menuleftframe, #mainframe, #mobileheaderframe, #mobileframe {
+	padding-left: 10px;
+	box-sizing: border-box;
 }
 
 table ul {
@@ -24,10 +30,6 @@ table ul {
 
 table p:last-child, table ul:last-child {
 	margin-bottom: 0px;
-}
-
-body {
-	margin-left: 10px;
 }
 
 a {
@@ -53,48 +55,42 @@ img.frameless {
 	height: 18px;
 }
 
-.mobile p {
-	margin-top: 0px;
-}
-
 /* frame settings */
 html#index, body#index {
 	height: 100%;
 	width: 100%;
-	margin: 0;
-	padding: 0;
 }
 
 #headerframe {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	height: 109px;
 	width: 100%;
-	overflow: hidden;
 	border-bottom: 1px solid white;
 }
 
 #menuleftframe {
-	position: absolute;
+	position: fixed;
 	top: 110px;
 	left: 0px;
 	bottom: 0px;
 	width: 20%;
-	overflow: hidden;
 	border-right: 1px solid white;
 }
 
 #mainframe {
-	position: absolute;
+	position: fixed;
 	top: 110px;
-	left: 20%;
-	bottom: 0px;
+	right: 0px;
 	width: 80%;
+	bottom: 0px;
+	overflow: auto;
+	bottom: 0px;
 }
 
 #mobileheaderframe {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
@@ -103,15 +99,16 @@ html#index, body#index {
 }
 
 #mobileframe {
-	position: absolute;
+	position: fixed;
 	top: 27px;
 	left: 0px;
+	bottom: 0px;
 	width: 100%;
+	overflow: auto;
 }
 
 #homebutton {
-	position: absolute;
+	position: fixed;
 	top: 0px;
-	left: 0px;
-	width: 100%;
+	right: 8px;
 }
