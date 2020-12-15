@@ -1,8 +1,4 @@
-<?PHP
-if ($isMobile) {
-	echo "<h2>Imagen Aleatoria - Aplicación de Android</h2>";
-}
-?>
+<h2 class="mobile">Contenido</h2>
 
 <p>
 	<a href="../?lang=es&page=overview" target="_parent">Información general</a>

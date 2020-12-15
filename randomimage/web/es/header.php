@@ -4,19 +4,10 @@
 	Español
 </p>
 
-<?php
-if ($isMobile) {
-	?>
-<div id="homebutton">
+<div id="homebutton" class="mobile">
 	<a href="../?lang=en&page=navigation" target="_parent">
 		<img alt="Home" src="../drawable/ic_home.png">
 	</a>
 </div>
-<?php
-}
-else {
-	?>
-<h1>Imagen Aleatoria - Aplicación de Android</h1>
-<?php
-}
-?>
+
+<h1 class="desktop">Imagen Aleatoria - Aplicación de Android</h1>

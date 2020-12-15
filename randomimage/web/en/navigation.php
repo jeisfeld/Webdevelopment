@@ -1,8 +1,4 @@
-<?PHP
-if ($isMobile) {
-	echo "<h2>Random Image - Android App</h2>";
-}
-?>
+<h2 class="mobile">Content</h2>
 
 <p>
 	<a href="../?lang=en&page=overview" target="_parent">Overview</a>
