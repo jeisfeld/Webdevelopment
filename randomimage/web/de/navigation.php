@@ -1,47 +1,25 @@
 <?PHP
-header ( 'Content-Type: text/html; charset=utf-8' );
-
-// Determine menu style
-if (empty ( $_GET ["style"] )) {
-	$heading = "<h2>Zufallsbild - Android App</h2>";
+if ($isMobile) {
+	echo "<h2>Zufallsbild - Android App</h2>";
 }
-else {
-	$heading = "";
-}
-
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<title>Zufallsbild (Android App)</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-</head>
 
-<body>
-	<?=$heading?>
+<p>
+	<a href="../?lang=de&page=overview" target="_parent">Übersicht</a>
+</p>
 
-	<p>
-		<a href="../?lang=de&page=overview" target="_parent">Übersicht</a>
-	</p>
+<p>
+	<a href="../?lang=de&page=howto" target="_parent">Hinweise zur Benutzung</a>
+</p>
 
-	<p>
-		<a href="../?lang=de&page=howto" target="_parent">Hinweise zur Benutzung</a>
-	</p>
+<p>
+	<a href="../?lang=de&page=settings" target="_parent">Einstellungen</a>
+</p>
 
-	<p>
-		<a href="../?lang=de&page=settings" target="_parent">Einstellungen</a>
-	</p>
+<p>
+	<a href="../?lang=de&page=releasenotes" target="_parent">Versionshinweise</a>
+</p>
 
-	<p>
-		<a href="../?lang=de&page=releasenotes" target="_parent">Versionshinweise</a>
-	</p>
-
-	<p>
-		<a href="../?lang=de&page=impressum" target="_parent">Impressum</a>
-	</p>
-
-</body>
-
-</html>
+<p>
+	<a href="../?lang=de&page=impressum" target="_parent">Impressum</a>
+</p>

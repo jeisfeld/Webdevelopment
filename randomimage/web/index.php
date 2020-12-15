@@ -77,25 +77,30 @@ if (! empty ( $_GET ["anchor"] )) {
 <link href="stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="drawable/icon_randomimage.ico">
 <script type="text/javascript" src="javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="javascript/resolution.js"></script>
 </head>
 <body id="index">
 <?php
 if ($isMobile) {
 	?>
-	<iframe id="mobileheaderframe" name="mobileheaderframe" src="<?=$language."/header.php?style=mobile&page=".$page?>"
-		scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mobileframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
+	<div id="mobileheaderframe" name="mobileheaderframe">
+		<?php include ("./".$language."/header.php"); ?>
+	</div>
+	<div id="mobileframe" name="main">
+		<?php include ("./".$language."/".$pagefull); ?>
+	</div>
 <?php
 }
 else {
 	?>
-	<iframe id="headerframe" name="headerframe" src="<?=$language."/header.php?page=".$page?>" scrolling="no"
-		marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="<?=$language."/navigation.php?style=menu"?>" name="menu" marginheight="0"
-		marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mainframe" src="<?=$language."/".$pagefull?>" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<div id="headerframe" name="headerframe">
+		<?php include ("./".$language."/header.php"); ?>
+	</div>
+	<div id="menuleftframe" name="menu">
+		<?php include ("./".$language."/navigation.php"); ?>
+	</div>
+	<div id="mainframe" name="main">
+		<?php include ("./".$language."/".$pagefull); ?>
+	</div>
 <?php
 }
 ?>
