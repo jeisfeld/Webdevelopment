@@ -24,6 +24,7 @@ else {
 // Determine page
 if (empty ( $_GET ["page"] )) {
 	$page = "overview";
+	$startmobilenavigation = true;
 }
 else {
 	$page = $_GET ["page"];
@@ -39,11 +40,14 @@ if (! empty ( $_GET ["anchor"] )) {
 	<div id="headerframe" name="headerframe">
 		<?php include ($language."/header.php"); ?>
 	</div>
-	<div id="menuleftframe" name="menu" class="desktop">
+	<div id="navigationframe" name="menu" class="desktop">
 		<?php include ($language."/navigation.php"); ?>
 	</div>
 	<div id="mainframe" name="main">
 		<?php include ($language."/".$pagefull); ?>
 	</div>
+<?php 
+include "php/pagefooter.php";
+?>
 </body>
 </html>

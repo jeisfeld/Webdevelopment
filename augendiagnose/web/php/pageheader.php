@@ -99,6 +99,11 @@ if (! $_GET ["createHtmlString"]) {
 <link href="<?=$path_prefix1?>stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="<?=$path_prefix1?>drawable/icon_<?=$app?>.ico">
 <script type="text/javascript" src="<?=$path_prefix1?>javascript/jquery-1.12.4.min.js"></script>
+<script>
+function toggleNavigation() {
+	$("#navigationframe, #mainframe").toggleClass( "mobilenavigation" );
+}
+</script>
 </head>
 <body>
 <?php 

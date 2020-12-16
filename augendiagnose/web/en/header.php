@@ -6,7 +6,7 @@
 </p>
 
 <div id="homebutton" class="mobile">
-	<a href="<?=$path_prefix1?>?app=<?=$app ?>&lang=en&page=navigation">
+	<a href="javascript:void(0);" onclick="toggleNavigation()">
 		<img alt="Home" src="<?=$path_prefix1?>drawable/ic_home.png">
 	</a>
 </div>

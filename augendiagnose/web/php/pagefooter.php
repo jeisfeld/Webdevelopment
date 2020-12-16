@@ -6,4 +6,11 @@ if (! $index && ! $_GET ["createHtmlString"]) {
 </html>
 <?php
 }
+if ($index && $startmobilenavigation) {
+	?>
+<script>
+toggleNavigation();
+</script>
+<?php
+}
 ?>

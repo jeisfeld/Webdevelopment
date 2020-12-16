@@ -17,7 +17,7 @@ table p, li p, #mobileheaderframe p {
 	margin-bottom: 6px;
 }
 
-#headerframe, #menuleftframe, #mainframe, #mobileheaderframe, #mobileframe {
+#headerframe, #navigationframe, #mainframe, #mobileheaderframe, #mobileframe {
 	padding-left: 10px;
 	box-sizing: border-box;
 }
@@ -72,20 +72,10 @@ html, body {
 	border-bottom: 1px solid white;
 }
 
-#menuleftframe {
-	position: fixed;
-	top: 110px;
-	left: 0px;
-	bottom: 0px;
-	width: 20%;
-	border-right: 1px solid white;
-}
-
-#mainframe {
+#mainframe, #navigationframe {
 	position: fixed;
 	width: 100%;
 	top: 27px;
-	right: 0px;
 	bottom: 0px;
 	overflow: auto;
 }
@@ -98,8 +88,11 @@ html, body {
 
 /* Settings for mobils vs desktop */
 @media screen and (max-width: 600px) {
-	.desktop {
+	.desktop, #mainframe.mobilenavigation {
 		display: none;
+	}
+	#navigationframe.mobilenavigation {
+		display: block;
 	}
 	#headerframe p {
 		margin-top: 0px;
@@ -116,5 +109,12 @@ html, body {
 	#mainframe {
 		width: 80%;
 		top: 110px;
+		right: 0px;
+	}
+	#navigationframe {
+		width: 20%;
+		top: 110px;
+		left: 0px;
+		border-right: 1px solid white;
 	}
 }

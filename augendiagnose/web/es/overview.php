@@ -179,10 +179,6 @@ else {
 		Analytics</a>
 	para más detalles.
 </p>
-
-<div class="mobile">
-	<?php include ("./".$language."/navigation.php"); ?>
-</div>
 <?php
 include "../php/pagefooter.php";
 ?>

@@ -7,7 +7,7 @@ if (! $index) {
 <div id="headerframe" name="headerframe">
 	<?php include ("header.php"); ?>
 </div>
-<div id="menuleftframe" name="menu" class="desktop">
+<div id="navigationframe" name="menu" class="desktop">
 	<?php include ("navigation.php"); ?>
 </div>
 <div id="mainframe" name="main">
