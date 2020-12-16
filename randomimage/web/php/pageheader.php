@@ -51,7 +51,7 @@ else {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="<?=$path_prefix1?>stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="<?=$path_prefix1?>drawable/icon_<?=$app?>.ico">
-<script type="text/javascript" src="<?=$path_prefix1?>javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="<?=$path_prefix1?>javascript/jquery-3.5.1.min.js"></script>
 <script>
 function toggleNavigation() {
 	$("#navigationframe").toggleClass( "mobilenavigation" );
