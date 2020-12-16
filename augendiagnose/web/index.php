@@ -1,6 +1,7 @@
 <?PHP
 // Identify if subpage is called from index.
 $index = true;
+$mainfolder = true;
 
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
@@ -19,15 +20,6 @@ else {
 	else {
 		$language = "en";
 	}
-}
-
-// Determine page
-if (empty ( $_GET ["page"] )) {
-	$page = "overview";
-	$startmobilenavigation = true;
-}
-else {
-	$page = $_GET ["page"];
 }
 
 // Define some basic strings based on host

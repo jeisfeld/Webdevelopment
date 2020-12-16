@@ -3,11 +3,14 @@
 @import url(OpenSans.css);
 
 /* General settings */
+body {
+	background-color: #303030;
+	overflow: hidden;
+}
+
 body, p {
 	font-family: 'Open Sans', sans-serif;
 	color: #FFFFFF;
-	background-color: #303030;
-	overflow: hidden;
 }
 
 table p, li p, #mobileheaderframe p {
@@ -80,7 +83,7 @@ html, body {
 	overflow: auto;
 }
 
-#homebutton {
+#navigationbutton {
 	position: fixed;
 	top: 0px;
 	right: 8px;
@@ -88,11 +91,25 @@ html, body {
 
 /* Settings for mobils vs desktop */
 @media screen and (max-width: 600px) {
-	.desktop, #mainframe.mobilenavigation {
+	.desktop {
 		display: none;
 	}
 	#navigationframe.mobilenavigation {
+		background-color: #404040;
 		display: block;
+		right: 0px;
+		width: 15em;
+		height: 22em;
+		z-index: 10000;
+		border: 1px solid white;
+	}
+	#navigationframe.startup {
+		background-color: #303030;
+		display: block;
+		width: 100%;
+		height: auto;
+		z-index: 10000;
+		border: none;
 	}
 	#headerframe p {
 		margin-top: 0px;

@@ -6,10 +6,10 @@ if (! $index && ! $_GET ["createHtmlString"]) {
 </html>
 <?php
 }
-if ($index && $startmobilenavigation) {
+if ($index && $nopageselected) {
 	?>
 <script>
-toggleNavigation();
+	$("#navigationframe").toggleClass( "startup" );
 </script>
 <?php
 }

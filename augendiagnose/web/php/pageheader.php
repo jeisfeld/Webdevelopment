@@ -1,5 +1,16 @@
 <?PHP
+if (! $page) {
+	if (empty ( $_GET ["page"] )) {
+		$page = "overview";
+		$nopageselected = true;
+	}
+	else {
+		$page = $_GET ["page"];
+	}
+}
+
 $pagefull = $page . ".php";
+$pagepathname = $nopageselected ? "" : $pagefull;
 
 // Determine Miniris vs Augendiagnose
 if ($_GET ["app"] == "miniris") {
@@ -42,7 +53,6 @@ else {
 			break;
 	}
 }
-
 function isAugendiagnose() {
 	global $app;
 	return $app == "augendiagnose";
@@ -76,22 +86,22 @@ switch ($language) {
 		break;
 }
 
-if ($index) {
-	$path_prefix1="";
-	$path_prefix2="$language/";
+if ($mainfolder) {
+	$path_prefix1 = "";
+	$path_prefix2 = "$language/";
 }
 else {
-	$path_prefix1="../";
-	$path_prefix2="";
+	$path_prefix1 = "../";
+	$path_prefix2 = "";
 }
 
 if (! $_GET ["createHtmlString"]) {
-?>
+	?>
 <!DOCTYPE html>
 <html lang="<?=$language?>">
 <head>
 <title><?=$title?></title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="<?=$language?>">
 <meta name="description" content="<?=$description?>">
 <meta name="keywords" content="<?=$keywords?>">
@@ -101,11 +111,11 @@ if (! $_GET ["createHtmlString"]) {
 <script type="text/javascript" src="<?=$path_prefix1?>javascript/jquery-1.12.4.min.js"></script>
 <script>
 function toggleNavigation() {
-	$("#navigationframe, #mainframe").toggleClass( "mobilenavigation" );
+	$("#navigationframe").toggleClass( "mobilenavigation" );
 }
 </script>
 </head>
 <body>
-<?php 
+<?php
 }
 ?>
