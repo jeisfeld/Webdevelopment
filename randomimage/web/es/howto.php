@@ -1,3 +1,7 @@
+<?php
+$page="howto";
+include "pageheader_es.php";
+?>
 <h2>Notas de uso</h2>
 
 <p>Esta aplicación muestra imágenes aleatorias de las listas de imágenes que configura. Por lo tanto, primero debe
@@ -169,3 +173,6 @@ Hay tres tipos de widgets que puede colocar en su pantalla de inicio para ver im
 	<li>Copia de seguridad, restaurar, renombrar, eliminar o clonar una sola lista de imágenes (presionando
 		prolongadamente un símbolo de lista de imágenes</li>
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>

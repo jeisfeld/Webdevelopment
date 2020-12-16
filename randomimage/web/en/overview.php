@@ -1,3 +1,7 @@
+<?php
+$page="overview";
+include "pageheader_en.php";
+?>
 <h2>Random Image - Overview</h2>
 
 <p>You have lots of great digital photos, but no time so see them? Then this app may help you.</p>
@@ -52,3 +56,6 @@
 <div class="mobile">
 	<?php include ("./".$language."/navigation.php"); ?>
 </div>
+<?php
+include "../php/pagefooter.php";
+?>

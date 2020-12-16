@@ -1,3 +1,7 @@
+<?php
+$page="overview";
+include "pageheader_de.php";
+?>
 <h2>Zufallsbild - Übersicht</h2>
 
 <p>Sie haben viele schöne digitale Fotos, aber keine Zeit, sie sich anzusehen? Dann könnte diese App Ihnen helfen.</p>
@@ -53,3 +57,6 @@
 <div class="mobile">
 	<?php include ("./".$language."/navigation.php"); ?>
 </div>
+<?php
+include "../php/pagefooter.php";
+?>

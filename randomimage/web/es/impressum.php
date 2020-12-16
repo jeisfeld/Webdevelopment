@@ -1,3 +1,7 @@
+<?php
+$page="impressum";
+include "pageheader_es.php";
+?>
 <h2>Aviso legal</h2>
 
 <h3>Información según §5 TMG</h3>
@@ -42,3 +46,6 @@
 	derechos de autor de terceros son respetados. En en particular, contenido de terceros como tal caracterizado. Si
 	todavía tiene conocimiento de una infracción de derechos de autor, le pedimos por una nota correspondiente. Tras la
 	notificación de violaciones, eliminaremos dicho contenido de inmediato.</P>
+<?php
+include "../php/pagefooter.php";
+?>

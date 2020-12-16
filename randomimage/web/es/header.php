@@ -1,13 +1,19 @@
 <p>
-	<a href="../?lang=en&page=<?=$page?>" target="_parent">English</a>
-	<a href="../?lang=de&page=<?=$page?>" target="_parent">Deutsch</a>
+	<a href="<?=$path_prefix1?>en/<?=$pagepathname?>">English</a>
+	<a href="<?=$path_prefix1?>de/<?=$pagepathname?>">Deutsch</a>
 	Español
 </p>
 
-<div id="homebutton" class="mobile">
-	<a href="../?lang=en&page=navigation" target="_parent">
-		<img alt="Home" src="../drawable/ic_home.png">
+<?php 
+if (!$nopageselected) {
+?>
+<div id="navigationbutton" class="mobile">
+	<a href="javascript:void(0);" onclick="toggleNavigation()">
+		<img alt="Home" src="<?=$path_prefix1?>drawable/ic_menu.png">
 	</a>
 </div>
+<?php 
+}
+?>
 
 <h1 class="desktop">Imagen Aleatoria - Aplicación de Android</h1>

@@ -1,3 +1,7 @@
+<?php
+$page="releasenotes";
+include "pageheader_de.php";
+?>
 <h2>Versionshinweise</h2>
 
 <ul>
@@ -134,3 +138,6 @@
 			<li>Wahl der Sprache (deutsch oder englisch).</li>
 		</ul></li>
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>

@@ -1,3 +1,7 @@
+<?php
+$page="settings";
+include "pageheader_de.php";
+?>
 <h2>Einstellungen</h2>
 
 <h3>App-Einstellungen</h3>
@@ -144,3 +148,6 @@
 		festgelegt werden sollen. (Erläuterung zu diesen Einstellungen siehe <a href="#randomImageView">oben</a>.)</li>
 	<li><b>Benachrichtigung entfernen:</b> Hier können Sie die Benachrichtigung entfernen.</li>
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>

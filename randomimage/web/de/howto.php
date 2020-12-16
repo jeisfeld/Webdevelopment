@@ -1,3 +1,7 @@
+<?php
+$page="howto";
+include "pageheader_de.php";
+?>
 <h2>Hinweise zur Benutzung</h2>
 
 <p>Diese App zeigt zufällige Bilder von Bildlisten, die Sie konfigurieren. Daher müssen Sie zunächst eine Bildliste
@@ -167,3 +171,6 @@ Es gibt drei Arten von Widgets, die Sie auf Ihrem Home-Bildschirm platzieren kö
 	<li>Eine einzelne Bildliste sichern, wiederherstellen, umbenennen, löschen oder klonen (durch langen Druck auf ein
 		Bildlistensymbol)</li>
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>

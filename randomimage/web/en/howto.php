@@ -1,3 +1,7 @@
+<?php
+$page="howto";
+include "pageheader_en.php";
+?>
 <h2>How to use</h2>
 
 <p>This app displays random images from image lists that you configure. Therefore, you first have to configure an
@@ -159,3 +163,6 @@ There are three types of widgets that you can place on your home screen in order
 	<li>Change the notification settings (and add or delete notifications)</li>
 	<li>Backup, restore, rename, delete or clone a single image list (via long pressing an image list symbol</li>
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>

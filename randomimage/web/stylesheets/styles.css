@@ -3,21 +3,24 @@
 @import url(OpenSans.css);
 
 /* General settings */
-body, p {
-	font-family: 'Open Sans', sans-serif;
-	color: #FFFFFF;
+body {
 	background-color: #303030;
 	overflow: hidden;
 }
 
-table p, li p {
+body, p {
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+}
+
+table p, li p, #mobileheaderframe p {
 	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-top: 0px;
 	margin-bottom: 6px;
 }
 
-#headerframe, #menuleftframe, #mainframe, #mobileheaderframe, #mobileframe {
+#headerframe, #navigationframe, #mainframe, #mobileheaderframe, #mobileframe {
 	padding-left: 10px;
 	box-sizing: border-box;
 }
@@ -42,9 +45,10 @@ img {
 }
 
 /* frame settings */
-html#index, body#index {
+html, body {
 	height: 100%;
 	width: 100%;
+	margin: 0px;
 }
 
 #headerframe {
@@ -56,25 +60,15 @@ html#index, body#index {
 	border-bottom: 1px solid white;
 }
 
-#menuleftframe {
-	position: fixed;
-	top: 110px;
-	left: 0px;
-	bottom: 0px;
-	width: 20%;
-	border-right: 1px solid white;
-}
-
-#mainframe {
+#mainframe, #navigationframe {
 	position: fixed;
 	width: 100%;
 	top: 27px;
-	right: 0px;
 	bottom: 0px;
 	overflow: auto;
 }
 
-#homebutton {
+#navigationbutton {
 	position: fixed;
 	top: 0px;
 	right: 8px;
@@ -90,14 +84,30 @@ html#index, body#index {
 }
 
 /* Settings for mobils vs desktop */
-
 @media screen and (max-width: 600px) {
 	.desktop {
 		display: none;
 	}
+	#navigationframe.mobilenavigation {
+		background-color: #404040;
+		display: block;
+		right: 0px;
+		width: 15em;
+		height: 18em;
+		z-index: 10000;
+		border: 1px solid white;
+	}
+	#navigationframe.startup {
+		background-color: #303030;
+		display: block;
+		width: 100%;
+		height: auto;
+		z-index: 10000;
+		border: none;
+	}
 	#headerframe p {
 		margin-top: 0px;
-	}	
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -110,5 +120,12 @@ html#index, body#index {
 	#mainframe {
 		width: 80%;
 		top: 110px;
+		right: 0px;
+	}
+	#navigationframe {
+		width: 20%;
+		top: 110px;
+		left: 0px;
+		border-right: 1px solid white;
 	}
 }

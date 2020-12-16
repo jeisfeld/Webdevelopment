@@ -1,3 +1,7 @@
+<?php
+$page="settings";
+include "pageheader_en.php";
+?>
 <h2>Settings</h2>
 
 <h3>App settings</h3>
@@ -131,3 +135,6 @@
 	<li><b>Remove Notification:</b> Here you can remove the notification.</li>
 
 </ul>
+<?php
+include "../php/pagefooter.php";
+?>
