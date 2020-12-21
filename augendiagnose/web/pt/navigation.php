@@ -1,35 +1,35 @@
 <h2 class="mobile">Conteúdo</h2>
 
 <p>
-	<a href="<?=$path_prefix2?>overview.php?app=<?=$app ?>">Informações gerais</a>
+	<a href="<?=$path_prefix2?>overview.php">Informações gerais</a>
 </p>
 
 <p>
-	<a href="<?=$path_prefix2?>settings.php?app=<?=$app ?>">Ajustes</a>
+	<a href="<?=$path_prefix2?>settings.php">Ajustes</a>
 </p>
 
 <?PHP
 if (isAugendiagnose ()) {
 	?>
 <p>
-	<a href="<?=$path_prefix2?>organize_photos.php?app=<?=$app ?>">Organize novas fotos</a>
+	<a href="<?=$path_prefix2?>organize_photos.php">Organize novas fotos</a>
 </p>
 <?PHP
 }
 ?>
 
 <p>
-	<a href="<?=$path_prefix2?>display_photos.php?app=<?=$app ?>">Visualizar fotos</a>
+	<a href="<?=$path_prefix2?>display_photos.php">Visualizar fotos</a>
 </p>
 
 <p>
-	<a href="<?=$path_prefix2?>windowsapp.php?app=<?=$app ?>">O aplicativo para o Windows</a>
+	<a href="<?=$path_prefix2?>windowsapp.php">O aplicativo para o Windows</a>
 </p>
 
 <p>
-	<a href="<?=$path_prefix2?>downloads.php?app=<?=$app ?>">Downloads</a>
+	<a href="<?=$path_prefix2?>downloads.php">Downloads</a>
 </p>
 
 <p>
-	<a href="<?=$path_prefix2?>impressum.php?app=<?=$app ?>">Aviso Legal</a>
+	<a href="<?=$path_prefix2?>impressum.php">Aviso Legal</a>
 </p>

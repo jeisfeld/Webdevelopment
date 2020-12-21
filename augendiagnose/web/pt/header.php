@@ -1,7 +1,7 @@
 <p>
-	<a href="<?=$path_prefix1?>en/<?=$pagepathname?>?app=<?=$app ?>">English</a>
-	<a href="<?=$path_prefix1?>de/<?=$pagepathname?>?app=<?=$app ?>">Deutsch</a>
-	<a href="<?=$path_prefix1?>es/<?=$pagepathname?>?app=<?=$app ?>">Español</a>
+	<a href="<?=$path_prefix1?>en/<?=$pagepathname?>">English</a>
+	<a href="<?=$path_prefix1?>de/<?=$pagepathname?>">Deutsch</a>
+	<a href="<?=$path_prefix1?>es/<?=$pagepathname?>">Español</a>
 	Português
 </p>
 
