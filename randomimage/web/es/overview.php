@@ -1,7 +1,3 @@
-<?php
-$page="overview";
-include "pageheader_es.php";
-?>
 <h2>Imagen Aleatoria - Información general</h2>
 
 <p>¿Tiene muchas fotos digitales, pero no tiene tiempo para verlas? Entonces esta aplicación puede ayudarle.</p>
@@ -58,6 +54,3 @@ include "pageheader_es.php";
 <div class="mobile">
 	<?php include ("./".$language."/navigation.php"); ?>
 </div>
-<?php
-include "../php/pagefooter.php";
-?>

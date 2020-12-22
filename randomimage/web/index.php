@@ -1,8 +1,4 @@
 <?PHP
-// Identify if subpage is called from index.
-$index = true;
-$mainfolder = true;
-
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -19,13 +15,62 @@ else {
 	}
 }
 
-// Define some basic strings based on host
-include "php/pageheader.php";
+if (! $page) {
+	if (empty ( $_GET ["page"] )) {
+		$page = "overview";
+		$nopageselected = true;
+	}
+	else {
+		$page = $_GET ["page"];
+	}
+}
+
+$pagefull = $page . ".php";
+$pagepathname = $nopageselected ? "" : $pagefull;
+
+// Define some basic strings based on language
+switch ($language) {
+	case "de" :
+		$title = "Zufallsbild (Android App)";
+		$description = "Zufallsbild, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Überraschungsbild, Zufallsbild, Zufallsfoto, Fotoüberraschung, Android";
+		break;
+	case "en" :
+		$title = "Random Image (Android App)";
+		$description = "Random Image, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Surprise Image, Random Image, Random Photo, Photo Surprise, Android";
+		break;
+	case "es" :
+		$title = "Imagen Aleatoria (Aplicación de Android)";
+		$description = "Imagen Aleatoria, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Imagen Sorpresa, Imagen Aleatoria, Foto Aleatoria, Foto Sorpresa, Android";
+		break;
+}
 
 if (! empty ( $_GET ["anchor"] )) {
 	$pagefull = $pagefull . "#" . $_GET ["anchor"];
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="<?=$language?>">
+<head>
+<title><?=$title?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="<?=$language?>">
+<meta name="description" content="<?=$description?>">
+<meta name="keywords" content="<?=$keywords?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="/drawable/icon_randomimage.ico">
+<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
+<script>
+function toggleNavigation() {
+	$("#navigationframe").toggleClass( "mobilenavigation" );
+}
+</script>
+</head>
+<body id="<?=$page?>">
 	<div id="headerframe" name="headerframe">
 		<?php include ($language."/header.php"); ?>
 	</div>
@@ -35,8 +80,15 @@ if (! empty ( $_GET ["anchor"] )) {
 	<div id="mainframe" name="main">
 		<?php include ($language."/".$pagefull); ?>
 	</div>
-<?php 
-include "php/pagefooter.php";
+
+<?php
+if ($nopageselected) {
+	?>
+<script>
+	$("#navigationframe").toggleClass( "startup" );
+</script>
+<?php
+}
 ?>
 </body>
 </html>

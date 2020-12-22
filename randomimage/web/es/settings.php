@@ -1,7 +1,3 @@
-<?php
-$page="settings";
-include "pageheader_es.php";
-?>
 <h2>Ajustes</h2>
 
 <h3>Ajustes de la aplicación</h3>
@@ -146,6 +142,3 @@ include "pageheader_es.php";
 	<li><b>Borrar notificación:</b> Aquí puede borrar la notificación.</li>
 
 </ul>
-<?php
-include "../php/pagefooter.php";
-?>

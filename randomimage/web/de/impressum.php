@@ -1,7 +1,3 @@
-<?php
-$page="impressum";
-include "pageheader_de.php";
-?>
 <h2>Impressum</h2>
 
 <h3>Angaben gemäß §5 TMG</h3>
@@ -47,6 +43,3 @@ include "pageheader_de.php";
 	erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche
 	gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen
 	entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
-<?php
-include "../php/pagefooter.php";
-?>
