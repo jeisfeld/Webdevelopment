@@ -1,6 +1,4 @@
 <?php
-$page="organize_photos";
-include "pageheader_de.php";
 if (isAugendiagnose ()) {
 	?>
 <h2>Organisation der Fotos</h2>
@@ -30,5 +28,4 @@ if (isAugendiagnose ()) {
 	ansehen&ldquo;)</p>
 <?PHP
 }
-include "../php/pagefooter.php";
 ?>

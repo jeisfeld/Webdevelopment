@@ -1,7 +1,3 @@
-<?php
-$page="windowsapp";
-include "pageheader_de.php";
-?>
 <h2>Die Windows-Anwendung</h2>
 
 <p>Es gibt eine ergänzende Windows-Anwendung, die es erlaubt, die Augenfotos auch auf einem Windows-Desktop anzusehen,
@@ -106,8 +102,5 @@ include "pageheader_de.php";
 </ul>
 
 <h3>
-	<a href="../?lang=de&page=downloads" target="_parent">Zur Download-Seite</a>
+	<a href="<?=$urlprefix?>/de/downloads.php">Zur Download-Seite</a>
 </h3>
-<?php
-include "../php/pagefooter.php";
-?>

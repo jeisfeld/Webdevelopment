@@ -14,8 +14,11 @@ ExpiresByType image/x-icon "access plus 1 months"
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule "^miniris$"  "/miniris/" [L,R=301]
-RewriteRule "miniris(/.*)"  "$1?app=miniris"
+RewriteRule "^miniris\/?$"  "/?app=miniris"
+RewriteRule "^miniris/(..)/([^/]+)\.php$"  "/?app=miniris&lang=$1&page=$2"
+RewriteRule "^miniris/(..)/$"  "/?app=miniris&lang=$1"
+RewriteRule "^(..)/([^/]+)\.php$"  "/?lang=$1&page=$2"
+RewriteRule "^(..)/$"  "/?lang=$1"
 </IfModule>
 
 AddDefaultCharset utf-8

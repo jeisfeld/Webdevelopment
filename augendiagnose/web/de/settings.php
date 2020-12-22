@@ -1,7 +1,3 @@
-<?php
-$page="settings";
-include "pageheader_de.php";
-?>
 <h2>Einstellungen</h2>
 
 Die Applikation ermöglicht folgende Einstellungen:
@@ -215,6 +211,3 @@ if (isAugendiagnose ()) {
 		<td width="70%" valign="top">Ein Nutzerkennwort, das die Freigabe zusätzlicher Funktionalitäten ermöglicht.</td>
 	</tr>
 </table>
-<?php
-include "../php/pagefooter.php";
-?>

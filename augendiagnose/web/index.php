@@ -1,8 +1,4 @@
 <?PHP
-// Identify if subpage is called from index.
-$index = true;
-$mainfolder = true;
-
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -22,13 +18,126 @@ else {
 	}
 }
 
-// Define some basic strings based on host
-include "php/pageheader.php";
+if (! $page) {
+	if (empty ( $_GET ["page"] )) {
+		$page = "overview";
+		$nopageselected = true;
+	}
+	else {
+		$page = $_GET ["page"];
+	}
+}
+
+$pagefull = $page . ".php";
+$pagepathname = $nopageselected ? "" : $pagefull;
+$urlprefix = "";
+
+// Determine Miniris vs Augendiagnose
+if ($_GET ["app"] == "miniris") {
+	$app = "miniris";
+	$appname = "Miniris";
+	$urlprefix = "/miniris";
+}
+else if (strpos ( $_SERVER ['REQUEST_URI'], '/miniris' ) !== false) {
+	$app = "miniris";
+	$appname = "Miniris";
+	$urlprefix = "/miniris";
+}
+else {
+	switch ($_SERVER ['HTTP_HOST']) {
+		case "miniris.jeisfeld.de" :
+		case "miniris.localhost" :
+		case "localhost:8308" :
+		case "127.0.0.1:8308" :
+		case "pc-joerg:8308" :
+		case "192.168.1.5:8308" :
+		case "localhost:8007" :
+		case "127.0.0.1:8007" :
+		case "pc-joerg:8007" :
+		case "192.168.1.5:8007" :
+			$app = "miniris";
+			$appname = "Miniris";
+			$urlprefix = "/miniris";
+			break;
+		default :
+			$app = "augendiagnose";
+			switch ($language) {
+				case "de" :
+					$appname = "Augendiagnose";
+					break;
+				case "en" :
+					$appname = "Eye Diagnosis";
+					break;
+				case "es" :
+				case "pt" :
+					$appname = "Diagnóstico ocular";
+					break;
+			}
+			break;
+	}
+}
+function isAugendiagnose() {
+	global $app;
+	return $app == "augendiagnose";
+}
+function isMiniris() {
+	global $app;
+	return $app == "miniris";
+}
+
+// Define some basic strings based on language
+switch ($language) {
+	case "de" :
+		$title = "${appname} (Android App)";
+		$description = "${appname}, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Augendiagnose, Irisdiagnose, Iridologie, Android";
+		break;
+	case "en" :
+		$title = "${appname} (Android App)";
+		$description = "${appname}, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Eye Diagnosis, Iris Diagnosis, Iridology, Android";
+		break;
+	case "es" :
+		$title = "${appname} (Aplicación para Android)";
+		$description = "${appname}, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridología, Android";
+		break;
+	case "pt" :
+		$title = "${appname} (Aplicação Android)";
+		$description = "${appname}, Jörg Eisfeld";
+		$keywords = "Jörg Eisfeld, Diagnóstico ocular, Iridologia, Android";
+		break;
+}
 
 if (! empty ( $_GET ["anchor"] )) {
 	$pagefull = $pagefull . "#" . $_GET ["anchor"];
 }
-?>
+
+if ($_GET ["createHtmlString"]) {
+	include ($language . "/" . $pagefull);
+}
+else {
+	?>
+
+<!DOCTYPE html>
+<html lang="<?=$language?>">
+<head>
+<title><?=$title?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="<?=$language?>">
+<meta name="description" content="<?=$description?>">
+<meta name="keywords" content="<?=$keywords?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="/drawable/icon_<?=$app?>.ico">
+<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
+<script>
+function toggleNavigation() {
+	$("#navigationframe").toggleClass( "mobilenavigation" );
+}
+</script>
+</head>
+<body>
 	<div id="headerframe" name="headerframe">
 		<?php include ($language."/header.php"); ?>
 	</div>
@@ -38,8 +147,17 @@ if (! empty ( $_GET ["anchor"] )) {
 	<div id="mainframe" name="main">
 		<?php include ($language."/".$pagefull); ?>
 	</div>
-<?php 
-include "php/pagefooter.php";
-?>
+<?php
+	if ($nopageselected) {
+		?>
+<script>
+	$("#navigationframe").toggleClass( "startup" );
+</script>
+<?php
+	}
+	?>
 </body>
 </html>
+<?php
+}
+?>

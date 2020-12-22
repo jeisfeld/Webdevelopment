@@ -1,7 +1,7 @@
 <p>
-	<a href="<?=$path_prefix1?>en/<?=$pagepathname?>">English</a>
-	<a href="<?=$path_prefix1?>de/<?=$pagepathname?>">Deutsch</a>
-	<a href="<?=$path_prefix1?>es/<?=$pagepathname?>">Español</a>
+	<a href="<?=$urlprefix?>/en/<?=$pagepathname?>">English</a>
+	<a href="<?=$urlprefix?>/de/<?=$pagepathname?>">Deutsch</a>
+	<a href="<?=$urlprefix?>/es/<?=$pagepathname?>">Español</a>
 	Português
 </p>
 
@@ -10,7 +10,7 @@ if (!$nopageselected) {
 ?>
 <div id="navigationbutton" class="mobile">
 	<a href="javascript:void(0);" onclick="toggleNavigation()">
-		<img alt="Home" src="<?=$path_prefix1?>drawable/ic_menu.png">
+		<img alt="Home" src="/drawable/ic_menu.png">
 	</a>
 </div>
 <?php 

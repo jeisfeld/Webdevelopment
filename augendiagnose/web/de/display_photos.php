@@ -1,7 +1,3 @@
-<?php
-$page="display_photos";
-include "pageheader_de.php";
-?>
 <h2>Fotos ansehen</h2>
 
 <p>Hier können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen. Daraufhin sehen
@@ -91,6 +87,3 @@ include "pageheader_de.php";
 		src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />) aktiviert oder deaktiviert
 	werden.
 </p>
-<?php
-include "../php/pagefooter.php";
-?>

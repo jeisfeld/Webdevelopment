@@ -1,7 +1,3 @@
-<?php
-$page="overview";
-include "pageheader_pt.php";
-?>
 <h2><?=$appname?> - Informações Gerais</h2>
 
 <?PHP
@@ -71,7 +67,7 @@ if (isAugendiagnose ()) {
 <p>
 	Existe um aplicativo de acompanhamento do Windows que pode ser usado para visualizar as fotos que foram organizadas com
 	este aplicativo. Para mais informações, consulte
-	<a href="https://augendiagnose-app.de/?lang=pt&page=windowsapp" target="_top">https://augendiagnose-app.de/?page=windowsapp</a>
+	<a href="https://augendiagnose-app.de/pt/windowsapp.php">https://augendiagnose-app.de/pt/windowsapp.php</a>
 	.
 </p>
 
@@ -153,7 +149,7 @@ else {
 <p>
 	Existe um aplicativo de acompanhamento do Windows que pode ser usado para visualizar as fotos que foram organizadas com
 	este aplicativo. Para mais informações, consulte
-	<a href="https://augendiagnose-app.de/?app=miniris&lang=pt&page=windowsapp" target="_top">https://augendiagnose-app.de/?app=miniris&page=windowsapp</a>
+	<a href="https://augendiagnose-app.de/miniris/pt/windowsapp.php">https://augendiagnose-app.de/miniris/pt/windowsapp.php</a>
 	.
 </p>
 
@@ -177,7 +173,3 @@ else {
 		Analytics </a>
 	para mais detalhes.
 </p>
-<?php
-include "../php/pagefooter.php";
-?>
-

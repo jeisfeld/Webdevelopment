@@ -1,7 +1,3 @@
-<?php
-$page="display_photos";
-include "pageheader_pt.php";
-?>
 <h2>Visualizar fotos</h2>
 
 <p>Aqui você pode selecionar o nome de uma pessoa cujas fotos de olhos você deseja ver. Em seguida, o aplicativo
@@ -87,6 +83,3 @@ include "pageheader_pt.php";
 		src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
 		src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />).
 </p>
-<?php
-include "../php/pagefooter.php";
-?>

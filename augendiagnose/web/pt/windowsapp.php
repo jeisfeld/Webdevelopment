@@ -1,7 +1,3 @@
-<?php
-$page="windowsapp";
-include "pageheader_pt.php";
-?>
 <h2>O aplicativo para o Windows</h2>
 
 <p>Existe um aplicativo de acompanhamento do Windows que permite visualizar as fotos de seus olhos em um computador com
@@ -102,8 +98,5 @@ include "pageheader_pt.php";
 </ul>
 
 <h3>
-	<a href="../?lang=pt&page=downloads" target="_parent">Vá para a página de download</a>
+	<a href="<?=$urlprefix?>/pt/downloads.php">Vá para a página de download</a>
 </h3>
-<?php
-include "../php/pagefooter.php";
-?>
