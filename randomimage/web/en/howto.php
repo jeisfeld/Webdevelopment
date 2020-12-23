@@ -29,7 +29,7 @@
 <p>If you want to add images to your list, there are the following options:</p>
 
 <ul>
-	<li>On the image list configuration page, press the icon <img src="../drawable/ic_action_plus.png" />. Then you
+	<li>On the image list configuration page, press the icon <img src="/drawable/ic_action_plus.png" />. Then you
 		see a list of
 		<ul>
 			<li>Your other image lists (blue)</li>
@@ -39,15 +39,15 @@
 		<ul>
 			<li>Select an image folder (yellow). Then the images from this folder will be displayed. You may then either
 				select images from this folder for addition, or you may press the symbol <img
-				src="../drawable/ic_action_add_folder.png" /> in order to add the whole folder. You can add a filter in order to
+				src="/drawable/ic_action_add_folder.png" /> in order to add the whole folder. You can add a filter in order to
 				display only folders containing a certain character string in their path.
 			</li>
 			<li>Select one of your image lists (blue) in order to add it to your list as nested list.</li>
 			<li>Select a parent folder (orange) in order to add it to your list including all subfolders.</li>
-			<li>Press the symbol <img src="../drawable/ic_action_checkbox.png" /> and then select multiple folders for
+			<li>Press the symbol <img src="/drawable/ic_action_checkbox.png" /> and then select multiple folders for
 				addition.
 			</li>
-			<li>Press the symbol <img src="../drawable/ic_action_folder.png" /> and then browse your file system in order
+			<li>Press the symbol <img src="/drawable/ic_action_folder.png" /> and then browse your file system in order
 				to select image folders or images for addition.
 			</li>
 		</ul>
@@ -57,7 +57,7 @@
 </ul>
 
 <p>
-	Via the symbol <img src="../drawable/ic_action_minus.png" /> you may remove images and folders from your image list.
+	Via the symbol <img src="/drawable/ic_action_minus.png" /> you may remove images and folders from your image list.
 </p>
 
 <p>Included lists are displayed as a blue folder. If you make a long click on such a list, you may adjust how
@@ -108,8 +108,8 @@ There are three types of widgets that you can place on your home screen in order
 
 <p>
 	The Random Image Frame also allows you to switch to a new random image (via tap on the symbol <img
-		src="../drawable/ic_widget_next.png" /> on the right border of the frame), or to change the configuration of the
-	frame (via tap on the symbol <img src="../drawable/ic_widget_settings.png" /> on the left border of the frame).
+		src="/drawable/ic_widget_next.png" /> on the right border of the frame), or to change the configuration of the
+	frame (via tap on the symbol <img src="/drawable/ic_widget_settings.png" /> on the left border of the frame).
 </p>
 
 <p>If you have multiple image lists, then you can place widgets for multiple image lists on your home screen, so for
@@ -140,7 +140,7 @@ There are three types of widgets that you can place on your home screen in order
 	<li>By adding the launcher for the random image configuration to your home screen. (This is a second launcher
 		provided by the app.)</li>
 	<li>When you are on the configuration page of an image list, by tapping either on the top left corner or on the
-		icon <img src="../drawable/ic_action_home.png" />.
+		icon <img src="/drawable/ic_action_home.png" />.
 	</li>
 </ul>
 
@@ -148,12 +148,12 @@ There are three types of widgets that you can place on your home screen in order
 
 <ul>
 	<li>Go to the configuration of an individual image list (by pressing on an image list symbol)</li>
-	<li>Add a new image list (by pressing <img src="../drawable/ic_action_plus.png" />)
+	<li>Add a new image list (by pressing <img src="/drawable/ic_action_plus.png" />)
 	</li>
 	<li>Select multiple image lists for backup, restore or deletion (by pressing <img
-		src="../drawable/ic_action_checkbox.png" />)
+		src="/drawable/ic_action_checkbox.png" />)
 	</li>
-	<li>Go to the generall app settings (by pressing <img src="../drawable/ic_action_settings.png" />)
+	<li>Go to the generall app settings (by pressing <img src="/drawable/ic_action_settings.png" />)
 	</li>
 	<li>Change the widget settings</li>
 	<li>Change the notification settings (and add or delete notifications)</li>

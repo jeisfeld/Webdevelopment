@@ -4,7 +4,7 @@
 
 <p>
 	Mientras está en la página de configuración principal, puede presionar el icono <img
-		src="../drawable/ic_action_settings.png" /> para ir a la página de configuración. Aquí encontrará las siguientes
+		src="/drawable/ic_action_settings.png" /> para ir a la página de configuración. Aquí encontrará las siguientes
 	categorías de configuraciones:
 </p>
 

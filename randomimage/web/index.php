@@ -26,7 +26,7 @@ if (! $page) {
 }
 
 $pagefull = $page . ".php";
-$pagepathname = $nopageselected ? "" : $pagefull;
+$pagepathname = $nopageselected ? "" : $page . "/";
 
 // Define some basic strings based on language
 switch ($language) {

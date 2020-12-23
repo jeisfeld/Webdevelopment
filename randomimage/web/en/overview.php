@@ -48,7 +48,3 @@
 	<a href="https://support.google.com/analytics/answer/6004245?hl=en" target="_blank">Google Analytics Privacy Policy</a>
 	for more details.
 </p>
-
-<div class="mobile">
-	<?php include ("./".$language."/navigation.php"); ?>
-</div>

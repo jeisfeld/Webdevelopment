@@ -1,21 +1,21 @@
 <h2 class="mobile">Inhalt</h2>
 
 <p>
-	<a href="/<?=$language?>/overview.php">Übersicht</a>
+	<a href="/<?=$language?>/overview/">Übersicht</a>
 </p>
 
 <p>
-	<a href="/<?=$language?>/howto.php">Hinweise zur Benutzung</a>
+	<a href="/<?=$language?>/howto/">Hinweise zur Benutzung</a>
 </p>
 
 <p>
-	<a href="/<?=$language?>/settings.php">Einstellungen</a>
+	<a href="/<?=$language?>/settings/">Einstellungen</a>
 </p>
 
 <p>
-	<a href="/<?=$language?>/releasenotes.php">Versionshinweise</a>
+	<a href="/<?=$language?>/releasenotes/">Versionshinweise</a>
 </p>
 
 <p>
-	<a href="/<?=$language?>/impressum.php">Impressum</a>
+	<a href="/<?=$language?>/impressum/">Impressum</a>
 </p>

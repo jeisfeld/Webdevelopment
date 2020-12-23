@@ -31,7 +31,7 @@
 <p>Wenn Sie Bilder zu Ihrer Liste hinzufügen wollen, gibt es die folgenden Möglichkeiten:</p>
 
 <ul>
-	<li>Drücken Sie auf der Bildlisten-Konfigurationsseite auf das Symbol <img src="../drawable/ic_action_plus.png" />.
+	<li>Drücken Sie auf der Bildlisten-Konfigurationsseite auf das Symbol <img src="/drawable/ic_action_plus.png" />.
 		Dann sehen Sie eine Liste
 		<ul>
 			<li>Ihrer anderen Bildlisten (blau)</li>
@@ -41,17 +41,17 @@
 		<ul>
 			<li>ein Bildverzeichnis (gelb) auswählen. Dann werden die Bilder aus diesem Verzeichnis angezeigt. Sie können
 				dann entweder Bilder aus diesem Verzeichnis auswählen und anschließend hinzufügen, oder Sie können über das Symbol <img
-				src="../drawable/ic_action_add_folder.png" /> das ganze Verzeichnis hinzufügen. Sie können hier auch einen Filter
+				src="/drawable/ic_action_add_folder.png" /> das ganze Verzeichnis hinzufügen. Sie können hier auch einen Filter
 				eingeben, damit nur diejenigen Verzeichnisse angezeigt werden, die in ihrem Pfad eine gewisse Zeichenkette
 				enthalten.
 			</li>
 			<li>eine vorhandene Bildliste (blau) auswählen, um sie Ihrer Liste als Unterliste hinzuzufügen.</li>
 			<li>eine übergeordnetes Verzeichnis (orange) auswählen, es einschließlich aller Unterverzeicnisse Ihrer Liste
 				hinzuzufügen.</li>
-			<li>das Symbol <img src="../drawable/ic_action_checkbox.png" /> drücken und anschließend mehrere Verzeichnisse
+			<li>das Symbol <img src="/drawable/ic_action_checkbox.png" /> drücken und anschließend mehrere Verzeichnisse
 				zum Hinzufügen auswählen.
 			</li>
-			<li>das Symbol <img src="../drawable/ic_action_folder.png" /> drücken und anschließend in Ihrem Dateisystem
+			<li>das Symbol <img src="/drawable/ic_action_folder.png" /> drücken und anschließend in Ihrem Dateisystem
 				nach Verzeichnissen und Fotos suchen, die Sie hinzufügen wollen.
 			</li>
 		</ul>
@@ -61,7 +61,7 @@
 </ul>
 
 <p>
-	Über das Symbol <img src="../drawable/ic_action_minus.png" /> können Sie Bilder und Verzeichnisse aus Ihrer Bildliste
+	Über das Symbol <img src="/drawable/ic_action_minus.png" /> können Sie Bilder und Verzeichnisse aus Ihrer Bildliste
 	entfernen.
 </p>
 
@@ -115,8 +115,8 @@ Es gibt drei Arten von Widgets, die Sie auf Ihrem Home-Bildschirm platzieren kö
 
 <p>
 	Der Zufallsbilderrahmen ermöglicht es auch, zu einem neuen zufälligen Bild zu wechseln (durch Tippen auf das Symbol <img
-		src="../drawable/ic_widget_next.png" /> am rechten Rand des Rahmens) oder die Konfiguration des Widgets zu ändern
-	(durch Tippen auf das Symbol <img src="../drawable/ic_widget_settings.png" /> am linken Rand des Widgets).
+		src="/drawable/ic_widget_next.png" /> am rechten Rand des Rahmens) oder die Konfiguration des Widgets zu ändern
+	(durch Tippen auf das Symbol <img src="/drawable/ic_widget_settings.png" /> am linken Rand des Widgets).
 </p>
 
 <p>Wenn Sie mehrere Bildlisten haben, dann können Sie auch Widgets für mehrere Bildlisten auf Ihren Startbildschirm
@@ -148,19 +148,19 @@ Es gibt drei Arten von Widgets, die Sie auf Ihrem Home-Bildschirm platzieren kö
 	<li>Durch das Hinzufügen des Symbols für die Zufallsbild-Konfiguration auf Ihre Startseite. (Dies ist ein zweites
 		Startsymbol der App, neben dem Standard-Symbol, welches ein Zufallsbild aufruft.)</li>
 	<li>Wenn Sie auf der Konfigurationsseite einer Bildliste sind, durch drücken enteder auf die linke obere Ecke des
-		Bildschirms oder auf das Symbol <img src="../drawable/ic_action_home.png" />.
+		Bildschirms oder auf das Symbol <img src="/drawable/ic_action_home.png" />.
 </ul>
 
 <p>Hier haben Sie folgende Möglichkeiten:</p>
 
 <ul>
 	<li>Zur Konfiguration einzelner Bildlisten wechseln (durch Drücken eines Bildlistensymbols)</li>
-	<li>Eine neue Bildliste hinzufügen (durch Drücken von <img src="../drawable/ic_action_plus.png" />)
+	<li>Eine neue Bildliste hinzufügen (durch Drücken von <img src="/drawable/ic_action_plus.png" />)
 	</li>
 	<li>Mehrere Bildlisten zum Sichern, Wiederherstellen oder Löschen auswählen (durch Drücken von <img
-		src="../drawable/ic_action_checkbox.png" />)
+		src="/drawable/ic_action_checkbox.png" />)
 	</li>
-	<li>Die allgemeinen App-Einstellungen ändern (durch Drücken von <img src="../drawable/ic_action_settings.png" />)
+	<li>Die allgemeinen App-Einstellungen ändern (durch Drücken von <img src="/drawable/ic_action_settings.png" />)
 	</li>
 	<li>Die Widget-Einstellungen ändern</li>
 	<li>Die Benachrichtigungs-Einstellungen ändern (und Benachrichtigungen hinzufügen oder löschen)</li>

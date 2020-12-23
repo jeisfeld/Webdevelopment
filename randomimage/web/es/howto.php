@@ -32,7 +32,7 @@
 
 <ul>
 	<li>En la página de configuración de la lista de imágenes, presione el icono <img
-		src="../drawable/ic_action_plus.png" />. Entonces ve una lista de
+		src="/drawable/ic_action_plus.png" />. Entonces ve una lista de
 		<ul>
 			<li>Sus otras listas de imágenes (azul)</li>
 			<li>Las carpetas de imágenes en su dispositivo (amarillo)</li>
@@ -41,15 +41,15 @@
 		<ul>
 			<li>Seleccionar una carpeta de imágenes (amarilla). Luego se mostrarán las imágenes de esta carpeta. Luego puede
 				seleccionar imágenes de esta carpeta para agregarlas o puede presionar el símbolo <img
-				src="../drawable/ic_action_add_folder.png" /> para agregar toda la carpeta. Puede agregar un filtro para mostrar
+				src="/drawable/ic_action_add_folder.png" /> para agregar toda la carpeta. Puede agregar un filtro para mostrar
 				solo las carpetas que contienen una determinada cadena de caracteres en su ruta.
 			</li>
 			<li>Seleccionar una de sus listas de imágenes (azul) para agregarla a su lista como lista anidada.</li>
 			<li>Seleccionar una carpeta principal (naranja) para agregarla a su lista, incluidas todas las subcarpetas.</li>
-			<li>Presionar el símbolo <img src="../drawable/ic_action_checkbox.png" /> y luego seleccionar varias carpetas
+			<li>Presionar el símbolo <img src="/drawable/ic_action_checkbox.png" /> y luego seleccionar varias carpetas
 				para agregar.
 			</li>
-			<li>Presionar el símbolo <img src="../drawable/ic_action_folder.png" /> y luego explorar su sistema de archivos
+			<li>Presionar el símbolo <img src="/drawable/ic_action_folder.png" /> y luego explorar su sistema de archivos
 				para seleccionar carpetas de imágenes o imágenes para agregar.
 			</li>
 		</ul>
@@ -60,7 +60,7 @@
 </ul>
 
 <p>
-	A través del símbolo <img src="../drawable/ic_action_minus.png" /> puede eliminar imágenes y carpetas de su lista de
+	A través del símbolo <img src="/drawable/ic_action_minus.png" /> puede eliminar imágenes y carpetas de su lista de
 	imágenes.
 </p>
 
@@ -113,8 +113,8 @@ Hay tres tipos de widgets que puede colocar en su pantalla de inicio para ver im
 
 <p>
 	El marco de imagen aleatorio también le permite cambiar a una nueva imagen aleatoria (tocando el símbolo <img
-		src="../drawable/ic_widget_next.png" /> en el borde derecho del marco), o para cambiar la configuración del marco
-	(tocando el símbolo <img src="../drawable/ic_widget_settings.png" /> en el borde izquierdo del marco).
+		src="/drawable/ic_widget_next.png" /> en el borde derecho del marco), o para cambiar la configuración del marco
+	(tocando el símbolo <img src="/drawable/ic_widget_settings.png" /> en el borde izquierdo del marco).
 </p>
 
 <p>Si tiene varias listas de imágenes, puede colocar widgets para múltiples listas de imágenes en su pantalla de
@@ -148,7 +148,7 @@ Hay tres tipos de widgets que puede colocar en su pantalla de inicio para ver im
 	<li>Al agregar el iniciador para la configuración de imagen aleatoria a su pantalla de inicio. (Este es un segundo
 		iniciador proporcionado por la aplicación)</li>
 	<li>Cuando esté en la página de configuración de una lista de imágenes, tocando en la esquina superior izquierda o
-		en el icono <img src="../drawable/ic_action_home.png" />.
+		en el icono <img src="/drawable/ic_action_home.png" />.
 	</li>
 </ul>
 
@@ -157,12 +157,12 @@ Hay tres tipos de widgets que puede colocar en su pantalla de inicio para ver im
 <ul>
 	<li>Andar a la configuración de una lista de imágenes individuales (presionando el símbolo de una lista de
 		imágenes)</li>
-	<li>Agregar una nueva lista de imágenes (presionando <img src="../drawable/ic_action_plus.png" />)
+	<li>Agregar una nueva lista de imágenes (presionando <img src="/drawable/ic_action_plus.png" />)
 	</li>
 	<li>Seleccionar varias listas de imágenes para copia de seguridad, restauración o eliminación (presionando <img
-		src="../drawable/ic_action_checkbox.png" />)
+		src="/drawable/ic_action_checkbox.png" />)
 	</li>
-	<li>Andar a la configuración general de la aplicación (presionando <img src="../drawable/ic_action_settings.png" />)
+	<li>Andar a la configuración general de la aplicación (presionando <img src="/drawable/ic_action_settings.png" />)
 	</li>
 	<li>Cambiar la configuración del widget</li>
 	<li>Cambiar la configuración de notificaciones (y agregar o eliminar notificaciones)</li>

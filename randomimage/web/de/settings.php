@@ -4,7 +4,7 @@
 
 <p>
 	Während Sie sich auf der Haupt-Konfigurationsseite befinden, können Sie auf das Symbol <img
-		src="../drawable/ic_action_settings.png" /> drücken, um zur Einstellungsseite zu gelangen. Hier finden Sie folgende
+		src="/drawable/ic_action_settings.png" /> drücken, um zur Einstellungsseite zu gelangen. Hier finden Sie folgende
 	Kategorien von Einstellungen:
 </p>
 

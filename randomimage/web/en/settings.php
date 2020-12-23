@@ -3,7 +3,7 @@
 <h3>App settings</h3>
 
 <p>
-	While being on the main configuration page, you can press the icon <img src="../drawable/ic_action_settings.png" /> to
+	While being on the main configuration page, you can press the icon <img src="/drawable/ic_action_settings.png" /> to
 	go to the settings page. Here you find the following categories of settings:
 </p>
 
