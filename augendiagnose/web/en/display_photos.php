@@ -39,46 +39,46 @@
 <p>In the detail view (one or two photos), you have the following further possibilities:</p>
 
 <ul>
-	<li>Change of brightness and contrast via sliders <img src="../drawable/ic_seek_brightness.png" /><img
-		src="../drawable/ic_seek_contrast.png" />, as well as change of saturation <img
-		src="../drawable/ic_seek_saturation.png" /> and color temperature <img src="../drawable/ic_seek_color_temperature.png" /></li>
+	<li>Change of brightness and contrast via sliders <img src="/drawable/ic_seek_brightness.png" /><img
+		src="/drawable/ic_seek_contrast.png" />, as well as change of saturation <img
+		src="/drawable/ic_seek_saturation.png" /> and color temperature <img src="/drawable/ic_seek_color_temperature.png" /></li>
 
-	<li>Rotation of the photo (button <img src="../drawable/ic_btn_rotate.png" class="frameless" />)
+	<li>Rotation of the photo (button <img src="/drawable/ic_btn_rotate.png" class="frameless" />)
 	</li>
 
 	<li>
 		<p>
-			Display of iris topographies as overlay (circle button <img src="../drawable/ic_btn_wheel.png" class="frameless" />
+			Display of iris topographies as overlay (circle button <img src="/drawable/ic_btn_wheel.png" class="frameless" />
 			and numbered buttons), adaption of the overlay to the iris and storage of overlay position (lock button <img
-				src="../drawable/ic_lock_open.png" />)
+				src="/drawable/ic_lock_open.png" />)
 		</p>
 		<p>When making a long click on one of the numbered buttons, you can change the overlay for this button. For the last
 			numbered button, this allows you also to remove the button or add another button.</p>
 	</li>
 
-	<li>Set the pupil size for the overlays (button <img src="../drawable/ic_btn_pupil_0.png" class="frameless" />). Here
-		you can either keep the pupil centered (<img src="../drawable/ic_btn_pupil_1.png" class="frameless" />) or move it
-		freely (<img src="../drawable/ic_btn_pupil_2.png" class="frameless" />).
+	<li>Set the pupil size for the overlays (button <img src="/drawable/ic_btn_pupil_0.png" class="frameless" />). Here
+		you can either keep the pupil centered (<img src="/drawable/ic_btn_pupil_1.png" class="frameless" />) or move it
+		freely (<img src="/drawable/ic_btn_pupil_2.png" class="frameless" />).
 	</li>
 
 	<li>Store the selected settings of brightness and contrast (via &ldquo;save&rdquo; <img
-		src="../drawable/ic_action_save.png" /> button on action bar)
+		src="/drawable/ic_action_save.png" /> button on action bar)
 	</li>
 
-	<li>Store the position and zoom (via &ldquo;save&rdquo; <img src="../drawable/ic_action_save.png" /> button on action
+	<li>Store the position and zoom (via &ldquo;save&rdquo; <img src="/drawable/ic_action_save.png" /> button on action
 		bar)
 	</li>
 
-	<li>Share the image (via &ldquo;share&rdquo; <img src="../drawable/ic_action_share.png" /> button on action bar)
+	<li>Share the image (via &ldquo;share&rdquo; <img src="/drawable/ic_action_share.png" /> button on action bar)
 	</li>
 
-	<li>Change the comment of the photo (via &ldquo;document&rdquo; <img src="../drawable/ic_comment.png" /> button on
+	<li>Change the comment of the photo (via &ldquo;document&rdquo; <img src="/drawable/ic_comment.png" /> button on
 		action bar)
 	</li>
 </ul>
 
 <p>
 	These features may be enabled or disabled via the button &ldquo;Show/Hide utilities&rdquo; (<img
-		src="../drawable/ic_tools_up.png" /> <img src="../drawable/ic_tools_down.png" /> <img
-		src="../drawable/ic_tools_left.png" /> <img src="../drawable/ic_tools_right.png" />).
+		src="/drawable/ic_tools_up.png" /> <img src="/drawable/ic_tools_down.png" /> <img
+		src="/drawable/ic_tools_left.png" /> <img src="/drawable/ic_tools_right.png" />).
 </p>

@@ -1,35 +1,35 @@
 <h2 class="mobile">Inhalt</h2>
 
 <p>
-	<a href="<?=$urlprefix?>/de/overview.php">Übersicht</a>
+	<a href="<?=$urlprefix?>/de/overview/">Übersicht</a>
 </p>
 
 <p>
-	<a href="<?=$urlprefix?>/de/settings.php">Einstellungen</a>
+	<a href="<?=$urlprefix?>/de/settings/">Einstellungen</a>
 </p>
 
 <?PHP
 if (isAugendiagnose ()) {
 	?>
 <p>
-	<a href="<?=$urlprefix?>/de/organize_photos.php">Organisation der Fotos</a>
+	<a href="<?=$urlprefix?>/de/organize_photos/">Organisation der Fotos</a>
 </p>
 <?PHP
 }
 ?>
 
 <p>
-	<a href="<?=$urlprefix?>/de/display_photos.php">Fotos ansehen</a>
+	<a href="<?=$urlprefix?>/de/display_photos/">Fotos ansehen</a>
 </p>
 
 <p>
-	<a href="<?=$urlprefix?>/de/windowsapp.php">Die Windows-Anwendung</a>
+	<a href="<?=$urlprefix?>/de/windowsapp/">Die Windows-Anwendung</a>
 </p>
 
 <p>
-	<a href="<?=$urlprefix?>/de/downloads.php">Downloads</a>
+	<a href="<?=$urlprefix?>/de/downloads/">Downloads</a>
 </p>
 
 <p>
-	<a href="<?=$urlprefix?>/de/impressum.php">Impressum</a>
+	<a href="<?=$urlprefix?>/de/impressum/">Impressum</a>
 </p>

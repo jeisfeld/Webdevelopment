@@ -67,7 +67,7 @@ if (isAugendiagnose ()) {
 <p>
 	Existe um aplicativo de acompanhamento do Windows que pode ser usado para visualizar as fotos que foram organizadas com
 	este aplicativo. Para mais informações, consulte
-	<a href="https://augendiagnose-app.de/pt/windowsapp.php">https://augendiagnose-app.de/pt/windowsapp.php</a>
+	<a href="https://augendiagnose-app.de/pt/windowsapp/">https://augendiagnose-app.de/pt/windowsapp/</a>
 	.
 </p>
 
@@ -149,7 +149,7 @@ else {
 <p>
 	Existe um aplicativo de acompanhamento do Windows que pode ser usado para visualizar as fotos que foram organizadas com
 	este aplicativo. Para mais informações, consulte
-	<a href="https://augendiagnose-app.de/miniris/pt/windowsapp.php">https://augendiagnose-app.de/miniris/pt/windowsapp.php</a>
+	<a href="https://augendiagnose-app.de/miniris/pt/windowsapp/">https://augendiagnose-app.de/miniris/pt/windowsapp/</a>
 	.
 </p>
 

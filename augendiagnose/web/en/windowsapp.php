@@ -96,5 +96,5 @@
 </ul>
 
 <h3>
-	<a href="<?=$urlprefix?>/en/downloads.php">Go to download page</a>
+	<a href="<?=$urlprefix?>/en/downloads/">Go to download page</a>
 </h3>

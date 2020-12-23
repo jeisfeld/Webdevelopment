@@ -15,13 +15,17 @@ else {
 	}
 }
 
-if (! $page) {
+if (isset($page)) {
+	$nopageselected = false;
+}
+else {
 	if (empty ( $_GET ["page"] )) {
 		$page = "overview";
 		$nopageselected = true;
 	}
 	else {
 		$page = $_GET ["page"];
+		$nopageselected = false;
 	}
 }
 

@@ -18,22 +18,26 @@ else {
 	}
 }
 
-if (! $page) {
+if (isset($page)) {
+	$nopageselected = false;
+}
+else {
 	if (empty ( $_GET ["page"] )) {
 		$page = "overview";
 		$nopageselected = true;
 	}
 	else {
 		$page = $_GET ["page"];
+		$nopageselected = false;
 	}
 }
 
 $pagefull = $page . ".php";
-$pagepathname = $nopageselected ? "" : $pagefull;
+$pagepathname = $nopageselected ? "" : $page . "/";
 $urlprefix = "";
 
 // Determine Miniris vs Augendiagnose
-if ($_GET ["app"] == "miniris") {
+if (array_key_exists("app", $_GET) && $_GET ["app"] == "miniris") {
 	$app = "miniris";
 	$appname = "Miniris";
 	$urlprefix = "/miniris";
@@ -47,14 +51,8 @@ else {
 	switch ($_SERVER ['HTTP_HOST']) {
 		case "miniris.jeisfeld.de" :
 		case "miniris.localhost" :
-		case "localhost:8308" :
-		case "127.0.0.1:8308" :
-		case "pc-joerg:8308" :
-		case "192.168.1.5:8308" :
 		case "localhost:8007" :
 		case "127.0.0.1:8007" :
-		case "pc-joerg:8007" :
-		case "192.168.1.5:8007" :
 			$app = "miniris";
 			$appname = "Miniris";
 			$urlprefix = "/miniris";
@@ -113,7 +111,7 @@ if (! empty ( $_GET ["anchor"] )) {
 	$pagefull = $pagefull . "#" . $_GET ["anchor"];
 }
 
-if ($_GET ["createHtmlString"]) {
+if (array_key_exists("createHtmlString", $_GET)) {
 	include ($language . "/" . $pagefull);
 }
 else {

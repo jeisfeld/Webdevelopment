@@ -94,7 +94,7 @@ if (isAugendiagnose ()) {
 					single image. This requires half of the memory.</li>
 
 				<li><b>Load only on demand:</b> The app does not show the image in full resolution. This requires least memory and
-					CPU, but details in the photo may be lost. The &ldquo;magnifier&rdquo; button <img src="../drawable/ic_clarity.png" />
+					CPU, but details in the photo may be lost. The &ldquo;magnifier&rdquo; button <img src="/drawable/ic_clarity.png" />
 					allows to display the current picture detail in full resolution.</li>
 			</ul>
 		</td>
