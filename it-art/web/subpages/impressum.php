@@ -3,9 +3,9 @@
 <head>
 <title>Impressum</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../stylesheets/styles.css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/impressum.js"></script>
+<link rel="stylesheet" href="/stylesheets/styles.css">
+<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/javascript/impressum.js"></script>
 </head>
 
 <body id="impressum">

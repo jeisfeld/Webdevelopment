@@ -3,9 +3,9 @@
 <head>
 <title>Webseiten</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
+<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/javascript/subpage.js"></script>
 </head>
 
 <body id="webseiten" class="mainpage">
@@ -19,13 +19,13 @@
 	<p>Bisher von mir gepflegte Webseiten:</p>
 
 	<a href="http://www.spirituelle-seelenreise.de" target="_blank" class="image">
-		<img alt="www.spirituelle-seelenreise.de" src="../img/spirituelle-seelenreise.jpg" />
+		<img alt="www.spirituelle-seelenreise.de" src="/img/spirituelle-seelenreise.jpg" />
 	</a>
 	<a href="http://www.naturheilkunde-praxis.de" target="_blank" class="image">
-		<img alt="www.naturheilkunde-praxis.de" src="../img/naturheilkunde-praxis.jpg" />
+		<img alt="www.naturheilkunde-praxis.de" src="/img/naturheilkunde-praxis.jpg" />
 	</a>
 	<a href="http://www.therapiezentrum-dante.de" target="_blank" class="image">
-		<img alt="www.therapiezentrum-dante.de" src="../img/therapiezentrum-dante.jpg" />
+		<img alt="www.therapiezentrum-dante.de" src="/img/therapiezentrum-dante.jpg" />
 	</a>
 </body>
 </html>

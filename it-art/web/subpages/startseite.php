@@ -3,10 +3,10 @@
 <head>
 <title>Startseite</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
-<script type="text/javascript" src="../javascript/startpage.js"></script>
+<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/javascript/subpage.js"></script>
+<script type="text/javascript" src="/javascript/startpage.js"></script>
 </head>
 
 <body id="startseite" class="mainpage">

@@ -125,7 +125,7 @@ $(document).ready(function() {
 
 	$('#startseite').find('h1').each(function(i) {
 		var id = $(this).attr('id');
-		$(this).wrapInner($('<a href="' + id + '.html" />'));
+		$(this).wrapInner($('<a href="' + id + '.php" />'));
 		$(this).addClass('startitem');
 	});
 

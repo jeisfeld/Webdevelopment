@@ -4,7 +4,7 @@ if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "de" )) {
 	exit ();
 }
 else {
-	header ( "Location: http://augendiagnose.jeisfeld.de" );
+	header ( "Location: http://augendiagnose-app.de" );
 	exit ();
 }
 ?>

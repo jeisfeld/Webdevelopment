@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Top Logo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
+<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+</head>
+<body id="toplogo">
+	<img id="logoimage" src="/img/logo-it-art_wide.png" alt="IT-art - Jörg Eisfeld" />
+	<hr />
+</body>
+</html>
