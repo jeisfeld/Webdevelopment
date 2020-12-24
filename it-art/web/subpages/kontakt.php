@@ -1,14 +1,3 @@
-<?php header('Content-Type: text/html; charset=utf-8'); ?>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Kontakt</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/javascript/subpage.js"></script>
-</head>
-
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $contentErr = "";
@@ -17,7 +6,8 @@ $name = $email = $content = "";
 if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	if (empty ( $_POST ["name"] )) {
 		$nameErr = "Bitte geben Sie Ihren Namen an!";
-	} else {
+	}
+	else {
 		$name = test_input ( $_POST ["name"] );
 
 		if (empty ( $name )) {
@@ -27,7 +17,8 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 
 	if (empty ( $_POST ["email"] )) {
 		$emailErr = "Bitte geben Sie Ihre Email-Adresse an!";
-	} else {
+	}
+	else {
 		$email = test_input ( $_POST ["email"] );
 		// check if e-mail address is well-formed
 		if (! filter_var ( $email, FILTER_VALIDATE_EMAIL )) {
@@ -37,7 +28,8 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 
 	if (empty ( $_POST ["content"] )) {
 		$contentErr = "Bitte geben Sie eine Nachricht ein!";
-	} else {
+	}
+	else {
 		$content = test_input ( $_POST ["content"] );
 
 		if (empty ( $content )) {
@@ -53,41 +45,40 @@ function test_input($data) {
 }
 ?>
 
-<body id="kontakt" class="mainpage" onload="document.kontaktformular.name.focus();">
-	<h1>Kontakt</h1>
+<h1>Kontakt</h1>
 
-	<p>
-		Bitte kontaktieren Sie mich per E-Mail:<br>
-		<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
-	</p>
-	<form id="kontaktformular" name="kontaktformular" method="post"
-		action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<p>
+	Bitte kontaktieren Sie mich per E-Mail:<br>
+	<a href="mailto:Jörg Eisfeld<webdevelopment@ it-art.de>">webdevelopment@it-art.de</a>
+</p>
+<form id="kontaktformular" name="kontaktformular" method="post" action="/kontakt">
 
 <?php
 if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty ( $contentErr )) {
 	?>
 
-			<div>
-			<label for="name">Ihr Name:<span class="error"> <?php echo $nameErr;?></span></label> <input type="text" name="name"
-				class="inputtext" value="<?php echo $name;?>" />
-		</div>
+	<div>
+		<label for="name">Ihr Name:<span class="error"> <?php echo $nameErr;?></span></label> <input type="text" name="name"
+			class="inputtext" value="<?php echo $name;?>" autofocus />
+	</div>
 
-		<div>
-			<label for="email">Ihre E-Mail-Adresse:<span class="error"> <?php echo $emailErr;?></span></label> <input type="text"
-				name="email" class="inputtext" value="<?php echo $email;?>" />
-		</div>
+	<div>
+		<label for="email">Ihre E-Mail-Adresse:<span class="error"> <?php echo $emailErr;?></span></label> <input type="text"
+			name="email" class="inputtext" value="<?php echo $email;?>" />
+	</div>
 
-		<div>
-			<label for="content">Ihre Nachricht:<span class="error"> <?php echo $contentErr;?></span></label>
-			<textarea id="nachricht" name="content" cols="20" rows="5"><?php echo $content;?></textarea>
-		</div>
+	<div>
+		<label for="content">Ihre Nachricht:<span class="error"> <?php echo $contentErr;?></span></label>
+		<textarea id="nachricht" name="content" cols="20" rows="5"><?php echo $content;?></textarea>
+	</div>
 
-		<div>
-			<input type="submit" value="Abschicken" />
-		</div>
+	<div>
+		<input type="submit" value="Abschicken" />
+	</div>
 
 <?php
-} else {
+}
+else {
 
 	$mailTo = '"IT-art" <webdevelopment@it-art.de>';
 	$mailFrom = '"' . $name . '" <' . $email . '>';
@@ -112,7 +103,8 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 		$mailText .= $content;
 
 		@mail ( $mailTo, $mailSubject, $mailText, "From: " . $mailFrom );
-	} else {
+	}
+	else {
 		echo "<h3>Fehler!</h3>";
 		echo "<p>Leider ist ein Fehler aufgetreten, und Ihre Formulardaten konnten nicht an mich gesendet werden. ";
 		echo "Bitte senden Sie eine normale E-Mail an <a href=\"mailto:webdevelopment@it-art.de\">webdevelopment@it-art.de</a>.</p>";
@@ -120,6 +112,5 @@ if (empty ( $name ) || ! empty ( $nameErr ) || ! empty ( $emailErr ) || ! empty 
 }
 ?>
 
-	</form>
-</body>
-</html>
+</form>
+

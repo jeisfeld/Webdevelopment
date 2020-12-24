@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Bottom Online</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="/stylesheets/styles.css" id="stylesheet">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/javascript/impressum.js"></script>
-</head>
-
-<body id="bottom">
-	<hr>
-	<table>
-		<tr class="address">
-			<td>
-				<div id="address">
-					<div>IT-art.de</div>
-					<div>Jörg Eisfeld</div>
-					<div>
-						<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
-					</div>
-					<div>
-						<a href="javascript:showImpressum()">IMPRESSUM</a>
-					</div>
+<table>
+	<tr class="address">
+		<td>
+			<div id="address">
+				<div>IT-art.de</div>
+				<div>Jörg Eisfeld</div>
+				<div>
+					<a href="mailto:Jörg Eisfeld<webdevelopment@ it-art.de>">webdevelopment@it-art.de</a>
 				</div>
-			</td>
-		</tr>
-	</table>
-</body>
-</html>
-
+				<div>
+					<a href="javascript:showImpressum()">IMPRESSUM</a>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

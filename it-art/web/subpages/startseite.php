@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Startseite</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/javascript/subpage.js"></script>
-<script type="text/javascript" src="/javascript/startpage.js"></script>
-</head>
-
-<body id="startseite" class="mainpage">
-	<h1 id="webseiten">Webseiten</h1>
-	<h1 id="grafik">Grafik</h1>
-	<h1 id="musik">Musik</h1>
-	<h1 id="apps">Android-Apps</h1>
-</body>
-</html>
+<h1 id="linkwebseiten" class="startitem"><a href="/webseiten">Webseiten</a></h1>
+<h1 id="linkgrafik" class="startitem"><a href="/grafik">Grafik</a></h1>
+<h1 id="linkmusik" class="startitem"><a href="/musik">Musik</a></h1>
+<h1 id="linkapps" class="startitem"><a href="/apps">Android-Apps</a></h1>

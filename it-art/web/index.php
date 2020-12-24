@@ -1,3 +1,18 @@
+<?php
+if (isset ( $page )) {
+	$nopageselected = false;
+}
+else {
+	if (empty ( $_GET ["page"] )) {
+		$page = "startseite";
+		$nopageselected = true;
+	}
+	else {
+		$page = $_GET ["page"];
+		$nopageselected = false;
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,22 +23,50 @@
 <meta name="description" content="IT-art, Jörg Eisfeld">
 <meta name="keywords" content="Jörg Eisfeld, IT-art, Webdevelopment, Android-Apps, Design">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/stylesheets/iframes.css" rel="Stylesheet" type="text/css">
 <link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="/img/it-art.ico">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
+<!-- 
 <script type="text/javascript" src="/javascript/resolution.js"></script>
+<script type="text/javascript" src="/javascript/menudropdown.js"></script>
+<script type="text/javascript" src="/javascript/subpage.js"></script>
+-->
+<script type="text/javascript" src="/javascript/resolution.js"></script>
+<script type="text/javascript" src="/javascript/menudropdown.js"></script>
+<?php
+if ($page == "startseite") {
+	?>
+<script type="text/javascript" src="/javascript/startpage.js"></script>
+<?php
+}
+else if ($page == "musik") {
+	?>
+<script type="text/javascript" src="/javascript/music.js"></script>
+<?php
+}
+?>
+
+
 </head>
-<body id="index">
-	<iframe id="toplogoframe" name="toplogoframe" src="/toplogo.php" scrolling="no" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
-	<iframe id="bottomframe" src="/bottom.php" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="/menu_left.php" name="menu" marginheight="0" marginwidth="0" frameborder="0" class="hidden"></iframe>
-	<iframe id="menudropdownframe" src="/menu_dropdown.php" name="menudropdown" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
-	<iframe id="mainframe" src="/subpages/startseite.php" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="popupframe" name="popup" marginheight="0" marginwidth="0" frameborder="0"
-		data-link="/subpages/impressum.php"></iframe>
+<body class="<?=$page?>">
+	<div id="toplogoframe" name="toplogoframe">
+		<img id="logoimage" alt="Jörg Eisfeld - IT-art" src="/img/logo-it-art_narrow.png">
+	</div>
+	<div id="bottomframe" name="bottomframe">
+		<?php include ("bottom.php"); ?>
+	</div>
+	<div id="menuleftframe" name="menu">
+		<?php include ("menu.php"); ?>
+	</div>
+	<div id="mainframe" name="main" class="<?=$page?>">
+		<?php include ("subpages/".$page.".php"); ?>
+	</div>
+	<div id="menudropdownframe" name="menudropdown">
+		<?php include ("menu_dropdown.php"); ?>
+	</div>
+	<div id="popupframe" name="popup">
+		<?php include ("subpages/impressum.php"); ?>
+	</div>
 </body>
 
 </html>

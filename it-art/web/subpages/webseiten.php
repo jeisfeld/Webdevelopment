@@ -1,31 +1,18 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Webseiten</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/javascript/subpage.js"></script>
-</head>
+<h1>Webseiten</h1>
 
-<body id="webseiten" class="mainpage">
-	<h1>Webseiten</h1>
+<p>Ich erstelle, gestalte und pflege Webseiten für Freiberufler.</p>
 
-	<p>Ich erstelle, gestalte und pflege Webseiten für Freiberufler.</p>
+<p>Sie liefern die Texte und sagen mir Ihre Vorstellung, wie die Webseite aussehen und funktionieren sollte - ich
+	kümmere mich um die Gestaltung und die grafische und technische Umsetzung.</p>
 
-	<p>Sie liefern die Texte und sagen mir Ihre Vorstellung, wie die Webseite aussehen und funktionieren sollte - ich
-		kümmere mich um die Gestaltung und die grafische und technische Umsetzung.</p>
+<p>Bisher von mir gepflegte Webseiten:</p>
 
-	<p>Bisher von mir gepflegte Webseiten:</p>
-
-	<a href="http://www.spirituelle-seelenreise.de" target="_blank" class="image">
-		<img alt="www.spirituelle-seelenreise.de" src="/img/spirituelle-seelenreise.jpg" />
-	</a>
-	<a href="http://www.naturheilkunde-praxis.de" target="_blank" class="image">
-		<img alt="www.naturheilkunde-praxis.de" src="/img/naturheilkunde-praxis.jpg" />
-	</a>
-	<a href="http://www.therapiezentrum-dante.de" target="_blank" class="image">
-		<img alt="www.therapiezentrum-dante.de" src="/img/therapiezentrum-dante.jpg" />
-	</a>
-</body>
-</html>
+<a href="http://www.spirituelle-seelenreise.de" target="_blank" class="image">
+	<img alt="www.spirituelle-seelenreise.de" src="/img/spirituelle-seelenreise.jpg" />
+</a>
+<a href="http://www.naturheilkunde-praxis.de" target="_blank" class="image">
+	<img alt="www.naturheilkunde-praxis.de" src="/img/naturheilkunde-praxis.jpg" />
+</a>
+<a href="http://www.therapiezentrum-dante.de" target="_blank" class="image">
+	<img alt="www.therapiezentrum-dante.de" src="/img/therapiezentrum-dante.jpg" />
+</a>

@@ -1,48 +1,35 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Musik</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="/javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/javascript/subpage.js"></script>
-</head>
+<h1>Musik</h1>
 
-<body id="musik" class="mainpage">
-	<h1>Musik</h1>
+<p>Ich erstelle professionelle Aufnahmen von Musikstücken und übernehme dabei, je nach Bedarf, Komposition,
+	Textgestaltung, Instrumentierung, Arrangement und Mastering.</p>
 
-	<p>Ich erstelle professionelle Aufnahmen von Musikstücken und übernehme dabei, je nach Bedarf, Komposition,
-		Textgestaltung, Instrumentierung, Arrangement und Mastering.</p>
+<p>Bisher gibt es nur Aufnahmen aus privaten Anlässen - einerseits Aufnahmen mit individuellen Texten für
+	Familienfeiern, andererseits diverse Aufnahmen unterschiedlicher Art aus eigenem Antrieb.</p>
 
-	<p>Bisher gibt es nur Aufnahmen aus privaten Anlässen - einerseits Aufnahmen mit individuellen Texten für
-		Familienfeiern, andererseits diverse Aufnahmen unterschiedlicher Art aus eigenem Antrieb.</p>
+<p>Hörbeispiele:</p>
+<table class="bordered audiotable">
+	<tr>
+		<td class="audiolabel1">Variation eines klassischen Themas:</td>
+		<td class="audiowithlabel">
+			<div class="audiolabel2">Variation eines klassischen Themas:</div>
+			<div class="audio">
+				<audio controls autoplay id="zarathustra">
+					<source src="/mp3/zarathustra1.mp3" type="audio/mpeg" />
+				</audio>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="audiolabel1">Pop-Song:</td>
+		<td class="audiowithlabel">
+			<div class="audiolabel2">Pop-Song:</div>
+			<div class="audio">
+				<audio controls id="dreamalittledream">
+					<source src="/mp3/woistsiegeblieben6.mp3" type="audio/mpeg" />
+				</audio>
+			</div>
+		</td>
+	</tr>
+</table>
 
-	<p>Hörbeispiele:</p>
-	<table class="bordered">
-		<tr>
-			<td class="audiowithlabel">
-				<div class="audiolabel">Variation eines klassischen Themas:</div>
-				<div class="audio">
-					<audio controls autoplay id="zarathustra">
-						<source src="/mp3/zarathustra1.mp3" type="audio/mpeg" />
-					</audio>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="audiowithlabel">
-				<div class="audiolabel">Pop-Song:</div>
-				<div class="audio">
-					<audio controls id="dreamalittledream">
-						<source src="/mp3/woistsiegeblieben6.mp3" type="audio/mpeg" />
-					</audio>
-				</div>
-			</td>
-		</tr>
-	</table>
-
-	<div class="centered">
-		<img src="/img/clef.jpg" width="0" height="0" />
-	</div>
-</body>
-</html>
+<img class="centered" src="/img/clef.jpg" />

@@ -1,19 +1,100 @@
 @charset "UTF-8";
+
 @import url(OpenSans.css);
+/* basic layout */
+#toplogoframe {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 200px;
+	width: 100%;
+	margin: 0;
+	border: 0;
+	z-index: 10;
+	width: 100%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #FDF2D7;
+}
+
+#bottomframe {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	border: 0px;
+	overflow: hidden;
+	z-index: 10;
+	border-top: 1px solid #FDF2D7;
+	box-sizing: border-box;
+	height: 30px;
+	left: 0;
+	display: none;
+}
+
+#menuleftframe {
+	position: fixed;
+	top: 200px;
+	bottom: 0px;
+	left: 5px;
+	margin-top: 15px;
+	width: 21%;
+	height: 68%;
+	border: 0px;
+	overflow: hidden;
+	z-index: 3;
+	box-sizing: border-box;
+	width: 21%;
+	top: 200px;
+}
+
+#menudropdownframe {
+	position: fixed;
+	left: 0;
+	width: 350px;
+	height: 79%;
+	border: 0px;
+	overflow: hidden;
+	z-index: 30;
+	box-sizing: border-box;
+	display: none;
+}
+
+#mainframe {
+	position: fixed;
+	top: 200px;
+	bottom: 0px;
+	right: 0px;
+	left: 21%;
+	border: 0px;
+	z-index: 5;
+	border: 0px;
+	padding-top: 10px;
+	padding-left: 14px;
+	padding-right: 14px;
+	box-sizing: border-box;
+	overflow: auto;
+}
+
+#popupframe {
+	position: fixed;
+	visibility: hidden;
+	background-color: #FFFFFF;
+	z-index: 0;
+	background-color: #FFFFFF;
+	border: none;
+	box-sizing: border-box;
+}
 
 /* General settings */
-body, p {
+body, p, h1 {
 	font-family: 'Open Sans', sans-serif;
 	color: #FDF2D7;
+	margin: 0;
 	background-color: transparent;
 }
 
-h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 32px;
-}
-
-body#index {
+body {
 	background-color: #5F0000;
 }
 
@@ -47,22 +128,22 @@ a.image {
 	text-decoration: none;
 }
 
-img#logoimage {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-img#logoimage.fullwidth {
-	width: 100%;
-}
-
 /* Settings for main page */
-#startseite a {
+body.startseite #menuleftframe {
+	display: none;
+}
+
+#mainframe.startseite {
+	left: 0;
+	width: 100%;
+	padding: 0;
+}
+
+#mainframe.startseite a {
 	text-decoration: none;
 }
 
-#startseite h1.startitem {
+#mainframe.startseite h1.startitem {
 	display: block;
 	height: 0px;
 	width: 0px;
@@ -77,35 +158,35 @@ img#logoimage.fullwidth {
 	font-size: 0px;
 }
 
-#startseite #text.small h1 {
-	font-size: 0px;
+/* Settings for music page */
+#mainframe.musik audio {
+	display: block;
+	width: 100%;
 }
 
-#startseite #text.smaller h1 {
-	font-size: 0px;
+#mainframe.musik table {
+	width: 100%;
+	table-layout: fixed;
 }
 
-#musik audio {
+#mainframe.musik td.audiolabel1 {
+	display: none;
+}
+
+#mainframe.musik div.audiolabel2 {
 	display: block;
 }
 
-#musik div.audiolabel {
-	display: block;
-}
-
-#musik div.centered {
+#mainframe.musik img.centered {
 	position: absolute;
 	top: 0px;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 	z-index: -1;
 }
 
-#text {
-	padding-top: 18px;
-	padding-left: 18px;
-	padding-right: 18px;
-}
-
-#text p, #text ul {
+#mainframe p {
 	text-align: justify;
 	padding-bottom: 12px;
 	padding-top: 0px;
@@ -115,56 +196,25 @@ img#logoimage.fullwidth {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
-	font-size: 16px;
 }
 
-#text h1 {
-	margin-bottom: 26px;
-	padding-top: 0px;
-	margin-top: 18px;
-}
-
-#text hr {
-	margin-top: 18px;
-	margin-left: 36px;
-	margin-right: 36px;
-	margin-bottom: 24px;
-}
-
-#text img {
-	vertical-align: middle;
-	padding-right: 20px;
-	padding-bottom: 20px;
-}
-
-#text.small p, #text.small td {
+#mainframe p, #mainframe td {
 	font-size: 14px;
 }
 
-#text.smaller p, #text.smaller td {
-	font-size: 12px;
-}
-
-#text.small {
-	padding-top: 14px;
-	padding-left: 22px;
-	padding-right: 22px;
-}
-
-#text.smaller {
-	padding-top: 10px;
-	padding-left: 14px;
-	padding-right: 14px;
-}
-
-#text.small h1 {
-	font-size: 26px;
-	margin-top: 12px;
-}
-
-#text.smaller h1 {
+#mainframe h1 {
+	margin-bottom: 26px;
+	padding-top: 0px;
 	font-size: 22px;
 	margin-top: 6px;
+}
+
+#mainframe img {
+	vertical-align: middle;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 span.error {
@@ -172,110 +222,71 @@ span.error {
 }
 
 /* Settings for contact page */
-#kontakt form {
-	width: 370px; /* Breite des Formulars */
+#mainframe.kontakt form {
+	right: 0;
 	padding: 20px;
 	border: 1px solid #FDF2D7;
+	padding: 20px;
 }
 
-#kontakt label { /* Beschriftung auf eigener Zeile */
+#mainframe.kontakt label { /* Beschriftung auf eigener Zeile */
 	display: block;
 	cursor: pointer; /* Mauszeiger wird zur Hand */
 }
 
-#kontakt input.inputtext, #kontakt textarea {
-	width: 350px;
+#mainframe.kontakt input.inputtext, #mainframe.kontakt textarea {
+	width: 100%;
 	border: 1px solid #FDF2D7;
 	margin-bottom: 1em;
 	background-color: rgba(255, 255, 255, 0.75);
 }
 
-#kontakt textarea {
+#mainframe.kontakt textarea {
 	height: 7em;
 	resize: vertical;
 }
 
-#kontakt input.inputtext:focus, #kontakt textarea:focus {
+#mainframe.kontakt input.inputtext:focus, #kontakt textarea:focus {
 	background-color: white;
 }
 
 /* Settings for menu */
-#menuleftbody {
-	overflow: hidden;
-}
-
-#menuleft {
-	position: absolute;
-	top: 15px;
-	left: 10%;
-	overflow: hidden;
-}
-
-#menuleft.smallwidth {
-	left: 5px;
-}
-
-#menuleft hr {
+#menuleftframe hr {
 	height: 20px;
 	margin: 0px;
 	visibility: hidden;
 }
 
-#menuleft.smallheight hr {
-	height: 4px;
-}
-
-#menuleft a {
+#menuleftframe a {
 	display: block;
 	background-color: rgba(255, 255, 255, 0);
 	margin-bottom: 5px;
 	padding-left: 30px;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 14px;
 	position: relative;
 	height: 29px;
-	width: 50px;
+	width: 500px;
 	border-radius: 8px;
 	margin-bottom: 8px;
 }
 
-#menuleft.smallheight a {
-	margin-bottom: 0px;
-}
-
-#menuleft a.smalltext {
-	font-size: 15px;
-	height: 25px;
-}
-
-#menuleft a.chosen, #menuleft a.chosen.highlight {
+#menuleftframe a.chosen, #menuleftframe a.chosen:hover {
 	background: rgba(255, 255, 255, 0.5);
 }
 
-#menuleft.ie8 a.chosen, #menuleft.ie8 a.chosen.highlight {
-	background-color: #FBEDED;
-}
-
-#menuleft a.highlight {
+#menuleftframe a:hover {
 	background: rgba(255, 255, 255, 0.25);
 }
 
-#menuleft.ie8 a.highlight {
-	background-color: #F8E0E1;
-}
-
-#menuleft a span {
+#menuleftframe a span {
 	position: absolute;
 	top: 2px;
-	left: 12px;
-}
-
-#menuleft.smallwidth a span {
 	left: 5px;
 }
 
 /* Settings for dropdown menu */
-#menudropdown div#menuitems a {
+#menudropdownframe div#menuitems a {
 	width: 150px;
 	display: block;
 	text-align: center;
@@ -288,108 +299,91 @@ span.error {
 	color: #FDF2D7;
 }
 
-#menudropdown img.icon {
+#menudropdownframe img.icon {
 	width: 24px;
 	height: 24px;
 }
 
 /* Settings for toplogo */
-#toplogo hr {
-	color: #FDF2D7;
-	background-color: #FDF2D7;
-	border: 0;
-	height: 1px;
-	margin-top: 0px;
-	margin-bottom: 0px;
+#toplogoframe {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#toplogoframe #logoimage {
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 /* Settings for botton */
-#bottom hr {
-	color: #FDF2D7;
-	background-color: #FDF2D7;
-	border: 0;
-	height: 1px;
-	margin-top: 8px;
-	margin-bottom: 8px;
-}
-
-#bottom table {
+#bottomframe table {
 	border-collapse: collapse;
 	padding: 0;
 	margin: 0;
 	width: 100%;
 }
 
-#bottom tr.address {
+#bottomframe tr.address {
 	color: #FDF2D7;
 }
 
-#bottom div#address {
+#bottomframe div#address {
 	text-align: justify;
 }
 
-#bottom div#address div {
+#bottomframe div#address div {
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
-	padding: 5px 10px 5px 10px;
+	padding: 5px 0px 5px 0px;
 	white-space: nowrap;
 }
 
-#bottom.small div#address div {
-	padding: 5px 5px 5px 5px;
-}
-
-#bottom.smaller div#address div {
-	padding: 5px 0px 5px 0px;
-}
-
-#bottom div#address:after {
+#bottomframe div#address:after {
 	content: '';
 	width: 100%;
 	display: inline-block;
 }
 
-#bottom a {
+#bottomframe a {
 	color: #FDF2D7;
 }
 
-#bottom.small {
-	font-size: 13px;
-}
-
-#bottom.smaller {
+#bottomframe {
 	font-size: 10px;
 }
 
 /* Settings for Impressum */
-#impressum {
+#popupframe {
 	background-color: #FFFFFF;
 	color: #000000;
 	padding-left: 10px;
 	padding-right: 10px;
+	box-sizing: border-box;
+	overflow: auto;
 }
 
-#impressum p, #impressum a {
+#popupframe p, #popupframe a {
 	color: #000000;
 	font-size: 12px;
 	margin-top: 2px;
 	margin-bottom: 2px;
 }
 
-#impressum h3 {
+#popupframe h3 {
 	font-size: 16px;
 	margin-bottom: 4px;
 	margin-top: 12px;
 }
 
-#impressum h4 {
+#popupframe h4 {
 	font-size: 14px;
 	margin-bottom: 2px;
 	margin-top: 6px;
 }
 
-#impressumheader h2 {
+#popupframe h2 {
 	font-size: 24px;
 	margin-top: 0px;
 }
@@ -400,4 +394,98 @@ a.closeImpressum {
 	border: 1px solid black;
 	background-color: #C0C0C0;
 	padding: 2px;
+}
+
+@media screen and (min-width:620px) {
+	#mainframe {
+		padding-top: 14px;
+		padding-left: 22px;
+		padding-right: 22px;
+		bottom: 30px;
+	}
+	#mainframe h1 {
+		font-size: 26px;
+		margin-top: 12px;
+	}
+	#mainframe p, #mainframe td {
+		font-size: 15px;
+	}
+	#menuleftframe a {
+		font-size: 16px;
+	}
+	#menuleftframe {
+		bottom: 30px;
+		width: 21%;
+	}
+	#bottomframe div#address div {
+		padding: 5px 5px 5px 5px;
+	}
+	#bottomframe {
+		font-size: 13px;
+		display: block;
+		height: 30px;
+	}
+	#menuleftframe a#menubutton {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	#mainframe {
+		padding-top: 18px;
+		padding-left: 18px;
+		padding-right: 18px;
+		bottom: 40px;
+	}
+	#mainframe h1 {
+		font-size: 32px;
+		margin-top: 18px;
+	}
+	#mainframe p, #mainframe td {
+		font-size: 16px;
+	}
+	#menuleftframe a {
+		font-size: 18px;
+	}
+	#bottomframe div#address div {
+		padding: 10px 10px 10px 10px;
+	}
+	#bottomframe {
+		font-size: 16px;
+		height: 40px;
+	}
+	#menuleftframe a span {
+		left: 12px;
+	}
+	#menuleftframe {
+		left: 2%;
+		width: 19%;
+		bottom: 40px;
+	}
+	#mainframe.musik td.audiolabel1 {
+		display: table-cell;
+	}
+	#mainframe.musik div.audiolabel2 {
+		display: none;
+	}
+	#mainframe.musik .audiotable {
+		width: 100%;
+	}
+	#mainframe.musik .audiowithlabel {
+		width: 70%;
+	}
+	#mainframe.musik audio {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 950px) {
+	#toplogoframe #logoimage {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto;
+		height: auto;
+		width: auto;
+	}
 }

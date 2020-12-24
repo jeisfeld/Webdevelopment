@@ -1,3 +1,5 @@
+var colorsAreSet = false;
+
 function shuffle(array) {
 	var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -21,7 +23,6 @@ function setRandomizedRgb(id, red, green, blue) {
 
 	var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
 	$(id).css('background-color', rgb);
-	console.log(id + ":" + rgb);
 }
 
 function getRandom(max) {
@@ -29,7 +30,12 @@ function getRandom(max) {
 }
 
 function setColors() {
-	var idArray = shuffle([ '#webseiten', '#grafik', '#musik', '#apps' ]);
+	if (colorsAreSet) {
+		return;
+	}
+	colorsAreSet = true;
+
+	var idArray = shuffle(['#linkwebseiten', '#linkgrafik', '#linkmusik', '#linkapps']);
 
 	setRandomizedRgb(idArray[0], 96 + getRandom(32), 112 + getRandom(32), 0);
 	setRandomizedRgb(idArray[1], 0, 112 + getRandom(32), 88 + getRandom(32));
@@ -46,88 +52,72 @@ function setColors() {
 
 }
 
-function position(totalwidth, totalheight, object, horizontal, vertical, delay) {
+function position(totalwidth, totalheight, object, horizontal, vertical, delay, hasOffset) {
 
 	var targetWidth = 300;
 	var targetHeight = 80;
 	var targetFontSize = 32;
-	if ($('#text').hasClass('small')) {
-		targetWidth = 270;
-		targetHeight = 70;
-		targetFontSize = 28;
-	} else if ($('#text').hasClass('smaller')) {
+	if (totalwidth < 620) {
 		targetWidth = 240;
 		targetHeight = 60;
 		targetFontSize = 26;
 	}
+	else if (totalwidth < 850) {
+		targetWidth = 270;
+		targetHeight = 70;
+		targetFontSize = 28;
+	}
 
-	object.offset({
-		top : totalheight * (vertical + 0.5 * (Math.random() - 0.5)),
-		left : totalwidth * (horizontal + 0.5 * (Math.random() - 0.5))
-	});
+	if (hasOffset) {
+		object.offset({
+			top: totalheight * (vertical + 0.5 * (Math.random() - 0.5)),
+			left: totalwidth * (horizontal + 0.5 * (Math.random() - 0.5))
+		});
+	}
 
 	var targetTop = (totalheight - targetHeight) * vertical;
 	var targetLeft = (totalwidth - targetWidth) * horizontal;
 
-	object.delay(delay).animate({
-		width : targetWidth,
-		height : targetHeight,
-		lineHeight : targetHeight,
-		fontSize : targetFontSize,
-		left : targetLeft,
-		top : targetTop
+	object.stop();
+
+	object.delay(hasOffset?delay:0).animate({
+		width: targetWidth,
+		height: targetHeight,
+		lineHeight: targetHeight,
+		fontSize: targetFontSize,
+		left: targetLeft,
+		top: targetTop
 	}, "slow");
 }
 
-function adjustStyle(width, height) {
+function animateStartpage(width, height, hasOffset) {
 	width = parseInt(width);
 	height = parseInt(height);
-
-	var maintext = $('#text');
-	if (width < 620) {
-		maintext.addClass('smaller');
-		maintext.removeClass('small');
-	} else if (width < 850) {
-		maintext.addClass('small');
-		maintext.removeClass('smaller');
-	} else {
-		maintext.removeClass('small');
-		maintext.removeClass('smaller');
-	}
-
 	setColors();
 
 	if (height > 500) {
-		position(width, height, $('#webseiten'), 0.35, 0.2);
-		position(width, height, $('#grafik'), 0.45, 0.4, 200);
-		position(width, height, $('#musik'), 0.55, 0.6, 400);
-		position(width, height, $('#apps'), 0.65, 0.8, 600);
+		position(width, height, $('#linkwebseiten'), 0.35, 0.2, 0, hasOffset);
+		position(width, height, $('#linkgrafik'), 0.45, 0.4, 200, hasOffset);
+		position(width, height, $('#linkmusik'), 0.55, 0.6, 400, hasOffset);
+		position(width, height, $('#linkapps'), 0.65, 0.8, 600, hasOffset);
 	} else if (height > 400) {
-		position(width, height, $('#webseiten'), 0.35, 0.05);
-		position(width, height, $('#grafik'), 0.45, 0.35, 200);
-		position(width, height, $('#musik'), 0.55, 0.65, 400);
-		position(width, height, $('#apps'), 0.65, 0.95, 600);
+		position(width, height, $('#linkwebseiten'), 0.35, 0.05, hasOffset);
+		position(width, height, $('#linkgrafik'), 0.45, 0.35, 200, hasOffset);
+		position(width, height, $('#linkmusik'), 0.55, 0.65, 400, hasOffset);
+		position(width, height, $('#linkapps'), 0.65, 0.95, 600, hasOffset);
 	} else {
-		position(width, height, $('#webseiten'), 0.2, 0.05);
-		position(width, height, $('#grafik'), 0.8, 0.35, 200);
-		position(width, height, $('#musik'), 0.2, 0.65, 400);
-		position(width, height, $('#apps'), 0.8, 0.95, 600);
+		position(width, height, $('#linkwebseiten'), 0.2, 0.05, hasOffset);
+		position(width, height, $('#linkgrafik'), 0.8, 0.35, 200, hasOffset);
+		position(width, height, $('#linkmusik'), 0.2, 0.65, 400, hasOffset);
+		position(width, height, $('#linkapps'), 0.8, 0.95, 600, hasOffset);
 	}
 
 }
 
 $(window).resize(function() {
-	adjustStyle($(this).width(), $(this).height());
+	animateStartpage($("#mainframe").width(), $("#mainframe").height(), false);
 });
 
 $(document).ready(function() {
-	$("#mainframe", window.parent.document).css('width', '100%');
-
-	$('#startseite').find('h1').each(function(i) {
-		var id = $(this).attr('id');
-		$(this).wrapInner($('<a href="' + id + '.php" />'));
-		$(this).addClass('startitem');
-	});
-
-	adjustStyle($(window).width(), $(window).height());
+	animateStartpage($("#mainframe").width(), $("#mainframe").height(), true);
 });
