@@ -1,9 +1,49 @@
+function showMenu() {
+	var frame = $('#menuframe');
+	if (frame.hasClass("dropdown")) {
+		frame.css('width', 305);
+		frame.css('height', 305);
+		$('#menuframe #menuitems').slideDown();
+	}
+	else {
+		frame.css('width', '');
+		frame.css('height', '');
+		$('#menuframe #menuitems').show();
+	}
+
+}
+
+function hideMenu() {
+	var frame = $('#menuframe.dropdown');
+
+	frame.css('width', 30);
+	frame.css('height', 30);
+
+	$('#menuframe.dropdown #menuitems').hide();
+}
+
+function toggleMenu() {
+	if ($('#menuframe.dropdown #menuitems').is(':visible')) {
+		hideMenu();
+	} else {
+		showMenu();
+	}
+}
+
+function showImpressum() {
+	hideMenu();
+	$("#popupframe").css('visibility', 'visible');
+	$("#popupframe").css('z-index', '20');
+}
+
+function closeImpressum() {
+	$("#popupframe").css('visibility', 'hidden');
+	$("#popupframe").css('z-index', '0');
+}
+
 function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
-	var mainframe = $('#mainframe');
-	var menuleftframe = $('#menuleftframe');
-	var menudropdownframe = $('#menudropdownframe');
 	var toplogoframe = $('#toplogoframe');
 	var popupframe = $('#popupframe');
 	var logoimage = $('#logoimage');
@@ -26,45 +66,23 @@ function adjustStyle(width, height) {
 
 	toplogoframe.css('height', logoheight);
 
-	mainframe.css('top', logoheight);
-	menuleftframe.css('top', logoheight);
+	$('#mainframe').css('top', logoheight);
 
 
 	// hide menu on narrow screens.
 	if (width < 620) {
-		menuleftframe.hide();
-
-		menudropdownframe.show();
-		menudropdownframe.css('top', logoheight - 24);
-		mainframe.css('left', 0);
-		mainframe.css('width', '100%');
-
+		$('#menuframe').css('top', logoheight - 24);
+		$('#menuframe').addClass("dropdown");
+		hideMenu();
 		// impressum appears on main window
 		popupframe.css('top', logoheight);
-		popupframe.css('height', height - logoheight);
-		popupframe.css('left', 0);
-		popupframe.css('width', '100%');
-		popupframe.css('border', 'none');
-	} else {
-		if ($("#mainframe.startseite").length) {
-			menuleftframe.hide();
-			mainframe.css('left', 0);
-			mainframe.css('width', '100%');
-		}
-		else {
-			menuleftframe.show();
-			mainframe.css('left', '21%');
-			mainframe.css('width', '79%');
-		}
-
-		menudropdownframe.hide();
-
+	}
+	else {
+		$('#menuframe').css('top', logoheight);
+		$('#menuframe').removeClass("dropdown");
+		showMenu();
 		// impressum appears in popupframe
-		popupframe.css('top', height / 4);
-		popupframe.css('height', height / 2);
-		popupframe.css('left', '25%');
-		popupframe.css('width', '50%');
-		popupframe.css('border', '2px solid black');
+		popupframe.css('top', '');
 	}
 
 }
@@ -74,5 +92,11 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
+	$('#menuframe.dropdown #menuitems').on('click', function() {
+		hideMenu();
+		closeImpressum();
+	});
+
 	adjustStyle($(window).width(), $(window).height());
+	hideMenu();
 });

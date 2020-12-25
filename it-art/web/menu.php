@@ -5,11 +5,11 @@
 <?php
 function menulink($pagename, $pagetext, $currentpage)
 {
-    echo '<a href="/'.$pagename.'" id="'.$pagename.'"';
+    echo '<a href="/'.$pagename.'" id="link'.$pagename.'"';
     if ($pagename == $currentpage) {
     	echo ' class="chosen"';
     }
-    echo "><span>".$pagetext."</span></a>\n";
+    echo ">".$pagetext."</a>\n";
 }
 function hr() {
 	echo "<hr />\n";
@@ -25,4 +25,5 @@ menulink("apps", "Android-Apps", $page);
 hr();
 menulink("kontakt", "Kontakt", $page);
 ?>
+<a href="javascript:showImpressum()" id="linkimpressum">Impressum</a>
 </div>

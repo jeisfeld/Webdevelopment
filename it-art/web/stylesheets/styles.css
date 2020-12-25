@@ -32,23 +32,7 @@
 	display: none;
 }
 
-#menuleftframe {
-	position: fixed;
-	top: 200px;
-	bottom: 0px;
-	left: 5px;
-	margin-top: 15px;
-	width: 21%;
-	height: 68%;
-	border: 0px;
-	overflow: hidden;
-	z-index: 3;
-	box-sizing: border-box;
-	width: 21%;
-	top: 200px;
-}
-
-#menudropdownframe {
+#menuframe {
 	position: fixed;
 	left: 0;
 	width: 350px;
@@ -56,8 +40,7 @@
 	border: 0px;
 	overflow: hidden;
 	z-index: 30;
-	box-sizing: border-box;
-	display: none;
+	box-sizing: content-box;
 }
 
 #mainframe {
@@ -65,7 +48,8 @@
 	top: 200px;
 	bottom: 0px;
 	right: 0px;
-	left: 21%;
+	left: 0px;
+	width: 100%;
 	border: 0px;
 	z-index: 5;
 	border: 0px;
@@ -74,6 +58,7 @@
 	padding-right: 14px;
 	box-sizing: border-box;
 	overflow: auto;
+	border: 0px;
 }
 
 #popupframe {
@@ -129,7 +114,7 @@ a.image {
 }
 
 /* Settings for main page */
-body.startseite #menuleftframe {
+body.startseite #menuframe {
 	display: none;
 }
 
@@ -180,10 +165,13 @@ body.startseite #menuleftframe {
 #mainframe.musik img.centered {
 	position: absolute;
 	top: 0px;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	padding: inherit;
 	object-fit: contain;
 	z-index: -1;
+	object-fit: contain;
 }
 
 #mainframe p {
@@ -215,6 +203,7 @@ body.startseite #menuleftframe {
 	padding-bottom: 20px;
 	max-width: 100%;
 	box-sizing: border-box;
+	border: 0;
 }
 
 span.error {
@@ -251,42 +240,12 @@ span.error {
 }
 
 /* Settings for menu */
-#menuleftframe hr {
-	height: 20px;
-	margin: 0px;
-	visibility: hidden;
-}
-
-#menuleftframe a {
-	display: block;
-	background-color: rgba(255, 255, 255, 0);
-	margin-bottom: 5px;
-	padding-left: 30px;
-	text-decoration: none;
-	font-size: 14px;
-	position: relative;
-	height: 29px;
-	width: 500px;
-	border-radius: 8px;
-	margin-bottom: 8px;
-}
-
-#menuleftframe a.chosen, #menuleftframe a.chosen:hover {
-	background: rgba(255, 255, 255, 0.5);
-}
-
-#menuleftframe a:hover {
-	background: rgba(255, 255, 255, 0.25);
-}
-
-#menuleftframe a span {
-	position: absolute;
-	top: 2px;
-	left: 5px;
+#menuframe hr {
+	display: none;
 }
 
 /* Settings for dropdown menu */
-#menudropdownframe div#menuitems a {
+#menuframe div#menuitems a {
 	width: 150px;
 	display: block;
 	text-align: center;
@@ -299,7 +258,7 @@ span.error {
 	color: #FDF2D7;
 }
 
-#menudropdownframe img.icon {
+#menuframe img.icon {
 	width: 24px;
 	height: 24px;
 }
@@ -362,6 +321,9 @@ span.error {
 	padding-right: 10px;
 	box-sizing: border-box;
 	overflow: auto;
+	bottom: 0;
+	width: 100%;
+	border: none;
 }
 
 #popupframe p, #popupframe a {
@@ -397,7 +359,24 @@ a.closeImpressum {
 }
 
 @media screen and (min-width:620px) {
+	#menuframe {
+		position: fixed;
+		top: 200px;
+		bottom: 30px;
+		left: 5px;
+		margin-top: 15px;
+		width: 21%;
+		height: 68%;
+		border: 0px;
+		overflow: hidden;
+		z-index: 3;
+		box-sizing: border-box;
+		width: 21%;
+		top: 200px;
+	}
 	#mainframe {
+		left: 21%;
+		width: 79%;
 		padding-top: 14px;
 		padding-left: 22px;
 		padding-right: 22px;
@@ -410,12 +389,35 @@ a.closeImpressum {
 	#mainframe p, #mainframe td {
 		font-size: 15px;
 	}
-	#menuleftframe a {
-		font-size: 16px;
+	#menuframe div#menuitems a {
+		background-color: rgba(255, 255, 255, 0);
+		padding-left: 5px;
+		padding-bottom: 2px;
+		position: relative;
+		height: 29px;
+		width: 500px;
+		text-align: left;
+		border: none;
+		border-radius: 8px;
+		position: relative;
+		height: 29px;
+		width: 500px;
+		text-align: left;
+		border: none;
+		border-radius: 8px;
+		margin-bottom: 6px;
 	}
-	#menuleftframe {
-		bottom: 30px;
-		width: 21%;
+	#menuframe div#menuitems a.chosen, #menuframe div#menuitems a.chosen:hover {
+		background: rgba(255, 255, 255, 0.5);
+	}
+	#menuframe div#menuitems a:hover {
+		background: rgba(255, 255, 255, 0.25);
+	}
+	#menuframe hr {
+		height: 20px;
+	}
+	#menuframe div#menuitems a#linkimpressum {
+		display: none;
 	}
 	#bottomframe div#address div {
 		padding: 5px 5px 5px 5px;
@@ -425,8 +427,15 @@ a.closeImpressum {
 		display: block;
 		height: 30px;
 	}
-	#menuleftframe a#menubutton {
+	#menuframe a#menubutton {
 		display: none;
+	}
+	#popupframe {
+		top: 25%;
+		bottom: 25%;
+		width: 50%;
+		left: 25%;
+		border: 2px solid black;
 	}
 }
 
@@ -444,7 +453,8 @@ a.closeImpressum {
 	#mainframe p, #mainframe td {
 		font-size: 16px;
 	}
-	#menuleftframe a {
+	#menuframe div#menuitems a {
+		padding-left: 12px;
 		font-size: 18px;
 	}
 	#bottomframe div#address div {
@@ -454,10 +464,7 @@ a.closeImpressum {
 		font-size: 16px;
 		height: 40px;
 	}
-	#menuleftframe a span {
-		left: 12px;
-	}
-	#menuleftframe {
+	#menuframe {
 		left: 2%;
 		width: 19%;
 		bottom: 40px;

@@ -26,13 +26,7 @@ else {
 <link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <link rel="shortcut icon" href="/img/it-art.ico">
 <script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
-<!-- 
 <script type="text/javascript" src="/javascript/resolution.js"></script>
-<script type="text/javascript" src="/javascript/menudropdown.js"></script>
-<script type="text/javascript" src="/javascript/subpage.js"></script>
--->
-<script type="text/javascript" src="/javascript/resolution.js"></script>
-<script type="text/javascript" src="/javascript/menudropdown.js"></script>
 <?php
 if ($page == "startseite") {
 	?>
@@ -55,14 +49,11 @@ else if ($page == "musik") {
 	<div id="bottomframe" name="bottomframe">
 		<?php include ("bottom.php"); ?>
 	</div>
-	<div id="menuleftframe" name="menu">
+	<div id="menuframe" name="menu">
 		<?php include ("menu.php"); ?>
 	</div>
 	<div id="mainframe" name="main" class="<?=$page?>">
 		<?php include ("subpages/".$page.".php"); ?>
-	</div>
-	<div id="menudropdownframe" name="menudropdown">
-		<?php include ("menu_dropdown.php"); ?>
 	</div>
 	<div id="popupframe" name="popup">
 		<?php include ("subpages/impressum.php"); ?>
