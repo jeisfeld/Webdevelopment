@@ -1,4 +1,6 @@
 <?PHP
+$basepath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -65,9 +67,9 @@ if (! empty ( $_GET ["anchor"] )) {
 <meta name="description" content="<?=$description?>">
 <meta name="keywords" content="<?=$keywords?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="/drawable/icon_randomimage.ico">
-<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
+<link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="<?=$basepath?>/drawable/icon_randomimage.ico">
+<script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
 <script>
 function toggleNavigation() {
 	$("#navigationframe").toggleClass( "mobilenavigation" );
