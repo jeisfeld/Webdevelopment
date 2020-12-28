@@ -97,7 +97,7 @@ if (isAugendiagnose ()) {
 
 				<li><b>Carregar apenas se solicitado</b> O aplicativo não mostra a imagem em alta resolução. Isso requer menos
 					memória e tempo de cálculo, mas os detalhes na foto podem ser perdidos. O botão &laquo;lupa&raquo; <img
-					src="/drawable/ic_clarity.png" /> permite visualizar os detalhes atuais da imagem em resolução total.</li>
+					src="<?=$basepath?>/drawable/ic_clarity.png" /> permite visualizar os detalhes atuais da imagem em resolução total.</li>
 			</ul>
 		</td>
 	</tr>

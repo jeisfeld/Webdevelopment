@@ -39,47 +39,47 @@
 <p>Na exibição detalhada (uma ou duas fotos), você tem as seguintes possibilidades:</p>
 
 <ul>
-	<li>Mudança de brilho e contraste através de deslizamento <img src="/drawable/ic_seek_brightness.png" /><img
-		src="/drawable/ic_seek_contrast.png" />, bem como a mudança de saturação <img
-		src="/drawable/ic_seek_saturation.png" /> e temperatura de cor <img src="/drawable/ic_seek_color_temperature.png" /></li>
+	<li>Mudança de brilho e contraste através de deslizamento <img src="<?=$basepath?>/drawable/ic_seek_brightness.png" /><img
+		src="<?=$basepath?>/drawable/ic_seek_contrast.png" />, bem como a mudança de saturação <img
+		src="<?=$basepath?>/drawable/ic_seek_saturation.png" /> e temperatura de cor <img src="<?=$basepath?>/drawable/ic_seek_color_temperature.png" /></li>
 
-	<li>Rotação da foto (botão <img src="/drawable/ic_btn_rotate.png" class="frameless" />)
+	<li>Rotação da foto (botão <img src="<?=$basepath?>/drawable/ic_btn_rotate.png" class="frameless" />)
 	</li>
 
 	<li>
 		<p>
-			Visualizando uma topografia da íris como uma sobreposição (botão de círculo <img src="/drawable/ic_btn_wheel.png"
+			Visualizando uma topografia da íris como uma sobreposição (botão de círculo <img src="<?=$basepath?>/drawable/ic_btn_wheel.png"
 				class="frameless" /> e botões numerados), adaptação da sobreposição de íris e armazenamento da posição de
-			sobreposição <img src="/drawable/ic_lock_open.png" />)
+			sobreposição <img src="<?=$basepath?>/drawable/ic_lock_open.png" />)
 		</p>
 		<p>Ao pressionar longamente um dos botões numerados, você pode alterar a sobreposição para este botão. Pelo último
 			botão numerado, isso também permite excluir o botão ou adicionar outro botão.</p>
 	</li>
 
-	<li>Adaptação do tamanho da pupila das sobreposições (botão <img src="/drawable/ic_btn_pupil_0.png" class="frameless" />).
-		Aqui você pode manter a pupila centrado (<img src="/drawable/ic_btn_pupil_1.png" class="frameless" />) ou movê-lo
-		livremente (<img src="/drawable/ic_btn_pupil_2.png" class="frameless" />).
+	<li>Adaptação do tamanho da pupila das sobreposições (botão <img src="<?=$basepath?>/drawable/ic_btn_pupil_0.png" class="frameless" />).
+		Aqui você pode manter a pupila centrado (<img src="<?=$basepath?>/drawable/ic_btn_pupil_1.png" class="frameless" />) ou movê-lo
+		livremente (<img src="<?=$basepath?>/drawable/ic_btn_pupil_2.png" class="frameless" />).
 	</li>
 
 	<li>Salve as configurações de brilho e contraste selecionadas (por meio do botão &laquo;salvar&raquo; <img
-		src="/drawable/ic_action_save.png" /> na barra de ação)
+		src="<?=$basepath?>/drawable/ic_action_save.png" /> na barra de ação)
 	</li>
 
-	<li>Salve a posição e zoom (por meio do botão &laquo;salvar&raquo; <img src="/drawable/ic_action_save.png" /> na
+	<li>Salve a posição e zoom (por meio do botão &laquo;salvar&raquo; <img src="<?=$basepath?>/drawable/ic_action_save.png" /> na
 		barra de ação)
 	</li>
 
-	<li>Partilhar a foto (através do botão &laquo;partilhar&raquo; <img src="/drawable/ic_action_share.png" /> na barra
+	<li>Partilhar a foto (através do botão &laquo;partilhar&raquo; <img src="<?=$basepath?>/drawable/ic_action_share.png" /> na barra
 		de ação)
 	</li>
 
-	<li>Alterar o comentário da foto (por meio do botão &laquo;documento&raquo; <img src="/drawable/ic_comment.png" /> na
+	<li>Alterar o comentário da foto (por meio do botão &laquo;documento&raquo; <img src="<?=$basepath?>/drawable/ic_comment.png" /> na
 		barra de ação)
 	</li>
 </ul>
 
 <p>
 	Estas funções podem ser ativadas ou desativadas através do botão &laquo;Mostrar/Ocultar ferramentas&raquo; (<img
-		src="/drawable/ic_tools_up.png" /> <img src="/drawable/ic_tools_down.png" /> <img
-		src="/drawable/ic_tools_left.png" /> <img src="/drawable/ic_tools_right.png" />).
+		src="<?=$basepath?>/drawable/ic_tools_up.png" /> <img src="<?=$basepath?>/drawable/ic_tools_down.png" /> <img
+		src="<?=$basepath?>/drawable/ic_tools_left.png" /> <img src="<?=$basepath?>/drawable/ic_tools_right.png" />).
 </p>

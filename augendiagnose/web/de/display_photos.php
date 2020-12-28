@@ -41,49 +41,49 @@
 <p>In der Detailansicht (von einem oder zwei Fotos) bestehen noch folgende Möglichkeiten:</p>
 
 <ul>
-	<li>Verändern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="/drawable/ic_seek_brightness.png" /><img
-		src="/drawable/ic_seek_contrast.png" />, und Verändern von Sättigung <img src="/drawable/ic_seek_saturation.png" />
-		und Farbtemperatur <img src="/drawable/ic_seek_color_temperature.png" /></li>
+	<li>Verändern von Helligkeit und Kontrast mit Hilfe der Schieberegler <img src="<?=$basepath?>/drawable/ic_seek_brightness.png" /><img
+		src="<?=$basepath?>/drawable/ic_seek_contrast.png" />, und Verändern von Sättigung <img src="<?=$basepath?>/drawable/ic_seek_saturation.png" />
+		und Farbtemperatur <img src="<?=$basepath?>/drawable/ic_seek_color_temperature.png" /></li>
 
-	<li>Rotation des Fotos (Button <img src="/drawable/ic_btn_rotate.png" class="frameless" />)
+	<li>Rotation des Fotos (Button <img src="<?=$basepath?>/drawable/ic_btn_rotate.png" class="frameless" />)
 	</li>
 
 	<li>
 		<p>
-			Anzeige von Iristopographien als Overlay (Kreis-Button <img src="/drawable/ic_btn_wheel.png" class="frameless" />
+			Anzeige von Iristopographien als Overlay (Kreis-Button <img src="<?=$basepath?>/drawable/ic_btn_wheel.png" class="frameless" />
 			und nummerierte Buttons), Anpassen der Overlays an die Iris, Speichern der Position der Overlays (Lock-Button <img
-				src="/drawable/ic_lock_open.png" />)
+				src="<?=$basepath?>/drawable/ic_lock_open.png" />)
 		</p>
 		<p>Wenn sie lange auf einen der nummerierten Buttons drücken, können Sie das Overlay ändern, das diesem Button
 			zugeordnet ist. Beim letzten nummerierten Button haben Sie hier außerdem die Möglichkeit, den Button zu entfernen
 			oder einen Button hinzuzufügen.</p>
 	</li>
 
-	<li>Anpassen der Pupillengröße für die Overlays (Button <img src="/drawable/ic_btn_pupil_0.png" class="frameless" />).
-		Hier können Sie die Pupille entweder zentriert lassen (<img src="/drawable/ic_btn_pupil_1.png" class="frameless" />)
-		oder frei bewegen (<img src="/drawable/ic_btn_pupil_2.png" class="frameless" />).
+	<li>Anpassen der Pupillengröße für die Overlays (Button <img src="<?=$basepath?>/drawable/ic_btn_pupil_0.png" class="frameless" />).
+		Hier können Sie die Pupille entweder zentriert lassen (<img src="<?=$basepath?>/drawable/ic_btn_pupil_1.png" class="frameless" />)
+		oder frei bewegen (<img src="<?=$basepath?>/drawable/ic_btn_pupil_2.png" class="frameless" />).
 	</li>
 
 	<li>Speichern der Einstellung von Helligkeit und Kontrast (über den &bdquo;Speichern&ldquo;-Button <img
-		src="/drawable/ic_action_save.png" /> im Action-Menü)
+		src="<?=$basepath?>/drawable/ic_action_save.png" /> im Action-Menü)
 	</li>
 
-	<li>Speichern von Position und Zoom (über den &bdquo;Speichern&ldquo;-Button <img src="/drawable/ic_action_save.png" />
+	<li>Speichern von Position und Zoom (über den &bdquo;Speichern&ldquo;-Button <img src="<?=$basepath?>/drawable/ic_action_save.png" />
 		im Action-Menü)
 	</li>
 
-	<li>Teilen des Fotos (über den &bdquo;Teilen&ldquo;-Button <img src="/drawable/ic_action_share.png" /> im
+	<li>Teilen des Fotos (über den &bdquo;Teilen&ldquo;-Button <img src="<?=$basepath?>/drawable/ic_action_share.png" /> im
 		Action-Menü)
 	</li>
 
-	<li>Ändern der Beschreibung des Fotos (über den &bdquo;Dokument&ldquo;-Button <img src="/drawable/ic_comment.png" />
+	<li>Ändern der Beschreibung des Fotos (über den &bdquo;Dokument&ldquo;-Button <img src="<?=$basepath?>/drawable/ic_comment.png" />
 		im Action-Menü)
 	</li>
 </ul>
 
 <p>
 	Die zugehörigen Tools können über den Button &bdquo;Hilfsmittel anzeigen/verbergen&ldquo; (<img
-		src="/drawable/ic_tools_up.png" /> <img src="/drawable/ic_tools_down.png" /> <img
-		src="/drawable/ic_tools_left.png" /> <img src="/drawable/ic_tools_right.png" />) aktiviert oder deaktiviert
+		src="<?=$basepath?>/drawable/ic_tools_up.png" /> <img src="<?=$basepath?>/drawable/ic_tools_down.png" /> <img
+		src="<?=$basepath?>/drawable/ic_tools_left.png" /> <img src="<?=$basepath?>/drawable/ic_tools_right.png" />) aktiviert oder deaktiviert
 	werden.
 </p>

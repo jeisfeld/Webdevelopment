@@ -40,48 +40,48 @@
 <p>En la vista de detalle (una o dos fotos), tiene las siguientes más posibilidades:</p>
 
 <ul>
-	<li>Cambio de brillo y contraste mediante correderas <img src="/drawable/ic_seek_brightness.png" /><img
-		src="/drawable/ic_seek_contrast.png" />, así como el cambio de saturación <img
-		src="/drawable/ic_seek_saturation.png" /> y temperatura de color <img
-		src="/drawable/ic_seek_color_temperature.png" /></li>
+	<li>Cambio de brillo y contraste mediante correderas <img src="<?=$basepath?>/drawable/ic_seek_brightness.png" /><img
+		src="<?=$basepath?>/drawable/ic_seek_contrast.png" />, así como el cambio de saturación <img
+		src="<?=$basepath?>/drawable/ic_seek_saturation.png" /> y temperatura de color <img
+		src="<?=$basepath?>/drawable/ic_seek_color_temperature.png" /></li>
 
-	<li>Rotación de la foto (botón <img src="/drawable/ic_btn_rotate.png" class="frameless" />)
+	<li>Rotación de la foto (botón <img src="<?=$basepath?>/drawable/ic_btn_rotate.png" class="frameless" />)
 	</li>
 
 	<li>
 		<p>
-			Visualización de una topografía de iris como superposición (botón círculo <img src="/drawable/ic_btn_wheel.png"
+			Visualización de una topografía de iris como superposición (botón círculo <img src="<?=$basepath?>/drawable/ic_btn_wheel.png"
 				class="frameless" /> y botones numerados), adaptación de la superposición al iris y almacenamiento de la posición de
-			superposición (botón de cerradura <img src="/drawable/ic_lock_open.png" />)
+			superposición (botón de cerradura <img src="<?=$basepath?>/drawable/ic_lock_open.png" />)
 		</p>
 		<p>Al hacer una pulsación larga en uno de los botones numerados, puede cambiar la superposición para este botón. Por
 			el último botón numerado, esto le permite también eliminar el botón o añadir otro botón.</p>
 	</li>
 
-	<li>Adaptación del tamaño de la pupila de las superposiciones (botón <img src="/drawable/ic_btn_pupil_0.png"
-		class="frameless" />). Aquí usted puede mantener la pupila centrada (<img src="/drawable/ic_btn_pupil_1.png"
-		class="frameless" />) o moverla libremente (<img src="/drawable/ic_btn_pupil_2.png" class="frameless" />).
+	<li>Adaptación del tamaño de la pupila de las superposiciones (botón <img src="<?=$basepath?>/drawable/ic_btn_pupil_0.png"
+		class="frameless" />). Aquí usted puede mantener la pupila centrada (<img src="<?=$basepath?>/drawable/ic_btn_pupil_1.png"
+		class="frameless" />) o moverla libremente (<img src="<?=$basepath?>/drawable/ic_btn_pupil_2.png" class="frameless" />).
 	</li>
 
 	<li>Guardar los ajustes seleccionados de brillo y contraste (por medio del botón &laquo;guardar&raquo; <img
-		src="/drawable/ic_action_save.png" /> en la barra de acciones)
+		src="<?=$basepath?>/drawable/ic_action_save.png" /> en la barra de acciones)
 	</li>
 
-	<li>Guardar la posición y zoom (por medio del botón &laquo;guardar&raquo; <img src="/drawable/ic_action_save.png" />
+	<li>Guardar la posición y zoom (por medio del botón &laquo;guardar&raquo; <img src="<?=$basepath?>/drawable/ic_action_save.png" />
 		en la barra de acciones)
 	</li>
 
-	<li>Compartir la foto (por medio del botón &laquo;compartir&raquo; <img src="/drawable/ic_action_share.png" /> en la
+	<li>Compartir la foto (por medio del botón &laquo;compartir&raquo; <img src="<?=$basepath?>/drawable/ic_action_share.png" /> en la
 		barra de acciones)
 	</li>
 
-	<li>Cambiar el comentario de la foto (por medio del botón &laquo;documento&raquo; <img src="/drawable/ic_comment.png" />
+	<li>Cambiar el comentario de la foto (por medio del botón &laquo;documento&raquo; <img src="<?=$basepath?>/drawable/ic_comment.png" />
 		en la barra de acciones)
 	</li>
 </ul>
 
 <p>
 	Estas funciones pueden activarse o desactivarse mediante el botón &laquo;Mostrar/Ocultar herramientas&raquo; (<img
-		src="/drawable/ic_tools_up.png" /> <img src="/drawable/ic_tools_down.png" /> <img
-		src="/drawable/ic_tools_left.png" /> <img src="/drawable/ic_tools_right.png" />).
+		src="<?=$basepath?>/drawable/ic_tools_up.png" /> <img src="<?=$basepath?>/drawable/ic_tools_down.png" /> <img
+		src="<?=$basepath?>/drawable/ic_tools_left.png" /> <img src="<?=$basepath?>/drawable/ic_tools_right.png" />).
 </p>

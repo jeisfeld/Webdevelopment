@@ -1,4 +1,6 @@
 <?PHP
+$basepath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+
 // Determine language
 if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
@@ -34,18 +36,18 @@ else {
 
 $pagefull = $page . ".php";
 $pagepathname = $nopageselected ? "" : $page . "/";
-$urlprefix = "";
+$urlprefix = $basepath;
 
 // Determine Miniris vs Augendiagnose
 if (array_key_exists("app", $_GET) && $_GET ["app"] == "miniris") {
 	$app = "miniris";
 	$appname = "Miniris";
-	$urlprefix = "/miniris";
+	$urlprefix .= "/miniris";
 }
 else if (strpos ( $_SERVER ['REQUEST_URI'], '/miniris' ) !== false) {
 	$app = "miniris";
 	$appname = "Miniris";
-	$urlprefix = "/miniris";
+	$urlprefix .= "/miniris";
 }
 else {
 	switch ($_SERVER ['HTTP_HOST']) {
@@ -55,7 +57,7 @@ else {
 		case "127.0.0.1:8007" :
 			$app = "miniris";
 			$appname = "Miniris";
-			$urlprefix = "/miniris";
+			$urlprefix .= "/miniris";
 			break;
 		default :
 			$app = "augendiagnose";
@@ -126,9 +128,9 @@ else {
 <meta name="description" content="<?=$description?>">
 <meta name="keywords" content="<?=$keywords?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="/drawable/icon_<?=$app?>.ico">
-<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
+<link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="<?=$basepath?>/drawable/icon_<?=$app?>.ico">
+<script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
 <script>
 function toggleNavigation() {
 	$("#navigationframe").toggleClass( "mobilenavigation" );

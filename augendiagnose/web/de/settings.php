@@ -101,7 +101,7 @@ if (isAugendiagnose ()) {
 
 				<li><b>Nur auf Anfrage:</b> Die App lädt die Fotos nicht in voller Auflösung. Dies verbraucht am wenigsten Speicher
 					und Rechenzeit, aber Details in den Fotos könnten nicht sichtbar sein. Mit Hilfe des &bdquo;Lupen&ldquo;-Buttons <img
-					src="/drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller Bildauflösung angezeigt werden.</li>
+					src="<?=$basepath?>/drawable/ic_clarity.png" /> kann der aktuelle Ausschnitt in voller Bildauflösung angezeigt werden.</li>
 			</ul>
 		</td>
 	</tr>
