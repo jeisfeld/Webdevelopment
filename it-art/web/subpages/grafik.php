@@ -6,6 +6,6 @@
 
 <p>Beispiele:</p>
 
-<img src="/img/button.png" alt="Button" />
-<img src="/img/t-shirt.png" alt="T-Shirt" />
-<img src="/img/flyer.jpg" alt="Flyer" />
+<img src="<?=$basepath?>/img/button.png" alt="Button" />
+<img src="<?=$basepath?>/img/t-shirt.png" alt="T-Shirt" />
+<img src="<?=$basepath?>/img/flyer.jpg" alt="Flyer" />

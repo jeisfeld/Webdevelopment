@@ -14,7 +14,7 @@
 			<div class="audiolabel2">Variation eines klassischen Themas:</div>
 			<div class="audio">
 				<audio controls autoplay id="zarathustra">
-					<source src="/mp3/zarathustra1.mp3" type="audio/mpeg" />
+					<source src="<?=$basepath?>/mp3/zarathustra1.mp3" type="audio/mpeg" />
 				</audio>
 			</div>
 		</td>
@@ -25,11 +25,11 @@
 			<div class="audiolabel2">Pop-Song:</div>
 			<div class="audio">
 				<audio controls id="dreamalittledream">
-					<source src="/mp3/woistsiegeblieben6.mp3" type="audio/mpeg" />
+					<source src="<?=$basepath?>/mp3/woistsiegeblieben6.mp3" type="audio/mpeg" />
 				</audio>
 			</div>
 		</td>
 	</tr>
 </table>
 
-<img class="centered" src="/img/clef.jpg" />
+<img class="centered" src="<?=$basepath?>/img/clef.jpg" />

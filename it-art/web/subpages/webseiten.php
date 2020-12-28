@@ -8,11 +8,11 @@
 <p>Bisher von mir gepflegte Webseiten:</p>
 
 <a href="http://www.spirituelle-seelenreise.de" target="_blank" class="image">
-	<img alt="www.spirituelle-seelenreise.de" src="/img/spirituelle-seelenreise.jpg" />
+	<img alt="www.spirituelle-seelenreise.de" src="<?=$basepath?>/img/spirituelle-seelenreise.jpg" />
 </a>
 <a href="http://www.naturheilkunde-praxis.de" target="_blank" class="image">
-	<img alt="www.naturheilkunde-praxis.de" src="/img/naturheilkunde-praxis.jpg" />
+	<img alt="www.naturheilkunde-praxis.de" src="<?=$basepath?>/img/naturheilkunde-praxis.jpg" />
 </a>
 <a href="http://www.therapiezentrum-dante.de" target="_blank" class="image">
-	<img alt="www.therapiezentrum-dante.de" src="/img/therapiezentrum-dante.jpg" />
+	<img alt="www.therapiezentrum-dante.de" src="<?=$basepath?>/img/therapiezentrum-dante.jpg" />
 </a>

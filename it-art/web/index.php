@@ -1,4 +1,6 @@
 <?php
+$basepath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+
 if (isset ( $page )) {
 	$nopageselected = false;
 }
@@ -23,19 +25,19 @@ else {
 <meta name="description" content="IT-art, Jörg Eisfeld">
 <meta name="keywords" content="Jörg Eisfeld, IT-art, Webdevelopment, Android-Apps, Design">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="/img/it-art.ico">
-<script type="text/javascript" src="/javascript/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="/javascript/resolution.js"></script>
+<link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="<?=$basepath?>/img/it-art.ico">
+<script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="<?=$basepath?>/javascript/resolution.js"></script>
 <?php
 if ($page == "startseite") {
 	?>
-<script type="text/javascript" src="/javascript/startpage.js"></script>
+<script type="text/javascript" src="<?=$basepath?>/javascript/startpage.js"></script>
 <?php
 }
 else if ($page == "musik") {
 	?>
-<script type="text/javascript" src="/javascript/music.js"></script>
+<script type="text/javascript" src="<?=$basepath?>/javascript/music.js"></script>
 <?php
 }
 ?>
@@ -44,7 +46,7 @@ else if ($page == "musik") {
 </head>
 <body class="<?=$page?>">
 	<div id="toplogoframe" name="toplogoframe">
-		<img id="logoimage" alt="Jörg Eisfeld - IT-art" src="/img/logo-it-art_narrow.png">
+		<img id="logoimage" alt="Jörg Eisfeld - IT-art" src="<?=$basepath?>/img/logo-it-art_narrow.png">
 	</div>
 	<div id="bottomframe" name="bottomframe">
 		<?php include ("bottom.php"); ?>
