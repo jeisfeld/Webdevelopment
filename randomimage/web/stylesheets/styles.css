@@ -84,7 +84,7 @@ html, body {
 }
 
 /* Settings for mobils vs desktop */
-@media screen and (max-width: 600px), screen and (max-height: 440px) {
+@media screen and (max-width: 599px), screen and (max-height: 439px), print {
 	.desktop {
 		display: none;
 	}
@@ -107,6 +107,19 @@ html, body {
 	}
 	#headerframe p {
 		margin-top: 0px;
+	}
+}
+
+@media print {
+	#headerframe, #navigationframe.startup {
+		display: none;
+	}
+	#mainframe {
+		top: 0px;
+		position: relative;
+	}
+	body, p {
+		color: #000000;
 	}
 }
 

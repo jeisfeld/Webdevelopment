@@ -496,3 +496,19 @@ a.closeImpressum {
 		width: auto;
 	}
 }
+
+@media print {
+	#menuframe, img.centered {
+		display: none;
+	}
+	#bottomframe {
+	display: block;
+	}
+	#mainframe {
+		top: 0px;
+		position: relative;
+	}
+	body, p, h1, #bottomframe tr.address, #bottomframe tr.address a, a {
+		color: #000000;
+	}
+}

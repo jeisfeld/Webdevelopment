@@ -90,7 +90,7 @@ html, body {
 }
 
 /* Settings for mobils vs desktop */
-@media screen and (max-width: 600px), screen and (max-height: 440px) {
+@media screen and (max-width: 599px) , screen and (max-height: 439px) , print {
 	.desktop {
 		display: none;
 	}
@@ -116,6 +116,19 @@ html, body {
 	}
 }
 
+@media print {
+	#headerframe, #navigationframe.startup {
+		display: none;
+	}
+	#mainframe {
+		top: 0px;
+		position: relative;
+	}
+	body, p {
+		color: #000000;
+	}
+}
+
 @media screen and (min-width: 600px) and (min-height: 440px) {
 	.mobile {
 		display: none;
@@ -136,7 +149,7 @@ html, body {
 		border-right: 1px solid white;
 	}
 }
-	
+
 @media screen and (min-width: 750px) and (min-height: 440px) {
 	#mainframe {
 		width: 80%;
@@ -144,5 +157,5 @@ html, body {
 	}
 	#navigationframe {
 		width: 20%;
-	}	
+	}
 }
