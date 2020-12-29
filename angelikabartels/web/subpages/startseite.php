@@ -15,7 +15,7 @@
 		<tr>
 			<td class="startentry">
 				<h1>
-					<a href="lzl.html">Leben zwischen den Leben</a>
+					<a href="lzl.php">Leben zwischen den Leben</a>
 				</h1>
 				<p>Seelenreise nach Dr. Michael Newton &amp; Ursula Demarmels</p>
 			</td>
@@ -23,7 +23,7 @@
 		<tr>
 			<td class="startentry">
 				<h1>
-					<a href="rueckfuehrung.html">Sprirituelle Rückführung ins Vorleben</a>
+					<a href="rueckfuehrung.php">Sprirituelle Rückführung ins Vorleben</a>
 				</h1>
 				<p>&nbsp;</p>
 			</td>
@@ -31,7 +31,7 @@
 		<tr>
 			<td class="startentry">
 				<h1>
-					<a href="pea.html">Psycho&shy;energetisches Atmen</a>
+					<a href="pea.php">Psycho&shy;energetisches Atmen</a>
 				</h1>
 				<p>&nbsp;</p>
 			</td>
@@ -39,7 +39,7 @@
 		<tr>
 			<td class="startentry">
 				<h1>
-					<a href="astrologie.html">Psycho&shy;logische Astrologie</a>
+					<a href="astrologie.php">Psycho&shy;logische Astrologie</a>
 				</h1>
 				<p>&nbsp;</p>
 			</td>

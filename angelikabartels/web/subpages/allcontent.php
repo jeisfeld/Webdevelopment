@@ -16,21 +16,21 @@ Leben zwischen den Leben">
 <body id="allcontent">
 	<img src="../img/screenshot.jpg" alt="Startseite" width="100%">
 	<hr class="newpage">
-	<div path="lzl.html" class='load'></div>
+	<div path="lzl.php" class='load'></div>
 	<hr class="newpage">
-	<div path="rueckfuehrung.html" class='load'></div>
+	<div path="rueckfuehrung.php" class='load'></div>
 	<hr class="newpage">
-	<div path="pea.html" class='load'></div>
+	<div path="pea.php" class='load'></div>
 	<hr class="newpage">
-	<div path="astrologie.html" class='load'></div>
+	<div path="astrologie.php" class='load'></div>
 	<hr class="newpage">
-	<div path="spiritcircle.html" class='load'></div>
+	<div path="spiritcircle.php" class='load'></div>
 	<hr class="newpage">
-	<div path="uebermich.html" class='load'></div>
+	<div path="uebermich.php" class='load'></div>
 	<hr class="newpage">
-	<div path="kontakt.html" class='load'></div>
+	<div path="kontakt.php" class='load'></div>
 	<hr class="newpage">
-	<div path="impressum.html" class='load'></div>
+	<div path="impressum.php" class='load'></div>
 </body>
 
 </html>

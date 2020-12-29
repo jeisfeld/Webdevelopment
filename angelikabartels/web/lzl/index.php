@@ -15,14 +15,15 @@ Leben zwischen den Leben, Seelenreise">
 <script type="text/javascript" src="../javascript/resolution.js"></script>
 </head>
 <body id="index">
-	<iframe id="toplogoframe" name="toplogoframe" src="../toplogo.html" scrolling="no" marginheight="0" marginwidth="0"
+	<iframe id="toplogoframe" name="toplogoframe" src="../toplogo.php" scrolling="no" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
-	<iframe id="bottomframe" src="../bottom.html" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="../menu_left.html" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menudropdownframe" src="../menu_dropdown.html" name="menudropdown" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="mainframe" src="../subpages/startseite.html" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="bottomframe" src="../bottom.php" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menuleftframe" src="../menu_left.php" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menudropdownframe" src="../menu_dropdown.php" name="menudropdown" marginheight="0" marginwidth="0"
+		frameborder="0"></iframe>
+	<iframe id="mainframe" src="../subpages/startseite.php" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 	<iframe id="popupframe" name="popup" marginheight="0" marginwidth="0" frameborder="0"
-		data-link="../subpages/impressum.html"></iframe>
+		data-link="../subpages/impressum.php"></iframe>
 </body>
 
 </html>
