@@ -10,10 +10,11 @@
 	width: 100%;
 	margin: 0;
 	border: 0;
-	z-index: 10;
+	z-index: 40;
 	width: 100%;
 	box-sizing: border-box;
 	border-bottom: 1px solid #FDF2D7;
+	background-color: #5F0000;
 }
 
 #bottomframe {
@@ -39,26 +40,24 @@
 	height: 79%;
 	border: 0px;
 	overflow: hidden;
-	z-index: 30;
+	z-index: 50;
 	box-sizing: content-box;
 }
 
 #mainframe {
-	position: fixed;
+	position: absolute;
 	top: 200px;
-	bottom: 0px;
 	right: 0px;
 	left: 0px;
 	width: 100%;
 	border: 0px;
+	bottom: auto;
 	z-index: 5;
-	border: 0px;
 	padding-top: 10px;
 	padding-left: 14px;
 	padding-right: 14px;
 	box-sizing: border-box;
 	overflow: auto;
-	border: 0px;
 }
 
 #popupframe {
@@ -120,6 +119,7 @@ body.startseite #menuframe {
 
 #mainframe.startseite {
 	left: 0;
+	bottom: 0px;
 	width: 100%;
 	padding: 0;
 }
@@ -375,11 +375,15 @@ a.closeImpressum {
 		top: 200px;
 	}
 	#mainframe {
+		position: fixed;
 		left: 21%;
 		width: 79%;
 		padding-top: 14px;
 		padding-left: 22px;
 		padding-right: 22px;
+		bottom: 30px;
+	}
+	#mainframe.startseite {
 		bottom: 30px;
 	}
 	#mainframe h1 {
@@ -446,6 +450,9 @@ a.closeImpressum {
 		padding-right: 18px;
 		bottom: 40px;
 	}
+	#mainframe.startseite {
+		bottom: 40px;
+	}
 	#mainframe h1 {
 		font-size: 32px;
 		margin-top: 18px;
@@ -502,7 +509,7 @@ a.closeImpressum {
 		display: none;
 	}
 	#bottomframe {
-	display: block;
+		display: block;
 	}
 	#mainframe {
 		top: 0px;

@@ -91,7 +91,8 @@ function toggleNavigation() {
 if ($nopageselected) {
 	?>
 <script>
-	$("#navigationframe").toggleClass( "startup" );
+	$("#navigationframe").addClass( "startup" );
+	$("#mainframe").addClass( "startup" );
 </script>
 <?php
 }
