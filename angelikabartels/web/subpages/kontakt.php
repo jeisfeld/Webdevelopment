@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Kontakt</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
-</head>
+<h1>Kontakt</h1>
 
-<body id="kontakt" class="mainpage">
-	<div class="maintext">
-		<h1>Kontakt</h1>
-
-		<p>
-			Therapie Praxis<br> Angelika Bartels<br> Darmstädter Str. 67<br> 64407 Fränkisch-Crumbach<br>
-			Telefon: 06164-501 922<br>Mobil: 0172-6770084<br>Fax: 06164-501 923<br> Email: <a
-				href="mailto:Angelika Bartels<bartels-angelika@gmx.de>">bartels-angelika@gmx.de</a>
-		</p>
-	</div>
-</body>
-</html>
+<p>
+	Therapie Praxis<br> Angelika Bartels<br> Darmstädter Str. 67<br> 64407 Fränkisch-Crumbach<br> Telefon: 06164-501 922<br>Mobil:
+	0172-6770084<br>Fax: 06164-501 923<br> Email:
+	<a href="mailto:Angelika Bartels<bartels-angelika@ gmx.de>">bartels-angelika@gmx.de</a>
+</p>

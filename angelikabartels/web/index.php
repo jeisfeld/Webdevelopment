@@ -1,3 +1,15 @@
+<?php
+$basepath = rtrim ( dirname ( $_SERVER ['PHP_SELF'] ), '/\\' );
+
+if (! isset ( $page )) {
+	if (empty ( $_GET ["page"] )) {
+		$page = "startseite";
+	}
+	else {
+		$page = $_GET ["page"];
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -10,22 +22,27 @@
 	content="Angelika Bartels, Spirituelle Rückführung, Psychoenergetisches Atmen,
 Leben zwischen den Leben, Seelenreise">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="stylesheets/iframes.css" rel="Stylesheet" type="text/css">
-<link href="stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="img/icon_schwan.ico">
-<script type="text/javascript" src="javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="javascript/resolution.js"></script>
+<link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="<?=$basepath?>/img/icon_schwan.ico">
+<script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="<?=$basepath?>/javascript/resolution.js"></script>
 </head>
-<body id="index">
-	<iframe id="toplogoframe" name="toplogoframe" src="toplogo.php" scrolling="no" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
-	<iframe id="bottomframe" src="bottom.php" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="menu_left.php" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menudropdownframe" src="menu_dropdown.php" name="menudropdown" marginheight="0" marginwidth="0"
-		frameborder="0"></iframe>
-	<iframe id="mainframe" src="subpages/startseite.php" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="popupframe" name="popup" marginheight="0" marginwidth="0" frameborder="0"
-		data-link="subpages/impressum.php"></iframe>
+<body id="index" class="<?=$page?>">
+	<div id="toplogoframe" name="toplogoframe">
+		<img id="logoimage" alt="Spirituelle Rückführung" src="<?=$basepath?>/img/logo_breit.jpg">
+	</div>
+	<div id="menuframe" name="menu">
+		<?php include ("menu.php"); ?>
+	</div>
+	<div id="mainframe" name="main">
+		<?php include ("subpages/".$page.".php"); ?>
+	</div>
+	<div id="bottomframe" name="bottomframe">
+		<?php include ("bottom.php"); ?>
+	</div>
+	<div id="popupframe" name="popup" data-link="subpages/impressum.php">
+		<?php include ("subpages/impressum.php"); ?>
+	</div>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import url(OpenSans.css);
+
 /* basic layout */
 #toplogoframe {
 	position: fixed;
@@ -15,6 +16,8 @@
 	box-sizing: border-box;
 	border-bottom: 1px solid #FDF2D7;
 	background-color: #5F0000;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #bottomframe {
@@ -264,11 +267,6 @@ span.error {
 }
 
 /* Settings for toplogo */
-#toplogoframe {
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 #toplogoframe #logoimage {
 	display: block;
 	width: 100%;
@@ -380,7 +378,7 @@ a.closeImpressum {
 		width: 79%;
 		padding-top: 14px;
 		padding-left: 22px;
-		padding-right: 22px;
+		padding-right: 14px;
 		bottom: 30px;
 	}
 	#mainframe.startseite {
