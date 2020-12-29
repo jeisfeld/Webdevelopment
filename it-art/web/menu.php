@@ -5,7 +5,7 @@
 <?php
 function menulink($basepath, $pagename, $pagetext, $currentpage)
 {
-    echo '<a href="'.$basepath.'/'.$pagename.'" id="link'.$pagename.'"';
+    echo '<a href="'.$basepath.'/'.$pagename.'/" id="link'.$pagename.'"';
     if ($pagename == $currentpage) {
     	echo ' class="chosen"';
     }

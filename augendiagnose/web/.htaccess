@@ -19,6 +19,7 @@ RewriteRule "^miniris/(..)/([^/]+)/?$"  "?app=miniris&lang=$1&page=$2"
 RewriteRule "^miniris/(..)/$"  "?app=miniris&lang=$1"
 RewriteRule "^(..)/([^/]+)/?$"  "?lang=$1&page=$2"
 RewriteRule "^(..)/$"  "?lang=$1"
+RewriteRule "sitemap.xml$"  "sitemap.php"
 </IfModule>
 
 AddDefaultCharset utf-8

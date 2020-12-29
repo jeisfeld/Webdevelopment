@@ -14,6 +14,7 @@ ExpiresByType image/x-icon "access plus 1 days"
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule "^([^/\.]+)/?$" "?page=$1"
+RewriteRule "sitemap.xml$"  "sitemap.php"
 </IfModule>
 
 AddDefaultCharset utf-8

@@ -47,17 +47,18 @@ function adjustStyle(width, height) {
 	var toplogoframe = $('#toplogoframe');
 	var popupframe = $('#popupframe');
 	var logoimage = $('#logoimage');
+	var oldlogosrc = logoimage.attr('src');
 
 	if (width < 950) {
-		logoimage.attr('src', 'img/logo-it-art_narrow.png');
+		logoimage.attr('src', oldlogosrc.replace('_wide', '_narrow'));
 		var logoheight = width * 200 / 940;
 	}
 	else if (width < 1400) {
-		logoimage.attr('src', 'img/logo-it-art_narrow.png');
+		logoimage.attr('src', oldlogosrc.replace('_wide', '_narrow'));
 		var logoheight = 200;
 	}
 	else {
-		logoimage.attr('src', 'img/logo-it-art_wide.png');
+		logoimage.attr('src', oldlogosrc.replace('_narrow', '_wide'));
 		var logoheight = 200;
 	}
 

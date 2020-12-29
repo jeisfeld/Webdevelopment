@@ -1,17 +1,12 @@
 <?php
-$basepath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$basepath = rtrim ( dirname ( $_SERVER ['PHP_SELF'] ), '/\\' );
 
-if (isset ( $page )) {
-	$nopageselected = false;
-}
-else {
+if (! isset ( $page )) {
 	if (empty ( $_GET ["page"] )) {
 		$page = "startseite";
-		$nopageselected = true;
 	}
 	else {
 		$page = $_GET ["page"];
-		$nopageselected = false;
 	}
 }
 ?>
