@@ -152,12 +152,14 @@ a {
 #mainframe p.subtitle, #allcontent .page p.subtitle {
 	margin-top: -24px;
 	padding-bottom: 24px;
+	text-align: left;
 }
 
 #mainframe p.supertitle, #allcontent .page p.supertitle {
 	padding-bottom: 0px;
 	margin-bottom: -18px;
 	margin-top: 24px;
+	text-align: left;
 }
 
 #mainframe h1, #allcontent .page h1 {
@@ -374,6 +376,12 @@ a.closeImpressum {
 }
 
 /* Size specific settings */
+@media screen and (max-width:470px) {
+	.startseite #mainframe h1 {
+		font-size: 20px;
+	}
+}
+
 @media screen and (min-width:850px) and (min-height:500px) {
 	#menuframe {
 		position: fixed;
