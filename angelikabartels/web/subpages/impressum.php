@@ -70,6 +70,6 @@
 </table>
 <table width="100%">
 	<tr>
-		<td align="right" valign="top"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
+		<td align="right" valign="top" style="padding-top: 2px"><a href="javascript:closeImpressum()" class="closeImpressum">Schließen</a></td>
 	</tr>
 </table>

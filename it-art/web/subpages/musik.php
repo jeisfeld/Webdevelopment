@@ -1,6 +1,6 @@
 <h1>Musik</h1>
 
-<p>Ich erstelle professionelle Aufnahmen von Musikstücken und übernehme dabei, je nach Bedarf, Komposition,
+<p>Ich erstelle Aufnahmen von Musikstücken und übernehme dabei, je nach Bedarf, Komposition,
 	Textgestaltung, Instrumentierung, Arrangement und Mastering.</p>
 
 <p>Bisher gibt es nur Aufnahmen aus privaten Anlässen - einerseits Aufnahmen mit individuellen Texten für
