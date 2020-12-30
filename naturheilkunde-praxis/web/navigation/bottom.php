@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Bottom Online</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/impressum.js"></script>
-</head>
-
-<body id="bottom">
-	<hr>
-	<table>
-		<tr class="address">
-			<td>
-				<div id="address">
-					<div>Dantestraße 29</div>
-					<div>80637 München</div>
-					<div class="hideable">U1 Westfriedhof</div>
-					<div>Tel. 089-33 089 158</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td align="right">
-				<p>
-					<a href="javascript:showImpressum()">IMPRESSUM</a>
-				</p>
-			</td>
-		</tr>
-	</table>
-</body>
-</html>
-
+<hr>
+<table>
+	<tr class="address">
+		<td>
+			<div id="address">
+				<div>Dantestraße 29</div>
+				<div>80637 München</div>
+				<div class="hideable">U1 Westfriedhof</div>
+				<div>Tel. 089-33 089 158</div>
+			</div>
+		</td>
+	</tr>
+	<tr id="impressumrow">
+		<td align="right">
+			<p>
+				<a href="javascript:showImpressum()">IMPRESSUM</a>
+			</p>
+		</td>
+	</tr>
+</table>

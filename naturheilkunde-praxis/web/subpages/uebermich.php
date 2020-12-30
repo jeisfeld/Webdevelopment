@@ -1,51 +1,37 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Über mich</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
-</head>
+<table id="subpage">
+	<tr>
+		<td id="text">
+			<h2>Über mich</h2>
 
-<body id="ubermich">
-	<table id="subpage">
-		<tr>
-			<td id="text">
-				<h2>Über mich</h2>
+			<ul>
+				<li>seit 1991 Heil&shy;praktikerin in eigener Praxis in München</li>
+				<li>1992-94 Chinesische Medizin (Ausbildung bei B. Temelie und Prof. Dr. Hempen, München)</li>
+				<li>Hakomi Erfahrungs&shy;orientierte Körper&shy;psycho&shy;therapie seit 1997</li>
+				<li>seit dieser Zeit Hakomi Study Group mit Schwerpunkt Supervision</li>
+				<li>Hakomi Interpersonal - Schwerpunkt Beziehung 2004</li>
+				<li>Trauma Therapie bei Manuela Mischke-Reeds (nach Peter Levine) seit 2013</li>
+				<li>Iridologie (Augen&shy;diagnose) Felke Institut seit 2015</li>
+			</ul>
 
-				<ul>
-					<li>seit 1991 Heil&shy;praktikerin in eigener Praxis in München</li>
-					<li>1992-94 Chinesische Medizin (Ausbildung bei B. Temelie und Prof. Dr. Hempen, München)</li>
-					<li>Hakomi Erfahrungs&shy;orientierte Körper&shy;psycho&shy;therapie seit 1997</li>
-					<li>seit dieser Zeit Hakomi Study Group mit Schwerpunkt Supervision</li>
-					<li>Hakomi Interpersonal - Schwerpunkt Beziehung 2004</li>
-					<li>Trauma Therapie bei Manuela Mischke-Reeds (nach Peter Levine) seit 2013</li>
-					<li>Iridologie (Augen&shy;diagnose) Felke Institut seit 2015</li>
-				</ul>
+			<p>Bereits 1984 begann mein natur&shy;heilkundlich geprägter Weg. Als Assistentin bei dem Natur&shy;heilarzt Dr.
+				Seemann in Aalen lernte ich damals Bioresonanz, Elektro&shy;akupunktur nach Voll (EAV), Farblicht-Therapie nach
+				Peter Mandel und weitere alternativ medizinische Verfahren kennen. Nach 4 Jahren führte mein Weg 1988 zur 3 jährigen
+				Ganztags Heil&shy;praktiker Schule nach München. Während dieser Zeit assistierte ich bei dem Natur&shy;heilarzt Dr.
+				Sachsse bis 1997. Sein Schwerpunkt war die Bioresonanz, Allergie und seine Testmethode der Pulsreflex nach Nogier,
+				die ich bis heute erfolgreich anwende.</p>
+			<p>Die Einflüsse dieser beiden Ärzte/Mentoren, die bis zu ihrem letzten Atemzug in der Praxis tätig waren, prägen
+				meine Arbeit bis heute. Meine persönlichen Schwerpunkte, die Chinesische Medizin, Psycho&shy;somatik und die
+				Spagyrik flossen mit in diese Arbeit ein. Letztere ist im tieferen Sinn eine Ordnungs&shy;therapie, die wie ein
+				Magnet eine ordnende und ausrichtende Wirkung hat. Doch je weiter ich in das Ursachen-/Wirkungs&shy;prinzip
+				eindrang, umso deutlicher wurde das Psychische, Seelische im Somatischen. Deshalb begann ich 1994 die dreijährige
+				Hakomi-Ausbildung, um ein tieferes Verständnis von unseren Grund&shy;anschauungen etc. zu bekommen. Da bei dieser
+				Methode dem Körper so eine besondere Bedeutung zukommt, passt sie sehr gut in meine ganzheitliche
+				Behandlungs&shy;methode.</p>
+			<p style="font-style: italic; margin-top: 30px; text-align: right;">
+				Was die Seele bewegt, bewegt auch den Körper<br> <small>(Beate M. Weingart)</small>
+			</p>
 
-				<p>Bereits 1984 begann mein natur&shy;heilkundlich geprägter Weg. Als Assistentin bei dem Natur&shy;heilarzt Dr.
-					Seemann in Aalen lernte ich damals Bioresonanz, Elektro&shy;akupunktur nach Voll (EAV), Farblicht-Therapie nach
-					Peter Mandel und weitere alternativ medizinische Verfahren kennen. Nach 4 Jahren führte mein Weg 1988 zur 3
-					jährigen Ganztags Heil&shy;praktiker Schule nach München. Während dieser Zeit assistierte ich bei dem
-					Natur&shy;heilarzt Dr. Sachsse bis 1997. Sein Schwerpunkt war die Bioresonanz, Allergie und seine Testmethode der
-					Pulsreflex nach Nogier, die ich bis heute erfolgreich anwende.</p>
-				<p>Die Einflüsse dieser beiden Ärzte/Mentoren, die bis zu ihrem letzten Atemzug in der Praxis tätig waren,
-					prägen meine Arbeit bis heute. Meine persönlichen Schwerpunkte, die Chinesische Medizin, Psycho&shy;somatik und die
-					Spagyrik flossen mit in diese Arbeit ein. Letztere ist im tieferen Sinn eine Ordnungs&shy;therapie, die wie ein
-					Magnet eine ordnende und ausrichtende Wirkung hat. Doch je weiter ich in das Ursachen-/Wirkungs&shy;prinzip
-					eindrang, umso deutlicher wurde das Psychische, Seelische im Somatischen. Deshalb begann ich 1994 die dreijährige
-					Hakomi-Ausbildung, um ein tieferes Verständnis von unseren Grund&shy;anschauungen etc. zu bekommen. Da bei dieser
-					Methode dem Körper so eine besondere Bedeutung zukommt, passt sie sehr gut in meine ganzheitliche
-					Behandlungs&shy;methode.</p>
-				<p style="font-style: italic; margin-top: 30px; text-align: right;">
-					Was die Seele bewegt, bewegt auch den Körper<br>
-					<small>(Beate M. Weingart)</small>
-				</p>
-
-			</td>
-			<td id="pict"><img id="pictimg" src="../img/SchnuSy_Zebra.png"></td>
-		</tr>
-	</table>
-</body>
-</html>
+		</td>
+		<td id="pict"><img id="pictimg" src="<?=$basepath?>/img/SchnuSy_Zebra.png"></td>
+	</tr>
+</table>

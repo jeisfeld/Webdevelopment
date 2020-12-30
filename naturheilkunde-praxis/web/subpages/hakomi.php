@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Hakomi</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
-</head>
-
-<body id="hakomi">
 	<table id="subpage">
 		<tr>
 			<td id="text">
@@ -32,8 +21,6 @@
 					<a href="http://www.hakomi.de" target="_blank">http://www.hakomi.de</a>
 				</p>
 			</td>
-			<td id="pict"><img id="pictimg" src="../img/hakomi.png"></td>
+			<td id="pict"><img id="pictimg" src="<?=$basepath?>/img/hakomi.png"></td>
 		</tr>
 	</table>
-</body>
-</html>

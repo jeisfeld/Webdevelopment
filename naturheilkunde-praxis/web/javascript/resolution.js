@@ -1,41 +1,68 @@
-function needsMobileAdaptation() {
-	return window.devicePixelRatio > 1
-			&& /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+function showMenu() {
+	var frame = $('#menuframe');
+	if (frame.hasClass("dropdown")) {
+		$('#menuframe').slideDown();
+	}
+	else {
+		$('#menuframe').show();
+	}
+
+}
+
+function hideMenu() {
+	$('#menuframe.dropdown').hide();
+}
+
+function toggleMenu() {
+	if ($('#menuframe.dropdown').is(':visible')) {
+		hideMenu();
+	} else {
+		showMenu();
+	}
+}
+
+function showImpressum() {
+	hideMenu();
+	$("#popupframe").css('visibility', 'visible');
+	$("#popupframe").css('z-index', '20');
+}
+
+function closeImpressum() {
+	$("#popupframe").css('visibility', 'hidden');
+	$("#popupframe").css('z-index', '0');
+}
+
+function openPopup(url) {
+	var newwindow = window.open(url, '_blank', 'height=600,width=800,scrollbars=yes,menubar=yes');
+	if (window.focus) {
+		newwindow.focus()
+	}
 }
 
 function adjustStyle(width, height) {
 	width = parseInt(width);
 	height = parseInt(height);
-	var mainframe = $('#mainframe');
-	var menuleftframe = $('#menuleftframe');
-	var menutopframe = $('#menutopframe');
-	var menudropdownframe = $('#menudropdownframe');
 	var toplogoframe = $('#toplogoframe');
-	var toplogocontent = toplogoframe.contents().find('#logoimage');
-	var mainimages = mainframe.contents().find('#text img');
-	var bottomframe = $('#bottomframe');
+	var logoimage = $('#logoimage');
 	var popupframe = $('#popupframe');
-	var indexbody = $('#index');
-	var bottombody = bottomframe.contents().find('body');
+	var body = $('body');
 
 	var hidemenu = width < 850;
 
 	// sizing of top and bottom
-	var bottomheight = 80;
 	var menutopheight = hidemenu ? 0 : 40;
-
 	var logowidth = width > 1000 ? 1000 : width;
 
+	var oldlogosrc = logoimage.attr('src');
+
 	if (width > height) {
-		toplogocontent.attr('src', '../img/logo.png');
+		logoimage.attr('src', oldlogosrc.replace('_narrow', '_wide'));
 		var logoheight = logowidth * 0.1;
 	}
 	else {
-		toplogocontent.attr('src', '../img/logo_narrow.png');
+		logoimage.attr('src', oldlogosrc.replace('_wide', '_narrow'));
 		var logoheight = logowidth * 0.13;
 	}
-
-	var middleheight = height - logoheight - menutopheight - bottomheight;
 
 	toplogoframe.css('height', logoheight);
 	toplogoframe.css('width', logowidth);
@@ -46,16 +73,12 @@ function adjustStyle(width, height) {
 		toplogoframe.css('left', (width - logowidth) / 2);
 	}
 
-	menutopframe.css('top', logoheight);
-	menutopframe.css('height', menutopheight);
+	$('#menutopframe').css('top', logoheight);
+	$('#menutopframe').css('height', menutopheight - 10);
 
-	mainframe.css('top', logoheight + menutopheight);
-	mainframe.css('height', middleheight);
+	$('#mainframe').css('top', logoheight + menutopheight);
+	$('#menuframe').css('top', logoheight + menutopheight);
 
-	menuleftframe.css('top', logoheight + menutopheight);
-	menuleftframe.css('height', middleheight);
-
-	bottomframe.css('top', height - bottomheight);
 
 	// background positioning - image is square!
 	if (width < height) {
@@ -69,75 +92,37 @@ function adjustStyle(width, height) {
 		var sizeString = '' + width + 'px ' + width + 'px';
 	}
 
-	indexbody.css('background-position', positionString);
-	indexbody.css('background-size', sizeString);
+	body.css('background-position', positionString);
+	body.css('background-size', sizeString);
 
 	// hide menu on narrow screens.
 	if (hidemenu) {
-		menuleftframe.hide();
-		bottomframe.hide();
-		mainframe.css('height', middleheight + bottomheight);
-
-		menudropdownframe.show();
-		menudropdownframe.css('top', logoheight - 34);
-		mainframe.addClass('mobile');
-
-		toplogocontent.css('margin-left', '9%');
-		menutopframe.css('left', '0%');
-		menutopframe.css('width', '100%');
+		$('#menuframe').addClass("dropdown");
+		$('#menutopframe').hide();
+		hideMenu();
 
 		// impressum appears on main window
 		popupframe.css('top', logoheight);
-		popupframe.css('height', height - logoheight);
-		popupframe.css('left', 0);
-		popupframe.css('width', '100%');
-		popupframe.css('border', 'none');
-		
-		
-		var menudropdowncontent = menudropdownframe.contents().find('#menudropdown');
-		if(middleheight < 430) {
-			menudropdowncontent.addClass('smallheight');
-		}
-		else {
-			menudropdowncontent.removeClass('smallheight');
-		}
 	}
 	else {
-		menuleftframe.show();
-		bottomframe.show();
-		mainframe.css('height', middleheight);
-
-		menudropdownframe.hide();
-		mainframe.removeClass('mobile');
-
-		toplogocontent.css('margin-left', '5%');
-		menutopframe.css('left', '21%');
-		menutopframe.css('width', '79%');
+		$('#menuframe').removeClass("dropdown");
+		$('#menutopframe').show();
+		showMenu();
 
 		// impressum appears in popupframe
-		popupframe.css('top', height / 4);
-		popupframe.css('height', height / 2);
-		popupframe.css('left', '25%');
-		popupframe.css('width', '50%');
-		popupframe.css('border', '2px solid black');
+		popupframe.css('top', '');
 	}
+	
+	// Sizing of Google maps
+	var mwidth = Math.min(600, Math.round($('#mainframe').width() / 2));
+	var mheight = Math.min(600, Math.max(200, $('#mainframe').height() - 130));
+	$('#pict2.googlemaps div, #pict2.googlemaps div img').css('width', mwidth);
+	$('#pict2.googlemaps div, #pict2.googlemaps div img').css('height', mheight);
+	
 }
 
 function adjustMainStyle() {
-	if (!$.support.leadingWhitespace) {
-		adjustForIE8();
-	}
 	adjustStyle($(window).width(), $(window).height());
-	adjustStyle($(window).width(), $(window).height());
-}
-
-function adjustForIE8() {
-	$('#index').addClass('ie8');
-	$('#bottomframe').contents().find('body').addClass('ie8');
-	$('#mainframe').contents().find('body').addClass('ie8');
-	$('#menuleftframe').contents().find('body').addClass('ie8');
-	$('#toplogoframe').contents().find('body').addClass('ie8');
-	$('#popupframe').contents().find('body').addClass('ie8');
 }
 
 $(window).resize(function() {
@@ -145,16 +130,14 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
-	$('#toplogoframe').on("load", function() {
-		adjustMainStyle();
-	});
+	var pict2 = $('#pict').contents().clone();
+	var pictimg2 = pict2.is('#pictimg') ? pict2 : pict2.find('#pictimg');
+	pictimg2.attr('id', 'pictimg2');
+	pictimg2.addClass('pictimgfloat');
 
-	$('#mainframe').on("load", function() {
-		adjustMainStyle();
-	});
+	$('#text h2').after(pict2);
+	$('#endmenu a.top').wrap('<li class="subitem"></li>');
+	$('#endmenu a.left').wrap('<li></li>');
 
-	$('#bottomframe').on("load", function() {
-		adjustMainStyle();
-	});
 	adjustMainStyle();
 });

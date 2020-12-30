@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<title>Seminare</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="../stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<script type="text/javascript" src="../javascript/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../javascript/subpage.js"></script>
-</head>
-
-<body id="seminare">
-	<table id="subpage">
+<table id="subpage">
 		<tr>
 			<td id="text">
 				<h2>Seminare</h2>
@@ -76,9 +65,6 @@
 				<p>Wenn sich eine Study Group bzw. ein Arbeitskreis bildet, der weiter vertiefen möchte, gibt es Möglichkeiten.</p>
 
 			</td>
-			<td id="pict"><img id="pictimg" src="../img/tropfen.jpg"></td>
+			<td id="pict"><img id="pictimg" src="<?=$basepath?>/img/tropfen.jpg"></td>
 		</tr>
 	</table>
-
-</body>
-</html>

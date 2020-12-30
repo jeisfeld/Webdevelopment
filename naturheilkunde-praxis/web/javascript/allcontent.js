@@ -33,14 +33,5 @@ function loadPage() {
 
 $(document).ready(function() {
 
-	$.ajaxSetup({
-		'beforeSend' : function(xhr) {
-			xhr.overrideMimeType('text/html; charset=utf-8');
-		},
-	});
 
-	var pagesToBeLoaded = $('#allcontent div.load');
-	totalPages = pagesToBeLoaded.size();
-
-	pagesToBeLoaded.each(loadPage);
 });
