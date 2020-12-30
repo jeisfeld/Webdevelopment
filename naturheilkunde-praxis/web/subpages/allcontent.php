@@ -16,27 +16,27 @@ Leben zwischen den Leben">
 <body id="allcontent">
 	<img src="../img/screenshot.jpg" alt="Startseite" width="100%">
 	<hr>
-	<div path="behandlung.html" class='load'></div>
+	<div path="behandlung.php" class='load'></div>
 	<hr class="newpage">
-	<div path="tcm.html" class='load'></div>
+	<div path="tcm.php" class='load'></div>
 	<hr>
-	<div path="bioresonanz.html" class='load'></div>
+	<div path="bioresonanz.php" class='load'></div>
 	<hr class="newpage">
-	<div path="testung.html" class='load'></div>
+	<div path="testung.php" class='load'></div>
 	<hr>
-	<div path="hakomi.html" class='load'></div>
+	<div path="hakomi.php" class='load'></div>
 	<hr class="newpage">
-	<div path="farbtherapie.html" class='load'></div>
+	<div path="farbtherapie.php" class='load'></div>
 	<hr class="newpage">
-	<div path="seminare.html" class='load'></div>
+	<div path="seminare.php" class='load'></div>
 	<hr>
-	<div path="uebermich.html" class='load'></div>
+	<div path="uebermich.php" class='load'></div>
 	<hr class="newpage">
-	<div path="links.html" class='load'></div>
+	<div path="links.php" class='load'></div>
 	<hr>
-	<div path="kontakt.html" class='load'></div>
+	<div path="kontakt.php" class='load'></div>
 	<hr class="newpage">
-	<div path="impressum.html" class='load'></div>
+	<div path="impressum.php" class='load'></div>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 					Meridian&shy;verläufe (Energie&shy;bahnen) und die Betrachtung der Augen&shy;diagnose erweitern die individuellen
 					Erkenntnisse. Ebenso kann eine Ernährung nach dem Prinzip der Fünf-Elemente-Lehre unter&shy;stützend wirksam sein.
 					Mit der
-					<a href="farbtherapie.html" target="main" id="farbtherapie">Farblicht-Therapie</a>
+					<a href="farbtherapie.php" target="main" id="farbtherapie">Farblicht-Therapie</a>
 					werden wichtige Akupunktur&shy;punkte sanft, aber wirkungs&shy;voll stimuliert.
 				</p>
 			</td>

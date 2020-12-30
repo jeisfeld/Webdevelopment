@@ -20,16 +20,16 @@ Schmerztherapie, Ernaehrungsberatung, Naturheilkundliche Stoffwechselregulation,
 <script type="text/javascript" src="javascript/resolution.js"></script>
 </head>
 <body id="index">
-	<iframe id="toplogoframe" name="toplogoframe" src="navigation/top_logo.html" scrolling="no" marginheight="0"
+	<iframe id="toplogoframe" name="toplogoframe" src="navigation/top_logo.php" scrolling="no" marginheight="0"
 		marginwidth="0" frameborder="0"></iframe>
-	<iframe id="bottomframe" src="navigation/bottom.html" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menuleftframe" src="navigation/menu_left.html" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
-	<iframe id="menutopframe" src="navigation/menu_top.html" name="menutop" marginheight="0" marginwidth="0"
+	<iframe id="bottomframe" src="navigation/bottom.php" scrolling="no" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menuleftframe" src="navigation/menu_left.php" name="menu" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="menutopframe" src="navigation/menu_top.php" name="menutop" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
-	<iframe id="menudropdownframe" src="navigation/menu_dropdown.html" name="menudropdown" marginheight="0" marginwidth="0"
+	<iframe id="menudropdownframe" src="navigation/menu_dropdown.php" name="menudropdown" marginheight="0" marginwidth="0"
 		frameborder="0"></iframe>
-	<iframe id="mainframe" src="subpages/startseite.html" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+	<iframe id="mainframe" src="subpages/startseite.php" name="main" marginheight="0" marginwidth="0" frameborder="0"></iframe>
 	<iframe id="popupframe" name="popup" marginheight="0" marginwidth="0" frameborder="0"
-		data-link="subpages/impressum.html"></iframe>
+		data-link="subpages/impressum.php"></iframe>
 </body>
 </html>

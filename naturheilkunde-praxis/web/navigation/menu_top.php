@@ -9,13 +9,13 @@
 </head>
 <body class="menu" id="menutop">
 	<div class="part">
-		<a href="../subpages/tcm.html" target="main" id="tcm">Chinesische Heilmethode</a>
-		<a href="../subpages/bioresonanz.html" target="main" id="bioresonanz">Bioresonanz</a>
+		<a href="../subpages/tcm.php" target="main" id="tcm">Chinesische Heilmethode</a>
+		<a href="../subpages/bioresonanz.php" target="main" id="bioresonanz">Bioresonanz</a>
 	</div>
 	<div class="part">
-		<a href="../subpages/testung.html" target="main" id="testung">Testung</a>
-		<a href="../subpages/farbtherapie.html" target="main" id="farbtherapie">Farblichttherapie</a>
-		<a href="../subpages/hakomi.html" target="main" id="hakomi">Hakomi</a>
+		<a href="../subpages/testung.php" target="main" id="testung">Testung</a>
+		<a href="../subpages/farbtherapie.php" target="main" id="farbtherapie">Farblichttherapie</a>
+		<a href="../subpages/hakomi.php" target="main" id="hakomi">Hakomi</a>
 	</div>
 
 </body>

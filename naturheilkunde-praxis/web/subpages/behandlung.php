@@ -16,21 +16,21 @@
 
 				<p>
 					In meiner Natur&shy;heilkunde-Praxis wende ich die
-					<a href="tcm.html">chinesische Heil&shy;methode</a>
+					<a href="tcm.php">chinesische Heil&shy;methode</a>
 					zur Diagnostik an. Anschließend findet mit dem
-					<a href="testung.html">Puls-Test&shy;verfahren</a>
+					<a href="testung.php">Puls-Test&shy;verfahren</a>
 					nach Dr. Nogier eine individuelle Testung statt. Dadurch wird eine tiefer&shy;liegende Diagnostik bezüglich der
 					Schwach&shy;stellen des Organismus möglich. Gleichzeitig kann die geeignete Behandlungs&shy;weise und Medikation
 					getestet werden. Die Befund&shy;erhebung wird durch dieses ganz&shy;heitliche Konzept der östlichen und westlichen
 					Alternativ-Medizin erklärt und besprochen. Mit der
-					<a href="bioresonanz.html">Bioresonanz-Therapie</a>
+					<a href="bioresonanz.php">Bioresonanz-Therapie</a>
 					werden die Beschwerden und Erkrankungen behandelt. Erfreulicher&shy;weise treten oft schon Linderungen während der
 					ersten Behandlung auf. Ergänzt wird die Behandlung mit der
-					<a href="farbtherapie.html">Farblicht-Therapie.</a>
+					<a href="farbtherapie.php">Farblicht-Therapie.</a>
 				</p>
 				<p>
 					Die körper&shy;orientierte Psycho&shy;therapie nach der
-					<a href="hakomi.html">Hakomi-Methode</a>
+					<a href="hakomi.php">Hakomi-Methode</a>
 					kann bei körperlichen Beschwerden und in Krisen&shy;situationen, wenn gewünscht, mit in die Behandlung integriert
 					werden.
 				</p>
