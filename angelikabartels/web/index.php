@@ -30,6 +30,9 @@ Leben zwischen den Leben, Seelenreise">
 <body id="index" class="<?=$page?>">
 	<div id="toplogoframe" name="toplogoframe">
 		<img id="logoimage" alt="Spirituelle Rückführung" src="<?=$basepath?>/img/logo_breit.jpg">
+		<a id="menubutton" href="javascript:toggleMenu()">
+			<img src="<?=$basepath?>/img/icon_menu_white.png" class="icon">
+		</a>
 	</div>
 	<div id="menuframe" name="menu">
 		<?php include ("menu.php"); ?>

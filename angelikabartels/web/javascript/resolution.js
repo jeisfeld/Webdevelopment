@@ -1,25 +1,16 @@
 function showMenu() {
 	var frame = $('#menuframe');
 	if (frame.hasClass("dropdown")) {
-		frame.css('width', 335);
-		frame.css('height', 365);
-		$('#menuframe #menuitems').slideDown();
+		$('#menuframe').slideDown();
 	}
 	else {
-		frame.css('width', '');
-		frame.css('height', '');
-		$('#menuframe #menuitems').show();
+		$('#menuframe').show();
 	}
 
 }
 
 function hideMenu() {
-	var frame = $('#menuframe.dropdown');
-
-	frame.css('width', 30);
-	frame.css('height', 30);
-
-	$('#menuframe.dropdown #menuitems').hide();
+	$('#menuframe.dropdown').hide();
 }
 
 function toggleMenu() {
@@ -55,7 +46,6 @@ function adjustStyle(width, height) {
 	var popupframe = $('#popupframe');
 	var body = $('body');
 	var logoimage = $('#toplogoframe #logoimage');
-	var mainimages = $('#mainframe #text img');
 	var oldlogosrc = logoimage.attr('src');
 
 	// sizing of top and bottom
@@ -89,23 +79,15 @@ function adjustStyle(width, height) {
 
 	// hide menu on narrow screens.
 	if (width < 850 || height < 500) {
-		$('#menuframe').css('top', logoheight - 24);
 		$('#menuframe').addClass("dropdown");
 		hideMenu();
-
-		// limit image size
-		mainimages.css('max-width', width * 0.5);
 
 		// impressum appears on main window
 		popupframe.css('top', logoheight);
 	}
 	else {
-		$('#menuframe').css('top', logoheight);
 		$('#menuframe').removeClass("dropdown");
 		showMenu();
-
-		// limit image size
-		mainimages.css('max-width', width * 0.4);
 
 		// impressum appears in popupframe
 		popupframe.css('top', '');

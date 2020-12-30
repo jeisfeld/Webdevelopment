@@ -14,9 +14,6 @@ function setLinkClass($pagename, $currentpage, $twoline)
     }
 }
 ?>
-<a id="menubutton" href="javascript:toggleMenu()">
-	<img src="<?=$basepath?>/img/icon_menu_white.png" class="icon">
-</a>
 <div id="menuitems">
 	<a href="<?=$basepath?>/startseite/" id="linkstartseite"<?php setLinkClass($page, "startseite", false);?>>Startseite</a>
 	<hr>
