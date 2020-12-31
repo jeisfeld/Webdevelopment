@@ -11,7 +11,6 @@
 Leben zwischen den Leben">
 <link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
 <script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="<?=$basepath?>/javascript/allcontent.js"></script>
 </head>
 <body id="allcontent">
 	<img src="<?=$basepath?>/img/screenshot.jpg" alt="Startseite" width="100%">
@@ -25,15 +24,15 @@ Leben zwischen den Leben">
 	</div>
 	<hr>
 	<div class='page'>
-		<?php include ("subpages/bioresonanz.php"); ?>
+		<?php include ("subpages/hakomi.php"); ?>
 	</div>
 	<hr class="newpage">
 	<div class='page'>
 		<?php include ("subpages/testung.php"); ?>
 	</div>
-	<hr>
+	<hr class="newpage">
 	<div class='page'>
-		<?php include ("subpages/hakomi.php"); ?>
+		<?php include ("subpages/bioresonanz.php"); ?>
 	</div>
 	<hr class="newpage">
 	<div class='page'>
@@ -60,6 +59,8 @@ Leben zwischen den Leben">
 		<?php include ("subpages/impressum.php"); ?>
 	</div>
 </body>
-
 </html>
+<script type="text/javascript">
+	window.print();
+</script>
 

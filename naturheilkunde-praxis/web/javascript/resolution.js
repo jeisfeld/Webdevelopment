@@ -114,10 +114,10 @@ function adjustStyle(width, height) {
 	}
 	
 	// Sizing of Google maps
-	var mwidth = Math.min(600, Math.round($('#mainframe').width() / 2));
+	var mwidth = Math.min(600, Math.round($('#mainframe').width() / 2) - 10);
 	var mheight = Math.min(600, Math.max(200, $('#mainframe').height() - 130));
-	$('#pict2.googlemaps div, #pict2.googlemaps div img').css('width', mwidth);
-	$('#pict2.googlemaps div, #pict2.googlemaps div img').css('height', mheight);
+	$('div.googlemaps, div.googlemaps img').css('width', mwidth);
+	$('div.googlemaps, div.googlemaps img').css('height', mheight);
 	
 }
 
@@ -130,12 +130,6 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
-	var pict2 = $('#pict').contents().clone();
-	var pictimg2 = pict2.is('#pictimg') ? pict2 : pict2.find('#pictimg');
-	pictimg2.attr('id', 'pictimg2');
-	pictimg2.addClass('pictimgfloat');
-
-	$('#text h2').after(pict2);
 	$('#endmenu a.top').wrap('<li class="subitem"></li>');
 	$('#endmenu a.left').wrap('<li></li>');
 

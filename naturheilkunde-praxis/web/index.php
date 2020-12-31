@@ -62,7 +62,9 @@ Schmerztherapie, Ernaehrungsberatung, Naturheilkundliche Stoffwechselregulation,
 		<hr id="endmenuseparator">
 		<div id="endmenu">
 			<h3>Inhalt</h3>
+			<ul>
 			<?php include ("navigation/menu.php");?>
+			</ul>
 		</div>
 	</div>
 	<div id="bottomframe" name="bottomframe">
