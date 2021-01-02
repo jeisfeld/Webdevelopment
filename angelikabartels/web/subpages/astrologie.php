@@ -1,11 +1,10 @@
 <h1>Psychologische Astrologie</h1>
 <p class="subtitle">Die Königin der Weisheitslehre</p>
+<img id="pictimg" src="<?=$basepath?>/img/astro_baum.jpg" class="astroimg">
 
-<p>
-	<img src="<?=$basepath?>/img/astro_baum.jpg" class="astroimg">Astro&shy;logie ist die Lehre von den Ur-Prinzipien, von den
-	Ur-Ideen, von den Arche&shy;typen dieses Universums. Die Himmels&shy;ebene oder kosmische Ebene ist nur eine Ebene,
-	eine Ebene von vielen, auf der die Prinzipien und ihr Zusammen&shy;spiel gesehen und erkannt werden können.
-</p>
+<p>Astro&shy;logie ist die Lehre von den Ur-Prinzipien, von den Ur-Ideen, von den Arche&shy;typen dieses Universums. Die
+	Himmels&shy;ebene oder kosmische Ebene ist nur eine Ebene, eine Ebene von vielen, auf der die Prinzipien und ihr
+	Zusammen&shy;spiel gesehen und erkannt werden können.</p>
 <p>Die Planeten selbst beeinflussen das Geschehen hier in keiner Weise. Sie sind lediglich das kosmische Abbild dessen,
 	was sich auf der Erde ereignet nach dem Prinzizp: &bdquo;Wie oben so unten&ldquo;. Das Horoskop bildet, symbolisch
 	verschlüsselt, die Gesetzmäßigkeit ab, unter denen der Mensch, ein Tier, eine Nation, ein Ereignis und vieles mehr

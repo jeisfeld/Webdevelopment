@@ -106,10 +106,8 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
-	$('#menuframe.dropdown #menuitems').on('click', function() {
-		hideMenu();
-		closeImpressum();
-	});
+	$('#endmenu a#linkprint').wrap('<li id="linkprint"></li>');
+	$('#endmenu a:not(#linkprint)').wrap('<li></li>');
 
 	adjustMainStyle();
 });

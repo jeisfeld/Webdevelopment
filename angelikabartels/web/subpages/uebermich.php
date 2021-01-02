@@ -1,7 +1,8 @@
 <h1>Über mich</h1>
+<img id="pictimg" src="<?=$basepath?>/img/angelikabartels_portrait.jpg">
 
 <ul>
-	<li><img src="<?=$basepath?>/img/angelikabartels_portrait.jpg">Weiter&shy;bildung in Spiritu&shy;elle Rück&shy;führung bei <a href="http://www.spiritualregression.de" target="_blank">Ursula
+	<li>Weiter&shy;bildung in Spiritu&shy;elle Rück&shy;führung bei <a href="http://www.spiritualregression.de" target="_blank">Ursula
 			Demarmels</a>, Salzburg
 	</li>
 	<li>Aus&shy;bildung in Re&shy;inkar&shy;nations&shy;therapie bei <a href="http://www.thorwald-dethlefsen.de" target="_blank">Thorwald

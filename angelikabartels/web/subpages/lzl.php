@@ -1,10 +1,9 @@
 <h1>Leben zwischen den Leben</h1>
 <p class="subtitle">Seelenreise nach Dr. Michael Newton & Ursula Demarmels</p>
+<img id="pictimg" id="pictimg" src="<?=$basepath?>/img/amor_psyche.jpg" title="&copy;Michael Newton und Astrodata AG
+Dieses Foto gehört zum Angebot &quot;Ihr Seelenpartner&quot;">
 
-<p>
-	<img src="<?=$basepath?>/img/amor_psyche.jpg"
-		title="&copy;Michael Newton und Astrodata AG
-Dieses Foto gehört zum Angebot &quot;Ihr Seelenpartner&quot;">Diese Spiri&shy;tuelle Rück&shy;führung befasst sich mit
+<p>Diese Spiri&shy;tuelle Rück&shy;führung befasst sich mit
 	einer wirkungs&shy;vollen Methode, die tief in unserem Unter&shy;bewusst&shy;sein ver&shy;borgenes Wissen
 	hervor&shy;ruft. Es zeigt die große thera&shy;peutische Bedeutung der Ent&shy;schlüsse&shy;lung von heiligen
 	Weis&shy;heiten auf, wie sie uns durch die Hypnose und die Rück&shy;führungs&shy;therapie möglich wird. <i>(Dr.

@@ -9,6 +9,20 @@ if (! isset ( $page )) {
 		$page = $_GET ["page"];
 	}
 }
+function setLinkClass($pagename, $currentpage, $twoline)
+{
+	if ($pagename == $currentpage) {
+		if ($twoline) {
+			echo ' class="chosen twoline"';
+		}
+		else {
+			echo ' class="chosen"';
+		}
+	}
+	else if ($twoline) {
+		echo ' class="twoline"';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -39,6 +53,13 @@ Leben zwischen den Leben, Seelenreise">
 	</div>
 	<div id="mainframe" name="main">
 		<?php include ("subpages/".$page.".php"); ?>
+		<hr id="endmenuseparator">
+		<div id="endmenu">
+			<h3>Inhalt</h3>
+			<ul>
+			<?php include ("menu.php");?>
+			</ul>
+		</div>
 	</div>
 	<div id="bottomframe" name="bottomframe">
 		<?php include ("bottom.php"); ?>

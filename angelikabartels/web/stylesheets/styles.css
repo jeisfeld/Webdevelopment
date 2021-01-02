@@ -184,9 +184,12 @@ a {
 
 #mainframe hr, #allcontent .page hr {
 	margin-top: 18px;
-	margin-left: 36px;
-	margin-right: 36px;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-bottom: 24px;
+	background-color: #33537C;
+	border: none;
+	height: 1px;
 }
 
 #mainframe p.footer, #allcontent .page p.footer {
@@ -247,12 +250,22 @@ a {
 	left: 0;
 	bottom: 0;
 }
+
 #menubutton img.icon {
 	width: 24px;
 	height: 24px;
 }
 
-#menuframe div#menuitems #linkprint {
+#endmenu hr, #endmenu a.twoline br {
+	display: none;
+}
+
+#mainframe hr#endmenuseparator {
+	margin-left: -18px;
+	margin-right: -18px;
+}
+
+div#menuitems #linkprint {
 	display: none;
 }
 
@@ -410,6 +423,10 @@ a.closeImpressum {
 		padding-top: 14px;
 		bottom: 50px;
 	}
+	#mainframe hr {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
 	#mainframe p, #mainframe td, #mainframe ul {
 		font-size: 14px;
 	}
@@ -462,6 +479,9 @@ a.closeImpressum {
 		text-indent: -20px;
 		padding-top: 2px;
 		padding-left: 25px;
+	}
+	#endmenu, #endmenuseparator {
+		display: none;
 	}
 }
 

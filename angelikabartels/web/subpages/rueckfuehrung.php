@@ -1,13 +1,13 @@
 <h1>Spirituelle Rückführung ins Vorleben</h1>
 <p class="subtitle">Depressive Stimmung? Hoffnungslosigkeit? Lebensangst? Mutlosigkeit?</p>
+<img id="pictimg" src="<?=$basepath?>/img/treppe.jpg"  class="spirimg" title="&copy;Michael Newton und Astrodata AG
+Dieses Foto gehört zum Angebot &quot;Die 3-Jahres-Analyse&quot;">
 
 <p>
-	<img src="<?=$basepath?>/img/treppe.jpg"  class="spirimg"
-		title="&copy;Michael Newton und Astrodata AG
-Dieses Foto gehört zum Angebot &quot;Die 3-Jahres-Analyse&quot;">Also
-	Dis&shy;harmonie der Seele? Aber auch die meisten Krank&shy;heiten ent&shy;stehen durch Dis&shy;harmonie der Seele. Wir brauchen
-	eigent&shy;lich keine Nach&shy;hilfe, das Leben ist die vor&shy;trefflich&shy;ste Therapie. Manchmal benötigen wir jedoch eine
-	psycho&shy;logische Ent&shy;giftung oder besser <b>Vitamine für die Seele.</b>
+	Also Dis&shy;harmonie der Seele? Aber auch die meisten Krank&shy;heiten ent&shy;stehen durch Dis&shy;harmonie der
+	Seele. Wir brauchen eigent&shy;lich keine Nach&shy;hilfe, das Leben ist die vor&shy;trefflich&shy;ste Therapie.
+	Manchmal benötigen wir jedoch eine psycho&shy;logische Ent&shy;giftung oder besser
+	<b>Vitamine für die Seele.</b>
 </p>
 
 <p>Zu sich selbst finden, heißt, seine im innersten verborgenen Schätze zu entdecken und sich ihrer bewusst zu

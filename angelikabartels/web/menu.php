@@ -1,19 +1,3 @@
-<?php
-function setLinkClass($pagename, $currentpage, $twoline)
-{
-    if ($pagename == $currentpage) {
-    	if ($twoline) {
-    		echo ' class="chosen twoline"';
-    	}
-    	else {
-    		echo ' class="chosen"';
-    	}
-    }
-    else if ($twoline) {
-    	echo ' class="twoline"';
-    }
-}
-?>
 <div id="menuitems">
 	<a href="<?=$basepath?>/startseite/" id="linkstartseite"<?php setLinkClass($page, "startseite", false);?>>Startseite</a>
 	<hr>

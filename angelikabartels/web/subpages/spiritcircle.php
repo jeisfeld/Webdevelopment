@@ -1,8 +1,9 @@
 <h1>Spirit Circle</h1>
 <p class="subtitle">Ein Netzwerk von spirituell arbeitenden Therapeuten aus Deutschland, Schweiz und Österreich</p>
+<img id="pictimg" src="<?=$basepath?>/img/buddha.jpg" title="&copy;Claudia Mächtle">
 
 <p>
-	<img src="<?=$basepath?>/img/buddha.jpg" title="&copy;Claudia Mächtle">Claudia Mächtle, Berlin<br>
+	Claudia Mächtle, Berlin<br>
 	<a href="http://www.claudia-maechtle.de/" target="_blank">www.claudia-maechtle.de</a>
 </p>
 

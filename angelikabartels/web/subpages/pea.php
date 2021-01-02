@@ -1,10 +1,9 @@
 <p class="supertitle">Entgiftung des Körpers durch</p>
 <h1>Psycho&shy;energetisches Atmen</h1>
+<img id="pictimg" src="<?=$basepath?>/img/welle.jpg">
 
-<p>
-	<img src="<?=$basepath?>/img/welle.jpg">Atem&shy;techniken gibt es bereits seit Tausenden von Jahren und sie hatten in Tibet,
-	Indien und China Tradition. Den Menschen war von alters her der Zusammen&shy;hang zwischen Atem und Leben bewusst.
-</p>
+<p>Atem&shy;techniken gibt es bereits seit Tausenden von Jahren und sie hatten in Tibet, Indien und China Tradition. Den
+	Menschen war von alters her der Zusammen&shy;hang zwischen Atem und Leben bewusst.</p>
 
 <p>Jeder Mensch hat sein Atemmuster. Es ist der sichtbare Ausdruck unseres Lebens. Im Atmen können wir den
 	grund&shy;legenden Lebens&shy;rhythmus direkt erfahren. Das Lebens&shy;bejahende ist in ihm ebenso enthalten, wie das
