@@ -1,4 +1,4 @@
-<h2>Ajustes</h2>
+<h2><span class="mobile">Imagen Aleatoria - </span>Ajustes</h2>
 
 <h3>Ajustes de la aplicación</h3>
 

@@ -1,4 +1,4 @@
-<h2>How to use</h2>
+<h2><span class="mobile">Random Image - </span>How to use</h2>
 
 <p>This app displays random images from image lists that you configure. Therefore, you first have to configure an image
 	list before you can enjoy the display of random images.</p>

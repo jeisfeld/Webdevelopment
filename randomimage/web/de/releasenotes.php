@@ -1,4 +1,4 @@
-<h2>Versionshinweise</h2>
+<h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
 
 <ul>
 	<li><b>Version 1.3.10:</b> Anpassungen für Android 11.</li>

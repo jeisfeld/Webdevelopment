@@ -1,4 +1,4 @@
-<h2 class="mobile">Content</h2>
+<h2 class="mobile"><span class="hideondropdown">Random Image - </span>Content</h2>
 
 <p>
 	<a href="<?=$basepath?>/en/overview/">Overview</a>

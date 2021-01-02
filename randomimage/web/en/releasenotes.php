@@ -1,4 +1,4 @@
-<h2>Release Notes</h2>
+<h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
 	<li><b>Version 1.3.10:</b> Adaptations for Android 11.</li>

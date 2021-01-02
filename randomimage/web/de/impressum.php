@@ -1,4 +1,4 @@
-<h2>Impressum</h2>
+<h2><span class="mobile">Zufallsbild - </span>Impressum</h2>
 
 <h3>Angaben gemäß §5 TMG</h3>
 <p>

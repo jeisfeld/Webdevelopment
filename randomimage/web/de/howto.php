@@ -1,4 +1,4 @@
-<h2>Hinweise zur Benutzung</h2>
+<h2><span class="mobile">Zufallsbild - </span>Hinweise zur Benutzung</h2>
 
 <p>Diese App zeigt zufällige Bilder von Bildlisten, die Sie konfigurieren. Daher müssen Sie zunächst eine Bildliste
 	erstellen, bevor Sie die Anzeige zufälliger Bilder genießen können.</p>

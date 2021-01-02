@@ -1,4 +1,4 @@
-<h2>Notas de lanzamiento</h2>
+<h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
 	<li><b>Versión 1.3.10:</b> Adaptaciones para Android 11.</li>

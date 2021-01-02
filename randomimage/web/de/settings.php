@@ -1,4 +1,4 @@
-<h2>Einstellungen</h2>
+<h2><span class="mobile">Zufallsbild - </span>Einstellungen</h2>
 
 <h3>App-Einstellungen</h3>
 

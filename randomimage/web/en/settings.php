@@ -1,4 +1,4 @@
-<h2>Settings</h2>
+<h2><span class="mobile">Random Image - </span>Settings</h2>
 
 <h3>App settings</h3>
 

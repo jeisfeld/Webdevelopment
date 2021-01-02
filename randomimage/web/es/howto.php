@@ -1,4 +1,4 @@
-<h2>Notas de uso</h2>
+<h2><span class="mobile">Imagen Aleatoria - </span>Notas de uso</h2>
 
 <p>Esta aplicación muestra imágenes aleatorias de las listas de imágenes que configura. Por lo tanto, primero debe
 	configurar una lista de imágenes antes de poder disfrutar de la visualización de imágenes aleatorias.</p>

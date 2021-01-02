@@ -86,7 +86,7 @@ html, body {
 
 /* Settings for mobils vs desktop */
 @media screen and (max-width: 599px), screen and (max-height: 439px), print {
-	.desktop {
+	.desktop, #navigationframe.mobilenavigation .hideondropdown {
 		display: none;
 	}
 	#navigationframe.mobilenavigation {
