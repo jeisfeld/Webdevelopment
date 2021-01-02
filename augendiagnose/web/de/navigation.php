@@ -1,4 +1,4 @@
-<h2 class="mobile">Inhalt</h2>
+<h2 class="mobile"><span class="hideondropdown"><?=$appname?> - </span>Inhalt</h2>
 
 <p>
 	<a href="<?=$urlprefix?>/de/overview/">Übersicht</a>

@@ -1,4 +1,4 @@
-<h2>Ajustes</h2>
+<h2><span class="mobile"><?=$appname?> - </span>Ajustes</h2>
 
 O aplicativo permite as seguintes configurações:
 <?PHP

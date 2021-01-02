@@ -1,4 +1,4 @@
-<h2>Aviso Legal</h2>
+<h2><span class="mobile"><?=$appname?> - </span>Aviso Legal</h2>
 
 <h3>Informação de acordo com §5 TMG</h3>
 <p>

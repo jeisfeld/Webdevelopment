@@ -1,4 +1,4 @@
-<h2>View photos</h2>
+<h2><span class="mobile"><?=$appname?> - </span>View photos</h2>
 
 <p>Here you can select the name of a person whose eye photos you want to see. Then you get shown all eye photos of this
 	person in a list sorted by date.</p>

@@ -1,4 +1,4 @@
-<h2>Fotos ansehen</h2>
+<h2><span class="mobile"><?=$appname?> - </span>Fotos ansehen</h2>
 
 <p>Hier können Sie aus einer Liste den Namen der Person auswählen, dessen Fotos Sie betrachten wollen. Daraufhin sehen
 	Sie eine Liste aller Augenaufnahmen dieser Person, sortiert nach Datum.</p>

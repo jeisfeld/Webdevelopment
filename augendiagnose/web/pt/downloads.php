@@ -1,4 +1,4 @@
-<h2>Downloads</h2>
+<h2><span class="mobile"><?=$appname?> - </span>Downloads</h2>
 
 <h3>O aplicativo Android</h3>
 

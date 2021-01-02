@@ -1,4 +1,4 @@
-<h2>Die Windows-Anwendung</h2>
+<h2><span class="mobile"><?=$appname?> - </span>Die Windows-Anwendung</h2>
 
 <p>Es gibt eine ergänzende Windows-Anwendung, die es erlaubt, die Augenfotos auch auf einem Windows-Desktop anzusehen,
 	ähnlich wie in der Android-App.</p>

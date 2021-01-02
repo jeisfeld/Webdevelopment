@@ -1,4 +1,4 @@
-<h2>O aplicativo para o Windows</h2>
+<h2><span class="mobile"><?=$appname?> - </span>O aplicativo para o Windows</h2>
 
 <p>Existe um aplicativo de acompanhamento do Windows que permite visualizar as fotos de seus olhos em um computador com
 	Windows, como no aplicativo Android.</p>
