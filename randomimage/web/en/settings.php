@@ -1,4 +1,6 @@
-<h2><span class="mobile">Random Image - </span>Settings</h2>
+<h2>
+	<span class="mobile">Random Image - </span>Settings
+</h2>
 
 <h3>App settings</h3>
 
@@ -56,9 +58,11 @@
 				images easiest in the gallery.</li>
 		</ul></li>
 	<li><b>Search image folders:</b> Here you can trigger a re-scan of the device memory for image folders.</li>
+	<li><b>Preferred image folders (Android 10 and higher):</b> Here you can select picture folders that should always be
+		parsed by the app when you edit image lists.</li>
 	<li><b>Reset backup folder (Android 10 and higher):</b> Here you can undo the selection of the backup folder so that it
 		will be queried again the next time you backup / restore.</li>
-	<li><b>Show hidden folders:</b> Here you can select if images from hidden folders are considered.</li>
+	<li><b>Show hidden folders (Android 9 and lower):</b> Here you can select if images from hidden folders are considered.</li>
 	<li><b>Apps preventing popup notifications:</b> Here you can select apps so that while using these apps no popup
 		notifications are displayed (Android 5 or higher).</li>
 	<li><b>Language:</b> Change the language of the app. (Currently supported: English, German and Spanish)</li>

@@ -1,6 +1,10 @@
 <h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
 
 <ul>
+	<li><b>Version 1.3.12:</b> Anpassungen für Android 11.</li>
+
+	<li><b>Version 1.3.11:</b> Möglichkeit, das Widget zu ändern, wenn der Bildschirm ausgeschaltet wird.</li>
+
 	<li><b>Version 1.3.10:</b> Anpassungen für Android 11.</li>
 
 	<li><b>Version 1.3.9:</b> Bildwechsel mit S-Pen auf unterstützten Geräten.</li>

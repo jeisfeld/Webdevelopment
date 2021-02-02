@@ -1,4 +1,6 @@
-<h2><span class="mobile">Zufallsbild - </span>Einstellungen</h2>
+<h2>
+	<span class="mobile">Zufallsbild - </span>Einstellungen
+</h2>
 
 <h3>App-Einstellungen</h3>
 
@@ -57,10 +59,12 @@
 				wenn Sie Ihre Bilder in der Galerie am einfachsten finden.</li>
 		</ul></li>
 	<li><b>Bildverzeichnisse suchen:</b> Hier können Sie eine Durchsuchung des Gerätes nach Bildverzeichnissen veranlassen.</li>
-	<li><b>Sicherungsordner zurücksetzen (Ab Android 10):</b> Hier können Sie die Auswahl des Sicherungsordners rückgängig
+	<li><b>Bevorzugte Bildordner (ab Android 10):</b> Hier können Sie Bildorder auswählen, die von der App immer durchsucht
+		werden sollen, wenn Sie Bildlisten bearbeiten.</li>
+	<li><b>Sicherungsordner zurücksetzen (ab Android 10):</b> Hier können Sie die Auswahl des Sicherungsordners rückgängig
 		machen, so dass er bei der nächsten Sicherung / Wiederherstellung erneut abgefragt wird.</li>
-	<li><b>Versteckte Verzeichnisse anzeigen:</b> Hier können Sie festlegen, dass auch Bilder aus Verzeichnissen
-		berücksichtigt werden, die versteckt sind.</li>
+	<li><b>Versteckte Verzeichnisse anzeigen (nur bis Android 9):</b> Hier können Sie festlegen, dass auch Bilder aus
+		Verzeichnissen berücksichtigt werden, die versteckt sind.</li>
 	<li><b>Apps ohne Popup-Benachrichtigungen:</b> Hier können Sie Apps auswählen, bei deren Ausführung keine
 		Popup-Notifications kommen sollen (Android 5 oder höher).</li>
 	<li><b>Sprache:</b> Hier können Sie die Sprache der App ändern. (Derzeit unterstützt: Englisch, Deutsch und Spanisch)</li>

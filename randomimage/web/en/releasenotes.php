@@ -1,6 +1,10 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.3.12:</b> Adaptations for Android 11.</li>
+
+	<li><b>Version 1.3.11:</b> Possibility to change widget when screen gets switched off.</li>
+
 	<li><b>Version 1.3.10:</b> Adaptations for Android 11.</li>
 
 	<li><b>Version 1.3.9:</b> Image change with S-Pen on supported devices.</li>

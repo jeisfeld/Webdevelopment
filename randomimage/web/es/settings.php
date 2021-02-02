@@ -1,4 +1,6 @@
-<h2><span class="mobile">Imagen Aleatoria - </span>Ajustes</h2>
+<h2>
+	<span class="mobile">Imagen Aleatoria - </span>Ajustes
+</h2>
 
 <h3>Ajustes de la aplicación</h3>
 
@@ -58,10 +60,13 @@
 		</ul></li>
 	<li><b>Buscar carpetas de imágenes:</b> Aquí puede activar una nueva exploración de la memoria del dispositivo en busca
 		de carpetas de imágenes.</li>
+	<li><b>Preferred image folders (Android 10 y superior):</b> Aquí puede seleccionar carpetas de imágenes que la
+		aplicación siempre debe analizar cuando edite listas de imágenes.</li>
 	<li><b>Restablecer carpeta de copia de seguridad (Android 10 y superior):</b> aquí puede deshacer la selección de la
 		carpeta de copia de seguridad para que se vuelva a consultar la próxima vez que realice una copia de seguridad /
 		restauración.</li>
-	<li><b>Mostrar carpetas ocultas:</b> Aquí puede seleccionar si se consideran las imágenes de las carpetas ocultas.</li>
+	<li><b>Mostrar carpetas ocultas (Android 9 y inferior):</b> Aquí puede seleccionar si se consideran las imágenes de las
+		carpetas ocultas.</li>
 	<li><b>Aplicaciones que evitan las notificaciones emergentes:</b> Aquí puede seleccionar aplicaciones para que al usar
 		estas aplicaciones no se muestren notificaciones emergentes (Android 5 o superior).</li>
 	<li><b>Idioma:</b> Cambia el idioma de la aplicación. (Actualmente compatible: inglés, alemán y español)</li>
