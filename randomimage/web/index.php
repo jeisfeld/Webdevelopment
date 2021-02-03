@@ -52,10 +52,6 @@ switch ($language) {
 		$keywords = "Jörg Eisfeld, Imagen Sorpresa, Imagen Aleatoria, Foto Aleatoria, Foto Sorpresa, Android";
 		break;
 }
-
-if (! empty ( $_GET ["anchor"] )) {
-	$pagefull = $pagefull . "#" . $_GET ["anchor"];
-}
 ?>
 
 <!DOCTYPE html>
