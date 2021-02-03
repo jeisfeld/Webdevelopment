@@ -109,10 +109,6 @@ switch ($language) {
 		break;
 }
 
-if (! empty ( $_GET ["anchor"] )) {
-	$pagefull = $pagefull . "#" . $_GET ["anchor"];
-}
-
 if (array_key_exists("createHtmlString", $_GET)) {
 	include ($language . "/" . $pagefull);
 }

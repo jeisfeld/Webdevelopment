@@ -14,12 +14,15 @@ ExpiresByType image/x-icon "access plus 1 months"
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteRule "^miniris/?$"  "?app=miniris&%{QUERY_STRING}"
-RewriteRule "^miniris/(..)/([^/]+)/?$"  "?app=miniris&lang=$1&page=$2"
-RewriteRule "^miniris/(..)/$"  "?app=miniris&lang=$1"
-RewriteRule "^(..)/([^/]+)/?$"  "?lang=$1&page=$2"
-RewriteRule "^(..)/$"  "?lang=$1"
-RewriteRule "sitemap.xml$"  "sitemap.php"
+RewriteRule "^index.php" - [L]
+RewriteRule "^miniris/?$"  "index.php?app=miniris&%{QUERY_STRING}" [L]
+RewriteRule "^miniris/(..)/([^/]+)/?$"  "index.php?app=miniris&lang=$1&page=$2" [L]
+RewriteRule "^miniris/(..)/$"  "index.php?app=miniris&lang=$1" [L]
+RewriteRule "^miniris/([^/]+)/?$"  "index.php?app=miniris&page=$1" [L]
+RewriteRule "^(..)/([^/]+)/?$"  "index.php?lang=$1&page=$2" [L]
+RewriteRule "^(..)/$"  "index.php?lang=$1" [L]
+RewriteRule "^([^/]+)/?$"  "index.php?page=$1" [L]
+RewriteRule "sitemap.xml$"  "sitemap.php" [L]
 </IfModule>
 
 AddDefaultCharset utf-8
