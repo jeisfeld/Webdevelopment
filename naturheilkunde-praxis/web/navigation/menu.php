@@ -11,7 +11,6 @@
 	<?php createMenuLink($basepath, "hakomi", $page, "Hakomi", "top");?>
 </div>
 <div class="mainlinks">
-	<?php createMenuLink($basepath, "seminare", $page, "Seminare", "left");?>
 	<?php createMenuLink($basepath, "uebermich", $page, "Über mich", "left");?>
 	<?php createMenuLink($basepath, "links", $page, "Links", "left");?>
 <hr>

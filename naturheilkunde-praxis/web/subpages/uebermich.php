@@ -8,6 +8,12 @@
 	<li>Hakomi Interpersonal - Schwerpunkt Beziehung 2004</li>
 	<li>Trauma Therapie bei Manuela Mischke-Reeds (nach Peter Levine) seit 2013</li>
 	<li>Iridologie (Augen&shy;diagnose) Felke Institut seit 2015</li>
+	<li>Ignazianische Schweigeexerzitien 2019</li>
+	<li>Spiritualität und Medizin 2020</li>
+	<li>Blog &bdquo;<a href="http://aelter-werden.eu" target="_blank">Älter werden</a>&ldquo; 2020
+	</li>
+	<li><a href="https://www.alegria-lebensfreude.de/" target="_blank">&bdquo;Alegria&ldquo;</a> Netzwerk für Lebensfreude,
+		Gesundheit &amp; Vitalität 2021</li>
 </ul>
 
 <p>Bereits 1984 begann mein natur&shy;heilkundlich geprägter Weg. Als Assistentin bei dem Natur&shy;heilarzt Dr. Seemann

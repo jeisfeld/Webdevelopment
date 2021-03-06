@@ -1,5 +1,5 @@
 <h2 id="pagehead">Links</h2>
-<img id="pictimg" src="<?=$basepath?>/img/weibliche_raeume_small.jpg">
+<img id="pictimg" src="<?=$basepath?>/img/tropfen.jpg">
 
 <h3>Therapie&shy;zentrum Dante&shy;straße</h3>
 <p>
@@ -13,8 +13,8 @@
 	<a href="http://www.hakomi.de" target="_blank">http://www.hakomi.de</a>
 </p>
 
-<h3>Weibliche Räume</h3>
+<h3>Älter werden</h3>
 <p>
-	Informationen zu Seminaren unter
-	<a href="http://imagoberlin.de/workshop.php" target="_blank">http://www.imagoberlin.de</a>
+	Mein Blog:
+	<a href="http://aelter-werden.eu" target="_blank">http://aelter-werden.eu</a>
 </p>

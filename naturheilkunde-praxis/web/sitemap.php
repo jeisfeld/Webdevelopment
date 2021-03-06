@@ -9,7 +9,6 @@ $pages = array (
 		"hakomi",
 		"kontakt",
 		"links",
-		"seminare",
 		"tcm",
 		"testung",
 		"uebermich",
