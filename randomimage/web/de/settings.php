@@ -134,7 +134,7 @@
 		in dem die Benachrichtigungen kommen können.</li>
 	<li><b>Anzeigedauer:</b> Hier können Sie festlegen, die Benachrichtigungen nach einer gewissen Zeit automatisch zu
 		löschen.</li>
-	<li><b>Benachrichtigungsstil:</b> Hier können Sie zwischen vier Arten von Benachrichtigungen wählen.</li>
+	<li><b>Benachrichtigungsstil:</b> Hier können Sie zwischen fünf Arten von Benachrichtigungen wählen.</li>
 	<li><b>LED-Farbe:</b> Hier können Sie festlegen, ob die LED zur Benachrichtigung blinkt.</li>
 	<li><b>Vibration:</b> Hier können Sie festlegen, ob das Gerät bei der Benachrichtigung vibriert.</li>
 	<li><b>Farbiges Symbol:</b> Hier können Sie festlegen, ob das Benachrichtigungssymbol farbig oder weiß sein soll.</li>

@@ -1,7 +1,9 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
-	<li><b>Versión 1.3.12:</b> Adaptaciones para Android 11.</li>
+	<li><b>Version 1.4.1:</b> Mejoras en las notificaciones.</li>
+
+	<li><b>Versión 1.4:</b> Adaptaciones para Android 11.</li>
 
 	<li><b>Versión 1.3.11:</b> Posibilidad de cambiar el widget cuando la pantalla se apaga.</li>
 

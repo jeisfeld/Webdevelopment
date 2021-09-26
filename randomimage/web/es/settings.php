@@ -134,7 +134,7 @@
 	<li><b>Hora de inicio para notificaciones, Hora de finalización para notificaciones:</b> Aquí puede seleccionar una
 		ventana de tiempo en la que pueden aparecer las notificaciones.</li>
 	<li><b>Duración:</b> Aquí puede decidir eliminar las notificaciones automáticamente después de un tiempo determinado.</li>
-	<li><b>Estilo de notificación:</b> Aquí puede seleccionar entre cuatro tipos de notificaciones.</li>
+	<li><b>Estilo de notificación:</b> Aquí puede seleccionar entre cinco tipos de notificaciones.</li>
 	<li><b>Color del LED:</b> Aquí puede seleccionar si el LED debe parpadear cuando la notificación esté disponible.</li>
 	<li><b>Vibración:</b> Aquí puede seleccionar si el dispositivo debe vibrar cuando se muestra la notificación.</li>
 	<li><b>Icono de color:</b> aquí puede seleccionar si el símbolo de notificación debe ser blanco o de color.</li>

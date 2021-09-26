@@ -125,7 +125,7 @@
 	<li><b>Start hour for notifications, End hour for notifications:</b> Here you can select a time window in which the
 		notifications may come.</li>
 	<li><b>Duration:</b> Here you can decide to delete the notifications automatically after a certain time.</li>
-	<li><b>Notification style:</b> Here you can select between four types of notifications.</li>
+	<li><b>Notification style:</b> Here you can select between five types of notifications.</li>
 	<li><b>LED color:</b> Here you can select if the LED should blink when the notification is available.</li>
 	<li><b>Vibration:</b> Here you can select if the device should vibrate when the notification is displayed.</li>
 	<li><b>Colored icon:</b> Here you can select if the notification symbol should be white or colored.</li>
