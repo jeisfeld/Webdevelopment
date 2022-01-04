@@ -1,6 +1,8 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
+	<li><b>Versión 1.4.2:</b> Adaptaciones para Android 12.</li>
+
 	<li><b>Version 1.4.1:</b> Mejoras en las notificaciones.</li>
 
 	<li><b>Versión 1.4:</b> Adaptaciones para Android 11.</li>

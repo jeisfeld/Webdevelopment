@@ -1,6 +1,8 @@
 <h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
 
 <ul>
+	<li><b>Version 1.4.2:</b> Anpassungen für Android 12.</li>
+
 	<li><b>Version 1.4.1:</b> Verbesserungen bei Benachrichtigungen.</li>
 
 	<li><b>Version 1.4:</b> Anpassungen für Android 11.</li>

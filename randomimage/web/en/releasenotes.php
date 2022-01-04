@@ -1,6 +1,8 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.4.2:</b> Adaptations for Android 12.</li>
+
 	<li><b>Version 1.4.1:</b> Enhancements on notifications.</li>
 
 	<li><b>Version 1.4:</b> Adaptations for Android 11.</li>
