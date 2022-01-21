@@ -15,7 +15,8 @@
 <p>Bewährte Indikationen:</p>
 <ul>
 	<li>Allergie, Akne, Ekzeme, Neuro&shy;dermitis</li>
-	<li>Asthma, Bronchitis, Magen-Darm-Erkrankungen</li>
+	<li>Asthma, Bronchitis, Long COVID</li>
+	<li>Magen-Darm-Erkrankungen, Darm&shy;dys&shy;biose</li>
 	<li>Migräne, Kopfschmerz, Erkrankungen des Lymph&shy;systems</li>
 	<li>Stoffwechselstörungen, Auto&shy;immun&shy;erkrankungen</li>
 	<li>Herz-Kreislauf-Erkrankungen, Schlaf&shy;störungen</li>
