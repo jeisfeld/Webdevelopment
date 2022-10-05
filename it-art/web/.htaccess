@@ -1,3 +1,5 @@
+Allow from all
+
 # Caching einrichten
 FileETag MTime Size
 
