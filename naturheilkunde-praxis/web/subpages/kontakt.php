@@ -29,7 +29,7 @@
 
 <p>
 	Email:
-	<a href="mailto:Sybille Schraml<info@ naturheilkunde-praxis.de>">info@naturheilkunde-praxis.de</a>
+	<a href="mailto:Sybille Schraml<info@naturheilkunde-praxis.de>">info@naturheilkunde-praxis.de</a>
 	<br> Praxis-Webseite:
 	<a href="http://www.therapiezentrum-dante.de" target="_blank">www.therapiezentrum-dante.de</a>
 </p>
