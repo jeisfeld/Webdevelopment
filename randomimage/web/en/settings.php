@@ -98,7 +98,8 @@
 		<ul>
 			<li>A button to change the widget settings.</li>
 			<li>A button to change the displayed image.</li>
-		</ul></li>
+		</ul></li> &ldquo;Hidden&rdquo; means that the buttons are not displayed, but you can tap on the right and left edge
+	of the widget.
 	<li><b>Button Color:</b> Here you can select the color of these two buttons.</li>
 	<li><b>Use default settings:</b> Here you can specify if, when viewing the image in detail, the default settings should
 		be used, or if the settings &ldquo;Image scaling&rdquo;, &ldquo;Background color&rdquo;, &ldquo;Action when

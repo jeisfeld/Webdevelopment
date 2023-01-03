@@ -104,7 +104,8 @@
 		<ul>
 			<li>Un botón para cambiar la configuración del widget.</li>
 			<li>Un botón para cambiar la imagen mostrada.</li>
-		</ul></li>
+		</ul></li> &laquo;Oculto&raquo; significa que los botones no se muestran, pero puede tocar el borde derecho e
+	izquierdo del widget.
 	<li><b>Color de botones:</b> Aquí puede seleccionar el color de estos dos botones.</li>
 	<li><b>Usar configuración predeterminada:</b> Aquí puede especificar si, al ver la imagen en detalle, se debe usar la
 		configuración predeterminada, o si las configuraciones &laquo;Escala de imagen&raquo;, &laquo;Color de fondo&raquo;,

@@ -103,7 +103,8 @@
 		<ul>
 			<li>Ein Button zum ändern der Settings</li>
 			<li>Ein Button, um das angezeigte Bild zu wechseln</li>
-		</ul></li>
+		</ul></li> &bdquo;Versteckt&ldquo; bedeutet, dass die Buttons nicht angezeigt werden, aber Sie können auf den rechten
+	und linken Rand des Widgets tippen.
 	<li><b>Button-Farbe:</b> Hier können Sie einstellen, welche Farbe diese beiden Buttons haben sollen.</li>
 	<li><b>Standardeinstellungen verwenden:</b> Hier können Sie festlegen, ob beim Wechsel in die Detailansicht die
 		allgemeinen Standardeinstellungen gelten, oder ob die Einstellungen &bdquo;Bildskalierung&ldquo;,
