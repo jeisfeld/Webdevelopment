@@ -1,7 +1,7 @@
 <h2 id="pagehead">Herzlich Willkommen</h2>
 <img id="pictimg" src="<?=$basepath?>/img/SchnuSy.jpg">
 
-<p>In meiner bald 30-jährigen Praxiszeit haben sich folgende Therapien herauskristallisiert:</p>
+<p>In meiner 30-jährigen Praxiszeit haben sich folgende Therapien herauskristallisiert:</p>
 <h3>
 	<a href="<?=$basepath?>/tcm/">Chinesische Heil&shy;methode</a>
 </h3>

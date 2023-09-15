@@ -23,8 +23,8 @@
 </p>
 <h4>Auto</h4>
 <p>
-	Park&shy;möglichkeiten auf den um&shy;liegenden Straßen oder für 2h mit Park&shy;scheibe am West&shy;fried&shy;hof. <br>(Der
-	Rein&shy;mar&shy;platz ist derzeit wegen Bau&shy;stellen&shy;arbeiten geschlossen.)
+	Park&shy;möglichkeiten auf den um&shy;liegenden Straßen oder für 2h mit Park&shy;scheibe am West&shy;fried&shy;hof. <br>(Am
+	Rein&shy;mar&shy;platz findet sich fast immer ein Park&shy;platz.)
 </p>
 
 <p>

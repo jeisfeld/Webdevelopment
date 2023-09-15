@@ -11,7 +11,7 @@
 <ul>
 	<li>bei körperlichen Beschwerden</li>
 	<li>in Lebens- oder Beziehungs&shy;krisen</li>
-	<li>bei emotionalen Schwierig&shy;keiten wie Ängsten, Trauer, Verunsicherung etc.</li>
+	<li>bei emotionalen Schwierig&shy;keiten wie Ängsten, Trauer und Traumata</li>
 	<li>bei allem, was sich nach Entfaltung sehnt und noch keinen Raum in Leben hat</li>
 </ul>
 <p>
