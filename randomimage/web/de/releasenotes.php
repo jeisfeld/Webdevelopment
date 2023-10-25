@@ -1,6 +1,14 @@
 <h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
 
 <ul>
+	<li><b>Version 1.4.6:</b> Fehlerbehebungen.</li>
+
+	<li><b>Version 1.4.5:</b> Anpassungen für Android 13.</li>
+
+	<li><b>Version 1.4.4:</b> Fehlerbehebungen.</li>
+
+	<li><b>Version 1.4.3:</b> Fehlerbehebungen.</li>
+
 	<li><b>Version 1.4.2:</b> Anpassungen für Android 12.</li>
 
 	<li><b>Version 1.4.1:</b> Verbesserungen bei Benachrichtigungen.</li>

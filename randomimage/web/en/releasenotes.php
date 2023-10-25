@@ -1,6 +1,14 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.4.6:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.5:</b> Adaptations for Android 13.</li>
+
+	<li><b>Version 1.4.4:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.3:</b> Bugfixes.</li>
+
 	<li><b>Version 1.4.2:</b> Adaptations for Android 12.</li>
 
 	<li><b>Version 1.4.1:</b> Enhancements on notifications.</li>

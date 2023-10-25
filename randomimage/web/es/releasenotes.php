@@ -1,6 +1,14 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
+	<li><b>Versión 1.4.6:</b> Corrección de errores.</li>
+
+	<li><b>Versión 1.4.5:</b> Adaptaciones para Android 13.</li>
+
+	<li><b>Versión 1.4.4:</b> Corrección de errores.</li>
+
+	<li><b>Versión 1.4.3:</b> Corrección de errores.</li>
+
 	<li><b>Versión 1.4.2:</b> Adaptaciones para Android 12.</li>
 
 	<li><b>Version 1.4.1:</b> Mejoras en las notificaciones.</li>
