@@ -6,13 +6,13 @@ if (! empty ( $_GET ["lang"] )) {
 	$language = $_GET ["lang"];
 }
 else {
-	if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "de" )) {
+	if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "de" )) {
 		$language = "de";
 	}
-	else if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "es" )) {
+	else if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "es" )) {
 		$language = "es";
 	}
-	else if (strstr ( $_SERVER ['HTTP_ACCEPT_LANGUAGE'], "pt" )) {
+	else if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "pt" )) {
 		$language = "pt";
 	}
 	else {
