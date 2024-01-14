@@ -369,7 +369,6 @@ hr {
 #bottomframe div#address div {
 	display: inline-block;
 	zoom: 1;
-	*display: inline;
 	padding: 5px 10px 5px 10px;
 	white-space: nowrap;
 }

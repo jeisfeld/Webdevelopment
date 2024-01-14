@@ -40,6 +40,10 @@ Leben zwischen den Leben">
 	</div>
 	<hr class="newpage">
 	<div class='page'>
+		<?php include ("subpages/seminare.php"); ?>
+	</div>
+	<hr class="newpage">
+	<div class='page'>
 		<?php include ("subpages/uebermich.php"); ?>
 	</div>
 	<hr class="newpage">
