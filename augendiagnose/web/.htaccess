@@ -6,6 +6,8 @@ FileETag MTime Size
 ExpiresActive On
 ExpiresByType text/html "access plus 1 hours"
 ExpiresByType text/css "access plus 1 weeks"
+ExpiresByType text/xml "access plus 1 hours"
+ExpiresByType text/txt "access plus 1 hours"
 ExpiresByType text/plain "access plus 1 hours"
 ExpiresByType application/javascript "access plus 1 weeks"
 ExpiresByType application/x-javascript "access plus 1 weeks"
@@ -17,6 +19,8 @@ ExpiresByType image/x-icon "access plus 1 months"
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule "^index.php" - [L]
+RewriteRule "robots\.txt$"  "robots.txt" [L]
+RewriteRule "sitemap\....$"  "sitemap.php" [L]
 RewriteRule "^miniris/?$"  "index.php?app=miniris&%{QUERY_STRING}" [L]
 RewriteRule "^miniris/(..)/([^/]+)/?$"  "index.php?app=miniris&lang=$1&page=$2" [L]
 RewriteRule "^miniris/(..)/$"  "index.php?app=miniris&lang=$1" [L]
@@ -24,7 +28,6 @@ RewriteRule "^miniris/([^/]+)/?$"  "index.php?app=miniris&page=$1" [L]
 RewriteRule "^(..)/([^/]+)/?$"  "index.php?lang=$1&page=$2" [L]
 RewriteRule "^(..)/$"  "index.php?lang=$1" [L]
 RewriteRule "^([^/]+)/?$"  "index.php?page=$1" [L]
-RewriteRule "sitemap.xml$"  "sitemap.php" [L]
 </IfModule>
 
 AddDefaultCharset utf-8
