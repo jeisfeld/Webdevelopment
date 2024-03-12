@@ -20,6 +20,9 @@ ExpiresByType image/x-icon "access plus 1 months"
 RewriteEngine On
 RewriteRule "^index.php" - [L]
 RewriteRule "robots\.txt$"  "robots.txt" [L]
+RewriteRule "^appauth"  "auth/appauth.php" [L]
+RewriteRule "^key"  "auth/key.php" [L]
+RewriteRule "^ddl/(.*\.php)$"  "auth/ddl/$1" [L]
 RewriteRule "sitemap\....$"  "sitemap.php" [L]
 RewriteRule "^miniris/?$"  "index.php?app=miniris&%{QUERY_STRING}" [L]
 RewriteRule "^miniris/(..)/([^/]+)/?$"  "index.php?app=miniris&lang=$1&page=$2" [L]
