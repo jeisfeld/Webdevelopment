@@ -1,6 +1,8 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
+	<li><b>Versión 1.4.8:</b> Corrección de errores.</li>
+
 	<li><b>Versión 1.4.7:</b> Adaptaciones para Android 14. Corrección de errores.</li>
 
 	<li><b>Versión 1.4.6:</b> Corrección de errores.</li>

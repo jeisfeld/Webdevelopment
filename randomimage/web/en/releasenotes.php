@@ -1,6 +1,8 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.4.8:</b> Bugfixes.</li>
+
 	<li><b>Version 1.4.7:</b> Adaptations for Android 14. Bugfixes.</li>
 
 	<li><b>Version 1.4.6:</b> Bugfixes.</li>
