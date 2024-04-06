@@ -32,6 +32,10 @@ if ($_SERVER ["REQUEST_METHOD"] == "POST") {
 	else {
 		$content = test_input ( $_POST ["content"] );
 
+		if (preg_match('/\s/', $content) == 0) {
+			$contentErr = "Bitte geben Sie eine sinnvolle Nachricht ein!";
+		}
+		
 		if (empty ( $content )) {
 			$contentErr = "Bitte geben Sie eine Nachricht ein!";
 		}
