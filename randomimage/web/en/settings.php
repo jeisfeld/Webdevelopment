@@ -102,11 +102,12 @@
 	of the widget.
 	<li><b>Button Color:</b> Here you can select the color of these two buttons.</li>
 	<li><b>Use default settings:</b> Here you can specify if, when viewing the image in detail, the default settings should
-		be used, or if the settings &ldquo;Image scaling&rdquo;, &ldquo;Background color&rdquo;, &ldquo;Action when
-		flipping&rdquo;, &ldquo;Automatic change frequency&rdquo;, &ldquo;Use tap instead of flipping&rdquo; and
-		&ldquo;Prevent screen timeout&rdquo; should be defined separately for this widget. (See <a href="#randomImageView">above</a>
-		the explanation for these settings.)
-	
+		be used, or if the settings &ldquo;<b>Image scaling</b>&rdquo;, &ldquo;<b>Background color</b>&rdquo;, &ldquo;<b>Action
+			when flipping</b>&rdquo;, &ldquo;<b>Automatic change frequency</b>&rdquo;, &ldquo;<b>Use tap instead of flipping</b>&rdquo;
+		and &ldquo;<b>Prevent screen timeout</b>&rdquo; should be defined separately for this widget. (See <a
+			href="#randomImageView">above</a> the explanation for these settings.)</br> When tapping the mini-widget, the last
+		displayed image is shown again. If you always want to see a new image, you can select the value &ldquo;Always new
+		random image&rdquo; in &ldquo;Action when flipping&rdquo;.</li>
 	<li><b>Widget usage time:</b> Here you can limit the time how long you are can view images via the mini widget.</li>
 	<li><b>Widget locking time:</b> Here you can limit how frequently you may use the mini widget.</li>
 </ul>
@@ -131,9 +132,9 @@
 	<li><b>Vibration:</b> Here you can select if the device should vibrate when the notification is displayed.</li>
 	<li><b>Colored icon:</b> Here you can select if the notification symbol should be white or colored.</li>
 	<li><b>Use default settings:</b> Here you can specify if, when viewing the image in detail, the default settings should
-		be used, or if the settings &ldquo;Image scaling&rdquo;, &ldquo;Background color&rdquo;, &ldquo;Action when
-		flipping&rdquo;, &ldquo;Automatic change frequency&rdquo;, &ldquo;Use tap instead of flipping&rdquo; and
-		&ldquo;Prevent screen timeout&rdquo; should be defined separately for this notification. (See <a
+		be used, or if the settings &ldquo;<b>Image scaling</b>&rdquo;, &ldquo;<b>Background color</b>&rdquo;, &ldquo;<b>Action
+			when flipping</b>&rdquo;, &ldquo;<b>Automatic change frequency</b>&rdquo;, &ldquo;<b>Use tap instead of flipping</b>&rdquo;
+		and &ldquo;<b>Prevent screen timeout</b>&rdquo; should be defined separately for this notification. (See <a
 			href="#randomImageView">above</a> the explanation for these settings.)
 	
 	<li><b>Remove Notification:</b> Here you can remove the notification.</li>

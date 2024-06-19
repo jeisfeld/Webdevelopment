@@ -107,10 +107,12 @@
 	und linken Rand des Widgets tippen.
 	<li><b>Button-Farbe:</b> Hier können Sie einstellen, welche Farbe diese beiden Buttons haben sollen.</li>
 	<li><b>Standardeinstellungen verwenden:</b> Hier können Sie festlegen, ob beim Wechsel in die Detailansicht die
-		allgemeinen Standardeinstellungen gelten, oder ob die Einstellungen &bdquo;Bildskalierung&ldquo;,
-		&bdquo;Hintergrundfarbe&ldquo;, &bdquo;Verhalten beim Schnippen&ldquo;, &bdquo;Automatische Wechselhäufigkeit&ldquo;,
-		&bdquo;Tippen statt Schnippen&ldquo; und &bdquo;Bildschirmtimeout verhindern&ldquo; für dieses Widget separat
-		festgelegt werden sollen. (Erläuterung zu diesen Einstellungen siehe <a href="#randomImageView">oben</a>.)</li>
+		allgemeinen Standardeinstellungen gelten, oder ob die Einstellungen &bdquo;<b>Bildskalierung</b>&ldquo;, &bdquo;<b>Hintergrundfarbe</b>&ldquo;,
+		&bdquo;<b>Verhalten beim Schnippen</b>&ldquo;, &bdquo;<b>Automatische Wechselhäufigkeit</b>&ldquo;, &bdquo;<b>Tippen
+			statt Schnippen</b>&ldquo; und &bdquo;<b>Bildschirmtimeout verhindern</b>&ldquo; für dieses Widget separat festgelegt
+		werden sollen. (Erläuterung zu diesen Einstellungen siehe <a href="#randomImageView">oben</a>.)</br> Beim Tippen des
+		Mini-Widgets wird das zuletzt angezeigte Bild erneut angezeigt. Wenn Sie immer gleich ein neues Bild sehen wollen,
+		können Sie bei &bdquo;Verhalten beim Schnippen&ldquo; den Wert &bdquo;Immer neues Zufallsbild&ldquo; wählen.</li>
 	<li><b>Nutzungsdauer des Widgets:</b> Hier können Sie beschränken, wie lange Sie Bilder über das Mini-Widget anschauen
 		können.</li>
 	<li><b>Sperrdauer des Widgets:</b> Hier können Sie beschränken, wie oft sie das Mini-Widget nutzen können.</li>
@@ -140,9 +142,9 @@
 	<li><b>Vibration:</b> Hier können Sie festlegen, ob das Gerät bei der Benachrichtigung vibriert.</li>
 	<li><b>Farbiges Symbol:</b> Hier können Sie festlegen, ob das Benachrichtigungssymbol farbig oder weiß sein soll.</li>
 	<li><b>Standardeinstellungen verwenden:</b> Hier können Sie festlegen, ob beim Wechsel in die Detailansicht die
-		allgemeinen Standardeinstellungen gelten, oder ob die Einstellungen &bdquo;Bildskalierung&ldquo;,
-		&bdquo;Hintergrundfarbe&ldquo;, &bdquo;Verhalten beim Schnippen&ldquo;, &bdquo;Automatische Wechselhäufigkeit&ldquo;,
-		&bdquo;Tippen statt Schnippen&ldquo; und &bdquo;Bildschirmtimeout verhindern&ldquo; für diese Benachrichtigung separat
+		allgemeinen Standardeinstellungen gelten, oder ob die Einstellungen &bdquo;<b>Bildskalierung</b>&ldquo;, &bdquo;<b>Hintergrundfarbe</b>&ldquo;,
+		&bdquo;<b>Verhalten beim Schnippen</b>&ldquo;, &bdquo;<b>Automatische Wechselhäufigkeit</b>&ldquo;, &bdquo;<b>Tippen
+			statt Schnippen</b>&ldquo; und &bdquo;<b>Bildschirmtimeout verhindern</b>&ldquo; für diese Benachrichtigung separat
 		festgelegt werden sollen. (Erläuterung zu diesen Einstellungen siehe <a href="#randomImageView">oben</a>.)</li>
 	<li><b>Benachrichtigung entfernen:</b> Hier können Sie die Benachrichtigung entfernen.</li>
 </ul>

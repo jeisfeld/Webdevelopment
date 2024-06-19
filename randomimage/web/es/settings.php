@@ -108,11 +108,13 @@
 	izquierdo del widget.
 	<li><b>Color de botones:</b> Aquí puede seleccionar el color de estos dos botones.</li>
 	<li><b>Usar configuración predeterminada:</b> Aquí puede especificar si, al ver la imagen en detalle, se debe usar la
-		configuración predeterminada, o si las configuraciones &laquo;Escala de imagen&raquo;, &laquo;Color de fondo&raquo;,
-		&laquo;Comportamiento al lanzar&raquo;, &laquo;Frecuencia de cambio automático&raquo;, &laquo;Tocar en lugar de
-		lanzar&raquo; y &laquo;Prevenir el tiempo de espera de la pantalla&raquo; deben definirse por separado para esta
-		notificación. (Consulte <a href="#randomImageView">más arriba</a> la explicación de estas configuraciones).
-	
+		configuración predeterminada, o si las configuraciones &laquo;<b>Escala de imagen</b>&raquo;, &laquo;<b>Color de fondo</b>&raquo;,
+		&laquo;<b>Comportamiento al lanzar</b>&raquo;, &laquo;<b>Frecuencia de cambio automático</b>&raquo;, &laquo;<b>Tocar
+			en lugar de lanzar</b>&raquo; y &laquo;<b>Prevenir el tiempo de espera de la pantalla</b>&raquo; deben definirse por
+		separado para esta notificación. (Consulte <a href="#randomImageView">más arriba</a> la explicación de estas
+		configuraciones).</br> Al tocar el mini-widget, se muestra la última imagen mostrada. Si siempre quiere ver una nueva
+		imagen, puede seleccionar el valor &laquo;Siempre nueva imagen aleatoria&raquo; en &laquo;Comportamiento al
+		lanzar&raquo;.</li>
 	<li><b>Duración de uso del widget:</b> Aquí puede limitar el tiempo que puede ver las imágenes a través del mini
 		widget.</li>
 	<li><b>Duración de bloqueo del widget:</b> Aquí puede limitar la frecuencia con la que puede usar el mini widget.</li>
@@ -140,10 +142,11 @@
 	<li><b>Vibración:</b> Aquí puede seleccionar si el dispositivo debe vibrar cuando se muestra la notificación.</li>
 	<li><b>Icono de color:</b> aquí puede seleccionar si el símbolo de notificación debe ser blanco o de color.</li>
 	<li><b>Usar configuración predeterminada:</b> Aquí puede especificar si, al ver la imagen en detalle, se debe usar la
-		configuración predeterminada, o si las configuraciones &laquo;Escala de imagen&raquo;, &laquo;Color de fondo&raquo;,
-		&laquo;Comportamiento al lanzar&raquo;, &laquo;Frecuencia de cambio automático&raquo;, &laquo;Tocar en lugar de
-		lanzar&raquo; y &laquo;Prevenir el tiempo de espera de la pantalla&raquo; deben definirse por separado para esta
-		notificación. (Consulte <a href="#randomImageView">más arriba</a> la explicación de estas configuraciones).
+		configuración predeterminada, o si las configuraciones &laquo;<b>Escala de imagen</b>&raquo;, &laquo;<b>Color de fondo</b>&raquo;,
+		&laquo;<b>Comportamiento al lanzar</b>&raquo;, &laquo;<b>Frecuencia de cambio automático</b>&raquo;, &laquo;<b>Tocar
+			en lugar de lanzar</b>&raquo; y &laquo;<b>Prevenir el tiempo de espera de la pantalla</b>&raquo; deben definirse por
+		separado para esta notificación. (Consulte <a href="#randomImageView">más arriba</a> la explicación de estas
+		configuraciones).
 	
 	<li><b>Borrar notificación:</b> Aquí puede borrar la notificación.</li>
 
