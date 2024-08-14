@@ -215,6 +215,14 @@ hr {
 	margin: 0px;
 }
 
+.feedback-text {
+	font-style: italic;
+}
+
+.feedback > li {
+	margin-bottom: 10px;
+}
+
 #pictimg.googlemaps {
 	position: relative;
 	padding: 0;
@@ -621,7 +629,7 @@ a.closeImpressum {
 }
 
 @media screen and (min-width: 1550px) {
-	#mainframe p, #mainframe ul {
+	#mainframe p, #mainframe ul:not(ul ul) {
 		max-width: 66%;
 	}
 	#pictimg:not(.googlemaps) {
