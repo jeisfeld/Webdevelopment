@@ -14,7 +14,8 @@
 	</li>
 	<li><a href="https://www.alegria-lebensfreude.de/" target="_blank">&bdquo;Alegria&ldquo;</a> Netzwerk für Lebensfreude,
 		Gesundheit &amp; Vitalität 2021</li>
-	<li><a href="/seminare">Seminare:</a> Die Weitergabe meiner Essenz von 40 Jahren naturheilkundlicher Erfahrung und Behandlung 2023</li>
+	<li><a href="/seminare">Seminare:</a> Die Weitergabe meiner Essenz von 40 Jahren naturheilkundlicher Erfahrung und
+		Behandlung 2023/2024</li>
 </ul>
 
 <p>Bereits 1984 begann mein natur&shy;heilkundlich geprägter Weg. Als Assistentin bei dem Natur&shy;heilarzt Dr. Seemann
