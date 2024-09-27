@@ -1,6 +1,16 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.4.13:</b> Increased max bitmap size from 2048 to 4096.</li>
+
+	<li><b>Version 1.4.12:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.11:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.10:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.9:</b> Bugfixes.</li>
+
 	<li><b>Version 1.4.8:</b> Bugfixes.</li>
 
 	<li><b>Version 1.4.7:</b> Adaptations for Android 14. Bugfixes.</li>
