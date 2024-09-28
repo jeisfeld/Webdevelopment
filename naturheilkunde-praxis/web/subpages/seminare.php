@@ -31,9 +31,9 @@
 <p>Mein Ziel ist es, Sie auf dem Weg zu mehr Gesund&shy;heit, Vitalität und Lebens&shy;freude zu unter&shy;stützen, um
 	gesünder, bewusster und zufriedener durchs Leben zu gehen.</p>
 
-<h3>Weitere Seminartermine auf Anfrage</h3>
+<p><b>Weitere Seminartermine auf Anfrage</b></p>
 
-<h3>Feedback von Teilnehmerinnen</h3>
+<h3 class="feedback-header">Feedback von Teilnehmerinnen</h3>
 
 <ul class="feedback">
 	<li><span class="feedback-text">Sybille Schraml ist Heilpraktikerin aus Leidenschaft. Empathisch, kompetent und

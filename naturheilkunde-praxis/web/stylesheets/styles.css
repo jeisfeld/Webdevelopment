@@ -215,12 +215,34 @@ hr {
 	margin: 0px;
 }
 
+.feedback-header {
+	padding-top: 10px;
+	border-top: 1px solid #33537C80;
+}
+
+#mainframe ul.feedback {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	max-width: 100%;
+}
+
 .feedback-text {
 	font-style: italic;
 }
 
-.feedback > li {
-	margin-bottom: 10px;
+.feedback>li {
+	border-bottom: 1px solid #33537C40;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.feedback>li:last-child {
+    border-bottom: 0px;
+}
+
+.feedback-author {
+	display: block;
 }
 
 #pictimg.googlemaps {
