@@ -4,34 +4,37 @@
 <h3>Gesundheit, Vitalität und Lebensfreude</h3>
 
 <p>
-	In dem <b>Essenz-Seminar I</b> &bdquo;Gesund&shy;heit, Vitalität und Lebens&shy;freude&ldquo; geht es um ein
+	Im <b>Essenz-Seminar I</b> &bdquo;Gesund&shy;heit, Vitalität und Lebens&shy;freude&ldquo; geht es um ein
 	tief&shy;greifendes Ver&shy;ständnis von körper&shy;lichen und seelischen Zusammen&shy;hängen. Ein Fokus liegt darauf,
 	Sie zu ermächtigen, unab&shy;hängiger, selbst&shy;bestimmter und bewusster das eigene Wohl&shy;befinden zu gestalten.
 	Für sich und Ihre Liebsten.
 </p>
 
+<p>Im ersten Seminar lernen Sie aktiv, Ihre Gesund&shy;heit zu unter&shy;stützen und zu fördern. Dadurch ist es möglich,
+	entstehende Krank&shy;heiten nicht nur zu verstehen, sondern diesen auch proaktiv entgegen&shy;zu&shy;wirken.</p>
+
 <p>
-	Im ersten Teil steht die <b>TCM (tradi&shy;tio&shy;nelle chinesische Methode)</b> im Vorder&shy;grund, mit der
-	Prävention und dem Grund&shy;lagen-Wissen. Das <b>Jin&nbsp;Shin&nbsp;Jyutsu</b> (die Kunst der Selbstheilung praktisch
-	zu nutzen) wird ebenso mit ein&shy;fließen wie die Ernährungs&shy;prinzipien nach der <b>5&#8209;Elemente-Ernährung</b>.
+	Im Vorder&shy;grund steht das Grundlagen-Wissen der <b>TCM</b> (tradi&shy;tio&shy;nelle chinesische Methode) mit der
+	Möglichkeit zur aktiven Prävention. Ebenso fließen das <b>Jin&nbsp;Shin&nbsp;Jyutsu</b> (die Kunst der Selbstheilung
+	praktisch zu nutzen) wie auch die Ernährungs&shy;prinzipien nach der <b>5&#8209;Elemente-Ernährung</b> mit ein.
 </p>
 
-<p>So lernen Sie aktiv Ihre Gesund&shy;heit zu unter&shy;stützen und zu fördern. Dadurch ist es möglich, entstehende
-	Krank&shy;heiten nicht nur zu verstehen, sondern auch proaktiv entgegen&shy;zu&shy;wirken. Das Wissen wird
-	anschau&shy;lich, verständlich und praktisch vermittelt und angewandt. Dadurch kann das Gelernte direkt im Alltag
-	umgesetzt werden und zu positiven Verände&shy;rungen führen.</p>
+<p>Dieses Wissen wird anschau&shy;lich, verständ&shy;lich und praktisch vermittelt und praktisch angewandt. Dadurch kann
+	das Gelernte direkt im Alltag umgesetzt werden und zu positiven Verände&shy;rungen führen.</p>
 
 <p>
-	Im <b>Essenz-Seminar II</b> wird das Grundlagen-Wissen der TCM vertieft. Außerdem wird die <b>TEM
-		(tradi&shy;tio&shy;nel&shy;le euro&shy;pä&shy;ische Medizin)</b> mit den Mine&shy;ralien, der Psycho-Somatik und den
-	Test&shy;methoden erläutert. Die indi&shy;vidu&shy;ellen Bedürf&shy;nisse und das Finden und Testen der idealen Mittel
-	werden eine zentrale Rolle spielen.
+	Im <b>Essenz-Seminar II</b> wird das Grundlagen-Wissen der <b>TCM</b> (tradi&shy;tio&shy;nelle chinesische Methode)
+	vertieft. Außerdem wird die <b>TEM</b> (tradi&shy;tio&shy;nel&shy;le euro&shy;pä&shy;ische Medizin) mit den
+	Mine&shy;ralien, der Psycho-Somatik und den Test&shy;methoden erläutert. Hierbei werden die indi&shy;vidu&shy;ellen
+	Bedürf&shy;nisse und das Finden und Testen der idealen Mittel eine zentrale Rolle spielen.
 </p>
 
 <p>Mein Ziel ist es, Sie auf dem Weg zu mehr Gesund&shy;heit, Vitalität und Lebens&shy;freude zu unter&shy;stützen, um
 	gesünder, bewusster und zufriedener durchs Leben zu gehen.</p>
 
-<p><b>Weitere Seminartermine auf Anfrage</b></p>
+<p>
+	<b>Weitere Seminartermine auf Anfrage</b>
+</p>
 
 <h3 class="feedback-header">Feedback von Teilnehmerinnen</h3>
 
@@ -73,13 +76,13 @@
 			Speziell meine Kenntnisse der 5 Biologischen Naturgesetze nach Dr. Hamer konnte ich im Laufe der Zeit immer besser
 			mit der TCM kombinieren, die Testergebnisse nachvollziehen und die entsprechenden Heilmittel anwenden.<br /> Die
 			Seminare haben mein Wissen weiter vertieft und ein besseres Verständnis für TCM und die Pulstestung der am besten
-			passenden Heilmittel gebracht. Besonders beeindruckt hat mich Frau Schramls Zeit bei Dr. Sachse, der diese Testmethode
-			der Pulstestung in akribischer Kleinarbeit über viele Jahre bis zu seinem Tod erforscht und weiterentwickelt hat und
-			bei dem sie persönlich lernen und assistieren durfte.<br /> Sehr wertvoll sind für mich die Solunate nach Alexander
-			von Bernus, die seit über 100 Jahren Bestandteil der naturheilkundlichen Praxis sind. Ich habe mich aufgrund des
-			Seminars noch intensiver mit den Solunaten befasst und war beeindruckt, mit welcher Achtung diese Heilmittel nach wie
-			vor hergestellt werden.<br /> Danke an Sybille Schraml und an alle Seminarteilnehmerinnen für das vertrauensvolle
-			Miteinander.
+			passenden Heilmittel gebracht. Besonders beeindruckt hat mich Frau Schramls Zeit bei Dr. Sachse, der diese
+			Testmethode der Pulstestung in akribischer Kleinarbeit über viele Jahre bis zu seinem Tod erforscht und
+			weiterentwickelt hat und bei dem sie persönlich lernen und assistieren durfte.<br /> Sehr wertvoll sind für mich die
+			Solunate nach Alexander von Bernus, die seit über 100 Jahren Bestandteil der naturheilkundlichen Praxis sind. Ich
+			habe mich aufgrund des Seminars noch intensiver mit den Solunaten befasst und war beeindruckt, mit welcher Achtung
+			diese Heilmittel nach wie vor hergestellt werden.<br /> Danke an Sybille Schraml und an alle Seminarteilnehmerinnen
+			für das vertrauensvolle Miteinander.
 	</span> <span class="feedback-author">(T.W.)</span></li>
 	<li><span class="feedback-text">Das Seminar hat mir einen sehr guten Rundumblick erbracht über TCI, Testmethoden und
 			Solunat-Produkte. Für mich war es eine große Bereicherung für mein Leben.<br> Besonders gut gefallen hat mir an dem
