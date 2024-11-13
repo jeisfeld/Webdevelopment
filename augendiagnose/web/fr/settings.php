@@ -1,5 +1,5 @@
 <h2>
-	<span class="mobile"><?=$appname?> - </span>Paramètres
+	<?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Paramètres
 </h2>
 
 L'application permet les paramètres suivants :
@@ -16,7 +16,7 @@ if (isAugendiagnose ()) {
 				du dossier cible de l'application Eye-Fi, soit du dossier standard de l'application Appareil photo. Cependant, vous
 				pouvez configurer ici tout autre dossier.</p>
 
-			<p>Contexte concernant l'application Eye-Fi : généralement, l'appareil photo du dispositif mobile n'est pas suffisant
+			<p>Contexte concernant l'application Eye-Fi : généralement, l'appareil photo du dispositif mobile n'est pas suffisant
 				pour capturer des photos oculaires de haute qualité. Une approche plus pratique consiste à utiliser un appareil
 				photo externe avec une carte SD Eye-Fi, qui transfère les photos via WLAN vers le dispositif mobile.</p>
 		</td>
@@ -48,7 +48,7 @@ if (isAugendiagnose ()) {
 	<tr>
 		<td width="30%" valign="top">Couleur par défaut des superpositions</td>
 		<td width="70%" valign="top">Ici, vous pouvez définir la couleur par défaut pour les superpositions de topographie de
-			l'iris. (Standard : rouge)</td>
+			l'iris. (Standard : rouge)</td>
 	</tr>
 	<tr>
 		<td width="30%" valign="top">Langue</td>
@@ -74,11 +74,11 @@ if (isAugendiagnose ()) {
 		<td width="70%" valign="top"><p>C'est le dossier dans lequel l'application gère les photos oculaires. Normalement,
 				vous n'avez pas besoin de changer cela. À partir de là, vous pouvez copier les photos vers d'autres appareils.</p>
 
-			<p>Le dossier prédéfini est « EyePhotos ».</p>
+			<p>Le dossier prédéfini est «EyePhotos».</p>
 
 			<p>Vous pouvez sélectionner ici un dossier soit sur la mémoire de votre appareil, soit sur une carte SD. Sous
-				Android 4.4 (Kitkat), le stockage sur carte SD a certaines limitations, donc certaines opérations prendront plus de
-				temps. Sous Android 5, lors de la sélection d'un dossier sur carte SD, vous devrez accorder des droits d'accès à la
+				Android 4.4 (Kitkat), le stockage sur carte SD a certaines limitations, donc certaines opérations prendront plus de
+				temps. Sous Android 5, lors de la sélection d'un dossier sur carte SD, vous devrez accorder des droits d'accès à la
 				carte SD via le Framework d'accès au stockage d'Android.</p></td>
 	</tr>
 	<tr>
@@ -94,15 +94,15 @@ if (isAugendiagnose ()) {
 			résolution, ce qui permet de voir plus de détails sur la photo, mais consomme de la mémoire et du temps de calcul.
 
 			<ul>
-				<li><b>Toujours charger automatiquement :</b> L'application stocke toujours les photos en pleine résolution en
+				<li><b>Toujours charger automatiquement :</b> L'application stocke toujours les photos en pleine résolution en
 					mémoire. Cela offre la meilleure expérience utilisateur sur les appareils haut de gamme, mais peut entraîner des
 					plantages s'il n'y a pas assez de mémoire disponible.</li>
 
-				<li><b>Charger automatiquement lors de l'affichage d'une seule photo :</b> L'application affiche la pleine
+				<li><b>Charger automatiquement lors de l'affichage d'une seule photo :</b> L'application affiche la pleine
 					résolution uniquement lors de l'affichage d'une seule image. Cela nécessite la moitié de la mémoire.</li>
 
-				<li><b>Charger uniquement à la demande :</b> L'application n'affiche pas l'image en pleine résolution. Cela
-					nécessite le moins de mémoire et de CPU, mais des détails de la photo peuvent être perdus. Le bouton « loupe » <img
+				<li><b>Charger uniquement à la demande :</b> L'application n'affiche pas l'image en pleine résolution. Cela
+					nécessite le moins de mémoire et de CPU, mais des détails de la photo peuvent être perdus. Le bouton «loupe» <img
 					src="<?=$basepath?>/drawable/ic_clarity.png" /> permet d'afficher le détail actuel de l'image en pleine résolution.</li>
 			</ul>
 		</td>
@@ -112,14 +112,14 @@ if (isAugendiagnose ()) {
 		<td width="70%" valign="top">Ici, vous pouvez limiter le stockage de données dans les fichiers JPG par l'application.
 
 			<ul>
-				<li><b>Stocker dans EXIF (recommandé) :</b> L'application stocke les informations pertinentes dans le fichier JPG,
+				<li><b>Stocker dans EXIF (recommandé) :</b> L'application stocke les informations pertinentes dans le fichier JPG,
 					même dans les champs standard qui sont visibles sous Windows.</li>
 
-				<li><b>Stocker dans des champs personnalisés :</b> L'application stocke les informations dans le fichier JPG, mais
-					uniquement dans des champs séparés. Les champs standard restent inchangés ; l'échange de données avec Windows n'est
+				<li><b>Stocker dans des champs personnalisés :</b> L'application stocke les informations dans le fichier JPG, mais
+					uniquement dans des champs séparés. Les champs standard restent inchangés ; l'échange de données avec Windows n'est
 					pas possible.</li>
 
-				<li><b>Ne pas stocker de données dans les images :</b> L'application ne stocke pas d'informations dans les fichiers
+				<li><b>Ne pas stocker de données dans les images :</b> L'application ne stocke pas d'informations dans les fichiers
 					JPG. (Cela limite les fonctionnalités de l'application.)</li>
 			</ul>
 		</td>
@@ -148,9 +148,9 @@ if (isMiniris ()) {
 ?>
 		<tr>
 		<td width="30%" valign="top">Compatibilité de la caméra</td>
-		<td width="70%" valign="top">Si votre appareil fonctionne sous Android 5 ou supérieur, vous pouvez ici sélectionner si
-			la fonctionnalité de la caméra doit utiliser les nouvelles fonctionnalités d'Android 5 ou non. La sélection de
-			« Android 4 » a du sens en cas de problèmes de compatibilité avec Android 5.</td>
+		<td width="70%" valign="top">Si votre appareil fonctionne sous Android 5 ou supérieur, vous pouvez ici sélectionner si
+			la fonctionnalité de la caméra doit utiliser les nouvelles fonctionnalités d'Android 5 ou non. La sélection de
+			«Android 4» a du sens en cas de problèmes de compatibilité avec Android 5.</td>
 	</tr>
 	<tr>
 		<td width="30%" valign="top">Activer le flash</td>
@@ -159,7 +159,7 @@ if (isMiniris ()) {
 	</tr>
 	<tr>
 		<td width="30%" valign="top">Activer le flash LED externe</td>
-		<td width="70%" valign="top">Ici, vous pouvez définir si l'utilisation d'un « Flash & Fill-in Light » branché dans la
+		<td width="70%" valign="top">Ici, vous pouvez définir si l'utilisation d'un «Flash & Fill-in Light» branché dans la
 			prise casque doit être prise en charge.</td>
 	</tr>
 	<tr>
@@ -190,7 +190,7 @@ if (isMiniris ()) {
 <p>Cette page offre la possibilité d'acheter un pack premium qui vous donne un accès illimité à toutes les fonctions de
 	l'application.</p>
 
-<p>De plus, il y a les fonctionnalités suivantes :</p>
+<p>De plus, il y a les fonctionnalités suivantes :</p>
 
 <table width="100%" border="1">
 <?PHP

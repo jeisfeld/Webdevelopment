@@ -19,8 +19,8 @@
 <p>Les contenus de ce site web sont créés avec le plus grand soin. Le fournisseur n'assume aucune garantie quant à
 	l'exactitude, l'exhaustivité et l'actualité des contenus fournis. L'utilisation des contenus du site web se fait aux
 	risques et périls de l'utilisateur.</p>
-<p>En tant que prestataire de services, nous sommes responsables conformément au § 7 alinéa 1 TMG de nos propres
-	contenus sur ces pages selon les lois générales. Selon les §§ 8 à 10 TMG, nous ne sommes cependant pas tenus en tant
+<p>En tant que prestataire de services, nous sommes responsables conformément au § 7 alinéa 1 TMG de nos propres
+	contenus sur ces pages selon les lois générales. Selon les §§ 8 à 10 TMG, nous ne sommes cependant pas tenus en tant
 	que prestataire de services de surveiller les informations tierces transmises ou stockées ou de rechercher des
 	circonstances indiquant une activité illégale. Les obligations de supprimer ou de bloquer l'utilisation d'informations
 	selon les lois générales restent inchangées. Une responsabilité à cet égard n'est cependant possible qu'à partir du
@@ -28,7 +28,7 @@
 	supprimerons immédiatement ces contenus.</p>
 
 <h4>§2 Liens externes</h4>
-<p>Ce site web contient des liens vers des sites web tiers (« liens externes ») sur lesquels nous n'avons aucune
+<p>Ce site web contient des liens vers des sites web tiers («liens externes») sur lesquels nous n'avons aucune
 	influence. Ces sites web sont sous la responsabilité des opérateurs respectifs. Le fournisseur a vérifié lors de la
 	première création des liens externes les contenus externes pour d'éventuelles violations de la loi. À ce moment-là,
 	aucune violation de la loi n'était apparente. Le fournisseur n'a aucune influence sur la conception et le contenu

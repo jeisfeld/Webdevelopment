@@ -1,4 +1,4 @@
-<h2><span class="mobile"><?=$appname?> - </span>Einstellungen</h2>
+<h2><?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Einstellungen</h2>
 
 Die Applikation ermöglicht folgende Einstellungen:
 <?PHP

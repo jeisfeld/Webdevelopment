@@ -26,7 +26,7 @@ if (isAugendiagnose ()) {
 
 <h3>Activités principales</h3>
 
-<h4>Étape 1 : Organiser les photos.</h4>
+<h4>Étape 1: Organiser les photos.</h4>
 
 <p>Dans cette étape, vous pouvez organiser les photos oculaires.</p>
 
@@ -34,7 +34,7 @@ if (isAugendiagnose ()) {
 	dossier cible de l'application Eye-Fi ou comme dossier par défaut de la caméra, mais peut être modifié via les
 	paramètres.</p>
 
-<p>Dans l'activité « Organiser de nouvelles photos », vous pouvez attribuer de nouvelles photos oculaires du dossier
+<p>Dans l'activité «Organiser de nouvelles photos», vous pouvez attribuer de nouvelles photos oculaires du dossier
 	d'entrée à une personne et à une date, et les préparer ainsi pour l'application. Ensuite, les photos seront renommées
 	et déplacées vers le dossier des photos oculaires.</p>
 
@@ -50,9 +50,9 @@ if (isAugendiagnose ()) {
 
 <p>Comme troisième alternative,</p>
 
-<h4>Étape 2 : Afficher les photos.</h4>
+<h4>Étape 2: Afficher les photos.</h4>
 
-<p>C'est l'objectif principal de l'application, mais cela nécessite que les photos soient organisées via l'étape 1.</p>
+<p>C'est l'objectif principal de l'application, mais cela nécessite que les photos soient organisées via l'étape 1.</p>
 
 <p>Dans cette activité, vous pouvez</p>
 
@@ -122,7 +122,7 @@ else {
 
 <h3>Utilisation de la caméra</h3>
 
-<p>En ouvrant la caméra, vous voyez les zones suivantes :</p>
+<p>En ouvrant la caméra, vous voyez les zones suivantes :</p>
 
 <ul>
 	<li>Sur le côté droit au milieu, il y a le bouton pour capturer la photo. Après avoir capturé une photo, vous pouvez
@@ -133,21 +133,21 @@ else {
 		indique quel œil est prévu pour la prochaine photo. En appuyant sur l'une de ces zones, vous pouvez changer le côté.</li>
 	<li>Sur l'affichage de la caméra, il y a un grand cercle. Ce cercle indique l'endroit où l'iris doit apparaître sur la
 		photo.</li>
-	<li>En bas à gauche, il y a un bouton avec un cercle et le texte « zoom ». Ici, vous pouvez régler le zoom de la caméra
+	<li>En bas à gauche, il y a un bouton avec un cercle et le texte «zoom». Ici, vous pouvez régler le zoom de la caméra
 		et sélectionner la taille de l'iris sur la photo.</li>
-	<li>Au-dessus, il y a un bouton avec le texte « MACRO » ou « AUTO ». Ici, vous pouvez sélectionner le mode de mise au
+	<li>Au-dessus, il y a un bouton avec le texte «MACRO» ou «AUTO». Ici, vous pouvez sélectionner le mode de mise au
 		point de la caméra. Pour les gros plans, le mode MACRO est normalement un bon choix.</li>
 	<li>Au-dessus, il y a un bouton de lampe torche. Ici, vous pouvez allumer la lumière de votre appareil. Comme une lampe
 		torche devant votre œil est dangereuse, cela est désactivé par défaut, mais vous pouvez l'activer dans les paramètres.
-		Vous pouvez également utiliser une LED « Flash & Fill-in Light » branchée sur la prise casque.</li>
+		Vous pouvez également utiliser une LED «Flash & Fill-in Light» branchée sur la prise casque.</li>
 </ul>
 
 <p>Après avoir pris des photos des deux yeux, vous êtes dirigé vers une page où vous pouvez examiner les deux photos, et
 	où vous devez entrer le nom de la personne à qui ces photos doivent être attribuées. Ici, vous pouvez également changer
-	la date des photos ; pour chaque personne et chaque date, une seule paire de photos peut être stockée.</p>
+	la date des photos ; pour chaque personne et chaque date, une seule paire de photos peut être stockée.</p>
 
 <p>Si vous arrêtez l'application après avoir pris une ou deux photos des yeux, mais avant d'avoir attribué un nom, alors
-	le prochain démarrage de l'application continuera là où vous vous êtes arrêté ; les photos que vous avez prises seront
+	le prochain démarrage de l'application continuera là où vous vous êtes arrêté ; les photos que vous avez prises seront
 	conservées jusqu'à ce que vous décidiez de les supprimer ou de les écraser.</p>
 
 <h3>Période d'essai / Achats intégrés</h3>
@@ -172,7 +172,7 @@ else {
 <h3>Politique de confidentialité</h3>
 
 <p>
-    L'application « <?=$appname?> » utilise la caméra pour prendre des photos des yeux. L'application ne stocke, ne collecte ni n'envoie aucune donnée personnelle de quelque nature que ce soit. Toutes les photos prises par l'application sont stockées uniquement localement sur votre appareil.
+    L'application «<?=$appname?>» utilise la caméra pour prendre des photos des yeux. L'application ne stocke, ne collecte ni n'envoie aucune donnée personnelle de quelque nature que ce soit. Toutes les photos prises par l'application sont stockées uniquement localement sur votre appareil.
 </p>
 
 <p>

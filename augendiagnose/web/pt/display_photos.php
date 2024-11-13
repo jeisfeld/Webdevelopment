@@ -1,4 +1,4 @@
-<h2><span class="mobile"><?=$appname?> - </span>Visualizar fotos</h2>
+<h2><?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Visualizar fotos</h2>
 
 <p>Aqui você pode selecionar o nome de uma pessoa cujas fotos de olhos você deseja ver. Em seguida, o aplicativo
 	mostrará todas as fotos dos olhos dessa pessoa em uma lista ordenada por data.</p>

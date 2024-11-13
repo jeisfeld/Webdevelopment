@@ -1,11 +1,11 @@
 <h2>
-	<span class="mobile"><?=$appname?> - </span>Afficher les photos
+	<?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Afficher les photos
 </h2>
 
 <p>Ici, vous pouvez sélectionner le nom d'une personne dont vous souhaitez voir les photos oculaires. Ensuite, toutes
 	les photos oculaires de cette personne vous sont présentées dans une liste triée par date.</p>
 
-<p>Vous avez alors les possibilités suivantes :</p>
+<p>Vous avez alors les possibilités suivantes :</p>
 
 <ul>
 	<li>Afficher une des photos en détail (en cliquant sur une photo).</li>
@@ -15,11 +15,11 @@
 	<li>Afficher deux photos de dates différentes (en effectuant un appui long sur une photo puis en cliquant sur une
 		seconde photo).</li>
 
-	<li>Afficher deux photos de personnes différentes : Sélectionnez une photo de cette personne (en effectuant un appui
+	<li>Afficher deux photos de personnes différentes : Sélectionnez une photo de cette personne (en effectuant un appui
 		long) puis sélectionnez une photo d'une autre personne.</li>
 </ul>
 
-<p>Notez que les graphiques de topographie de l'iris peuvent être organisés comme les photos oculaires ; cela permet de
+<p>Notez que les graphiques de topographie de l'iris peuvent être organisés comme les photos oculaires ; cela permet de
 	comparer les photos des yeux avec les graphiques de topographie de l'iris. De tels graphiques ne sont pas inclus dans
 	l'application (sauf en tant que superpositions).</p>
 
@@ -39,7 +39,7 @@
 
 <h3>Autres options dans la vue détaillée</h3>
 
-<p>Dans la vue détaillée (une ou deux photos), vous avez les possibilités supplémentaires suivantes :</p>
+<p>Dans la vue détaillée (une ou deux photos), vous avez les possibilités supplémentaires suivantes :</p>
 
 <ul>
 	<li>Modifier la luminosité et le contraste via les curseurs <img src="<?=$basepath?>/drawable/ic_seek_brightness.png" /><img
@@ -67,25 +67,25 @@
 		src="<?=$basepath?>/drawable/ic_btn_pupil_2.png" class="frameless" />).
 	</li>
 
-	<li>Enregistrer les réglages sélectionnés de luminosité et de contraste (via le bouton « enregistrer » <img
+	<li>Enregistrer les réglages sélectionnés de luminosité et de contraste (via le bouton «enregistrer» <img
 		src="<?=$basepath?>/drawable/ic_action_save.png" /> sur la barre d'action)
 	</li>
 
-	<li>Enregistrer la position et le zoom (via le bouton « enregistrer » <img
+	<li>Enregistrer la position et le zoom (via le bouton «enregistrer» <img
 		src="<?=$basepath?>/drawable/ic_action_save.png" /> sur la barre d'action)
 	</li>
 
-	<li>Partager l'image (via le bouton « partager » <img src="<?=$basepath?>/drawable/ic_action_share.png" /> sur la barre
+	<li>Partager l'image (via le bouton «partager» <img src="<?=$basepath?>/drawable/ic_action_share.png" /> sur la barre
 		d'action)
 	</li>
 
-	<li>Modifier le commentaire de la photo (via le bouton « document » <img src="<?=$basepath?>/drawable/ic_comment.png" />
+	<li>Modifier le commentaire de la photo (via le bouton «document» <img src="<?=$basepath?>/drawable/ic_comment.png" />
 		sur la barre d'action)
 	</li>
 </ul>
 
 <p>
-	Ces fonctionnalités peuvent être activées ou désactivées via le bouton « Afficher/Masquer les utilitaires » (<img
+	Ces fonctionnalités peuvent être activées ou désactivées via le bouton «Afficher/Masquer les utilitaires» (<img
 		src="<?=$basepath?>/drawable/ic_tools_up.png" /> <img src="<?=$basepath?>/drawable/ic_tools_down.png" /> <img
 		src="<?=$basepath?>/drawable/ic_tools_left.png" /> <img src="<?=$basepath?>/drawable/ic_tools_right.png" />).
 </p>

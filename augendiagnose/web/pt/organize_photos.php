@@ -1,7 +1,7 @@
 <?php
 if (isAugendiagnose ()) {
 	?>
-<h2><span class="mobile"><?=$appname?> - </span>Organize novas fotos</h2>
+<h2><?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Organize novas fotos</h2>
 
 <p>Aqui você pode organizar suas fotos de olhos.</p>
 

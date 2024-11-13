@@ -1,4 +1,4 @@
-<h2><span class="mobile"><?=$appname?> - </span>Ver fotos</h2>
+<h2><?php if (!array_key_exists("createHtmlString", $_GET)) {?><span class="mobile"><?=$appname?> - </span><?php }?>Ver fotos</h2>
 
 <p>Aquí se puede seleccionar el nombre de una persona cuyas fotos oculares se quiere ver. Luego la aplicación mostrará
 	todas las fotos de ojo de esta persona en una lista ordenada por fecha.</p>
