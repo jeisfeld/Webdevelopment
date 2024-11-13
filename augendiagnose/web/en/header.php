@@ -3,6 +3,7 @@
 	<a href="<?=$urlprefix?>/de/<?=$pagepathname?>">Deutsch</a>
 	<a href="<?=$urlprefix?>/es/<?=$pagepathname?>">Español</a>
 	<a href="<?=$urlprefix?>/pt/<?=$pagepathname?>">Português</a>
+	<a href="<?=$urlprefix?>/fr/<?=$pagepathname?>">Français</a>
 </p>
 
 <?php 

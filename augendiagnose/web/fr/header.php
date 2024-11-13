@@ -2,8 +2,8 @@
 	<a href="<?=$urlprefix?>/en/<?=$pagepathname?>">English</a>
 	<a href="<?=$urlprefix?>/de/<?=$pagepathname?>">Deutsch</a>
 	<a href="<?=$urlprefix?>/es/<?=$pagepathname?>">Español</a>
-	Português
-	<a href="<?=$urlprefix?>/fr/<?=$pagepathname?>">Français</a>
+	<a href="<?=$urlprefix?>/pt/<?=$pagepathname?>">Português</a>
+	Français
 </p>
 
 <?php 
@@ -18,4 +18,4 @@ if (!$nopageselected) {
 }
 ?>
 
-<h1 class="desktop"><?=$appname?> - Aplicativo para Android</h1>
+<h1 class="desktop"><?=$appname?> - Android App</h1>
