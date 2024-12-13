@@ -1,6 +1,12 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
+	<li><b>Versión 1.4.16:</b> Corrección de errores.</li>
+
+	<li><b>Versión 1.4.15:</b> Se habilitó la visualización con resolución completa al hacer zoom en imágenes grandes.</li>
+
+	<li><b>Versión 1.4.14:</b> Corrección de errores.</li>
+
 	<li><b>Versión 1.4.13:</b> Se aumentó el tamaño máximo de mapa de bits de 2048 a 4096.</li>
 
 	<li><b>Versión 1.4.12:</b> Corrección de errores.</li>

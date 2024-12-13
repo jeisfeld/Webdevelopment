@@ -1,6 +1,12 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.4.16:</b> Bugfixes.</li>
+
+	<li><b>Version 1.4.15:</b> Enabled full resolution display when zooming big images.</li>
+
+	<li><b>Version 1.4.14:</b> Bugfixes.</li>
+
 	<li><b>Version 1.4.13:</b> Increased max bitmap size from 2048 to 4096.</li>
 
 	<li><b>Version 1.4.12:</b> Bugfixes.</li>
