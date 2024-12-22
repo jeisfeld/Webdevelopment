@@ -1,4 +1,6 @@
-<h2><span class="mobile">Random Image - </span>How to use</h2>
+<h2>
+	<span class="mobile">Random Image - </span>How to use
+</h2>
 
 <p>This app displays random images from image lists that you configure. Therefore, you first have to configure an image
 	list before you can enjoy the display of random images.</p>
@@ -159,5 +161,6 @@ There are three types of widgets that you can place on your home screen in order
 	</li>
 	<li>Change the widget settings</li>
 	<li>Change the notification settings (and add or delete notifications)</li>
-	<li>Backup, restore, rename, delete or clone a single image list (via long pressing an image list symbol</li>
+	<li>Backup, restore, rename, delete or clone a single image list, or create a shortcut (via long pressing an image list
+		symbol</li>
 </ul>

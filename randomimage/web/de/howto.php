@@ -1,4 +1,6 @@
-<h2><span class="mobile">Zufallsbild - </span>Hinweise zur Benutzung</h2>
+<h2>
+	<span class="mobile">Zufallsbild - </span>Hinweise zur Benutzung
+</h2>
 
 <p>Diese App zeigt zufällige Bilder von Bildlisten, die Sie konfigurieren. Daher müssen Sie zunächst eine Bildliste
 	erstellen, bevor Sie die Anzeige zufälliger Bilder genießen können.</p>
@@ -166,6 +168,6 @@ Es gibt drei Arten von Widgets, die Sie auf Ihrem Home-Bildschirm platzieren kö
 	</li>
 	<li>Die Widget-Einstellungen ändern</li>
 	<li>Die Benachrichtigungs-Einstellungen ändern (und Benachrichtigungen hinzufügen oder löschen)</li>
-	<li>Eine einzelne Bildliste sichern, wiederherstellen, umbenennen, löschen oder klonen (durch langen Druck auf ein
-		Bildlistensymbol)</li>
+	<li>Eine einzelne Bildliste sichern, wiederherstellen, umbenennen, löschen oder klonen, oder einen Shortcut erstellen
+		(durch langen Druck auf ein Bildlistensymbol)</li>
 </ul>

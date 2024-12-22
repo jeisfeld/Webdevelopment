@@ -1,4 +1,6 @@
-<h2><span class="mobile">Imagen Aleatoria - </span>Notas de uso</h2>
+<h2>
+	<span class="mobile">Imagen Aleatoria - </span>Notas de uso
+</h2>
 
 <p>Esta aplicación muestra imágenes aleatorias de las listas de imágenes que configura. Por lo tanto, primero debe
 	configurar una lista de imágenes antes de poder disfrutar de la visualización de imágenes aleatorias.</p>
@@ -165,6 +167,6 @@ Hay tres tipos de widgets que puede colocar en su pantalla de inicio para ver im
 	</li>
 	<li>Cambiar la configuración del widget</li>
 	<li>Cambiar la configuración de notificaciones (y agregar o eliminar notificaciones)</li>
-	<li>Copia de seguridad, restaurar, renombrar, eliminar o clonar una sola lista de imágenes (presionando prolongadamente
-		un símbolo de lista de imágenes</li>
+	<li>Copia de seguridad, restaurar, renombrar, eliminar o clonar una sola lista de imágenes, o crear un acceso directo
+		(presionando prolongadamente un símbolo de lista de imágenes</li>
 </ul>
