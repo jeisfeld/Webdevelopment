@@ -1,6 +1,8 @@
 <h2><span class="mobile">Random Image - </span>Release Notes</h2>
 
 <ul>
+	<li><b>Version 1.5.1:</b> Bugfixes.</li>
+
 	<li><b>Version 1.5.0:</b> Creation of shortcuts.</li>
 
 	<li><b>Version 1.4.16:</b> Bugfixes.</li>

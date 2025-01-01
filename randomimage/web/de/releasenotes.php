@@ -1,6 +1,8 @@
 <h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
 
 <ul>
+	<li><b>Version 1.5.1:</b> Fehlerbehebungen.</li>
+
 	<li><b>Version 1.5.0:</b> Erstellung von Shortcuts.</li>
 
 	<li><b>Version 1.4.16:</b> Fehlerbehebungen.</li>

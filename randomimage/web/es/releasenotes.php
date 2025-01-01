@@ -1,6 +1,8 @@
 <h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
 
 <ul>
+	<li><b>Versión 1.5.1:</b> Corrección de errores.</li>
+
 	<li><b>Versión 1.5.0:</b> Creación de accesos directos.</li>
 
 	<li><b>Versión 1.4.16:</b> Corrección de errores.</li>
