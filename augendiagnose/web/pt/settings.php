@@ -191,7 +191,7 @@ if (isAugendiagnose ()) {
 		<tr>
 		<td width="30%" valign="top">Remover anúncios (somente para usuários de versões anteriores)</td>
 		<td width="70%" valign="top">Aquí usted puede desactivar todos los anuncios (actualmente sólo en los Estados Unidos).
-			Esta función se puede activar a través de una donación o mediante clave de usuario.</td>
+			Esta función se puede activar a través de una donación o mediante clave de usuário.</td>
 	</tr>
 <?PHP
 }
