@@ -1,0 +1,186 @@
+/* Base reset */
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+	/* Prevent scrolling */
+}
+
+/* Background image and overall font */
+body {
+	background: url('../img/joerg.jpg') no-repeat center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Container for centered content */
+.content {
+	text-align: center;
+	padding: 20px;
+}
+
+h1, h2, a {
+	color: white;
+	text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000, 0 0 35px #000;
+	margin: 10px 0;
+}
+
+h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: 5px 20px;
+	transition: color 0.3s;
+}
+
+a:hover {
+	color: #EE82EE;
+	/* Light violet */
+}
+
+.section h2:hover ~a {
+	color: lightgreen;
+}
+
+.icon {
+	width: 1em; /* Adjusts the width relative to the text size */
+	height: 1em; /* Adjusts the height to match the width */
+	vertical-align: middle; /* Aligns the icon with the text */
+	fill: currentColor; /* Makes the SVG icon inherit the current text color */
+	margin-right: 4px;
+	filter: drop-shadow(0 0 5px #000) drop-shadow(0 0 10px #000) drop-shadow(0 0 15px #000);
+}
+
+.impressum {
+	position: fixed; /* Fix the element relative to the viewport */
+	bottom: 10px;
+	right: 10px;
+	font-size: 1em;
+	z-index: 1000; /* Ensure it appears above other elements */
+	transition: color 0.3s;
+}
+
+/* Modal overlay */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed;
+	z-index: 1001; /* Above other elements */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; /* Enable scrolling if needed */
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal content box */
+.modal-content {
+	background-color: #fff;
+	margin: 4% auto; /* Centered on the page */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	border-radius: 4px;
+	position: relative;
+}
+
+.modal-content h1, .modal-content h2, .modal-content a {
+	text-shadow: none;
+	color: black;
+}
+
+.modal-content a {
+	font-size: 1em;
+	margin: 0px;
+}
+
+.modal-content h2 {
+	margin: 0px
+}
+
+/* Close button (X) in modal */
+.close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+}
+
+.close:hover {
+	color: #000;
+}
+
+/* Increase text sizes on big screens */
+@media ( min-width : 1200px) {
+	h1 {
+		font-size: 5em;
+	}
+	h2 {
+		font-size: 3em;
+	}
+	a {
+		font-size: 2em;
+	}
+}
+
+/* On portrait screens, display one link per line */
+@media ( orientation : portrait) {
+	a {
+		display: block;
+		margin: 10px 0;
+	}
+}
+
+/* Adjust for very small screens */
+@media ( max-width : 600px) {
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	a {
+		font-size: 1em;
+	}
+}
+
+/* Enable scrolling for small landscape screens */
+@media ( orientation : landscape) and (max-height: 440px) {
+	html, body {
+		overflow: auto; /* Enable scrolling */
+	}
+	/* Remove Flexbox centering to display content from the top */
+	body {
+		display: block;
+	}
+	/* Optionally, remove any extra top margin from the main content */
+	.content {
+		margin-top: 0;
+	}
+
+	/* Override the Impressum link's fixed positioning */
+	.impressum {
+		position: static; /* Now it will follow normal document flow */
+		margin-top: 20px; /* Add some spacing from the rest of the content if needed */
+		display: block; /* Or block/center as you prefer */
+		text-align: right;
+	}
+}

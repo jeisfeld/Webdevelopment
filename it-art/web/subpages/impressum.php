@@ -13,8 +13,15 @@
 <h3>Kontakt:</h3>
 <p>
 	Telefon: +49-176-20928331<br> E-Mail:
-	<a href="mailto:Jörg Eisfeld<webdevelopment@ it-art.de>">webdevelopment@it-art.de</a>
+	<a href="mailto:Jörg Eisfeld<webdevelopment@it-art.de>">webdevelopment@it-art.de</a>
 </p>
+
+<h3>Umsatzsteuer-ID</h3>
+Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE308047049
+
+<h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+Jörg Eisfeld
+
 <h3>Disclaimer - rechtliche Hinweise</h3>
 <h4>§1 Haftungsbeschränkung</h4>
 <p>Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. Der Anbieter übernimmt jedoch keine Gewähr
