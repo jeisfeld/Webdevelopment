@@ -61,6 +61,8 @@
 <h3>Release Notes</h3>
 
 <ul>
+	<li><b>Version 0.1.16:</b> Added two more topographies. Updated to Java 23.</li>
+
 	<li><b>Version 0.1.15:</b> Added Jausas topography (French). Bugfixes.</li>
 
 	<li><b>Version 0.1.14:</b> Added overlays in French and Polish.</li>

@@ -67,6 +67,8 @@
 <h3>Notes de version</h3>
 
 <ul>
+	<li><b>Version 0.1.16:</b> Se añadieron dos topografías más. Actualizado a Java 23.</li>
+
 	<li><b>Version 0.1.15 :</b> Ajout de la topographie de Jausas (français). Corrections de bugs.</li>
 
 	<li><b>Version 0.1.14 :</b> Ajout des superpositions en français et en polonais.</li>

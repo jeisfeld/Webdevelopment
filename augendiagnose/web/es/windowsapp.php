@@ -1,4 +1,6 @@
-<h2><span class="mobile"><?=$appname?> - </span>La aplicación para Windows</h2>
+<h2>
+	<span class="mobile"><?=$appname?> - </span>La aplicación para Windows
+</h2>
 
 <p>Hay una aplicación de acompañamiento de Windows que permite visualizar las fotos de los ojos en un ordenador de
 	Windows como en la aplicación para Android.</p>
@@ -64,6 +66,8 @@
 <h3>Notas de lanzamiento</h3>
 
 <ul>
+	<li><b>Versión 0.1.16:</b> Ajout de deux autres topographies. Mise à jour vers Java 23.</li>
+
 	<li><b>Versión 0.1.15:</b> Añadido mapa di Jausas (francés). Corrección de errores.</li>
 
 	<li><b>Versión 0.1.14:</b> Superposiciónes añadida en francés y polaco</li>

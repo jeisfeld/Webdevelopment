@@ -9,13 +9,9 @@
 <h3>La aplicación para Windows</h3>
 
 <p>
-	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-x86-0.1.15.exe" target="_blank">Descargar versión 32bit</a>
+	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-0.1.16.msi" target="_blank">Descargar instalador de Windows</a>
 </p>
 
 <p>
-	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-x64-0.1.15.exe" target="_blank">Descargar versión 64bit</a>
-</p>
-
-<p>
-	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX.jar" target="_blank">Descargar archivo jar ejecutable</a>
+	<a href="https://augendiagnose-app.de/bin/AugendiagnoseFX-0.1.16.jar" target="_blank">Descargar archivo jar ejecutable</a>
 </p>

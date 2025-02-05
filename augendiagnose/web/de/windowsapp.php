@@ -1,4 +1,6 @@
-<h2><span class="mobile"><?=$appname?> - </span>Die Windows-Anwendung</h2>
+<h2>
+	<span class="mobile"><?=$appname?> - </span>Die Windows-Anwendung
+</h2>
 
 <p>Es gibt eine ergänzende Windows-Anwendung, die es erlaubt, die Augenfotos auch auf einem Windows-Desktop anzusehen,
 	ähnlich wie in der Android-App.</p>
@@ -66,6 +68,8 @@
 <h3>Versionshinweise</h3>
 
 <ul>
+	<li><b>Version 0.1.16:</b> Zwei weitere Topographien hinzugefügt. Auf Java 23 aktualisiert.</li>
+
 	<li><b>Version 0.1.15:</b> Jausas-Topographie (französisch) hinzugefügt. Fehlerkorrekturen</li>
 
 	<li><b>Version 0.1.14:</b> Overlays in Französisch und Polnisch hinzugefügt.</li>
