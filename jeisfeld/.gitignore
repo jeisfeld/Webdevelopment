@@ -1,6 +1,4 @@
 .well-known
-augendiagnose
-coachat
-jeisfeld
 .htaccess
 .project
+web/songarchive/db_config.php

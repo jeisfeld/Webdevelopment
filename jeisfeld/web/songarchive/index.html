@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Song Archive</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+}
+
+/* Centered Container for Search & Table */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+/* Center Page Heading */
+h2 {
+	text-align: center;
+	width: 100%;
+}
+
+/* Search Box with Icon (Same Width as Table) */
+.search-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 1024px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: white;
+	padding-left: 10px; /* Ensure icon spacing */
+	box-sizing: border-box; /* Ensure padding does not exceed width */
+}
+
+/* Search Icon (PNG or SVG) */
+.search-container img {
+	width: 20px;
+	height: 20px;
+}
+
+/* Style the Search Input (Full Width Inside Container) */
+.search-container input {
+	flex: 1; /* Take remaining space */
+	padding: 8px;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	text-align: left;
+	width: 100%;
+}
+
+/* Table Styling (Same Width as Search Box) */
+table {
+	width: 100%;
+	max-width: 1024px;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 8px;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+th {
+	background: #f4f4f4;
+}
+
+/* Ensure Actions Stay in One Line */
+.actions {
+    white-space: nowrap;
+    display: flex;
+    gap: 5px; /* Default small spacing */
+}
+
+/* Increase Button Spacing on Larger Screens */
+@media (min-width: 1024px) {
+    .actions {
+        gap: 15px; /* Larger spacing for wide screens */
+    }
+}
+
+.icon-btn {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+}
+
+/* Fullscreen Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Text Popup Content */
+.text-popup-content {
+    width: 90vw; /* Prevents text from touching screen edges */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 5vw;
+    align-items: center;
+    position: relative; /* Ensure proper spacing with buttons */
+}
+
+/* Ensure Text Starts Below Buttons */
+.text-content {
+    font-size: min(5vw, 24px);
+    line-height: 1.5;
+    text-align: left;
+    max-width: 80ch;
+    margin-top: 50px; /* Ensures text starts below buttons */
+}
+
+/* Centered Font Controls (Always Visible) */
+.font-controls {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px; /* Push text downward */
+}
+
+/* Font Resize Buttons */
+.font-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Circular Close Button */
+.popup-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	font-size: 24px;
+	color: black; /* Change to black for better contrast on white */
+	background: rgba(255, 255, 255, 0.7);
+	border: none;
+	padding: 12px;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	z-index: 1000;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Image Display - Fullscreen with Pinch & Drag Support */
+.popup img {
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+	transition: transform 0.2s ease;
+	touch-action: none; /* Disable default touch scrolling */
+}
+
+/* Ensure Text Stays Large Enough on Mobile */
+@media ( max-width : 768px) {
+	body {
+		font-family: Arial, sans-serif;
+		padding: 10px;
+	}
+    .text-popup-content {
+        padding: 3vw;
+    }
+
+    .text-content {
+        font-size: min(6vw, 22px);
+        max-width: 100%;
+        margin-top: 60px; /* Increase spacing for better alignment */
+    }
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<!-- Centered Page Heading -->
+		<h2>Circle Song Archive</h2>
+
+		<!-- Search Box with Local PNG Icon -->
+		<div class="search-container">
+			<img src="/img/search.png" alt="Search"> <input type="text" id="searchBox" placeholder="Search..."
+				onkeyup="searchSongs()">
+		</div>
+
+		<!-- Table for Results -->
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Title</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="results"></tbody>
+		</table>
+	</div>
+
+
+	<!-- Popup Container -->
+	<div id="popup" class="popup" style="display: none;">
+		<div class="popup-content">
+			<span class="popup-close" onclick="closePopup()">&times;</span>
+			<div id="popup-body"></div>
+		</div>
+	</div>
+
+	<script>
+        async function searchSongs() {
+            let query = document.getElementById("searchBox").value.trim();
+            if (query === "") {
+                document.getElementById("results").innerHTML = "";
+                return;
+            }
+
+            let response = await fetch("search.php?q=" + encodeURIComponent(query));
+            let songs = await response.json();
+
+            let tableHTML = "";
+            songs.forEach(song => {
+                tableHTML += `
+                    <tr>
+                        <td>${song.id}</td>
+                        <td>${song.title}</td>
+                        <td class="actions">
+                            <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+                            <img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">
+                            <img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">
+                        </td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById("results").innerHTML = tableHTML;
+        }
+
+        function playAudio(mp3filename) {
+            if (!mp3filename) return;
+            document.getElementById("popup-body").innerHTML = `
+                <audio controls autoplay>
+                    <source src="/audio/songs/${encodeURIComponent(mp3filename)}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            `;
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function showText(id, title) {
+            fetch("search.php?q=" + encodeURIComponent(id))
+                .then(response => response.json())
+                .then(songs => {
+                    if (!songs || songs.length === 0 || !songs[0].text) {
+                        document.getElementById("popup-body").innerHTML = `<h2>${title}</h2><p>No text available.</p>`;
+                    } else {
+                        let songText = songs[0].text.replace(/\n/g, '<br>');
+
+                        document.getElementById("popup-body").innerHTML = `
+                            <div class="text-popup-content">
+                                <div class="font-controls">
+                                    <button class="font-btn" onclick="adjustFontSize(0.8695)">A-</button>
+                                    <button class="font-btn" onclick="adjustFontSize(1.15)">A+</button>
+                                </div>
+                                <div class="text-content" id="text-content">${songText}</div>
+                            </div>
+                        `;
+
+                        adjustTextSize();
+                        ensureTextPositioning();
+                    }
+                    document.getElementById("popup").style.display = "flex";
+                    enterFullscreen();
+                });
+        }
+
+
+        function adjustFontSize(change) {
+            let textContent = document.getElementById("text-content");
+            if (!textContent) return;
+
+            let currentSize = parseFloat(window.getComputedStyle(textContent).fontSize);
+            let newSize = Math.max(10, Math.round(currentSize * change));
+            textContent.style.fontSize = newSize + "px";
+
+            ensureTextPositioning(); // Recheck positioning after resizing
+        }
+
+        function adjustTextSize() {
+            let textContent = document.getElementById("text-content");
+            if (!textContent) return;
+
+            let screenWidth = window.innerWidth;
+            let screenHeight = window.innerHeight;
+            let baseSize = Math.min(screenWidth, screenHeight) * 0.05;
+            
+            textContent.style.fontSize = `${Math.max(baseSize, 16)}px`;
+        }
+
+        function ensureTextPositioning() {
+            let textContent = document.getElementById("text-content");
+            if (!textContent) return;
+
+            // If the text content is shorter than 80% of the screen, center it
+            if (textContent.scrollHeight < window.innerHeight * 0.8) {
+                textContent.style.margin = "auto 0"; // Center vertically
+            } else {
+                textContent.style.margin = "0"; // Keep text at the top
+            }
+        }
+
+        function autoRotateAndSizeImage() {
+            const img = document.getElementById("popup-image");
+            if (!img) return;
+
+            // Determine if we need to rotate
+            let isPortrait = window.innerHeight > window.innerWidth;
+            let rotation = isPortrait ? 90 : 0;
+
+            // Apply rotation first
+            img.style.transform = `rotate(${rotation}deg)`;
+            img.dataset.rotation = rotation; // Store rotation for touch interactions
+
+            // Now apply correct sizing AFTER rotation
+            setTimeout(() => {
+                if (rotation === 90) {
+                    img.style.width = "100vh";  // Height becomes new width
+                    img.style.height = "100vw"; // Width becomes new height
+                } else {
+                    img.style.width = "100vw";
+                    img.style.height = "100vh";
+                }
+                img.style.objectFit = "contain"; // Maintain aspect ratio
+            }, 100);
+        }
+
+        function showImage(tabfilename) {
+            if (!tabfilename) return;
+
+            document.getElementById("popup-body").innerHTML = `
+                <img id="popup-image" src="/img/songs/${encodeURIComponent(tabfilename)}">
+            `;
+            document.getElementById("popup").style.display = "flex";
+
+            // Request fullscreen mode
+            enterFullscreen();
+
+            // Allow image to load first, then apply rotation, resizing, and touch interactions
+            setTimeout(() => {
+                autoRotateAndSizeImage();
+                enableImageInteractions();
+            }, 50);
+        }
+
+        function enableImageInteractions() {
+            const img = document.getElementById("popup-image");
+            let scale = 1; // Default zoom level
+            let lastTouchDistance = 0;
+            let isDragging = false;
+            let startX = 0, startY = 0, translateX = 0, translateY = 0;
+
+            // Store rotation angle (preserved during zoom & pan)
+            let rotation = img.style.transform.includes("rotate(90deg)") ? 90 : 0;
+            img.dataset.rotation = rotation; // Save rotation to dataset
+
+            img.addEventListener("touchstart", (e) => {
+                if (e.touches.length === 2) {
+                    lastTouchDistance = getTouchDistance(e.touches);
+                } else if (e.touches.length === 1) {
+                    isDragging = true;
+                    startX = e.touches[0].clientX - translateX;
+                    startY = e.touches[0].clientY - translateY;
+                }
+            });
+
+            img.addEventListener("touchmove", (e) => {
+                if (e.touches.length === 2) {
+                    // Handle pinch-to-zoom
+                    e.preventDefault();
+                    const newDistance = getTouchDistance(e.touches);
+                    scale *= newDistance / lastTouchDistance;
+                    lastTouchDistance = newDistance;
+                } else if (e.touches.length === 1 && isDragging) {
+                    // Handle panning (dragging)
+                    e.preventDefault();
+                    translateX = e.touches[0].clientX - startX;
+                    translateY = e.touches[0].clientY - startY;
+                }
+
+                // Apply transform with preserved rotation
+                img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale}) rotate(${rotation}deg)`;
+            });
+
+            img.addEventListener("touchend", () => {
+                isDragging = false;
+            });
+
+            function getTouchDistance(touches) {
+                const dx = touches[0].clientX - touches[1].clientX;
+                const dy = touches[0].clientY - touches[1].clientY;
+                return Math.sqrt(dx * dx + dy * dy);
+            }
+        }
+
+        function enterFullscreen() {
+            let elem = document.documentElement; // Fullscreen for the entire document
+
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { // Firefox
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Edge
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { // IE/Edge
+                elem.msRequestFullscreen();
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popup-body").innerHTML = "";
+
+            // Exit fullscreen mode when closing
+            exitFullscreen();
+        }
+
+        function exitFullscreen() {
+            if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari, Edge
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+     	// Close pop-up when pressing Escape key
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closePopup();
+            }
+        });
+
+        
+    </script>
+
+</body>
+</html>
