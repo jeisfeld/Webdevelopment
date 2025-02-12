@@ -12,8 +12,11 @@ if ($query === "") {
 	exit;
 }
 
+// Use regex to check if query is a valid ID (numeric OR numeric + single letter)
+$is_valid_id = preg_match('/^\d+[a-zA-Z]?$/', $query);
+
 // SQL Query
-if (is_numeric($query)) {
+if ($is_valid_id) {
 	// If searching by ID
 	$sql = "SELECT id, title, text, tabfilename, mp3filename FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
 	$params = ["%" . $query . "%"];
@@ -26,16 +29,19 @@ if (is_numeric($query)) {
 	$types = "";
 	
 	foreach ($words as $word) {
-		$conditions[] = "(title LIKE ? OR text LIKE ?)";
+		$conditions[] = "(title LIKE ? OR text LIKE ? OR author like ? OR keywords like ?)";
 		$params[] = "%" . $word . "%";
 		$params[] = "%" . $word . "%";
-		$types .= "ss";
+		$params[] = "%" . $word . "%";
+		$params[] = "%" . $word . "%";
+		$types .= "ssss";
 	}
 	
-	$sql = "SELECT id, title, text, tabfilename, mp3filename FROM songs WHERE " . implode(" AND ", $conditions) . "
-            ORDER BY CASE WHEN title LIKE ? THEN 1 ELSE 2 END, CAST(id AS UNSIGNED) ASC";
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, author FROM songs WHERE " . implode(" AND ", $conditions) . "
+            ORDER BY CASE WHEN title LIKE ? THEN 1 WHEN text LIKE ? THEN 2 ELSE 3 END, CAST(id AS UNSIGNED) ASC";
 	$params[] = "%" . $query . "%";
-	$types .= "s";
+	$params[] = "%" . $query . "%";
+	$types .= "ss";
 }
 
 // Execute SQL
