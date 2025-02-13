@@ -16,9 +16,11 @@ async function searchSongs() {
                  <td>${song.title}</td>
                  <td class="author-col">${song.author || ""}</td>
                  <td class="actions">
-                     <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
-                     <img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">
-                     <img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">
+					 <div class="actions-container">
+	                     <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+	                     <img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">
+	                     <img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">
+					 </div>
                  </td>
              </tr>
          `;
@@ -39,6 +41,8 @@ function playAudio(mp3filename) {
 	document.body.classList.add("no-scroll"); // Disable main page scrolling
 }
 
+let hideControlsTimeout; // Store timeout globally
+
 function showText(id, title) {
 	fetch("search.php?q=" + encodeURIComponent(id))
 		.then(response => response.json())
@@ -49,17 +53,32 @@ function showText(id, title) {
 				let songText = songs[0].text.replace(/\n/g, '<br>');
 
 				document.getElementById("popup-body").innerHTML = `
-                     <div class="text-popup-content">
-                         <div class="font-controls">
-                             <button class="font-btn" onclick="adjustFontSize(0.8696)">A-</button>
-                             <button class="font-btn" onclick="adjustFontSize(1.15)">A+</button>
-                         </div>
-                         <div class="text-content" id="text-content">${songText}</div>
-                     </div>
-                 `;
+                    <div class="text-popup-content">
+                        <div class="font-controls" id="font-controls">
+                            <button class="control-btn" onclick="adjustFontSize(0.8696)">A-</button>
+                            <button class="control-btn" onclick="adjustFontSize(1.15)">A+</button>
+							<button class="control-btn" onclick="adjustLineSpacing(-0.1)">
+							    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+							        <path d="M12 10L8 4H16L12 10Z M12 14L16 20H8L12 14Z"/>
+							    </svg>
+							</button>
+							<button class="control-btn" onclick="adjustLineSpacing(0.1)">
+							    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+							        <path d="M12 3L8 9H16L12 3Z M12 21L8 15H16L12 21Z"/>
+							    </svg>
+							</button>
+							<button class="control-btn" id="toggle-align-btn" onclick="toggleTextAlignment()">
+							    <svg id="toggle-align-icon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+							        <path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+							    </svg>
+							</button>
+                        </div>
+                        <div class="text-content" id="text-content">${songText}</div>
+                    </div>
+                `;
 
-				adjustTextSize();
 				ensureTextPositioning();
+				setupFontControls(); // Start auto-hide timer
 			}
 
 			document.getElementById("popup").style.display = "flex";
@@ -68,6 +87,32 @@ function showText(id, title) {
 		});
 }
 
+function setupFontControls() {
+	let fontControls = document.getElementById("font-controls");
+	let textContent = document.getElementById("text-content");
+
+	if (!fontControls || !textContent) return;
+
+	// Function to hide font controls
+	function hideControls() {
+		fontControls.classList.add("hidden");
+	}
+
+	// Function to show controls & restart the hide timer
+	function showControls() {
+		fontControls.classList.remove("hidden");
+
+		// Restart the hide timer
+		clearTimeout(hideControlsTimeout);
+		hideControlsTimeout = setTimeout(hideControls, 3000);
+	}
+
+	// Auto-hide font controls after 3 seconds
+	hideControlsTimeout = setTimeout(hideControls, 3000);
+
+	// Show controls & reset timer when clicking anywhere in popup (buttons included)
+	document.getElementById("popup-body").addEventListener("click", showControls);
+}
 
 function adjustFontSize(change) {
 	let textContent = document.getElementById("text-content");
@@ -78,6 +123,18 @@ function adjustFontSize(change) {
 	textContent.style.fontSize = newSize + "px";
 
 	ensureTextPositioning(); // Recheck positioning after resizing
+}
+
+let currentLineHeight = 1.5; // Explicitly track line height
+
+function adjustLineSpacing(change) {
+	let textContent = document.getElementById("text-content");
+	if (!textContent) return;
+
+	currentLineHeight = Math.max(1, currentLineHeight + change); // Prevent going below 1.0
+	textContent.style.lineHeight = currentLineHeight.toFixed(2); // Apply the new value
+
+	ensureTextPositioning();
 }
 
 function adjustTextSize() {
@@ -96,11 +153,32 @@ function ensureTextPositioning() {
 	if (!textContent) return;
 
 	// If the text content is shorter than 80% of the screen, center it
-	if (textContent.scrollHeight < window.innerHeight * 0.8) {
+	if (textContent.scrollHeight < window.innerHeight) {
 		textContent.style.margin = "auto 0"; // Center vertically
 	} else {
 		textContent.style.margin = "0"; // Keep text at the top
 	}
+}
+
+function toggleTextAlignment() {
+    let textContent = document.getElementById("text-content");
+    let toggleIcon = document.getElementById("toggle-align-icon");
+
+    if (!textContent || !toggleIcon) return;
+
+    if (textContent.classList.contains("text-centered")) {
+        textContent.classList.remove("text-centered");
+        textContent.style.textAlign = "left";
+
+        // Switch to "left-aligned" text icon
+        toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+    } else {
+        textContent.classList.add("text-centered");
+        textContent.style.textAlign = "center";
+
+        // Switch to "centered text" icon
+        toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+    }
 }
 
 function autoRotateAndSizeImage() {

@@ -69,14 +69,30 @@ th {
 
 /* Ensure Actions Stay in One Line */
 .actions {
-	white-space: nowrap;
-	display: flex;
-	gap: 5px; /* Default small spacing */
+    height: 100%;
+    padding: 0;
+}
+
+/* Flex Container Inside Actions Cell */
+.actions-container {
+    display: flex;
+    align-items: center; /* Center icons vertically */
+    justify-content: center; /* Center icons horizontally */
+    gap: 5px; /* Adds spacing between icons */
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure Icons Scale Properly */
+.actions img {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
 }
 
 /* Increase Button Spacing on Larger Screens */
 @media ( min-width : 1024px) {
-	.actions {
+	.actions-container {
 		gap: 15px; /* Larger spacing for wide screens */
 	}
 }
@@ -116,33 +132,63 @@ body.no-scroll {
 	align-items: center;
 }
 
-/* Text Content (Scrollable, Padding Inside, Scrollbar on Edge) */
 .text-content {
-    font-size: min(5vw, 24px);
+    font-size: min(5vw, 36px);
     line-height: 1.5;
     text-align: left;
     max-width: 80ch;
-    width: 100%; /* Ensures scrollbar aligns with the screen edge */
-    overflow-y: auto; /* Enable scrolling when needed */
-    padding: 5vw; /* Adds padding inside, without affecting scrollbar */
-    box-sizing: border-box; /* Ensures padding does not reduce width */
+    width: 100%;
+    overflow-y: auto;
+    padding: 5vw;
+    box-sizing: border-box;
+    transition: text-align 0.3s ease-in-out; /* Smooth transition */
 }
 
-/* Keep Font Resize Buttons Visible */
+/* Centered Text */
+.text-centered {
+    text-align: center !important;
+}
+
+/* Font & Spacing Controls */
 .font-controls {
-	display: flex;
-	justify-content: center;
-	position: relative;
-	padding: 10px;
-	margin-bottom: 0; /* No extra margin */
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
 }
 
-/* Font Resize Buttons */
-.font-btn {
-	padding: 5px 10px;
-	margin: 0 5px;
-	cursor: pointer;
-	font-size: 1.2rem;
+/* Hidden Font Controls */
+.font-controls.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Control Buttons */
+.control-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex; /* Flex ensures perfect centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    width: 40px; /* Ensures all buttons have the same width */
+    height: 40px; /* Ensures all buttons have the same height */
+}
+
+/* Ensure SVG Icons Are Properly Sized */
+.control-btn svg {
+    width: 24px; /* Icon size */
+    height: 24px;
+    display: block;
+    fill: black; /* Ensures consistent color */
 }
 
 /* Circular Close Button */
