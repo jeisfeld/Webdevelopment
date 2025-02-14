@@ -17,9 +17,9 @@ async function searchSongs() {
                  <td class="author-col">${song.author || ""}</td>
                  <td class="actions">
 					 <div class="actions-container">
-	                     <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
-	                     <img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">
-	                     <img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">
+						 <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+						 ${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
+						 ${song.mp3filename ? `<img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">` : ""}
 					 </div>
                  </td>
              </tr>
@@ -161,24 +161,24 @@ function ensureTextPositioning() {
 }
 
 function toggleTextAlignment() {
-    let textContent = document.getElementById("text-content");
-    let toggleIcon = document.getElementById("toggle-align-icon");
+	let textContent = document.getElementById("text-content");
+	let toggleIcon = document.getElementById("toggle-align-icon");
 
-    if (!textContent || !toggleIcon) return;
+	if (!textContent || !toggleIcon) return;
 
-    if (textContent.classList.contains("text-centered")) {
-        textContent.classList.remove("text-centered");
-        textContent.style.textAlign = "left";
+	if (textContent.classList.contains("text-centered")) {
+		textContent.classList.remove("text-centered");
+		textContent.style.textAlign = "left";
 
-        // Switch to "left-aligned" text icon
-        toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
-    } else {
-        textContent.classList.add("text-centered");
-        textContent.style.textAlign = "center";
+		// Switch to "left-aligned" text icon
+		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+	} else {
+		textContent.classList.add("text-centered");
+		textContent.style.textAlign = "center";
 
-        // Switch to "centered text" icon
-        toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
-    }
+		// Switch to "centered text" icon
+		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+	}
 }
 
 function autoRotateAndSizeImage() {
