@@ -18,10 +18,14 @@ $is_valid_id = preg_match('/^\d+[a-zA-Z]?$/', $query);
 // SQL Query
 if ($is_valid_id) {
 	// If searching by ID
-	$sql = "SELECT id, title, text, tabfilename, mp3filename FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, author FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
 	$params = ["%" . $query . "%"];
 	$types = "s";
-} else {
+}
+else if ($query === "*") {
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, author FROM songs order by id";
+}
+else {
 	// If searching by title/text
 	$words = explode(" ", $query);
 	$conditions = [];
@@ -46,7 +50,9 @@ if ($is_valid_id) {
 
 // Execute SQL
 $stmt = $conn->prepare($sql);
-$stmt->bind_param($types, ...$params);
+if ($params) {
+	$stmt->bind_param($types, ...$params);
+}
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -54,7 +60,6 @@ $result = $stmt->get_result();
 $songs = [];
 while ($row = $result->fetch_assoc()) {
 	// Debugging: Print the returned text
-	error_log("Fetched text for ID {$row['id']}: " . substr($row['text'], 0, 100)); // Logs first 100 chars
 	$songs[] = $row;
 }
 
