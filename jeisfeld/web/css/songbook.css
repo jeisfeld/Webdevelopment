@@ -21,34 +21,54 @@ h2 {
 
 /* Search Box with Icon (Same Width as Table) */
 .search-container {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	max-width: 1024px;
-	margin-bottom: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	background: white;
-	padding-left: 10px; /* Ensure icon spacing */
-	box-sizing: border-box; /* Ensure padding does not exceed width */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    padding-left: 10px; /* Ensure icon spacing */
+    box-sizing: border-box; /* Ensure padding does not exceed width */
+    position: relative; /* Required for clear button positioning */
 }
 
 /* Search Icon (PNG or SVG) */
 .search-container img {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Style the Search Input (Full Width Inside Container) */
 .search-container input {
-	flex: 1; /* Take remaining space */
-	padding: 8px;
-	font-size: 16px;
-	border: none;
-	outline: none;
-	text-align: left;
-	width: 100%;
+    flex: 1; /* Take remaining space */
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    text-align: left;
+    width: 100%;
+    padding-right: 30px; /* Prevent text from overlapping the clear button */
 }
+
+/* "X" Clear Button */
+#clearButton {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: gray;
+    display: none; /* Initially hidden */
+}
+
+/* Show "X" Button When Needed */
+#clearButton.visible {
+    display: block;
+}
+
 
 /* Table Styling (Same Width as Search Box) */
 table {

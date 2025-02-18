@@ -29,6 +29,24 @@ async function searchSongs() {
 	document.getElementById("results").innerHTML = tableHTML;
 }
 
+function toggleClearButton() {
+	let searchBox = document.getElementById("searchBox");
+	let clearButton = document.getElementById("clearButton");
+
+	if (searchBox.value.length > 0) {
+		clearButton.classList.add("visible"); // Show "X" button
+	} else {
+		clearButton.classList.remove("visible"); // Hide "X" button
+	}
+}
+
+function clearSearch() {
+	let searchBox = document.getElementById("searchBox");
+	searchBox.value = ""; // Clear input field
+	toggleClearButton(); // Hide "X" button
+	searchSongs(); // Trigger search update
+}
+
 function playAudio(mp3filename) {
 	if (!mp3filename) return;
 	document.getElementById("popup-body").innerHTML = `
