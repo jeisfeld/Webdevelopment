@@ -1,8 +1,7 @@
 async function searchSongs(inputquery = null) {
 	let query = inputquery == null ? document.getElementById("searchBox").value.trim() : inputquery;
 	if (query === "") {
-		document.getElementById("results").innerHTML = "";
-		return;
+		query = "*"
 	}
 
 	let response = await fetch("search.php?q=" + encodeURIComponent(query));
@@ -19,7 +18,10 @@ async function searchSongs(inputquery = null) {
 					 <div class="actions-container">
 						 <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
 						 ${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
-						 ${song.mp3filename ? `<img src="/img/play.png" alt="Play Audio" class="icon-btn" onclick="playAudio('${song.mp3filename}')">` : ""}
+						 ${song.mp3filename ? `
+						     <img src="/img/play.png" alt="Play Audio" class="icon-btn"
+						          onclick="playAudio('${song.mp3filename}'${song.mp3filename2 ? `, '${song.mp3filename2}'` : ''})">
+						 ` : ""}
 					 </div>
                  </td>
              </tr>
@@ -44,19 +46,56 @@ function clearSearch() {
 	let searchBox = document.getElementById("searchBox");
 	searchBox.value = ""; // Clear input field
 	toggleClearButton(); // Hide "X" button
+	document.getElementById("searchBox").focus();
 	searchSongs(); // Trigger search update
 }
 
-function playAudio(mp3filename) {
-	if (!mp3filename) return;
-	document.getElementById("popup-body").innerHTML = `
-         <audio controls autoplay>
-             <source src="/audio/songs/${encodeURIComponent(mp3filename)}" type="audio/mpeg">
-             Your browser does not support the audio element.
-         </audio>
-     `;
-	document.getElementById("popup").style.display = "flex";
-	document.body.classList.add("no-scroll"); // Disable main page scrolling
+function playAudio(mp3filename1, mp3filename2 = null) {
+    if (!mp3filename1) return;
+
+    // First audio player (always present)
+    let audioHTML = `
+        <audio id="audio1" controls autoplay>
+            <source src="/audio/songs/${encodeURIComponent(mp3filename1)}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    `;
+
+    // Second audio player (only added if a second file exists)
+    if (mp3filename2) {
+        audioHTML += `
+            <hr> <!-- Separator between audios -->
+            <audio id="audio2" controls>
+                <source src="/audio/songs/${encodeURIComponent(mp3filename2)}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        `;
+    }
+
+    // Insert into popup
+    document.getElementById("popup-body").innerHTML = audioHTML;
+    document.getElementById("popup").style.display = "flex";
+    document.body.classList.add("no-scroll"); // Disable main page scrolling
+	
+	// Wait for the DOM to update, then attach event listeners
+	setTimeout(() => {
+	    let audio1 = document.getElementById("audio1");
+	    let audio2 = document.getElementById("audio2");
+
+	    if (audio2) {
+	        audio2.addEventListener("play", function () {
+	            if (audio1 && !audio1.paused) {
+	                audio1.pause(); // Stop first audio when second starts
+	            }
+	        });
+
+	        audio1.addEventListener("play", function () {
+	            if (audio2 && !audio2.paused) {
+	                audio2.pause(); // Stop second audio when first starts
+	            }
+	        });
+	    }
+	}, 100); // Delay slightly to ensure elements exist
 }
 
 let hideControlsTimeout; // Store timeout globally

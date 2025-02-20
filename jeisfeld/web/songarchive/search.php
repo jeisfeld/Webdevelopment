@@ -7,31 +7,25 @@ require_once "db_config.php";
 
 // Get query
 $query = isset ( $_GET ['q'] ) ? trim ( $_GET ['q'] ) : "";
-if ($query === "") {
-	echo json_encode ( [ ] );
-	exit ();
-}
 
 // Use regex to check if query is a valid ID (numeric OR numeric + single letter)
 $is_valid_id = preg_match ( '/^\d+[a-zA-Z]?$/', $query );
 $isSingleLetter = preg_match ( '/^[a-zA-Z]$/', $query );
 
-error_log ( "Query string: " . $query );
-
 // SQL Query
 if ($is_valid_id) {
 	// If searching by ID
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, author FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
 	$params = [ 
 			"%" . $query . "%"
 	];
 	$types = "s";
 }
-else if ($query === "*") {
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, author FROM songs order by id";
+else if ($query === "*" || $query === "") {
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author FROM songs order by id";
 }
 else if ($isSingleLetter) {
-	$sql = "SELECT id, title, text, author, tabfilename, mp3filename FROM songs
+	$sql = "SELECT id, title, text, author, tabfilename, mp3filename, mp3filename2, author FROM songs
             WHERE title REGEXP CONCAT('(^| )', ?, '.*')
                OR text REGEXP CONCAT('(^| )', ?, '.*')
             ORDER BY CASE WHEN title REGEXP CONCAT('(^| )', ?, '.*') THEN 1 ELSE 2 END, CAST(id AS UNSIGNED) ASC";
@@ -43,16 +37,32 @@ else if ($isSingleLetter) {
 	$types = "sss";
 }
 else {
-	// If searching by title/text
-	$words = explode ( " ", $query );
+	$normalizedQuery = str_replace ( [ 
+			"´",
+			"`",
+			"’"
+	], "'", $query );
+	$words = explode ( " ", $normalizedQuery );
 	$conditions = [ ];
+	$titleMatch = [ ];
+	$textMatch = [ ];
 	$params = [ ];
 	$types = "";
 
+	$normalizedTitle = "REPLACE(REPLACE(REPLACE(title, '´', ''''), '`', ''''), '’', '''')";
+	$normalizedText = "REPLACE(REPLACE(REPLACE(text, '´', ''''), '`', ''''), '’', '''')";
+
+	// Full-string match (apply replacement)
+	$fullMatchTitle = "IF($normalizedTitle LIKE ?, 1, 0)";
+	$fullMatchText = "IF($normalizedText LIKE ?, 1, 0)";
+	$params [] = "%" . $normalizedQuery . "%"; // Full match title
+	$params [] = "%" . $normalizedQuery . "%"; // Full match text
+	$types .= "ss";
+
 	foreach ( $words as $word ) {
-		$conditions [] = "(title LIKE ? OR text LIKE ? OR author like ? OR keywords like ?)";
-		$titleMatch [] = "IF(title LIKE ?, 1, 0)";
-		$textMatch [] = "IF(text LIKE ?, 1, 0)";
+		$conditions [] = "($normalizedTitle LIKE ? OR $normalizedText LIKE ? OR author LIKE ? OR keywords LIKE ?)";
+		$titleMatch [] = "IF($normalizedTitle LIKE ?, 1, 0)";
+		$textMatch [] = "IF($normalizedText LIKE ?, 1, 0)";
 
 		$params [] = "%" . $word . "%";
 		$params [] = "%" . $word . "%";
@@ -64,15 +74,19 @@ else {
 		$types .= "ssssss";
 	}
 
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, author,
-                (" . implode(" + ", $titleMatch) . ") AS title_match_count,
-                (" . implode(" + ", $textMatch) . ") AS text_match_count
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author,
+                ($fullMatchTitle) AS full_title_match,
+                ($fullMatchText) AS full_text_match,
+                (" . implode ( " + ", $titleMatch ) . ") AS title_match_count,
+                (" . implode ( " + ", $textMatch ) . ") AS text_match_count
             FROM songs
-            WHERE " . implode(" AND ", $conditions) . "
+            WHERE " . implode ( " AND ", $conditions ) . "
             ORDER BY
-                title_match_count DESC,  
+                full_title_match DESC,
+                full_text_match DESC,
+                title_match_count DESC,
                 text_match_count DESC,
-                CAST(id AS UNSIGNED) ASC";
+                id ASC";
 }
 
 // Execute SQL
@@ -90,6 +104,8 @@ while ( $row = $result->fetch_assoc () ) {
 	$songs [] = $row;
 }
 error_log ( "Result size for " . $query . ": " . count ( $songs ) );
+error_log ( "SQL: " . $sql );
+error_log ( "Params: " . json_encode ( $params ) );
 
 // Return JSON
 echo json_encode ( $songs );
