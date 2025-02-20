@@ -1,5 +1,5 @@
-async function searchSongs() {
-	let query = document.getElementById("searchBox").value.trim();
+async function searchSongs(inputquery = null) {
+	let query = inputquery == null ? document.getElementById("searchBox").value.trim() : inputquery;
 	if (query === "") {
 		document.getElementById("results").innerHTML = "";
 		return;
@@ -337,6 +337,7 @@ document.addEventListener("keydown", function(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("searchBox").focus();
+	searchSongs("*"); // Simulates searching for "*"
 });
 
 
