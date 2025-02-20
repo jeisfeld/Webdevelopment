@@ -126,7 +126,7 @@ function showText(id, title) {
 							</button>
 							<button class="control-btn" id="toggle-align-btn" onclick="toggleTextAlignment()">
 							    <svg id="toggle-align-icon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-							        <path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+							        <path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
 							    </svg>
 							</button>
                         </div>
@@ -228,13 +228,13 @@ function toggleTextAlignment() {
 		textContent.style.textAlign = "left";
 
 		// Switch to "left-aligned" text icon
-		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
 	} else {
 		textContent.classList.add("text-centered");
 		textContent.style.textAlign = "center";
 
 		// Switch to "centered text" icon
-		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+	toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
 	}
 }
 

@@ -42,11 +42,13 @@ else {
 			"`",
 			"’"
 	], "'", $query );
+
 	$words = explode ( " ", $normalizedQuery );
 	$conditions = [ ];
 	$titleMatch = [ ];
 	$textMatch = [ ];
-	$params = [ ];
+	$selectParams = [ ];
+	$whereParams = [ ];
 	$types = "";
 
 	$normalizedTitle = "REPLACE(REPLACE(REPLACE(title, '´', ''''), '`', ''''), '’', '''')";
@@ -55,26 +57,32 @@ else {
 	// Full-string match (apply replacement)
 	$fullMatchTitle = "IF($normalizedTitle LIKE ?, 1, 0)";
 	$fullMatchText = "IF($normalizedText LIKE ?, 1, 0)";
-	$params [] = "%" . $normalizedQuery . "%"; // Full match title
-	$params [] = "%" . $normalizedQuery . "%"; // Full match text
+
+	// Full phrase match params
+	$selectParams [] = "%" . $normalizedQuery . "%"; // Full match title
+	$selectParams [] = "%" . $normalizedQuery . "%"; // Full match text
 	$types .= "ss";
 
+	// Process each word separately for WHERE and ORDER BY
 	foreach ( $words as $word ) {
+		// WHERE conditions
 		$conditions [] = "($normalizedTitle LIKE ? OR $normalizedText LIKE ? OR author LIKE ? OR keywords LIKE ?)";
+		$whereParams [] = "%" . $word . "%";
+		$whereParams [] = "%" . $word . "%";
+		$whereParams [] = "%" . $word . "%";
+		$whereParams [] = "%" . $word . "%";
+		$types .= "ssss";
+
+		// ORDER BY conditions
 		$titleMatch [] = "IF($normalizedTitle LIKE ?, 1, 0)";
 		$textMatch [] = "IF($normalizedText LIKE ?, 1, 0)";
-
-		$params [] = "%" . $word . "%";
-		$params [] = "%" . $word . "%";
-		$params [] = "%" . $word . "%";
-		$params [] = "%" . $word . "%";
-		$params [] = "%" . $word . "%"; // Condition for ORDER BY (Title Match)
-		$params [] = "%" . $word . "%"; // Condition for ORDER BY (Text Match)
-
-		$types .= "ssssss";
+		$selectParams [] = "%" . $word . "%"; // Title match
+		$selectParams [] = "%" . $word . "%"; // Text match
+		$types .= "ss";
 	}
 
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author,
+	// Construct SQL query with ranking priority
+	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author, keywords,
                 ($fullMatchTitle) AS full_title_match,
                 ($fullMatchText) AS full_text_match,
                 (" . implode ( " + ", $titleMatch ) . ") AS title_match_count,
@@ -87,11 +95,13 @@ else {
                 title_match_count DESC,
                 text_match_count DESC,
                 id ASC";
+
+	$params = array_merge ( $selectParams, $whereParams );
 }
 
 // Execute SQL
 $stmt = $conn->prepare ( $sql );
-if ($params) {
+if (@$params) {
 	$stmt->bind_param ( $types, ...$params );
 }
 $stmt->execute ();
@@ -105,7 +115,7 @@ while ( $row = $result->fetch_assoc () ) {
 }
 error_log ( "Result size for " . $query . ": " . count ( $songs ) );
 error_log ( "SQL: " . $sql );
-error_log ( "Params: " . json_encode ( $params ) );
+error_log ( "Params: " . json_encode ( @$params ) );
 
 // Return JSON
 echo json_encode ( $songs );
