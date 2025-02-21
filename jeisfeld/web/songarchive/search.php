@@ -114,8 +114,8 @@ while ( $row = $result->fetch_assoc () ) {
 	$songs [] = $row;
 }
 error_log ( "Result size for " . $query . ": " . count ( $songs ) );
-error_log ( "SQL: " . $sql );
-error_log ( "Params: " . json_encode ( @$params ) );
+//error_log ( "SQL: " . $sql );
+//error_log ( "Params: " . json_encode ( @$params ) );
 
 // Return JSON
 echo json_encode ( $songs );

@@ -1,35 +1,53 @@
+let searchAbortController = new AbortController(); // Create a controller
+
 async function searchSongs(inputquery = null) {
+	// Abort the previous fetch request
+	searchAbortController.abort();
+
+	// Create a new AbortController for the current request
+	searchAbortController = new AbortController();
+	const signal = searchAbortController.signal;
+
 	let query = inputquery == null ? document.getElementById("searchBox").value.trim() : inputquery;
 	if (query === "") {
-		query = "*"
+		query = "*";
 	}
 
-	let response = await fetch("search.php?q=" + encodeURIComponent(query));
-	let songs = await response.json();
+	try {
+		let response = await fetch("search.php?q=" + encodeURIComponent(query), { signal });
+		let songs = await response.json();
 
-	let tableHTML = "";
-	songs.forEach(song => {
-		tableHTML += `
-             <tr>
-                 <td>${song.id}</td>
-                 <td>${song.title}</td>
-                 <td class="author-col">${song.author || ""}</td>
-                 <td class="actions">
-					 <div class="actions-container">
-						 <img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
-						 ${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
-						 ${song.mp3filename ? `
-						     <img src="/img/play.png" alt="Play Audio" class="icon-btn"
-						          onclick="playAudio('${song.mp3filename}'${song.mp3filename2 ? `, '${song.mp3filename2}'` : ''})">
-						 ` : ""}
-					 </div>
-                 </td>
-             </tr>
-         `;
-	});
+		let tableHTML = "";
+		songs.forEach(song => {
+			tableHTML += `
+				<tr>
+					<td>${song.id}</td>
+					<td>${song.title}</td>
+					<td class="author-col">${song.author || ""}</td>
+					<td class="actions">
+						<div class="actions-container">
+							<img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+							${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
+							${song.mp3filename ? `
+								<img src="/img/play.png" alt="Play Audio" class="icon-btn"
+									onclick="playAudio('${song.mp3filename}'${song.mp3filename2 ? `, '${song.mp3filename2}'` : ''})">
+							` : ""}
+						</div>
+					</td>
+				</tr>
+			`;
+		});
 
-	document.getElementById("results").innerHTML = tableHTML;
+		document.getElementById("results").innerHTML = tableHTML;
+	} catch (err) {
+		if (err.name === "AbortError") {
+			console.log("Previous request aborted");
+		} else {
+			console.error("Fetch error:", err);
+		}
+	}
 }
+
 
 function toggleClearButton() {
 	let searchBox = document.getElementById("searchBox");
@@ -51,50 +69,50 @@ function clearSearch() {
 }
 
 function playAudio(mp3filename1, mp3filename2 = null) {
-    if (!mp3filename1) return;
+	if (!mp3filename1) return;
 
-    // First audio player (always present)
-    let audioHTML = `
+	// First audio player (always present)
+	let audioHTML = `
         <audio id="audio1" controls autoplay>
             <source src="/audio/songs/${encodeURIComponent(mp3filename1)}" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     `;
 
-    // Second audio player (only added if a second file exists)
-    if (mp3filename2) {
-        audioHTML += `
+	// Second audio player (only added if a second file exists)
+	if (mp3filename2) {
+		audioHTML += `
             <hr> <!-- Separator between audios -->
             <audio id="audio2" controls>
                 <source src="/audio/songs/${encodeURIComponent(mp3filename2)}" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         `;
-    }
+	}
 
-    // Insert into popup
-    document.getElementById("popup-body").innerHTML = audioHTML;
-    document.getElementById("popup").style.display = "flex";
-    document.body.classList.add("no-scroll"); // Disable main page scrolling
-	
+	// Insert into popup
+	document.getElementById("popup-body").innerHTML = audioHTML;
+	document.getElementById("popup").style.display = "flex";
+	document.body.classList.add("no-scroll"); // Disable main page scrolling
+
 	// Wait for the DOM to update, then attach event listeners
 	setTimeout(() => {
-	    let audio1 = document.getElementById("audio1");
-	    let audio2 = document.getElementById("audio2");
+		let audio1 = document.getElementById("audio1");
+		let audio2 = document.getElementById("audio2");
 
-	    if (audio2) {
-	        audio2.addEventListener("play", function () {
-	            if (audio1 && !audio1.paused) {
-	                audio1.pause(); // Stop first audio when second starts
-	            }
-	        });
+		if (audio2) {
+			audio2.addEventListener("play", function() {
+				if (audio1 && !audio1.paused) {
+					audio1.pause(); // Stop first audio when second starts
+				}
+			});
 
-	        audio1.addEventListener("play", function () {
-	            if (audio2 && !audio2.paused) {
-	                audio2.pause(); // Stop second audio when first starts
-	            }
-	        });
-	    }
+			audio1.addEventListener("play", function() {
+				if (audio2 && !audio2.paused) {
+					audio2.pause(); // Stop second audio when first starts
+				}
+			});
+		}
 	}, 100); // Delay slightly to ensure elements exist
 }
 
@@ -234,7 +252,7 @@ function toggleTextAlignment() {
 		textContent.style.textAlign = "center";
 
 		// Switch to "centered text" icon
-	toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
 	}
 }
 
