@@ -1,5 +1,7 @@
 let searchAbortController = new AbortController(); // Create a controller
 
+// functions related to song search
+
 async function searchSongs(inputquery = null) {
 	// Abort the previous fetch request
 	searchAbortController.abort();
@@ -30,7 +32,12 @@ async function searchSongs(inputquery = null) {
 							${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
 							${song.mp3filename ? `
 								<img src="/img/play.png" alt="Play Audio" class="icon-btn"
-									onclick="playAudio('${song.mp3filename}'${song.mp3filename2 ? `, '${song.mp3filename2}'` : ''})">
+								     onclick="playAudio('${song.mp3filename}', 
+								                        '${song.mp3filename2 ? song.mp3filename2 : ''}', 
+														'${song.id}', 
+								                        '${song.title}', 
+								                        '${song.author ? song.author : ''}', 
+								                        '${song.tabfilename ? song.tabfilename.replace('.txt', '.jpg') : ''}')">
 							` : ""}
 						</div>
 					</td>
@@ -68,30 +75,61 @@ function clearSearch() {
 	searchSongs(); // Trigger search update
 }
 
-function playAudio(mp3filename1, mp3filename2 = null) {
+// functions related to audio popup
+
+function playAudio(mp3filename1, mp3filename2 = "", id = "", title = "", author = "", imageFilename = "") {
 	if (!mp3filename1) return;
 
-	// First audio player (always present)
+	// Song title and author (display only once)
 	let audioHTML = `
-        <audio id="audio1" controls autoplay>
-            <source src="/audio/songs/${encodeURIComponent(mp3filename1)}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <div class="audio-info">
+            <strong>${id} ${title}</strong><br>
+    `;
+	if (author) {
+		audioHTML += `<em>${author}</em>`;
+	}
+	audioHTML += `</div>`;
+
+	// First audio player (always present & autoplay enabled)
+	audioHTML += `
+        <div class="audio-container">
+            <audio id="audio1" controls autoplay>
+                <source src="/audio/songs/${encodeURIComponent(mp3filename1)}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
     `;
 
 	// Second audio player (only added if a second file exists)
 	if (mp3filename2) {
 		audioHTML += `
             <hr> <!-- Separator between audios -->
-            <audio id="audio2" controls>
-                <source src="/audio/songs/${encodeURIComponent(mp3filename2)}" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <div class="audio-container">
+                <audio id="audio2" controls>
+                    <source src="/audio/songs/${encodeURIComponent(mp3filename2)}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        `;
+	}
+
+	// Optional Image (Initially Hidden, Behind Audio)
+	let buttonsHTML = "";
+	if (imageFilename) {
+		buttonsHTML = `
+		<div id = "audio-btns">
+            <button class="open-audio-btn" id="open-audio-text-btn" onclick="showText('${id}', '${title}', 'popup2')">
+                <img src="/img/text.png" alt="Show Text" class="audio-icon">
+            </button>
+			<button class="open-audio-btn" id="open-audio-chords-btn" onclick="showImage('${imageFilename}', 'popup2')">
+			    <img src="/img/chords.png" alt="Show Chords" class="audio-icon">
+			</button>
+		</div>
         `;
 	}
 
 	// Insert into popup
-	document.getElementById("popup-body").innerHTML = audioHTML;
+	document.getElementById("popup-body").innerHTML = audioHTML + buttonsHTML;
 	document.getElementById("popup").style.display = "flex";
 	document.body.classList.add("no-scroll"); // Disable main page scrolling
 
@@ -99,6 +137,10 @@ function playAudio(mp3filename1, mp3filename2 = null) {
 	setTimeout(() => {
 		let audio1 = document.getElementById("audio1");
 		let audio2 = document.getElementById("audio2");
+
+		if (audio1) {
+			audio1.play(); // Auto-play first audio
+		}
 
 		if (audio2) {
 			audio2.addEventListener("play", function() {
@@ -118,16 +160,16 @@ function playAudio(mp3filename1, mp3filename2 = null) {
 
 let hideControlsTimeout; // Store timeout globally
 
-function showText(id, title) {
+function showText(id, title, popupid = 'popup') {
 	fetch("search.php?q=" + encodeURIComponent(id))
 		.then(response => response.json())
 		.then(songs => {
 			if (!songs || songs.length === 0 || !songs[0].text) {
-				document.getElementById("popup-body").innerHTML = `<h2>${title}</h2><p>No text available.</p>`;
+				document.getElementById(popupid + "-body").innerHTML = `<h2>${title}</h2><p>No text available.</p>`;
 			} else {
 				let songText = songs[0].text.replace(/\n/g, '<br>');
 
-				document.getElementById("popup-body").innerHTML = `
+				document.getElementById(popupid + "-body").innerHTML = `
                     <div class="text-popup-content">
                         <div class="font-controls" id="font-controls">
                             <button class="control-btn" onclick="adjustFontSize(0.8696)">A-</button>
@@ -156,7 +198,7 @@ function showText(id, title) {
 				setupFontControls(); // Start auto-hide timer
 			}
 
-			document.getElementById("popup").style.display = "flex";
+			document.getElementById(popupid).style.display = "flex";
 			document.body.classList.add("no-scroll"); // Disable main page scrolling
 			enterFullscreen();
 		});
@@ -281,13 +323,13 @@ function autoRotateAndSizeImage() {
 	}, 100);
 }
 
-function showImage(tabfilename) {
+function showImage(tabfilename, popupid = 'popup') {
 	if (!tabfilename) return;
 
-	document.getElementById("popup-body").innerHTML = `
+	document.getElementById(popupid + "-body").innerHTML = `
          <img id="popup-image" src="/img/songs/${encodeURIComponent(tabfilename)}">
      `;
-	document.getElementById("popup").style.display = "flex";
+	document.getElementById(popupid).style.display = "flex";
 	document.body.classList.add("no-scroll"); // Disable main page scrolling
 	enterFullscreen();
 
@@ -362,10 +404,13 @@ function enterFullscreen() {
 	}
 }
 
-function closePopup() {
-	document.getElementById("popup").style.display = "none";
-	document.getElementById("popup-body").innerHTML = "";
-	document.body.classList.remove("no-scroll"); // Re-enable main page scrolling
+function closePopup(id) {
+	document.getElementById(id).style.display = "none";
+	document.getElementById(id + "-body").innerHTML = "";
+	
+	if (id == "popup") {
+		document.body.classList.remove("no-scroll"); // Re-enable main page scrolling after closing last popup
+	}
 
 	// Exit fullscreen mode when closing
 	exitFullscreen();

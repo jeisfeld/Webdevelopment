@@ -22,10 +22,10 @@ if ($is_valid_id) {
 	$types = "s";
 }
 else if ($query === "*" || $query === "") {
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author FROM songs order by id";
+	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs order by id";
 }
 else if ($isSingleLetter) {
-	$sql = "SELECT id, title, text, author, tabfilename, mp3filename, mp3filename2, author FROM songs
+	$sql = "SELECT id, title, author, tabfilename, mp3filename, mp3filename2, author FROM songs
             WHERE title REGEXP CONCAT('(^| )', ?, '.*')
                OR text REGEXP CONCAT('(^| )', ?, '.*')
             ORDER BY CASE WHEN title REGEXP CONCAT('(^| )', ?, '.*') THEN 1 ELSE 2 END, CAST(id AS UNSIGNED) ASC";
@@ -82,7 +82,7 @@ else {
 	}
 
 	// Construct SQL query with ranking priority
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author, keywords,
+	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author, keywords,
                 ($fullMatchTitle) AS full_title_match,
                 ($fullMatchText) AS full_text_match,
                 (" . implode ( " + ", $titleMatch ) . ") AS title_match_count,
