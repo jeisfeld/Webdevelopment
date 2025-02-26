@@ -1,8 +1,26 @@
 let searchAbortController = new AbortController(); // Create a controller
+let searchTimeout = null;
 
 // functions related to song search
+function searchSongs(inputquery = null) {
+    clearTimeout(searchTimeout); // Reset timeout on every keypress
+	
+	let query = inputquery == null ? document.getElementById("searchBox").value.trim() : inputquery;
+	if (query === "") {
+		query = "*";
+	}
+	
+	if (query === "*") {
+		performSearch(query);
+	}
+	else {
+		searchTimeout = setTimeout(() => {
+		    performSearch(query); // Call the async function inside setTimeout
+		}, 200); // Trigger search 100ms after typing stops
+	}
+}
 
-async function searchSongs(inputquery = null) {
+async function performSearch(query) {
 	// Abort the previous fetch request
 	searchAbortController.abort();
 
@@ -10,51 +28,50 @@ async function searchSongs(inputquery = null) {
 	searchAbortController = new AbortController();
 	const signal = searchAbortController.signal;
 
-	let query = inputquery == null ? document.getElementById("searchBox").value.trim() : inputquery;
-	if (query === "") {
-		query = "*";
-	}
-
 	try {
 		let response = await fetch("search.php?q=" + encodeURIComponent(query), { signal });
 		let songs = await response.json();
-
-		let tableHTML = "";
-		songs.forEach(song => {
-			tableHTML += `
-				<tr>
-					<td>${song.id}</td>
-					<td>${song.title}</td>
-					<td class="author-col">${song.author || ""}</td>
-					<td class="actions">
-						<div class="actions-container">
-							<img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
-							${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
-							${song.mp3filename ? `
-								<img src="/img/play.png" alt="Play Audio" class="icon-btn"
-								     onclick="playAudio('${song.mp3filename}', 
-								                        '${song.mp3filename2 ? song.mp3filename2 : ''}', 
-														'${song.id}', 
-								                        '${song.title}', 
-								                        '${song.author ? song.author : ''}', 
-								                        '${song.tabfilename ? song.tabfilename.replace('.txt', '.jpg') : ''}')">
-							` : ""}
-						</div>
-					</td>
-				</tr>
-			`;
-		});
-
-		document.getElementById("results").innerHTML = tableHTML;
-	} catch (err) {
+		displayResult(songs);
+	} 
+	catch (err) {
 		if (err.name === "AbortError") {
 			console.log("Previous request aborted");
-		} else {
+		}
+		else {
 			console.error("Fetch error:", err);
 		}
 	}
 }
 
+function displayResult(songs) {
+	let tableHTML = "";
+	songs.forEach(song => {
+		tableHTML += `
+			<tr>
+				<td>${song.id}</td>
+				<td>${song.title}</td>
+				<td class="author-col">${song.author || ""}</td>
+				<td class="actions">
+					<div class="actions-container">
+						<img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+						${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
+						${song.mp3filename ? `
+							<img src="/img/play.png" alt="Play Audio" class="icon-btn"
+							     onclick="playAudio('${song.mp3filename}', 
+							                        '${song.mp3filename2 ? song.mp3filename2 : ''}', 
+													'${song.id}', 
+							                        '${song.title}', 
+							                        '${song.author ? song.author : ''}', 
+							                        '${song.tabfilename ? song.tabfilename.replace('.txt', '.jpg') : ''}')">
+						` : ""}
+					</div>
+				</td>
+			</tr>
+		`;
+	});
+
+	document.getElementById("results").innerHTML = tableHTML;
+}
 
 function toggleClearButton() {
 	let searchBox = document.getElementById("searchBox");
