@@ -186,33 +186,53 @@ function showText(id, title, popupid = 'popup') {
 			} else {
 				let songText = songs[0].text.replace(/\n/g, '<br>');
 
+				let meaningsButton = '';
+				if (songs[0].meanings.length > 0) {
+				    meaningsButton = `
+						<div class="control-btn-grp">
+					        <button class="control-btn" id="show-meanings-btn" onclick='showMeanings(${JSON.stringify(songs[0].meanings)})'>
+					            <svg width="24" height="24" viewBox="0 0 50 50" fill="black" xmlns="http://www.w3.org/2000/svg">
+					                <path d="M 25 2 C 12.309295 2 2 12.309295 2 25 C 2 37.690705 12.309295 48 25 48 C 37.690705 48 48 37.690705 48 25 C 48 12.309295 37.690705 2 25 2 z M 25 4 C 36.609824 4 46 13.390176 46 25 C 46 36.609824 36.609824 46 25 46 C 13.390176 46 4 36.609824 4 25 C 4 13.390176 13.390176 4 25 4 z M 25 11 A 3 3 0 0 0 22 14 A 3 3 0 0 0 25 17 A 3 3 0 0 0 28 14 A 3 3 0 0 0 25 11 z M 21 21 L 21 23 L 22 23 L 23 23 L 23 36 L 22 36 L 21 36 L 21 38 L 22 38 L 23 38 L 27 38 L 28 38 L 29 38 L 29 36 L 28 36 L 27 36 L 27 21 L 26 21 L 22 21 L 21 21 z"/>
+					            </svg>
+					        </button>
+						</div>
+				    `;
+				}
+				
 				document.getElementById(popupid + "-body").innerHTML = `
                     <div class="text-popup-content">
                         <div class="font-controls" id="font-controls">
-                            <button class="control-btn" onclick="adjustFontSize(0.8696)">A-</button>
-                            <button class="control-btn" onclick="adjustFontSize(1.15)">A+</button>
-							<button class="control-btn" onclick="adjustLineSpacing(-0.1)">
-							    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-							        <path d="M12 10L8 4H16L12 10Z M12 14L16 20H8L12 14Z"/>
-							    </svg>
-							</button>
-							<button class="control-btn" onclick="adjustLineSpacing(0.1)">
-							    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-							        <path d="M12 3L8 9H16L12 3Z M12 21L8 15H16L12 21Z"/>
-							    </svg>
-							</button>
-							<button class="control-btn" id="toggle-align-btn" onclick="toggleTextAlignment()">
-							    <svg id="toggle-align-icon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-							        <path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
-							    </svg>
-							</button>
+							<div class="control-btn-grp">
+	                            <button class="control-btn" onclick="adjustFontSize(0.8696)">A-</button>
+	                            <button class="control-btn" onclick="adjustFontSize(1.15)">A+</button>
+							</div>
+							<div class="control-btn-grp">
+								<button class="control-btn" onclick="adjustLineSpacing(-0.1)">
+								    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+								        <path d="M12 10L8 4H16L12 10Z M12 14L16 20H8L12 14Z"/>
+								    </svg>
+								</button>
+								<button class="control-btn" onclick="adjustLineSpacing(0.1)">
+								    <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+								        <path d="M12 3L8 9H16L12 3Z M12 21L8 15H16L12 21Z"/>
+								    </svg>
+								</button>
+							</div>
+							<div class="control-btn-grp">
+								<button class="control-btn" id="toggle-align-btn" onclick="toggleTextAlignment()">
+								    <svg id="toggle-align-icon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+								        <path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+								    </svg>
+								</button>
+							</div>
+							${meaningsButton}
                         </div>
                         <div class="text-content" id="text-content">${songText}</div>
                     </div>
                 `;
 
 				ensureTextPositioning();
-				setupFontControls(); // Start auto-hide timer
+				setupFontControls(popupid); // Start auto-hide timer
 			}
 
 			document.getElementById(popupid).style.display = "flex";
@@ -221,7 +241,20 @@ function showText(id, title, popupid = 'popup') {
 		});
 }
 
-function setupFontControls() {
+function showMeanings(meanings) {
+	console.log(meanings);
+    let content = '';
+
+    meanings.forEach(meaning => {
+        content += `<h3>${meaning.title}</h3>`;
+        content += `<p>${meaning.meaning.replace(/\n/g, '<br>')}</p>`;
+    });
+
+    document.getElementById('modal-content').innerHTML = content;
+    document.getElementById('modal-main').style.display = 'block';
+}
+
+function setupFontControls(popupid) {
 	let fontControls = document.getElementById("font-controls");
 	let textContent = document.getElementById("text-content");
 
@@ -238,14 +271,14 @@ function setupFontControls() {
 
 		// Restart the hide timer
 		clearTimeout(hideControlsTimeout);
-		hideControlsTimeout = setTimeout(hideControls, 3000);
+		hideControlsTimeout = setTimeout(hideControls, 4000);
 	}
 
-	// Auto-hide font controls after 3 seconds
-	hideControlsTimeout = setTimeout(hideControls, 3000);
+	// Auto-hide font controls after 4 seconds
+	hideControlsTimeout = setTimeout(hideControls, 4000);
 
 	// Show controls & reset timer when clicking anywhere in popup (buttons included)
-	document.getElementById("popup-body").addEventListener("click", showControls);
+	document.getElementById(popupid + "-body").addEventListener("click", showControls);
 }
 
 function adjustFontSize(change) {
@@ -494,13 +527,13 @@ document.getElementById("impressum-link").textContent = texts[userLang].impressu
 // handle modal impressum
 
 // Get the modal and related elements
-const modal = document.getElementById('impressum-modal');
-const openModalLink = document.getElementById('impressum-link');
+const modal = document.getElementById('modal-main');
+const openImpressumLink = document.getElementById('impressum-link');
 const closeModalBtn = document.getElementById('close-modal');
-const impressumContent = document.getElementById('impressum-content');
+const impressumContent = document.getElementById('modal-content');
 
 // When the link is clicked, load the impressum.html file and display the modal
-openModalLink.addEventListener('click', function(event) {
+openImpressumLink.addEventListener('click', function(event) {
 	event.preventDefault();
 	// Fetch the external impressum.html content
 	fetch('/impressum.html')

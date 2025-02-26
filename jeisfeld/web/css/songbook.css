@@ -193,9 +193,13 @@ body.no-scroll {
 }
 
 /* Control Buttons */
+.control-btn-grp {
+	margin: 0 5px;
+	display: flex;
+}
+
 .control-btn {
 	padding: 5px 10px;
-	margin: 0 5px;
 	cursor: pointer;
 	font-size: 1.2rem;
 	display: flex; /* Flex ensures perfect centering */
@@ -223,7 +227,7 @@ body.no-scroll {
 	color: black; /* Change to black for better contrast on white */
 	background: rgba(255, 255, 255, 0.7);
 	border: none;
-	padding: 12px;
+	padding: 10px;
 	border-radius: 50%;
 	width: 20px;
 	height: 20px;
@@ -263,7 +267,7 @@ body.no-scroll {
 }
 
 #audio-btns {
-    text-align: center;
+	text-align: center;
 }
 
 .open-audio-btn {
@@ -289,6 +293,12 @@ body.no-scroll {
 	.text-popup-content {
 		padding: 3vw;
 	}
+	.popup-close {
+		top: 5px;
+		right: 5px;
+		width: 15px;
+		height: 15px;
+	}
 	.text-content {
 		font-size: min(6vw, 22px);
 		max-width: 100%;
@@ -299,6 +309,11 @@ body.no-scroll {
 	}
 	.close-audio-chords-btn {
 		top: -0px;
+	}
+	.control-btn {
+		width: 35px;
+		height: 35px;
+		padding: 7px;
 	}
 }
 
@@ -357,7 +372,6 @@ body.no-scroll {
 	right: 10px;
 	top: 10px;
 	font-size: 28px;
-	font-weight: bold;
 	color: #333;
 	cursor: pointer;
 }
