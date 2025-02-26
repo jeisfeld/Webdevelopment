@@ -9,19 +9,62 @@ require_once "db_config.php";
 $query = isset ( $_GET ['q'] ) ? trim ( $_GET ['q'] ) : "";
 
 // Use regex to check if query is a valid ID (numeric OR numeric + single letter)
-$is_valid_id = preg_match ( '/^\d+[a-zA-Z]?$/', $query );
+$is_valid_id = preg_match ( '/^\d{4}[a-zA-Z]?$/', $query );
 $isSingleLetter = preg_match ( '/^[a-zA-Z]$/', $query );
 
-// SQL Query
+// SQL Query for valid id
 if ($is_valid_id) {
 	// If searching by ID
-	$sql = "SELECT id, title, text, tabfilename, mp3filename, mp3filename2, author FROM songs WHERE id LIKE ? ORDER BY CAST(id AS UNSIGNED) ASC";
-	$params = [ 
-			"%" . $query . "%"
-	];
-	$types = "s";
+	$sql = "SELECT s.id, s.title, s.text, s.tabfilename, s.mp3filename, s.mp3filename2, s.author,
+               m.title AS meaning_title, m.meaning AS meaning_text
+        FROM songs s
+        LEFT JOIN song_meaning sm ON s.id = sm.song_id
+        LEFT JOIN meaning m ON sm.meaning_id = m.id
+        WHERE s.id = ?";
+
+	$stmt = $conn->prepare ( $sql );
+	$stmt->bind_param ( "s", $query );
+	$stmt->execute ();
+	$result = $stmt->get_result ();
+
+	// Fetch data
+	$songs = [ ];
+
+	while ( $row = $result->fetch_assoc () ) {
+		$song_id = $row ['id'];
+
+		// If song is not yet in the array, initialize it
+		if (! isset ( $songs [$song_id] )) {
+			$songs [$song_id] = [ 
+					'id' => $row ['id'],
+					'title' => $row ['title'],
+					'text' => $row ['text'],
+					'tabfilename' => $row ['tabfilename'],
+					'mp3filename' => $row ['mp3filename'],
+					'mp3filename2' => $row ['mp3filename2'],
+					'author' => $row ['author'],
+					'meanings' => [ ] // Initialize meanings array
+			];
+		}
+
+		// Add meaning if it's not null (avoiding empty records)
+		if ($row ['meaning_title'] !== null) {
+			$songs [$song_id] ['meanings'] [] = [ 
+					'title' => $row ['meaning_title'],
+					'meaning' => $row ['meaning_text']
+			];
+		}
+	}
+
+	// Return JSON
+	echo json_encode ( array_values ( $songs ), JSON_PRETTY_PRINT );
+	$stmt->close ();
+	$conn->close ();
+	return;
 }
-else if ($query === "*" || $query === "") {
+
+// now the case where input is not exact id.
+if ($query === "*" || $query === "") {
 	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs order by id";
 }
 else if ($isSingleLetter) {
@@ -66,12 +109,13 @@ else {
 	// Process each word separately for WHERE and ORDER BY
 	foreach ( $words as $word ) {
 		// WHERE conditions
-		$conditions [] = "($normalizedTitle LIKE ? OR $normalizedText LIKE ? OR author LIKE ? OR keywords LIKE ?)";
+		$conditions [] = "(id LIKE ? OR $normalizedTitle LIKE ? OR $normalizedText LIKE ? OR author LIKE ? OR keywords LIKE ?)";
 		$whereParams [] = "%" . $word . "%";
 		$whereParams [] = "%" . $word . "%";
 		$whereParams [] = "%" . $word . "%";
 		$whereParams [] = "%" . $word . "%";
-		$types .= "ssss";
+		$whereParams [] = "%" . $word . "%";
+		$types .= "sssss";
 
 		// ORDER BY conditions
 		$titleMatch [] = "IF($normalizedTitle LIKE ?, 1, 0)";
@@ -110,12 +154,11 @@ $result = $stmt->get_result ();
 // Fetch data
 $songs = [ ];
 while ( $row = $result->fetch_assoc () ) {
-	// Debugging: Print the returned text
 	$songs [] = $row;
 }
 error_log ( "Result size for " . $query . ": " . count ( $songs ) );
-//error_log ( "SQL: " . $sql );
-//error_log ( "Params: " . json_encode ( @$params ) );
+// error_log ( "SQL: " . $sql );
+// error_log ( "Params: " . json_encode ( @$params ) );
 
 // Return JSON
 echo json_encode ( $songs );

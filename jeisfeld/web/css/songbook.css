@@ -138,11 +138,11 @@ body.no-scroll {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 9998;
+	z-index: 998;
 }
 
 #popup2 {
-	z-index: 9999;
+	z-index: 999;
 }
 
 /* Text Popup Content (Fills Entire Screen, Scrollbar at Edge) */
