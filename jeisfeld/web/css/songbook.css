@@ -1,6 +1,16 @@
+:root {
+  --outer-color: #F7F5C4;
+  --inner-color: #F9F8E1;
+  --inner-color-shaded: #F2F1D6;
+  --text-color: #4D4313;
+  --text-color-light: #877522;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	padding: 20px;
+	background: var(--outer-color);
+	color: var(--text-color);
 }
 
 /* Centered Container for Search & Table */
@@ -26,8 +36,9 @@ h2 {
 	width: 100%;
 	max-width: 1024px;
 	margin-bottom: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	border: 1px solid white;
+	border-color: var(--text-color-light);
+	border-radius: 8px;
 	background: white;
 	padding-left: 10px; /* Ensure icon spacing */
 	box-sizing: border-box; /* Ensure padding does not exceed width */
@@ -52,6 +63,10 @@ h2 {
 	padding-right: 30px; /* Prevent text from overlapping the clear button */
 }
 
+input::placeholder {
+	color: var(--text-color-light);
+}
+
 /* "X" Clear Button */
 #clearButton {
 	position: absolute;
@@ -60,7 +75,7 @@ h2 {
 	border: none;
 	font-size: 16px;
 	cursor: pointer;
-	color: gray;
+	color: var(--text-color-light);
 	display: none; /* Initially hidden */
 }
 
@@ -78,12 +93,17 @@ table {
 
 th, td {
 	padding: 8px;
-	border: 1px solid #ddd;
+	border: 1px solid white;
+	border-color: var(--text-color-light);
 	text-align: left;
 }
 
 th {
-	background: #f4f4f4;
+	background: var(--inner-color-shaded);
+}
+
+td {
+	background: var(--inner-color);
 }
 
 /* Ensure Actions Stay in One Line */
@@ -182,7 +202,6 @@ body.no-scroll {
 	transform: translateX(-50%);
 	background: rgba(255, 255, 255, 0.8);
 	padding: 8px;
-	border-radius: 10px;
 	transition: opacity 0.3s ease-in-out;
 	z-index: 10;
 }
@@ -202,6 +221,11 @@ body.no-scroll {
 	padding: 5px 10px;
 	cursor: pointer;
 	font-size: 1.2rem;
+	background: var(--inner-color);
+	color: var(--text-color);
+	border: 1px solid white;
+	border-color: var(--text-color);
+	border-radius: 8px;
 	display: flex; /* Flex ensures perfect centering */
 	align-items: center; /* Vertical centering */
 	justify-content: center; /* Horizontal centering */
@@ -214,7 +238,8 @@ body.no-scroll {
 	width: 24px; /* Icon size */
 	height: 24px;
 	display: block;
-	fill: black; /* Ensures consistent color */
+	border-color: var(--text-color-light);
+	fill: var(--text-color); /* Ensures consistent color */
 }
 
 /* Circular Close Button */
@@ -224,7 +249,7 @@ body.no-scroll {
 	right: 10px;
 	cursor: pointer;
 	font-size: 24px;
-	color: black; /* Change to black for better contrast on white */
+	color: var(--text-color);
 	background: rgba(255, 255, 255, 0.7);
 	border: none;
 	padding: 10px;
@@ -323,12 +348,12 @@ body.no-scroll {
 	bottom: 10px;
 	right: 10px;
 	font-size: 1em;
-	z-index: 1000; /* Ensure it appears above other elements */
+	z-index: 500; /* Ensure it appears above other elements */
 	transition: color 0.3s;
 	text-decoration: none;
 	display: inline-block;
 	margin: 5px 20px;
-	color: black;
+	color: var(--text-color);
 }
 
 .modal {
@@ -349,13 +374,13 @@ body.no-scroll {
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
-	border-radius: 4px;
+	border-radius: 8px;
 	position: relative;
 }
 
-.modal-content h1, .modal-content h2, .modal-content a {
+.modal-content h1, .modal-content h2, .modal-content h3, .modal-content a {
 	text-shadow: none;
-	color: black;
+	color: var(--text-color);
 }
 
 .modal-content a {

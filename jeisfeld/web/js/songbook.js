@@ -53,10 +53,10 @@ function displayResult(songs) {
 				<td class="author-col">${song.author || ""}</td>
 				<td class="actions">
 					<div class="actions-container">
-						<img src="/img/text.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
-						${song.tabfilename ? `<img src="/img/chords.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
+						<img src="/img/text2.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+						${song.tabfilename ? `<img src="/img/chords2.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
 						${song.mp3filename ? `
-							<img src="/img/play.png" alt="Play Audio" class="icon-btn"
+							<img src="/img/play2.png" alt="Play Audio" class="icon-btn"
 							     onclick="playAudio('${song.mp3filename}', 
 							                        '${song.mp3filename2 ? song.mp3filename2 : ''}', 
 													'${song.id}', 
@@ -221,7 +221,7 @@ function showText(id, title, popupid = 'popup') {
 							<div class="control-btn-grp">
 								<button class="control-btn" id="toggle-align-btn" onclick="toggleTextAlignment()">
 								    <svg id="toggle-align-icon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-								        <path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>
+								        <path d="M7 6h10M5 12h14M8 18h8" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round"/>
 								    </svg>
 								</button>
 							</div>
@@ -338,13 +338,13 @@ function toggleTextAlignment() {
 		textContent.style.textAlign = "left";
 
 		// Switch to "left-aligned" text icon
-		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round"/>';
 	} else {
 		textContent.classList.add("text-centered");
 		textContent.style.textAlign = "center";
 
 		// Switch to "centered text" icon
-		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="black" stroke-width="2" stroke-linecap="round"/>';
+		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round"/>';
 	}
 }
 
@@ -502,14 +502,16 @@ const texts = {
 		author: "Author(s)",
 		actions: "Actions",
 		circlesongarchive: "Circle Song Archive",
-		impressum: "Imprint"
+		impressum: "Imprint",
+		searchBox: "Search..."
 	},
 	de: {
 		title: "Titel",
 		author: "Urheber:innen",
 		actions: "Aktionen",
 		circlesongarchive: "Circle Song Archive",
-		impressum: "Impressum"
+		impressum: "Impressum",
+		searchBox: "Suchen..."
 	}
 };
 
@@ -522,6 +524,7 @@ document.getElementById("author").textContent = texts[userLang].author;
 document.getElementById("actions").textContent = texts[userLang].actions;
 document.getElementById("circlesongarchive").textContent = texts[userLang].circlesongarchive;
 document.getElementById("impressum-link").textContent = texts[userLang].impressum;
+document.getElementById("searchBox").placeholder = texts[userLang].searchBox;
 
 
 // handle modal impressum
