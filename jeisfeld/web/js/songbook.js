@@ -53,7 +53,7 @@ function displayResult(songs) {
 				<td class="author-col">${song.author || ""}</td>
 				<td class="actions">
 					<div class="actions-container">
-						<img src="/img/text2.png" alt="View Text" class="icon-btn" onclick="showText('${song.id}', '${song.title}')">
+						<img src="/img/text2.png" alt="View Lyrics" class="icon-btn" onclick="showLyrics('${song.id}', '${song.title}')">
 						${song.tabfilename ? `<img src="/img/chords2.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
 						${song.mp3filename ? `
 							<img src="/img/play2.png" alt="Play Audio" class="icon-btn"
@@ -135,11 +135,11 @@ function playAudio(mp3filename1, mp3filename2 = "", id = "", title = "", author 
 	if (imageFilename) {
 		buttonsHTML = `
 		<div id = "audio-btns">
-            <button class="open-audio-btn" id="open-audio-text-btn" onclick="showText('${id}', '${title}', 'popup2')">
-                <img src="/img/text.png" alt="Show Text" class="audio-icon">
+            <button class="open-audio-btn" id="open-audio-lyrics-btn" onclick="showLyrics('${id}', '${title}', 'popup2')">
+                <img src="/img/text2.png" alt="Show Lyrics" class="audio-icon">
             </button>
 			<button class="open-audio-btn" id="open-audio-chords-btn" onclick="showImage('${imageFilename}', 'popup2')">
-			    <img src="/img/chords.png" alt="Show Chords" class="audio-icon">
+			    <img src="/img/chords2.png" alt="Show Chords" class="audio-icon">
 			</button>
 		</div>
         `;
@@ -177,14 +177,14 @@ function playAudio(mp3filename1, mp3filename2 = "", id = "", title = "", author 
 
 let hideControlsTimeout; // Store timeout globally
 
-function showText(id, title, popupid = 'popup') {
+function showLyrics(id, title, popupid = 'popup') {
 	fetch("search.php?q=" + encodeURIComponent(id))
 		.then(response => response.json())
 		.then(songs => {
-			if (!songs || songs.length === 0 || !songs[0].text) {
-				document.getElementById(popupid + "-body").innerHTML = `<h2>${title}</h2><p>No text available.</p>`;
+			if (!songs || songs.length === 0 || !songs[0].lyrics) {
+				document.getElementById(popupid + "-body").innerHTML = `<h2>${title}</h2><p>No lyrics available.</p>`;
 			} else {
-				let songText = songs[0].text.replace(/\n/g, '<br>');
+				let songLyrics = songs[0].lyrics.replace(/\n/g, '<br>');
 
 				let meaningsButton = '';
 				if (songs[0].meanings.length > 0) {
@@ -200,7 +200,7 @@ function showText(id, title, popupid = 'popup') {
 				}
 				
 				document.getElementById(popupid + "-body").innerHTML = `
-                    <div class="text-popup-content">
+                    <div class="lyrics-popup-content">
                         <div class="font-controls" id="font-controls">
 							<div class="control-btn-grp">
 	                            <button class="control-btn" onclick="adjustFontSize(0.8696)">A-</button>
@@ -227,7 +227,7 @@ function showText(id, title, popupid = 'popup') {
 							</div>
 							${meaningsButton}
                         </div>
-                        <div class="text-content" id="text-content">${songText}</div>
+                        <div class="lyrics-content" id="lyrics-content">${songLyrics}</div>
                     </div>
                 `;
 
@@ -237,6 +237,7 @@ function showText(id, title, popupid = 'popup') {
 
 			document.getElementById(popupid).style.display = "flex";
 			document.body.classList.add("no-scroll"); // Disable main page scrolling
+			currentLineHeight = 1.5;
 			enterFullscreen();
 		});
 }
@@ -256,9 +257,9 @@ function showMeanings(meanings) {
 
 function setupFontControls(popupid) {
 	let fontControls = document.getElementById("font-controls");
-	let textContent = document.getElementById("text-content");
+	let lyricsContent = document.getElementById("lyrics-content");
 
-	if (!fontControls || !textContent) return;
+	if (!fontControls || !lyricsContent) return;
 
 	// Function to hide font controls
 	function hideControls() {
@@ -282,12 +283,12 @@ function setupFontControls(popupid) {
 }
 
 function adjustFontSize(change) {
-	let textContent = document.getElementById("text-content");
-	if (!textContent) return;
+	let lyricsContent = document.getElementById("lyrics-content");
+	if (!lyricsContent) return;
 
-	let currentSize = parseFloat(window.getComputedStyle(textContent).fontSize);
+	let currentSize = parseFloat(window.getComputedStyle(lyricsContent).fontSize);
 	let newSize = Math.max(10, Math.round(currentSize * change));
-	textContent.style.fontSize = newSize + "px";
+	lyricsContent.style.fontSize = newSize + "px";
 
 	ensureTextPositioning(); // Recheck positioning after resizing
 }
@@ -295,53 +296,53 @@ function adjustFontSize(change) {
 let currentLineHeight = 1.5; // Explicitly track line height
 
 function adjustLineSpacing(change) {
-	let textContent = document.getElementById("text-content");
-	if (!textContent) return;
+	let lyricsContent = document.getElementById("lyrics-content");
+	if (!lyricsContent) return;
 
 	currentLineHeight = Math.max(1, currentLineHeight + change); // Prevent going below 1.0
-	textContent.style.lineHeight = currentLineHeight.toFixed(2); // Apply the new value
+	lyricsContent.style.lineHeight = currentLineHeight.toFixed(2); // Apply the new value
 
 	ensureTextPositioning();
 }
 
 function adjustTextSize() {
-	let textContent = document.getElementById("text-content");
-	if (!textContent) return;
+	let lyricsContent = document.getElementById("lyrics-content");
+	if (!lyricsContent) return;
 
 	let screenWidth = window.innerWidth;
 	let screenHeight = window.innerHeight;
 	let baseSize = Math.min(screenWidth, screenHeight) * 0.05;
 
-	textContent.style.fontSize = `${Math.max(baseSize, 16)}px`;
+	lyricsContent.style.fontSize = `${Math.max(baseSize, 16)}px`;
 }
 
 function ensureTextPositioning() {
-	let textContent = document.getElementById("text-content");
-	if (!textContent) return;
+	let lyricsContent = document.getElementById("lyrics-content");
+	if (!lyricsContent) return;
 
-	// If the text content is shorter than 80% of the screen, center it
-	if (textContent.scrollHeight < window.innerHeight) {
-		textContent.style.margin = "auto 0"; // Center vertically
+	// If the lyrics content is shorter than 80% of the screen, center it
+	if (lyricsContent.scrollHeight < window.innerHeight) {
+		lyricsContent.style.margin = "auto 0"; // Center vertically
 	} else {
-		textContent.style.margin = "0"; // Keep text at the top
+		lyricsContent.style.margin = "0"; // Keep text at the top
 	}
 }
 
 function toggleTextAlignment() {
-	let textContent = document.getElementById("text-content");
+	let lyricsContent = document.getElementById("lyrics-content");
 	let toggleIcon = document.getElementById("toggle-align-icon");
 
-	if (!textContent || !toggleIcon) return;
+	if (!lyricsContent || !toggleIcon) return;
 
-	if (textContent.classList.contains("text-centered")) {
-		textContent.classList.remove("text-centered");
-		textContent.style.textAlign = "left";
+	if (lyricsContent.classList.contains("text-centered")) {
+		lyricsContent.classList.remove("text-centered");
+		lyricsContent.style.textAlign = "left";
 
 		// Switch to "left-aligned" text icon
 		toggleIcon.innerHTML = '<path d="M7 6h10M5 12h14M8 18h8" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round"/>';
 	} else {
-		textContent.classList.add("text-centered");
-		textContent.style.textAlign = "center";
+		lyricsContent.classList.add("text-centered");
+		lyricsContent.style.textAlign = "center";
 
 		// Switch to "centered text" icon
 		toggleIcon.innerHTML = '<path d="M4 6h10M4 12h14M4 18h8" stroke="var(--text-color)" stroke-width="2" stroke-linecap="round"/>';

@@ -166,7 +166,7 @@ body.no-scroll {
 }
 
 /* Text Popup Content (Fills Entire Screen, Scrollbar at Edge) */
-.text-popup-content {
+.lyrics-popup-content {
 	width: 100vw; /* Take full screen width */
 	height: 100vh; /* Take full screen height */
 	display: flex;
@@ -175,7 +175,7 @@ body.no-scroll {
 	align-items: center;
 }
 
-.text-content {
+.lyrics-content {
 	font-size: min(5vw, 36px);
 	line-height: 1.5;
 	text-align: left;

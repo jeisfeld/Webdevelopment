@@ -15,7 +15,7 @@ $isSingleLetter = preg_match ( '/^[a-zA-Z]$/', $query );
 // SQL Query for valid id
 if ($is_valid_id) {
 	// If searching by ID
-	$sql = "SELECT s.id, s.title, s.text, s.tabfilename, s.mp3filename, s.mp3filename2, s.author,
+	$sql = "SELECT s.id, s.title, s.lyrics, s.tabfilename, s.mp3filename, s.mp3filename2, s.author,
                m.title AS meaning_title, m.meaning AS meaning_text
         FROM songs s
         LEFT JOIN song_meaning sm ON s.id = sm.song_id
@@ -38,7 +38,7 @@ if ($is_valid_id) {
 			$songs [$song_id] = [ 
 					'id' => $row ['id'],
 					'title' => $row ['title'],
-					'text' => $row ['text'],
+					'lyrics' => $row ['lyrics'],
 					'tabfilename' => $row ['tabfilename'],
 					'mp3filename' => $row ['mp3filename'],
 					'mp3filename2' => $row ['mp3filename2'],
@@ -70,7 +70,7 @@ if ($query === "*" || $query === "") {
 else if ($isSingleLetter) {
 	$sql = "SELECT id, title, author, tabfilename, mp3filename, mp3filename2, author FROM songs
             WHERE title REGEXP CONCAT('(^| )', ?, '.*')
-               OR text REGEXP CONCAT('(^| )', ?, '.*')
+               OR lyrics REGEXP CONCAT('(^| )', ?, '.*')
             ORDER BY CASE WHEN title REGEXP CONCAT('(^| )', ?, '.*') THEN 1 ELSE 2 END, CAST(id AS UNSIGNED) ASC";
 	$params = [ 
 			$query,
@@ -89,27 +89,27 @@ else {
 	$words = explode ( " ", $normalizedQuery );
 	$conditions = [ ];
 	$titleMatch = [ ];
-	$textMatch = [ ];
+	$lyricsMatch = [ ];
 	$selectParams = [ ];
 	$whereParams = [ ];
 	$types = "";
 
 	$normalizedTitle = "REPLACE(REPLACE(REPLACE(title, '´', ''''), '`', ''''), '’', '''')";
-	$normalizedText = "REPLACE(REPLACE(REPLACE(text, '´', ''''), '`', ''''), '’', '''')";
+	$normalizedLyrics = "REPLACE(REPLACE(REPLACE(lyrics, '´', ''''), '`', ''''), '’', '''')";
 
 	// Full-string match (apply replacement)
 	$fullMatchTitle = "IF($normalizedTitle LIKE ?, 1, 0)";
-	$fullMatchText = "IF($normalizedText LIKE ?, 1, 0)";
+	$fullMatchLyrics = "IF($normalizedLyrics LIKE ?, 1, 0)";
 
 	// Full phrase match params
 	$selectParams [] = "%" . $normalizedQuery . "%"; // Full match title
-	$selectParams [] = "%" . $normalizedQuery . "%"; // Full match text
+	$selectParams [] = "%" . $normalizedQuery . "%"; // Full match lyrics
 	$types .= "ss";
 
 	// Process each word separately for WHERE and ORDER BY
 	foreach ( $words as $word ) {
 		// WHERE conditions
-		$conditions [] = "(id LIKE ? OR $normalizedTitle LIKE ? OR $normalizedText LIKE ? OR author LIKE ? OR keywords LIKE ?)";
+		$conditions [] = "(id LIKE ? OR $normalizedTitle LIKE ? OR $normalizedLyrics LIKE ? OR author LIKE ? OR keywords LIKE ?)";
 		$whereParams [] = "%" . $word . "%";
 		$whereParams [] = "%" . $word . "%";
 		$whereParams [] = "%" . $word . "%";
@@ -119,25 +119,25 @@ else {
 
 		// ORDER BY conditions
 		$titleMatch [] = "IF($normalizedTitle LIKE ?, 1, 0)";
-		$textMatch [] = "IF($normalizedText LIKE ?, 1, 0)";
+		$lyricsMatch [] = "IF($normalizedLyrics LIKE ?, 1, 0)";
 		$selectParams [] = "%" . $word . "%"; // Title match
-		$selectParams [] = "%" . $word . "%"; // Text match
+		$selectParams [] = "%" . $word . "%"; // Lyrics match
 		$types .= "ss";
 	}
 
 	// Construct SQL query with ranking priority
 	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author, keywords,
                 ($fullMatchTitle) AS full_title_match,
-                ($fullMatchText) AS full_text_match,
+                ($fullMatchLyrics) AS full_lyrics_match,
                 (" . implode ( " + ", $titleMatch ) . ") AS title_match_count,
-                (" . implode ( " + ", $textMatch ) . ") AS text_match_count
+                (" . implode ( " + ", $lyricsMatch ) . ") AS lyrics_match_count
             FROM songs
             WHERE " . implode ( " AND ", $conditions ) . "
             ORDER BY
                 full_title_match DESC,
-                full_text_match DESC,
+                full_lyrics_match DESC,
                 title_match_count DESC,
-                text_match_count DESC,
+                lyrics_match_count DESC,
                 id ASC";
 
 	$params = array_merge ( $selectParams, $whereParams );
