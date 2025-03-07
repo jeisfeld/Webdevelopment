@@ -4,13 +4,15 @@ const texts = {
 		music: "Music",
 		social: "Social Networks",
 		otherProjects: "Other Projects",
-		impressum: "Imprint"
+		impressum: "Imprint",
+		heilsamelieder: "Circle Songs"
 	},
 	de: {
 		music: "Musik",
 		social: "Soziale Netzwerke",
 		otherProjects: "Andere Projekte",
-		impressum: "Impressum"
+		impressum: "Impressum",
+		heilsamelieder: "Heilsame Lieder"
 	}
 };
 
@@ -22,6 +24,7 @@ document.getElementById("music").textContent = texts[userLang].music;
 document.getElementById("social").textContent = texts[userLang].social;
 document.getElementById("otherProjects").textContent = texts[userLang].otherProjects;
 document.getElementById("impressum-link").textContent = texts[userLang].impressum;
+document.getElementById("heilsame-lieder").textContent = texts[userLang].heilsamelieder;
 
 
 // handle modal impressum

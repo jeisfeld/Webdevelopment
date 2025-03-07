@@ -1,5 +1,5 @@
 <?php
-$folder = "../img/songs/"; // Folder where JPG files are stored
+$folder = "img/songs/"; // Folder where JPG files are stored
 $zipFile = "chords.zip"; // Name of the zip file to be created
 
 // If zip file doesn't exist or is outdated, create a new one

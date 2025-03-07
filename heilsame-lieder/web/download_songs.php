@@ -9,7 +9,7 @@ if ($conn->connect_error) {
     die(json_encode(["error" => "Database connection failed"]));
 }
 
-$sql = "SELECT id, title, lyrics, tabfilename, author FROM songs ORDER BY id";
+$sql = "SELECT id, title, lyrics, author, keywords, tabfilename, mp3filename, mp3filename2 FROM songs ORDER BY id";
 $result = $conn->query($sql);
 
 $songs = [];
