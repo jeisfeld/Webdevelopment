@@ -2,3 +2,4 @@
 .htaccess
 .project
 web/songarchive/db_config.php
+/util/
