@@ -48,13 +48,9 @@ a {
 	transition: color 0.3s;
 }
 
-a:hover {
+a:not(.icon-wrapper):hover {
 	color: #EE82EE;
 	/* Light violet */
-}
-
-.section h2:hover ~a {
-	color: lightgreen;
 }
 
 .icon {
@@ -64,6 +60,16 @@ a:hover {
 	fill: currentColor; /* Makes the SVG icon inherit the current text color */
 	margin-right: 4px;
 	filter: drop-shadow(0 0 5px #000) drop-shadow(0 0 10px #000) drop-shadow(0 0 15px #000);
+}
+
+.icon-wrapper {
+	color: #EE82EE;
+	filter: brightness(500%); /* Turns violet into white */
+	transition: filter 0.3s;
+}
+
+.icon-wrapper:hover {
+	filter: none; /* Original violet color */
 }
 
 .impressum {
