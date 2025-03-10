@@ -1,5 +1,5 @@
 .well-known
 .htaccess
 .project
-web/songarchive/db_config.php
+web/db_config.php
 /util/
