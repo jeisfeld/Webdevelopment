@@ -3,14 +3,14 @@ const texts = {
 	en: {
 		music: "Music",
 		social: "Social Networks",
-		otherProjects: "Other Projects",
+		otherProjects: "Projects",
 		impressum: "Imprint",
 		heilsamelieder: "Circle Songs"
 	},
 	de: {
 		music: "Musik",
 		social: "Soziale Netzwerke",
-		otherProjects: "Andere Projekte",
+		otherProjects: "Projekte",
 		impressum: "Impressum",
 		heilsamelieder: "Heilsame Lieder"
 	}
