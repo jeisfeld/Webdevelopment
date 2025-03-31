@@ -19,6 +19,7 @@ ExpiresByType image/x-icon "access plus 1 months"
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule "^index.php" - [L]
+RewriteRule "^datenschutz_unlocker.html" - [L]
 RewriteRule "robots\.txt$"  "robots.txt" [L]
 RewriteRule "^appauth"  "auth/appauth.php" [L]
 RewriteRule "^key"  "auth/key.php" [L]
