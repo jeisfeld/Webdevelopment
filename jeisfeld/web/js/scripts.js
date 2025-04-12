@@ -73,7 +73,7 @@ window.addEventListener('click', function(event) {
 
 // Background photo gallery
 
-const totalImages = 5;
+const totalImages = 7;
 const basePath = '../img/joerg';
 const extension = '.jpg';
 
@@ -98,6 +98,7 @@ setTimeout(() => {
   bg1.classList.remove('instant');
 }, 50); // 50ms is enough to apply the style
 
+prevIndex = currentIndex;
 currentIndex = (currentIndex % totalImages) + 1;
 
 setInterval(() => {
@@ -106,10 +107,17 @@ setInterval(() => {
   const fadingOut = currentDiv === 1 ? bg1 : bg2;
 
   fadingIn.style.backgroundImage = `url('${nextImage}')`;
-  fadingIn.classList.add('active');
-  fadingOut.classList.remove('active');
+
+  // Remove old image class
+  fadingIn.className = 'bg-slide active';
+  fadingOut.className = 'bg-slide';
+
+  // Add new image-specific class
+  fadingIn.classList.add(`bg-image-${currentIndex}`);
+  fadingOut.classList.add(`bg-image-${prevIndex}`);
 
   currentDiv = currentDiv === 1 ? 2 : 1;
+  prevIndex = currentIndex;
   currentIndex = (currentIndex % totalImages) + 1;
 }, 8000);
 
