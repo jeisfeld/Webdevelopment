@@ -57,6 +57,7 @@ body {
   .bg-image-5 { background-position: 50% center; }
   .bg-image-6 { background-position: 55% center; }
   .bg-image-7 { background-position: 45% center; }
+  .bg-image-8 { background-position: 30% center; }
 }
 
 /* Container for centered content */
@@ -67,7 +68,7 @@ body {
 
 h1, h2, a {
 	color: var(--outer-color);
-	text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000, 0 0 20px #000, 0 0 25px #000, 0 0 30px #000, 0 0 35px #000;
+	text-shadow: 0 0 3px #000, 0 0 6px #000, 0 0 9px #000, 0 0 12px #000, 0 0 15px #000, 0 0 18px #000, 0 0 21px #000;
 	margin: 10px 0;
 }
 
@@ -105,7 +106,7 @@ a:hover {
 	vertical-align: middle; /* Aligns the icon with the text */
 	fill: currentColor; /* Makes the SVG icon inherit the current text color */
 	margin-right: 4px;
-	filter: drop-shadow(0 0 5px #000) drop-shadow(0 0 10px #000) drop-shadow(0 0 15px #000);
+	filter: drop-shadow(0 0 3px #000) drop-shadow(0 0 6px #000);
 }
 
 .impressum {

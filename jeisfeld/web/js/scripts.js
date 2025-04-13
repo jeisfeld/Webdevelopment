@@ -73,7 +73,7 @@ window.addEventListener('click', function(event) {
 
 // Background photo gallery
 
-const totalImages = 7;
+const totalImages = 8;
 const basePath = '../img/joerg';
 const extension = '.jpg';
 
