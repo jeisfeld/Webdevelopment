@@ -77,6 +77,12 @@ h1 {
 	margin-bottom: 20px;
 }
 
+.logo {
+    height: 3em; /* increase size from 2em */
+    margin: 0 auto 1em auto; /* center and give spacing */
+    display: block;
+}
+
 h2 {
 	font-size: 2em;
 	margin-top: 30px;
@@ -182,6 +188,9 @@ a:hover {
 	a {
 		font-size: 2em;
 	}
+	.logo {
+    	height: 4em;
+  	}
 }
 
 /* On portrait screens, display one link per line */
