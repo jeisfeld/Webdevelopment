@@ -2,8 +2,6 @@
 
 <p>Ich mache verschiedene Tätigkeiten grafischer Gestaltung - seien es Flyer, Logos, Einladungskarten, Buttons etc.</p>
 
-<p>Wie in allen Kategorien gilt: Sie liefern die Ideen, ich mache die Umsetzung.</p>
-
 <p>Beispiele:</p>
 
 <img src="<?=$basepath?>/img/button.png" alt="Button" />
