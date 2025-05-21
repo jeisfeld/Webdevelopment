@@ -1,9 +1,15 @@
 <h1>Musik</h1>
 
-<p>Ich mache Musik - meist mit Fokus Gesang und Gitarre: Covern bekannter Songs, umgetextete Versionen anlässlich Jubiläen,
-Vertonungen von Lyrik, oder eigene Songs.</p>
+<p>Ich mache Musik in verschiedenen Kontexten</p>
 
-<p>Beispiele auf Youtube:</p>
-<p><a href="https://www.youtube.com/channel/UC7NfcPPjdBcTkSRwe3qFaeQ" target="_blank"><img src="<?=$basepath?>/img/youtube.jpg"></a></p>
+<ul>
+<li>Musikalische Begleitung von Contact-Impro-Jams (mit E-Gitarren-Synth)</li>
+<li>Bassbegleitung bei Singkreisen und Mantra-Konzerten</li>
+<li>Leiten von Singkreisen</li>
+<li>Aufbau eines Mantra-Liederarchivs: <a href="https://heilsame-lieder.de" target="_blank">heilsame-lieder.de</a></li>
+<li>Covers und Eigenkompositionen - siehe meinen <a href="https://www.youtube.com/@JoergEisfeld" target="_blank">Youtube-Kanal</a></li>
+</ul>
+
+<p>Link zu meiner musikalischen <a href="https://jeisfeld.de" target="_blank">Landing Page</a></p>
 
 <img class="centered" src="<?=$basepath?>/img/clef.jpg" />
