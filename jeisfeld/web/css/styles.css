@@ -1,5 +1,5 @@
 :root {
-  --outer-color: #F7F5C4;
+	--outer-color: #F7F5C4;
 }
 
 html, body {
@@ -20,44 +20,60 @@ body {
 }
 
 #background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
 }
 
 .bg-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	transition: opacity 1s ease-in-out;
+	opacity: 0;
 }
 
 .bg-slide.instant {
-  transition: none !important;
+	transition: none !important;
 }
 
 .bg-slide.active {
-  opacity: 1;
+	opacity: 1;
 }
 
-@media (orientation: portrait) {
-  .bg-image-1 { background-position: 50% center; }
-  .bg-image-2 { background-position: 50% center; }
-  .bg-image-3 { background-position: 40% center; }
-  .bg-image-4 { background-position: 20% center; }
-  .bg-image-5 { background-position: 50% center; }
-  .bg-image-6 { background-position: 55% center; }
-  .bg-image-7 { background-position: 45% center; }
-  .bg-image-8 { background-position: 30% center; }
+@media ( orientation : portrait) {
+	.bg-image-1 {
+		background-position: 50% center;
+	}
+	.bg-image-2 {
+		background-position: 50% center;
+	}
+	.bg-image-3 {
+		background-position: 40% center;
+	}
+	.bg-image-4 {
+		background-position: 20% center;
+	}
+	.bg-image-5 {
+		background-position: 50% center;
+	}
+	.bg-image-6 {
+		background-position: 55% center;
+	}
+	.bg-image-7 {
+		background-position: 45% center;
+	}
+	.bg-image-8 {
+		background-position: 30% center;
+	}
 }
 
 /* Container for centered content */
@@ -78,9 +94,11 @@ h1 {
 }
 
 .logo {
-    height: 3em; /* increase size from 2em */
-    margin: 0 auto 1em auto; /* center and give spacing */
-    display: block;
+	width: 100px;
+	height: auto;
+	margin: 0 auto 1em auto; /* center and give spacing */
+	display: block;
+	margin: 0 auto 1em auto;
 }
 
 h2 {
@@ -189,8 +207,8 @@ a:hover {
 		font-size: 2em;
 	}
 	.logo {
-    	height: 4em;
-  	}
+		width: 150px;
+	}
 }
 
 /* On portrait screens, display one link per line */
@@ -198,6 +216,16 @@ a:hover {
 	a {
 		display: block;
 		margin: 10px 0;
+	}
+}
+
+@media ( orientation : portrait) and (max-height: 640px) {
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 5px;
+	}
+	a {
+		margin: 5px 0;
 	}
 }
 
