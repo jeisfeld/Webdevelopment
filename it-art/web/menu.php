@@ -18,10 +18,10 @@ function hr() {
 hr();
 menulink($basepath, "startseite", "Startseite", $page);
 hr();
-menulink($basepath, "webseiten", "Webseiten", $page);
-menulink($basepath, "grafik", "Grafik", $page);
 menulink($basepath, "musik", "Musik", $page);
 menulink($basepath, "apps", "Android-Apps", $page);
+menulink($basepath, "grafik", "Grafik", $page);
+menulink($basepath, "webseiten", "Webseiten", $page);
 hr();
 menulink($basepath, "kontakt", "Kontakt", $page);
 ?>
