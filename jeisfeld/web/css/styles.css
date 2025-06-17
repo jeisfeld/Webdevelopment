@@ -50,14 +50,17 @@ body {
 }
 
 @media ( orientation : portrait) {
+	.bg-image-0 {
+		background-position: 50% center;
+	}
 	.bg-image-1 {
 		background-position: 50% center;
 	}
 	.bg-image-2 {
-		background-position: 50% center;
+		background-position: 40% center;
 	}
 	.bg-image-3 {
-		background-position: 40% center;
+		background-position: 65% center;
 	}
 	.bg-image-4 {
 		background-position: 20% center;

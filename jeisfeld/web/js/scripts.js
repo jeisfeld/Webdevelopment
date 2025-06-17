@@ -73,24 +73,25 @@ window.addEventListener('click', function(event) {
 
 // Background photo gallery
 
-const totalImages = 8;
-const basePath = '../img/joerg';
+const totalImages = 9;
+const basePath = '../img/';
 const extension = '.jpg';
+const imageList = ['joerg1', 'joerg2', 'joerg3', 'joerg9', 'joerg4', 'joerg5', 'joerg6', 'joerg7', 'joerg8'];
 
-let currentIndex = 1;
+let currentIndex = 0;
 let currentDiv = 1;
 
 const bg1 = document.getElementById('bg1');
 const bg2 = document.getElementById('bg2');
 
 // Preload images
-for (let i = 1; i <= totalImages; i++) {
+for (let i = 0; i < totalImages; i++) {
   const img = new Image();
-  img.src = `${basePath}${i}${extension}`;
+  img.src = `${basePath}${imageList[i]}${extension}`;
 }
 
 // Show first image instantly
-bg1.style.backgroundImage = `url('${basePath}${currentIndex}${extension}')`;
+bg1.style.backgroundImage = `url('${basePath}${imageList[currentIndex]}${extension}')`;
 bg1.classList.add('active', 'instant');
 
 // Remove "instant" class shortly after (so transition is enabled for future fades)
@@ -99,10 +100,10 @@ setTimeout(() => {
 }, 50); // 50ms is enough to apply the style
 
 prevIndex = currentIndex;
-currentIndex = (currentIndex % totalImages) + 1;
+currentIndex = (currentIndex + 1) % totalImages;
 
 setInterval(() => {
-  const nextImage = `${basePath}${currentIndex}${extension}`;
+  const nextImage = `${basePath}${imageList[currentIndex]}${extension}`;
   const fadingIn = currentDiv === 1 ? bg2 : bg1;
   const fadingOut = currentDiv === 1 ? bg1 : bg2;
 
@@ -118,8 +119,8 @@ setInterval(() => {
 
   currentDiv = currentDiv === 1 ? 2 : 1;
   prevIndex = currentIndex;
-  currentIndex = (currentIndex % totalImages) + 1;
-}, 8000);
+  currentIndex = (currentIndex + 1) % totalImages;
+}, 7000);
 
 
 
