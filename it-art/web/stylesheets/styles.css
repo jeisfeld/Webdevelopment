@@ -291,8 +291,6 @@ span.error {
 
 #bottomframe div#address div {
 	display: inline-block;
-	zoom: 1;
-	*display: inline;
 	padding: 5px 0px 5px 0px;
 	white-space: nowrap;
 }

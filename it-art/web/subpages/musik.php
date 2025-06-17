@@ -11,5 +11,8 @@
 </ul>
 
 <p>Link zu meiner musikalischen <a href="https://jeisfeld.de" target="_blank">Landing Page</a></p>
+<a href="http://jeisfeld.de" target="_blank" class="image">
+	<img alt="jeisfeld.de" src="<?=$basepath?>/img/jeisfeld.jpg" />
+</a>
 
 <img class="centered" src="<?=$basepath?>/img/clef.jpg" />

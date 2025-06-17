@@ -35,7 +35,7 @@ function setColors() {
 	}
 	colorsAreSet = true;
 
-	var idArray = shuffle(['#startlinkwebseiten', '#startlinkgrafik', '#startlinkmusik', '#startlinkapps']);
+	var idArray = shuffle(['#startlinkmusik', '#startlinkapps', '#startlinkgrafik', '#startlinkwebseiten']);
 
 	setRandomizedRgb(idArray[0], 96 + getRandom(32), 112 + getRandom(32), 0);
 	setRandomizedRgb(idArray[1], 0, 112 + getRandom(32), 88 + getRandom(32));
@@ -96,20 +96,20 @@ function animateStartpage(width, height, hasOffset) {
 	setColors();
 
 	if (height > 500) {
-		position(width, height, $('#startlinkwebseiten'), 0.35, 0.2, 0, hasOffset);
-		position(width, height, $('#startlinkgrafik'), 0.45, 0.4, 200, hasOffset);
-		position(width, height, $('#startlinkmusik'), 0.55, 0.6, 400, hasOffset);
-		position(width, height, $('#startlinkapps'), 0.65, 0.8, 600, hasOffset);
+		position(width, height, $('#startlinkmusik'), 0.35, 0.2, 0, hasOffset);
+		position(width, height, $('#startlinkapps'), 0.45, 0.4, 200, hasOffset);
+		position(width, height, $('#startlinkgrafik'), 0.55, 0.6, 400, hasOffset);
+		position(width, height, $('#startlinkwebseiten'), 0.65, 0.8, 600, hasOffset);
 	} else if (height > 400) {
-		position(width, height, $('#startlinkwebseiten'), 0.35, 0.05, hasOffset);
-		position(width, height, $('#startlinkgrafik'), 0.45, 0.35, 200, hasOffset);
-		position(width, height, $('#startlinkmusik'), 0.55, 0.65, 400, hasOffset);
-		position(width, height, $('#startlinkapps'), 0.65, 0.95, 600, hasOffset);
+		position(width, height, $('#startlinkmusik'), 0.35, 0.05, hasOffset);
+		position(width, height, $('#startlinkapps'), 0.45, 0.35, 200, hasOffset);
+		position(width, height, $('#startlinkgrafik'), 0.55, 0.65, 400, hasOffset);
+		position(width, height, $('#startlinkwebseiten'), 0.65, 0.95, 600, hasOffset);
 	} else {
-		position(width, height, $('#startlinkwebseiten'), 0.2, 0.05, hasOffset);
-		position(width, height, $('#startlinkgrafik'), 0.8, 0.35, 200, hasOffset);
-		position(width, height, $('#startlinkmusik'), 0.2, 0.65, 400, hasOffset);
-		position(width, height, $('#startlinkapps'), 0.8, 0.95, 600, hasOffset);
+		position(width, height, $('#startlinkmusik'), 0.2, 0.05, hasOffset);
+		position(width, height, $('#startlinkapps'), 0.8, 0.35, 200, hasOffset);
+		position(width, height, $('#startlinkgrafik'), 0.2, 0.65, 400, hasOffset);
+		position(width, height, $('#startlinkwebseiten'), 0.8, 0.95, 600, hasOffset);
 	}
 
 }
