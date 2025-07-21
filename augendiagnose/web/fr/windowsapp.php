@@ -107,5 +107,5 @@
 </ul>
 
 <h3>
-	<a href="<?=$urlprefix?>/fr/downloads/">Aller à la page de téléchargement</a>
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/fr/downloads/">Aller à la page de téléchargement</a>
 </h3>
