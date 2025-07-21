@@ -1,9 +1,9 @@
 <p>
-	<a href="<?=$urlprefix?>/en/<?=$pagepathname?>">English</a>
-	<a href="<?=$urlprefix?>/de/<?=$pagepathname?>">Deutsch</a>
-	<a href="<?=$urlprefix?>/es/<?=$pagepathname?>">Español</a>
-	Português
-	<a href="<?=$urlprefix?>/fr/<?=$pagepathname?>">Français</a>
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/en/<?=htmlspecialchars($pagepathname, ENT_QUOTES, 'UTF-8')?>">English</a>
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/de/<?=htmlspecialchars($pagepathname, ENT_QUOTES, 'UTF-8')?>">Deutsch</a>
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/es/<?=htmlspecialchars($pagepathname, ENT_QUOTES, 'UTF-8')?>">Español</a>
+        Português
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/fr/<?=htmlspecialchars($pagepathname, ENT_QUOTES, 'UTF-8')?>">Français</a>
 </p>
 
 <?php 
@@ -11,7 +11,7 @@ if (!$nopageselected) {
 ?>
 <div id="navigationbutton" class="mobile">
 	<a href="javascript:void(0);" onclick="toggleNavigation()">
-		<img alt="Home" src="<?=$basepath?>/drawable/ic_menu.png">
+                <img alt="Home" src="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/drawable/ic_menu.png">
 	</a>
 </div>
 <?php 
