@@ -1,40 +1,47 @@
 <?PHP
 $basepath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 
-// Determine language
-if (! empty ( $_GET ["lang"] )) {
-	$language = $_GET ["lang"];
-}
-else {
-	if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "de" )) {
-		$language = "de";
-	}
-	else if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "es" )) {
-		$language = "es";
-	}
-	else if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "pt" )) {
-		$language = "pt";
-	}
-	else if (strstr ( @$_SERVER ['HTTP_ACCEPT_LANGUAGE'], "fr" )) {
-		$language = "fr";
-	}
-	else {
-		$language = "en";
-	}
+// Determine language with whitelist to avoid script injection
+$allowedLanguages = array("de", "en", "es", "pt", "fr");
+if (!empty($_GET["lang"]) && in_array($_GET["lang"], $allowedLanguages, true)) {
+        $language = $_GET["lang"];
+} else {
+        if (strstr(@$_SERVER['HTTP_ACCEPT_LANGUAGE'], "de")) {
+                $language = "de";
+        } elseif (strstr(@$_SERVER['HTTP_ACCEPT_LANGUAGE'], "es")) {
+                $language = "es";
+        } elseif (strstr(@$_SERVER['HTTP_ACCEPT_LANGUAGE'], "pt")) {
+                $language = "pt";
+        } elseif (strstr(@$_SERVER['HTTP_ACCEPT_LANGUAGE'], "fr")) {
+                $language = "fr";
+        } else {
+                $language = "en";
+        }
 }
 
+$allowedPages = array(
+        "overview",
+        "display_photos",
+        "organize_photos",
+        "settings",
+        "windowsapp",
+        "downloads",
+        "impressum"
+);
+
 if (isset($page)) {
-	$nopageselected = false;
-}
-else {
-	if (empty ( $_GET ["page"] )) {
-		$page = "overview";
-		$nopageselected = true;
-	}
-	else {
-		$page = $_GET ["page"];
-		$nopageselected = false;
-	}
+        $nopageselected = false;
+} else {
+        if (empty($_GET["page"])) {
+                $page = "overview";
+                $nopageselected = true;
+        } else {
+                $page = $_GET["page"];
+                if (!in_array($page, $allowedPages, true)) {
+                        $page = "overview";
+                }
+                $nopageselected = false;
+        }
 }
 
 $pagefull = $page . ".php";
@@ -127,17 +134,17 @@ else {
 	?>
 
 <!DOCTYPE html>
-<html lang="<?=$language?>">
+<html lang="<?=htmlspecialchars($language, ENT_QUOTES, 'UTF-8')?>">
 <head>
-<title><?=$title?></title>
+<title><?=htmlspecialchars($title, ENT_QUOTES, 'UTF-8')?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Content-Language" content="<?=$language?>">
-<meta name="description" content="<?=$description?>">
-<meta name="keywords" content="<?=$keywords?>">
+<meta http-equiv="Content-Language" content="<?=htmlspecialchars($language, ENT_QUOTES, 'UTF-8')?>">
+<meta name="description" content="<?=htmlspecialchars($description, ENT_QUOTES, 'UTF-8')?>">
+<meta name="keywords" content="<?=htmlspecialchars($keywords, ENT_QUOTES, 'UTF-8')?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="<?=$basepath?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
-<link rel="shortcut icon" href="<?=$basepath?>/drawable/icon_<?=$app?>.ico">
-<script type="text/javascript" src="<?=$basepath?>/javascript/jquery-3.5.1.min.js"></script>
+<link href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/stylesheets/styles.css" rel="Stylesheet" type="text/css">
+<link rel="shortcut icon" href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/drawable/icon_<?=htmlspecialchars($app, ENT_QUOTES, 'UTF-8')?>.ico">
+<script type="text/javascript" src="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/javascript/jquery-3.5.1.min.js"></script>
 <script>
 function toggleNavigation() {
 	$("#navigationframe").toggleClass( "mobilenavigation" );
