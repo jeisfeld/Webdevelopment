@@ -98,5 +98,5 @@
 </ul>
 
 <h3>
-	<a href="<?=$urlprefix?>/en/downloads/">Go to download page</a>
+        <a href="<?=htmlspecialchars($urlprefix, ENT_QUOTES, 'UTF-8')?>/en/downloads/">Go to download page</a>
 </h3>

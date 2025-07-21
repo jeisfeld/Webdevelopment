@@ -1,21 +1,21 @@
 <h2 class="mobile"><span class="hideondropdown">Imagen Aleatoria - </span>Contenido</h2>
 
 <p>
-	<a href="<?=$basepath?>/es/overview/">Información general</a>
+        <a href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/es/overview/">Información general</a>
 </p>
 
 <p>
-	<a href="<?=$basepath?>/es/howto/">Notas de uso</a>
+        <a href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/es/howto/">Notas de uso</a>
 </p>
 
 <p>
-	<a href="<?=$basepath?>/es/settings/">Ajustes</a>
+        <a href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/es/settings/">Ajustes</a>
 </p>
 
 <p>
-	<a href="<?=$basepath?>/es/releasenotes/">Notas de lanzamiento</a>
+        <a href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/es/releasenotes/">Notas de lanzamiento</a>
 </p>
 
 <p>
-	<a href="<?=$basepath?>/es/impressum/">Aviso legal</a>
+        <a href="<?=htmlspecialchars($basepath, ENT_QUOTES, 'UTF-8')?>/es/impressum/">Aviso legal</a>
 </p>
