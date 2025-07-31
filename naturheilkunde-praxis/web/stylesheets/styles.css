@@ -194,7 +194,8 @@ p {
 
 ul {
 	padding-left: 2em;
-	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-top: 2px;
 }
 
 li {
@@ -216,8 +217,8 @@ hr {
 }
 
 .feedback-header {
-	padding-top: 10px;
-	border-top: 1px solid #33537C80;
+	padding-top: 20px;
+	border-top: 2px solid #33537C80;
 }
 
 #mainframe ul.feedback {
@@ -232,13 +233,13 @@ hr {
 }
 
 .feedback>li {
-	border-bottom: 1px solid #33537C40;
-    padding-top: 5px;
-    padding-bottom: 10px;
+	border-bottom: 2px solid #33537C40;
+	padding-top: 10px;
+	padding-bottom: 15px;
 }
 
 .feedback>li:last-child {
-    border-bottom: 0px;
+	border-bottom: 0px;
 }
 
 .feedback-author {
@@ -651,7 +652,7 @@ a.closeImpressum {
 }
 
 @media screen and (min-width: 1550px) {
-	#mainframe p, #mainframe ul:not(ul ul) {
+	#mainframe p:not(.feedback-text p), #mainframe ul:not(ul ul) {
 		max-width: 66%;
 	}
 	#pictimg:not(.googlemaps) {
