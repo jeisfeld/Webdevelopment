@@ -1,6 +1,14 @@
-<h2><span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento</h2>
+<h2>
+	<span class="mobile">Imagen Aleatoria - </span>Notas de lanzamiento
+</h2>
 
 <ul>
+	<li><b>Versión 1.5.3:</b> Se habilitó la visualización cíclica de imágenes, ordenadas por nombre.</li>
+
+	<li><b>Versión 1.5.2:</b> Se habilitó la configuración de la imagen del widget mediante la lista de imágenes. Se
+		habilitó la configuración de la duración de las notificaciones tras la apertura. Se mejoró el cuadro de diálogo para
+		la hora de inicio/fin de las notificaciones. Actualizado para Android 15.</li>
+
 	<li><b>Versión 1.5.1:</b> Corrección de errores.</li>
 
 	<li><b>Versión 1.5.0:</b> Creación de accesos directos.</li>
@@ -49,20 +57,20 @@
 
 	<li><b>Versión 1.3.7:</b> Corrección de errores.</li>
 
-	<li><b>Versión 1.3.6:</b> Se corrigieron problemas de orientación de miniaturas en Android 10. Se eliminó el icono
-		del iniciador secundario. Corrección de errores.</li>
+	<li><b>Versión 1.3.6:</b> Se corrigieron problemas de orientación de miniaturas en Android 10. Se eliminó el icono del
+		iniciador secundario. Corrección de errores.</li>
 
 	<li><b>Versión 1.3.5:</b> Problemas resueltos con widgets y notificaciones en Android 10.</li>
 
-	<li><b>Versión 1.3.4:</b> Habilitado el cambio automático de imágenes en la vista de pantalla completa. Corrección
-		de errores.</li>
+	<li><b>Versión 1.3.4:</b> Habilitado el cambio automático de imágenes en la vista de pantalla completa. Corrección de
+		errores.</li>
 
 	<li><b>Versión 1.3.3:</b> Corrección de errores.</li>
 
 	<li><b>Versión 1.3.2:</b> Traducción Española. Corrección de errores.</li>
 
-	<li><b>Versión 1.3.1:</b> Posibilidad de configuración para evitar el tiempo de espera de la pantalla. Se habilitó
-		la ocultación de la barra de navegación. Corrección de errores.</li>
+	<li><b>Versión 1.3.1:</b> Posibilidad de configuración para evitar el tiempo de espera de la pantalla. Se habilitó la
+		ocultación de la barra de navegación. Corrección de errores.</li>
 
 	<li><b>Versión 1.3:</b> Configuración habilitada de peso para carpetas. Botón de donación eliminado. Corrección de
 		errores.</li>
@@ -99,8 +107,8 @@
 
 	<li><b>Versión 1.1.2:</b> Corrección de errores.</li>
 
-	<li><b>Versión 1.1.1:</b> Permitir la supresión de notificaciones emergentes para ciertas aplicaciones. Corrección
-		de errores.</li>
+	<li><b>Versión 1.1.1:</b> Permitir la supresión de notificaciones emergentes para ciertas aplicaciones. Corrección de
+		errores.</li>
 
 	<li><b>Versión 1.1:</b> Habilitado para agregar carpetas, incluidas las subcarpetas. El nombre cambia de nuevo a
 		&laquo;Imagen aleatoria&raquo;.</li>
@@ -111,8 +119,8 @@
 
 	<li><b>Versión 1.0.2:</b> Se eliminó la facturación de Google (paquetes premium). Corrección de errores.</li>
 
-	<li><b>Versión 1.0.1:</b> Colores de fondo habilitados de la imagen. Habilitado widget de lista desplazable.
-		Corrección de errores.</li>
+	<li><b>Versión 1.0.1:</b> Colores de fondo habilitados de la imagen. Habilitado widget de lista desplazable. Corrección
+		de errores.</li>
 
 	<li><b>Versión 1.0:</b>
 		<ul>
@@ -124,20 +132,19 @@
 
 	<li><b>Versión 0.2.7:</b> Se agregaron varias opciones de configuración a los widgets.</li>
 
-	<li><b>Versión 0.2.6:</b> Se creó la versión pro de la aplicación (como alternativa al complemento en la
-		aplicación).</li>
+	<li><b>Versión 0.2.6:</b> Se creó la versión pro de la aplicación (como alternativa al complemento en la aplicación).</li>
 
 	<li><b>Versión 0.2.5:</b> Mejora en el manejo de errores en Random Image Frame.</li>
 
-	<li><b>Versión 0.2.4:</b> en caso de que no se puedan encontrar imágenes de la lista, muestre el mensaje solo
-		mientras se organiza, no mientras se visualiza.</li>
+	<li><b>Versión 0.2.4:</b> en caso de que no se puedan encontrar imágenes de la lista, muestre el mensaje solo mientras
+		se organiza, no mientras se visualiza.</li>
 
 	<li><b>Versión 0.2.3:</b> Ofreció más posibilidades para agregar imágenes a la lista.</li>
 
 	<li><b>Versión 0.2.2:</b> Simplificó los primeros pasos.</li>
 
-	<li><b>Versión 0.2.1:</b> Posibilidad de ajustar individualmente la frecuencia de selección de imágenes para cada
-		lista anidada.</li>
+	<li><b>Versión 0.2.1:</b> Posibilidad de ajustar individualmente la frecuencia de selección de imágenes para cada lista
+		anidada.</li>
 
 	<li><b>Versión 0.2:</b>
 		<ul>
@@ -153,8 +160,7 @@
 
 	<li><b>Versión 0.1.5:</b>
 		<ul>
-			<li>Widget de imagen aleatorio: botones agregados para cambiar a otra imagen o cambiar la configuración del
-				widget.</li>
+			<li>Widget de imagen aleatorio: botones agregados para cambiar a otra imagen o cambiar la configuración del widget.</li>
 			<li>Configuración de la lista: pulsación prolongada habilitada para mostrar detalles.</li>
 			<li>Corrección de errores.</li>
 		</ul></li>
@@ -165,8 +171,8 @@
 			<li>Mejor rendimiento de lanzamiento y animación de lanzamiento.</li>
 		</ul></li>
 
-	<li><b>Versión 0.1.3:</b> Se cambió el nombre de &laquo;Imagen aleatoria&raquo; a &laquo;Imagen sorpresa&raquo;.
-		Se cambió el fondo del icono de naranja a azul.</li>
+	<li><b>Versión 0.1.3:</b> Se cambió el nombre de &laquo;Imagen aleatoria&raquo; a &laquo;Imagen sorpresa&raquo;. Se
+		cambió el fondo del icono de naranja a azul.</li>
 
 	<li><b>Versión 0.1.2:</b> Corrección de errores.</li>
 

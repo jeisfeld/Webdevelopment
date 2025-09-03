@@ -34,7 +34,8 @@
 			<li><b>Allow to go back multiple images:</b> Analogous, but you can go back several images</li>
 			<li><b>Allow to go back, avoid repetitions:</b> Analogous, but when selecting the next random image repetitions are
 				avoided</li>
-			<li><b>Display all pictures cyclically:</b> All pictures in the list are shown cyclically</li>
+			<li><b>Display all images cyclically:</b> All images in the list are shown cyclically</li>
+			<li><b>Display images cyclically (sorted):</b> All images in the list are shown cyclically, sorted by name</li>
 			<li><b>No change:</b> Flipping has no effect</li>
 			<li><b>Close screen:</b> Flipping closes the screen</li>
 		</ul></li>
