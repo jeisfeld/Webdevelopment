@@ -35,6 +35,7 @@
 			<li><b>Rückwärts möglich, Wiederholungen vermeiden:</b> Analog, aber bei der auswahl des nächsen Zufallsbildes werden
 				Wiederholungen vermieden</li>
 			<li><b>Alle Bilder zyklisch zeigen:</b> Alle Bilder der Liste werden zyklisch gezeigt</li>
+			<li><b>Alle Bilder zyklisch zeigen (sortiert):</b> Alle Bilder der Liste werden zyklisch gezeigt, sortiert nach Name</li>
 			<li><b>Keine Änderung:</b> Schnippen hat keine Auswirkung</li>
 			<li><b>Ansicht schließen:</b> Schnippen schließt die Ansicht</li>
 		</ul></li>

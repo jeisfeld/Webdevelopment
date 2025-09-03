@@ -35,6 +35,8 @@
 			<li><b>Permitir retroceder, evitar repeticiones:</b> Análoga, pero al seleccionar la siguiente imagen aleatoria se
 				evitan las repeticiones</li>
 			<li><b>Mostrar todas las imágenes cíclicamente:</b> Todas las imágenes de la lista se muestran cíclicamente</li>
+			<li><b>Mostrar todas las imágenes cíclicamente (ordenadas):</b> Todas las imágenes de la lista se muestran
+				cíclicamente, ordenadas por nombre</li>
 			<li><b>Sin cambios:</b> Lanzar no tiene efecto</li>
 			<li><b>Cerrar pantalla:</b> Lanzar cierra la pantalla</li>
 		</ul></li>

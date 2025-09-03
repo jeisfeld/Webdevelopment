@@ -1,6 +1,13 @@
-<h2><span class="mobile">Random Image - </span>Release Notes</h2>
+<h2>
+	<span class="mobile">Random Image - </span>Release Notes
+</h2>
 
 <ul>
+	<li><b>Version 1.5.3:</b> Enabled display of images cyclically, ordered by name.</li>
+
+	<li><b>Version 1.5.2:</b> Enabled setting of widget image via image list configuration. Enabled setting notification
+		duration after opening. Improved time dialog for notification start/end time. Upgraded for Android 15.</li>
+
 	<li><b>Version 1.5.1:</b> Bugfixes.</li>
 
 	<li><b>Version 1.5.0:</b> Creation of shortcuts.</li>
@@ -49,8 +56,7 @@
 
 	<li><b>Version 1.3.7:</b> Bugfixes.</li>
 
-	<li><b>Version 1.3.6:</b> Fixed thumbnail orientation issues on Android 10. Removed secondary launcher icon.
-		Bugfixes.</li>
+	<li><b>Version 1.3.6:</b> Fixed thumbnail orientation issues on Android 10. Removed secondary launcher icon. Bugfixes.</li>
 
 	<li><b>Version 1.3.5:</b> Fixed issues with Widgets and Notifications on Android 10.</li>
 
@@ -99,8 +105,8 @@
 
 	<li><b>Version 1.1.1:</b> Allow suppression of popup notifications for certain apps. Bugfixes.</li>
 
-	<li><b>Version 1.1:</b> Enabled to add folders including subfolders. Name change back to &ldquo;Random
-		Image&rdquo;. Bugfixes.</li>
+	<li><b>Version 1.1:</b> Enabled to add folders including subfolders. Name change back to &ldquo;Random Image&rdquo;.
+		Bugfixes.</li>
 
 	<li><b>Version 1.0.4:</b> Improvements on first use. Bugfixes.</li>
 
@@ -124,15 +130,14 @@
 
 	<li><b>Version 0.2.5:</b> Improved error handling in Random Image Frame.</li>
 
-	<li><b>Version 0.2.4:</b> In case of list images that cannot be found, display message only while organizing, not
-		while viewing.</li>
+	<li><b>Version 0.2.4:</b> In case of list images that cannot be found, display message only while organizing, not while
+		viewing.</li>
 
 	<li><b>Version 0.2.3:</b> Offered more possibilities to add images to list.</li>
 
 	<li><b>Version 0.2.2:</b> Simplified the first steps.</li>
 
-	<li><b>Version 0.2.1:</b> Possibility to individually adjust the frequency of picture selection for each nested
-		list.</li>
+	<li><b>Version 0.2.1:</b> Possibility to individually adjust the frequency of picture selection for each nested list.</li>
 
 	<li><b>Version 0.2:</b>
 		<ul>
@@ -159,8 +164,8 @@
 			<li>Improved flinging performance and flinging animation.</li>
 		</ul></li>
 
-	<li><b>Version 0.1.3:</b> Changed name from &ldquo;Random Image&rdquo; to &ldquo;Surprise Image&rdquo;. Changed
-		icon background from orange to blue.</li>
+	<li><b>Version 0.1.3:</b> Changed name from &ldquo;Random Image&rdquo; to &ldquo;Surprise Image&rdquo;. Changed icon
+		background from orange to blue.</li>
 
 	<li><b>Version 0.1.2:</b> Bugfixes.</li>
 

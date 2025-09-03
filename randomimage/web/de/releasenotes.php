@@ -1,6 +1,14 @@
-<h2><span class="mobile">Zufallsbild - </span>Versionshinweise</h2>
+<h2>
+	<span class="mobile">Zufallsbild - </span>Versionshinweise
+</h2>
 
 <ul>
+	<li><b>Version 1.5.3:</b> Zyklische Anzeige von Bildern nach Namen sortiert verfügbar.</li>
+
+	<li><b>Version 1.5.2:</b> Die Einstellung des Widget-Bilds wurde über die Bildlistenkonfiguration aktiviert. Die
+		Einstellung der Benachrichtigungsdauer nach dem Öffnen wurde aktiviert. Verbesserter Zeitdialog für
+		Benachrichtigungsstart-/-endzeit. Aktualisiert für Android 15.</li>
+
 	<li><b>Version 1.5.1:</b> Fehlerbehebungen.</li>
 
 	<li><b>Version 1.5.0:</b> Erstellung von Shortcuts.</li>
@@ -49,8 +57,8 @@
 
 	<li><b>Version 1.3.7:</b> Fehlerbehebungen.</li>
 
-	<li><b>Version 1.3.6:</b> Probleme mit der Ausrichtung von Miniaturansichten unter Android 10 behoben. Das
-		sekundäre Startsymbol wurde entfernt. Fehlerbehebungen.</li>
+	<li><b>Version 1.3.6:</b> Probleme mit der Ausrichtung von Miniaturansichten unter Android 10 behoben. Das sekundäre
+		Startsymbol wurde entfernt. Fehlerbehebungen.</li>
 
 	<li><b>Version 1.3.5:</b> Probleme mit Widgets und Benachrichtigungen unter Android 10 wurden behoben.</li>
 
@@ -99,8 +107,8 @@
 
 	<li><b>Version 1.1.1:</b> Popup-Benachrichtigungen können für bestimmte Apps deaktiviert werden. Fehlerbehebungen.</li>
 
-	<li><b>Version 1.1:</b> Verzeichnisse können inklusive Unterverzeichnissen hinzugefügt werden. Namenswechsel
-		zurück zu &bdquo;Zufallsbild&ldquo;. Fehlerbehebungen.</li>
+	<li><b>Version 1.1:</b> Verzeichnisse können inklusive Unterverzeichnissen hinzugefügt werden. Namenswechsel zurück zu
+		&bdquo;Zufallsbild&ldquo;. Fehlerbehebungen.</li>
 
 	<li><b>Version 1.0.4:</b> Verbesserungen bei der ersten Benutzung. Fehlerbehebungen.</li>
 
@@ -158,8 +166,8 @@
 			<li>Verbesserte Leistung und Animation beim Bildwechsel.</li>
 		</ul></li>
 
-	<li><b>Version 0.1.3:</b> Namenswechsel von &bdquo;Zufallsbild&ldquo; zu &bdquo;Überraschungsbild&ldquo;.
-		Farbwechsel des Icons von orange zu blau.</li>
+	<li><b>Version 0.1.3:</b> Namenswechsel von &bdquo;Zufallsbild&ldquo; zu &bdquo;Überraschungsbild&ldquo;. Farbwechsel
+		des Icons von orange zu blau.</li>
 
 	<li><b>Version 0.1.2:</b> Fehlerkorrekturen.</li>
 
