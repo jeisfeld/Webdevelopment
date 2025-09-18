@@ -1,0 +1,23 @@
+# Ensure HTTP Authorization headers reach PHP under FastCGI/CGI deployments.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} !^$
+    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+</IfModule>
+
+<IfModule mod_setenvif.c>
+    SetEnvIfNoCase Authorization "(.+)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+<IfModule mod_fcgid.c>
+    FcgidPassHeader Authorization
+</IfModule>
+
+<IfModule mod_cgi.c>
+    CGIPassAuth On
+</IfModule>
+
+<IfModule mod_cgid.c>
+    CGIPassAuth On
+</IfModule>

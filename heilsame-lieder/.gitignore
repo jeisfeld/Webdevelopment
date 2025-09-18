@@ -1,5 +1,6 @@
 .well-known
 .htaccess
+!web/admin/.htaccess
 .project
 web/db_config.php
 /util/
