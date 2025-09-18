@@ -1,22 +1,7 @@
 let searchAbortController = new AbortController(); // Create a controller
 let searchTimeout = null;
 const isAdminView = document.body.classList.contains("admin-view");
-const resultsTableBody = document.getElementById("results");
 const pageOrigin = window.location.origin || `${window.location.protocol}//${window.location.host}`;
-
-if (isAdminView && resultsTableBody) {
-        resultsTableBody.addEventListener("click", event => {
-                const target = event.target;
-                const editButton = target && typeof target.closest === "function"
-                        ? target.closest(".edit-btn")
-                        : (target && target.classList && target.classList.contains("edit-btn") ? target : null);
-
-                if (editButton) {
-                        const songId = editButton.getAttribute("data-song-id");
-                        openEditModal(songId);
-                }
-        });
-}
 
 // functions related to song search
 function searchSongs(inputquery = null) {
@@ -64,8 +49,8 @@ function displayResult(songs) {
         let tableHTML = "";
         songs.forEach(song => {
                 const editButtonHTML = isAdminView
-                        ? `<img src="/img/edit.svg" alt="Edit Song" class="icon-btn edit-btn" data-song-id="${song.id}" title="Edit song">`
-			: "";
+                        ? `<img src="/img/edit.svg" alt="Edit Song" class="icon-btn edit-btn" data-song-id="${song.id}" title="Edit song" onclick="openEditModal(this.getAttribute('data-song-id'))">`
+                        : "";
 
 		tableHTML += `
                         <tr>
