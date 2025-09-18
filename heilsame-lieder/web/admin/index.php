@@ -1,26 +1,71 @@
 <?php
-$users = [ 
-		// Default credentials are admin / changeme. Replace the hashed password with one generated via `password_hash` to customise credentials.
-		'admin' => '$2y$12$yamJkQ/GtsK4EOMaiuuwguf8nU1t6JrBX9z.2T/PmUegimVIta3rO'
+$users = [
+                // Default credentials are admin / changeme. Replace the hashed password with one generated via `password_hash` to customise credentials.
+                'admin' => '$2y$12$XYpoTbc9nZhscmHGhhLl9ulTwkMb17zOGc/4xBJiSK22lNcye9i0a'
 ];
 
 $realm = 'Heilsame Lieder Admin';
 
-if (! isset ( $_SERVER ['PHP_AUTH_USER'], $_SERVER ['PHP_AUTH_PW'] )) {
-	header ( 'WWW-Authenticate: Basic realm="' . $realm . '"' );
-	header ( 'HTTP/1.0 401 Unauthorized' );
-	echo 'Authentication required.';
-	exit ();
+function requestAuthentication(string $realm, string $message) : void {
+        header ( 'WWW-Authenticate: Basic realm="' . $realm . '"' );
+        header ( 'HTTP/1.0 401 Unauthorized' );
+        echo $message;
+        exit ();
 }
 
-$username = $_SERVER ['PHP_AUTH_USER'];
-$password = $_SERVER ['PHP_AUTH_PW'];
+function parseBasicAuthHeader(string $header) : ?array {
+        if (stripos ( $header, 'Basic ' ) !== 0) {
+                return null;
+        }
+
+        $decoded = base64_decode ( substr ( $header, 6 ), true );
+        if ($decoded === false) {
+                return null;
+        }
+
+        $parts = explode ( ':', $decoded, 2 );
+        if (count ( $parts ) !== 2) {
+                return null;
+        }
+
+        return [
+                        $parts [0],
+                        $parts [1]
+        ];
+}
+
+function getAuthCredentials() : ?array {
+        if (isset ( $_SERVER ['PHP_AUTH_USER'], $_SERVER ['PHP_AUTH_PW'] )) {
+                return [
+                                $_SERVER ['PHP_AUTH_USER'],
+                                $_SERVER ['PHP_AUTH_PW']
+                ];
+        }
+
+        foreach (['HTTP_AUTHORIZATION', 'REDIRECT_HTTP_AUTHORIZATION'] as $headerKey) {
+                if (! isset ( $_SERVER [$headerKey] )) {
+                        continue;
+                }
+
+                $credentials = parseBasicAuthHeader ( $_SERVER [$headerKey] );
+                if ($credentials !== null) {
+                        return $credentials;
+                }
+        }
+
+        return null;
+}
+
+$credentials = getAuthCredentials ();
+
+if ($credentials === null) {
+        requestAuthentication ( $realm, 'Authentication required.' );
+}
+
+list ( $username, $password ) = $credentials;
 
 if (! array_key_exists ( $username, $users ) || ! password_verify ( $password, $users [$username] )) {
-	header ( 'WWW-Authenticate: Basic realm="' . $realm . '"' );
-	header ( 'HTTP/1.0 401 Unauthorized' );
-	echo 'Invalid credentials.';
-	exit ();
+        requestAuthentication ( $realm, 'Invalid credentials.' );
 }
 
 header ( 'Cache-Control: no-store' );
