@@ -48,8 +48,11 @@ $users = isset($authConfig['users']) && is_array($authConfig['users']) ? $authCo
 $realm = isset($authConfig['realm']) && $authConfig['realm'] !== '' ? $authConfig['realm'] : 'Heilsame Lieder Admin';
 $logFile = __DIR__ . '/admin/auth-debug.log';
 $logWritable = is_writable($logFile) || (! file_exists($logFile) && is_writable(__DIR__ . '/admin'));
-$serverAuthSnapshot = hlAdminGetServerAuthSnapshot();
-$serverAuthSummary = hlAdminFormatServerAuthSnapshot($serverAuthSnapshot);
+$serverAuthSnapshotBeforeFallback = hlAdminGetServerAuthSnapshot();
+$serverAuthSummaryBeforeFallback = hlAdminFormatServerAuthSnapshot($serverAuthSnapshotBeforeFallback);
+$authFallback = hlAdminApplyBasicAuthFallback();
+$serverAuthSnapshotAfterFallback = hlAdminGetServerAuthSnapshot();
+$serverAuthSummaryAfterFallback = hlAdminFormatServerAuthSnapshot($serverAuthSnapshotAfterFallback);
 
 $submitted = $_SERVER['REQUEST_METHOD'] === 'POST';
 $username = $submitted ? (string) ($_POST['username'] ?? '') : '';
@@ -82,10 +85,23 @@ if ($submitted) {
         $logDetails[] = 'hashStatus=unusable';
     }
 
-    $logDetails = array_merge($logDetails, $serverAuthSummary);
+    $logDetails[] = 'preAuthContext=' . implode('|', $serverAuthSummaryBeforeFallback);
+    $logDetails[] = 'postAuthContext=' . implode('|', $serverAuthSummaryAfterFallback);
+    $logDetails[] = 'fallbackStatus=' . $authFallback['status'];
+    $logDetails[] = 'fallbackHeaderPresent=' . ($authFallback['headerPresent'] ? 'true' : 'false');
+    $logDetails[] = 'fallbackHeaderSource=' . ($authFallback['headerSource'] !== '' ? $authFallback['headerSource'] : 'n/a');
+    $logDetails[] = 'fallbackHeaderLength=' . (isset($authFallback['headerLength']) ? $authFallback['headerLength'] : 0);
+    $logDetails[] = 'fallbackHeaderHash=' . (! empty($authFallback['headerHash']) ? $authFallback['headerHash'] : 'n/a');
+    $logDetails[] = 'fallbackGlobalsUpdated=' . ($authFallback['globalsUpdated'] ? 'true' : 'false');
+    if ($authFallback['status'] === 'fallback-applied' && isset($authFallback['username'])) {
+        $logDetails[] = 'fallbackUsername=' . $authFallback['username'];
+    }
 
     hlAdminWriteDebugLog($logFile, 'Debug login test (standalone): ' . implode(', ', $logDetails));
 }
+
+$serverAuthSnapshot = $serverAuthSnapshotBeforeFallback;
+$postAuthSnapshot = $serverAuthSnapshotAfterFallback;
 
 header('Cache-Control: no-store');
 header('Content-Type: text/html; charset=UTF-8');
@@ -174,12 +190,27 @@ code {
         <div class="status">
                 <p><strong>Realm:</strong> <?php echo htmlspecialchars($realm, ENT_QUOTES, 'UTF-8'); ?></p>
                 <p><strong>Log file:</strong> <code><?php echo htmlspecialchars('admin/' . basename($logFile), ENT_QUOTES, 'UTF-8'); ?></code> (writable: <?php echo $logWritable ? 'yes' : 'no'; ?>)</p>
+                <p><strong>PHP SAPI:</strong> <?php echo isset($serverAuthSnapshot['phpSapi']) && $serverAuthSnapshot['phpSapi'] !== '' ? htmlspecialchars($serverAuthSnapshot['phpSapi'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
+                <p><strong>GATEWAY_INTERFACE:</strong> <?php echo isset($serverAuthSnapshot['gatewayInterface']) && $serverAuthSnapshot['gatewayInterface'] !== '' ? htmlspecialchars($serverAuthSnapshot['gatewayInterface'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
+                <p><strong>FCGI_ROLE:</strong> <?php echo isset($serverAuthSnapshot['fcgiRole']) && $serverAuthSnapshot['fcgiRole'] !== '' ? htmlspecialchars($serverAuthSnapshot['fcgiRole'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
                 <p><strong>Server AUTH_TYPE:</strong> <?php echo $serverAuthSnapshot['authType'] !== '' ? htmlspecialchars($serverAuthSnapshot['authType'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
                 <p><strong>REMOTE_USER:</strong> <?php echo $serverAuthSnapshot['remoteUser'] !== '' ? htmlspecialchars($serverAuthSnapshot['remoteUser'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
-                <p><strong>PHP_AUTH_* before submit:</strong> user=<?php echo $serverAuthSnapshot['phpAuthUserSet'] ? 'yes' : 'no'; ?>, password=<?php echo $serverAuthSnapshot['phpAuthPwSet'] ? 'yes' : 'no'; ?>, Authorization header=<?php echo $serverAuthSnapshot['httpAuthorizationSet'] ? 'present' : 'absent'; ?></p>
+                <p><strong>Authorization header before fallback:</strong> <?php echo $serverAuthSnapshot['httpAuthorizationSet'] ? 'present' : 'absent'; ?><?php if ($serverAuthSnapshot['httpAuthorizationSet']) { ?> (source: <?php echo htmlspecialchars($serverAuthSnapshot['httpAuthorizationSource'] !== '' ? $serverAuthSnapshot['httpAuthorizationSource'] : 'unknown', ENT_QUOTES, 'UTF-8'); ?>, length: <?php echo isset($serverAuthSnapshot['httpAuthorizationLength']) ? (int) $serverAuthSnapshot['httpAuthorizationLength'] : 0; ?>, sha256: <?php echo htmlspecialchars(isset($serverAuthSnapshot['httpAuthorizationHash']) && $serverAuthSnapshot['httpAuthorizationHash'] !== '' ? $serverAuthSnapshot['httpAuthorizationHash'] : 'n/a', ENT_QUOTES, 'UTF-8'); ?>)<?php } ?></p>
+                <p><strong>PHP_AUTH_* before fallback:</strong> user=<?php echo $serverAuthSnapshot['phpAuthUserSet'] ? 'yes' : 'no'; ?>, password=<?php echo $serverAuthSnapshot['phpAuthPwSet'] ? 'yes' : 'no'; ?></p>
+                <p><strong>Fallback status:</strong> <?php echo htmlspecialchars(hlAdminDescribeFallbackStatus($authFallback), ENT_QUOTES, 'UTF-8'); ?><?php if ($authFallback['headerSource'] !== '') { ?> (header source: <?php echo htmlspecialchars($authFallback['headerSource'], ENT_QUOTES, 'UTF-8'); ?>)<?php } ?><?php if (! empty($authFallback['headerLength'])) { ?> (length: <?php echo (int) $authFallback['headerLength']; ?>, sha256: <?php echo htmlspecialchars($authFallback['headerHash'], ENT_QUOTES, 'UTF-8'); ?>)<?php } ?><?php if ($authFallback['globalsUpdated']) { ?>, applied to PHP_AUTH_*<?php } ?></p>
+                <?php if ($authFallback['status'] === 'fallback-applied' && isset($authFallback['username']) && $authFallback['username'] !== '') { ?>
+                <p><strong>Fallback decoded username:</strong> <?php echo htmlspecialchars($authFallback['username'], ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php } ?>
+                <p><strong>PHP_AUTH_* after fallback:</strong> user=<?php echo $postAuthSnapshot['phpAuthUserSet'] ? 'yes' : 'no'; ?>, password=<?php echo $postAuthSnapshot['phpAuthPwSet'] ? 'yes' : 'no'; ?></p>
+                <p><strong>Authorization header after fallback:</strong> <?php echo $postAuthSnapshot['httpAuthorizationSet'] ? 'present' : 'absent'; ?><?php if ($postAuthSnapshot['httpAuthorizationSet']) { ?> (source: <?php echo htmlspecialchars($postAuthSnapshot['httpAuthorizationSource'] !== '' ? $postAuthSnapshot['httpAuthorizationSource'] : 'unknown', ENT_QUOTES, 'UTF-8'); ?>, length: <?php echo isset($postAuthSnapshot['httpAuthorizationLength']) ? (int) $postAuthSnapshot['httpAuthorizationLength'] : 0; ?>, sha256: <?php echo htmlspecialchars(isset($postAuthSnapshot['httpAuthorizationHash']) && $postAuthSnapshot['httpAuthorizationHash'] !== '' ? $postAuthSnapshot['httpAuthorizationHash'] : 'n/a', ENT_QUOTES, 'UTF-8'); ?>)<?php } ?></p>
         </div>
         <?php if ($serverAuthSnapshot['authType'] !== '' || $serverAuthSnapshot['remoteUser'] !== '' || $serverAuthSnapshot['phpAuthUserSet'] || $serverAuthSnapshot['httpAuthorizationSet']) { ?>
-        <p class="note warning">The web server delivered HTTP authentication headers before this script. Make sure any .htaccess/.htpasswd credentials match the values in <code>admin/auth-config.php</code>, or disable them temporarily so this helper can run without the browser prompt.</p>
+        <p class="note warning">The web server delivered HTTP authentication data before this script executed. Make sure any .htaccess/.htpasswd credentials match <code>admin/auth-config.php</code>, or disable them temporarily so this helper can run without the browser prompt.</p>
+        <?php } ?>
+        <?php if (in_array($authFallback['status'], ['header-missing', 'header-empty'], true)) { ?>
+        <p class="note warning">No <code>Authorization</code> header reached PHP.<?php if (isset($serverAuthSnapshot['phpSapi']) && stripos($serverAuthSnapshot['phpSapi'], 'cgi') !== false) { ?> Detected PHP running under <code><?php echo htmlspecialchars($serverAuthSnapshot['phpSapi'], ENT_QUOTES, 'UTF-8'); ?></code><?php if (isset($serverAuthSnapshot['gatewayInterface']) && $serverAuthSnapshot['gatewayInterface'] !== '') { ?> with <code>GATEWAY_INTERFACE=<?php echo htmlspecialchars($serverAuthSnapshot['gatewayInterface'], ENT_QUOTES, 'UTF-8'); ?></code><?php } ?>; FastCGI setups usually need explicit forwarding for the header.<?php } ?> After submitting credentials, ensure the web server forwards that header (for Apache with FastCGI this often means enabling <code>CGIPassAuth On</code> or adding <code>RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code> in <code>.htaccess</code>).</p>
+        <?php } elseif ($authFallback['status'] === 'header-unusable') { ?>
+        <p class="note warning">An <code>Authorization</code> header arrived but was not recognised as HTTP Basic. Confirm that proxies or security filters are not rewriting or stripping it.</p>
         <?php } ?>
 
         <form method="post" autocomplete="off" action="?token=<?php echo rawurlencode($providedToken); ?>">
@@ -210,7 +241,9 @@ code {
                         <?php if ($passwordVerified && $hashInfo !== null) { ?>
                         <li>Hash needs rehash (PASSWORD_DEFAULT): <?php echo password_needs_rehash($verification['passwordHash'], PASSWORD_DEFAULT) ? 'yes' : 'no'; ?></li>
                         <?php } ?>
-                        <li>Server auth context: <code><?php echo htmlspecialchars(implode(', ', $serverAuthSummary), ENT_QUOTES, 'UTF-8'); ?></code></li>
+                        <li>Server auth context before fallback: <code><?php echo htmlspecialchars(implode(', ', $serverAuthSummaryBeforeFallback), ENT_QUOTES, 'UTF-8'); ?></code></li>
+                        <li>Server auth context after fallback: <code><?php echo htmlspecialchars(implode(', ', $serverAuthSummaryAfterFallback), ENT_QUOTES, 'UTF-8'); ?></code></li>
+                        <li>Fallback status: <?php echo htmlspecialchars($authFallback['status'], ENT_QUOTES, 'UTF-8'); ?> (<?php echo htmlspecialchars(hlAdminDescribeFallbackStatus($authFallback), ENT_QUOTES, 'UTF-8'); ?><?php if ($authFallback['headerSource'] !== '') { ?>, header source: <?php echo htmlspecialchars($authFallback['headerSource'], ENT_QUOTES, 'UTF-8'); ?><?php } ?><?php if ($authFallback['globalsUpdated']) { ?>, applied to PHP_AUTH_*<?php } ?><?php if ($authFallback['status'] === 'fallback-applied' && isset($authFallback['username']) && $authFallback['username'] !== '') { ?>, decoded username=<?php echo htmlspecialchars($authFallback['username'], ENT_QUOTES, 'UTF-8'); ?><?php } ?>)</li>
                         <li>Log updated: <?php echo $submitted ? 'yes' : 'no'; ?></li>
                 </ul>
         </div>
