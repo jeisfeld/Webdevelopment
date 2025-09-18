@@ -1,33 +1,27 @@
 <?php
-$users = [
-                'admin' => '$2y$12$yamJkQ/GtsK4EOMaiuuwguf8nU1t6JrBX9z.2T/PmUegimVIta3rO'
-];
+$authConfig = require __DIR__ . '/auth-config.php';
+$users = isset($authConfig['users']) && is_array($authConfig['users']) ? $authConfig['users'] : [];
+$realm = isset($authConfig['realm']) && $authConfig['realm'] !== '' ? $authConfig['realm'] : 'Heilsame Lieder Admin';
 
-$realm = 'Heilsame Lieder Admin';
+require_once __DIR__ . '/auth-helpers.php';
+
 $debugMode = isset($_GET['debug']) && $_GET['debug'] === '1';
 $debugLogFile = __DIR__ . '/auth-debug.log';
-
-if (! function_exists('writeAuthDebugLog')) {
-        function writeAuthDebugLog($file, $message) {
-                $logEntry = '[' . date('c') . '] ' . $message . PHP_EOL;
-                if (@file_put_contents($file, $logEntry, FILE_APPEND | LOCK_EX) === false) {
-                        error_log('Failed to write admin auth debug log: ' . $message);
-                }
-        }
-}
 
 if ($debugMode) {
         $submitted = $_SERVER['REQUEST_METHOD'] === 'POST';
         $username = $submitted ? (string) ($_POST['username'] ?? '') : '';
         $password = $submitted ? (string) ($_POST['password'] ?? '') : '';
-        $userExists = $submitted && array_key_exists($username, $users);
-        $passwordHashInfo = $userExists ? password_get_info($users[$username]) : null;
-        $passwordVerified = $userExists ? password_verify($password, $users[$username]) : false;
+        $verification = hlAdminVerifyPassword($username, $password, $users);
+        $userExists = $verification['userExists'];
+        $passwordHashInfo = $verification['passwordHashInfo'];
+        $hashIsValid = $verification['passwordHashIsValid'];
+        $passwordVerified = $verification['passwordVerified'];
 
         if ($submitted) {
                 $remoteAddress = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
                 $logDetails = [
-                        "user={$username}",
+                        'user=' . $username,
                         'ip=' . $remoteAddress,
                         'userExists=' . ($userExists ? 'true' : 'false'),
                         'passwordVerified=' . ($passwordVerified ? 'true' : 'false'),
@@ -41,8 +35,14 @@ if ($debugMode) {
                         }
                 }
 
-                writeAuthDebugLog($debugLogFile, 'Debug login test: ' . implode(', ', $logDetails));
+                if (! $hashIsValid) {
+                        $logDetails[] = 'hashStatus=unusable';
+                }
+
+                hlAdminWriteDebugLog($debugLogFile, 'Debug login test (inline): ' . implode(', ', $logDetails));
         }
+
+        $logWritable = is_writable($debugLogFile) || (! file_exists($debugLogFile) && is_writable(__DIR__));
 
         header('Cache-Control: no-store');
         header('Content-Type: text/html; charset=UTF-8');
@@ -136,7 +136,10 @@ if ($debugMode) {
                         <?php if ($passwordHashInfo !== null && ! empty($passwordHashInfo['options'])) { ?>
                         <li>Hash options: <code><?php echo htmlspecialchars(json_encode($passwordHashInfo['options']), ENT_QUOTES, 'UTF-8'); ?></code></li>
                         <?php } ?>
-                        <li>Further details are logged to <code><?php echo htmlspecialchars(basename($debugLogFile), ENT_QUOTES, 'UTF-8'); ?></code>.</li>
+                        <?php if ($submitted && ! $hashIsValid && $userExists) { ?>
+                        <li>The stored hash is not recognised as valid by PHP.</li>
+                        <?php } ?>
+                        <li>Further details are logged to <code><?php echo htmlspecialchars(basename($debugLogFile), ENT_QUOTES, 'UTF-8'); ?></code> (writable: <?php echo $logWritable ? 'yes' : 'no'; ?>).</li>
                 </ul>
         </div>
         <?php } ?>
@@ -155,13 +158,13 @@ if (! isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'])) {
         exit();
 }
 
+
 $username = $_SERVER['PHP_AUTH_USER'];
 $password = $_SERVER['PHP_AUTH_PW'];
-$userExists = array_key_exists($username, $users);
-$passwordHashInfo = $userExists ? password_get_info($users[$username]) : null;
-$passwordVerified = $userExists ? password_verify($password, $users[$username]) : false;
+$verification = hlAdminVerifyPassword($username, $password, $users);
+$passwordVerified = $verification['passwordVerified'];
 
-if (! $userExists || ! $passwordVerified) {
+if (! $verification['userExists'] || ! $passwordVerified) {
         header('WWW-Authenticate: Basic realm="' . $realm . '"');
         header('HTTP/1.0 401 Unauthorized');
         echo 'Invalid credentials.';
