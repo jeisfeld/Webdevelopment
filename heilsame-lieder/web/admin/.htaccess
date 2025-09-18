@@ -1,0 +1,10 @@
+# Restrict access to the admin area
+AuthType Basic
+AuthName "Heilsame Lieder Admin"
+# Update the following path to match the server's absolute path to this .htpasswd file if necessary.
+AuthUserFile /var/www/html/admin/.htpasswd
+Require valid-user
+
+<Files ".ht*">
+        Require all denied
+</Files>
