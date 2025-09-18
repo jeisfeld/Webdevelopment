@@ -59,3 +59,31 @@ if (! function_exists('hlAdminDescribeHashInfo')) {
     }
 }
 
+if (! function_exists('hlAdminGetServerAuthSnapshot')) {
+    function hlAdminGetServerAuthSnapshot()
+    {
+        return [
+            'authType' => isset($_SERVER['AUTH_TYPE']) ? (string) $_SERVER['AUTH_TYPE'] : '',
+            'phpAuthUserSet' => array_key_exists('PHP_AUTH_USER', $_SERVER),
+            'phpAuthPwSet' => array_key_exists('PHP_AUTH_PW', $_SERVER),
+            'remoteUser' => isset($_SERVER['REMOTE_USER']) ? (string) $_SERVER['REMOTE_USER'] : '',
+            'httpAuthorizationSet' => isset($_SERVER['HTTP_AUTHORIZATION']) && $_SERVER['HTTP_AUTHORIZATION'] !== '',
+        ];
+    }
+}
+
+if (! function_exists('hlAdminFormatServerAuthSnapshot')) {
+    function hlAdminFormatServerAuthSnapshot(array $snapshot)
+    {
+        $details = [];
+
+        $details[] = 'serverAuthType=' . ($snapshot['authType'] !== '' ? $snapshot['authType'] : 'none');
+        $details[] = 'phpAuthUser=' . ($snapshot['phpAuthUserSet'] ? 'set' : 'unset');
+        $details[] = 'phpAuthPw=' . ($snapshot['phpAuthPwSet'] ? 'set' : 'unset');
+        $details[] = 'remoteUser=' . ($snapshot['remoteUser'] !== '' ? $snapshot['remoteUser'] : 'n/a');
+        $details[] = 'httpAuthorization=' . ($snapshot['httpAuthorizationSet'] ? 'present' : 'absent');
+
+        return $details;
+    }
+}
+

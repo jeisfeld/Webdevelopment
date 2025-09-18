@@ -48,6 +48,8 @@ $users = isset($authConfig['users']) && is_array($authConfig['users']) ? $authCo
 $realm = isset($authConfig['realm']) && $authConfig['realm'] !== '' ? $authConfig['realm'] : 'Heilsame Lieder Admin';
 $logFile = __DIR__ . '/admin/auth-debug.log';
 $logWritable = is_writable($logFile) || (! file_exists($logFile) && is_writable(__DIR__ . '/admin'));
+$serverAuthSnapshot = hlAdminGetServerAuthSnapshot();
+$serverAuthSummary = hlAdminFormatServerAuthSnapshot($serverAuthSnapshot);
 
 $submitted = $_SERVER['REQUEST_METHOD'] === 'POST';
 $username = $submitted ? (string) ($_POST['username'] ?? '') : '';
@@ -80,11 +82,14 @@ if ($submitted) {
         $logDetails[] = 'hashStatus=unusable';
     }
 
+    $logDetails = array_merge($logDetails, $serverAuthSummary);
+
     hlAdminWriteDebugLog($logFile, 'Debug login test (standalone): ' . implode(', ', $logDetails));
 }
 
 header('Cache-Control: no-store');
 header('Content-Type: text/html; charset=UTF-8');
+header('X-Admin-Auth-Handler: php-admin-login-debug');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -156,6 +161,12 @@ code {
         background: #f4f4f4;
         border-left: 4px solid #888;
 }
+
+.note.warning {
+        background: #fff4d6;
+        border-left: 4px solid #cc9a06;
+        padding: 0.75rem 1rem;
+}
 </style>
 </head>
 <body>
@@ -163,7 +174,13 @@ code {
         <div class="status">
                 <p><strong>Realm:</strong> <?php echo htmlspecialchars($realm, ENT_QUOTES, 'UTF-8'); ?></p>
                 <p><strong>Log file:</strong> <code><?php echo htmlspecialchars('admin/' . basename($logFile), ENT_QUOTES, 'UTF-8'); ?></code> (writable: <?php echo $logWritable ? 'yes' : 'no'; ?>)</p>
+                <p><strong>Server AUTH_TYPE:</strong> <?php echo $serverAuthSnapshot['authType'] !== '' ? htmlspecialchars($serverAuthSnapshot['authType'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
+                <p><strong>REMOTE_USER:</strong> <?php echo $serverAuthSnapshot['remoteUser'] !== '' ? htmlspecialchars($serverAuthSnapshot['remoteUser'], ENT_QUOTES, 'UTF-8') : 'n/a'; ?></p>
+                <p><strong>PHP_AUTH_* before submit:</strong> user=<?php echo $serverAuthSnapshot['phpAuthUserSet'] ? 'yes' : 'no'; ?>, password=<?php echo $serverAuthSnapshot['phpAuthPwSet'] ? 'yes' : 'no'; ?>, Authorization header=<?php echo $serverAuthSnapshot['httpAuthorizationSet'] ? 'present' : 'absent'; ?></p>
         </div>
+        <?php if ($serverAuthSnapshot['authType'] !== '' || $serverAuthSnapshot['remoteUser'] !== '' || $serverAuthSnapshot['phpAuthUserSet'] || $serverAuthSnapshot['httpAuthorizationSet']) { ?>
+        <p class="note warning">The web server delivered HTTP authentication headers before this script. Make sure any .htaccess/.htpasswd credentials match the values in <code>admin/auth-config.php</code>, or disable them temporarily so this helper can run without the browser prompt.</p>
+        <?php } ?>
 
         <form method="post" autocomplete="off" action="?token=<?php echo rawurlencode($providedToken); ?>">
                 <label for="debug-username">Username</label>
@@ -193,6 +210,7 @@ code {
                         <?php if ($passwordVerified && $hashInfo !== null) { ?>
                         <li>Hash needs rehash (PASSWORD_DEFAULT): <?php echo password_needs_rehash($verification['passwordHash'], PASSWORD_DEFAULT) ? 'yes' : 'no'; ?></li>
                         <?php } ?>
+                        <li>Server auth context: <code><?php echo htmlspecialchars(implode(', ', $serverAuthSummary), ENT_QUOTES, 'UTF-8'); ?></code></li>
                         <li>Log updated: <?php echo $submitted ? 'yes' : 'no'; ?></li>
                 </ul>
         </div>
