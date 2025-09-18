@@ -1,28 +1,91 @@
 <?php
-$users = [ 
-		'admin' => '$2y$12$yamJkQ/GtsK4EOMaiuuwguf8nU1t6JrBX9z.2T/PmUegimVIta3rO'
+$users = [
+                'admin' => '$2y$12$yamJkQ/GtsK4EOMaiuuwguf8nU1t6JrBX9z.2T/PmUegimVIta3rO'
 ];
 
 $realm = 'Heilsame Lieder Admin';
+$debugMode = isset($_GET['debug']) && $_GET['debug'] === '1';
+$debugLogFile = __DIR__ . '/auth-debug.log';
 
-if (! isset ( $_SERVER ['PHP_AUTH_USER'], $_SERVER ['PHP_AUTH_PW'] )) {
-	header ( 'WWW-Authenticate: Basic realm="' . $realm . '"' );
-	header ( 'HTTP/1.0 401 Unauthorized' );
-	echo 'Authentication required.';
-	exit ();
+if (! function_exists('writeAuthDebugLog')) {
+        function writeAuthDebugLog($file, $message) {
+                $logEntry = '[' . date('c') . '] ' . $message . PHP_EOL;
+                if (@file_put_contents($file, $logEntry, FILE_APPEND | LOCK_EX) === false) {
+                        error_log('Failed to write admin auth debug log: ' . $message);
+                }
+        }
 }
 
-$username = $_SERVER ['PHP_AUTH_USER'];
-$password = $_SERVER ['PHP_AUTH_PW'];
+if (! isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW'])) {
+        if ($debugMode) {
+                writeAuthDebugLog($debugLogFile, 'Missing credentials - no Authorization header present.');
+        }
 
-if (! array_key_exists ( $username, $users ) || ! password_verify ( $password, $users [$username] )) {
-	header ( 'WWW-Authenticate: Basic realm="' . $realm . '"' );
-	header ( 'HTTP/1.0 401 Unauthorized' );
-	echo 'Invalid credentials.';
-	exit ();
+        header('WWW-Authenticate: Basic realm="' . $realm . '"');
+        header('HTTP/1.0 401 Unauthorized');
+        echo 'Authentication required.';
+        if ($debugMode) {
+                echo ' (Debug mode active - check ' . basename($debugLogFile) . ' for details.)';
+        }
+        exit();
 }
 
-header ( 'Cache-Control: no-store' );
+$username = $_SERVER['PHP_AUTH_USER'];
+$password = $_SERVER['PHP_AUTH_PW'];
+$userExists = array_key_exists($username, $users);
+$passwordHashInfo = $userExists ? password_get_info($users[$username]) : null;
+$passwordVerified = $userExists ? password_verify($password, $users[$username]) : false;
+
+if ($debugMode) {
+        $remoteAddress = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown';
+        $logDetails = [
+                "user={$username}",
+                'ip=' . $remoteAddress,
+                'userExists=' . ($userExists ? 'true' : 'false'),
+                'passwordVerified=' . ($passwordVerified ? 'true' : 'false'),
+                'passwordLength=' . strlen($password)
+        ];
+
+        if ($passwordHashInfo !== null) {
+                $logDetails[] = 'hashAlgo=' . ($passwordHashInfo['algoName'] ?? 'unknown');
+                if (! empty($passwordHashInfo['options'])) {
+                        $logDetails[] = 'hashOptions=' . json_encode($passwordHashInfo['options']);
+                }
+        }
+
+        writeAuthDebugLog($debugLogFile, 'Login attempt: ' . implode(', ', $logDetails));
+}
+
+if (! $userExists || ! $passwordVerified) {
+        if (! $debugMode) {
+                header('WWW-Authenticate: Basic realm="' . $realm . '"');
+        }
+
+        header('HTTP/1.0 401 Unauthorized');
+        if ($debugMode) {
+                header('Content-Type: text/plain; charset=UTF-8');
+                echo "Authentication failed.\n";
+                echo 'User exists: ' . ($userExists ? 'yes' : 'no') . "\n";
+                echo 'Password verified: ' . ($passwordVerified ? 'yes' : 'no') . "\n";
+                echo 'Password length: ' . strlen($password) . "\n";
+
+                if ($passwordHashInfo !== null) {
+                        echo 'Hash algorithm: ' . ($passwordHashInfo['algoName'] ?? 'unknown') . "\n";
+                        if (! empty($passwordHashInfo['options'])) {
+                                echo 'Hash options: ' . json_encode($passwordHashInfo['options']) . "\n";
+                        }
+                }
+
+                echo 'Further details were written to ' . basename($debugLogFile) . ".\n";
+                echo 'Disable debug mode when you are finished troubleshooting.';
+        } else {
+                echo 'Invalid credentials.';
+        }
+
+        exit();
+}
+
+header('Cache-Control: no-store');
 ?>
 <!DOCTYPE html>
 <html lang="en">
