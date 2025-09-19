@@ -112,14 +112,18 @@ function buildFilenameSuggestions($directory, array $priorityPrefixes = []) {
 }
 
 function renderFilenameNote(array $matching, array $options, $prefix, $directoryExists, $folderPath) {
-    if (! empty($matching)) {
-        echo "<div class=\"form-note\">Matching files: " . implode(', ', array_map('escapeHtml', $matching)) . "</div>";
-    } elseif (! empty($options) && $prefix !== '') {
-        echo "<div class=\"form-note\">No files found in " . escapeHtml($folderPath) . " starting with " . escapeHtml($prefix) . ".</div>";
-    } elseif (empty($options) && $directoryExists) {
-        echo "<div class=\"form-note\">No files found in " . escapeHtml($folderPath) . ".</div>";
-    } elseif (! $directoryExists) {
+    if (! $directoryExists) {
         echo "<div class=\"form-note\">Folder " . escapeHtml($folderPath) . " is not available.</div>";
+        return;
+    }
+
+    if (empty($options)) {
+        echo "<div class=\"form-note\">No files found in " . escapeHtml($folderPath) . ".</div>";
+        return;
+    }
+
+    if ($prefix !== '' && empty($matching)) {
+        echo "<div class=\"form-note\">No files found in " . escapeHtml($folderPath) . " starting with " . escapeHtml($prefix) . ".</div>";
     }
 }
 
