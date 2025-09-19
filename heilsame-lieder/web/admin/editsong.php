@@ -136,6 +136,44 @@ if ($updateSuccess && $songFromDatabase) {
 
 $conn->close();
 
+$songImagesDirectory = __DIR__ . '/../img/songs';
+$tabFilenameOptions = [];
+$matchingTabFilenames = [];
+$songIdForSuggestions = isset($songData['id']) ? (string) $songData['id'] : (string) $id;
+$tabFilenamePrefix = $songIdForSuggestions !== '' ? substr($songIdForSuggestions, 0, 4) : '';
+
+if (is_dir($songImagesDirectory)) {
+    $files = scandir($songImagesDirectory);
+    if ($files !== false) {
+        foreach ($files as $file) {
+            if ($file === '.' || $file === '..') {
+                continue;
+            }
+
+            $fullPath = $songImagesDirectory . DIRECTORY_SEPARATOR . $file;
+            if (is_file($fullPath)) {
+                $tabFilenameOptions[] = $file;
+            }
+        }
+    }
+}
+
+if (! empty($tabFilenameOptions)) {
+    natcasesort($tabFilenameOptions);
+    $tabFilenameOptions = array_values($tabFilenameOptions);
+
+    if ($tabFilenamePrefix !== '') {
+        foreach ($tabFilenameOptions as $filename) {
+            if (stripos($filename, $tabFilenamePrefix) === 0) {
+                $matchingTabFilenames[] = $filename;
+            }
+        }
+
+        $remainingOptions = array_values(array_diff($tabFilenameOptions, $matchingTabFilenames));
+        $tabFilenameOptions = array_merge($matchingTabFilenames, $remainingOptions);
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -181,6 +219,11 @@ $conn->close();
             min-height: 120px;
             resize: vertical;
             line-height: 1.4;
+        }
+        .form-note {
+            margin-top: 6px;
+            font-size: 0.9rem;
+            color: #555;
         }
         .short-textarea {
             min-height: 80px;
@@ -279,8 +322,23 @@ $conn->close();
 
                 <div class="form-group">
                     <label for="tabfilename">Tab Filename</label>
-                    <input type="text" id="tabfilename" name="tabfilename" value="<?php echo escapeHtml($songData['tabfilename'] ?? ''); ?>">
+                    <input type="text" id="tabfilename" name="tabfilename" list="tabfilename-options" value="<?php echo escapeHtml($songData['tabfilename'] ?? ''); ?>">
+                    <?php if (! empty($matchingTabFilenames)): ?>
+                        <div class="form-note">Matching files: <?php echo implode(', ', array_map('escapeHtml', $matchingTabFilenames)); ?></div>
+                    <?php elseif (! empty($tabFilenameOptions) && $tabFilenamePrefix !== ''): ?>
+                        <div class="form-note">No files found in img/songs/ starting with <?php echo escapeHtml($tabFilenamePrefix); ?>.</div>
+                    <?php elseif (empty($tabFilenameOptions) && is_dir($songImagesDirectory)): ?>
+                        <div class="form-note">No files found in img/songs/.</div>
+                    <?php elseif (! is_dir($songImagesDirectory)): ?>
+                        <div class="form-note">Folder img/songs/ is not available.</div>
+                    <?php endif; ?>
                 </div>
+
+                <datalist id="tabfilename-options">
+                    <?php foreach ($tabFilenameOptions as $filenameOption): ?>
+                        <option value="<?php echo escapeHtml($filenameOption); ?>"></option>
+                    <?php endforeach; ?>
+                </datalist>
 
                 <div class="form-group">
                     <label for="mp3filename">MP3 Filename</label>
