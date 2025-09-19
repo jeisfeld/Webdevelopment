@@ -110,18 +110,58 @@ function openEditModal(songId) {
         modal.style.display = "block";
 }
 
-function toggleClearButton() {
-	let searchBox = document.getElementById("searchBox");
-	let clearButton = document.getElementById("clearButton");
+function openAddModal() {
+        const addUrl = "/admin/addsong.php";
 
-	clearButton.classList.add("visible"); // Button always visible
-	if (searchBox.value.length > 0) {
-		clearButton.textContent = "✕";
-		clearButton.onclick = clearSearch;
-	} else {
-		clearButton.textContent = "\uD83D\uDD00"; // Shuffle icon
-		clearButton.onclick = shuffleSongs;
-	}
+        if (!modal || !impressumContent) {
+                window.location.href = addUrl;
+                return;
+        }
+
+        modal.dataset.mode = "add";
+        impressumContent.innerHTML = '<div class="modal-loading">Loading...</div>';
+
+        const iframe = document.createElement("iframe");
+        iframe.src = addUrl;
+        iframe.className = "modal-iframe";
+        iframe.setAttribute("title", "Add new song");
+        iframe.onload = () => {
+                const loader = impressumContent.querySelector(".modal-loading");
+                if (loader) {
+                        loader.remove();
+                }
+        };
+
+        impressumContent.appendChild(iframe);
+        modal.style.display = "block";
+}
+
+function toggleClearButton() {
+        const searchBox = document.getElementById("searchBox");
+        const clearButton = document.getElementById("clearButton");
+
+        if (!clearButton || !searchBox) {
+                return;
+        }
+
+        clearButton.classList.add("visible"); // Button always visible
+
+        if (searchBox.value.length > 0) {
+                clearButton.textContent = "✕";
+                clearButton.onclick = clearSearch;
+                clearButton.title = "Clear search";
+                clearButton.setAttribute("aria-label", "Clear search");
+        } else if (isAdminView) {
+                clearButton.textContent = "⊕"; // Circled plus
+                clearButton.onclick = openAddModal;
+                clearButton.title = "Add new song";
+                clearButton.setAttribute("aria-label", "Add new song");
+        } else {
+                clearButton.textContent = "\uD83D\uDD00"; // Shuffle icon
+                clearButton.onclick = shuffleSongs;
+                clearButton.title = "Shuffle songs";
+                clearButton.setAttribute("aria-label", "Shuffle songs");
+        }
 }
 
 function clearSearch() {
@@ -707,6 +747,14 @@ window.addEventListener('message', event => {
                 if (isAdminView) {
                         searchSongs();
                 }
+        } else if (type === 'songInserted') {
+                if (isAdminView) {
+                        hideModal();
+                        if (event.data.songId) {
+                                openEditModal(event.data.songId);
+                        }
+                        searchSongs();
+                }
         }
 });
 
@@ -714,9 +762,13 @@ let userAgent = navigator.userAgent || navigator.vendor || window.opera;
 let linkElement = document.getElementById("androidapp-link");
 
 if (/Android/i.test(userAgent)) {
-	linkElement.style.display = "block"; // Show link
+        linkElement.style.display = "block"; // Show link
 } else {
-	linkElement.style.display = "none"; // Hide link
+        linkElement.style.display = "none"; // Hide link
+}
+
+if (document.getElementById("clearButton")) {
+        toggleClearButton();
 }
 
 
