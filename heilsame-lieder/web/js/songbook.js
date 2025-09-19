@@ -1,7 +1,13 @@
 let searchAbortController = new AbortController(); // Create a controller
 let searchTimeout = null;
-const isAdminView = document.body.classList.contains("admin-view");
-const pageOrigin = window.location.origin || `${window.location.protocol}//${window.location.host}`;
+
+function getAdminModule() {
+        if (typeof window === "undefined") {
+                return null;
+        }
+
+        return window.songbookAdmin || null;
+}
 
 // functions related to song search
 function searchSongs(inputquery = null) {
@@ -48,23 +54,24 @@ async function performSearch(query) {
 function displayResult(songs) {
         let tableHTML = "";
         songs.forEach(song => {
-                const editButtonHTML = isAdminView
-                        ? `<img src="/img/edit.svg" alt="Edit Song" class="icon-btn edit-btn" data-song-id="${song.id}" title="Edit song" onclick="openEditModal(this.getAttribute('data-song-id'))">`
+                const adminModule = getAdminModule();
+                const adminActions = adminModule && typeof adminModule.renderActionButtons === "function"
+                        ? adminModule.renderActionButtons(song)
                         : "";
 
-		tableHTML += `
+                tableHTML += `
                         <tr>
                                 <td><a href="?q=${song.id}" class="unformatted-link" target="_blank">${song.id}</a></td>
                                 <td>${song.title}</td>
                                 <td class="author-col">${formatAuthors(song.author || "")}</td>
                                 <td class="actions">
                                         <div class="actions-container">
-                                                ${editButtonHTML}
+                                                ${adminActions}
                                                 <img src="/img/text2.png" alt="View Lyrics" class="icon-btn" onclick="showLyrics('${song.id}', '${song.title}')">
-						${song.tabfilename ? `<img src="/img/chords2.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
-						${song.mp3filename ? `
-							<img src="/img/play2.png" alt="Play Audio" class="icon-btn"
-							     onclick="playAudio('${song.mp3filename}', 
+                                                ${song.tabfilename ? `<img src="/img/chords2.png" alt="View Image" class="icon-btn" onclick="showImage('${song.tabfilename}')">` : ""}
+                                                ${song.mp3filename ? `
+                                                        <img src="/img/play2.png" alt="Play Audio" class="icon-btn"
+                                                             onclick="playAudio('${song.mp3filename}',
 							                        '${song.mp3filename2 ? song.mp3filename2 : ''}', 
 													'${song.id}', 
 							                        '${song.title}', 
@@ -80,62 +87,6 @@ function displayResult(songs) {
         document.getElementById("results").innerHTML = tableHTML;
 }
 
-function openEditModal(songId) {
-        if (!songId) {
-                return;
-        }
-
-        const editUrl = `/admin/editsong.php?id=${encodeURIComponent(songId)}`;
-
-        if (!modal || !impressumContent) {
-                window.location.href = editUrl;
-                return;
-        }
-
-        modal.dataset.mode = "edit";
-        impressumContent.innerHTML = '<div class="modal-loading">Loading...</div>';
-
-        const iframe = document.createElement("iframe");
-        iframe.src = editUrl;
-        iframe.className = "modal-iframe";
-        iframe.setAttribute("title", `Edit song ${songId}`);
-        iframe.onload = () => {
-                const loader = impressumContent.querySelector(".modal-loading");
-                if (loader) {
-                        loader.remove();
-                }
-        };
-
-        impressumContent.appendChild(iframe);
-        modal.style.display = "block";
-}
-
-function openAddModal() {
-        const addUrl = "/admin/addsong.php";
-
-        if (!modal || !impressumContent) {
-                window.location.href = addUrl;
-                return;
-        }
-
-        modal.dataset.mode = "add";
-        impressumContent.innerHTML = '<div class="modal-loading">Loading...</div>';
-
-        const iframe = document.createElement("iframe");
-        iframe.src = addUrl;
-        iframe.className = "modal-iframe";
-        iframe.setAttribute("title", "Add new song");
-        iframe.onload = () => {
-                const loader = impressumContent.querySelector(".modal-loading");
-                if (loader) {
-                        loader.remove();
-                }
-        };
-
-        impressumContent.appendChild(iframe);
-        modal.style.display = "block";
-}
-
 function toggleClearButton() {
         const searchBox = document.getElementById("searchBox");
         const clearButton = document.getElementById("clearButton");
@@ -146,16 +97,21 @@ function toggleClearButton() {
 
         clearButton.classList.add("visible"); // Button always visible
 
-        if (searchBox.value.length > 0) {
+        const hasValue = searchBox.value.length > 0;
+        const adminModule = getAdminModule();
+
+        if (adminModule && typeof adminModule.updateClearButton === "function") {
+                const handled = adminModule.updateClearButton(clearButton, hasValue);
+                if (handled) {
+                        return;
+                }
+        }
+
+        if (hasValue) {
                 clearButton.textContent = "✕";
                 clearButton.onclick = clearSearch;
                 clearButton.title = "Clear search";
                 clearButton.setAttribute("aria-label", "Clear search");
-        } else if (isAdminView) {
-                clearButton.textContent = "⊕"; // Circled plus
-                clearButton.onclick = openAddModal;
-                clearButton.title = "Add new song";
-                clearButton.setAttribute("aria-label", "Add new song");
         } else {
                 clearButton.textContent = "\uD83D\uDD00"; // Shuffle icon
                 clearButton.onclick = shuffleSongs;
@@ -731,33 +687,6 @@ window.addEventListener('click', function(event) {
         }
 });
 
-window.addEventListener('message', event => {
-        const originMatches = !event.origin || event.origin === pageOrigin || (pageOrigin === 'null' && event.origin === 'null');
-
-        if (!originMatches || !event.data || typeof event.data !== 'object') {
-                return;
-        }
-
-        const { type } = event.data;
-
-        if (type === 'closeEditModal') {
-                hideModal();
-        } else if (type === 'songUpdated') {
-                hideModal();
-                if (isAdminView) {
-                        searchSongs();
-                }
-        } else if (type === 'songInserted') {
-                if (isAdminView) {
-                        hideModal();
-                        if (event.data.songId) {
-                                openEditModal(event.data.songId);
-                        }
-                        searchSongs();
-                }
-        }
-});
-
 let userAgent = navigator.userAgent || navigator.vendor || window.opera;
 let linkElement = document.getElementById("androidapp-link");
 
@@ -769,6 +698,25 @@ if (/Android/i.test(userAgent)) {
 
 if (document.getElementById("clearButton")) {
         toggleClearButton();
+}
+
+if (typeof window !== "undefined") {
+        window.songbookReady = true;
+
+        if (typeof document !== "undefined") {
+                let readyEvent = null;
+
+                if (typeof window.CustomEvent === "function") {
+                        readyEvent = new CustomEvent("songbook:ready");
+                } else if (document.createEvent) {
+                        readyEvent = document.createEvent("Event");
+                        readyEvent.initEvent("songbook:ready", true, true);
+                }
+
+                if (readyEvent) {
+                        document.dispatchEvent(readyEvent);
+                }
+        }
 }
 
 
