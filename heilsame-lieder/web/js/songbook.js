@@ -9,6 +9,13 @@ function getAdminModule() {
         return window.songbookAdmin || null;
 }
 
+function isAdminView() {
+        return typeof document !== "undefined"
+                && document.body
+                && document.body.classList
+                && document.body.classList.contains("admin-view");
+}
+
 // functions related to song search
 function searchSongs(inputquery = null) {
 	clearTimeout(searchTimeout); // Reset timeout on every keypress
@@ -36,11 +43,16 @@ async function performSearch(query) {
 	searchAbortController = new AbortController();
 	const signal = searchAbortController.signal;
 
-	try {
-		let response = await fetch("/search.php?q=" + encodeURIComponent(query), { signal });
-		let songs = await response.json();
-		displayResult(songs);
-	}
+        try {
+                let requestUrl = "/search.php?q=" + encodeURIComponent(query);
+                if (isAdminView()) {
+                        requestUrl += "&include_hidden=1";
+                }
+
+                let response = await fetch(requestUrl, { signal });
+                let songs = await response.json();
+                displayResult(songs);
+        }
 	catch (err) {
 		if (err.name === "AbortError") {
 			console.log("Previous request aborted");

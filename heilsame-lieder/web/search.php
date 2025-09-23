@@ -7,6 +7,8 @@ require_once "db_config.php";
 
 // Get query
 $query = isset ( $_GET ['q'] ) ? trim ( $_GET ['q'] ) : "";
+$includeHidden = filter_var ( $_GET ['include_hidden'] ?? false, FILTER_VALIDATE_BOOLEAN );
+$applyIdFilter = ! $includeHidden;
 
 // Use regex to check if query is a valid ID (numeric OR numeric + single letter)
 $is_valid_id = preg_match ( '/^[X\d]\d{3}[a-zA-Z]?$/', $query );
@@ -78,22 +80,33 @@ if ($is_valid_id) {
 
 // now the case where input is not exact id.
 if ($query === "*" || $query === "") {
-	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs where id not like 'X%' order by id";
+        $sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs";
+        if ($applyIdFilter) {
+                $sql .= " where id not like 'X%'";
+        }
+        $sql .= " order by id";
 }
 else if ($query === "@@shuffle@@") {
-	$sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs where id not like 'X%' order by RAND()";
+        $sql = "SELECT id, title, tabfilename, mp3filename, mp3filename2, author FROM songs";
+        if ($applyIdFilter) {
+                $sql .= " where id not like 'X%'";
+        }
+        $sql .= " order by RAND()";
 }
 else if ($isSingleLetter) {
-	$sql = "SELECT id, title, author, tabfilename, mp3filename, mp3filename2, author FROM songs
+        $sql = "SELECT id, title, author, tabfilename, mp3filename, mp3filename2, author FROM songs
             WHERE (title REGEXP CONCAT('(^| )', ?, '.*')
-               OR lyrics REGEXP CONCAT('(^| )', ?, '.*'))
-			AND id not like 'X%'
+               OR lyrics REGEXP CONCAT('(^| )', ?, '.*'))";
+        if ($applyIdFilter) {
+                $sql .= " AND id not like 'X%'";
+        }
+        $sql .= "
             ORDER BY CASE WHEN title REGEXP CONCAT('(^| )', ?, '.*') THEN 1 ELSE 2 END, CAST(id AS UNSIGNED) ASC";
-	$params = [ 
-			$query,
-			$query,
-			$query
-	];
+        $params = [
+                        $query,
+                        $query,
+                        $query
+        ];
 	$types = "sss";
 }
 else {
@@ -103,8 +116,11 @@ else {
 			"’"
 	], "'", $query );
 
-	$words = explode ( " ", $normalizedQuery );
-	$conditions = [ "id not like 'X%'" ];
+        $words = explode ( " ", $normalizedQuery );
+        $conditions = [ ];
+        if ($applyIdFilter) {
+                $conditions [] = "id not like 'X%'";
+        }
 	$titleMatch = [ ];
 	$lyricsMatch = [ ];
 	$selectParams = [ ];
