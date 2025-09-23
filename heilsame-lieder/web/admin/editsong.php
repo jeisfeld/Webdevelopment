@@ -66,6 +66,113 @@ function fetchAllMeanings($conn) {
     return $meanings;
 }
 
+function fetchMeaningById($conn, $meaningId) {
+    $meaningId = (int) $meaningId;
+
+    if ($meaningId <= 0) {
+        return null;
+    }
+
+    $stmt = $conn->prepare('SELECT id, title, meaning FROM meaning WHERE id = ?');
+
+    if (! $stmt) {
+        error_log('Failed to prepare statement for fetching meaning: ' . $conn->error);
+        return null;
+    }
+
+    $stmt->bind_param('i', $meaningId);
+
+    if (! $stmt->execute()) {
+        error_log('Failed to execute statement for fetching meaning: ' . $stmt->error);
+        $stmt->close();
+        return null;
+    }
+
+    $result = $stmt->get_result();
+    if (! $result) {
+        error_log('Failed to fetch meaning result set: ' . $stmt->error);
+        $stmt->close();
+        return null;
+    }
+
+    $row = $result->fetch_assoc();
+    $stmt->close();
+
+    if (! $row) {
+        return null;
+    }
+
+    return [
+        'id' => isset($row['id']) ? (int) $row['id'] : null,
+        'title' => isset($row['title']) ? (string) $row['title'] : '',
+        'meaning' => isset($row['meaning']) ? (string) $row['meaning'] : '',
+    ];
+}
+
+function createMeaning($conn, $title, $meaningText) {
+    $stmt = $conn->prepare('INSERT INTO meaning (title, meaning) VALUES (?, ?)');
+
+    if (! $stmt) {
+        error_log('Failed to prepare insert statement for meaning: ' . $conn->error);
+        return null;
+    }
+
+    $titleValue = nullIfEmpty($title);
+    $meaningValue = nullIfEmpty($meaningText);
+
+    $stmt->bind_param('ss', $titleValue, $meaningValue);
+
+    if (! $stmt->execute()) {
+        error_log('Failed to execute insert statement for meaning: ' . $stmt->error);
+        $stmt->close();
+        return null;
+    }
+
+    $newId = (int) $stmt->insert_id;
+    if ($newId <= 0) {
+        $newId = (int) $conn->insert_id;
+    }
+
+    $stmt->close();
+
+    if ($newId <= 0) {
+        return null;
+    }
+
+    return fetchMeaningById($conn, $newId);
+}
+
+function updateMeaning($conn, $meaningId, $title, $meaningText) {
+    $meaningId = (int) $meaningId;
+
+    if ($meaningId <= 0) {
+        return null;
+    }
+
+    $stmt = $conn->prepare('UPDATE meaning SET title = ?, meaning = ? WHERE id = ?');
+
+    if (! $stmt) {
+        error_log('Failed to prepare update statement for meaning: ' . $conn->error);
+        return null;
+    }
+
+    $titleValue = nullIfEmpty($title);
+    $meaningValue = nullIfEmpty($meaningText);
+    $meaningIdParam = $meaningId;
+
+    $stmt->bind_param('ssi', $titleValue, $meaningValue, $meaningIdParam);
+
+    if (! $stmt->execute()) {
+        error_log('Failed to execute update statement for meaning: ' . $stmt->error);
+        $stmt->close();
+        return null;
+    }
+
+    $stmt->close();
+
+    return fetchMeaningById($conn, $meaningId);
+}
+
 function fetchSongMeaningIds($conn, $songId) {
     $sql = "SELECT meaning_id FROM song_meaning WHERE song_id = ? ORDER BY meaning_id";
     $stmt = $conn->prepare($sql);
@@ -190,6 +297,71 @@ function updateSongMeaningRelationships($conn, $songId, array $meaningIds) {
     $insertStmt->close();
 
     return true;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['meaning_action'])) {
+    $meaningAction = trim((string) $_POST['meaning_action']);
+    $response = [
+        'success' => false,
+        'message' => '',
+        'meaning' => null,
+    ];
+
+    if ($meaningAction === 'create') {
+        $titleInput = isset($_POST['title']) ? trim((string) $_POST['title']) : '';
+        $meaningInput = isset($_POST['meaning']) ? trim((string) $_POST['meaning']) : '';
+
+        if ($titleInput === '' && $meaningInput === '') {
+            $response['message'] = 'Please provide a title or meaning text.';
+        } else {
+            $meaningRecord = createMeaning($conn, $titleInput, $meaningInput);
+
+            if ($meaningRecord) {
+                $response['success'] = true;
+                $response['meaning'] = $meaningRecord;
+                $response['message'] = 'Meaning created successfully.';
+            } else {
+                $response['message'] = 'Unable to create the meaning. Please try again.';
+            }
+        }
+    } elseif ($meaningAction === 'update') {
+        $meaningIdInput = isset($_POST['meaning_id']) ? (int) $_POST['meaning_id'] : 0;
+        $titleInput = isset($_POST['title']) ? trim((string) $_POST['title']) : '';
+        $meaningInput = isset($_POST['meaning']) ? trim((string) $_POST['meaning']) : '';
+
+        if ($meaningIdInput <= 0) {
+            $response['message'] = 'Invalid meaning identifier provided.';
+        } elseif ($titleInput === '' && $meaningInput === '') {
+            $response['message'] = 'Please provide a title or meaning text.';
+        } else {
+            $meaningRecord = updateMeaning($conn, $meaningIdInput, $titleInput, $meaningInput);
+
+            if ($meaningRecord) {
+                $response['success'] = true;
+                $response['meaning'] = $meaningRecord;
+                $response['message'] = 'Meaning updated successfully.';
+            } else {
+                $response['message'] = 'Unable to update the meaning. Please try again.';
+            }
+        }
+    } else {
+        $response['message'] = 'Unsupported meaning action requested.';
+    }
+
+    header('Content-Type: application/json; charset=UTF-8');
+    $jsonOptions = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
+    $jsonPayload = json_encode($response, $jsonOptions);
+
+    if ($jsonPayload === false) {
+        $jsonPayload = json_encode([
+            'success' => false,
+            'message' => 'Failed to encode response payload.',
+        ]);
+    }
+
+    echo $jsonPayload;
+    $conn->close();
+    exit;
 }
 
 function escapeHtml($value) {
@@ -702,6 +874,108 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
             outline: 2px solid #1c6dd0;
             outline-offset: 1px;
         }
+        .meaning-modal__actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .meaning-modal__add {
+            padding: 8px 14px;
+            border-radius: 4px;
+            border: 1px solid #1c6dd0;
+            background-color: #1c6dd0;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .meaning-modal__add:hover {
+            background-color: #1559a6;
+        }
+        .meaning-modal__feedback {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            min-height: 1.2em;
+        }
+        .meaning-modal__feedback[aria-hidden="true"] {
+            display: none;
+        }
+        .meaning-modal__feedback--error {
+            color: #a30000;
+        }
+        .meaning-modal__feedback--success {
+            color: #1a7f37;
+        }
+        .meaning-editor {
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            padding: 12px;
+            background-color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .meaning-editor--hidden {
+            display: none;
+        }
+        .meaning-editor__title {
+            margin: 0 0 12px;
+            font-size: 1.05rem;
+        }
+        .meaning-editor__field {
+            margin-bottom: 10px;
+        }
+        .meaning-editor__field label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .meaning-editor__field input,
+        .meaning-editor__field textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: 1px solid #c5c5c5;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+        .meaning-editor__field textarea {
+            min-height: 100px;
+            resize: vertical;
+            line-height: 1.4;
+        }
+        .meaning-editor__buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        .meaning-editor__cancel,
+        .meaning-editor__save {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .meaning-editor__cancel {
+            background-color: #f0f0f0;
+            border-color: #d0d0d0;
+            color: #333;
+        }
+        .meaning-editor__cancel:hover {
+            background-color: #e2e2e2;
+        }
+        .meaning-editor__save {
+            background-color: #1c6dd0;
+            color: #fff;
+        }
+        .meaning-editor__save:hover {
+            background-color: #1559a6;
+        }
+        .meaning-editor__save:disabled,
+        .meaning-editor__cancel:disabled,
+        .meaning-modal__add:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
         .meaning-modal__list {
             max-height: 48vh;
             overflow-y: auto;
@@ -738,6 +1012,25 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
         }
         .meaning-option--selected {
             background-color: #e9f7ef;
+        }
+        .meaning-option-actions {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .meaning-option-edit {
+            background-color: transparent;
+            border: 1px solid #1c6dd0;
+            color: #1c6dd0;
+            border-radius: 4px;
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .meaning-option-edit:hover {
+            background-color: #1c6dd0;
+            color: #fff;
         }
         .meaning-modal__empty {
             padding: 16px;
@@ -961,6 +1254,25 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                         <div class="meaning-modal__search">
                             <input type="text" id="meaning-search" placeholder="Filter by title or meaning">
                         </div>
+                        <div class="meaning-modal__actions">
+                            <button type="button" class="meaning-modal__add" id="add-meaning-button">Add Meaning</button>
+                        </div>
+                        <div class="meaning-modal__feedback" id="meaning-modal-feedback" role="alert" aria-live="polite" aria-hidden="true"></div>
+                        <div class="meaning-editor meaning-editor--hidden" id="meaning-editor" aria-hidden="true">
+                            <h3 class="meaning-editor__title" id="meaning-editor-heading">Add Meaning</h3>
+                            <div class="meaning-editor__field">
+                                <label for="meaning-editor-title-input">Title</label>
+                                <input type="text" id="meaning-editor-title-input" placeholder="Enter meaning title">
+                            </div>
+                            <div class="meaning-editor__field">
+                                <label for="meaning-editor-text-input">Meaning</label>
+                                <textarea id="meaning-editor-text-input" rows="5" placeholder="Enter meaning description"></textarea>
+                            </div>
+                            <div class="meaning-editor__buttons">
+                                <button type="button" class="meaning-editor__cancel" id="meaning-editor-cancel">Cancel</button>
+                                <button type="button" class="meaning-editor__save" id="meaning-editor-save">Save Meaning</button>
+                            </div>
+                        </div>
                         <div class="meaning-modal__list" id="meaning-options"></div>
                     </div>
                     <div class="meaning-modal__footer">
@@ -1013,6 +1325,17 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                 var modalSaveButton = document.getElementById('meaning-modal-save');
                 var searchInput = document.getElementById('meaning-search');
                 var meaningListContainer = document.getElementById('meaning-options');
+                var addMeaningButton = document.getElementById('add-meaning-button');
+                var meaningModalFeedback = document.getElementById('meaning-modal-feedback');
+                var meaningEditorContainer = document.getElementById('meaning-editor');
+                var meaningEditorHeading = document.getElementById('meaning-editor-heading');
+                var meaningEditorTitleInput = document.getElementById('meaning-editor-title-input');
+                var meaningEditorTextInput = document.getElementById('meaning-editor-text-input');
+                var meaningEditorCancelButton = document.getElementById('meaning-editor-cancel');
+                var meaningEditorSaveButton = document.getElementById('meaning-editor-save');
+                var meaningEditorSaveButtonDefaultText = meaningEditorSaveButton ? meaningEditorSaveButton.textContent : 'Save Meaning';
+                var isMeaningEditorSaving = false;
+                var editingMeaningId = null;
 
                 if (! Array.isArray(allMeaningsData)) {
                     allMeaningsData = [];
@@ -1036,6 +1359,8 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                         meaning: typeof meaningEntry.meaning === 'string' ? meaningEntry.meaning : ''
                     };
                 }
+
+                sortMeaningsArray();
 
                 function addClass(element, className) {
                     if (! element || ! className) {
@@ -1087,6 +1412,298 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                     }
 
                     return normalized;
+                }
+
+                function sortMeaningsArray() {
+                    if (! Array.isArray(allMeaningsData)) {
+                        return;
+                    }
+
+                    allMeaningsData.sort(function(a, b) {
+                        var titleA = a && typeof a.title === 'string' ? a.title.toLowerCase() : '';
+                        var titleB = b && typeof b.title === 'string' ? b.title.toLowerCase() : '';
+
+                        if (titleA < titleB) {
+                            return -1;
+                        }
+
+                        if (titleA > titleB) {
+                            return 1;
+                        }
+
+                        var idA = a && typeof a.id !== 'undefined' ? parseInt(a.id, 10) : 0;
+                        var idB = b && typeof b.id !== 'undefined' ? parseInt(b.id, 10) : 0;
+
+                        if (isNaN(idA)) {
+                            idA = 0;
+                        }
+
+                        if (isNaN(idB)) {
+                            idB = 0;
+                        }
+
+                        if (idA < idB) {
+                            return -1;
+                        }
+
+                        if (idA > idB) {
+                            return 1;
+                        }
+
+                        return 0;
+                    });
+                }
+
+                function updateMeaningModalFeedback(message, type) {
+                    if (! meaningModalFeedback) {
+                        return;
+                    }
+
+                    var feedbackMessage = message ? String(message) : '';
+                    meaningModalFeedback.textContent = feedbackMessage;
+                    meaningModalFeedback.className = 'meaning-modal__feedback';
+
+                    if (feedbackMessage === '') {
+                        meaningModalFeedback.setAttribute('aria-hidden', 'true');
+                        return;
+                    }
+
+                    if (type === 'error') {
+                        addClass(meaningModalFeedback, 'meaning-modal__feedback--error');
+                    } else if (type === 'success') {
+                        addClass(meaningModalFeedback, 'meaning-modal__feedback--success');
+                    }
+
+                    meaningModalFeedback.setAttribute('aria-hidden', 'false');
+                }
+
+                function closeMeaningEditor() {
+                    editingMeaningId = null;
+
+                    if (meaningEditorHeading) {
+                        meaningEditorHeading.textContent = 'Add Meaning';
+                    }
+
+                    if (meaningEditorTitleInput) {
+                        meaningEditorTitleInput.value = '';
+                    }
+
+                    if (meaningEditorTextInput) {
+                        meaningEditorTextInput.value = '';
+                    }
+
+                    if (meaningEditorContainer) {
+                        addClass(meaningEditorContainer, 'meaning-editor--hidden');
+                        meaningEditorContainer.setAttribute('aria-hidden', 'true');
+                    }
+                }
+
+                function openMeaningEditorForNew() {
+                    if (isMeaningEditorSaving) {
+                        return;
+                    }
+
+                    editingMeaningId = null;
+
+                    if (meaningEditorHeading) {
+                        meaningEditorHeading.textContent = 'Add Meaning';
+                    }
+
+                    if (meaningEditorTitleInput) {
+                        meaningEditorTitleInput.value = '';
+                    }
+
+                    if (meaningEditorTextInput) {
+                        meaningEditorTextInput.value = '';
+                    }
+
+                    if (meaningEditorContainer) {
+                        removeClass(meaningEditorContainer, 'meaning-editor--hidden');
+                        meaningEditorContainer.setAttribute('aria-hidden', 'false');
+                    }
+
+                    updateMeaningModalFeedback('', '');
+
+                    if (meaningEditorTitleInput && typeof meaningEditorTitleInput.focus === 'function') {
+                        meaningEditorTitleInput.focus();
+                    }
+                }
+
+                function openMeaningEditorForEdit(meaningId) {
+                    if (isMeaningEditorSaving) {
+                        return;
+                    }
+
+                    var meaningKey = String(meaningId);
+                    if (! Object.prototype.hasOwnProperty.call(meaningLookup, meaningKey)) {
+                        updateMeaningModalFeedback('Unable to find the requested meaning.', 'error');
+                        return;
+                    }
+
+                    editingMeaningId = meaningKey;
+                    var meaningData = meaningLookup[meaningKey] || {};
+
+                    if (meaningEditorHeading) {
+                        var headingId = typeof meaningData.id !== 'undefined' ? meaningData.id : meaningKey;
+                        meaningEditorHeading.textContent = 'Edit Meaning #' + headingId;
+                    }
+
+                    if (meaningEditorTitleInput) {
+                        meaningEditorTitleInput.value = meaningData.title || '';
+                    }
+
+                    if (meaningEditorTextInput) {
+                        meaningEditorTextInput.value = meaningData.meaning || '';
+                    }
+
+                    if (meaningEditorContainer) {
+                        removeClass(meaningEditorContainer, 'meaning-editor--hidden');
+                        meaningEditorContainer.setAttribute('aria-hidden', 'false');
+                    }
+
+                    updateMeaningModalFeedback('', '');
+
+                    if (meaningEditorTitleInput && typeof meaningEditorTitleInput.focus === 'function') {
+                        meaningEditorTitleInput.focus();
+                        if (typeof meaningEditorTitleInput.setSelectionRange === 'function') {
+                            var titleLength = meaningEditorTitleInput.value ? meaningEditorTitleInput.value.length : 0;
+                            try {
+                                meaningEditorTitleInput.setSelectionRange(titleLength, titleLength);
+                            } catch (selectionError) {
+                                // Ignore selection errors.
+                            }
+                        }
+                    }
+                }
+
+                function setMeaningEditorSaving(isSaving) {
+                    isMeaningEditorSaving = !! isSaving;
+
+                    if (meaningEditorSaveButton) {
+                        meaningEditorSaveButton.disabled = isMeaningEditorSaving;
+                        if (meaningEditorSaveButtonDefaultText !== '') {
+                            meaningEditorSaveButton.textContent = isMeaningEditorSaving ? 'Saving...' : meaningEditorSaveButtonDefaultText;
+                        }
+                    }
+
+                    if (meaningEditorCancelButton) {
+                        meaningEditorCancelButton.disabled = isMeaningEditorSaving;
+                    }
+
+                    if (addMeaningButton) {
+                        addMeaningButton.disabled = isMeaningEditorSaving;
+                    }
+                }
+
+                function saveMeaningEditorChanges() {
+                    if (isMeaningEditorSaving) {
+                        return;
+                    }
+
+                    if (! window.fetch) {
+                        updateMeaningModalFeedback('Saving meanings requires a modern browser.', 'error');
+                        return;
+                    }
+
+                    var titleValue = meaningEditorTitleInput ? meaningEditorTitleInput.value : '';
+                    var meaningValue = meaningEditorTextInput ? meaningEditorTextInput.value : '';
+                    var trimmedTitle = titleValue ? titleValue.trim() : '';
+                    var trimmedMeaning = meaningValue ? meaningValue.trim() : '';
+
+                    if (trimmedTitle === '' && trimmedMeaning === '') {
+                        updateMeaningModalFeedback('Please provide a title or meaning text before saving.', 'error');
+                        if (meaningEditorTitleInput && typeof meaningEditorTitleInput.focus === 'function') {
+                            meaningEditorTitleInput.focus();
+                        }
+                        return;
+                    }
+
+                    var meaningIdBeingEdited = editingMeaningId;
+
+                    var formData = new FormData();
+                    formData.append('meaning_action', meaningIdBeingEdited === null ? 'create' : 'update');
+
+                    if (meaningIdBeingEdited !== null) {
+                        formData.append('meaning_id', meaningIdBeingEdited);
+                    }
+
+                    formData.append('title', titleValue);
+                    formData.append('meaning', meaningValue);
+
+                    setMeaningEditorSaving(true);
+                    updateMeaningModalFeedback('', '');
+
+                    fetch(window.location.href, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                        .then(function(response) {
+                            return response.json().catch(function() {
+                                return { success: false, message: 'Received an invalid response from the server.' };
+                            });
+                        })
+                        .then(function(data) {
+                            if (data && data.success && data.meaning && typeof data.meaning.id !== 'undefined') {
+                                var savedMeaning = data.meaning;
+                                var savedMeaningId = String(savedMeaning.id);
+                                var normalizedMeaning = {
+                                    id: savedMeaning.id,
+                                    title: typeof savedMeaning.title === 'string' ? savedMeaning.title : '',
+                                    meaning: typeof savedMeaning.meaning === 'string' ? savedMeaning.meaning : ''
+                                };
+
+                                meaningLookup[savedMeaningId] = normalizedMeaning;
+
+                                var replacedExisting = false;
+                                for (var index = 0; index < allMeaningsData.length; index++) {
+                                    if (String(allMeaningsData[index].id) === savedMeaningId) {
+                                        allMeaningsData[index] = normalizedMeaning;
+                                        replacedExisting = true;
+                                        break;
+                                    }
+                                }
+
+                                if (! replacedExisting) {
+                                    allMeaningsData.push(normalizedMeaning);
+                                }
+
+                                sortMeaningsArray();
+
+                                if (meaningIdBeingEdited === null) {
+                                    if (searchInput) {
+                                        searchInput.value = '';
+                                    }
+
+                                    if (selectedMeaningIds.indexOf(savedMeaningId) === -1) {
+                                        selectedMeaningIds.push(savedMeaningId);
+                                    }
+
+                                    selectedMeaningIds = normalizeSelectedIds(selectedMeaningIds);
+                                    syncHiddenInput();
+                                    updateSummary();
+                                    updateMeaningModalFeedback('Meaning added and selected.', 'success');
+                                } else {
+                                    syncHiddenInput();
+                                    updateSummary();
+                                    updateMeaningModalFeedback('Meaning updated.', 'success');
+                                }
+
+                                closeMeaningEditor();
+                                renderMeaningList();
+                            } else {
+                                var errorMessage = data && data.message ? data.message : 'Failed to save the meaning.';
+                                updateMeaningModalFeedback(errorMessage, 'error');
+                            }
+                        })
+                        .catch(function() {
+                            updateMeaningModalFeedback('An unexpected error occurred while saving the meaning.', 'error');
+                        })
+                        .then(function() {
+                            setMeaningEditorSaving(false);
+                        });
                 }
 
                 var selectedMeaningIds = normalizeSelectedIds(initialSelectedMeaningIds);
@@ -1261,11 +1878,22 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                         optionLabel.appendChild(checkbox);
                         optionLabel.appendChild(detailsContainer);
 
+                        var actionsContainer = document.createElement('div');
+                        actionsContainer.className = 'meaning-option-actions';
+
+                        var editButton = document.createElement('button');
+                        editButton.type = 'button';
+                        editButton.className = 'meaning-option-edit';
+                        editButton.textContent = 'Edit';
+
+                        actionsContainer.appendChild(editButton);
+                        optionLabel.appendChild(actionsContainer);
+
                         if (checkbox.checked) {
                             addClass(optionLabel, 'meaning-option--selected');
                         }
 
-                        (function(id, labelElement, checkboxElement) {
+                        (function(id, labelElement, checkboxElement, editButtonElement) {
                             checkboxElement.addEventListener('change', function(event) {
                                 if (event.target.checked) {
                                     if (selectedMeaningIds.indexOf(id) === -1) {
@@ -1280,7 +1908,15 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                                     removeClass(labelElement, 'meaning-option--selected');
                                 }
                             });
-                        })(meaningId, optionLabel, checkbox);
+
+                            if (editButtonElement) {
+                                editButtonElement.addEventListener('click', function(event) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    openMeaningEditorForEdit(id);
+                                });
+                            }
+                        })(meaningId, optionLabel, checkbox, editButton);
 
                         meaningListContainer.appendChild(optionLabel);
                     }
@@ -1304,6 +1940,9 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                     if (searchInput) {
                         searchInput.value = '';
                     }
+                    closeMeaningEditor();
+                    updateMeaningModalFeedback('', '');
+                    setMeaningEditorSaving(false);
                     renderMeaningList();
                     addClass(modalElement, 'is-open');
                     modalElement.setAttribute('aria-hidden', 'false');
@@ -1321,6 +1960,9 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                     modalElement.setAttribute('aria-hidden', 'true');
                     modalIsOpen = false;
                     modalSelectionSnapshot = [];
+                    closeMeaningEditor();
+                    updateMeaningModalFeedback('', '');
+                    setMeaningEditorSaving(false);
                 }
 
                 function handleModalCancel() {
@@ -1363,6 +2005,51 @@ if (is_array($songData) && array_key_exists('id', $songData)) {
                 if (modalSaveButton) {
                     modalSaveButton.addEventListener('click', function() {
                         handleModalSave();
+                    });
+                }
+
+                if (addMeaningButton) {
+                    addMeaningButton.addEventListener('click', function() {
+                        openMeaningEditorForNew();
+                    });
+                }
+
+                if (meaningEditorCancelButton) {
+                    meaningEditorCancelButton.addEventListener('click', function() {
+                        if (isMeaningEditorSaving) {
+                            return;
+                        }
+
+                        closeMeaningEditor();
+                        updateMeaningModalFeedback('', '');
+                    });
+                }
+
+                if (meaningEditorSaveButton) {
+                    meaningEditorSaveButton.addEventListener('click', function() {
+                        saveMeaningEditorChanges();
+                    });
+                }
+
+                if (meaningEditorTitleInput) {
+                    meaningEditorTitleInput.addEventListener('keydown', function(event) {
+                        var key = event.key || event.keyCode;
+
+                        if (key === 'Enter' || key === 13) {
+                            event.preventDefault();
+                            saveMeaningEditorChanges();
+                        }
+                    });
+                }
+
+                if (meaningEditorTextInput) {
+                    meaningEditorTextInput.addEventListener('keydown', function(event) {
+                        var key = event.key || event.keyCode;
+
+                        if ((key === 'Enter' || key === 13) && (event.ctrlKey || event.metaKey)) {
+                            event.preventDefault();
+                            saveMeaningEditorChanges();
+                        }
                     });
                 }
 
