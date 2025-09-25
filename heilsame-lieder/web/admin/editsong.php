@@ -687,7 +687,15 @@ if ($allMeaningsJson === false) {
 
 $authorSuggestionsJson = json_encode ( $allAuthors, $jsonEncodeOptions );
 if ($authorSuggestionsJson === false) {
-	$authorSuggestionsJson = '[]';
+        $authorSuggestionsJson = '[]';
+}
+$tabFilenameSuggestionsJson = json_encode ( $tabFilenameOptions, $jsonEncodeOptions );
+if ($tabFilenameSuggestionsJson === false) {
+        $tabFilenameSuggestionsJson = '[]';
+}
+$mp3FilenameSuggestionsJson = json_encode ( $mp3FilenameOptions, $jsonEncodeOptions );
+if ($mp3FilenameSuggestionsJson === false) {
+        $mp3FilenameSuggestionsJson = '[]';
 }
 
 $songImagesDirectory = __DIR__ . '/../img/songs';
@@ -807,12 +815,12 @@ h1 {
 	position: relative;
 }
 
-.author-suggestions {
-	display: none;
-	position: absolute;
-	top: calc(100% - 4px);
-	left: 0;
-	right: 0;
+.input-suggestions {
+        display: none;
+        position: absolute;
+        top: calc(100% - 4px);
+        left: 0;
+        right: 0;
 	background-color: #fff;
 	border: 1px solid #c5c5c5;
 	border-top: none;
@@ -821,25 +829,23 @@ h1 {
 	max-height: 220px;
 	overflow-y: auto;
 	z-index: 20;
+.input-suggestions.is-visible {
+        display: block;
 }
 
-.author-suggestions.is-visible {
-	display: block;
+.input-suggestion {
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 0.95rem;
+        border-top: 1px solid #e6e6e6;
 }
 
-.author-suggestion {
-	padding: 8px 12px;
-	cursor: pointer;
-	font-size: 0.95rem;
-	border-top: 1px solid #e6e6e6;
+.input-suggestion:first-child {
+        border-top: none;
 }
 
-.author-suggestion:first-child {
-	border-top: none;
-}
-
-.author-suggestion:hover, .author-suggestion.is-active {
-	background-color: #e8f1ff;
+.input-suggestion:hover, .input-suggestion.is-active {
+        background-color: #e8f1ff;
 }
 
 .form-note {
@@ -1337,41 +1343,35 @@ h1 {
 				<textarea id="song-lyrics-paged" name="lyrics_paged" class="short-textarea" rows="6"><?php echo htmlspecialchars($songData['lyrics_paged'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></textarea>
 			</div>
 
-			<div class="form-group">
-				<label for="tabfilename">Tab Filename</label> <input type="text" id="tabfilename" name="tabfilename"
-					list="tabfilename-options" value="<?php echo escapeHtml($songData['tabfilename'] ?? ''); ?>">
+                        <div class="form-group form-group--with-suggestions">
+                                <label for="tabfilename">Tab Filename</label> <input type="text" id="tabfilename" name="tabfilename" autocomplete="off"
+                                        value="<?php echo escapeHtml($songData['tabfilename'] ?? ''); ?>">
+                                <div class="input-suggestions" id="tabfilename-suggestions" role="listbox" aria-label="Tab filename suggestions"
+                                        aria-hidden="true"></div>
                     <?php renderFilenameNote($matchingTabFilenames, $tabFilenameOptions, $tabFilenamePrefix, $tabDirectoryExists, 'img/songs/'); ?>
                 </div>
 
-			<datalist id="tabfilename-options">
-                    <?php foreach ($tabFilenameOptions as $filenameOption): ?>
-                        <option value="<?php echo escapeHtml($filenameOption); ?>"></option>
-                    <?php endforeach; ?>
-                </datalist>
-
-			<div class="form-group">
-				<label for="mp3filename">MP3 Filename</label> <input type="text" id="mp3filename" name="mp3filename"
-					list="mp3filename-options" value="<?php echo escapeHtml($songData['mp3filename'] ?? ''); ?>">
+                        <div class="form-group form-group--with-suggestions">
+                                <label for="mp3filename">MP3 Filename</label> <input type="text" id="mp3filename" name="mp3filename" autocomplete="off"
+                                        value="<?php echo escapeHtml($songData['mp3filename'] ?? ''); ?>">
+                                <div class="input-suggestions" id="mp3filename-suggestions" role="listbox" aria-label="MP3 filename suggestions"
+                                        aria-hidden="true"></div>
                     <?php renderFilenameNote($matchingMp3Filenames, $mp3FilenameOptions, $mp3FilenamePrefix, $mp3DirectoryExists, 'audio/songs/'); ?>
                 </div>
 
-			<div class="form-group">
-				<label for="mp3filename2">MP3 Filename 2</label> <input type="text" id="mp3filename2" name="mp3filename2"
-					list="mp3filename-options" value="<?php echo escapeHtml($songData['mp3filename2'] ?? ''); ?>">
+                        <div class="form-group form-group--with-suggestions">
+                                <label for="mp3filename2">MP3 Filename 2</label> <input type="text" id="mp3filename2" name="mp3filename2" autocomplete="off"
+                                        value="<?php echo escapeHtml($songData['mp3filename2'] ?? ''); ?>">
+                                <div class="input-suggestions" id="mp3filename2-suggestions" role="listbox" aria-label="Secondary MP3 filename suggestions"
+                                        aria-hidden="true"></div>
                     <?php renderFilenameNote($matchingMp3Filenames, $mp3FilenameOptions, $mp3FilenamePrefix, $mp3DirectoryExists, 'audio/songs/'); ?>
                 </div>
 
-			<datalist id="mp3filename-options">
-                    <?php foreach ($mp3FilenameOptions as $filenameOption): ?>
-                        <option value="<?php echo escapeHtml($filenameOption); ?>"></option>
-                    <?php endforeach; ?>
-                </datalist>
-
-			<div class="form-group form-group--with-suggestions">
-				<label for="song-author">Author(s)</label> <input type="text" id="song-author" name="author" autocomplete="off"
-					value="<?php echo escapeHtml($songData['author'] ?? ''); ?>">
-				<div class="author-suggestions" id="author-suggestions" role="listbox" aria-label="Author suggestions"
-					aria-hidden="true"></div>
+                        <div class="form-group form-group--with-suggestions">
+                                <label for="song-author">Author(s)</label> <input type="text" id="song-author" name="author" autocomplete="off"
+                                        value="<?php echo escapeHtml($songData['author'] ?? ''); ?>">
+                                <div class="input-suggestions" id="author-suggestions" role="listbox" aria-label="Author suggestions"
+                                        aria-hidden="true"></div>
 			</div>
 
 			<div class="form-group">
@@ -1477,10 +1477,304 @@ h1 {
             var allMeaningsData = <?php echo $allMeaningsJson; ?>;
             var initialSelectedMeaningIds = <?php echo $selectedMeaningIdsJson; ?>;
             var authorSuggestions = <?php echo $authorSuggestionsJson; ?>;
+            var tabFilenameSuggestions = <?php echo $tabFilenameSuggestionsJson; ?>;
+            var mp3FilenameSuggestions = <?php echo $mp3FilenameSuggestionsJson; ?>;
 
             if (! Array.isArray(authorSuggestions)) {
                 authorSuggestions = [];
             }
+
+            if (! Array.isArray(tabFilenameSuggestions)) {
+                tabFilenameSuggestions = [];
+            }
+
+            if (! Array.isArray(mp3FilenameSuggestions)) {
+                mp3FilenameSuggestions = [];
+            }
+
+            var MAX_AUTOCOMPLETE_SUGGESTIONS = 50;
+
+            function setupSimpleAutocomplete(inputElement, suggestionsContainer, suggestionList) {
+                if (! inputElement || ! suggestionsContainer || ! Array.isArray(suggestionList) || ! suggestionList.length) {
+                    return;
+                }
+
+                var filteredSuggestions = [];
+                var highlightedSuggestionIndex = -1;
+                var hideSuggestionsTimeoutId = null;
+
+                function clearHideSuggestionsTimeout() {
+                    if (hideSuggestionsTimeoutId !== null) {
+                        clearTimeout(hideSuggestionsTimeoutId);
+                        hideSuggestionsTimeoutId = null;
+                    }
+                }
+
+                function containerHasClass(className) {
+                    if (! className) {
+                        return false;
+                    }
+
+                    if (suggestionsContainer.classList) {
+                        return suggestionsContainer.classList.contains(className);
+                    }
+
+                    return (' ' + suggestionsContainer.className + ' ').indexOf(' ' + className + ' ') !== -1;
+                }
+
+                function hideSuggestions() {
+                    clearHideSuggestionsTimeout();
+                    filteredSuggestions = [];
+                    highlightedSuggestionIndex = -1;
+                    suggestionsContainer.innerHTML = '';
+                    suggestionsContainer.classList.remove('is-visible');
+                    suggestionsContainer.setAttribute('aria-hidden', 'true');
+                }
+
+                function highlightSuggestion(index) {
+                    var suggestionItems = suggestionsContainer.querySelectorAll('.input-suggestion');
+
+                    if (! suggestionItems.length) {
+                        highlightedSuggestionIndex = -1;
+                        return;
+                    }
+
+                    if (index < 0 || index >= suggestionItems.length) {
+                        index = -1;
+                    }
+
+                    highlightedSuggestionIndex = index;
+
+                    for (var i = 0; i < suggestionItems.length; i++) {
+                        var item = suggestionItems[i];
+
+                        if (item.classList) {
+                            if (i === index) {
+                                item.classList.add('is-active');
+                            } else {
+                                item.classList.remove('is-active');
+                            }
+                        } else {
+                            item.className = item.className.replace(/\bis-active\b/g, '').trim();
+                            if (i === index) {
+                                item.className += ' is-active';
+                            }
+                        }
+                    }
+                }
+
+                function renderSuggestions(list) {
+                    suggestionsContainer.innerHTML = '';
+
+                    if (! list.length) {
+                        hideSuggestions();
+                        return;
+                    }
+
+                    var fragment = document.createDocumentFragment();
+
+                    for (var i = 0; i < list.length; i++) {
+                        var value = list[i];
+                        if (typeof value !== 'string') {
+                            continue;
+                        }
+
+                        var item = document.createElement('div');
+                        item.className = 'input-suggestion';
+                        item.textContent = value;
+                        item.setAttribute('data-value', value);
+                        fragment.appendChild(item);
+                    }
+
+                    suggestionsContainer.appendChild(fragment);
+                    suggestionsContainer.classList.add('is-visible');
+                    suggestionsContainer.setAttribute('aria-hidden', 'false');
+                    highlightSuggestion(-1);
+                }
+
+                function buildFilteredSuggestions(query) {
+                    var trimmedQuery = typeof query === 'string' ? query.trim() : '';
+                    if (trimmedQuery === '') {
+                        return suggestionList.slice(0, MAX_AUTOCOMPLETE_SUGGESTIONS);
+                    }
+
+                    var lowerQuery = trimmedQuery.toLowerCase();
+                    var results = [];
+
+                    for (var i = 0; i < suggestionList.length; i++) {
+                        var candidate = suggestionList[i];
+
+                        if (typeof candidate !== 'string') {
+                            continue;
+                        }
+
+                        if (candidate.toLowerCase().indexOf(lowerQuery) !== -1) {
+                            results.push(candidate);
+                            if (results.length >= MAX_AUTOCOMPLETE_SUGGESTIONS) {
+                                break;
+                            }
+                        }
+                    }
+
+                    return results;
+                }
+
+                function selectSuggestion(value) {
+                    inputElement.value = value;
+                    hideSuggestions();
+
+                    if (typeof inputElement.focus === 'function') {
+                        inputElement.focus();
+                    }
+                }
+
+                function updateSuggestions() {
+                    clearHideSuggestionsTimeout();
+
+                    if (! suggestionList.length) {
+                        hideSuggestions();
+                        return;
+                    }
+
+                    filteredSuggestions = buildFilteredSuggestions(inputElement.value);
+
+                    if (! filteredSuggestions.length) {
+                        hideSuggestions();
+                        return;
+                    }
+
+                    renderSuggestions(filteredSuggestions);
+                }
+
+                function moveHighlight(direction) {
+                    if (! filteredSuggestions.length) {
+                        return;
+                    }
+
+                    var nextIndex = highlightedSuggestionIndex + direction;
+
+                    if (nextIndex < 0) {
+                        nextIndex = filteredSuggestions.length - 1;
+                    } else if (nextIndex >= filteredSuggestions.length) {
+                        nextIndex = 0;
+                    }
+
+                    highlightSuggestion(nextIndex);
+                }
+
+                inputElement.addEventListener('input', function() {
+                    updateSuggestions();
+                });
+
+                inputElement.addEventListener('focus', function() {
+                    updateSuggestions();
+                });
+
+                inputElement.addEventListener('click', function() {
+                    updateSuggestions();
+                });
+
+                inputElement.addEventListener('keydown', function(event) {
+                    var key = event.key || event.keyCode;
+                    var suggestionsVisible = containerHasClass('is-visible');
+
+                    if (key === 'ArrowDown' || key === 40) {
+                        if (! suggestionsVisible) {
+                            updateSuggestions();
+                        }
+
+                        if (filteredSuggestions.length) {
+                            event.preventDefault();
+                            moveHighlight(1);
+                        }
+                    } else if (key === 'ArrowUp' || key === 38) {
+                        if (filteredSuggestions.length) {
+                            event.preventDefault();
+                            moveHighlight(-1);
+                        }
+                    } else if (key === 'Enter' || key === 13) {
+                        if (filteredSuggestions.length && highlightedSuggestionIndex !== -1) {
+                            event.preventDefault();
+                            selectSuggestion(filteredSuggestions[highlightedSuggestionIndex]);
+                        }
+                    } else if (key === 'Escape' || key === 'Esc' || key === 27) {
+                        if (suggestionsVisible) {
+                            event.preventDefault();
+                            hideSuggestions();
+                        }
+                    } else if (key === 'Tab' || key === 9) {
+                        if (filteredSuggestions.length && highlightedSuggestionIndex !== -1) {
+                            selectSuggestion(filteredSuggestions[highlightedSuggestionIndex]);
+                        }
+
+                        hideSuggestions();
+                    }
+                });
+
+                inputElement.addEventListener('blur', function() {
+                    clearHideSuggestionsTimeout();
+                    hideSuggestionsTimeoutId = window.setTimeout(function() {
+                        hideSuggestions();
+                    }, 150);
+                });
+
+                suggestionsContainer.addEventListener('mouseenter', function() {
+                    clearHideSuggestionsTimeout();
+                });
+
+                suggestionsContainer.addEventListener('mouseleave', function() {
+                    highlightSuggestion(-1);
+                });
+
+                suggestionsContainer.addEventListener('mousedown', function(event) {
+                    event.preventDefault();
+                });
+
+                suggestionsContainer.addEventListener('click', function(event) {
+                    var target = event.target;
+
+                    while (target && target !== suggestionsContainer) {
+                        var hasSuggestionClass = target.classList ? target.classList.contains('input-suggestion') :
+                            (' ' + target.className + ' ').indexOf(' input-suggestion ') !== -1;
+
+                        if (hasSuggestionClass) {
+                            break;
+                        }
+
+                        target = target.parentNode;
+                    }
+
+                    if (target) {
+                        var targetHasClass = target.classList ? target.classList.contains('input-suggestion') :
+                            (' ' + target.className + ' ').indexOf(' input-suggestion ') !== -1;
+
+                        if (! targetHasClass) {
+                            return;
+                        }
+
+                        var selectedValue = target.getAttribute('data-value') || target.textContent || '';
+                        selectSuggestion(selectedValue);
+                    }
+                });
+            }
+
+            setupSimpleAutocomplete(
+                document.getElementById('tabfilename'),
+                document.getElementById('tabfilename-suggestions'),
+                tabFilenameSuggestions
+            );
+
+            setupSimpleAutocomplete(
+                document.getElementById('mp3filename'),
+                document.getElementById('mp3filename-suggestions'),
+                mp3FilenameSuggestions
+            );
+
+            setupSimpleAutocomplete(
+                document.getElementById('mp3filename2'),
+                document.getElementById('mp3filename2-suggestions'),
+                mp3FilenameSuggestions
+            );
 
             var meaningIdsInput = document.getElementById('meaning-ids-input');
             var summaryContainer = document.getElementById('selected-meanings-summary');
@@ -2256,7 +2550,6 @@ h1 {
             var authorSuggestionsContainer = document.getElementById('author-suggestions');
 
             if (authorInput && authorSuggestionsContainer && authorSuggestions.length) {
-                var MAX_AUTHOR_SUGGESTIONS = 50;
                 var filteredAuthorSuggestions = [];
                 var highlightedAuthorSuggestionIndex = -1;
                 var latestAuthorSegmentInfo = null;
@@ -2311,7 +2604,7 @@ h1 {
                 }
 
                 function highlightAuthorSuggestion(index) {
-                    var suggestionItems = authorSuggestionsContainer.querySelectorAll('.author-suggestion');
+                    var suggestionItems = authorSuggestionsContainer.querySelectorAll('.input-suggestion');
 
                     if (! suggestionItems.length) {
                         highlightedAuthorSuggestionIndex = -1;
@@ -2365,7 +2658,7 @@ h1 {
                         }
 
                         var optionElement = document.createElement('div');
-                        optionElement.className = 'author-suggestion';
+                        optionElement.className = 'input-suggestion';
                         optionElement.textContent = suggestion;
                         optionElement.setAttribute('role', 'option');
                         optionElement.setAttribute('aria-selected', 'false');
@@ -2426,7 +2719,7 @@ h1 {
                     }
 
                     var combined = prefixMatches.concat(otherMatches);
-                    filteredAuthorSuggestions = combined.slice(0, MAX_AUTHOR_SUGGESTIONS);
+                    filteredAuthorSuggestions = combined.slice(0, MAX_AUTOCOMPLETE_SUGGESTIONS);
 
                     if (! filteredAuthorSuggestions.length) {
                         hideAuthorSuggestions();
