@@ -2532,11 +2532,13 @@ h1 {
                     var segmentStart = lastCommaIndex === -1 ? 0 : lastCommaIndex + 1;
                     var nextCommaIndex = inputValue.indexOf(',', selectionEnd);
                     var segmentEnd = nextCommaIndex === -1 ? inputValue.length : nextCommaIndex;
+
                     var segmentBeforeCursor = inputValue.slice(segmentStart, selectionStart);
                     var leadingSpacesMatch = segmentBeforeCursor.match(/^\s*/);
                     var leadingSpaces = leadingSpacesMatch ? leadingSpacesMatch[0] : '';
                     var typedFragment = segmentBeforeCursor.slice(leadingSpaces.length);
-                    var query = typedFragment.trim();
+                    var trimmedQuery = typeof typedFragment === 'string' ? typedFragment.trim() : '';
+                    var normalizedQuery = trimmedQuery.toLowerCase();
 
                     return {
                         segmentStart: segmentStart,
@@ -2544,7 +2546,9 @@ h1 {
                         beforeSegmentText: inputValue.slice(0, segmentStart),
                         afterSegmentText: inputValue.slice(segmentEnd),
                         leadingSpaces: leadingSpaces,
-                        query: query
+                        typedFragment: typedFragment,
+                        query: trimmedQuery,
+                        normalizedQuery: normalizedQuery
                     };
                 }
 
@@ -2650,7 +2654,9 @@ h1 {
                         return;
                     }
 
-                    var query = latestAuthorSegmentInfo.query.toLowerCase();
+                    var query = latestAuthorSegmentInfo && typeof latestAuthorSegmentInfo.normalizedQuery === 'string'
+                        ? latestAuthorSegmentInfo.normalizedQuery
+                        : '';
                     var prefixMatches = [];
                     var otherMatches = [];
 
