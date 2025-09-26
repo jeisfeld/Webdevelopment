@@ -3,3 +3,4 @@
 .project
 web/db_config.php
 /util/
+web/admin/.htpasswd
