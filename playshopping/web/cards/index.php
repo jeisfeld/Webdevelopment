@@ -30,7 +30,6 @@ html, body {
 }
 
 .content {
-        position: relative;
         width: 100%;
         max-width: 1024px;
         max-height: 80%;
@@ -45,9 +44,9 @@ html, body {
 }
 
 .reload-button {
-        position: absolute;
-        top: 15px;
-        right: 15px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
         background: transparent;
         border: none;
         font-size: 1.5rem;
@@ -64,10 +63,10 @@ html, body {
 </style>
 </head>
 <body>
+        <button type="button" class="reload-button" onclick="location.reload();" aria-label="Seite neu laden">
+                &#x21bb;
+        </button>
         <div class="content">
-                <button type="button" class="reload-button" onclick="location.reload();" aria-label="Seite neu laden">
-                        &#x21bb;
-                </button>
                 <?= nl2br(htmlspecialchars($text)) ?>
         </div>
 </body>
