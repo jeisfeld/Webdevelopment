@@ -35,16 +35,36 @@ html, body {
 	max-height: 80%;
 	text-align: center;
 	font-size: clamp(1.2rem, 4vw, 2em);
-	padding: 20px;
+	padding: 20px 20px 30px;
 	box-sizing: border-box;
 	background: white;
 	border-radius: 10px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	overflow-y: auto;
 }
+
+.reload-button {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: transparent;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: #666;
+	transition: color 0.2s ease;
+}
+
+.reload-button:hover, .reload-button:focus {
+	color: #000;
+	outline: none;
+}
 </style>
 </head>
 <body>
-	<div class="content"><?= nl2br(htmlspecialchars($text)) ?></div>
+	<button type="button" class="reload-button" onclick="location.reload();" aria-label="Seite neu laden">&#x21bb;</button>
+	<div class="content">
+                <?= nl2br(htmlspecialchars($text)) ?>
+        </div>
 </body>
 </html>
