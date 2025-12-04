@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        img {
+            height: auto;
+            max-height: 400px;
+            width: auto;
+            border-radius: 8px;
+        }
+            figure {
+            margin: 10px;
+            max-width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+</style>
+</head>
+<body>
+    <figure>
+        <img src="lisa.jpg" alt="Lisa" />
+        <figcaption>Lisa</figcaption>
+        <a href="lisa.jpg" download>Download</a>
+    </figure>
+    <figure>
+        <img src="joerg_music.jpg" alt="J&ouml;rg Music" />
+        <figcaption>J&ouml;rg Music</figcaption>
+        <a href="joerg_music.jpg" download>Download</a>
+    </figure>
+    <figure>
+        <img src="singing_circle.jpg" alt="Singing Circle" />
+        <figcaption>Singing Circle</figcaption>
+        <a href="singing_circle.jpg" download>Download</a>
+    </figure>
+</body>
+</html>
