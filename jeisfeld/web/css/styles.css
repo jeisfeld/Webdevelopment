@@ -104,6 +104,30 @@ h1 {
 	margin: 0 auto 1em auto;
 }
 
+.logo-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: nowrap;
+	margin-bottom: 1em;
+}
+
+.logo-row .logo-image {
+	width: clamp(70px, 24vw, 100px);
+	height: auto;
+	display: block;
+}
+
+.logo-row .logo {
+	margin: 0;
+}
+
+.logo-row .logo-link {
+	margin: 0;
+	display: block;
+}
+
 h2 {
 	font-size: 2em;
 	margin-top: 30px;
@@ -211,6 +235,9 @@ a:hover {
 	}
 	.logo {
 		width: 150px;
+	}
+	.logo-row .logo-image {
+		width: clamp(90px, 12vw, 150px);
 	}
 }
 
