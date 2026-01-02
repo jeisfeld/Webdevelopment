@@ -73,10 +73,10 @@ window.addEventListener('click', function(event) {
 
 // Background photo gallery
 
-const totalImages = 9;
+const totalImages = 11;
 const basePath = '../img/';
 const extension = '.jpg';
-const imageList = ['joerg1', 'joerg2', 'joerg3', 'joerg9', 'joerg4', 'joerg5', 'joerg6', 'joerg7', 'joerg8'];
+const imageList = ['joerg1', 'joerg2', 'joerg3', 'joerg9', 'joerg4', 'joerg5', 'joerg6', 'joerg7', 'joerg8', 'joerg10', 'joerg11'];
 
 let currentIndex = 0;
 let currentDiv = 1;

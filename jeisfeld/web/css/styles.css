@@ -77,6 +77,12 @@ body {
 	.bg-image-8 {
 		background-position: 30% center;
 	}
+	.bg-image-9 {
+		background-position: 40% center;
+	}
+	.bg-image-10 {
+		background-position: 80% center;
+	}
 }
 
 /* Container for centered content */
