@@ -3,4 +3,4 @@
 .project
 util
 web/songarchive/db_config.php
-web/connylisa/tracks/*.mp3
+web/*/tracks/*.mp3

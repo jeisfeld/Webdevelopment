@@ -122,7 +122,7 @@ button:hover {
 		</div>
 
 		<div>
-			<h1 id="albumTitle">Conny & Lisa</h1>
+			<h1 id="albumTitle">Jam Sessions</h1>
 			<div class="meta" id="nowPlaying">Not playing</div>
 
 			<audio id="player" controls preload="metadata"></audio>
@@ -140,44 +140,57 @@ button:hover {
 	<script>
     // 1) Edit this list to match your MP3 files
 	const tracks = [
-	  { title: "Ich reise zu mir selbst", file: "tracks/01 Ich reise zu mir selbst.mp3" },
-	  { title: "Geliebte Seele", file: "tracks/02 Geliebte Seele.mp3" },
-	  { title: "Zu Hause", file: "tracks/03 Zu Hause.mp3" },
-	  { title: "In der Bahn", file: "tracks/04 In der Bahn.mp3" },
-	  { title: "Wiedergeburt", file: "tracks/05 Wiedergeburt.mp3" },
-	  { title: "Ich bin das Wasser", file: "tracks/06 Ich bin das Wasser.mp3" },
-	  { title: "Keine Träne mehr", file: "tracks/07 Keine Träne mehr.mp3" },
-	  { title: "Besessen", file: "tracks/08 Besessen.mp3" },
-	  { title: "Ich sollte – heute nicht (Spoken)", file: "tracks/09 Ich sollte - heute nicht (Spoken).mp3" },
-	  { title: "Ich sollte – heute nicht (Rock Opera Mix)", file: "tracks/10 Ich sollte - heute nicht (Rock Op.mp3" },
-	  { title: "In die Welt", file: "tracks/11 In die Welt.mp3" },
-	  { title: "Abdrücke von euch in mir", file: "tracks/12 Abdrücke von euch in mir.mp3" },
-	  { title: "Der Tornado", file: "tracks/13 Der Tornado.mp3" },
-	  { title: "Worte für Dich und mich", file: "tracks/14 Worte für Dich und mich.mp3" },
-	  { title: "Eine geheime Kraft", file: "tracks/15 Eine geheime Kraft.mp3" },
-	  { title: "Ein Tag ohne Dich", file: "tracks/16 Ein Tag ohne Dich.mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Spoken)", file: "tracks/17 Der Tanz mit den Gefühlen (Spoken.mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Oriental Mix)", file: "tracks/18 Der Tanz mit den Gefühlen (Orient.mp3" },
-	  { title: "Ich reise zu mir selbst (Ambient Mix)", file: "tracks/19 Ich reise zu mir selbst (Ambient.mp3" },
-	  { title: "Geliebte Seele (Trip Mix)", file: "tracks/20 Geliebte Seele (Trip Mix).mp3" },
-	  { title: "Zu Hause (Punk Mix)", file: "tracks/21 Zu Hause (Punk Mix).mp3" },
-	  { title: "In der Bahn (Chanson Mix)", file: "tracks/22 In der Bahn (Chanson Mix).mp3" },
-	  { title: "Ich bin das Wasser (Bathroom Mix)", file: "tracks/23 Ich bin das Wasser (Bathroom Mix).mp3" },
-	  { title: "Keine Träne mehr (Doom Mix)", file: "tracks/24 Keine Träne mehr (Doom Mix).mp3" },
-	  { title: "Besessen (Gothic Mix)", file: "tracks/25 Besessen (Gothic Mix).mp3" },
-	  { title: "Wenn ich verschwinde", file: "tracks/26 Wenn ich verschwinde.mp3" },
-	  { title: "Ich bin zu viel", file: "tracks/27 Ich bin zu viel.mp3" },
-	  { title: "Gemeinsam Einsam", file: "tracks/28 Gemeinsam Einsam.mp3" },
-	  { title: "Ich sollte – heute nicht (Acoustic Mix)", file: "tracks/29 Ich sollte - heute nicht (Acousti.mp3" },
-	  { title: "In die Welt (Acoustic Mix)", file: "tracks/30 In die Welt (Acoustic Mix).mp3" },
-	  { title: "Abdrücke von euch in mir (Acoustic Mix)", file: "tracks/31 Abdrücke von euch in mir (Acousti.mp3" },
-	  { title: "Der Tornado (Acoustic Mix)", file: "tracks/32 Der Tornado (Acoustic Mix).mp3" },
-	  { title: "Worte für Dich und mich (Acoustic Mix)", file: "tracks/33 Worte für Dich und mich (Acoustic.mp3" },
-	  { title: "Eine geheime Kraft (Acoustic Mix)", file: "tracks/34 Eine geheime Kraft (Acoustic Mix).mp3" },
-	  { title: "Ein Tag ohne Dich (Acoustic Mix)", file: "tracks/35 Ein Tag ohne Dich (Acoustic Mix).mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Acoustic Mix)", file: "tracks/36 Der Tanz mit den Gefühlen (Acoust.mp3" },
-	  { title: "Benutze mich", file: "tracks/37 Benutze mich.mp3" },
-	  { title: "Über Leben (Spoken)", file: "tracks/38 Über Leben (Spoken).mp3" },
+	  { title: "Jam 20250606 1: Marimba", file: "tracks/01 Jam 20250606 1_ Marimba.mp3" },
+	  { title: "Jam 20250606 2: Morpheus", file: "tracks/02 Jam 20250606 2_ Morpheus.mp3" },
+	  { title: "Jam 20250606 3: DeepWater", file: "tracks/03 Jam 20250606 3_ DeepWater.mp3" },
+	
+	  { title: "Liebe Tanzen 20250608 1: Power of Love", file: "tracks/04 Liebe Tanzen 20250608 1_ Power of.mp3" },
+	  { title: "Liebe Tanzen 20250608 2: Heavens Bells", file: "tracks/05 Liebe Tanzen 20250608 2_ Heavens.mp3" },
+	  { title: "Liebe Tanzen 20250608 3: Deep Water", file: "tracks/06 Liebe Tanzen 20250608 3_ Deep Wat.mp3" },
+	  { title: "Liebe Tanzen 20250608 4: Shadow Crunch Gt", file: "tracks/07 Liebe Tanzen 20250608 4_ Shadow C.mp3" },
+	  { title: "Liebe Tanzen 20250608 5: Bell Pad+Bass", file: "tracks/08 Liebe Tanzen 20250608 5_ Bell Pad.mp3" },
+	  { title: "Liebe Tanzen 20250608 6: FilteredPolySynth-T8", file: "tracks/09 Liebe Tanzen 20250608 6_ Filtered.mp3" },
+	
+	  { title: "Liebe Tanzen 20250629 4: Sitar (played with Monocord)", file: "tracks/10 Liebe Tanzen 20250629 4_ Sitar (p.mp3" },
+	  { title: "Liebe Tanzen 20250629 5: Heaven's Bells (played with Gong)", file: "tracks/11 Liebe Tanzen 20250629 5_ Heaven's.mp3" },
+	  { title: "Liebe Tanzen 20250629 6: Deep Water (played with Gong)", file: "tracks/12 Liebe Tanzen 20250629 6_ Deep Wat.mp3" },
+	  { title: "Liebe Tanzen 20250629 7: Shadow Crunch Guitar (Feel the Blessing)", file: "tracks/13 Liebe Tanzen 20250629 7_ Shadow C.mp3" },
+	
+	  { title: "Liebe Tanzen 20250704 1: Morpheus", file: "tracks/14 Liebe Tanzen 20250704 1_ Morpheus.mp3" },
+	  { title: "Liebe Tanzen 20250704 2: Pads1 (played with Harp)", file: "tracks/15 Liebe Tanzen 20250704 2_ Pads1 (p.mp3" },
+	  { title: "Liebe Tanzen 20250704 3: Bass+Sitar (played with Monochord)", file: "tracks/16 Liebe Tanzen 20250704 3_ Bass+Sit.mp3" },
+	
+	  { title: "Jam 20250725 1: Marimba", file: "tracks/17 Jam 20250725 1_ Marimba.mp3" },
+	  { title: "Jam 20250725 2: Bell Pad+Bass (played with Cajon)", file: "tracks/18 Jam 20250725 2_ Bell Pad+Bass (pl.mp3" },
+	
+	  { title: "Jam 20250822 1: Deep Water", file: "tracks/19 Jam 20250822 1_ Deep Water.mp3" },
+	  { title: "Jam 20250822 2: BellPadBass (Blessed We Are)", file: "tracks/20 Jam 20250822 2_ BellPadBass (Bles.mp3" },
+	  { title: "Jam 20250822 3: Pad1 (With Handpan)", file: "tracks/21 Jam 20250822 3_ Pad1 (With Handpa.mp3" },
+	
+	  { title: "Liebe Leben 20250920 1: Heavens Bells", file: "tracks/22 Liebe Leben 20250920 1_ Heavens B.mp3" },
+	  { title: "Liebe Leben 20250920 2: Pad+Sitar", file: "tracks/23 Liebe Leben 20250920 2_ Pad+Sitar.mp3" },
+	
+	  { title: "Jam 20250926 1: Scuba Diving", file: "tracks/24 Jam 20250926 1_ Scuba Diving.mp3" },
+	
+	  { title: "Liebe Tanzen 20251026 1: Heavens Bells", file: "tracks/25 Liebe Tanzen 20251026 1_ Heavens.mp3" },
+	  { title: "Liebe Tanzen 20251026 2: Deep Water", file: "tracks/26 Liebe Tanzen 20251026 2_ Deep Wat.mp3" },
+	  { title: "Liebe Tanzen 20251026 3: Morpheus – Blessed We Are", file: "tracks/27 Liebe Tanzen 20251026 3_ Morpheus.mp3" },
+	  { title: "Liebe Tanzen 20251026 4: Pad + Sitar", file: "tracks/28 Liebe Tanzen 20251026 4_ Pad + Si.mp3" },
+	  { title: "Liebe Tanzen 20251026 5: Bell Pad + Bass", file: "tracks/29 Liebe Tanzen 20251026 5_ Bell Pad.mp3" },
+	
+	  { title: "Werde Workshop 20251107 1: Heavens Bells", file: "tracks/30 Werde Workshopleiter 20251107 1_.mp3" },
+	
+	  { title: "Jam 20251129 1: Bell Pad + Bass (with Sax)", file: "tracks/31 Jam 20251129 1_ Bell Bad + Bass (.mp3" },
+	  { title: "Jam 20251129 2: Vibraphone (with Sax)", file: "tracks/32 Jam 20251129 2_ Vibraphone (with.mp3" },
+	  { title: "Jam 20251129 3: Scuba Diving (with Sax)", file: "tracks/33 Jam 20251129 3_ Scuba Diving (wit.mp3" },
+	  { title: "Jam 20251129 4: Pad + Crystal", file: "tracks/34 Jam 20251129 4_ Pad + Crystal.mp3" },
+
+	  { title: "Jam 20251226 1: Marimba (Feel the Blessing)", file: "tracks/35 Jam 20251226 1_ Marimba (Feel the.mp3" },
+	  { title: "Jam 20251226 2: DeepWater (I Just Close My Eyes)", file: "tracks/36 Jam 20251226 2_ DeepWater (I Just.mp3" },
+	  
+  	  { title: "Liebe Tanzen 20260118 1: Heavens Bells", file: "tracks/37 Liebe Tanzen 20260118 1_ Heavens.mp3" },
+	  { title: "Liebe Tanzen 20260118 2: Deep Water", file: "tracks/38 Liebe Tanzen 20260118 2_ Deep Wat.mp3" },
+
 	];
 
 
