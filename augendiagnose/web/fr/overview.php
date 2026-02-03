@@ -135,8 +135,8 @@ else {
 		photo.</li>
 	<li>En bas à gauche, il y a un bouton avec un cercle et le texte «zoom». Ici, vous pouvez régler le zoom de la caméra
 		et sélectionner la taille de l'iris sur la photo.</li>
-	<li>Au-dessus, il y a un bouton avec le texte «MACRO» ou «AUTO». Ici, vous pouvez sélectionner le mode de mise au
-		point de la caméra. Pour les gros plans, le mode MACRO est normalement un bon choix.</li>
+	<li>Au-dessus, il y a un bouton avec le texte «MACRO» ou «AUTO». Ici, vous pouvez sélectionner le mode de mise au point
+		de la caméra. Pour les gros plans, le mode MACRO est normalement un bon choix.</li>
 	<li>Au-dessus, il y a un bouton de lampe torche. Ici, vous pouvez allumer la lumière de votre appareil. Comme une lampe
 		torche devant votre œil est dangereuse, cela est désactivé par défaut, mais vous pouvez l'activer dans les paramètres.
 		Vous pouvez également utiliser une LED «Flash & Fill-in Light» branchée sur la prise casque.</li>
@@ -172,5 +172,13 @@ else {
 <h3>Politique de confidentialité</h3>
 
 <p>
-    L'application «<?=$appname?>» utilise la caméra pour prendre des photos des yeux. L'application ne stocke, ne collecte ni n'envoie aucune donnée personnelle de quelque nature que ce soit. Toutes les photos prises par l'application sont stockées uniquement localement sur votre appareil.
+L'application «<?=$appname?>» utilise la caméra pour prendre des photos des yeux.
+L'application ne stocke, ne collecte ni n'envoie aucune donnée personnelle de quelque nature que ce soit.
+Toutes les photos prises par l'application sont stockées uniquement localement sur votre appareil.
+</p>
+
+<p>
+Dans les paramètres de l’application «<?=$appname?>», il est possible de saisir une clé utilisateur.
+Ce champ n’est pas destiné à une utilisation normale — il ne doit être renseigné qu’après avoir reçu une telle clé de la part du développeur suite à un ticket de support.
+Si une clé utilisateur est saisie, la clé utilisateur et l’identifiant de l’appareil seront envoyés au développeur à des fins de vérification et y seront stockés temporairement.
 </p>

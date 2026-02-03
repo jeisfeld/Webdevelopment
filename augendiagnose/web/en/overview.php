@@ -166,6 +166,13 @@ else {
 <h3>Privacy Policy</h3>
 
 <p>
-		The app &ldquo;<?=$appname?>&rdquo; uses the camera for taking eye photos. The app does not store, collect or send any personal data of any kind.
-		All pictures taken by the app are stored only locally on your device.
-	</p>
+The app &ldquo;<?=$appname?>&rdquo; uses the camera for taking eye photos.
+The app does not store, collect or send any personal data of any kind.
+All pictures taken by the app are stored only locally on your device.
+</p>
+
+<p>
+In the settings of the app &ldquo;<?=$appname?>&rdquo; there is the possibility to enter a User Key.
+This field is not intended for regular use - it should be filled only after receiving such a key from the developer due to a support ticket.
+If a user key is filled, then the user key and the device id will be sent to the developer for verification purposes, and it will be temporarily stored there.
+</p>

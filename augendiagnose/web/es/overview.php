@@ -163,7 +163,14 @@ else {
 <h3>Política de privacidad</h3>
 
 <p>
-		La aplicación &laquo;<?=$appname?>&raquo; utiliza la cámara para tomar fotos de los ojos.
-		La aplicación no almacena, recopila ni envía ningún tipo de datos personales.
-		Todas las fotografías tomadas por la aplicación se almacenan sólo localmente en el dispositivo.
-	</p>
+La aplicación &laquo;<?=$appname?>&raquo; utiliza la cámara para tomar fotos de los ojos.
+La aplicación no almacena, recopila ni envía ningún tipo de datos personales.
+Todas las fotografías tomadas por la aplicación se almacenan sólo localmente en el dispositivo.
+</p>
+
+<p>
+En la configuración de la aplicación &laquo;<?=$appname?>&raquo; existe la posibilidad de introducir una clave de usuario.
+Este campo no está destinado al uso habitual; solo debe rellenarse después de recibir dicha clave del desarrollador como resultado de un ticket de soporte.
+Si se introduce una clave de usuario, la clave de usuario y el ID del dispositivo se enviarán al desarrollador con fines de verificación y se almacenarán allí de forma temporal.
+</p>
+

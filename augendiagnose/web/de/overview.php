@@ -170,7 +170,13 @@ else {
 <h3>Datenschutzerklärung</h3>
 
 <p>
-		Die App &bdquo;<?=$appname?>&ldquo; nutzt die Kamera für die Aufnahme von Fotos. 
-		Die App speichert, sammelt oder sendet keine persönlichen Daten jeglicher Art. Alle von der App aufgenommenen Bilder
-		werden nur lokal auf Ihrem Gerät gespeichert.
-	</p>
+Die App &bdquo;<?=$appname?>&ldquo; nutzt die Kamera für die Aufnahme von Fotos. 
+Die App speichert, sammelt oder sendet keine persönlichen Daten jeglicher Art. Alle von der App aufgenommenen Bilder
+werden nur lokal auf Ihrem Gerät gespeichert.
+</p>
+
+<p>
+In den Einstellungen der App &bdquo;<?=$appname?>&ldquo; gibt es die Möglichkeit, einen Benutzerschlüssel einzugeben.
+Dieses Feld ist nicht für die reguläre Nutzung vorgesehen – es sollte nur ausgefüllt werden, nachdem ein solcher Schlüssel vom Entwickler im Rahmen eines Support-Tickets erhalten wurde.
+Wenn ein Benutzerschlüssel eingegeben wird, werden der Benutzerschlüssel und die Geräte-ID zu Überprüfungszwecken an den Entwickler gesendet und dort vorübergehend gespeichert.
+</p>
