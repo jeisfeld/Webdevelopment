@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Conny & Lisa</title>
+<title>Conny & Lisa - In die Welt</title>
 <style>
 body {
 	font-family: system-ui, sans-serif;
@@ -122,7 +122,7 @@ button:hover {
 		</div>
 
 		<div>
-			<h1 id="albumTitle">Conny & L!sa (Cocreations)</h1>
+			<h1 id="albumTitle">Conny & L!sa - In die Welt</h1>
 			<div class="meta" id="nowPlaying">Not playing</div>
 
 			<audio id="player" controls preload="metadata"></audio>
@@ -140,59 +140,23 @@ button:hover {
 	<script>
     // 1) Edit this list to match your MP3 files
 	const tracks = [
-	  { title: "Ich reise zu mir selbst", file: "tracks/01 Ich reise zu mir selbst.mp3" },
-	  { title: "Geliebte Seele", file: "tracks/02 Geliebte Seele.mp3" },
-	  { title: "Zu Hause", file: "tracks/03 Zu Hause.mp3" },
-	  { title: "In der Bahn", file: "tracks/04 In der Bahn.mp3" },
-	  { title: "Wiedergeburt", file: "tracks/05 Wiedergeburt.mp3" },
-	  { title: "Ich bin das Wasser", file: "tracks/06 Ich bin das Wasser.mp3" },
-	  { title: "Keine Träne mehr", file: "tracks/07 Keine Träne mehr.mp3" },
-	  { title: "Besessen", file: "tracks/08 Besessen.mp3" },
-	  { title: "Ich sollte – heute nicht (Spoken)", file: "tracks/09 Ich sollte - heute nicht (Spoken).mp3" },
-	  { title: "Ich sollte – heute nicht (Rock Opera Mix)", file: "tracks/10 Ich sollte - heute nicht (Rock Op.mp3" },
-	  { title: "In die Welt", file: "tracks/11 In die Welt.mp3" },
-	  { title: "Abdrücke von euch in mir", file: "tracks/12 Abdrücke von euch in mir.mp3" },
-	  { title: "Der Tornado", file: "tracks/13 Der Tornado.mp3" },
-	  { title: "Worte für Dich und mich", file: "tracks/14 Worte für Dich und mich.mp3" },
-	  { title: "Eine geheime Kraft", file: "tracks/15 Eine geheime Kraft.mp3" },
-	  { title: "Ein Tag ohne Dich", file: "tracks/16 Ein Tag ohne Dich.mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Spoken)", file: "tracks/17 Der Tanz mit den Gefühlen (Spoken.mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Oriental Mix)", file: "tracks/18 Der Tanz mit den Gefühlen (Orient.mp3" },
-	  { title: "Ich reise zu mir selbst (Ambient Mix)", file: "tracks/19 Ich reise zu mir selbst (Ambient.mp3" },
-	  { title: "Geliebte Seele (Trip Mix)", file: "tracks/20 Geliebte Seele (Trip Mix).mp3" },
-	  { title: "Zu Hause (Punk Mix)", file: "tracks/21 Zu Hause (Punk Mix).mp3" },
-	  { title: "In der Bahn (Chanson Mix)", file: "tracks/22 In der Bahn (Chanson Mix).mp3" },
-	  { title: "Ich bin das Wasser (Bathroom Mix)", file: "tracks/23 Ich bin das Wasser (Bathroom Mix).mp3" },
-	  { title: "Keine Träne mehr (Doom Mix)", file: "tracks/24 Keine Träne mehr (Doom Mix).mp3" },
-	  { title: "Besessen (Gothic Mix)", file: "tracks/25 Besessen (Gothic Mix).mp3" },
-	  { title: "Wenn ich verschwinde", file: "tracks/26 Wenn ich verschwinde.mp3" },
-	  { title: "Ich bin zu viel", file: "tracks/27 Ich bin zu viel.mp3" },
-	  { title: "Gemeinsam Einsam", file: "tracks/28 Gemeinsam Einsam.mp3" },
-	  { title: "Ich sollte – heute nicht (Acoustic Mix)", file: "tracks/29 Ich sollte - heute nicht (Acousti.mp3" },
-	  { title: "In die Welt (Acoustic Mix)", file: "tracks/30 In die Welt (Acoustic Mix).mp3" },
-	  { title: "Abdrücke von euch in mir (Acoustic Mix)", file: "tracks/31 Abdrücke von euch in mir (Acousti.mp3" },
-	  { title: "Der Tornado (Acoustic Mix)", file: "tracks/32 Der Tornado (Acoustic Mix).mp3" },
-	  { title: "Worte für Dich und mich (Acoustic Mix)", file: "tracks/33 Worte für Dich und mich (Acoustic.mp3" },
-	  { title: "Eine geheime Kraft (Acoustic Mix)", file: "tracks/34 Eine geheime Kraft (Acoustic Mix).mp3" },
-	  { title: "Ein Tag ohne Dich (Acoustic Mix)", file: "tracks/35 Ein Tag ohne Dich (Acoustic Mix).mp3" },
-	  { title: "Der Tanz mit den Gefühlen (Acoustic Mix)", file: "tracks/36 Der Tanz mit den Gefühlen (Acoust.mp3" },
-	  { title: "Benutze mich", file: "tracks/37 Benutze mich.mp3" },
-	  { title: "Über Leben (Spoken)", file: "tracks/38 Über Leben (Spoken).mp3" },
-	  { title: "Ich reise zu mir selbst (Ambient Mix LV)", file: "tracks/39 Ich reise zu mir selbst (Ambient.mp3" },
-	  { title: "Geliebte Seele (Trip Mix LV)", file: "tracks/40 Geliebte Seele (Trip Mix LV).mp3" },
-	  { title: "Zu Hause (Punk Mix LV)", file: "tracks/41 Zu Hause (Punk Mix LV).mp3" },
-	  { title: "In der Bahn (Chanson Mix LV)", file: "tracks/42 In der Bahn (Chanson Mix LV).mp3" },
-	  { title: "Ich bin das Wasser (Bathroom Mix LV)", file: "tracks/43 Ich bin das Wasser (Bathroom Mix.mp3" },
-	  { title: "Keine Träne mehr (Doom Mix LV)", file: "tracks/44 Keine Träne mehr (Doom Mix LV).mp3" },
-	  { title: "Besessen (Gothic Mix LV)", file: "tracks/45 Besessen (Gothic Mix LV).mp3" },
-	  { title: "Gefunden", file: "tracks/46 Gefunden.mp3" },
-	  { title: "Unvernünftig sein", file: "tracks/47 Unvernünftig sein.mp3" },
-	  { title: "Verlorenes Herzstück", file: "tracks/48 Verlorenes Herzstück.mp3" },
-	  { title: "In mir", file: "tracks/49 In mir.mp3" },
-	  { title: "Lied des Lebens", file: "tracks/50 Lied des Lebens.mp3" },
-	  { title: "Meine Wahrheit", file: "tracks/51 Meine Wahrheit.mp3" },
-	  { title: "Schmelzend", file: "tracks/52 Schmelzend.mp3" },
-	  { title: "(V)Erleben", file: "tracks/53 (V)Erleben.mp3" },
+	  { title: "In mir", file: "tracks/01 In mir.mp3" },
+	  { title: "In die Welt", file: "tracks/02 In die Welt.mp3" },
+	  { title: "Abdrücke von euch in mir", file: "tracks/03 Abdrücke von euch in mir.mp3" },
+	  { title: "Ich sollte - heute nicht I", file: "tracks/04 Ich sollte - heute nicht (Spoken).mp3" },
+	  { title: "Ich sollte - heute nicht II", file: "tracks/05 Ich sollte - heute nicht (Rock Op.mp3" },
+	  { title: "Der Tornado", file: "tracks/06 Der Tornado.mp3" },
+	  { title: "Worte für Dich und mich", file: "tracks/07 Worte für Dich und mich.mp3" },
+	  { title: "Eine geheime Kraft", file: "tracks/08 Eine geheime Kraft.mp3" },
+	  { title: "Ein Tag ohne Dich", file: "tracks/09 Ein Tag ohne Dich.mp3" },
+	  { title: "Der Tanz mit den Gefühlen I", file: "tracks/10 Der Tanz mit den Gefühlen (Spoken.mp3" },
+	  { title: "Der Tanz mit den Gefühlen II", file: "tracks/11 Der Tanz mit den Gefühlen (Acoust.mp3" },
+	  { title: "Gefunden", file: "tracks/12 Gefunden.mp3" },
+	  { title: "Verlorenes Herzstück", file: "tracks/13 Verlorenes Herzstück.mp3" },
+	  { title: "Über Leben", file: "tracks/14 Über Leben (Spoken).mp3" },
+	  { title: "Lied des Lebens", file: "tracks/15 Lied des Lebens.mp3" },
+	  { title: "Schmelzend", file: "tracks/16 Schmelzend.mp3" },
+	  { title: "Meine Wahrheit", file: "tracks/17 Meine Wahrheit.mp3" },
 	];
 
 
