@@ -92,6 +92,35 @@ button:hover {
 	background: #333;
 }
 
+
+.social-links {
+	margin-top: 14px;
+	display: grid;
+	gap: 8px;
+}
+
+.social-links a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	background: #161616;
+	border: 1px solid #2a2a2a;
+	border-radius: 10px;
+	color: #eee;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	background: #1d1d1d;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
 @media ( max-width : 760px) {
 	.wrap {
 		grid-template-columns: 1fr;
@@ -119,6 +148,33 @@ button:hover {
 	<div class="wrap">
 		<div>
 			<img src="cover.jpg" alt="Album cover" />
+
+			<div class="social-links">
+				<a href="https://www.youtube.com/watch?v=GWbdiFXUXbE&list=OLAK5uy_l1tE9U6aqs6wi1HobaYC0JN-ni1I1cHVc" target="_blank" rel="noopener noreferrer">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="/img/icons.svg#icon-youtube"></use>
+					</svg>
+					Youtube
+				</a>
+				<a href="https://open.spotify.com/album/7GqxiaDlEQH6r72SIAENaR" target="_blank" rel="noopener noreferrer">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="/img/icons.svg#icon-spotify"></use>
+					</svg>
+					Spotify
+				</a>
+				<a target="_blank" rel="noopener noreferrer">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="/img/icons.svg?v=3#icon-apple-music"></use>
+					</svg>
+					Apple Music
+				</a>
+				<a href="https://amazon.de/music/player/albums/B0H1SFR4JH" target="_blank" rel="noopener noreferrer">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="/img/icons.svg?v=3#icon-amazon-music"></use>
+					</svg>
+					Amazon Music
+				</a>
+			</div>
 		</div>
 
 		<div>
