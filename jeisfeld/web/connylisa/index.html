@@ -92,6 +92,13 @@ button:hover {
 	background: #333;
 }
 
+.icon-btn {
+	font-size: 18px;
+	line-height: 1;
+	min-width: 46px;
+	padding: 10px;
+}
+
 @media ( max-width : 760px) {
 	.wrap {
 		grid-template-columns: 1fr;
@@ -128,9 +135,9 @@ button:hover {
 			<audio id="player" controls preload="metadata"></audio>
 
 			<div style="display: flex; gap: 10px; margin: 10px 0 14px;">
-				<button id="prevBtn" type="button">⟨ Prev</button>
-				<button id="playPauseBtn" type="button">Play/Pause</button>
-				<button id="nextBtn" type="button">Next ⟩</button>
+				<button id="prevBtn" class="icon-btn" type="button" aria-label="Previous track" title="Previous track">⏮</button>
+				<button id="playPauseBtn" class="icon-btn" type="button" aria-label="Play or pause" title="Play/Pause">⏯</button>
+				<button id="nextBtn" class="icon-btn" type="button" aria-label="Next track" title="Next track">⏭</button>
 			</div>
 
 			<ul id="playlist"></ul>
