@@ -15,7 +15,7 @@
 		Gesundheit &amp; Vitalität 2021</li>
 	<li>Spiritualität und Seelsorge (Pfarrgemeinderat seit 2018, <a
 			href="https://www.muenchen.tv/mediathek/video/die-katholische-kirche-bringt-den-aschermittwoch-zu-den-menschen/"
-			target="_blank">Dekanatsrat</a> seit 2022)
+			target="_blank">Dekanats-AG</a> seit 2022)
 	
 	<li><a href="/seminare">Seminare:</a> Die Weitergabe meiner Essenz von 40 Jahren natur&shy;heil&shy;kundlicher
 		Erfahrung und Behandlung seit 2024</li>
