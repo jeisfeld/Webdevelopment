@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@import url(OpenSans.css);
+
+/* General settings */
+body {
+	background-color: #303030;
+}
+
+body, p {
+	font-family: 'Open Sans', sans-serif;
+	color: #FFFFFF;
+}
+
+table p, li p, #mobileheaderframe p {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 6px;
+}
+
+#headerframe, #navigationframe, #mainframe, #mobileheaderframe, #mobileframe {
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+
+a {
+	color: #FEC0B0;
+}
+
+h1 {
+	margin: 0px;
+}
+
+hr {
+	color: #FFFFFF;
+}
+
+img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	padding-bottom: 4px;
+}
+
+/* frame settings */
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+
+#headerframe {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 26px;
+	width: 100%;
+	background-color: #303030;
+	z-index: 2000;
+	border-bottom: 1px solid white;
+}
+
+#mainframe, #navigationframe {
+	position: fixed;
+	width: 100%;
+	top: 27px;
+	bottom: 0px;
+	overflow: auto;
+}
+
+#navigationbutton {
+	position: fixed;
+	top: 0px;
+	right: 8px;
+}
+
+/* Special page settings */
+#releasenotes li {
+	padding-top: 10px;
+}
+
+#releasenotes li li {
+	padding-top: 0px;
+}
+
+/* Settings for mobils vs desktop */
+@media screen and (max-width: 599px), screen and (max-height: 439px), print {
+	.desktop, #navigationframe.mobilenavigation .hideondropdown {
+		display: none;
+	}
+	#navigationframe.mobilenavigation {
+		background-color: #404040;
+		display: block;
+		right: 0px;
+		width: 15em;
+		height: 18em;
+		z-index: 1000;
+		border: 1px solid white;
+	}
+	#navigationframe.startup {
+		display: block;
+		width: 100%;
+		position: absolute;
+		bottom: -60px;
+		z-index: 1000;
+		border: none;
+		border-bottom: 60px solid #303030;
+	}
+	#mainframe.startup {
+		display: none;
+	}
+	#mainframe {
+		position: absolute;
+		bottom: auto;
+	}
+	#headerframe p {
+		margin-top: 0px;
+	}
+}
+
+@media print {
+	#headerframe, #navigationframe.startup {
+		display: none;
+	}
+	#mainframe {
+		top: 0px;
+		position: relative;
+	}
+	body, p {
+		color: #000000;
+	}
+}
+
+@media screen and (min-width: 600px) and (min-height: 440px) {
+	.mobile {
+		display: none;
+	}
+	#headerframe {
+		height: 109px;
+	}
+	#mainframe {
+		top: 110px;
+		right: 0px;
+		left: 150px;
+		width: auto;
+	}
+	#navigationframe {
+		width: 150px;
+		top: 110px;
+		left: 0px;
+		border-right: 1px solid white;
+	}
+}
+	
+@media screen and (min-width: 750px) and (min-height: 440px) {
+	#mainframe {
+		width: 80%;
+		left: auto;
+	}
+	#navigationframe {
+		width: 20%;
+	}	
+}

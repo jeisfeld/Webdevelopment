@@ -17,6 +17,26 @@ ExpiresByType image/x-icon "access plus 1 days"
 RewriteEngine On
 RewriteRule "sitemap\....$"  "sitemap.php"
 RewriteRule "robots\.txt$"  "robots.txt"
+
+# keep direct files and directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# randomimage under /randomimage
+RewriteRule ^randomimage/?$ randomimage/index.php [L,QSA]
+RewriteRule ^randomimage/(.*)$ randomimage/$1 [L,QSA]
+
+# augendiagnose under /augendiagnose
+RewriteRule ^augendiagnose/?$ augendiagnose/index.php [L,QSA]
+RewriteRule ^augendiagnose/(.*)$ augendiagnose/$1 [L,QSA]
+
+# miniris as dedicated top-level entry point
+RewriteRule ^miniris/?$ augendiagnose/index.php?app=miniris [L,QSA]
+RewriteRule ^miniris/(..)/([^/]+)/?$ augendiagnose/index.php?app=miniris&lang=$1&page=$2 [L,QSA]
+RewriteRule ^miniris/(..)/?$ augendiagnose/index.php?app=miniris&lang=$1 [L,QSA]
+RewriteRule ^miniris/([^/]+)/?$ augendiagnose/index.php?app=miniris&page=$1 [L,QSA]
+
 RewriteRule "^([^/\.]+)/?$" "?page=$1"
 </IfModule>
 
