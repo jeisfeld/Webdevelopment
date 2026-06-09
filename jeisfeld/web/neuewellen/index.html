@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Solea lebt! - Neue Wellen</title>
+<style>
+body {
+	font-family: system-ui, sans-serif;
+	margin: 0;
+	background: #111;
+	color: #eee;
+}
+
+.wrap {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 24px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: 280px 1fr;
+}
+
+img {
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+}
+
+h1 {
+	margin: 0 0 8px;
+	font-size: 24px;
+}
+
+audio {
+	width: 100%;
+	margin: 12px 0 8px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid #2a2a2a;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 3px 14px;
+	cursor: pointer;
+	background: #161616;
+	border-top: 1px solid #2a2a2a;
+}
+
+li:first-child {
+	border-top: 0;
+}
+
+li:hover {
+	background: #1d1d1d;
+}
+
+li.active {
+	background: #2a2a2a;
+}
+
+.meta {
+	opacity: .7;
+	font-size: 13px;
+}
+
+.row {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+}
+
+button {
+	background: #2a2a2a;
+	color: #eee;
+	border: 1px solid #3a3a3a;
+	padding: 10px 12px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #333;
+}
+
+.icon-btn {
+	font-size: 18px;
+	line-height: 1;
+	min-width: 46px;
+	padding: 10px;
+}
+
+.social-links {
+	margin-top: 14px;
+	display: grid;
+	gap: 8px;
+}
+
+.social-links a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	background: #161616;
+	border: 1px solid #2a2a2a;
+	border-radius: 10px;
+	color: #eee;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	background: #1d1d1d;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+@media ( max-width : 760px) {
+	.wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media ( max-width : 480px) {
+	.wrap {
+		padding: 16px;
+	}
+	li {
+		padding: 3px 8px;
+	}
+	.row {
+		font-size: 14px;
+		gap: 6px;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div>
+			<img src="cover.jpg" alt="Album cover" />
+		</div>
+
+		<div>
+			<h1 id="albumTitle">Solea lebt! - Neue Wellen</h1>
+			<div class="meta" id="nowPlaying">Not playing</div>
+
+			<audio id="player" controls preload="metadata"></audio>
+
+			<div style="display: flex; gap: 10px; margin: 10px 0 14px;">
+				<button id="prevBtn" class="icon-btn" type="button" aria-label="Previous track" title="Previous track">⏮</button>
+				<button id="playPauseBtn" class="icon-btn" type="button" aria-label="Play or pause" title="Play/Pause">⏯</button>
+				<button id="nextBtn" class="icon-btn" type="button" aria-label="Next track" title="Next track">⏭</button>
+			</div>
+
+			<ul id="playlist"></ul>
+		</div>
+	</div>
+
+	<script>
+    // 1) Edit this list to match your MP3 files
+	const tracks = [
+	  { title: "Dankbar für alles", file: "tracks/01 Dankbar für alles.mp3" },
+	  { title: "Geliebter Liebhaber", file: "tracks/02 Geliebter Liebhaber.mp3" },
+	  { title: "Lass los", file: "tracks/03 Lass los.mp3" },
+	  { title: "Entzauberung", file: "tracks/04 Entzauberung.mp3" },
+	  { title: "Fluss des Lebens", file: "tracks/05 Fluss des Lebens.mp3" },
+	  { title: "Wenn ich mir einen Mann backen könnte", file: "tracks/06 Wenn ich mir einen Mann backen kö.mp3" },
+	];
+
+
+    const player = document.getElementById("player");
+    const playlistEl = document.getElementById("playlist");
+    const nowPlayingEl = document.getElementById("nowPlaying");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+
+    let currentIndex = 0;
+
+    function renderPlaylist() {
+      playlistEl.innerHTML = "";
+      tracks.forEach((t, i) => {
+        const li = document.createElement("li");
+        li.dataset.index = i;
+
+        const left = document.createElement("div");
+        left.className = "row";
+        left.innerHTML = `<strong>${String(i + 1).padStart(2, "0")}.</strong> <span>${t.title}</span>`;
+
+        const right = document.createElement("div");
+        right.className = "meta";
+        right.textContent = "▶";
+
+        li.appendChild(left);
+        li.appendChild(right);
+
+        li.addEventListener("click", () => playIndex(i, true));
+        playlistEl.appendChild(li);
+      });
+      highlightActive();
+    }
+
+    function highlightActive() {
+      [...playlistEl.children].forEach((li) => li.classList.remove("active"));
+      const active = playlistEl.children[currentIndex];
+      if (active) active.classList.add("active");
+    }
+
+    function setNowPlaying(text) {
+      nowPlayingEl.textContent = text;
+    }
+
+    function playIndex(index, autoplay = false) {
+      if (index < 0 || index >= tracks.length) return;
+      currentIndex = index;
+
+      player.src = tracks[currentIndex].file;
+      player.load();
+
+      highlightActive();
+      setNowPlaying(`Selected: ${tracks[currentIndex].title}`);
+
+      if (autoplay) {
+        // Note: some browsers require a user gesture before audio playback.
+        player.play().then(() => {
+          setNowPlaying(`Playing: ${tracks[currentIndex].title}`);
+        }).catch(() => {
+          setNowPlaying(`Ready to play: ${tracks[currentIndex].title} (press Play)`);
+        });
+      }
+    }
+
+    function nextTrack() {
+      const next = (currentIndex + 1) % tracks.length; // loop back to start
+      playIndex(next, true);
+    }
+
+    function prevTrack() {
+      const prev = (currentIndex - 1 + tracks.length) % tracks.length;
+      playIndex(prev, true);
+    }
+
+    // Auto-advance when a song ends
+    player.addEventListener("ended", nextTrack);
+
+    // Update UI on play/pause
+    player.addEventListener("play", () => setNowPlaying(`Playing: ${tracks[currentIndex].title}`));
+    player.addEventListener("pause", () => setNowPlaying(`Paused: ${tracks[currentIndex].title}`));
+
+    prevBtn.addEventListener("click", prevTrack);
+    nextBtn.addEventListener("click", nextTrack);
+    playPauseBtn.addEventListener("click", () => {
+      if (player.paused) player.play();
+      else player.pause();
+    });
+
+    // Init
+    renderPlaylist();
+    playIndex(0, false);
+  </script>
+</body>
+</html>
