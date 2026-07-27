@@ -99,6 +99,29 @@ button:hover {
 	padding: 10px;
 }
 
+.album-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.album-links a {
+	display: block;
+	border-radius: 10px;
+}
+
+.album-links a:hover,
+.album-links a:focus-visible {
+	outline: 2px solid #eee;
+	outline-offset: 2px;
+}
+
+.album-links img {
+	display: block;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, .4);
+}
+
 .social-links {
 	margin-top: 14px;
 	display: grid;
@@ -154,6 +177,15 @@ button:hover {
 	<div class="wrap">
 		<div>
 			<img src="cover.jpg" alt="Album cover" />
+
+			<nav class="album-links" aria-label="Other albums">
+				<a href="../jamsessions/" aria-label="Open Jam Sessions" title="Jam Sessions">
+					<img src="../jamsessions/cover.jpg" alt="Jam Sessions album cover" />
+				</a>
+				<a href="../indiewelt/" aria-label="Open In die Welt" title="In die Welt">
+					<img src="../indiewelt/cover.jpg" alt="In die Welt album cover" />
+				</a>
+			</nav>
 
 			<div class="social-links">
 				<a href="https://www.youtube.com/watch?v=3ub7k_aOFwo&list=OLAK5uy_mFvk4u5BsCX2UFr3cBlEB6SV9mccwmiGs" target="_blank"
