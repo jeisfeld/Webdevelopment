@@ -1,0 +1,170 @@
+body {
+	font-family: system-ui, sans-serif;
+	margin: 0;
+	background: #111;
+	color: #eee;
+}
+
+.wrap {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 24px;
+	display: grid;
+	gap: 24px;
+	grid-template-columns: 280px 1fr;
+}
+
+img {
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+}
+
+.album-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 72px);
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.album-links a {
+	display: block;
+	border-radius: 8px;
+}
+
+.album-links img {
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, .4);
+	transition: opacity .2s;
+}
+
+.album-links a:hover img,
+.album-links a:focus-visible img {
+	opacity: .75;
+}
+
+h1 {
+	margin: 0 0 8px;
+	font-size: 24px;
+}
+
+audio {
+	width: 100%;
+	margin: 12px 0 8px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid #2a2a2a;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 3px 14px;
+	cursor: pointer;
+	background: #161616;
+	border-top: 1px solid #2a2a2a;
+}
+
+li:first-child {
+	border-top: 0;
+}
+
+li:hover {
+	background: #1d1d1d;
+}
+
+li.active {
+	background: #2a2a2a;
+}
+
+.meta {
+	opacity: .7;
+	font-size: 13px;
+}
+
+.row {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+}
+
+button {
+	background: #2a2a2a;
+	color: #eee;
+	border: 1px solid #3a3a3a;
+	padding: 10px 12px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #333;
+}
+
+.icon-btn {
+	font-size: 18px;
+	line-height: 1;
+	min-width: 46px;
+	padding: 10px;
+}
+
+.social-links {
+	margin-top: 14px;
+	display: grid;
+	gap: 8px;
+}
+
+.social-links a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 10px;
+	background: #161616;
+	border: 1px solid #2a2a2a;
+	border-radius: 10px;
+	color: #eee;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	background: #1d1d1d;
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+
+@media ( max-width : 760px) {
+	.wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media ( max-width : 480px) {
+	.wrap {
+		padding: 16px;
+	}
+	li {
+		padding: 3px 8px;
+	}
+	.row {
+		font-size: 14px;
+		gap: 6px;
+	}
+}
+
+.player-controls {
+	display: flex;
+	gap: 10px;
+	margin: 10px 0 14px;
+}
