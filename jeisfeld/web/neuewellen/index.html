@@ -27,6 +27,30 @@ img {
 	box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
 }
 
+.album-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 72px);
+	gap: 10px;
+	margin-top: 14px;
+}
+
+.album-links a {
+	display: block;
+	border-radius: 8px;
+}
+
+.album-links img {
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, .4);
+	transition: opacity .2s;
+}
+
+.album-links a:hover img,
+.album-links a:focus-visible img {
+	opacity: .75;
+}
+
 h1 {
 	margin: 0 0 8px;
 	font-size: 24px;
@@ -151,6 +175,7 @@ button:hover {
 	<div class="wrap">
 		<div>
 			<img src="cover.jpg" alt="Album cover" />
+			<nav class="album-links" id="albumLinks" aria-label="Other albums"></nav>
 		</div>
 
 		<div>
@@ -170,6 +195,26 @@ button:hover {
 	</div>
 
 	<script>
+    // Add future albums here; the current album is omitted automatically.
+	const albums = [
+	  { slug: "indiewelt", title: "In die Welt" },
+	  { slug: "wasser", title: "Wasser" },
+	  { slug: "neuewellen", title: "Neue Wellen" },
+	];
+	const currentAlbum = "neuewellen";
+	const albumLinks = document.getElementById("albumLinks");
+	albums.filter((album) => album.slug !== currentAlbum).forEach((album) => {
+	  const link = document.createElement("a");
+	  const cover = document.createElement("img");
+	  link.href = `/${album.slug}/`;
+	  link.title = album.title;
+	  link.setAttribute("aria-label", `Open album ${album.title}`);
+	  cover.src = `/${album.slug}/cover.jpg`;
+	  cover.alt = `${album.title} album cover`;
+	  link.appendChild(cover);
+	  albumLinks.appendChild(link);
+	});
+
     // 1) Edit this list to match your MP3 files
 	const tracks = [
 	  { title: "Dankbar für alles", file: "tracks/01 Dankbar für alles.mp3" },
