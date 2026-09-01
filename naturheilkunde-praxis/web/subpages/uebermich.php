@@ -13,7 +13,7 @@
 	</li>
 	<li><a href="https://www.alegria-lebensfreude.de/" target="_blank">&bdquo;Alegria&ldquo;</a> Netzwerk für Lebensfreude,
 		Gesundheit &amp; Vitalität 2021</li>
-	<li>Spiritualität und Seelsorge (Pfarrgemeinderat seit 2018, <a
+	<li>Spiritualität und Seelsorge (im Pfarrgemeinderat seit 2018, <a
 			href="https://www.muenchen.tv/mediathek/video/die-katholische-kirche-bringt-den-aschermittwoch-zu-den-menschen/"
 			target="_blank">Dekanats-AG</a> seit 2022)
 	
